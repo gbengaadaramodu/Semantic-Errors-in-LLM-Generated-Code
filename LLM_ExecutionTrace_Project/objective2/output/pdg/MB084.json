@@ -1,0 +1,65 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def differ_at_one_bit_pos(num1, num2):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "num1",
+        "num2",
+        "differ_at_one_bit_pos"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 1,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "return bin(num1 ^ num2).count('1') == 1",
+      "statement_type": "Return",
+      "reads": [
+        "bin",
+        "num1",
+        "num2"
+      ],
+      "writes": [],
+      "function_name": "differ_at_one_bit_pos",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "num1",
+      "label": "DATA(num1)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "num2",
+      "label": "DATA(num2)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    2
+  ]
+}

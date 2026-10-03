@@ -1,0 +1,66 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def tuple_size(my_tuple):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "my_tuple",
+        "tuple_size"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "my_tuple": [
+          "('A', 1, 'B', 2, 'C', 3)"
+        ]
+      },
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "return sys.getsizeof(my_tuple)",
+      "statement_type": "Return",
+      "reads": [
+        "my_tuple",
+        "sys"
+      ],
+      "writes": [],
+      "function_name": "tuple_size",
+      "executed": true,
+      "execution_count": 3,
+      "runtime_values": {
+        "my_tuple": [
+          "('A', 1, 'B', 2, 'C', 3)",
+          "('A', 1, 'B', 2, 'C', 3)",
+          "('A', 1, 'B', 2, 'C', 3)"
+        ]
+      },
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "my_tuple",
+      "label": "DATA(my_tuple)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    2
+  ]
+}

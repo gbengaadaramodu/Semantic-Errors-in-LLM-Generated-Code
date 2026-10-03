@@ -1,0 +1,11 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def sum_of_digits(my_list): | W:my_list,sum_of_digits", fillcolor="lightgreen"];
+    "2" [label="L2: return sum([int(num) for num in my_list]) | W:num | R:int,my_list,num,sum", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(my_list)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

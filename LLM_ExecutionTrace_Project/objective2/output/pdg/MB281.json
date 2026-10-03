@@ -1,0 +1,338 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def is_majority(sorted_array, n, element):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "element",
+        "n",
+        "sorted_array",
+        "is_majority"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 3,
+      "runtime_values": {
+        "sorted_array": [
+          "[1, 2, 3, 3, 3, 3, 10]",
+          "[1, 1, 2, 4, 4, 4, 6, 6]"
+        ],
+        "n": [
+          "7",
+          "8"
+        ],
+        "element": [
+          "3",
+          "4"
+        ]
+      },
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "if sorted_array[n//2] == element:",
+      "statement_type": "If",
+      "reads": [
+        "element",
+        "n",
+        "sorted_array"
+      ],
+      "writes": [],
+      "function_name": "is_majority",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "sorted_array": [
+          "[1, 2, 3, 3, 3, 3, 10]",
+          "[1, 1, 2, 4, 4, 4, 6, 6]"
+        ],
+        "n": [
+          "7",
+          "8"
+        ],
+        "element": [
+          "3",
+          "4"
+        ]
+      },
+      "failure_related": false
+    },
+    "3": {
+      "node_id": 3,
+      "line_number": 3,
+      "source_code": "return True",
+      "statement_type": "Return",
+      "reads": [],
+      "writes": [],
+      "function_name": "is_majority",
+      "executed": true,
+      "execution_count": 4,
+      "runtime_values": {
+        "sorted_array": [
+          "[1, 2, 3, 3, 3, 3, 10]",
+          "[1, 2, 3, 3, 3, 3, 10]",
+          "[1, 1, 2, 4, 4, 4, 6, 6]",
+          "[1, 1, 2, 4, 4, 4, 6, 6]"
+        ],
+        "n": [
+          "7",
+          "7",
+          "8",
+          "8"
+        ],
+        "element": [
+          "3",
+          "3",
+          "4",
+          "4"
+        ]
+      },
+      "failure_related": false
+    },
+    "4": {
+      "node_id": 4,
+      "line_number": 4,
+      "source_code": "if n % 2 == 0:",
+      "statement_type": "If",
+      "reads": [
+        "n"
+      ],
+      "writes": [],
+      "function_name": "is_majority",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "5": {
+      "node_id": 5,
+      "line_number": 5,
+      "source_code": "return False",
+      "statement_type": "Return",
+      "reads": [],
+      "writes": [],
+      "function_name": "is_majority",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "6": {
+      "node_id": 6,
+      "line_number": 6,
+      "source_code": "if element > sorted_array[n//2]:",
+      "statement_type": "If",
+      "reads": [
+        "element",
+        "n",
+        "sorted_array"
+      ],
+      "writes": [],
+      "function_name": "is_majority",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "7": {
+      "node_id": 7,
+      "line_number": 7,
+      "source_code": "return is_majority(sorted_array, n//2, element)",
+      "statement_type": "Return",
+      "reads": [
+        "element",
+        "is_majority",
+        "n",
+        "sorted_array"
+      ],
+      "writes": [],
+      "function_name": "is_majority",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "8": {
+      "node_id": 8,
+      "line_number": 9,
+      "source_code": "return is_majority(sorted_array, n//2+1, element)",
+      "statement_type": "Return",
+      "reads": [
+        "element",
+        "is_majority",
+        "n",
+        "sorted_array"
+      ],
+      "writes": [],
+      "function_name": "is_majority",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "element",
+      "label": "DATA(element)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "n",
+      "label": "DATA(n)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "sorted_array",
+      "label": "DATA(sorted_array)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 4,
+      "dependency_type": "DATA",
+      "variable": "n",
+      "label": "DATA(n)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 6,
+      "dependency_type": "DATA",
+      "variable": "element",
+      "label": "DATA(element)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 6,
+      "dependency_type": "DATA",
+      "variable": "n",
+      "label": "DATA(n)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 6,
+      "dependency_type": "DATA",
+      "variable": "sorted_array",
+      "label": "DATA(sorted_array)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 7,
+      "dependency_type": "DATA",
+      "variable": "element",
+      "label": "DATA(element)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 7,
+      "dependency_type": "DATA",
+      "variable": "is_majority",
+      "label": "DATA(is_majority)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 7,
+      "dependency_type": "DATA",
+      "variable": "n",
+      "label": "DATA(n)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 7,
+      "dependency_type": "DATA",
+      "variable": "sorted_array",
+      "label": "DATA(sorted_array)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 8,
+      "dependency_type": "DATA",
+      "variable": "element",
+      "label": "DATA(element)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 8,
+      "dependency_type": "DATA",
+      "variable": "is_majority",
+      "label": "DATA(is_majority)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 8,
+      "dependency_type": "DATA",
+      "variable": "n",
+      "label": "DATA(n)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 8,
+      "dependency_type": "DATA",
+      "variable": "sorted_array",
+      "label": "DATA(sorted_array)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 2,
+      "target_id": 3,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(If)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 4,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 4,
+      "target_id": 5,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(If)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 6,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 6,
+      "target_id": 7,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(If)"
+    },
+    {
+      "source_id": 6,
+      "target_id": 8,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(If)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    8
+  ]
+}

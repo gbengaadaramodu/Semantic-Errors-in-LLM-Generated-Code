@@ -1,0 +1,22 @@
+{
+  "trace_id": "HE073",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/81",
+  "problem_summary": "\ndef numerical_letter_grade(grades):\n    \"\"\"It is the last week of the semester ",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp0tdeud31.py\", line 42, in <module>\n    check(numerical_letter_grade)\n    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp0tdeud31.py\", line 30, in check\n    assert candidate([4.0, 3, 1.7, 2, 3.5]) == ['A+', 'B', 'C-', 'C', 'A-']\n           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp0tdeud31.py\", line 22, in numerical_letter_grade\n    letter_grade = gpa_to_letter_grade[gpa]\n                   ~~~~~~~~~~~~~~~~~~~^^^^^\nKeyError: 3.5\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp0tdeud31.py\", line 42, in <module>\n    check(numerical_letter_grade)\n    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp0tdeud31.py\", line 30, in check\n    assert candidate([4.0, 3, 1.7, 2, 3.5]) == ['A+', 'B', 'C-', 'C', 'A-']\n           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp0tdeud31.py\", line 22, in numerical_letter_grade\n    letter_grade = gpa_to_letter_grade[gpa]\n                   ~~~~~~~~~~~~~~~~~~~^^^^^\nKeyError: 3.5",
+  "exception_type": "KeyError",
+  "exception_message": "3.5",
+  "execution_time": 0.251512,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

@@ -1,0 +1,49 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def max_subarray_product(arr): | W:arr,max_subarray_product", fillcolor="lightgreen"];
+    "2" [label="L2: if len(arr) == 0: | R:arr,len", fillcolor="lightgrey"];
+    "3" [label="L3: return None", fillcolor="lightgrey"];
+    "4" [label="L4: max_product = arr[0] | W:max_product | R:arr", fillcolor="lightgrey"];
+    "5" [label="L5: min_product = arr[0] | W:min_product | R:arr", fillcolor="lightgrey"];
+    "6" [label="L6: for i in range(1, len(arr)): | W:i | R:arr,len,range", fillcolor="lightgrey"];
+    "7" [label="L7: product = arr[i] * max_product | W:product | R:arr,i,max_product", fillcolor="lightgrey"];
+    "8" [label="L8: if product > max_product: | R:max_product,product", fillcolor="lightgrey"];
+    "9" [label="L9: max_product = product | W:max_product | R:product", fillcolor="lightgrey"];
+    "10" [label="L10: product = arr[i] * min_product | W:product | R:arr,i,min_product", fillcolor="lightgrey"];
+    "11" [label="L11: if product < min_product: | R:min_product,product", fillcolor="lightgrey"];
+    "12" [label="L12: min_product = product | W:min_product | R:product", fillcolor="lightgrey"];
+    "13" [label="L13: return max_product | R:max_product", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(arr)", style="solid"];
+    "1" -> "4" [label="DATA(arr)", style="solid"];
+    "1" -> "5" [label="DATA(arr)", style="solid"];
+    "1" -> "6" [label="DATA(arr)", style="solid"];
+    "1" -> "7" [label="DATA(arr)", style="solid"];
+    "6" -> "7" [label="DATA(i)", style="solid"];
+    "4" -> "7" [label="DATA(max_product)", style="solid"];
+    "4" -> "8" [label="DATA(max_product)", style="solid"];
+    "7" -> "8" [label="DATA(product)", style="solid"];
+    "7" -> "9" [label="DATA(product)", style="solid"];
+    "1" -> "10" [label="DATA(arr)", style="solid"];
+    "6" -> "10" [label="DATA(i)", style="solid"];
+    "5" -> "10" [label="DATA(min_product)", style="solid"];
+    "5" -> "11" [label="DATA(min_product)", style="solid"];
+    "10" -> "11" [label="DATA(product)", style="solid"];
+    "10" -> "12" [label="DATA(product)", style="solid"];
+    "9" -> "13" [label="DATA(max_product)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "2" -> "3" [label="CONTROL(If)", style="dashed"];
+    "1" -> "4" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "5" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "6" [label="CONTROL(FunctionDef)", style="dashed"];
+    "6" -> "7" [label="CONTROL(For)", style="dashed"];
+    "6" -> "8" [label="CONTROL(For)", style="dashed"];
+    "8" -> "9" [label="CONTROL(If)", style="dashed"];
+    "6" -> "10" [label="CONTROL(For)", style="dashed"];
+    "6" -> "11" [label="CONTROL(For)", style="dashed"];
+    "11" -> "12" [label="CONTROL(If)", style="dashed"];
+    "1" -> "13" [label="CONTROL(FunctionDef)", style="dashed"];
+}

@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a function that counts the number of pairs of integers in a list that xor to an even number.
+
+Example test: assert find_even_pair([5, 4, 7, 2, 1]) == 4
+[/INST]

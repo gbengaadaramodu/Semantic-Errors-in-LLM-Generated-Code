@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a function to get all lucid numbers smaller than or equal to a given integer.
+
+Example test: assert get_ludic(10) == [1, 2, 3, 5, 7]
+[/INST]

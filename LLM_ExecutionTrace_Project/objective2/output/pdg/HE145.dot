@@ -1,0 +1,30 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def get_odd_collatz(n): | W:n,get_odd_collatz", fillcolor="lightgreen"];
+    "2" [label="L2: collatz = [n] | W:collatz | R:n", fillcolor="lightgreen"];
+    "3" [label="L3: while n != 1: | R:n", fillcolor="lightgreen"];
+    "4" [label="L4: if n % 2 == 0: | R:n", fillcolor="lightgreen"];
+    "5" [label="L5: n = n // 2 | W:n | R:n", fillcolor="lightgreen"];
+    "6" [label="L7: n = 3 * n + 1 | W:n | R:n", fillcolor="lightgreen"];
+    "7" [label="L8: collatz.append(n) | R:collatz,n", fillcolor="lightgreen"];
+    "8" [label="L9: return sorted(set(collatz)) | R:collatz,set,sorted", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(n)", style="solid"];
+    "1" -> "3" [label="DATA(n)", style="solid"];
+    "1" -> "4" [label="DATA(n)", style="solid"];
+    "1" -> "5" [label="DATA(n)", style="solid"];
+    "5" -> "6" [label="DATA(n)", style="solid"];
+    "2" -> "7" [label="DATA(collatz)", style="solid"];
+    "6" -> "7" [label="DATA(n)", style="solid"];
+    "2" -> "8" [label="DATA(collatz)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "3" [label="CONTROL(FunctionDef)", style="dashed"];
+    "3" -> "4" [label="CONTROL(While)", style="dashed"];
+    "4" -> "5" [label="CONTROL(If)", style="dashed"];
+    "4" -> "6" [label="CONTROL(If)", style="dashed"];
+    "3" -> "7" [label="CONTROL(While)", style="dashed"];
+    "1" -> "8" [label="CONTROL(FunctionDef)", style="dashed"];
+}

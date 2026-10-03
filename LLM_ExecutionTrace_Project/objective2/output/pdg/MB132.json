@@ -1,0 +1,62 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def count_bidirectional(tuple_pairs):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "tuple_pairs",
+        "count_bidirectional"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 1,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "return len(set((frozenset(pair), frozenset(reversed(pair))) for pair in tuple_pairs))",
+      "statement_type": "Return",
+      "reads": [
+        "frozenset",
+        "len",
+        "pair",
+        "reversed",
+        "set",
+        "tuple_pairs"
+      ],
+      "writes": [
+        "pair"
+      ],
+      "function_name": "count_bidirectional",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "tuple_pairs",
+      "label": "DATA(tuple_pairs)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    2
+  ]
+}

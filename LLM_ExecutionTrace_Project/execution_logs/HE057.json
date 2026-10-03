@@ -1,0 +1,22 @@
+{
+  "trace_id": "HE057",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/46",
+  "problem_summary": "\n\ndef fib4(n: int):\n    \"\"\"The Fib4 number sequence is a sequence similar to the",
+  "execution_status": "Completed",
+  "stdout": "",
+  "stderr": "",
+  "traceback": "",
+  "exception_type": "",
+  "exception_message": "",
+  "execution_time": 0.109528,
+  "timed_out": false,
+  "exit_code": 0,
+  "tests_passed": true,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

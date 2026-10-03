@@ -1,0 +1,11 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def surfacearea_cube(size): | W:size,surfacearea_cube", fillcolor="lightgreen"];
+    "2" [label="L2: return 6 * size ** 2 | R:size", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(size)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

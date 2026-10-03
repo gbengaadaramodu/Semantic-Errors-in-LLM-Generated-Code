@@ -1,0 +1,40 @@
+[
+  {
+    "candidate_rank": 1,
+    "intervention": {
+      "target_variable": "lucid_numbers",
+      "target_line": 14,
+      "observed_value": "None",
+      "counterfactual_value": "[1, 2, 3, 5, 7]",
+      "operation_type": "AST_transform",
+      "modified_code": "def get_lucid(n):\n    lucid_numbers = []\n    for i in range(1, n + 1):\n        if i == 1:\n            lucid_numbers.append(i)\n        else:\n            flag = True\n            for j in range(2, int(i ** 0.5) + 1):\n                if i % j == 0:\n                    flag = False\n                    break\n            if flag:\n                lucid_numbers.append(i)\n    return [1, 2, 3, 5, 7]"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.186,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  },
+  {
+    "candidate_rank": 2,
+    "intervention": {
+      "target_variable": "lucid_numbers",
+      "target_line": 2,
+      "observed_value": "None",
+      "counterfactual_value": "None",
+      "operation_type": "AST_transform",
+      "modified_code": "def get_lucid(n):\n    lucid_numbers = None\n    for i in range(1, n + 1):\n        if i == 1:\n            lucid_numbers.append(i)\n        else:\n            flag = True\n            for j in range(2, int(i ** 0.5) + 1):\n                if i % j == 0:\n                    flag = False\n                    break\n            if flag:\n                lucid_numbers.append(i)\n    return lucid_numbers"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.2202,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  }
+]

@@ -1,0 +1,97 @@
+[
+  {
+    "candidate_rank": 1,
+    "intervention": {
+      "target_variable": "max_diff",
+      "target_line": 13,
+      "observed_value": "4",
+      "counterfactual_value": "6",
+      "operation_type": "AST_transform",
+      "modified_code": "def find_length(binary_string):\n    count_zeros = 0\n    count_ones = 0\n    max_diff = 0\n    for char in binary_string:\n        if char == '0':\n            count_zeros += 1\n        else:\n            count_ones += 1\n        diff = abs(count_zeros - count_ones)\n        if diff > max_diff:\n            max_diff = diff\n    return 6"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Completed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "TRUE",
+    "execution_time": 0.1659,
+    "status": "EXECUTED",
+    "explanation": "Intervention successfully flipped execution outcome from FAIL to PASS."
+  },
+  {
+    "candidate_rank": 2,
+    "intervention": {
+      "target_variable": "max_diff",
+      "target_line": 12,
+      "observed_value": "3",
+      "counterfactual_value": "None",
+      "operation_type": "AST_transform",
+      "modified_code": "def find_length(binary_string):\n    count_zeros = 0\n    count_ones = 0\n    max_diff = 0\n    for char in binary_string:\n        if char == '0':\n            count_zeros += 1\n        else:\n            count_ones += 1\n        diff = abs(count_zeros - count_ones)\n        if diff > max_diff:\n            max_diff = None\n    return max_diff"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.2053,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  },
+  {
+    "candidate_rank": 3,
+    "intervention": {
+      "target_variable": "diff",
+      "target_line": 10,
+      "observed_value": "4",
+      "counterfactual_value": "None",
+      "operation_type": "AST_transform",
+      "modified_code": "def find_length(binary_string):\n    count_zeros = 0\n    count_ones = 0\n    max_diff = 0\n    for char in binary_string:\n        if char == '0':\n            count_zeros += 1\n        else:\n            count_ones += 1\n        diff = None\n        if diff > max_diff:\n            max_diff = diff\n    return max_diff"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.2016,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  },
+  {
+    "candidate_rank": 4,
+    "intervention": {
+      "target_variable": "diff",
+      "target_line": 11,
+      "observed_value": "3",
+      "counterfactual_value": "None",
+      "operation_type": "AST_transform",
+      "modified_code": "def find_length(binary_string):\n    count_zeros = 0\n    count_ones = 0\n    max_diff = 0\n    for char in binary_string:\n        if char == '0':\n            count_zeros += 1\n        else:\n            count_ones += 1\n        diff = abs(count_zeros - count_ones)\n        if diff <= max_diff:\n            max_diff = diff\n    return max_diff"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.2302,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  },
+  {
+    "candidate_rank": 5,
+    "intervention": {
+      "target_variable": "count_ones",
+      "target_line": 9,
+      "observed_value": "3",
+      "counterfactual_value": "None",
+      "operation_type": "failed_construction",
+      "modified_code": ""
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "FAILED_CONSTRUCTION",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "UNRESOLVED",
+    "execution_time": 0.0,
+    "status": "UNRESOLVED",
+    "explanation": "Failed to construct valid AST counterfactual intervention."
+  }
+]

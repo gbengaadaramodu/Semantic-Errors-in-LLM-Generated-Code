@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a python function to count the number of positive numbers in a list.
+
+Example test: assert pos_count([1,-2,3,-4]) == 2
+[/INST]

@@ -1,0 +1,11 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def sort_even(l): | W:l,sort_even", fillcolor="lightgreen"];
+    "2" [label="L2: return [l[i] for i in range(len(l)) if i % 2 == 0] + sorted([l[i] for i in range(len(l)) if i % 2 == 1]) | W:i | R:i,l,len,range,sorted", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(l)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

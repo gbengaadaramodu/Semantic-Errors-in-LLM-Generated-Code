@@ -1,0 +1,12 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def is_samepatterns(patterns, sequence): | W:patterns,sequence,is_samepatterns", fillcolor="lightgreen"];
+    "2" [label="L2: return all(sequence[i] == patterns[i%len(patterns)] for i in range(len(sequence))) | W:i | R:all,i,len,patterns,range,sequence", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(patterns)", style="solid"];
+    "1" -> "2" [label="DATA(sequence)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

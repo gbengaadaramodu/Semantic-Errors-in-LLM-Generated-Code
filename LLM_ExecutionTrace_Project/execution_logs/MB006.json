@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB006",
+  "dataset": "MBPP",
+  "task_id": "809",
+  "problem_summary": "Write a function to check if each element of second tuple is smaller than its co",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpolcg9h_1.py\", line 4, in <module>\n    assert check_smaller((1, 2, 3), (2, 3, 4)) == False\n           ^^^^^^^^^^^^^\nNameError: name 'check_smaller' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpolcg9h_1.py\", line 4, in <module>\n    assert check_smaller((1, 2, 3), (2, 3, 4)) == False\n           ^^^^^^^^^^^^^\nNameError: name 'check_smaller' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'check_smaller' is not defined",
+  "execution_time": 0.230322,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB340",
+  "dataset": "MBPP",
+  "task_id": "782",
+  "problem_summary": "Write a python function to find the sum of all odd length subarrays. https://www",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp4oe9ig9v.py\", line 9, in <module>\n    assert odd_length_sum([1,2,4]) == 14\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp4oe9ig9v.py\", line 9, in <module>\n    assert odd_length_sum([1,2,4]) == 14\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+  "exception_type": "AssertionError",
+  "exception_message": "",
+  "execution_time": 0.164334,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": "benchmark_test",
+  "assertion_failed": true,
+  "parser_prediction": ""
+}

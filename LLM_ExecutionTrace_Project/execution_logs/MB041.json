@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB041",
+  "dataset": "MBPP",
+  "task_id": "138",
+  "problem_summary": "Write a python function to check whether the given number can be represented as ",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp0wv7xn48.py\", line 7, in <module>\n    assert is_Sum_Of_Powers_Of_Two(10) == True\n           ^^^^^^^^^^^^^^^^^^^^^^^\nNameError: name 'is_Sum_Of_Powers_Of_Two' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp0wv7xn48.py\", line 7, in <module>\n    assert is_Sum_Of_Powers_Of_Two(10) == True\n           ^^^^^^^^^^^^^^^^^^^^^^^\nNameError: name 'is_Sum_Of_Powers_Of_Two' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'is_Sum_Of_Powers_Of_Two' is not defined",
+  "execution_time": 0.221686,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

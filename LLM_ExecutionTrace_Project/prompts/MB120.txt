@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a function that takes in a list and an element and inserts the element before each element in the list, and returns the resulting list.
+
+Example test: assert insert_element(['Red', 'Green', 'Black'] ,'c')==['c', 'Red', 'c', 'Green', 'c', 'Black']
+[/INST]

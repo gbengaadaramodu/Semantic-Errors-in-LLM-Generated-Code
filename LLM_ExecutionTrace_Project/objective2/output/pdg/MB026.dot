@@ -1,0 +1,11 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def perimeter_pentagon(side): | W:side,perimeter_pentagon", fillcolor="lightgreen"];
+    "2" [label="L2: return 5 * side | R:side", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(side)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

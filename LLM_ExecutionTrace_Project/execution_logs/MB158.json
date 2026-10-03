@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB158",
+  "dataset": "MBPP",
+  "task_id": "612",
+  "problem_summary": "Write a python function which takes a list of lists, where each sublist has two ",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmph36_d5g2.py\", line 6, in <module>\n    assert merge([['x', 'y','z' ], ['a', 'b','c'], ['m', 'n','o']]) == [['x', 'a', 'm'], ['y', 'b', 'n'],['z', 'c','o']]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmph36_d5g2.py\", line 6, in <module>\n    assert merge([['x', 'y','z' ], ['a', 'b','c'], ['m', 'n','o']]) == [['x', 'a', 'm'], ['y', 'b', 'n'],['z', 'c','o']]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+  "exception_type": "AssertionError",
+  "exception_message": "",
+  "execution_time": 0.285559,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": "benchmark_test",
+  "assertion_failed": true,
+  "parser_prediction": ""
+}

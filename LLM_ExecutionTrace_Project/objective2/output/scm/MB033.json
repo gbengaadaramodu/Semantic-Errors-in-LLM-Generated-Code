@@ -1,0 +1,89 @@
+{
+  "task_id": "769",
+  "nodes": [
+    {
+      "node_id": "S",
+      "variable_name": "Specification",
+      "symbol": "S",
+      "label": "Specification"
+    },
+    {
+      "node_id": "C",
+      "variable_name": "GeneratedCode",
+      "symbol": "C",
+      "label": "Generated Code"
+    },
+    {
+      "node_id": "E",
+      "variable_name": "ExecutionTrace",
+      "symbol": "E",
+      "label": "Execution Trace"
+    },
+    {
+      "node_id": "T",
+      "variable_name": "TestSuite",
+      "symbol": "T",
+      "label": "Test Suite"
+    },
+    {
+      "node_id": "O",
+      "variable_name": "Outcome",
+      "symbol": "O",
+      "label": "Outcome"
+    }
+  ],
+  "edges": [
+    {
+      "source": "S",
+      "target": "C",
+      "relationship": "generates"
+    },
+    {
+      "source": "C",
+      "target": "E",
+      "relationship": "produces"
+    },
+    {
+      "source": "T",
+      "target": "E",
+      "relationship": "evaluates"
+    },
+    {
+      "source": "E",
+      "target": "O",
+      "relationship": "determines"
+    }
+  ],
+  "variables": {
+    "S": {
+      "name": "Specification",
+      "symbol": "S",
+      "description": "Problem description, prompt, and target function signature",
+      "value": "Write a python function to get the difference between two lists."
+    },
+    "C": {
+      "name": "GeneratedCode",
+      "symbol": "C",
+      "description": "LLM-generated Python source code implementation",
+      "value": "def similar_elements(list1, list2):\n    return list(set(list1) & set(list2))"
+    },
+    "E": {
+      "name": "ExecutionTrace",
+      "symbol": "E",
+      "description": "Observable runtime trace events, variable states, and stdout/stderr",
+      "value": "status=Failed, exc=NameError, msg=name 'Diff' is not defined"
+    },
+    "T": {
+      "name": "TestSuite",
+      "symbol": "T",
+      "description": "Benchmark assertions, inputs, and check function harness",
+      "value": "assert (Diff([10, 15, 20, 25, 30, 35, 40], [25, 40, 35])) == [10, 20, 30, 15]\nassert (Diff([1,2,3,4,"
+    },
+    "O": {
+      "name": "Outcome",
+      "symbol": "O",
+      "description": "Final test execution outcome (Completed/Failed/Timeout)",
+      "value": "Failed"
+    }
+  }
+}

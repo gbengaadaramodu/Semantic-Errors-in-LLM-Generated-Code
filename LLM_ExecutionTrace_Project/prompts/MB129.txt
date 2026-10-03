@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a function to calculate the sum of perrin numbers.
+
+Example test: assert cal_sum(9) == 49
+[/INST]

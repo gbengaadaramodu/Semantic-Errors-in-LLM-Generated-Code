@@ -1,0 +1,11 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def count_characters(s): | W:s,count_characters", fillcolor="lightgreen"];
+    "2" [label="L2: return len(s) | R:len,s", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(s)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

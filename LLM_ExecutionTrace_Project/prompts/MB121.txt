@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a python function to find the smallest power of 2 greater than or equal to n.
+
+Example test: assert next_power_of_2(0) == 1
+[/INST]

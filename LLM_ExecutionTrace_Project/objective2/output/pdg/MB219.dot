@@ -1,0 +1,19 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def find_star_num(n): | W:n,find_star_num", fillcolor="lightgreen"];
+    "2" [label="L2: num = 0 | W:num", fillcolor="lightgreen"];
+    "3" [label="L3: for i in range(1, n+1): | W:i | R:n,range", fillcolor="lightgreen"];
+    "4" [label="L4: num += i | W:num | R:i", fillcolor="lightgreen"];
+    "5" [label="L5: return num | R:num", fillcolor="salmon"];
+
+    "1" -> "3" [label="DATA(n)", style="solid"];
+    "3" -> "4" [label="DATA(i)", style="solid"];
+    "4" -> "5" [label="DATA(num)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "3" [label="CONTROL(FunctionDef)", style="dashed"];
+    "3" -> "4" [label="CONTROL(For)", style="dashed"];
+    "1" -> "5" [label="CONTROL(FunctionDef)", style="dashed"];
+}

@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB257",
+  "dataset": "MBPP",
+  "task_id": "638",
+  "problem_summary": "Write a function to calculate the wind chill index rounded to the next integer g",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmppyud1cij.py\", line 4, in <module>\n    assert wind_chill(120,35)==40\n           ^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmppyud1cij.py\", line 4, in <module>\n    assert wind_chill(120,35)==40\n           ^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+  "exception_type": "AssertionError",
+  "exception_message": "",
+  "execution_time": 0.283764,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": "benchmark_test",
+  "assertion_failed": true,
+  "parser_prediction": ""
+}

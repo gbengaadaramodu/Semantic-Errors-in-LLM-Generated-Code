@@ -1,0 +1,22 @@
+{
+  "trace_id": "HE100",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/120",
+  "problem_summary": "\ndef maximum(arr, k):\n    \"\"\"\n    Given an array arr of integers and a positive ",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmph3j_jzk8.py\", line 23, in <module>\n    check(maximum)\n    ~~~~~^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmph3j_jzk8.py\", line 7, in check\n    assert candidate([-3, -4, 5], 3) == [-4, -3, 5]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmph3j_jzk8.py\", line 23, in <module>\n    check(maximum)\n    ~~~~~^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmph3j_jzk8.py\", line 7, in check\n    assert candidate([-3, -4, 5], 3) == [-4, -3, 5]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+  "exception_type": "AssertionError",
+  "exception_message": "",
+  "execution_time": 0.302904,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": "benchmark_test",
+  "assertion_failed": true,
+  "parser_prediction": ""
+}

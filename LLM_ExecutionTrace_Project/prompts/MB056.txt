@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a python function to check whether the given number can be represented as sum of non-zero powers of 2 or not.
+
+Example test: assert is_Sum_Of_Powers_Of_Two(10) == True
+[/INST]

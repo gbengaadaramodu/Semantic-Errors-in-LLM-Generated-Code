@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB012",
+  "dataset": "MBPP",
+  "task_id": "135",
+  "problem_summary": "Write a function to find the nth hexagonal number.",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpuyvrz2p_.py\", line 7, in <module>\n    assert hexagonal_num(10) == 190\n           ^^^^^^^^^^^^^\nNameError: name 'hexagonal_num' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpuyvrz2p_.py\", line 7, in <module>\n    assert hexagonal_num(10) == 190\n           ^^^^^^^^^^^^^\nNameError: name 'hexagonal_num' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'hexagonal_num' is not defined",
+  "execution_time": 0.207508,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

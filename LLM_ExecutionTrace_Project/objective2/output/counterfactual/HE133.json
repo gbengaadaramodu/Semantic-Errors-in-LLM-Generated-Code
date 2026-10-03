@@ -1,0 +1,78 @@
+[
+  {
+    "candidate_rank": 1,
+    "intervention": {
+      "target_variable": "result",
+      "target_line": 5,
+      "observed_value": "1/25",
+      "counterfactual_value": "True",
+      "operation_type": "AST_transform",
+      "modified_code": "def simplify(x, n):\n    num1, denom1 = x.split('/')\n    num2, denom2 = n.split('/')\n    result = str(int(num1) * int(denom2)) + '/' + str(int(num2) * int(denom1))\n    result = True\n    return result.endswith('/1')"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.2504,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  },
+  {
+    "candidate_rank": 2,
+    "intervention": {
+      "target_variable": "result",
+      "target_line": 4,
+      "observed_value": "None",
+      "counterfactual_value": "None",
+      "operation_type": "AST_transform",
+      "modified_code": "def simplify(x, n):\n    num1, denom1 = x.split('/')\n    num2, denom2 = n.split('/')\n    result = None\n    return result.endswith('/1')"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.228,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  },
+  {
+    "candidate_rank": 3,
+    "intervention": {
+      "target_variable": "denom1",
+      "target_line": 2,
+      "observed_value": "None",
+      "counterfactual_value": "None",
+      "operation_type": "failed_construction",
+      "modified_code": ""
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "FAILED_CONSTRUCTION",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "UNRESOLVED",
+    "execution_time": 0.0,
+    "status": "UNRESOLVED",
+    "explanation": "Failed to construct valid AST counterfactual intervention."
+  },
+  {
+    "candidate_rank": 4,
+    "intervention": {
+      "target_variable": "denom2",
+      "target_line": 3,
+      "observed_value": "None",
+      "counterfactual_value": "None",
+      "operation_type": "failed_construction",
+      "modified_code": ""
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "FAILED_CONSTRUCTION",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "UNRESOLVED",
+    "execution_time": 0.0,
+    "status": "UNRESOLVED",
+    "explanation": "Failed to construct valid AST counterfactual intervention."
+  }
+]

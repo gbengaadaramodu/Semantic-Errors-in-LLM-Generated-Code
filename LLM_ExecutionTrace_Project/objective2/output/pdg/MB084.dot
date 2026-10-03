@@ -1,0 +1,12 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def differ_at_one_bit_pos(num1, num2): | W:num1,num2,differ_at_one_bit_pos", fillcolor="lightgreen"];
+    "2" [label="L2: return bin(num1 ^ num2).count('1') == 1 | R:bin,num1,num2", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(num1)", style="solid"];
+    "1" -> "2" [label="DATA(num2)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

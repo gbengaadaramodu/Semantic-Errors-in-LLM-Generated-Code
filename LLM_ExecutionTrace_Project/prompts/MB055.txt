@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a function to find the surface area of a cylinder.
+
+Example test: assert surfacearea_cylinder(10,5)==942.45
+[/INST]

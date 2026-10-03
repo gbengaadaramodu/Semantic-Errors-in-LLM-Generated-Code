@@ -1,0 +1,114 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def sector_area(radius, angle):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "angle",
+        "radius",
+        "sector_area"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 1,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "if angle > 360:",
+      "statement_type": "If",
+      "reads": [
+        "angle"
+      ],
+      "writes": [],
+      "function_name": "sector_area",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "3": {
+      "node_id": 3,
+      "line_number": 3,
+      "source_code": "return None",
+      "statement_type": "Return",
+      "reads": [],
+      "writes": [],
+      "function_name": "sector_area",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "4": {
+      "node_id": 4,
+      "line_number": 5,
+      "source_code": "return (angle / 360) * (2 * math.pi * radius**2)",
+      "statement_type": "Return",
+      "reads": [
+        "angle",
+        "math",
+        "radius"
+      ],
+      "writes": [],
+      "function_name": "sector_area",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "angle",
+      "label": "DATA(angle)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 4,
+      "dependency_type": "DATA",
+      "variable": "angle",
+      "label": "DATA(angle)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 4,
+      "dependency_type": "DATA",
+      "variable": "radius",
+      "label": "DATA(radius)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 2,
+      "target_id": 3,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(If)"
+    },
+    {
+      "source_id": 2,
+      "target_id": 4,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(If)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    4
+  ]
+}

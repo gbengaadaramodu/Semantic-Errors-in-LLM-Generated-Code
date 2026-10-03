@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a function to check whether all dictionaries in a list are empty or not.
+
+Example test: assert empty_dit([{},{},{}])==True
+[/INST]

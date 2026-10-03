@@ -1,0 +1,70 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def intersperse(numbers: List[int], delimeter: int) -> List[int]:",
+      "statement_type": "FunctionDef",
+      "reads": [
+        "List",
+        "int"
+      ],
+      "writes": [
+        "delimeter",
+        "numbers",
+        "intersperse"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 3,
+      "runtime_values": {},
+      "failure_related": true
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "return [delimeter].join(map(str, numbers)).split(str(delimeter))",
+      "statement_type": "Return",
+      "reads": [
+        "delimeter",
+        "map",
+        "numbers",
+        "str"
+      ],
+      "writes": [],
+      "function_name": "intersperse",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "delimeter",
+      "label": "DATA(delimeter)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "numbers",
+      "label": "DATA(numbers)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    1,
+    2
+  ]
+}

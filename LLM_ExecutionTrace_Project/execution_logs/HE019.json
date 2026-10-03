@@ -1,0 +1,22 @@
+{
+  "trace_id": "HE019",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/161",
+  "problem_summary": "\ndef solve(s):\n    \"\"\"You are given a string s.\n    if s[i] is a letter, reverse",
+  "execution_status": "Completed",
+  "stdout": "",
+  "stderr": "",
+  "traceback": "",
+  "exception_type": "",
+  "exception_message": "",
+  "execution_time": 0.144318,
+  "timed_out": false,
+  "exit_code": 0,
+  "tests_passed": true,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

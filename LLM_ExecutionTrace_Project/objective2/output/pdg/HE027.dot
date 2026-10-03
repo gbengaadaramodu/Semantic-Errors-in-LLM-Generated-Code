@@ -1,0 +1,23 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def separate_paren_groups(paren_string: str) -> List[str]: | W:paren_string,separate_paren_groups | R:str", fillcolor="salmon"];
+    "2" [label="L2: groups = [] | W:groups", fillcolor="lightgrey"];
+    "3" [label="L3: for group in paren_string.split(\")\"): | W:group | R:paren_string", fillcolor="lightgrey"];
+    "4" [label="L4: if group != \"\": | R:group", fillcolor="lightgrey"];
+    "5" [label="L5: groups.append(group + \")\") | R:group,groups", fillcolor="lightgrey"];
+    "6" [label="L6: return groups | R:groups", fillcolor="salmon"];
+
+    "1" -> "3" [label="DATA(paren_string)", style="solid"];
+    "3" -> "4" [label="DATA(group)", style="solid"];
+    "3" -> "5" [label="DATA(group)", style="solid"];
+    "2" -> "5" [label="DATA(groups)", style="solid"];
+    "2" -> "6" [label="DATA(groups)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "3" [label="CONTROL(FunctionDef)", style="dashed"];
+    "3" -> "4" [label="CONTROL(For)", style="dashed"];
+    "4" -> "5" [label="CONTROL(If)", style="dashed"];
+    "1" -> "6" [label="CONTROL(FunctionDef)", style="dashed"];
+}

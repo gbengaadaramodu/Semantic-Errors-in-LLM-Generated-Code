@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB060",
+  "dataset": "MBPP",
+  "task_id": "108",
+  "problem_summary": "Write a function to merge three lists into a single sorted list.",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpqffc60qv.py\", line 14, in <module>\n    assert merge_sorted_list([25, 24, 15, 4, 5, 29, 110],[19, 20, 11, 56, 25, 233, 154],[24, 26, 54, 48])==[4, 5, 11, 15, 19, 20, 24, 24, 25, 25, 26, 29, 48, 54, 56, 110, 154, 233]\n           ^^^^^^^^^^^^^^^^^\nNameError: name 'merge_sorted_list' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpqffc60qv.py\", line 14, in <module>\n    assert merge_sorted_list([25, 24, 15, 4, 5, 29, 110],[19, 20, 11, 56, 25, 233, 154],[24, 26, 54, 48])==[4, 5, 11, 15, 19, 20, 24, 24, 25, 25, 26, 29, 48, 54, 56, 110, 154, 233]\n           ^^^^^^^^^^^^^^^^^\nNameError: name 'merge_sorted_list' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'merge_sorted_list' is not defined",
+  "execution_time": 0.230396,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

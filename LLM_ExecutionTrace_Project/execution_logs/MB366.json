@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB366",
+  "dataset": "MBPP",
+  "task_id": "472",
+  "problem_summary": "Write a python function to check whether the given list contains consecutive num",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpq6lbl6hu.py\", line 4, in <module>\n    assert check_Consecutive([1,2,3,4,5]) == True\n           ^^^^^^^^^^^^^^^^^\nNameError: name 'check_Consecutive' is not defined. Did you mean: 'check_consecutive'?\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpq6lbl6hu.py\", line 4, in <module>\n    assert check_Consecutive([1,2,3,4,5]) == True\n           ^^^^^^^^^^^^^^^^^\nNameError: name 'check_Consecutive' is not defined. Did you mean: 'check_consecutive'?",
+  "exception_type": "NameError",
+  "exception_message": "name 'check_Consecutive' is not defined. Did you mean: 'check_consecutive'?",
+  "execution_time": 0.159831,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

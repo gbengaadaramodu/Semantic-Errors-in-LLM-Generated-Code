@@ -1,0 +1,21 @@
+[
+  {
+    "candidate_rank": 1,
+    "intervention": {
+      "target_variable": "h",
+      "target_line": 2,
+      "observed_value": "None",
+      "counterfactual_value": "[(6, 24, 12)]",
+      "operation_type": "AST_transform",
+      "modified_code": "def lateralsurface_cone(r, h):\n    h = [(6, 24, 12)]\n    return 2 * r * h + (r ** 2) * math.acos(-1)"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.2493,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  }
+]

@@ -1,0 +1,22 @@
+{
+  "trace_id": "HE041",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/44",
+  "problem_summary": "\n\ndef change_base(x: int, base: int):\n    \"\"\"Change numerical base of input numb",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp4ks4p2j2.py\", line 28, in <module>\n    check(change_base)\n    ~~~~~^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp4ks4p2j2.py\", line 17, in check\n    assert candidate(8, 3) == \"22\"\n           ~~~~~~~~~^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp4ks4p2j2.py\", line 8, in change_base\n    res = digs[r] + res\n                    ^^^\nUnboundLocalError: cannot access local variable 'res' where it is not associated with a value\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp4ks4p2j2.py\", line 28, in <module>\n    check(change_base)\n    ~~~~~^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp4ks4p2j2.py\", line 17, in check\n    assert candidate(8, 3) == \"22\"\n           ~~~~~~~~~^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp4ks4p2j2.py\", line 8, in change_base\n    res = digs[r] + res\n                    ^^^\nUnboundLocalError: cannot access local variable 'res' where it is not associated with a value",
+  "exception_type": "UnboundLocalError",
+  "exception_message": "cannot access local variable 'res' where it is not associated with a value",
+  "execution_time": 0.261221,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

@@ -1,0 +1,22 @@
+{
+  "trace_id": "HE079",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/85",
+  "problem_summary": "\ndef add(lst):\n    \"\"\"Given a non-empty list of integers lst. add the even eleme",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpyjzzleyx.py\", line 16, in <module>\n    check(add)\n    ~~~~~^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpyjzzleyx.py\", line 10, in check\n    assert candidate([4, 4, 6, 8]) == 12\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpyjzzleyx.py\", line 16, in <module>\n    check(add)\n    ~~~~~^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpyjzzleyx.py\", line 10, in check\n    assert candidate([4, 4, 6, 8]) == 12\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+  "exception_type": "AssertionError",
+  "exception_message": "",
+  "execution_time": 0.266483,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": "benchmark_test",
+  "assertion_failed": true,
+  "parser_prediction": ""
+}

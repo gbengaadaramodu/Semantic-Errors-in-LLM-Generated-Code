@@ -1,0 +1,20 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def first_repeated_char(string): | W:string,first_repeated_char", fillcolor="lightgreen"];
+    "2" [label="L2: for char in string: | W:char | R:string", fillcolor="lightgrey"];
+    "3" [label="L3: if string.count(char) > 1: | R:char,string", fillcolor="lightgrey"];
+    "4" [label="L4: return char | R:char", fillcolor="lightgrey"];
+    "5" [label="L5: return None", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(string)", style="solid"];
+    "2" -> "3" [label="DATA(char)", style="solid"];
+    "1" -> "3" [label="DATA(string)", style="solid"];
+    "2" -> "4" [label="DATA(char)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "2" -> "3" [label="CONTROL(For)", style="dashed"];
+    "3" -> "4" [label="CONTROL(If)", style="dashed"];
+    "1" -> "5" [label="CONTROL(FunctionDef)", style="dashed"];
+}

@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB100",
+  "dataset": "MBPP",
+  "task_id": "421",
+  "problem_summary": "Write a function to concatenate each element of tuple by the delimiter.",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp9d898jup.py\", line 4, in <module>\n    assert concatenate_tuple((\"ID\", \"is\", 4, \"UTS\") ) == 'ID-is-4-UTS'\n           ^^^^^^^^^^^^^^^^^\nNameError: name 'concatenate_tuple' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp9d898jup.py\", line 4, in <module>\n    assert concatenate_tuple((\"ID\", \"is\", 4, \"UTS\") ) == 'ID-is-4-UTS'\n           ^^^^^^^^^^^^^^^^^\nNameError: name 'concatenate_tuple' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'concatenate_tuple' is not defined",
+  "execution_time": 0.198905,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

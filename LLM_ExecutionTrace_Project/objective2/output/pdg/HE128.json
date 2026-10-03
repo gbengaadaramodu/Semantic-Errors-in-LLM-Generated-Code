@@ -1,0 +1,118 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def find_zero(xs):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "xs",
+        "find_zero"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "xs": [
+          "[-10, -2]"
+        ]
+      },
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "if len(xs) % 2 == 0 and xs[-1] != 0:",
+      "statement_type": "If",
+      "reads": [
+        "len",
+        "xs"
+      ],
+      "writes": [],
+      "function_name": "find_zero",
+      "executed": true,
+      "execution_count": 1,
+      "runtime_values": {
+        "xs": [
+          "[-10, -2]"
+        ]
+      },
+      "failure_related": false
+    },
+    "3": {
+      "node_id": 3,
+      "line_number": 3,
+      "source_code": "return -xs[-2]/xs[-1]",
+      "statement_type": "Return",
+      "reads": [
+        "xs"
+      ],
+      "writes": [],
+      "function_name": "find_zero",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "xs": [
+          "[-10, -2]",
+          "[-10, -2]"
+        ]
+      },
+      "failure_related": false
+    },
+    "4": {
+      "node_id": 4,
+      "line_number": 5,
+      "source_code": "return None",
+      "statement_type": "Return",
+      "reads": [],
+      "writes": [],
+      "function_name": "find_zero",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "xs",
+      "label": "DATA(xs)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 3,
+      "dependency_type": "DATA",
+      "variable": "xs",
+      "label": "DATA(xs)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 2,
+      "target_id": 3,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(If)"
+    },
+    {
+      "source_id": 2,
+      "target_id": 4,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(If)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    4
+  ]
+}

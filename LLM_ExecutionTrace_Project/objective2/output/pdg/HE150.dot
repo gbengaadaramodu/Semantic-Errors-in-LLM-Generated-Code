@@ -1,0 +1,38 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def intersection(interval1, interval2): | W:interval1,interval2,intersection", fillcolor="lightgreen"];
+    "2" [label="L2: start1, end1 = interval1 | W:end1,start1 | R:interval1", fillcolor="lightgreen"];
+    "3" [label="L3: start2, end2 = interval2 | W:end2,start2 | R:interval2", fillcolor="lightgreen"];
+    "4" [label="L4: if start1 <= end1 and start2 <= end2: | R:end1,end2,start1,start2", fillcolor="lightgreen"];
+    "5" [label="L5: if start1 <= start2 <= end1: | R:end1,start1,start2", fillcolor="lightgreen"];
+    "6" [label="L6: return \"YES\"", fillcolor="lightgreen"];
+    "7" [label="L7: elif start2 <= start1 <= end2: | R:end2,start1,start2", fillcolor="lightgrey"];
+    "8" [label="L8: return \"YES\"", fillcolor="lightgrey"];
+    "9" [label="L10: return \"NO\"", fillcolor="lightgrey"];
+    "10" [label="L12: return \"NO\"", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(interval1)", style="solid"];
+    "1" -> "3" [label="DATA(interval2)", style="solid"];
+    "2" -> "4" [label="DATA(end1)", style="solid"];
+    "3" -> "4" [label="DATA(end2)", style="solid"];
+    "2" -> "4" [label="DATA(start1)", style="solid"];
+    "3" -> "4" [label="DATA(start2)", style="solid"];
+    "2" -> "5" [label="DATA(end1)", style="solid"];
+    "2" -> "5" [label="DATA(start1)", style="solid"];
+    "3" -> "5" [label="DATA(start2)", style="solid"];
+    "3" -> "7" [label="DATA(end2)", style="solid"];
+    "2" -> "7" [label="DATA(start1)", style="solid"];
+    "3" -> "7" [label="DATA(start2)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "3" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "4" [label="CONTROL(FunctionDef)", style="dashed"];
+    "4" -> "5" [label="CONTROL(If)", style="dashed"];
+    "5" -> "6" [label="CONTROL(If)", style="dashed"];
+    "5" -> "7" [label="CONTROL(If)", style="dashed"];
+    "7" -> "8" [label="CONTROL(If)", style="dashed"];
+    "7" -> "9" [label="CONTROL(If)", style="dashed"];
+    "4" -> "10" [label="CONTROL(If)", style="dashed"];
+}

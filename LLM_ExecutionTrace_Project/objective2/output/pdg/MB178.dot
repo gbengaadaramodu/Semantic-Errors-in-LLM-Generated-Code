@@ -1,0 +1,11 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def remove_parenthesis(string): | W:string,remove_parenthesis", fillcolor="lightgreen"];
+    "2" [label="L2: return string.split('(')[0] | R:string", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(string)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

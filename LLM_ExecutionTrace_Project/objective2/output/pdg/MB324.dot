@@ -1,0 +1,13 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def extract_index_list(l1, l2, l3): | W:l1,l2,l3,extract_index_list", fillcolor="lightgreen"];
+    "2" [label="L2: return [x for x in l1 if x in l2 and x in l3] | W:x | R:l1,l2,l3,x", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(l1)", style="solid"];
+    "1" -> "2" [label="DATA(l2)", style="solid"];
+    "1" -> "2" [label="DATA(l3)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

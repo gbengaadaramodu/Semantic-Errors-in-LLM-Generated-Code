@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB318",
+  "dataset": "MBPP",
+  "task_id": "558",
+  "problem_summary": "Write a python function to find the sum of the per-digit difference between two ",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpiyrb6ehv.py\", line 5, in <module>\n    assert digit_distance_nums(23,56) == 6\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpiyrb6ehv.py\", line 5, in <module>\n    assert digit_distance_nums(23,56) == 6\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+  "exception_type": "AssertionError",
+  "exception_message": "",
+  "execution_time": 0.158196,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": "benchmark_test",
+  "assertion_failed": true,
+  "parser_prediction": ""
+}

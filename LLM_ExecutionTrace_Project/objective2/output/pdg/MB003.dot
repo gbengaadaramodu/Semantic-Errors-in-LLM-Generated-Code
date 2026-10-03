@@ -1,0 +1,12 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def split_two_parts(my_list, L): | W:L,my_list,split_two_parts", fillcolor="lightgreen"];
+    "2" [label="L2: return (my_list[:L], my_list[L:]) | R:L,my_list", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(L)", style="solid"];
+    "1" -> "2" [label="DATA(my_list)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

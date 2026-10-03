@@ -1,0 +1,94 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def extract_rear(my_tuple):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "my_tuple",
+        "extract_rear"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "my_tuple": [
+          "('Mers', 'for', 'Vers')"
+        ]
+      },
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "return tuple(s[-1] for s in my_tuple)",
+      "statement_type": "Return",
+      "reads": [
+        "my_tuple",
+        "s",
+        "tuple"
+      ],
+      "writes": [
+        "s"
+      ],
+      "function_name": "extract_rear",
+      "executed": true,
+      "execution_count": 14,
+      "runtime_values": {
+        "my_tuple": [
+          "('Mers', 'for', 'Vers')",
+          "('Mers', 'for', 'Vers')"
+        ],
+        ".0": [
+          "<tuple_iterator object at 0x0000022B6C925EA0>",
+          "<tuple_iterator object at 0x0000022B6C925EA0>",
+          "<tuple_iterator object at 0x0000022B6C925EA0>",
+          "<tuple_iterator object at 0x0000022B6C925EA0>",
+          "<tuple_iterator object at 0x0000022B6C925EA0>",
+          "<tuple_iterator object at 0x0000022B6C925EA0>",
+          "<tuple_iterator object at 0x0000022B6C925EA0>",
+          "<tuple_iterator object at 0x0000022B6C925EA0>",
+          "<tuple_iterator object at 0x0000022B6C925EA0>",
+          "<tuple_iterator object at 0x0000022B6C925EA0>",
+          "<tuple_iterator object at 0x0000022B6C925EA0>",
+          "<tuple_iterator object at 0x0000022B6C925EA0>"
+        ],
+        "s": [
+          "Mers",
+          "Mers",
+          "Mers",
+          "for",
+          "for",
+          "for",
+          "Vers",
+          "Vers",
+          "Vers",
+          "Vers"
+        ]
+      },
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "my_tuple",
+      "label": "DATA(my_tuple)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    2
+  ]
+}

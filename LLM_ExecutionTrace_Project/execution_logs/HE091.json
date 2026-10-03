@@ -1,0 +1,22 @@
+{
+  "trace_id": "HE091",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/133",
+  "problem_summary": "\n\ndef sum_squares(lst):\n    \"\"\"You are given a list of numbers.\n    You need to ",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpevod6b_e.py\", line 26, in <module>\n    check(sum_squares)\n    ~~~~~^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpevod6b_e.py\", line 7, in check\n    assert candidate([1,2,3])==14, \"This prints if this assert fails 1 (good for debugging!)\"\n           ~~~~~~~~~^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpevod6b_e.py\", line 2, in sum_squares\n    return sum([int(ceil(x))**2 for x in lst])\n                    ^^^^\nNameError: name 'ceil' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpevod6b_e.py\", line 26, in <module>\n    check(sum_squares)\n    ~~~~~^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpevod6b_e.py\", line 7, in check\n    assert candidate([1,2,3])==14, \"This prints if this assert fails 1 (good for debugging!)\"\n           ~~~~~~~~~^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpevod6b_e.py\", line 2, in sum_squares\n    return sum([int(ceil(x))**2 for x in lst])\n                    ^^^^\nNameError: name 'ceil' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'ceil' is not defined",
+  "execution_time": 0.243252,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

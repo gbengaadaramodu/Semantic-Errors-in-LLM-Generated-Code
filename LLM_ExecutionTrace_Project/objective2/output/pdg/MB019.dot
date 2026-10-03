@@ -1,0 +1,11 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def sort_counter(my_dict): | W:my_dict,sort_counter", fillcolor="lightgreen"];
+    "2" [label="L2: return sorted(my_dict.items(), key=lambda x: x[1]) | W:x | R:my_dict,sorted,x", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(my_dict)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

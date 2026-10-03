@@ -1,0 +1,11 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def special_filter(nums): | W:nums,special_filter", fillcolor="lightgreen"];
+    "2" [label="L2: return len([num for num in nums if num > 10 and str(num)[0] in '13579' and str(num)[-1] in '13579']) | W:num | R:len,num,nums,str", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(nums)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

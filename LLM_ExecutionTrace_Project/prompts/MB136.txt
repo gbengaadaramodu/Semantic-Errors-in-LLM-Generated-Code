@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a python function to find the smallest missing number from a sorted list of natural numbers.
+
+Example test: assert find_First_Missing([0,1,2,3]) == 4
+[/INST]

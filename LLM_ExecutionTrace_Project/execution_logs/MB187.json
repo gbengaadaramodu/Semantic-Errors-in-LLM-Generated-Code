@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB187",
+  "dataset": "MBPP",
+  "task_id": "400",
+  "problem_summary": "Write a function to extract the number of unique tuples in the given list.",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpkyl10v15.py\", line 4, in <module>\n    assert extract_freq([(3, 4), (1, 2), (4, 3), (5, 6)] ) == 3\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpkyl10v15.py\", line 4, in <module>\n    assert extract_freq([(3, 4), (1, 2), (4, 3), (5, 6)] ) == 3\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+  "exception_type": "AssertionError",
+  "exception_message": "",
+  "execution_time": 0.210448,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": "benchmark_test",
+  "assertion_failed": true,
+  "parser_prediction": ""
+}

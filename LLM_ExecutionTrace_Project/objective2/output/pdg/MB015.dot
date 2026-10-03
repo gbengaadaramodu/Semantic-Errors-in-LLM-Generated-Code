@@ -1,0 +1,50 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def newman_prime(n): | W:n,newman_prime", fillcolor="lightgreen"];
+    "2" [label="L2: if n < 1: | R:n", fillcolor="lightgrey"];
+    "3" [label="L3: return None", fillcolor="lightgrey"];
+    "4" [label="L4: if n == 1: | R:n", fillcolor="lightgrey"];
+    "5" [label="L5: return 2", fillcolor="lightgrey"];
+    "6" [label="L8: prev_prime = newman_prime(n-1) | W:prev_prime | R:n,newman_prime", fillcolor="lightgrey"];
+    "7" [label="L11: next_prime = prev_prime + 2 | W:next_prime | R:prev_prime", fillcolor="lightgrey"];
+    "8" [label="L12: while not is_prime(next_prime): | R:is_prime,next_prime", fillcolor="lightgrey"];
+    "9" [label="L13: next_prime += 2 | W:next_prime", fillcolor="lightgrey"];
+    "10" [label="L15: return next_prime | R:next_prime", fillcolor="lightgrey"];
+    "11" [label="L17: def is_prime(n): | W:n,is_prime", fillcolor="lightgreen"];
+    "12" [label="L18: if n <= 1: | R:n", fillcolor="lightgrey"];
+    "13" [label="L19: return False", fillcolor="lightgrey"];
+    "14" [label="L20: for i in range(2, int(n**0.5) + 1): | W:i | R:int,n,range", fillcolor="lightgrey"];
+    "15" [label="L21: if n % i == 0: | R:i,n", fillcolor="lightgrey"];
+    "16" [label="L22: return False", fillcolor="lightgrey"];
+    "17" [label="L23: return True", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(n)", style="solid"];
+    "1" -> "4" [label="DATA(n)", style="solid"];
+    "1" -> "6" [label="DATA(n)", style="solid"];
+    "1" -> "6" [label="DATA(newman_prime)", style="solid"];
+    "6" -> "7" [label="DATA(prev_prime)", style="solid"];
+    "7" -> "8" [label="DATA(next_prime)", style="solid"];
+    "9" -> "10" [label="DATA(next_prime)", style="solid"];
+    "11" -> "12" [label="DATA(n)", style="solid"];
+    "11" -> "14" [label="DATA(n)", style="solid"];
+    "14" -> "15" [label="DATA(i)", style="solid"];
+    "11" -> "15" [label="DATA(n)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "2" -> "3" [label="CONTROL(If)", style="dashed"];
+    "1" -> "4" [label="CONTROL(FunctionDef)", style="dashed"];
+    "4" -> "5" [label="CONTROL(If)", style="dashed"];
+    "1" -> "6" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "7" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "8" [label="CONTROL(FunctionDef)", style="dashed"];
+    "8" -> "9" [label="CONTROL(While)", style="dashed"];
+    "1" -> "10" [label="CONTROL(FunctionDef)", style="dashed"];
+    "11" -> "12" [label="CONTROL(FunctionDef)", style="dashed"];
+    "12" -> "13" [label="CONTROL(If)", style="dashed"];
+    "11" -> "14" [label="CONTROL(FunctionDef)", style="dashed"];
+    "14" -> "15" [label="CONTROL(For)", style="dashed"];
+    "15" -> "16" [label="CONTROL(If)", style="dashed"];
+    "11" -> "17" [label="CONTROL(FunctionDef)", style="dashed"];
+}

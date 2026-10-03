@@ -1,0 +1,325 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def largest_subset(my_list):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "my_list",
+        "largest_subset"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 1,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "my_list.sort()",
+      "statement_type": "Expr",
+      "reads": [
+        "my_list"
+      ],
+      "writes": [],
+      "function_name": "largest_subset",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "3": {
+      "node_id": 3,
+      "line_number": 3,
+      "source_code": "max_length = 0",
+      "statement_type": "Assign",
+      "reads": [],
+      "writes": [
+        "max_length"
+      ],
+      "function_name": "largest_subset",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "4": {
+      "node_id": 4,
+      "line_number": 4,
+      "source_code": "for i in range(len(my_list)):",
+      "statement_type": "For",
+      "reads": [
+        "len",
+        "my_list",
+        "range"
+      ],
+      "writes": [
+        "i"
+      ],
+      "function_name": "largest_subset",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "5": {
+      "node_id": 5,
+      "line_number": 5,
+      "source_code": "num = my_list[i]",
+      "statement_type": "Assign",
+      "reads": [
+        "i",
+        "my_list"
+      ],
+      "writes": [
+        "num"
+      ],
+      "function_name": "largest_subset",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "6": {
+      "node_id": 6,
+      "line_number": 6,
+      "source_code": "j = i + 1",
+      "statement_type": "Assign",
+      "reads": [
+        "i"
+      ],
+      "writes": [
+        "j"
+      ],
+      "function_name": "largest_subset",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "7": {
+      "node_id": 7,
+      "line_number": 7,
+      "source_code": "while j < len(my_list) and my_list[j] % num == 0:",
+      "statement_type": "While",
+      "reads": [
+        "j",
+        "len",
+        "my_list",
+        "num"
+      ],
+      "writes": [],
+      "function_name": "largest_subset",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "8": {
+      "node_id": 8,
+      "line_number": 8,
+      "source_code": "j += 1",
+      "statement_type": "AugAssign",
+      "reads": [],
+      "writes": [
+        "j"
+      ],
+      "function_name": "largest_subset",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "9": {
+      "node_id": 9,
+      "line_number": 9,
+      "source_code": "max_length = max(max_length, j - i)",
+      "statement_type": "Assign",
+      "reads": [
+        "i",
+        "j",
+        "max",
+        "max_length"
+      ],
+      "writes": [
+        "max_length"
+      ],
+      "function_name": "largest_subset",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "10": {
+      "node_id": 10,
+      "line_number": 10,
+      "source_code": "return max_length",
+      "statement_type": "Return",
+      "reads": [
+        "max_length"
+      ],
+      "writes": [],
+      "function_name": "largest_subset",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "my_list",
+      "label": "DATA(my_list)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 4,
+      "dependency_type": "DATA",
+      "variable": "my_list",
+      "label": "DATA(my_list)"
+    },
+    {
+      "source_id": 4,
+      "target_id": 5,
+      "dependency_type": "DATA",
+      "variable": "i",
+      "label": "DATA(i)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 5,
+      "dependency_type": "DATA",
+      "variable": "my_list",
+      "label": "DATA(my_list)"
+    },
+    {
+      "source_id": 4,
+      "target_id": 6,
+      "dependency_type": "DATA",
+      "variable": "i",
+      "label": "DATA(i)"
+    },
+    {
+      "source_id": 6,
+      "target_id": 7,
+      "dependency_type": "DATA",
+      "variable": "j",
+      "label": "DATA(j)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 7,
+      "dependency_type": "DATA",
+      "variable": "my_list",
+      "label": "DATA(my_list)"
+    },
+    {
+      "source_id": 5,
+      "target_id": 7,
+      "dependency_type": "DATA",
+      "variable": "num",
+      "label": "DATA(num)"
+    },
+    {
+      "source_id": 4,
+      "target_id": 9,
+      "dependency_type": "DATA",
+      "variable": "i",
+      "label": "DATA(i)"
+    },
+    {
+      "source_id": 8,
+      "target_id": 9,
+      "dependency_type": "DATA",
+      "variable": "j",
+      "label": "DATA(j)"
+    },
+    {
+      "source_id": 3,
+      "target_id": 9,
+      "dependency_type": "DATA",
+      "variable": "max_length",
+      "label": "DATA(max_length)"
+    },
+    {
+      "source_id": 9,
+      "target_id": 10,
+      "dependency_type": "DATA",
+      "variable": "max_length",
+      "label": "DATA(max_length)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 3,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 4,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 4,
+      "target_id": 5,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(For)"
+    },
+    {
+      "source_id": 4,
+      "target_id": 6,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(For)"
+    },
+    {
+      "source_id": 4,
+      "target_id": 7,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(For)"
+    },
+    {
+      "source_id": 7,
+      "target_id": 8,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(While)"
+    },
+    {
+      "source_id": 4,
+      "target_id": 9,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(For)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 10,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    10
+  ]
+}

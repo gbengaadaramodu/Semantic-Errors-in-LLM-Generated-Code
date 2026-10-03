@@ -1,0 +1,289 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def check_dict_case(my_dict):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "my_dict",
+        "check_dict_case"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 4,
+      "runtime_values": {
+        "my_dict": [
+          "{'p': 'pineapple', 'b': 'banana'}",
+          "{'p': 'pineapple', 'A': 'banana', 'B': 'banana'}",
+          "{'p': 'pineapple', '5': 'banana', 'a': 'apple'}"
+        ]
+      },
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "if not my_dict:",
+      "statement_type": "If",
+      "reads": [
+        "my_dict"
+      ],
+      "writes": [],
+      "function_name": "check_dict_case",
+      "executed": true,
+      "execution_count": 3,
+      "runtime_values": {
+        "my_dict": [
+          "{'p': 'pineapple', 'b': 'banana'}",
+          "{'p': 'pineapple', 'A': 'banana', 'B': 'banana'}",
+          "{'p': 'pineapple', '5': 'banana', 'a': 'apple'}"
+        ]
+      },
+      "failure_related": false
+    },
+    "3": {
+      "node_id": 3,
+      "line_number": 3,
+      "source_code": "return False",
+      "statement_type": "Return",
+      "reads": [],
+      "writes": [],
+      "function_name": "check_dict_case",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "4": {
+      "node_id": 4,
+      "line_number": 4,
+      "source_code": "lowercase_keys = all(key.islower() for key in my_dict.keys())",
+      "statement_type": "Assign",
+      "reads": [
+        "all",
+        "key",
+        "my_dict"
+      ],
+      "writes": [
+        "key",
+        "lowercase_keys"
+      ],
+      "function_name": "check_dict_case",
+      "executed": true,
+      "execution_count": 27,
+      "runtime_values": {
+        "my_dict": [
+          "{'p': 'pineapple', 'b': 'banana'}",
+          "{'p': 'pineapple', 'A': 'banana', 'B': 'banana'}",
+          "{'p': 'pineapple', '5': 'banana', 'a': 'apple'}",
+          "{'p': 'pineapple', '5': 'banana', 'a': 'apple'}",
+          "{'p': 'pineapple', '5': 'banana', 'a': 'apple'}"
+        ],
+        ".0": [
+          "<dict_keyiterator object at 0x0000022B6C665FD0>",
+          "<dict_keyiterator object at 0x0000022B6C665FD0>",
+          "<dict_keyiterator object at 0x0000022B6C665FD0>",
+          "<dict_keyiterator object at 0x0000022B6C665FD0>",
+          "<dict_keyiterator object at 0x0000022B6C665FD0>",
+          "<dict_keyiterator object at 0x0000022B6C665FD0>",
+          "<dict_keyiterator object at 0x0000022B6C665FD0>",
+          "<dict_keyiterator object at 0x0000022B6C665FD0>",
+          "<dict_keyiterator object at 0x0000022B6C665FD0>",
+          "<dict_keyiterator object at 0x0000022B6C665FD0>",
+          "<dict_keyiterator object at 0x0000022B6C665FD0>",
+          "<dict_keyiterator object at 0x0000022B6C665FD0>",
+          "<dict_keyiterator object at 0x0000022B6C665FD0>",
+          "<dict_keyiterator object at 0x0000022B6C665FD0>",
+          "<dict_keyiterator object at 0x0000022B6C665FD0>",
+          "<dict_keyiterator object at 0x0000022B6C665FD0>",
+          "<dict_keyiterator object at 0x0000022B6C665FD0>",
+          "<dict_keyiterator object at 0x0000022B6C665FD0>",
+          "<dict_keyiterator object at 0x0000022B6C665FD0>",
+          "<dict_keyiterator object at 0x0000022B6C665FD0>",
+          "<dict_keyiterator object at 0x0000022B6C665FD0>",
+          "<dict_keyiterator object at 0x0000022B6C665FD0>"
+        ],
+        "key": [
+          "p",
+          "p",
+          "p",
+          "b",
+          "b",
+          "b",
+          "b",
+          "p",
+          "p",
+          "p",
+          "A",
+          "p",
+          "p",
+          "p",
+          "5",
+          "5"
+        ]
+      },
+      "failure_related": true
+    },
+    "5": {
+      "node_id": 5,
+      "line_number": 5,
+      "source_code": "uppercase_keys = all(key.isupper() for key in my_dict.keys())",
+      "statement_type": "Assign",
+      "reads": [
+        "all",
+        "key",
+        "my_dict"
+      ],
+      "writes": [
+        "key",
+        "uppercase_keys"
+      ],
+      "function_name": "check_dict_case",
+      "executed": true,
+      "execution_count": 8,
+      "runtime_values": {
+        "my_dict": [
+          "{'p': 'pineapple', 'b': 'banana'}",
+          "{'p': 'pineapple', 'A': 'banana', 'B': 'banana'}"
+        ],
+        "lowercase_keys": [
+          "True",
+          "False"
+        ],
+        ".0": [
+          "<dict_keyiterator object at 0x0000022B6C665FD0>",
+          "<dict_keyiterator object at 0x0000022B6C665FD0>",
+          "<dict_keyiterator object at 0x0000022B6C665FD0>",
+          "<dict_keyiterator object at 0x0000022B6C665FD0>",
+          "<dict_keyiterator object at 0x0000022B6C665FD0>",
+          "<dict_keyiterator object at 0x0000022B6C665FD0>"
+        ],
+        "key": [
+          "p",
+          "p"
+        ]
+      },
+      "failure_related": false
+    },
+    "6": {
+      "node_id": 6,
+      "line_number": 6,
+      "source_code": "return lowercase_keys or uppercase_keys",
+      "statement_type": "Return",
+      "reads": [
+        "lowercase_keys",
+        "uppercase_keys"
+      ],
+      "writes": [],
+      "function_name": "check_dict_case",
+      "executed": true,
+      "execution_count": 4,
+      "runtime_values": {
+        "my_dict": [
+          "{'p': 'pineapple', 'b': 'banana'}",
+          "{'p': 'pineapple', 'b': 'banana'}",
+          "{'p': 'pineapple', 'A': 'banana', 'B': 'banana'}",
+          "{'p': 'pineapple', 'A': 'banana', 'B': 'banana'}"
+        ],
+        "lowercase_keys": [
+          "True",
+          "True",
+          "False",
+          "False"
+        ],
+        "uppercase_keys": [
+          "False",
+          "False",
+          "False",
+          "False"
+        ]
+      },
+      "failure_related": false
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "my_dict",
+      "label": "DATA(my_dict)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 4,
+      "dependency_type": "DATA",
+      "variable": "my_dict",
+      "label": "DATA(my_dict)"
+    },
+    {
+      "source_id": 4,
+      "target_id": 5,
+      "dependency_type": "DATA",
+      "variable": "key",
+      "label": "DATA(key)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 5,
+      "dependency_type": "DATA",
+      "variable": "my_dict",
+      "label": "DATA(my_dict)"
+    },
+    {
+      "source_id": 4,
+      "target_id": 6,
+      "dependency_type": "DATA",
+      "variable": "lowercase_keys",
+      "label": "DATA(lowercase_keys)"
+    },
+    {
+      "source_id": 5,
+      "target_id": 6,
+      "dependency_type": "DATA",
+      "variable": "uppercase_keys",
+      "label": "DATA(uppercase_keys)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 2,
+      "target_id": 3,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(If)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 4,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 5,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 6,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    4
+  ]
+}

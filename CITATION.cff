@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you use this research artifact, software, or data in your research, please cite it as below."
+title: "Diagnostic Model and Causal Root Cause Analysis Framework for LLM-Generated Code"
+type: software
+date-released: 2026-10-03
+keywords:
+  - "large language models"
+  - "code generation"
+  - "causal root cause analysis"
+  - "structural causal models"
+  - "program dependency graph"
+  - "fault localization"
+  - "error taxonomy"
+  - "reproducibility"
+  - "software engineering"

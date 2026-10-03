@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB287",
+  "dataset": "MBPP",
+  "task_id": "9",
+  "problem_summary": "Write a python function to find the minimum number of rotations (greater than 0)",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpe8fmogsy.py\", line 9, in <module>\n    assert find_Rotations(\"aaaa\") == 1\n           ^^^^^^^^^^^^^^\nNameError: name 'find_Rotations' is not defined. Did you mean: 'find_rotations'?\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpe8fmogsy.py\", line 9, in <module>\n    assert find_Rotations(\"aaaa\") == 1\n           ^^^^^^^^^^^^^^\nNameError: name 'find_Rotations' is not defined. Did you mean: 'find_rotations'?",
+  "exception_type": "NameError",
+  "exception_message": "name 'find_Rotations' is not defined. Did you mean: 'find_rotations'?",
+  "execution_time": 0.191504,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

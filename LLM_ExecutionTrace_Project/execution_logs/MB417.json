@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB417",
+  "dataset": "MBPP",
+  "task_id": "401",
+  "problem_summary": "Write a function to perform index wise addition of tuple elements in the given t",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp3esa2s1b.py\", line 2\n    return tuple((i + j for i, j in zip(*tuple1)), (*tuple2))\n                                                    ^^^^^^^\nSyntaxError: cannot use starred expression here\n",
+  "traceback": "File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp3esa2s1b.py\", line 2\n    return tuple((i + j for i, j in zip(*tuple1)), (*tuple2))\n                                                    ^^^^^^^\nSyntaxError: cannot use starred expression here",
+  "exception_type": "SyntaxError",
+  "exception_message": "cannot use starred expression here",
+  "execution_time": 0.173517,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

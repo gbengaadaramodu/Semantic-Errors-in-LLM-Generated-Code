@@ -1,0 +1,55 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def check_monthnumb_number(month):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "month",
+        "check_monthnumb_number"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 1,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "return month in [1, 3, 5, 7, 8, 10, 12]",
+      "statement_type": "Return",
+      "reads": [
+        "month"
+      ],
+      "writes": [],
+      "function_name": "check_monthnumb_number",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "month",
+      "label": "DATA(month)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    2
+  ]
+}

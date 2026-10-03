@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB391",
+  "dataset": "MBPP",
+  "task_id": "587",
+  "problem_summary": "Write a function to convert a list to a tuple.",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpm7zuhut6.py\", line 4, in <module>\n    assert list_tuple([5, 10, 7, 4, 15, 3])==(5, 10, 7, 4, 15, 3)\n           ^^^^^^^^^^\nNameError: name 'list_tuple' is not defined. Did you mean: 'list_to_tuple'?\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpm7zuhut6.py\", line 4, in <module>\n    assert list_tuple([5, 10, 7, 4, 15, 3])==(5, 10, 7, 4, 15, 3)\n           ^^^^^^^^^^\nNameError: name 'list_tuple' is not defined. Did you mean: 'list_to_tuple'?",
+  "exception_type": "NameError",
+  "exception_message": "name 'list_tuple' is not defined. Did you mean: 'list_to_tuple'?",
+  "execution_time": 0.170437,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

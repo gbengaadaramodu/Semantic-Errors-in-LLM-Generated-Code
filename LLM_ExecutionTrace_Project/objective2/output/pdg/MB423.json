@@ -1,0 +1,100 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def sort_sublists(my_list):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "my_list",
+        "sort_sublists"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "my_list": [
+          "(['green', 'orange'], ['black', 'white'], ['white', 'black', 'orange'])"
+        ]
+      },
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "return [[word for word in sublist] for sublist in my_list]",
+      "statement_type": "Return",
+      "reads": [
+        "my_list",
+        "sublist",
+        "word"
+      ],
+      "writes": [
+        "sublist",
+        "word"
+      ],
+      "function_name": "sort_sublists",
+      "executed": true,
+      "execution_count": 12,
+      "runtime_values": {
+        "my_list": [
+          "(['green', 'orange'], ['black', 'white'], ['white', 'black', 'orange'])",
+          "(['green', 'orange'], ['black', 'white'], ['white', 'black', 'orange'])",
+          "(['green', 'orange'], ['black', 'white'], ['white', 'black', 'orange'])",
+          "(['green', 'orange'], ['black', 'white'], ['white', 'black', 'orange'])",
+          "(['green', 'orange'], ['black', 'white'], ['white', 'black', 'orange'])",
+          "(['green', 'orange'], ['black', 'white'], ['white', 'black', 'orange'])",
+          "(['green', 'orange'], ['black', 'white'], ['white', 'black', 'orange'])",
+          "(['green', 'orange'], ['black', 'white'], ['white', 'black', 'orange'])",
+          "(['green', 'orange'], ['black', 'white'], ['white', 'black', 'orange'])",
+          "(['green', 'orange'], ['black', 'white'], ['white', 'black', 'orange'])",
+          "(['green', 'orange'], ['black', 'white'], ['white', 'black', 'orange'])",
+          "(['green', 'orange'], ['black', 'white'], ['white', 'black', 'orange'])"
+        ],
+        "sublist": [
+          "['green', 'orange']",
+          "['green', 'orange']",
+          "['green', 'orange']",
+          "['black', 'white']",
+          "['black', 'white']",
+          "['black', 'white']",
+          "['white', 'black', 'orange']",
+          "['white', 'black', 'orange']",
+          "['white', 'black', 'orange']",
+          "['white', 'black', 'orange']"
+        ],
+        "word": [
+          "green",
+          "orange",
+          "black",
+          "white",
+          "white",
+          "black",
+          "orange"
+        ]
+      },
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "my_list",
+      "label": "DATA(my_list)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    2
+  ]
+}

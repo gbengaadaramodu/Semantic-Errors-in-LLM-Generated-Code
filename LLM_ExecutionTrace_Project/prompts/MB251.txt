@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a function to join a list of multiple integers into a single integer.
+
+Example test: assert multiple_to_single([11, 33, 50])==113350
+[/INST]

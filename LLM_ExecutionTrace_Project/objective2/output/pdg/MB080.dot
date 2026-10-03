@@ -1,0 +1,11 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def last_digit_factorial(n): | W:n,last_digit_factorial", fillcolor="lightgreen"];
+    "2" [label="L2: return str(n)[-1] | R:n,str", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(n)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

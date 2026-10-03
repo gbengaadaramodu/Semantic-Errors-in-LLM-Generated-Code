@@ -1,0 +1,58 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def split(numbers):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "numbers",
+        "split"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 1,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "return [number for number in numbers if number % 2 == 0]",
+      "statement_type": "Return",
+      "reads": [
+        "number",
+        "numbers"
+      ],
+      "writes": [
+        "number"
+      ],
+      "function_name": "split",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "numbers",
+      "label": "DATA(numbers)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    2
+  ]
+}

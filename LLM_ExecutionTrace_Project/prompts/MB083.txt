@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a function to find the lateral surface area of a cylinder.
+
+Example test: assert math.isclose(lateralsuface_cylinder(10,5), 314.15000000000003, rel_tol=0.001)
+[/INST]

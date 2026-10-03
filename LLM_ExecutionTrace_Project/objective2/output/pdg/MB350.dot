@@ -1,0 +1,12 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def index_multiplication(tuple1, tuple2): | W:tuple1,tuple2,index_multiplication", fillcolor="lightgreen"];
+    "2" [label="L2: return tuple((tup1 * tup2 for tup1, tup2 in zip(tuple1, tuple2))) | W:tup1,tup2 | R:tup1,tup2,tuple,tuple1,tuple2,zip", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(tuple1)", style="solid"];
+    "1" -> "2" [label="DATA(tuple2)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

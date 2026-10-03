@@ -1,0 +1,13 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def test_three_equal(a, b, c): | W:a,b,c,test_three_equal", fillcolor="lightgreen"];
+    "2" [label="L2: return a + b + c | R:a,b,c", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(a)", style="solid"];
+    "1" -> "2" [label="DATA(b)", style="solid"];
+    "1" -> "2" [label="DATA(c)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

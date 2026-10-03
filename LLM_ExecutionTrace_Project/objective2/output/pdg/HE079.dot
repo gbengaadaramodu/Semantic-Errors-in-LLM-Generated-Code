@@ -1,0 +1,11 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def add(lst): | W:lst,add", fillcolor="lightgreen"];
+    "2" [label="L2: return sum(i for i in lst if i % 2 == 0 and lst.index(i) % 2 != 0) | W:i | R:i,lst,sum", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(lst)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

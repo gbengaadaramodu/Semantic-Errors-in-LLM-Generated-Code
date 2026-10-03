@@ -1,0 +1,89 @@
+{
+  "task_id": "452",
+  "nodes": [
+    {
+      "node_id": "S",
+      "variable_name": "Specification",
+      "symbol": "S",
+      "label": "Specification"
+    },
+    {
+      "node_id": "C",
+      "variable_name": "GeneratedCode",
+      "symbol": "C",
+      "label": "Generated Code"
+    },
+    {
+      "node_id": "E",
+      "variable_name": "ExecutionTrace",
+      "symbol": "E",
+      "label": "Execution Trace"
+    },
+    {
+      "node_id": "T",
+      "variable_name": "TestSuite",
+      "symbol": "T",
+      "label": "Test Suite"
+    },
+    {
+      "node_id": "O",
+      "variable_name": "Outcome",
+      "symbol": "O",
+      "label": "Outcome"
+    }
+  ],
+  "edges": [
+    {
+      "source": "S",
+      "target": "C",
+      "relationship": "generates"
+    },
+    {
+      "source": "C",
+      "target": "E",
+      "relationship": "produces"
+    },
+    {
+      "source": "T",
+      "target": "E",
+      "relationship": "evaluates"
+    },
+    {
+      "source": "E",
+      "target": "O",
+      "relationship": "determines"
+    }
+  ],
+  "variables": {
+    "S": {
+      "name": "Specification",
+      "symbol": "S",
+      "description": "Problem description, prompt, and target function signature",
+      "value": "Write a function that gives loss amount on a sale if the given amount has loss e"
+    },
+    "C": {
+      "name": "GeneratedCode",
+      "symbol": "C",
+      "description": "LLM-generated Python source code implementation",
+      "value": "def perfect_squares(start, end):\n    return [x**2 for x in range(start, int(end**0.5) + 1)]"
+    },
+    "E": {
+      "name": "ExecutionTrace",
+      "symbol": "E",
+      "description": "Observable runtime trace events, variable states, and stdout/stderr",
+      "value": "status=Failed, exc=NameError, msg=name 'loss_amount' is not defined"
+    },
+    "T": {
+      "name": "TestSuite",
+      "symbol": "T",
+      "description": "Benchmark assertions, inputs, and check function harness",
+      "value": "assert loss_amount(1500,1200)==0\nassert loss_amount(100,200)==100\nassert loss_amount(2000,5000)==300"
+    },
+    "O": {
+      "name": "Outcome",
+      "symbol": "O",
+      "description": "Final test execution outcome (Completed/Failed/Timeout)",
+      "value": "Failed"
+    }
+  }
+}

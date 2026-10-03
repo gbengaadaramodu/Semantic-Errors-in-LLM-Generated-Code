@@ -1,0 +1,89 @@
+{
+  "task_id": "419",
+  "nodes": [
+    {
+      "node_id": "S",
+      "variable_name": "Specification",
+      "symbol": "S",
+      "label": "Specification"
+    },
+    {
+      "node_id": "C",
+      "variable_name": "GeneratedCode",
+      "symbol": "C",
+      "label": "Generated Code"
+    },
+    {
+      "node_id": "E",
+      "variable_name": "ExecutionTrace",
+      "symbol": "E",
+      "label": "Execution Trace"
+    },
+    {
+      "node_id": "T",
+      "variable_name": "TestSuite",
+      "symbol": "T",
+      "label": "Test Suite"
+    },
+    {
+      "node_id": "O",
+      "variable_name": "Outcome",
+      "symbol": "O",
+      "label": "Outcome"
+    }
+  ],
+  "edges": [
+    {
+      "source": "S",
+      "target": "C",
+      "relationship": "generates"
+    },
+    {
+      "source": "C",
+      "target": "E",
+      "relationship": "produces"
+    },
+    {
+      "source": "T",
+      "target": "E",
+      "relationship": "evaluates"
+    },
+    {
+      "source": "E",
+      "target": "O",
+      "relationship": "determines"
+    }
+  ],
+  "variables": {
+    "S": {
+      "name": "Specification",
+      "symbol": "S",
+      "description": "Problem description, prompt, and target function signature",
+      "value": "Write a function to round every number of a given list of numbers and print the "
+    },
+    "C": {
+      "name": "GeneratedCode",
+      "symbol": "C",
+      "description": "LLM-generated Python source code implementation",
+      "value": "def first_digit(n):\n    return str(n)[0]"
+    },
+    "E": {
+      "name": "ExecutionTrace",
+      "symbol": "E",
+      "description": "Observable runtime trace events, variable states, and stdout/stderr",
+      "value": "status=Failed, exc=NameError, msg=name 'round_and_sum' is not defined"
+    },
+    "T": {
+      "name": "TestSuite",
+      "symbol": "T",
+      "description": "Benchmark assertions, inputs, and check function harness",
+      "value": "assert round_and_sum([22.4, 4.0, -16.22, -9.10, 11.00, -12.22, 14.20, -5.20, 17.50])==243\nassert rou"
+    },
+    "O": {
+      "name": "Outcome",
+      "symbol": "O",
+      "description": "Final test execution outcome (Completed/Failed/Timeout)",
+      "value": "Failed"
+    }
+  }
+}

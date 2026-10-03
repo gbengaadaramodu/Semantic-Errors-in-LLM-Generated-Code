@@ -1,0 +1,12 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def generate_integers(a, b): | W:a,b,generate_integers", fillcolor="lightgreen"];
+    "2" [label="L2: return sorted([i for i in range(a, b+1) if str(i).isdigit() and int(str(i)) % 2 == 0]) | W:i | R:a,b,i,int,range,sorted,str", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(a)", style="solid"];
+    "1" -> "2" [label="DATA(b)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

@@ -1,0 +1,20 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def rearrange_bigger(num): | W:num,rearrange_bigger", fillcolor="lightgreen"];
+    "2" [label="L2: num_str = str(num) | W:num_str | R:num,str", fillcolor="lightgreen"];
+    "3" [label="L3: num_list = list(num_str) | W:num_list | R:list,num_str", fillcolor="lightgreen"];
+    "4" [label="L4: num_list.sort(reverse=True) | R:num_list", fillcolor="lightgreen"];
+    "5" [label="L5: return int(''.join(num_list)) | R:int,num_list", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(num)", style="solid"];
+    "2" -> "3" [label="DATA(num_str)", style="solid"];
+    "3" -> "4" [label="DATA(num_list)", style="solid"];
+    "3" -> "5" [label="DATA(num_list)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "3" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "4" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "5" [label="CONTROL(FunctionDef)", style="dashed"];
+}

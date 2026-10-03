@@ -1,0 +1,42 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def match_parens(lst): | W:lst,match_parens", fillcolor="lightgreen"];
+    "2" [label="L2: if len(lst) % 2 == 1: | R:len,lst", fillcolor="lightgreen"];
+    "3" [label="L3: return \"No\"", fillcolor="lightgrey"];
+    "4" [label="L4: stack = [] | W:stack", fillcolor="lightgreen"];
+    "5" [label="L5: for i in range(len(lst)): | W:i | R:len,lst,range", fillcolor="lightgreen"];
+    "6" [label="L6: if lst[i] == '(': | R:i,lst", fillcolor="lightgreen"];
+    "7" [label="L7: stack.append(lst[i]) | R:i,lst,stack", fillcolor="lightgrey"];
+    "8" [label="L9: if not stack: | R:stack", fillcolor="lightgreen"];
+    "9" [label="L10: return \"No\"", fillcolor="lightgreen"];
+    "10" [label="L11: stack.pop() | R:stack", fillcolor="lightgrey"];
+    "11" [label="L12: if not stack: | R:stack", fillcolor="lightgrey"];
+    "12" [label="L13: return \"Yes\"", fillcolor="lightgrey"];
+    "13" [label="L14: return \"No\"", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(lst)", style="solid"];
+    "1" -> "5" [label="DATA(lst)", style="solid"];
+    "5" -> "6" [label="DATA(i)", style="solid"];
+    "1" -> "6" [label="DATA(lst)", style="solid"];
+    "5" -> "7" [label="DATA(i)", style="solid"];
+    "1" -> "7" [label="DATA(lst)", style="solid"];
+    "4" -> "7" [label="DATA(stack)", style="solid"];
+    "4" -> "8" [label="DATA(stack)", style="solid"];
+    "4" -> "10" [label="DATA(stack)", style="solid"];
+    "4" -> "11" [label="DATA(stack)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "2" -> "3" [label="CONTROL(If)", style="dashed"];
+    "1" -> "4" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "5" [label="CONTROL(FunctionDef)", style="dashed"];
+    "5" -> "6" [label="CONTROL(For)", style="dashed"];
+    "6" -> "7" [label="CONTROL(If)", style="dashed"];
+    "6" -> "8" [label="CONTROL(If)", style="dashed"];
+    "8" -> "9" [label="CONTROL(If)", style="dashed"];
+    "6" -> "10" [label="CONTROL(If)", style="dashed"];
+    "1" -> "11" [label="CONTROL(FunctionDef)", style="dashed"];
+    "11" -> "12" [label="CONTROL(If)", style="dashed"];
+    "1" -> "13" [label="CONTROL(FunctionDef)", style="dashed"];
+}

@@ -1,0 +1,22 @@
+{
+  "trace_id": "HE094",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/150",
+  "problem_summary": "\ndef x_or_y(n, x, y):\n    \"\"\"A simple program which should return the value of x",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp5fe357k3.py\", line 26, in <module>\n    check(x_or_y)\n    ~~~~~^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp5fe357k3.py\", line 10, in check\n    assert candidate(7, 34, 12) == 34\n           ~~~~~~~~~^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp5fe357k3.py\", line 2, in x_or_y\n    if is_prime(n):\n       ^^^^^^^^\nNameError: name 'is_prime' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp5fe357k3.py\", line 26, in <module>\n    check(x_or_y)\n    ~~~~~^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp5fe357k3.py\", line 10, in check\n    assert candidate(7, 34, 12) == 34\n           ~~~~~~~~~^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp5fe357k3.py\", line 2, in x_or_y\n    if is_prime(n):\n       ^^^^^^^^\nNameError: name 'is_prime' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'is_prime' is not defined",
+  "execution_time": 0.239348,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

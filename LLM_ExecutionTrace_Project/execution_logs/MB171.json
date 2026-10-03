@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB171",
+  "dataset": "MBPP",
+  "task_id": "291",
+  "problem_summary": "Write a function to find out the number of ways of painting the fence such that ",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmppttdgvue.py\", line 12, in <module>\n    assert count_no_of_ways(4, 4) == 228\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmppttdgvue.py\", line 12, in <module>\n    assert count_no_of_ways(4, 4) == 228\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+  "exception_type": "AssertionError",
+  "exception_message": "",
+  "execution_time": 0.182392,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": "benchmark_test",
+  "assertion_failed": true,
+  "parser_prediction": ""
+}

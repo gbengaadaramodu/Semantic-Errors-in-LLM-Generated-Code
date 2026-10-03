@@ -1,0 +1,17 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def geometric_sum(n): | W:n,geometric_sum", fillcolor="lightgreen"];
+    "2" [label="L2: if n == 0: | R:n", fillcolor="lightgreen"];
+    "3" [label="L3: return 0", fillcolor="lightgreen"];
+    "4" [label="L5: return (1 / n) + geometric_sum(n-1) | R:geometric_sum,n", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(n)", style="solid"];
+    "1" -> "4" [label="DATA(geometric_sum)", style="solid"];
+    "1" -> "4" [label="DATA(n)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "2" -> "3" [label="CONTROL(If)", style="dashed"];
+    "2" -> "4" [label="CONTROL(If)", style="dashed"];
+}

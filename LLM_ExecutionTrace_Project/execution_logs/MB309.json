@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB309",
+  "dataset": "MBPP",
+  "task_id": "639",
+  "problem_summary": "Write a function to sum the length of the names of a given list of names after r",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp6z851m29.py\", line 4, in <module>\n    assert sample_nam(['sally', 'Dylan', 'rebecca', 'Diana', 'Joanne', 'keith'])==16\n           ^^^^^^^^^^\nNameError: name 'sample_nam' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp6z851m29.py\", line 4, in <module>\n    assert sample_nam(['sally', 'Dylan', 'rebecca', 'Diana', 'Joanne', 'keith'])==16\n           ^^^^^^^^^^\nNameError: name 'sample_nam' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'sample_nam' is not defined",
+  "execution_time": 0.187682,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

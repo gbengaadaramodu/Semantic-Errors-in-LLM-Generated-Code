@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB373",
+  "dataset": "MBPP",
+  "task_id": "724",
+  "problem_summary": "Write a function that takes base and power as arguments and calculate the sum of",
+  "execution_status": "Completed",
+  "stdout": "",
+  "stderr": "",
+  "traceback": "",
+  "exception_type": "",
+  "exception_message": "",
+  "execution_time": 0.090527,
+  "timed_out": false,
+  "exit_code": 0,
+  "tests_passed": true,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

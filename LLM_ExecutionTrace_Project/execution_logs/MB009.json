@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB009",
+  "dataset": "MBPP",
+  "task_id": "130",
+  "problem_summary": "Write a function to find the item with maximum frequency in a given list.",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp2l1tsw4t.py\", line 4, in <module>\n    assert max_occurrences([2,3,8,4,7,9,8,2,6,5,1,6,1,2,3,2,4,6,9,1,2])==2\n           ^^^^^^^^^^^^^^^\nNameError: name 'max_occurrences' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp2l1tsw4t.py\", line 4, in <module>\n    assert max_occurrences([2,3,8,4,7,9,8,2,6,5,1,6,1,2,3,2,4,6,9,1,2])==2\n           ^^^^^^^^^^^^^^^\nNameError: name 'max_occurrences' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'max_occurrences' is not defined",
+  "execution_time": 0.239419,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

@@ -1,0 +1,97 @@
+[
+  {
+    "candidate_rank": 1,
+    "intervention": {
+      "target_variable": "max_word",
+      "target_line": 6,
+      "observed_value": "name",
+      "counterfactual_value": "enam",
+      "operation_type": "AST_transform",
+      "modified_code": "def find_max(words):\n    max_word = ''\n    for word in words:\n        if len(set(word)) > len(set(max_word)):\n            max_word = word\n    return 'enam'"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Completed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "TRUE",
+    "execution_time": 0.1524,
+    "status": "EXECUTED",
+    "explanation": "Intervention successfully flipped execution outcome from FAIL to PASS."
+  },
+  {
+    "candidate_rank": 2,
+    "intervention": {
+      "target_variable": "max_word",
+      "target_line": 5,
+      "observed_value": "",
+      "counterfactual_value": "None",
+      "operation_type": "AST_transform",
+      "modified_code": "def find_max(words):\n    max_word = ''\n    for word in words:\n        if len(set(word)) > len(set(max_word)):\n            max_word = None\n    return max_word"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.2605,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  },
+  {
+    "candidate_rank": 3,
+    "intervention": {
+      "target_variable": "word",
+      "target_line": 3,
+      "observed_value": "game",
+      "counterfactual_value": "None",
+      "operation_type": "failed_construction",
+      "modified_code": ""
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "FAILED_CONSTRUCTION",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "UNRESOLVED",
+    "execution_time": 0.0,
+    "status": "UNRESOLVED",
+    "explanation": "Failed to construct valid AST counterfactual intervention."
+  },
+  {
+    "candidate_rank": 4,
+    "intervention": {
+      "target_variable": "len",
+      "target_line": 4,
+      "observed_value": "None",
+      "counterfactual_value": "None",
+      "operation_type": "AST_transform",
+      "modified_code": "def find_max(words):\n    max_word = ''\n    for word in words:\n        if len(set(word)) <= len(set(max_word)):\n            max_word = word\n    return max_word"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.2732,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  },
+  {
+    "candidate_rank": 5,
+    "intervention": {
+      "target_variable": "max_word",
+      "target_line": 2,
+      "observed_value": "None",
+      "counterfactual_value": "None",
+      "operation_type": "AST_transform",
+      "modified_code": "def find_max(words):\n    max_word = None\n    for word in words:\n        if len(set(word)) > len(set(max_word)):\n            max_word = word\n    return max_word"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.2438,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  }
+]

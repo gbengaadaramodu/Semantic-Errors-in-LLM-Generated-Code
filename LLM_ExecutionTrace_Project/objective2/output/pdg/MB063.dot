@@ -1,0 +1,12 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def lateralsurface_cone(r, h): | W:h,r,lateralsurface_cone", fillcolor="lightgreen"];
+    "2" [label="L2: return 2 * r * h + (r ** 2) * math.acos(-1) | R:h,math,r", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(h)", style="solid"];
+    "1" -> "2" [label="DATA(r)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

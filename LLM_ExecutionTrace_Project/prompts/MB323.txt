@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a python function to find the average of cubes of first n natural numbers.
+
+Example test: assert find_Average_Of_Cube(2) == 4.5
+[/INST]

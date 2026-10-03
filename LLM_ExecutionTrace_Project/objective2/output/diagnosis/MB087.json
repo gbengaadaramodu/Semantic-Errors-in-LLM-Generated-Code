@@ -1,0 +1,316 @@
+{
+  "trace_id": "MB087",
+  "dataset": "MBPP",
+  "task_id": "117",
+  "error_category": "Runtime Exception",
+  "analysis_status": "ANALYZED",
+  "skip_reason": null,
+  "input_record": {
+    "trace_id": "MB087",
+    "dataset": "MBPP",
+    "task_id": "117",
+    "problem_summary": "Write a function to convert all possible convertible elements in a list of lists",
+    "execution_status": "Failed",
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpournq85t.py\", line 7, in <module>\n    assert list_to_float( [(\"3\", \"4\"), (\"1\", \"26.45\"), (\"7.32\", \"8\"), (\"4\", \"8\")] ) == [(3.0, 4.0), (1.0, 26.45), (7.32, 8.0), (4.0, 8.0)]\n           ^^^^^^^^^^^^^\nNameError: name 'list_to_float' is not defined\n",
+    "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpournq85t.py\", line 7, in <module>\n    assert list_to_float( [(\"3\", \"4\"), (\"1\", \"26.45\"), (\"7.32\", \"8\"), (\"4\", \"8\")] ) == [(3.0, 4.0), (1.0, 26.45), (7.32, 8.0), (4.0, 8.0)]\n           ^^^^^^^^^^^^^\nNameError: name 'list_to_float' is not defined",
+    "exception_type": "NameError",
+    "exception_message": "name 'list_to_float' is not defined",
+    "execution_time": 0.230115,
+    "timed_out": false,
+    "exit_code": 1,
+    "tests_passed": false,
+    "tests_failed": 0,
+    "expected_output": null,
+    "actual_output": null,
+    "assertion_source": null,
+    "assertion_failed": false,
+    "parser_prediction": "Runtime Exception"
+  },
+  "scm": {
+    "task_id": "117",
+    "nodes": [
+      {
+        "node_id": "S",
+        "variable_name": "Specification",
+        "symbol": "S",
+        "label": "Specification"
+      },
+      {
+        "node_id": "C",
+        "variable_name": "GeneratedCode",
+        "symbol": "C",
+        "label": "Generated Code"
+      },
+      {
+        "node_id": "E",
+        "variable_name": "ExecutionTrace",
+        "symbol": "E",
+        "label": "Execution Trace"
+      },
+      {
+        "node_id": "T",
+        "variable_name": "TestSuite",
+        "symbol": "T",
+        "label": "Test Suite"
+      },
+      {
+        "node_id": "O",
+        "variable_name": "Outcome",
+        "symbol": "O",
+        "label": "Outcome"
+      }
+    ],
+    "edges": [
+      {
+        "source": "S",
+        "target": "C",
+        "relationship": "generates"
+      },
+      {
+        "source": "C",
+        "target": "E",
+        "relationship": "produces"
+      },
+      {
+        "source": "T",
+        "target": "E",
+        "relationship": "evaluates"
+      },
+      {
+        "source": "E",
+        "target": "O",
+        "relationship": "determines"
+      }
+    ],
+    "variables": {
+      "S": {
+        "name": "Specification",
+        "symbol": "S",
+        "description": "Problem description, prompt, and target function signature",
+        "value": "Write a function to convert all possible convertible elements in a list of lists"
+      },
+      "C": {
+        "name": "GeneratedCode",
+        "symbol": "C",
+        "description": "LLM-generated Python source code implementation",
+        "value": "def dif_square(n):\n    for i in range(1, int(n**0.5)):\n        if n % i == 0:\n            return True\n    return False"
+      },
+      "E": {
+        "name": "ExecutionTrace",
+        "symbol": "E",
+        "description": "Observable runtime trace events, variable states, and stdout/stderr",
+        "value": "status=Failed, exc=NameError, msg=name 'list_to_float' is not defined"
+      },
+      "T": {
+        "name": "TestSuite",
+        "symbol": "T",
+        "description": "Benchmark assertions, inputs, and check function harness",
+        "value": "assert list_to_float( [(\"3\", \"4\"), (\"1\", \"26.45\"), (\"7.32\", \"8\"), (\"4\", \"8\")] ) == [(3.0, 4.0), (1.0"
+      },
+      "O": {
+        "name": "Outcome",
+        "symbol": "O",
+        "description": "Final test execution outcome (Completed/Failed/Timeout)",
+        "value": "Failed"
+      }
+    }
+  },
+  "pdg": {
+    "nodes": {
+      "1": {
+        "node_id": 1,
+        "line_number": 1,
+        "source_code": "def dif_square(n):",
+        "statement_type": "FunctionDef",
+        "reads": [],
+        "writes": [
+          "n",
+          "dif_square"
+        ],
+        "function_name": "<module>",
+        "executed": true,
+        "execution_count": 1,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "2": {
+        "node_id": 2,
+        "line_number": 2,
+        "source_code": "for i in range(1, int(n**0.5)):",
+        "statement_type": "For",
+        "reads": [
+          "int",
+          "n",
+          "range"
+        ],
+        "writes": [
+          "i"
+        ],
+        "function_name": "dif_square",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "3": {
+        "node_id": 3,
+        "line_number": 3,
+        "source_code": "if n % i == 0:",
+        "statement_type": "If",
+        "reads": [
+          "i",
+          "n"
+        ],
+        "writes": [],
+        "function_name": "dif_square",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "4": {
+        "node_id": 4,
+        "line_number": 4,
+        "source_code": "return True",
+        "statement_type": "Return",
+        "reads": [],
+        "writes": [],
+        "function_name": "dif_square",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "5": {
+        "node_id": 5,
+        "line_number": 5,
+        "source_code": "return False",
+        "statement_type": "Return",
+        "reads": [],
+        "writes": [],
+        "function_name": "dif_square",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": true
+      }
+    },
+    "edges": [
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "DATA",
+        "variable": "n",
+        "label": "DATA(n)"
+      },
+      {
+        "source_id": 2,
+        "target_id": 3,
+        "dependency_type": "DATA",
+        "variable": "i",
+        "label": "DATA(i)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 3,
+        "dependency_type": "DATA",
+        "variable": "n",
+        "label": "DATA(n)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 2,
+        "target_id": 3,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(For)"
+      },
+      {
+        "source_id": 3,
+        "target_id": 4,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(If)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 5,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      }
+    ],
+    "entry_node_id": 1,
+    "failure_node_ids": [
+      5
+    ]
+  },
+  "runtime_events_count": 5,
+  "failure_line": 5,
+  "failure_statement": "return False",
+  "candidates": [
+    {
+      "rank": 1,
+      "node_id": 5,
+      "line_number": 5,
+      "statement_code": "return False",
+      "variable_name": "<statement>",
+      "observed_value": null,
+      "expected_value": "[(3.0, 4.0), (1.0, 26.45), (7.32, 8.0), (4.0, 8.0)]",
+      "proximity_score": 1.0,
+      "dependency_score": 1.0,
+      "explanation": "Reached via reverse traversal (distance=0, type=Return)"
+    }
+  ],
+  "critical_variable": null,
+  "counterfactual_results": [
+    {
+      "candidate_rank": 1,
+      "intervention": {
+        "target_variable": "<statement>",
+        "target_line": 5,
+        "observed_value": "None",
+        "counterfactual_value": "[(3.0, 4.0), (1.0, 26.45), (7.32, 8.0), (4.0, 8.0)]",
+        "operation_type": "failed_construction",
+        "modified_code": ""
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "FAILED_CONSTRUCTION",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "UNRESOLVED",
+      "execution_time": 0.0,
+      "status": "UNRESOLVED",
+      "explanation": "Failed to construct valid AST counterfactual intervention."
+    }
+  ],
+  "fault_location": {
+    "file": "MB087.py",
+    "line_number": 5,
+    "statement_code": "return False",
+    "function_name": "list_to_float",
+    "causal_variable": "<statement>",
+    "evidence_score": 1.0,
+    "confidence": 0.5
+  },
+  "root_cause": {
+    "root_cause_status": "UNRESOLVED",
+    "candidate_explanation": "Runtime exception (NameError: name 'list_to_float' is not defined) triggered at statement 'return False' (line 5) involving variable '<statement>'.",
+    "causal_variable": "<statement>",
+    "fault_statement": "return False",
+    "fault_line": 5,
+    "evidence_summary": "Reverse PDG traversal traced failure from line 1 to statement line 5. Structural dependency identified; counterfactual validation unconfirmed or unresolved.",
+    "counterfactual_validated": false,
+    "confidence": 0.5
+  },
+  "ground_truth_matched": null,
+  "ground_truth_fault_line": null,
+  "execution_time": 0.0185
+}

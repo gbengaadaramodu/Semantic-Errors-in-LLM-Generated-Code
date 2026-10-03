@@ -1,0 +1,52 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def max_sum_increasing_subseq(nums, i, k, prefix_sum): | W:i,k,nums,prefix_sum,max_sum_increasing_subseq", fillcolor="lightgreen"];
+    "2" [label="L2: if i == k: | R:i,k", fillcolor="lightgrey"];
+    "3" [label="L3: return nums[i] | R:i,nums", fillcolor="lightgrey"];
+    "4" [label="L4: if i > k: | R:i,k", fillcolor="lightgrey"];
+    "5" [label="L5: return 0", fillcolor="lightgrey"];
+    "6" [label="L6: if prefix_sum[k] != -1: | R:k,prefix_sum", fillcolor="lightgrey"];
+    "7" [label="L7: return prefix_sum[k] | R:k,prefix_sum", fillcolor="lightgrey"];
+    "8" [label="L8: max_sum = 0 | W:max_sum", fillcolor="lightgrey"];
+    "9" [label="L9: for j in range(i, k+1): | W:j | R:i,k,range", fillcolor="lightgrey"];
+    "10" [label="L10: max_sum = max(max_sum, nums[j] + max_sum_increasing_subseq(nums, j+1, k, prefix_sum)) | W:max_sum | R:j,k,max,max_sum,max_sum_increasing_subseq,nums,prefix_sum", fillcolor="lightgrey"];
+    "11" [label="L11: prefix_sum[k] = max_sum | R:k,max_sum,prefix_sum", fillcolor="lightgrey"];
+    "12" [label="L12: return max_sum | R:max_sum", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(i)", style="solid"];
+    "1" -> "2" [label="DATA(k)", style="solid"];
+    "1" -> "3" [label="DATA(i)", style="solid"];
+    "1" -> "3" [label="DATA(nums)", style="solid"];
+    "1" -> "4" [label="DATA(i)", style="solid"];
+    "1" -> "4" [label="DATA(k)", style="solid"];
+    "1" -> "6" [label="DATA(k)", style="solid"];
+    "1" -> "6" [label="DATA(prefix_sum)", style="solid"];
+    "1" -> "7" [label="DATA(k)", style="solid"];
+    "1" -> "7" [label="DATA(prefix_sum)", style="solid"];
+    "1" -> "9" [label="DATA(i)", style="solid"];
+    "1" -> "9" [label="DATA(k)", style="solid"];
+    "9" -> "10" [label="DATA(j)", style="solid"];
+    "1" -> "10" [label="DATA(k)", style="solid"];
+    "8" -> "10" [label="DATA(max_sum)", style="solid"];
+    "1" -> "10" [label="DATA(max_sum_increasing_subseq)", style="solid"];
+    "1" -> "10" [label="DATA(nums)", style="solid"];
+    "1" -> "10" [label="DATA(prefix_sum)", style="solid"];
+    "1" -> "11" [label="DATA(k)", style="solid"];
+    "10" -> "11" [label="DATA(max_sum)", style="solid"];
+    "1" -> "11" [label="DATA(prefix_sum)", style="solid"];
+    "10" -> "12" [label="DATA(max_sum)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "2" -> "3" [label="CONTROL(If)", style="dashed"];
+    "1" -> "4" [label="CONTROL(FunctionDef)", style="dashed"];
+    "4" -> "5" [label="CONTROL(If)", style="dashed"];
+    "1" -> "6" [label="CONTROL(FunctionDef)", style="dashed"];
+    "6" -> "7" [label="CONTROL(If)", style="dashed"];
+    "1" -> "8" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "9" [label="CONTROL(FunctionDef)", style="dashed"];
+    "9" -> "10" [label="CONTROL(For)", style="dashed"];
+    "1" -> "11" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "12" [label="CONTROL(FunctionDef)", style="dashed"];
+}

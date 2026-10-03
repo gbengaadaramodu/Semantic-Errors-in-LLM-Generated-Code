@@ -1,0 +1,59 @@
+[
+  {
+    "candidate_rank": 1,
+    "intervention": {
+      "target_variable": "result",
+      "target_line": 7,
+      "observed_value": "41",
+      "counterfactual_value": "25",
+      "operation_type": "AST_transform",
+      "modified_code": "def double_the_difference(lst):\n    result = 0\n    for num in lst:\n        if num < 0 or not num.is_integer():\n            continue\n        result += num * num\n    return 25"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Completed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "TRUE",
+    "execution_time": 0.0991,
+    "status": "EXECUTED",
+    "explanation": "Intervention successfully flipped execution outcome from FAIL to PASS."
+  },
+  {
+    "candidate_rank": 2,
+    "intervention": {
+      "target_variable": "result",
+      "target_line": 6,
+      "observed_value": "25",
+      "counterfactual_value": "None",
+      "operation_type": "failed_construction",
+      "modified_code": ""
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "FAILED_CONSTRUCTION",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "UNRESOLVED",
+    "execution_time": 0.0,
+    "status": "UNRESOLVED",
+    "explanation": "Failed to construct valid AST counterfactual intervention."
+  },
+  {
+    "candidate_rank": 3,
+    "intervention": {
+      "target_variable": "num",
+      "target_line": 3,
+      "observed_value": "4",
+      "counterfactual_value": "None",
+      "operation_type": "failed_construction",
+      "modified_code": ""
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "FAILED_CONSTRUCTION",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "UNRESOLVED",
+    "execution_time": 0.0,
+    "status": "UNRESOLVED",
+    "explanation": "Failed to construct valid AST counterfactual intervention."
+  }
+]

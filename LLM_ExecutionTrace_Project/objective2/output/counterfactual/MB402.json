@@ -1,0 +1,21 @@
+[
+  {
+    "candidate_rank": 1,
+    "intervention": {
+      "target_variable": "<statement>",
+      "target_line": 14,
+      "observed_value": "None",
+      "counterfactual_value": "2",
+      "operation_type": "failed_construction",
+      "modified_code": ""
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "FAILED_CONSTRUCTION",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "UNRESOLVED",
+    "execution_time": 0.0,
+    "status": "UNRESOLVED",
+    "explanation": "Failed to construct valid AST counterfactual intervention."
+  }
+]

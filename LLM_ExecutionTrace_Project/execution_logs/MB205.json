@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB205",
+  "dataset": "MBPP",
+  "task_id": "163",
+  "problem_summary": "Write a function to calculate the area of a regular polygon given the length and",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp8od3u6oi.py\", line 6, in <module>\n    assert math.isclose(area_polygon(4, 20), 400., rel_tol=0.001)\n                        ~~~~~~~~~~~~^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp8od3u6oi.py\", line 4, in area_polygon\n    return length ** 2 * num_sides / (4 * tan(pi / num_sides))\n                                          ^^^\nNameError: name 'tan' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp8od3u6oi.py\", line 6, in <module>\n    assert math.isclose(area_polygon(4, 20), 400., rel_tol=0.001)\n                        ~~~~~~~~~~~~^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp8od3u6oi.py\", line 4, in area_polygon\n    return length ** 2 * num_sides / (4 * tan(pi / num_sides))\n                                          ^^^\nNameError: name 'tan' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'tan' is not defined",
+  "execution_time": 0.252525,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

@@ -1,0 +1,88 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def parabola_directrix(a, b, c):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "a",
+        "b",
+        "c",
+        "parabola_directrix"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "a": [
+          "5"
+        ],
+        "b": [
+          "3"
+        ],
+        "c": [
+          "2"
+        ]
+      },
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "return -b/(2*a)",
+      "statement_type": "Return",
+      "reads": [
+        "a",
+        "b"
+      ],
+      "writes": [],
+      "function_name": "parabola_directrix",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "a": [
+          "5",
+          "5"
+        ],
+        "b": [
+          "3",
+          "3"
+        ],
+        "c": [
+          "2",
+          "2"
+        ]
+      },
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "a",
+      "label": "DATA(a)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "b",
+      "label": "DATA(b)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    2
+  ]
+}

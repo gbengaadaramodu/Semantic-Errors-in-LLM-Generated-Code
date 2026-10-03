@@ -1,0 +1,261 @@
+{
+  "trace_id": "MB257",
+  "dataset": "MBPP",
+  "task_id": "638",
+  "error_category": "Wrong-Output Error",
+  "analysis_status": "ANALYZED",
+  "skip_reason": null,
+  "input_record": {
+    "trace_id": "MB257",
+    "dataset": "MBPP",
+    "task_id": "638",
+    "problem_summary": "Write a function to calculate the wind chill index rounded to the next integer g",
+    "execution_status": "Failed",
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmppyud1cij.py\", line 4, in <module>\n    assert wind_chill(120,35)==40\n           ^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+    "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmppyud1cij.py\", line 4, in <module>\n    assert wind_chill(120,35)==40\n           ^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+    "exception_type": "AssertionError",
+    "exception_message": "",
+    "execution_time": 0.283764,
+    "timed_out": false,
+    "exit_code": 1,
+    "tests_passed": false,
+    "tests_failed": 0,
+    "expected_output": null,
+    "actual_output": null,
+    "assertion_source": "benchmark_test",
+    "assertion_failed": true,
+    "parser_prediction": "Wrong-Output Error"
+  },
+  "scm": {
+    "task_id": "638",
+    "nodes": [
+      {
+        "node_id": "S",
+        "variable_name": "Specification",
+        "symbol": "S",
+        "label": "Specification"
+      },
+      {
+        "node_id": "C",
+        "variable_name": "GeneratedCode",
+        "symbol": "C",
+        "label": "Generated Code"
+      },
+      {
+        "node_id": "E",
+        "variable_name": "ExecutionTrace",
+        "symbol": "E",
+        "label": "Execution Trace"
+      },
+      {
+        "node_id": "T",
+        "variable_name": "TestSuite",
+        "symbol": "T",
+        "label": "Test Suite"
+      },
+      {
+        "node_id": "O",
+        "variable_name": "Outcome",
+        "symbol": "O",
+        "label": "Outcome"
+      }
+    ],
+    "edges": [
+      {
+        "source": "S",
+        "target": "C",
+        "relationship": "generates"
+      },
+      {
+        "source": "C",
+        "target": "E",
+        "relationship": "produces"
+      },
+      {
+        "source": "T",
+        "target": "E",
+        "relationship": "evaluates"
+      },
+      {
+        "source": "E",
+        "target": "O",
+        "relationship": "determines"
+      }
+    ],
+    "variables": {
+      "S": {
+        "name": "Specification",
+        "symbol": "S",
+        "description": "Problem description, prompt, and target function signature",
+        "value": "Write a function to calculate the wind chill index rounded to the next integer g"
+      },
+      "C": {
+        "name": "GeneratedCode",
+        "symbol": "C",
+        "description": "LLM-generated Python source code implementation",
+        "value": "def wind_chill(wind_velocity, temperature):\n    return round((35.74 + 0.6215 * temperature - 35.75 * (wind_velocity ** 0.16) + 0.4275 * temperature * (wind_velocity ** 0.16)))"
+      },
+      "E": {
+        "name": "ExecutionTrace",
+        "symbol": "E",
+        "description": "Observable runtime trace events, variable states, and stdout/stderr",
+        "value": "status=Failed, exc=AssertionError, msg="
+      },
+      "T": {
+        "name": "TestSuite",
+        "symbol": "T",
+        "description": "Benchmark assertions, inputs, and check function harness",
+        "value": "assert wind_chill(120,35)==40\nassert wind_chill(40,20)==19\nassert wind_chill(10,8)==6"
+      },
+      "O": {
+        "name": "Outcome",
+        "symbol": "O",
+        "description": "Final test execution outcome (Completed/Failed/Timeout)",
+        "value": "Failed"
+      }
+    }
+  },
+  "pdg": {
+    "nodes": {
+      "1": {
+        "node_id": 1,
+        "line_number": 1,
+        "source_code": "def wind_chill(wind_velocity, temperature):",
+        "statement_type": "FunctionDef",
+        "reads": [],
+        "writes": [
+          "temperature",
+          "wind_velocity",
+          "wind_chill"
+        ],
+        "function_name": "<module>",
+        "executed": true,
+        "execution_count": 2,
+        "runtime_values": {
+          "wind_velocity": [
+            "120"
+          ],
+          "temperature": [
+            "35"
+          ]
+        },
+        "failure_related": false
+      },
+      "2": {
+        "node_id": 2,
+        "line_number": 2,
+        "source_code": "return round((35.74 + 0.6215 * temperature - 35.75 * (wind_velocity ** 0.16) + 0.4275 * temperature * (wind_velocity ** 0.16)))",
+        "statement_type": "Return",
+        "reads": [
+          "round",
+          "temperature",
+          "wind_velocity"
+        ],
+        "writes": [],
+        "function_name": "wind_chill",
+        "executed": true,
+        "execution_count": 2,
+        "runtime_values": {
+          "wind_velocity": [
+            "120",
+            "120"
+          ],
+          "temperature": [
+            "35",
+            "35"
+          ]
+        },
+        "failure_related": true
+      }
+    },
+    "edges": [
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "DATA",
+        "variable": "temperature",
+        "label": "DATA(temperature)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "DATA",
+        "variable": "wind_velocity",
+        "label": "DATA(wind_velocity)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      }
+    ],
+    "entry_node_id": 1,
+    "failure_node_ids": [
+      2
+    ]
+  },
+  "runtime_events_count": 8,
+  "failure_line": 2,
+  "failure_statement": "return round((35.74 + 0.6215 * temperature - 35.75 * (wind_velocity ** 0.16) + 0.4275 * temperature * (wind_velocity ** 0.16)))",
+  "candidates": [
+    {
+      "rank": 1,
+      "node_id": 2,
+      "line_number": 2,
+      "statement_code": "return round((35.74 + 0.6215 * temperature - 35.75 * (wind_velocity ** 0.16) + 0.4275 * temperature * (wind_velocity ** 0.16)))",
+      "variable_name": "round",
+      "observed_value": null,
+      "expected_value": "40",
+      "proximity_score": 1.0,
+      "dependency_score": 1.0,
+      "explanation": "Reached via reverse traversal (distance=0, type=Return)"
+    }
+  ],
+  "critical_variable": null,
+  "counterfactual_results": [
+    {
+      "candidate_rank": 1,
+      "intervention": {
+        "target_variable": "round",
+        "target_line": 2,
+        "observed_value": "None",
+        "counterfactual_value": "40",
+        "operation_type": "AST_transform",
+        "modified_code": "def wind_chill(wind_velocity, temperature):\n    round = 40\n    return round((35.74 + 0.6215 * temperature - 35.75 * (wind_velocity ** 0.16) + 0.4275 * temperature * (wind_velocity ** 0.16)))"
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "Failed",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "FALSE",
+      "execution_time": 0.2694,
+      "status": "EXECUTED",
+      "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+    }
+  ],
+  "fault_location": {
+    "file": "MB257.py",
+    "line_number": 2,
+    "statement_code": "return round((35.74 + 0.6215 * temperature - 35.75 * (wind_velocity ** 0.16) + 0.4275 * temperature * (wind_velocity ** 0.16)))",
+    "function_name": "wind_chill",
+    "causal_variable": "round",
+    "evidence_score": 0.5,
+    "confidence": 0.3
+  },
+  "root_cause": {
+    "root_cause_status": "UNRESOLVED",
+    "candidate_explanation": "Semantic mismatch at line 2 ('return round((35.74 + 0.6215 * temperature - 35.75 * (wind_velocity ** 0.16) + 0.4275 * temperature * (wind_velocity ** 0.16)))') causes return value mismatch.",
+    "causal_variable": "round",
+    "fault_statement": "return round((35.74 + 0.6215 * temperature - 35.75 * (wind_velocity ** 0.16) + 0.4275 * temperature * (wind_velocity ** 0.16)))",
+    "fault_line": 2,
+    "evidence_summary": "Reverse PDG traversal traced failure from line 1 to statement line 2. Structural dependency identified; counterfactual validation unconfirmed or unresolved.",
+    "counterfactual_validated": false,
+    "confidence": 0.3
+  },
+  "ground_truth_matched": null,
+  "ground_truth_fault_line": null,
+  "execution_time": 0.2782
+}

@@ -1,0 +1,12 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def surface_area(base_edge, height): | W:base_edge,height,surface_area", fillcolor="lightgreen"];
+    "2" [label="L2: return (base_edge * base_edge + base_edge * height) * 2 | R:base_edge,height", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(base_edge)", style="solid"];
+    "1" -> "2" [label="DATA(height)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

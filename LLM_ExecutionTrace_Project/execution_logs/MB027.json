@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB027",
+  "dataset": "MBPP",
+  "task_id": "584",
+  "problem_summary": "Write a function to find the first adverb ending with ly and its positions in a ",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpzluyl1ia.py\", line 6, in <module>\n    assert find_adverbs(\"Clearly, he has no excuse for such behavior.\") == '0-7: Clearly'\n           ^^^^^^^^^^^^\nNameError: name 'find_adverbs' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpzluyl1ia.py\", line 6, in <module>\n    assert find_adverbs(\"Clearly, he has no excuse for such behavior.\") == '0-7: Clearly'\n           ^^^^^^^^^^^^\nNameError: name 'find_adverbs' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'find_adverbs' is not defined",
+  "execution_time": 0.23218,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a function to find the circumference of a circle.
+
+Example test: assert math.isclose(circle_circumference(10), 62.830000000000005, rel_tol=0.001)
+[/INST]

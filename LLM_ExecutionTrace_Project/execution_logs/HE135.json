@@ -1,0 +1,22 @@
+{
+  "trace_id": "HE135",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/159",
+  "problem_summary": "\ndef eat(number, need, remaining):\n    \"\"\"\n    You're a hungry rabbit, and you a",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpqyl6nkir.py\", line 20, in <module>\n    check(eat)\n    ~~~~~^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpqyl6nkir.py\", line 11, in check\n    assert candidate(2, 11, 5) == [7, 0], \"Error\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Error\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpqyl6nkir.py\", line 20, in <module>\n    check(eat)\n    ~~~~~^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpqyl6nkir.py\", line 11, in check\n    assert candidate(2, 11, 5) == [7, 0], \"Error\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Error",
+  "exception_type": "AssertionError",
+  "exception_message": "Error",
+  "execution_time": 0.369557,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": "benchmark_test",
+  "assertion_failed": true,
+  "parser_prediction": ""
+}

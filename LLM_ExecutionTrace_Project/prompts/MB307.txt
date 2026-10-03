@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a function to extract only the rear index element of each string in the given tuple.
+
+Example test: assert extract_rear(('Mers', 'for', 'Vers') ) == ['s', 'r', 's']
+[/INST]

@@ -1,0 +1,253 @@
+{
+  "trace_id": "HE042",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/77",
+  "error_category": "Wrong-Output Error",
+  "analysis_status": "ANALYZED",
+  "skip_reason": null,
+  "input_record": {
+    "trace_id": "HE042",
+    "dataset": "HumanEval",
+    "task_id": "HumanEval/77",
+    "problem_summary": "\ndef iscube(a):\n    '''\n    Write a function that takes an integer a and returns",
+    "execution_status": "Failed",
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp684a255o.py\", line 21, in <module>\n    check(iscube)\n    ~~~~~^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp684a255o.py\", line 9, in check\n    assert candidate(-1) == True, \"Third test error: \" + str(candidate(-1))\n           ^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Third test error: False\n",
+    "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp684a255o.py\", line 21, in <module>\n    check(iscube)\n    ~~~~~^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp684a255o.py\", line 9, in check\n    assert candidate(-1) == True, \"Third test error: \" + str(candidate(-1))\n           ^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Third test error: False",
+    "exception_type": "AssertionError",
+    "exception_message": "Third test error: False",
+    "execution_time": 0.247102,
+    "timed_out": false,
+    "exit_code": 1,
+    "tests_passed": false,
+    "tests_failed": 0,
+    "expected_output": null,
+    "actual_output": null,
+    "assertion_source": "benchmark_test",
+    "assertion_failed": true,
+    "parser_prediction": "Wrong-Output Error"
+  },
+  "scm": {
+    "task_id": "HumanEval/77",
+    "nodes": [
+      {
+        "node_id": "S",
+        "variable_name": "Specification",
+        "symbol": "S",
+        "label": "Specification"
+      },
+      {
+        "node_id": "C",
+        "variable_name": "GeneratedCode",
+        "symbol": "C",
+        "label": "Generated Code"
+      },
+      {
+        "node_id": "E",
+        "variable_name": "ExecutionTrace",
+        "symbol": "E",
+        "label": "Execution Trace"
+      },
+      {
+        "node_id": "T",
+        "variable_name": "TestSuite",
+        "symbol": "T",
+        "label": "Test Suite"
+      },
+      {
+        "node_id": "O",
+        "variable_name": "Outcome",
+        "symbol": "O",
+        "label": "Outcome"
+      }
+    ],
+    "edges": [
+      {
+        "source": "S",
+        "target": "C",
+        "relationship": "generates"
+      },
+      {
+        "source": "C",
+        "target": "E",
+        "relationship": "produces"
+      },
+      {
+        "source": "T",
+        "target": "E",
+        "relationship": "evaluates"
+      },
+      {
+        "source": "E",
+        "target": "O",
+        "relationship": "determines"
+      }
+    ],
+    "variables": {
+      "S": {
+        "name": "Specification",
+        "symbol": "S",
+        "description": "Problem description, prompt, and target function signature",
+        "value": "\ndef iscube(a):\n    '''\n    Write a function that takes an integer a and returns"
+      },
+      "C": {
+        "name": "GeneratedCode",
+        "symbol": "C",
+        "description": "LLM-generated Python source code implementation",
+        "value": "def iscube(a):\n    return a > 0 and (a ** (1/3)) % 1 == 0"
+      },
+      "E": {
+        "name": "ExecutionTrace",
+        "symbol": "E",
+        "description": "Observable runtime trace events, variable states, and stdout/stderr",
+        "value": "status=Failed, exc=AssertionError, msg=Third test error: False"
+      },
+      "T": {
+        "name": "TestSuite",
+        "symbol": "T",
+        "description": "Benchmark assertions, inputs, and check function harness",
+        "value": "def check(candidate):\n\n    # Check some simple cases\n    assert candidate(1) == True, \"First test er"
+      },
+      "O": {
+        "name": "Outcome",
+        "symbol": "O",
+        "description": "Final test execution outcome (Completed/Failed/Timeout)",
+        "value": "Failed"
+      }
+    }
+  },
+  "pdg": {
+    "nodes": {
+      "1": {
+        "node_id": 1,
+        "line_number": 1,
+        "source_code": "def iscube(a):",
+        "statement_type": "FunctionDef",
+        "reads": [],
+        "writes": [
+          "a",
+          "iscube"
+        ],
+        "function_name": "<module>",
+        "executed": true,
+        "execution_count": 5,
+        "runtime_values": {
+          "a": [
+            "1",
+            "2",
+            "-1",
+            "-1"
+          ]
+        },
+        "failure_related": false
+      },
+      "2": {
+        "node_id": 2,
+        "line_number": 2,
+        "source_code": "return a > 0 and (a ** (1/3)) % 1 == 0",
+        "statement_type": "Return",
+        "reads": [
+          "a"
+        ],
+        "writes": [],
+        "function_name": "iscube",
+        "executed": true,
+        "execution_count": 8,
+        "runtime_values": {
+          "a": [
+            "1",
+            "1",
+            "2",
+            "2",
+            "-1",
+            "-1",
+            "-1",
+            "-1"
+          ]
+        },
+        "failure_related": true
+      }
+    },
+    "edges": [
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "DATA",
+        "variable": "a",
+        "label": "DATA(a)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      }
+    ],
+    "entry_node_id": 1,
+    "failure_node_ids": [
+      2
+    ]
+  },
+  "runtime_events_count": 24,
+  "failure_line": 2,
+  "failure_statement": "return a > 0 and (a ** (1/3)) % 1 == 0",
+  "candidates": [
+    {
+      "rank": 1,
+      "node_id": 2,
+      "line_number": 2,
+      "statement_code": "return a > 0 and (a ** (1/3)) % 1 == 0",
+      "variable_name": "a",
+      "observed_value": "-1",
+      "expected_value": "True",
+      "proximity_score": 1.0,
+      "dependency_score": 1.0,
+      "explanation": "Reached via reverse traversal (distance=0, type=Return)"
+    }
+  ],
+  "critical_variable": null,
+  "counterfactual_results": [
+    {
+      "candidate_rank": 1,
+      "intervention": {
+        "target_variable": "a",
+        "target_line": 2,
+        "observed_value": "-1",
+        "counterfactual_value": "True",
+        "operation_type": "AST_transform",
+        "modified_code": "def iscube(a):\n    return a <= 0 and a ** (1 / 3) % 1 != 0"
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "Failed",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "FALSE",
+      "execution_time": 0.1893,
+      "status": "EXECUTED",
+      "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+    }
+  ],
+  "fault_location": {
+    "file": "HE042.py",
+    "line_number": 2,
+    "statement_code": "return a > 0 and (a ** (1/3)) % 1 == 0",
+    "function_name": "iscube",
+    "causal_variable": "a",
+    "evidence_score": 0.5,
+    "confidence": 0.3
+  },
+  "root_cause": {
+    "root_cause_status": "UNRESOLVED",
+    "candidate_explanation": "Incorrect state computation at line 2 ('return a > 0 and (a ** (1/3)) % 1 == 0') produces invalid variable state for 'a'.",
+    "causal_variable": "a",
+    "fault_statement": "return a > 0 and (a ** (1/3)) % 1 == 0",
+    "fault_line": 2,
+    "evidence_summary": "Reverse PDG traversal traced failure from line 1 to statement line 2. Structural dependency identified; counterfactual validation unconfirmed or unresolved.",
+    "counterfactual_validated": false,
+    "confidence": 0.3
+  },
+  "ground_truth_matched": null,
+  "ground_truth_fault_line": null,
+  "execution_time": 0.1982
+}

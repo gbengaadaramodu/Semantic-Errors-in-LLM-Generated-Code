@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB075",
+  "dataset": "MBPP",
+  "task_id": "737",
+  "problem_summary": "Write a function to check whether the given string is starting with a vowel or n",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp4d2150_l.py\", line 10, in <module>\n    assert check_str(\"annie\")\n           ^^^^^^^^^\nNameError: name 'check_str' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp4d2150_l.py\", line 10, in <module>\n    assert check_str(\"annie\")\n           ^^^^^^^^^\nNameError: name 'check_str' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'check_str' is not defined",
+  "execution_time": 0.306434,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

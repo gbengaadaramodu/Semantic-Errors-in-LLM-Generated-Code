@@ -1,0 +1,17 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def bell_number(n): | W:n,bell_number", fillcolor="lightgreen"];
+    "2" [label="L2: if n == 0: | R:n", fillcolor="lightgrey"];
+    "3" [label="L3: return 1", fillcolor="lightgrey"];
+    "4" [label="L5: return sum([bell_number(i) * bell_number(n-i-1) for i in range(n)]) | W:i | R:bell_number,i,n,range,sum", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(n)", style="solid"];
+    "1" -> "4" [label="DATA(bell_number)", style="solid"];
+    "1" -> "4" [label="DATA(n)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "2" -> "3" [label="CONTROL(If)", style="dashed"];
+    "2" -> "4" [label="CONTROL(If)", style="dashed"];
+}

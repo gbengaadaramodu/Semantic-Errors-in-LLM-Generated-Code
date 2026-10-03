@@ -1,0 +1,12 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def remove_kth_element(my_list, k): | W:k,my_list,remove_kth_element", fillcolor="lightgreen"];
+    "2" [label="L2: return my_list[:k] + my_list[k+1:] | R:k,my_list", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(k)", style="solid"];
+    "1" -> "2" [label="DATA(my_list)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

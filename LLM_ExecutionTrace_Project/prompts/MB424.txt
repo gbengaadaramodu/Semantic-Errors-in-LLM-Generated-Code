@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a function to count the number of occurrences of a number in a given list.
+
+Example test: assert frequency([1,2,3], 4) == 0
+[/INST]

@@ -1,0 +1,79 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def average_tuple(tuple_of_tuples):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "tuple_of_tuples",
+        "average_tuple"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "tuple_of_tuples": [
+          "((10, 10, 10, 12), (30, 45, 56, 45), (81, 80, 39, 32), (1, 2, 3, 4))"
+        ]
+      },
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "return [sum(t)/len(t) for t in tuple_of_tuples]",
+      "statement_type": "Return",
+      "reads": [
+        "len",
+        "sum",
+        "t",
+        "tuple_of_tuples"
+      ],
+      "writes": [
+        "t"
+      ],
+      "function_name": "average_tuple",
+      "executed": true,
+      "execution_count": 6,
+      "runtime_values": {
+        "tuple_of_tuples": [
+          "((10, 10, 10, 12), (30, 45, 56, 45), (81, 80, 39, 32), (1, 2, 3, 4))",
+          "((10, 10, 10, 12), (30, 45, 56, 45), (81, 80, 39, 32), (1, 2, 3, 4))",
+          "((10, 10, 10, 12), (30, 45, 56, 45), (81, 80, 39, 32), (1, 2, 3, 4))",
+          "((10, 10, 10, 12), (30, 45, 56, 45), (81, 80, 39, 32), (1, 2, 3, 4))",
+          "((10, 10, 10, 12), (30, 45, 56, 45), (81, 80, 39, 32), (1, 2, 3, 4))",
+          "((10, 10, 10, 12), (30, 45, 56, 45), (81, 80, 39, 32), (1, 2, 3, 4))"
+        ],
+        "t": [
+          "(10, 10, 10, 12)",
+          "(30, 45, 56, 45)",
+          "(81, 80, 39, 32)",
+          "(1, 2, 3, 4)"
+        ]
+      },
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "tuple_of_tuples",
+      "label": "DATA(tuple_of_tuples)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    2
+  ]
+}

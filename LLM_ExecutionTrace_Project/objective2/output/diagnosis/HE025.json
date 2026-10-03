@@ -1,0 +1,244 @@
+{
+  "trace_id": "HE025",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/114",
+  "error_category": "Runtime Exception",
+  "analysis_status": "ANALYZED",
+  "skip_reason": null,
+  "input_record": {
+    "trace_id": "HE025",
+    "dataset": "HumanEval",
+    "task_id": "HumanEval/114",
+    "problem_summary": "\ndef minSubArraySum(nums):\n    \"\"\"\n    Given an array of integers nums, find the",
+    "execution_status": "Failed",
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpeps7_are.py\", line 23, in <module>\n    check(minSubArraySum)\n          ^^^^^^^^^^^^^^\nNameError: name 'minSubArraySum' is not defined. Did you mean: 'min_sub_array_sum'?\n",
+    "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpeps7_are.py\", line 23, in <module>\n    check(minSubArraySum)\n          ^^^^^^^^^^^^^^\nNameError: name 'minSubArraySum' is not defined. Did you mean: 'min_sub_array_sum'?",
+    "exception_type": "NameError",
+    "exception_message": "name 'minSubArraySum' is not defined. Did you mean: 'min_sub_array_sum'?",
+    "execution_time": 0.241974,
+    "timed_out": false,
+    "exit_code": 1,
+    "tests_passed": false,
+    "tests_failed": 0,
+    "expected_output": null,
+    "actual_output": null,
+    "assertion_source": null,
+    "assertion_failed": false,
+    "parser_prediction": "Runtime Exception"
+  },
+  "scm": {
+    "task_id": "HumanEval/114",
+    "nodes": [
+      {
+        "node_id": "S",
+        "variable_name": "Specification",
+        "symbol": "S",
+        "label": "Specification"
+      },
+      {
+        "node_id": "C",
+        "variable_name": "GeneratedCode",
+        "symbol": "C",
+        "label": "Generated Code"
+      },
+      {
+        "node_id": "E",
+        "variable_name": "ExecutionTrace",
+        "symbol": "E",
+        "label": "Execution Trace"
+      },
+      {
+        "node_id": "T",
+        "variable_name": "TestSuite",
+        "symbol": "T",
+        "label": "Test Suite"
+      },
+      {
+        "node_id": "O",
+        "variable_name": "Outcome",
+        "symbol": "O",
+        "label": "Outcome"
+      }
+    ],
+    "edges": [
+      {
+        "source": "S",
+        "target": "C",
+        "relationship": "generates"
+      },
+      {
+        "source": "C",
+        "target": "E",
+        "relationship": "produces"
+      },
+      {
+        "source": "T",
+        "target": "E",
+        "relationship": "evaluates"
+      },
+      {
+        "source": "E",
+        "target": "O",
+        "relationship": "determines"
+      }
+    ],
+    "variables": {
+      "S": {
+        "name": "Specification",
+        "symbol": "S",
+        "description": "Problem description, prompt, and target function signature",
+        "value": "\ndef minSubArraySum(nums):\n    \"\"\"\n    Given an array of integers nums, find the"
+      },
+      "C": {
+        "name": "GeneratedCode",
+        "symbol": "C",
+        "description": "LLM-generated Python source code implementation",
+        "value": "def min_sub_array_sum(nums):\n    return min(sum(nums[i:j]) for i in range(len(nums)) for j in range(i+1, len(nums)+1))"
+      },
+      "E": {
+        "name": "ExecutionTrace",
+        "symbol": "E",
+        "description": "Observable runtime trace events, variable states, and stdout/stderr",
+        "value": "status=Failed, exc=NameError, msg=name 'minSubArraySum' is not defined. Did you mean: 'min_sub_array_sum'?"
+      },
+      "T": {
+        "name": "TestSuite",
+        "symbol": "T",
+        "description": "Benchmark assertions, inputs, and check function harness",
+        "value": "def check(candidate):\n\n    # Check some simple cases\n    assert candidate([2, 3, 4, 1, 2, 4]) == 1, "
+      },
+      "O": {
+        "name": "Outcome",
+        "symbol": "O",
+        "description": "Final test execution outcome (Completed/Failed/Timeout)",
+        "value": "Failed"
+      }
+    }
+  },
+  "pdg": {
+    "nodes": {
+      "1": {
+        "node_id": 1,
+        "line_number": 1,
+        "source_code": "def min_sub_array_sum(nums):",
+        "statement_type": "FunctionDef",
+        "reads": [],
+        "writes": [
+          "nums",
+          "min_sub_array_sum"
+        ],
+        "function_name": "<module>",
+        "executed": true,
+        "execution_count": 1,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "2": {
+        "node_id": 2,
+        "line_number": 2,
+        "source_code": "return min(sum(nums[i:j]) for i in range(len(nums)) for j in range(i+1, len(nums)+1))",
+        "statement_type": "Return",
+        "reads": [
+          "i",
+          "j",
+          "len",
+          "min",
+          "nums",
+          "range",
+          "sum"
+        ],
+        "writes": [
+          "i",
+          "j"
+        ],
+        "function_name": "min_sub_array_sum",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": true
+      }
+    },
+    "edges": [
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "DATA",
+        "variable": "nums",
+        "label": "DATA(nums)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      }
+    ],
+    "entry_node_id": 1,
+    "failure_node_ids": [
+      2
+    ]
+  },
+  "runtime_events_count": 6,
+  "failure_line": 2,
+  "failure_statement": "return min(sum(nums[i:j]) for i in range(len(nums)) for j in range(i+1, len(nums)+1))",
+  "candidates": [
+    {
+      "rank": 1,
+      "node_id": 2,
+      "line_number": 2,
+      "statement_code": "return min(sum(nums[i:j]) for i in range(len(nums)) for j in range(i+1, len(nums)+1))",
+      "variable_name": "i",
+      "observed_value": null,
+      "expected_value": null,
+      "proximity_score": 1.0,
+      "dependency_score": 1.0,
+      "explanation": "Reached via reverse traversal (distance=0, type=Return)"
+    }
+  ],
+  "critical_variable": null,
+  "counterfactual_results": [
+    {
+      "candidate_rank": 1,
+      "intervention": {
+        "target_variable": "i",
+        "target_line": 2,
+        "observed_value": "None",
+        "counterfactual_value": "None",
+        "operation_type": "failed_construction",
+        "modified_code": ""
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "FAILED_CONSTRUCTION",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "UNRESOLVED",
+      "execution_time": 0.0,
+      "status": "UNRESOLVED",
+      "explanation": "Failed to construct valid AST counterfactual intervention."
+    }
+  ],
+  "fault_location": {
+    "file": "HE025.py",
+    "line_number": 2,
+    "statement_code": "return min(sum(nums[i:j]) for i in range(len(nums)) for j in range(i+1, len(nums)+1))",
+    "function_name": "minSubArraySum",
+    "causal_variable": "i",
+    "evidence_score": 1.0,
+    "confidence": 0.5
+  },
+  "root_cause": {
+    "root_cause_status": "UNRESOLVED",
+    "candidate_explanation": "Runtime exception (NameError: name 'minSubArraySum' is not defined. Did you mean: 'min_sub_array_sum'?) triggered at statement 'return min(sum(nums[i:j]) for i in range(len(nums)) for j in range(i+1, len(nums)+1))' (line 2) involving variable 'i'.",
+    "causal_variable": "i",
+    "fault_statement": "return min(sum(nums[i:j]) for i in range(len(nums)) for j in range(i+1, len(nums)+1))",
+    "fault_line": 2,
+    "evidence_summary": "Reverse PDG traversal traced failure from line 1 to statement line 2. Structural dependency identified; counterfactual validation unconfirmed or unresolved.",
+    "counterfactual_validated": false,
+    "confidence": 0.5
+  },
+  "ground_truth_matched": null,
+  "ground_truth_fault_line": null,
+  "execution_time": 0.0096
+}

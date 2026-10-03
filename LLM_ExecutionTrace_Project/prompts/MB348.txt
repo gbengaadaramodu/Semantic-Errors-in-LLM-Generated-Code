@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a function to convert a given tuple of positive integers into a single integer.
+
+Example test: assert tuple_to_int((1,2,3))==123
+[/INST]

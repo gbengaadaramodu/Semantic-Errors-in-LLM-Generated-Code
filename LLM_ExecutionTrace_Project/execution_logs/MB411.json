@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB411",
+  "dataset": "MBPP",
+  "task_id": "453",
+  "problem_summary": "Write a python function to find the sum of even factors of a number.",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp336lrq30.py\", line 4, in <module>\n    assert sumofFactors(18) == 26\n           ^^^^^^^^^^^^\nNameError: name 'sumofFactors' is not defined. Did you mean: 'sumOfFactors'?\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp336lrq30.py\", line 4, in <module>\n    assert sumofFactors(18) == 26\n           ^^^^^^^^^^^^\nNameError: name 'sumofFactors' is not defined. Did you mean: 'sumOfFactors'?",
+  "exception_type": "NameError",
+  "exception_message": "name 'sumofFactors' is not defined. Did you mean: 'sumOfFactors'?",
+  "execution_time": 0.18667,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

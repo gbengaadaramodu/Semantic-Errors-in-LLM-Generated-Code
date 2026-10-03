@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a function to check if each element of second tuple is smaller than its corresponding element in the first tuple.
+
+Example test: assert check_smaller((1, 2, 3), (2, 3, 4)) == False
+[/INST]

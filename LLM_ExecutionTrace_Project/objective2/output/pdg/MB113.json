@@ -1,0 +1,121 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def loss_amount(sale_amount, loss_threshold):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "loss_threshold",
+        "sale_amount",
+        "loss_amount"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 1,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "if sale_amount < loss_threshold:",
+      "statement_type": "If",
+      "reads": [
+        "loss_threshold",
+        "sale_amount"
+      ],
+      "writes": [],
+      "function_name": "loss_amount",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "3": {
+      "node_id": 3,
+      "line_number": 3,
+      "source_code": "return 0",
+      "statement_type": "Return",
+      "reads": [],
+      "writes": [],
+      "function_name": "loss_amount",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "4": {
+      "node_id": 4,
+      "line_number": 5,
+      "source_code": "return sale_amount - loss_threshold",
+      "statement_type": "Return",
+      "reads": [
+        "loss_threshold",
+        "sale_amount"
+      ],
+      "writes": [],
+      "function_name": "loss_amount",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "loss_threshold",
+      "label": "DATA(loss_threshold)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "sale_amount",
+      "label": "DATA(sale_amount)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 4,
+      "dependency_type": "DATA",
+      "variable": "loss_threshold",
+      "label": "DATA(loss_threshold)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 4,
+      "dependency_type": "DATA",
+      "variable": "sale_amount",
+      "label": "DATA(sale_amount)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 2,
+      "target_id": 3,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(If)"
+    },
+    {
+      "source_id": 2,
+      "target_id": 4,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(If)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    4
+  ]
+}

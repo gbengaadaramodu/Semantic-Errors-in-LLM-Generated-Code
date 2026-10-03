@@ -1,0 +1,76 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def capital_words_spaces(string):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "string",
+        "capital_words_spaces"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 3,
+      "runtime_values": {
+        "string": [
+          "Python",
+          "PythonProgrammingExamples"
+        ]
+      },
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "return \" \".join([word for word in string.split() if word[0].isupper()])",
+      "statement_type": "Return",
+      "reads": [
+        "string",
+        "word"
+      ],
+      "writes": [
+        "word"
+      ],
+      "function_name": "capital_words_spaces",
+      "executed": true,
+      "execution_count": 6,
+      "runtime_values": {
+        "string": [
+          "Python",
+          "Python",
+          "Python",
+          "PythonProgrammingExamples",
+          "PythonProgrammingExamples",
+          "PythonProgrammingExamples"
+        ],
+        "word": [
+          "Python",
+          "PythonProgrammingExamples"
+        ]
+      },
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "string",
+      "label": "DATA(string)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    2
+  ]
+}

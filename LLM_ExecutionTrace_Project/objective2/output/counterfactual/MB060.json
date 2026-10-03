@@ -1,0 +1,21 @@
+[
+  {
+    "candidate_rank": 1,
+    "intervention": {
+      "target_variable": "arr",
+      "target_line": 12,
+      "observed_value": "None",
+      "counterfactual_value": "[4, 5, 11, 15, 19, 20, 24, 24, 25, 25, 26, 29, 48, 54, 56, 110, 154, 233]",
+      "operation_type": "AST_transform",
+      "modified_code": "def shell_sort(arr):\n    gaps = [701, 301, 132, 57, 23, 10, 4, 1]\n    for gap in gaps:\n        i = gap\n        while i < len(arr):\n            temp = arr[i]\n            j = i\n            while j >= gap and arr[j - gap] > temp:\n                arr[j] = arr[j - gap]\n                j -= gap\n            arr[j] = temp\n    return [4, 5, 11, 15, 19, 20, 24, 24, 25, 25, 26, 29, 48, 54, 56, 110, 154, 233]"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.2149,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  }
+]

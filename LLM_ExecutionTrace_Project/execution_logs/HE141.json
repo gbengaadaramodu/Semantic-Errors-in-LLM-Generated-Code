@@ -1,0 +1,22 @@
+{
+  "trace_id": "HE141",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/95",
+  "problem_summary": "\ndef check_dict_case(dict):\n    \"\"\"\n    Given a dictionary, return True if all k",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpjc4w7rgz.py\", line 24, in <module>\n    check(check_dict_case)\n    ~~~~~^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpjc4w7rgz.py\", line 13, in check\n    assert candidate({\"p\":\"pineapple\", 5:\"banana\", \"a\":\"apple\"}) == False, \"Third test error: \" + str(candidate({\"p\":\"pineapple\", 5:\"banana\", \"a\":\"apple\"}))\n           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpjc4w7rgz.py\", line 4, in check_dict_case\n    lowercase_keys = all(key.islower() for key in my_dict.keys())\n                     ^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpjc4w7rgz.py\", line 4, in <genexpr>\n    lowercase_keys = all(key.islower() for key in my_dict.keys())\n                         ^^^^^^^^^^^\nAttributeError: 'int' object has no attribute 'islower'\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpjc4w7rgz.py\", line 24, in <module>\n    check(check_dict_case)\n    ~~~~~^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpjc4w7rgz.py\", line 13, in check\n    assert candidate({\"p\":\"pineapple\", 5:\"banana\", \"a\":\"apple\"}) == False, \"Third test error: \" + str(candidate({\"p\":\"pineapple\", 5:\"banana\", \"a\":\"apple\"}))\n           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpjc4w7rgz.py\", line 4, in check_dict_case\n    lowercase_keys = all(key.islower() for key in my_dict.keys())\n                     ^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpjc4w7rgz.py\", line 4, in <genexpr>\n    lowercase_keys = all(key.islower() for key in my_dict.keys())\n                         ^^^^^^^^^^^\nAttributeError: 'int' object has no attribute 'islower'",
+  "exception_type": "AttributeError",
+  "exception_message": "'int' object has no attribute 'islower'",
+  "execution_time": 0.209023,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

@@ -1,0 +1,71 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def division_elements(tuple1, tuple2):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "tuple1",
+        "tuple2",
+        "division_elements"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 1,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "return tuple(map(lambda x, y: x / y, tuple1, tuple2))",
+      "statement_type": "Return",
+      "reads": [
+        "map",
+        "tuple",
+        "tuple1",
+        "tuple2",
+        "x",
+        "y"
+      ],
+      "writes": [
+        "x",
+        "y"
+      ],
+      "function_name": "division_elements",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "tuple1",
+      "label": "DATA(tuple1)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "tuple2",
+      "label": "DATA(tuple2)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    2
+  ]
+}

@@ -1,0 +1,38 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def count_prime_numbers(n): | W:n,count_prime_numbers", fillcolor="lightgreen"];
+    "2" [label="L2: count = 0 | W:count", fillcolor="lightgrey"];
+    "3" [label="L3: for i in range(2, n+1): | W:i | R:n,range", fillcolor="lightgrey"];
+    "4" [label="L4: if is_prime(i): | R:i,is_prime", fillcolor="lightgrey"];
+    "5" [label="L5: count += 1 | W:count", fillcolor="lightgrey"];
+    "6" [label="L6: return count | R:count", fillcolor="lightgrey"];
+    "7" [label="L8: def is_prime(n): | W:n,is_prime", fillcolor="lightgreen"];
+    "8" [label="L9: if n < 2: | R:n", fillcolor="lightgrey"];
+    "9" [label="L10: return False", fillcolor="lightgrey"];
+    "10" [label="L11: for i in range(2, int(n**0.5) + 1): | W:i | R:int,n,range", fillcolor="lightgrey"];
+    "11" [label="L12: if n % i == 0: | R:i,n", fillcolor="lightgrey"];
+    "12" [label="L13: return False", fillcolor="lightgrey"];
+    "13" [label="L14: return True", fillcolor="salmon"];
+
+    "1" -> "3" [label="DATA(n)", style="solid"];
+    "3" -> "4" [label="DATA(i)", style="solid"];
+    "5" -> "6" [label="DATA(count)", style="solid"];
+    "7" -> "8" [label="DATA(n)", style="solid"];
+    "7" -> "10" [label="DATA(n)", style="solid"];
+    "10" -> "11" [label="DATA(i)", style="solid"];
+    "7" -> "11" [label="DATA(n)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "3" [label="CONTROL(FunctionDef)", style="dashed"];
+    "3" -> "4" [label="CONTROL(For)", style="dashed"];
+    "4" -> "5" [label="CONTROL(If)", style="dashed"];
+    "1" -> "6" [label="CONTROL(FunctionDef)", style="dashed"];
+    "7" -> "8" [label="CONTROL(FunctionDef)", style="dashed"];
+    "8" -> "9" [label="CONTROL(If)", style="dashed"];
+    "7" -> "10" [label="CONTROL(FunctionDef)", style="dashed"];
+    "10" -> "11" [label="CONTROL(For)", style="dashed"];
+    "11" -> "12" [label="CONTROL(If)", style="dashed"];
+    "7" -> "13" [label="CONTROL(FunctionDef)", style="dashed"];
+}

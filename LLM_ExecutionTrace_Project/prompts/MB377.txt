@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a python function to find the sum of xor of all pairs of numbers in the given list.
+
+Example test: assert pair_xor_Sum([5,9,7,6],4) == 47
+[/INST]

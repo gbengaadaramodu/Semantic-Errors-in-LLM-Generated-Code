@@ -1,0 +1,17 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def encode_cyclic(s: str): | W:s,encode_cyclic | R:str", fillcolor="lightgreen"];
+    "2" [label="L2: groups = [s[(3 * i):min((3 * i + 3), len(s))] for i in range((len(s) + 2) // 3)] | W:groups,i | R:i,len,min,range,s", fillcolor="lightgrey"];
+    "3" [label="L3: groups = [(group[1:] + group[0]) if len(group) == 3 else group for group in groups] | W:group,groups | R:group,groups,len", fillcolor="lightgrey"];
+    "4" [label="L4: return \"\".join(groups) | R:groups", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(s)", style="solid"];
+    "2" -> "3" [label="DATA(groups)", style="solid"];
+    "3" -> "4" [label="DATA(groups)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "3" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "4" [label="CONTROL(FunctionDef)", style="dashed"];
+}

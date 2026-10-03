@@ -1,0 +1,22 @@
+{
+  "trace_id": "HE027",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/1",
+  "problem_summary": "from typing import List\n\n\ndef separate_paren_groups(paren_string: str) -> List[s",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp1zf8f48o.py\", line 29, in <module>\n    check(separate_paren_groups)\n    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp1zf8f48o.py\", line 17, in check\n    assert candidate('(()()) ((())) () ((())()())') == [\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n        '(()())', '((()))', '()', '((())()())'\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    ]\n    ^\nAssertionError\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp1zf8f48o.py\", line 29, in <module>\n    check(separate_paren_groups)\n    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp1zf8f48o.py\", line 17, in check\n    assert candidate('(()()) ((())) () ((())()())') == [\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n        '(()())', '((()))', '()', '((())()())'\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    ]\n    ^\nAssertionError",
+  "exception_type": "AssertionError",
+  "exception_message": "",
+  "execution_time": 0.263574,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": "benchmark_test",
+  "assertion_failed": true,
+  "parser_prediction": ""
+}

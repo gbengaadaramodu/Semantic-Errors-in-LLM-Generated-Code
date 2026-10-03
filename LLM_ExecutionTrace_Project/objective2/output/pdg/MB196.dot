@@ -1,0 +1,11 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def dog_age(human_age): | W:human_age,dog_age", fillcolor="lightgreen"];
+    "2" [label="L2: return human_age * 7 | R:human_age", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(human_age)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

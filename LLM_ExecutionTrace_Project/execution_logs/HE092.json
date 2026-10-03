@@ -1,0 +1,22 @@
+{
+  "trace_id": "HE092",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/162",
+  "problem_summary": "\ndef string_to_md5(text):\n    \"\"\"\n    Given a string 'text', return its md5 hash",
+  "execution_status": "Completed",
+  "stdout": "",
+  "stderr": "",
+  "traceback": "",
+  "exception_type": "",
+  "exception_message": "",
+  "execution_time": 0.181278,
+  "timed_out": false,
+  "exit_code": 0,
+  "tests_passed": true,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

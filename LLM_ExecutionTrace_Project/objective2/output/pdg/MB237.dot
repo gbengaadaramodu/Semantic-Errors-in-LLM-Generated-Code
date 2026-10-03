@@ -1,0 +1,38 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def large_product(list1, list2, n): | W:list1,list2,n,large_product", fillcolor="lightgreen"];
+    "2" [label="L2: products = [] | W:products", fillcolor="lightgreen"];
+    "3" [label="L3: for i in range(n): | W:i | R:n,range", fillcolor="lightgreen"];
+    "4" [label="L4: max_product = 0 | W:max_product", fillcolor="lightgreen"];
+    "5" [label="L5: for j in range(len(list1)): | W:j | R:len,list1,range", fillcolor="lightgreen"];
+    "6" [label="L6: product = list1[j] * list2[i] | W:product | R:i,j,list1,list2", fillcolor="lightgreen"];
+    "7" [label="L7: if product > max_product: | R:max_product,product", fillcolor="lightgreen"];
+    "8" [label="L8: max_product = product | W:max_product | R:product", fillcolor="lightgreen"];
+    "9" [label="L9: products.append(max_product) | R:max_product,products", fillcolor="lightgreen"];
+    "10" [label="L10: return products | R:products", fillcolor="salmon"];
+
+    "1" -> "3" [label="DATA(n)", style="solid"];
+    "1" -> "5" [label="DATA(list1)", style="solid"];
+    "3" -> "6" [label="DATA(i)", style="solid"];
+    "5" -> "6" [label="DATA(j)", style="solid"];
+    "1" -> "6" [label="DATA(list1)", style="solid"];
+    "1" -> "6" [label="DATA(list2)", style="solid"];
+    "4" -> "7" [label="DATA(max_product)", style="solid"];
+    "6" -> "7" [label="DATA(product)", style="solid"];
+    "6" -> "8" [label="DATA(product)", style="solid"];
+    "8" -> "9" [label="DATA(max_product)", style="solid"];
+    "2" -> "9" [label="DATA(products)", style="solid"];
+    "2" -> "10" [label="DATA(products)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "3" [label="CONTROL(FunctionDef)", style="dashed"];
+    "3" -> "4" [label="CONTROL(For)", style="dashed"];
+    "3" -> "5" [label="CONTROL(For)", style="dashed"];
+    "5" -> "6" [label="CONTROL(For)", style="dashed"];
+    "5" -> "7" [label="CONTROL(For)", style="dashed"];
+    "7" -> "8" [label="CONTROL(If)", style="dashed"];
+    "3" -> "9" [label="CONTROL(For)", style="dashed"];
+    "1" -> "10" [label="CONTROL(FunctionDef)", style="dashed"];
+}

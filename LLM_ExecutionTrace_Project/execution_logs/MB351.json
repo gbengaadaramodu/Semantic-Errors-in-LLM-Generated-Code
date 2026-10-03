@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB351",
+  "dataset": "MBPP",
+  "task_id": "92",
+  "problem_summary": "Write a function to check whether the given number is undulating or not.",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpl1cjnw_1.py\", line 4, in <module>\n    assert is_undulating(1212121) == True\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpl1cjnw_1.py\", line 4, in <module>\n    assert is_undulating(1212121) == True\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+  "exception_type": "AssertionError",
+  "exception_message": "",
+  "execution_time": 0.157068,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": "benchmark_test",
+  "assertion_failed": true,
+  "parser_prediction": ""
+}

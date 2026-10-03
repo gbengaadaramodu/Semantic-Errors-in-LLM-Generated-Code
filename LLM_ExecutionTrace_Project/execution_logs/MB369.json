@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB369",
+  "dataset": "MBPP",
+  "task_id": "796",
+  "problem_summary": "Write function to find the sum of all items in the given dictionary.",
+  "execution_status": "Completed",
+  "stdout": "",
+  "stderr": "",
+  "traceback": "",
+  "exception_type": "",
+  "exception_message": "",
+  "execution_time": 0.088981,
+  "timed_out": false,
+  "exit_code": 0,
+  "tests_passed": true,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

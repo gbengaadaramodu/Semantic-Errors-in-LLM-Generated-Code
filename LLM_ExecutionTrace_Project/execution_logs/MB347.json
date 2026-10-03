@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB347",
+  "dataset": "MBPP",
+  "task_id": "311",
+  "problem_summary": "Write a python function to set the left most unset bit.",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpgwdf0pe7.py\", line 4, in <module>\n    assert set_left_most_unset_bit(10) == 14\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpgwdf0pe7.py\", line 4, in <module>\n    assert set_left_most_unset_bit(10) == 14\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+  "exception_type": "AssertionError",
+  "exception_message": "",
+  "execution_time": 0.157641,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": "benchmark_test",
+  "assertion_failed": true,
+  "parser_prediction": ""
+}

@@ -1,0 +1,32 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def max_fill(grid, capacity): | W:capacity,grid,max_fill", fillcolor="lightgreen"];
+    "2" [label="L3: total_units = 0 | W:total_units", fillcolor="lightgreen"];
+    "3" [label="L4: num_lowerings = 0 | W:num_lowerings", fillcolor="lightgreen"];
+    "4" [label="L7: for row in grid: | W:row | R:grid", fillcolor="lightgreen"];
+    "5" [label="L9: if sum(row) == capacity: | R:capacity,row,sum", fillcolor="lightgreen"];
+    "6" [label="L11: total_units += capacity | W:total_units | R:capacity", fillcolor="lightgreen"];
+    "7" [label="L14: num_lowerings += capacity - sum(row) | W:num_lowerings | R:capacity,row,sum", fillcolor="lightgreen"];
+    "8" [label="L16: total_units += sum(row) | W:total_units | R:row,sum", fillcolor="lightgreen"];
+    "9" [label="L18: return num_lowerings | R:num_lowerings", fillcolor="salmon"];
+
+    "1" -> "4" [label="DATA(grid)", style="solid"];
+    "1" -> "5" [label="DATA(capacity)", style="solid"];
+    "4" -> "5" [label="DATA(row)", style="solid"];
+    "1" -> "6" [label="DATA(capacity)", style="solid"];
+    "1" -> "7" [label="DATA(capacity)", style="solid"];
+    "4" -> "7" [label="DATA(row)", style="solid"];
+    "4" -> "8" [label="DATA(row)", style="solid"];
+    "7" -> "9" [label="DATA(num_lowerings)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "3" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "4" [label="CONTROL(FunctionDef)", style="dashed"];
+    "4" -> "5" [label="CONTROL(For)", style="dashed"];
+    "5" -> "6" [label="CONTROL(If)", style="dashed"];
+    "5" -> "7" [label="CONTROL(If)", style="dashed"];
+    "5" -> "8" [label="CONTROL(If)", style="dashed"];
+    "1" -> "9" [label="CONTROL(FunctionDef)", style="dashed"];
+}

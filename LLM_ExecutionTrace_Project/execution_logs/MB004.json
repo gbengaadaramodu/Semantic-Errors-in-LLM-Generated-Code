@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB004",
+  "dataset": "MBPP",
+  "task_id": "280",
+  "problem_summary": "Write a function that takes in an array and element and returns a tuple containi",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp2r879atd.py\", line 8, in <module>\n    assert sequential_search([11,23,58,31,56,77,43,12,65,19],31) == (True, 3)\n           ^^^^^^^^^^^^^^^^^\nNameError: name 'sequential_search' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp2r879atd.py\", line 8, in <module>\n    assert sequential_search([11,23,58,31,56,77,43,12,65,19],31) == (True, 3)\n           ^^^^^^^^^^^^^^^^^\nNameError: name 'sequential_search' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'sequential_search' is not defined",
+  "execution_time": 0.234401,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

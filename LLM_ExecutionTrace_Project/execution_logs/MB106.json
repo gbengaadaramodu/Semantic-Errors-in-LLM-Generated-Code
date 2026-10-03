@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB106",
+  "dataset": "MBPP",
+  "task_id": "741",
+  "problem_summary": "Write a python function to check whether all the characters are same or not.",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp7fxdgbfg.py\", line 9, in <module>\n    assert all_Characters_Same(\"python\") == False\n           ^^^^^^^^^^^^^^^^^^^\nNameError: name 'all_Characters_Same' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp7fxdgbfg.py\", line 9, in <module>\n    assert all_Characters_Same(\"python\") == False\n           ^^^^^^^^^^^^^^^^^^^\nNameError: name 'all_Characters_Same' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'all_Characters_Same' is not defined",
+  "execution_time": 0.22818,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a python function to find the length of the smallest list in a list of lists.
+
+Example test: assert Find_Min_Length([[1],[1,2]]) == 1
+[/INST]

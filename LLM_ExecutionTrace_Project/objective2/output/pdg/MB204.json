@@ -1,0 +1,193 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def odd_equivalent(binary_string, num_rotations):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "binary_string",
+        "num_rotations",
+        "odd_equivalent"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 1,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 3,
+      "source_code": "num_odd_values = 0",
+      "statement_type": "Assign",
+      "reads": [],
+      "writes": [
+        "num_odd_values"
+      ],
+      "function_name": "odd_equivalent",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "3": {
+      "node_id": 3,
+      "line_number": 6,
+      "source_code": "for i in range(num_rotations):",
+      "statement_type": "For",
+      "reads": [
+        "num_rotations",
+        "range"
+      ],
+      "writes": [
+        "i"
+      ],
+      "function_name": "odd_equivalent",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "4": {
+      "node_id": 4,
+      "line_number": 8,
+      "source_code": "num = int(binary_string, 2)",
+      "statement_type": "Assign",
+      "reads": [
+        "binary_string",
+        "int"
+      ],
+      "writes": [
+        "num"
+      ],
+      "function_name": "odd_equivalent",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "5": {
+      "node_id": 5,
+      "line_number": 11,
+      "source_code": "if num % 2 == 1:",
+      "statement_type": "If",
+      "reads": [
+        "num"
+      ],
+      "writes": [],
+      "function_name": "odd_equivalent",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "6": {
+      "node_id": 6,
+      "line_number": 13,
+      "source_code": "num_odd_values += 1",
+      "statement_type": "AugAssign",
+      "reads": [],
+      "writes": [
+        "num_odd_values"
+      ],
+      "function_name": "odd_equivalent",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "7": {
+      "node_id": 7,
+      "line_number": 16,
+      "source_code": "return num_odd_values",
+      "statement_type": "Return",
+      "reads": [
+        "num_odd_values"
+      ],
+      "writes": [],
+      "function_name": "odd_equivalent",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 3,
+      "dependency_type": "DATA",
+      "variable": "num_rotations",
+      "label": "DATA(num_rotations)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 4,
+      "dependency_type": "DATA",
+      "variable": "binary_string",
+      "label": "DATA(binary_string)"
+    },
+    {
+      "source_id": 4,
+      "target_id": 5,
+      "dependency_type": "DATA",
+      "variable": "num",
+      "label": "DATA(num)"
+    },
+    {
+      "source_id": 6,
+      "target_id": 7,
+      "dependency_type": "DATA",
+      "variable": "num_odd_values",
+      "label": "DATA(num_odd_values)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 3,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 3,
+      "target_id": 4,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(For)"
+    },
+    {
+      "source_id": 3,
+      "target_id": 5,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(For)"
+    },
+    {
+      "source_id": 5,
+      "target_id": 6,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(If)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 7,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    7
+  ]
+}

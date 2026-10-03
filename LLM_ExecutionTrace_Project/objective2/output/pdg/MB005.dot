@@ -1,0 +1,19 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def largest_triangle_in_semi_circle(radius): | W:radius,largest_triangle_in_semi_circle", fillcolor="lightgreen"];
+    "2" [label="L2: if radius < 0: | R:radius", fillcolor="lightgrey"];
+    "3" [label="L3: return None", fillcolor="lightgrey"];
+    "4" [label="L4: area = (math.sqrt(3)/2) * radius ** 2 | W:area | R:math,radius", fillcolor="lightgrey"];
+    "5" [label="L5: return area | R:area", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(radius)", style="solid"];
+    "1" -> "4" [label="DATA(radius)", style="solid"];
+    "4" -> "5" [label="DATA(area)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "2" -> "3" [label="CONTROL(If)", style="dashed"];
+    "1" -> "4" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "5" [label="CONTROL(FunctionDef)", style="dashed"];
+}

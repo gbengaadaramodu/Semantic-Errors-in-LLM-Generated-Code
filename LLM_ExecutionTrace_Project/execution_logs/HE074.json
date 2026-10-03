@@ -1,0 +1,22 @@
+{
+  "trace_id": "HE074",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/141",
+  "problem_summary": "\ndef file_name_check(file_name):\n    \"\"\"Create a function which takes a string r",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpgrl6h2_g.py\", line 44, in <module>\n    check(file_name_check)\n    ~~~~~^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpgrl6h2_g.py\", line 16, in check\n    assert candidate('His12FILE94.exe') == 'No'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpgrl6h2_g.py\", line 44, in <module>\n    check(file_name_check)\n    ~~~~~^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpgrl6h2_g.py\", line 16, in check\n    assert candidate('His12FILE94.exe') == 'No'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+  "exception_type": "AssertionError",
+  "exception_message": "",
+  "execution_time": 0.222085,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": "benchmark_test",
+  "assertion_failed": true,
+  "parser_prediction": ""
+}

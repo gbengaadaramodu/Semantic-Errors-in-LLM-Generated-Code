@@ -1,0 +1,14 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def int_to_mini_roman(number): | W:number,int_to_mini_roman", fillcolor="lightgreen"];
+    "2" [label="L2: roman_numerals = ['', 'x', 'xx', 'xxx', 'xxxx', 'xix', 'xxi', 'xxii', 'xxiii', 'xxiv', 'xxv', 'xxvi'] | W:roman_numerals", fillcolor="lightgreen"];
+    "3" [label="L3: return roman_numerals[number] | R:number,roman_numerals", fillcolor="salmon"];
+
+    "1" -> "3" [label="DATA(number)", style="solid"];
+    "2" -> "3" [label="DATA(roman_numerals)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "3" [label="CONTROL(FunctionDef)", style="dashed"];
+}

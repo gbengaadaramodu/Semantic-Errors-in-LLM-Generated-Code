@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a function to convert a string to a list of strings split on the space character.
+
+Example test: assert string_to_list("python programming")==['python','programming']
+[/INST]

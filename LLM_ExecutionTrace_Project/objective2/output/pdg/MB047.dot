@@ -1,0 +1,27 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def jacobsthal_num(n): | W:n,jacobsthal_num", fillcolor="lightgreen"];
+    "2" [label="L2: if n == 0: | R:n", fillcolor="lightgrey"];
+    "3" [label="L3: return 0", fillcolor="lightgrey"];
+    "4" [label="L4: if n == 1: | R:n", fillcolor="lightgrey"];
+    "5" [label="L5: return 1", fillcolor="lightgrey"];
+    "6" [label="L6: if n == 2: | R:n", fillcolor="lightgrey"];
+    "7" [label="L7: return 1", fillcolor="lightgrey"];
+    "8" [label="L9: return jacobsthal_num(n-1) + jacobsthal_num(n-2) | R:jacobsthal_num,n", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(n)", style="solid"];
+    "1" -> "4" [label="DATA(n)", style="solid"];
+    "1" -> "6" [label="DATA(n)", style="solid"];
+    "1" -> "8" [label="DATA(jacobsthal_num)", style="solid"];
+    "1" -> "8" [label="DATA(n)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "2" -> "3" [label="CONTROL(If)", style="dashed"];
+    "1" -> "4" [label="CONTROL(FunctionDef)", style="dashed"];
+    "4" -> "5" [label="CONTROL(If)", style="dashed"];
+    "1" -> "6" [label="CONTROL(FunctionDef)", style="dashed"];
+    "6" -> "7" [label="CONTROL(If)", style="dashed"];
+    "6" -> "8" [label="CONTROL(If)", style="dashed"];
+}

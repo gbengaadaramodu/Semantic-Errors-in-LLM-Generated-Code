@@ -1,0 +1,12 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def rotate_right(my_list, n): | W:my_list,n,rotate_right", fillcolor="lightgreen"];
+    "2" [label="L2: return my_list[-n:] + my_list[:-n] | R:my_list,n", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(my_list)", style="solid"];
+    "1" -> "2" [label="DATA(n)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

@@ -1,0 +1,89 @@
+{
+  "task_id": "HumanEval/10",
+  "nodes": [
+    {
+      "node_id": "S",
+      "variable_name": "Specification",
+      "symbol": "S",
+      "label": "Specification"
+    },
+    {
+      "node_id": "C",
+      "variable_name": "GeneratedCode",
+      "symbol": "C",
+      "label": "Generated Code"
+    },
+    {
+      "node_id": "E",
+      "variable_name": "ExecutionTrace",
+      "symbol": "E",
+      "label": "Execution Trace"
+    },
+    {
+      "node_id": "T",
+      "variable_name": "TestSuite",
+      "symbol": "T",
+      "label": "Test Suite"
+    },
+    {
+      "node_id": "O",
+      "variable_name": "Outcome",
+      "symbol": "O",
+      "label": "Outcome"
+    }
+  ],
+  "edges": [
+    {
+      "source": "S",
+      "target": "C",
+      "relationship": "generates"
+    },
+    {
+      "source": "C",
+      "target": "E",
+      "relationship": "produces"
+    },
+    {
+      "source": "T",
+      "target": "E",
+      "relationship": "evaluates"
+    },
+    {
+      "source": "E",
+      "target": "O",
+      "relationship": "determines"
+    }
+  ],
+  "variables": {
+    "S": {
+      "name": "Specification",
+      "symbol": "S",
+      "description": "Problem description, prompt, and target function signature",
+      "value": "\n\ndef is_palindrome(string: str) -> bool:\n    \"\"\" Test if given string is a pali"
+    },
+    "C": {
+      "name": "GeneratedCode",
+      "symbol": "C",
+      "description": "LLM-generated Python source code implementation",
+      "value": "def make_palindrome(string: str) -> str:\n    if is_palindrome(string):\n        return string\n\n    longest_postfix = \"\"\n    for i in range(len(string), 0, -1):\n        if is_palindrome(string[:i]):\n   "
+    },
+    "E": {
+      "name": "ExecutionTrace",
+      "symbol": "E",
+      "description": "Observable runtime trace events, variable states, and stdout/stderr",
+      "value": "status=Failed, exc=NameError, msg=name 'is_palindrome' is not defined. Did you mean: 'make_palindrome'?"
+    },
+    "T": {
+      "name": "TestSuite",
+      "symbol": "T",
+      "description": "Benchmark assertions, inputs, and check function harness",
+      "value": "\n\nMETADATA = {\n    'author': 'jt',\n    'dataset': 'test'\n}\n\n\ndef check(candidate):\n    assert candid"
+    },
+    "O": {
+      "name": "Outcome",
+      "symbol": "O",
+      "description": "Final test execution outcome (Completed/Failed/Timeout)",
+      "value": "Failed"
+    }
+  }
+}

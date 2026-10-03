@@ -1,0 +1,40 @@
+[
+  {
+    "candidate_rank": 1,
+    "intervention": {
+      "target_variable": "common_elements",
+      "target_line": 5,
+      "observed_value": "[1, 5, 7, 8, 12, 45, 15, 16, 18, 23, 24, 25, 28]",
+      "counterfactual_value": "None",
+      "operation_type": "failed_construction",
+      "modified_code": ""
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "FAILED_CONSTRUCTION",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "UNRESOLVED",
+    "execution_time": 0.0,
+    "status": "UNRESOLVED",
+    "explanation": "Failed to construct valid AST counterfactual intervention."
+  },
+  {
+    "candidate_rank": 2,
+    "intervention": {
+      "target_variable": "common_elements",
+      "target_line": 2,
+      "observed_value": "None",
+      "counterfactual_value": "None",
+      "operation_type": "AST_transform",
+      "modified_code": "def common_in_nested_lists(nested_lists):\n    common_elements = None\n    for nested_list in nested_lists:\n        common_elements.update(set(nested_list))\n    return list(common_elements)"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.2622,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  }
+]

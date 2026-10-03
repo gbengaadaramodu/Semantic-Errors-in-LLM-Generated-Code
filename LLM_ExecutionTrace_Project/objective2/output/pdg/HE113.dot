@@ -1,0 +1,24 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def search(lst): | W:lst,search", fillcolor="lightgreen"];
+    "2" [label="L2: max_freq = max(lst) | W:max_freq | R:lst,max", fillcolor="lightgreen"];
+    "3" [label="L3: freq = lst.count(max_freq) | W:freq | R:lst,max_freq", fillcolor="lightgreen"];
+    "4" [label="L4: if freq > max_freq: | R:freq,max_freq", fillcolor="lightgreen"];
+    "5" [label="L5: return max_freq | R:max_freq", fillcolor="lightgrey"];
+    "6" [label="L7: return -1", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(lst)", style="solid"];
+    "1" -> "3" [label="DATA(lst)", style="solid"];
+    "2" -> "3" [label="DATA(max_freq)", style="solid"];
+    "3" -> "4" [label="DATA(freq)", style="solid"];
+    "2" -> "4" [label="DATA(max_freq)", style="solid"];
+    "2" -> "5" [label="DATA(max_freq)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "3" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "4" [label="CONTROL(FunctionDef)", style="dashed"];
+    "4" -> "5" [label="CONTROL(If)", style="dashed"];
+    "4" -> "6" [label="CONTROL(If)", style="dashed"];
+}

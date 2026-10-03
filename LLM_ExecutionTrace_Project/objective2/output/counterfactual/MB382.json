@@ -1,0 +1,59 @@
+[
+  {
+    "candidate_rank": 1,
+    "intervention": {
+      "target_variable": "int",
+      "target_line": 5,
+      "observed_value": "None",
+      "counterfactual_value": "False",
+      "operation_type": "AST_transform",
+      "modified_code": "def rearrange_bigger(num):\n    num_str = str(num)\n    num_list = list(num_str)\n    num_list.sort(reverse=True)\n    int = False\n    return int(''.join(num_list))"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.2149,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  },
+  {
+    "candidate_rank": 2,
+    "intervention": {
+      "target_variable": "num_list",
+      "target_line": 3,
+      "observed_value": "None",
+      "counterfactual_value": "None",
+      "operation_type": "AST_transform",
+      "modified_code": "def rearrange_bigger(num):\n    num_str = str(num)\n    num_list = None\n    num_list.sort(reverse=True)\n    return int(''.join(num_list))"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.2133,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  },
+  {
+    "candidate_rank": 3,
+    "intervention": {
+      "target_variable": "num_str",
+      "target_line": 2,
+      "observed_value": "None",
+      "counterfactual_value": "None",
+      "operation_type": "AST_transform",
+      "modified_code": "def rearrange_bigger(num):\n    num_str = None\n    num_list = list(num_str)\n    num_list.sort(reverse=True)\n    return int(''.join(num_list))"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.2366,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  }
+]

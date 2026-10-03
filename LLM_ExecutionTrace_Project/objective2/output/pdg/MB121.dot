@@ -1,0 +1,19 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def next_power_of_2(n): | W:n,next_power_of_2", fillcolor="lightgreen"];
+    "2" [label="L2: power = 1 | W:power", fillcolor="lightgrey"];
+    "3" [label="L3: while power < n: | R:n,power", fillcolor="lightgrey"];
+    "4" [label="L4: power *= 2 | W:power", fillcolor="lightgrey"];
+    "5" [label="L5: return power | R:power", fillcolor="salmon"];
+
+    "1" -> "3" [label="DATA(n)", style="solid"];
+    "2" -> "3" [label="DATA(power)", style="solid"];
+    "4" -> "5" [label="DATA(power)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "3" [label="CONTROL(FunctionDef)", style="dashed"];
+    "3" -> "4" [label="CONTROL(While)", style="dashed"];
+    "1" -> "5" [label="CONTROL(FunctionDef)", style="dashed"];
+}

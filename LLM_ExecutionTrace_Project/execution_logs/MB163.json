@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB163",
+  "dataset": "MBPP",
+  "task_id": "728",
+  "problem_summary": "Write a function takes as input two lists [a_1,...,a_n], [b_1,...,b_n] and retur",
+  "execution_status": "Completed",
+  "stdout": "",
+  "stderr": "",
+  "traceback": "",
+  "exception_type": "",
+  "exception_message": "",
+  "execution_time": 0.126572,
+  "timed_out": false,
+  "exit_code": 0,
+  "tests_passed": true,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

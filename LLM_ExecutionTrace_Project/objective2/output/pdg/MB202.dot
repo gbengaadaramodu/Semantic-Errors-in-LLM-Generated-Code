@@ -1,0 +1,11 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def remove_odd(s): | W:s,remove_odd", fillcolor="lightgreen"];
+    "2" [label="L2: return ''.join([c for c in s if c.isalpha()]) | W:c | R:c,s", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(s)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

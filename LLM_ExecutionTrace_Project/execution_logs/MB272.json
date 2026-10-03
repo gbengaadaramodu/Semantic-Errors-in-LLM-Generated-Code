@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB272",
+  "dataset": "MBPP",
+  "task_id": "801",
+  "problem_summary": "Write a python function to count the number of equal numbers from three given in",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpfxmupj10.py\", line 5, in <module>\n    assert test_three_equal(-1,-2,-3) == 0\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpfxmupj10.py\", line 5, in <module>\n    assert test_three_equal(-1,-2,-3) == 0\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+  "exception_type": "AssertionError",
+  "exception_message": "",
+  "execution_time": 0.212237,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": "benchmark_test",
+  "assertion_failed": true,
+  "parser_prediction": ""
+}

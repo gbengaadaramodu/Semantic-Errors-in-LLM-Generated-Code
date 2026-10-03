@@ -1,0 +1,22 @@
+{
+  "trace_id": "HE134",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/158",
+  "problem_summary": "\ndef find_max(words):\n    \"\"\"Write a function that accepts a list of strings.\n  ",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpptxju09_.py\", line 26, in <module>\n    check(find_max)\n    ~~~~~^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpptxju09_.py\", line 12, in check\n    assert (candidate([\"name\", \"enam\", \"game\"]) == \"enam\"), 't2'\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: t2\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpptxju09_.py\", line 26, in <module>\n    check(find_max)\n    ~~~~~^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpptxju09_.py\", line 12, in check\n    assert (candidate([\"name\", \"enam\", \"game\"]) == \"enam\"), 't2'\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: t2",
+  "exception_type": "AssertionError",
+  "exception_message": "t2",
+  "execution_time": 0.869102,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": "benchmark_test",
+  "assertion_failed": true,
+  "parser_prediction": ""
+}

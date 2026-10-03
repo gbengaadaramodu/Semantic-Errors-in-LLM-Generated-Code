@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB194",
+  "dataset": "MBPP",
+  "task_id": "564",
+  "problem_summary": "Write a python function which takes a list of integers and counts the number of ",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpjqs5ail0.py\", line 9, in <module>\n    assert count_Pairs([1,2,1],3) == 2\n           ^^^^^^^^^^^\nNameError: name 'count_Pairs' is not defined. Did you mean: 'count_pairs'?\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpjqs5ail0.py\", line 9, in <module>\n    assert count_Pairs([1,2,1],3) == 2\n           ^^^^^^^^^^^\nNameError: name 'count_Pairs' is not defined. Did you mean: 'count_pairs'?",
+  "exception_type": "NameError",
+  "exception_message": "name 'count_Pairs' is not defined. Did you mean: 'count_pairs'?",
+  "execution_time": 0.244703,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

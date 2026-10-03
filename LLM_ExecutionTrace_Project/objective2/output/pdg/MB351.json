@@ -1,0 +1,67 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def is_undulating(num):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "num",
+        "is_undulating"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "num": [
+          "1212121"
+        ]
+      },
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "return len(set(str(num))) == 1",
+      "statement_type": "Return",
+      "reads": [
+        "len",
+        "num",
+        "set",
+        "str"
+      ],
+      "writes": [],
+      "function_name": "is_undulating",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "num": [
+          "1212121",
+          "1212121"
+        ]
+      },
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "num",
+      "label": "DATA(num)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    2
+  ]
+}

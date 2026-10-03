@@ -1,0 +1,16 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def find_zero(xs): | W:xs,find_zero", fillcolor="lightgreen"];
+    "2" [label="L2: if len(xs) % 2 == 0 and xs[-1] != 0: | R:len,xs", fillcolor="lightgreen"];
+    "3" [label="L3: return -xs[-2]/xs[-1] | R:xs", fillcolor="lightgreen"];
+    "4" [label="L5: return None", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(xs)", style="solid"];
+    "1" -> "3" [label="DATA(xs)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "2" -> "3" [label="CONTROL(If)", style="dashed"];
+    "2" -> "4" [label="CONTROL(If)", style="dashed"];
+}

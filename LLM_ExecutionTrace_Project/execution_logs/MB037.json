@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB037",
+  "dataset": "MBPP",
+  "task_id": "115",
+  "problem_summary": "Write a function to check whether all dictionaries in a list are empty or not.",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpz7r_cv2q.py\", line 4, in <module>\n    assert empty_dit([{},{},{}])==True\n           ^^^^^^^^^\nNameError: name 'empty_dit' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpz7r_cv2q.py\", line 4, in <module>\n    assert empty_dit([{},{},{}])==True\n           ^^^^^^^^^\nNameError: name 'empty_dit' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'empty_dit' is not defined",
+  "execution_time": 0.259723,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

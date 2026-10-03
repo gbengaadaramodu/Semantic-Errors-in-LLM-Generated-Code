@@ -1,0 +1,67 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def convert(z):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "z",
+        "convert"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "z": [
+          "1"
+        ]
+      },
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "return (abs(z), math.atan2(z.imag, z.real))",
+      "statement_type": "Return",
+      "reads": [
+        "abs",
+        "math",
+        "z"
+      ],
+      "writes": [],
+      "function_name": "convert",
+      "executed": true,
+      "execution_count": 3,
+      "runtime_values": {
+        "z": [
+          "1",
+          "1",
+          "1"
+        ]
+      },
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "z",
+      "label": "DATA(z)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    2
+  ]
+}

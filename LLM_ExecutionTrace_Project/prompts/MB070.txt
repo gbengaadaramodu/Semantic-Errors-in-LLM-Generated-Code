@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a python function to return the negative numbers in a list.
+
+Example test: assert neg_nos([-1,4,5,-6]) == [-1,-6]
+[/INST]

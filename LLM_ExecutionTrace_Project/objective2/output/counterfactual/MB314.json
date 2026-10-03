@@ -1,0 +1,59 @@
+[
+  {
+    "candidate_rank": 1,
+    "intervention": {
+      "target_variable": "max",
+      "target_line": 5,
+      "observed_value": "None",
+      "counterfactual_value": "30",
+      "operation_type": "AST_transform",
+      "modified_code": "def max_sub_array_sum_repeated(arr, k, n):\n    modified_array = []\n    for i in range(k):\n        modified_array += arr * n\n    max = 30\n    return max(modified_array)"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.1878,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  },
+  {
+    "candidate_rank": 2,
+    "intervention": {
+      "target_variable": "modified_array",
+      "target_line": 4,
+      "observed_value": "[10, 20, -30, -1, 10, 20, -30, -1, 10, 20, -30, -1, 10, 20, -30, -1, 10, 20, -30, -1]",
+      "counterfactual_value": "None",
+      "operation_type": "failed_construction",
+      "modified_code": ""
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "FAILED_CONSTRUCTION",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "UNRESOLVED",
+    "execution_time": 0.0,
+    "status": "UNRESOLVED",
+    "explanation": "Failed to construct valid AST counterfactual intervention."
+  },
+  {
+    "candidate_rank": 3,
+    "intervention": {
+      "target_variable": "i",
+      "target_line": 3,
+      "observed_value": "3",
+      "counterfactual_value": "None",
+      "operation_type": "failed_construction",
+      "modified_code": ""
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "FAILED_CONSTRUCTION",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "UNRESOLVED",
+    "execution_time": 0.0,
+    "status": "UNRESOLVED",
+    "explanation": "Failed to construct valid AST counterfactual intervention."
+  }
+]

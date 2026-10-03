@@ -1,0 +1,28 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def find_kth(arr1, arr2, k): | W:arr1,arr2,k,find_kth", fillcolor="lightgreen"];
+    "2" [label="L2: if len(arr1) > k - 1: | R:arr1,k,len", fillcolor="lightgreen"];
+    "3" [label="L3: return arr1[k - 1] | R:arr1,k", fillcolor="lightgreen"];
+    "4" [label="L4: elif len(arr2) > k - len(arr1) - 1: | R:arr1,arr2,k,len", fillcolor="lightgrey"];
+    "5" [label="L5: return arr2[k - len(arr1) - 1] | R:arr1,arr2,k,len", fillcolor="lightgrey"];
+    "6" [label="L7: return -1", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(arr1)", style="solid"];
+    "1" -> "2" [label="DATA(k)", style="solid"];
+    "1" -> "3" [label="DATA(arr1)", style="solid"];
+    "1" -> "3" [label="DATA(k)", style="solid"];
+    "1" -> "4" [label="DATA(arr1)", style="solid"];
+    "1" -> "4" [label="DATA(arr2)", style="solid"];
+    "1" -> "4" [label="DATA(k)", style="solid"];
+    "1" -> "5" [label="DATA(arr1)", style="solid"];
+    "1" -> "5" [label="DATA(arr2)", style="solid"];
+    "1" -> "5" [label="DATA(k)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "2" -> "3" [label="CONTROL(If)", style="dashed"];
+    "2" -> "4" [label="CONTROL(If)", style="dashed"];
+    "4" -> "5" [label="CONTROL(If)", style="dashed"];
+    "4" -> "6" [label="CONTROL(If)", style="dashed"];
+}

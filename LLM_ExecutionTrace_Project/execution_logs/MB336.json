@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB336",
+  "dataset": "MBPP",
+  "task_id": "260",
+  "problem_summary": "Write a function to find the nth newman\u2013shanks\u2013williams prime number.",
+  "execution_status": "Timeout",
+  "stdout": "",
+  "stderr": "",
+  "traceback": "",
+  "exception_type": "",
+  "exception_message": "",
+  "execution_time": 5.021439,
+  "timed_out": true,
+  "exit_code": -1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

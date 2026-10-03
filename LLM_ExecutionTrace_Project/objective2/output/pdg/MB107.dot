@@ -1,0 +1,11 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def index_minimum(my_list): | W:my_list,index_minimum", fillcolor="lightgreen"];
+    "2" [label="L2: return min(my_list, key=lambda x: x[1])[0] | W:x | R:min,my_list,x", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(my_list)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB208",
+  "dataset": "MBPP",
+  "task_id": "735",
+  "problem_summary": "Write a python function to toggle bits of the number except the first and the la",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmppw04vdx1.py\", line 6, in <module>\n    assert toggle_middle_bits(9) == 15\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmppw04vdx1.py\", line 6, in <module>\n    assert toggle_middle_bits(9) == 15\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+  "exception_type": "AssertionError",
+  "exception_message": "",
+  "execution_time": 0.275062,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": "benchmark_test",
+  "assertion_failed": true,
+  "parser_prediction": ""
+}

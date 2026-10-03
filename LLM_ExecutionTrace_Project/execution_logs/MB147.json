@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB147",
+  "dataset": "MBPP",
+  "task_id": "279",
+  "problem_summary": "Write a function to find the nth decagonal number.",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpp6wn1jy2.py\", line 4, in <module>\n    assert is_num_decagonal(3) == 27\n           ^^^^^^^^^^^^^^^^\nNameError: name 'is_num_decagonal' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpp6wn1jy2.py\", line 4, in <module>\n    assert is_num_decagonal(3) == 27\n           ^^^^^^^^^^^^^^^^\nNameError: name 'is_num_decagonal' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'is_num_decagonal' is not defined",
+  "execution_time": 0.216969,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

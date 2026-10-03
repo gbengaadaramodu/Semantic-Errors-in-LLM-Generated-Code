@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB142",
+  "dataset": "MBPP",
+  "task_id": "608",
+  "problem_summary": "Write a python function to find nth bell number.",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpy4acm5rj.py\", line 4, in <module>\n    assert bell_Number(2) == 2\n           ^^^^^^^^^^^\nNameError: name 'bell_Number' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpy4acm5rj.py\", line 4, in <module>\n    assert bell_Number(2) == 2\n           ^^^^^^^^^^^\nNameError: name 'bell_Number' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'bell_Number' is not defined",
+  "execution_time": 0.209576,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

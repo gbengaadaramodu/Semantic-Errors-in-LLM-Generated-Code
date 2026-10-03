@@ -1,0 +1,22 @@
+{
+  "trace_id": "HE159",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/130",
+  "problem_summary": "\ndef tri(n):\n    \"\"\"Everyone knows Fibonacci sequence, it was studied deeply by ",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp381uu72p.py\", line 34, in <module>\n    check(tri)\n          ^^^\nNameError: name 'tri' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp381uu72p.py\", line 34, in <module>\n    check(tri)\n          ^^^\nNameError: name 'tri' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'tri' is not defined",
+  "execution_time": 0.244749,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

@@ -1,0 +1,21 @@
+[
+  {
+    "candidate_rank": 1,
+    "intervention": {
+      "target_variable": "d",
+      "target_line": 2,
+      "observed_value": "2",
+      "counterfactual_value": "[-1, -11, 1, -12, 11]",
+      "operation_type": "AST_transform",
+      "modified_code": "def order_by_points(nums):\n    d = [-1, -11, 1, -12, 11]\n    return sorted(nums, key=lambda x: (sum(int(d) for d in str(abs(x))), x))"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.3062,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  }
+]

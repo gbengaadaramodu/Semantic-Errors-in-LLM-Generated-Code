@@ -1,0 +1,37 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def tribonacci(n): | W:n,tribonacci", fillcolor="lightgreen"];
+    "2" [label="L2: if n == 0: | R:n", fillcolor="lightgrey"];
+    "3" [label="L3: return []", fillcolor="lightgrey"];
+    "4" [label="L4: elif n == 1: | R:n", fillcolor="lightgrey"];
+    "5" [label="L5: return [0]", fillcolor="lightgrey"];
+    "6" [label="L6: elif n == 2: | R:n", fillcolor="lightgrey"];
+    "7" [label="L7: return [0, 1]", fillcolor="lightgrey"];
+    "8" [label="L9: t = [0, 1, 1] | W:t", fillcolor="lightgrey"];
+    "9" [label="L10: for i in range(n-3): | W:i | R:n,range", fillcolor="lightgrey"];
+    "10" [label="L11: t.append(t[0] + t[1] + t[2]) | R:t", fillcolor="lightgrey"];
+    "11" [label="L12: t.pop(0) | R:t", fillcolor="lightgrey"];
+    "12" [label="L14: return t | R:t", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(n)", style="solid"];
+    "1" -> "4" [label="DATA(n)", style="solid"];
+    "1" -> "6" [label="DATA(n)", style="solid"];
+    "1" -> "9" [label="DATA(n)", style="solid"];
+    "8" -> "10" [label="DATA(t)", style="solid"];
+    "8" -> "11" [label="DATA(t)", style="solid"];
+    "8" -> "12" [label="DATA(t)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "2" -> "3" [label="CONTROL(If)", style="dashed"];
+    "2" -> "4" [label="CONTROL(If)", style="dashed"];
+    "4" -> "5" [label="CONTROL(If)", style="dashed"];
+    "4" -> "6" [label="CONTROL(If)", style="dashed"];
+    "6" -> "7" [label="CONTROL(If)", style="dashed"];
+    "1" -> "8" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "9" [label="CONTROL(FunctionDef)", style="dashed"];
+    "9" -> "10" [label="CONTROL(For)", style="dashed"];
+    "9" -> "11" [label="CONTROL(For)", style="dashed"];
+    "1" -> "12" [label="CONTROL(FunctionDef)", style="dashed"];
+}

@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a python function to check whether the two numbers differ at one bit position only or not.
+
+Example test: assert differ_At_One_Bit_Pos(13,9) == True
+[/INST]

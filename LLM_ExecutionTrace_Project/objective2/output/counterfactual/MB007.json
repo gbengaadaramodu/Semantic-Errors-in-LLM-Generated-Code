@@ -1,0 +1,78 @@
+[
+  {
+    "candidate_rank": 1,
+    "intervention": {
+      "target_variable": "eulerian_num",
+      "target_line": 9,
+      "observed_value": "None",
+      "counterfactual_value": "1.5707963267948966",
+      "operation_type": "AST_transform",
+      "modified_code": "def eulerian_num(n, m):\n    if n == 0 and m == 0:\n        return 1\n    elif n > 0 and m == 0:\n        return 0\n    elif n == 0 and m > 0:\n        return eulerian_num(n, m-1)\n    else:\n        eulerian_num = 1.5707963267948966\n        return eulerian_num(n-1, m-1) + eulerian_num(n-1, m)"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.2922,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  },
+  {
+    "candidate_rank": 2,
+    "intervention": {
+      "target_variable": "m",
+      "target_line": 6,
+      "observed_value": "None",
+      "counterfactual_value": "None",
+      "operation_type": "AST_transform",
+      "modified_code": "def eulerian_num(n, m):\n    if n == 0 and m == 0:\n        return 1\n    elif n > 0 and m == 0:\n        return 0\n    elif n != 0 and m <= 0:\n        return eulerian_num(n, m - 1)\n    else:\n        return eulerian_num(n - 1, m - 1) + eulerian_num(n - 1, m)"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.2685,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  },
+  {
+    "candidate_rank": 3,
+    "intervention": {
+      "target_variable": "m",
+      "target_line": 4,
+      "observed_value": "None",
+      "counterfactual_value": "None",
+      "operation_type": "AST_transform",
+      "modified_code": "def eulerian_num(n, m):\n    if n == 0 and m == 0:\n        return 1\n    elif n <= 0 and m != 0:\n        return 0\n    elif n == 0 and m > 0:\n        return eulerian_num(n, m - 1)\n    else:\n        return eulerian_num(n - 1, m - 1) + eulerian_num(n - 1, m)"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.2507,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  },
+  {
+    "candidate_rank": 4,
+    "intervention": {
+      "target_variable": "m",
+      "target_line": 2,
+      "observed_value": "None",
+      "counterfactual_value": "None",
+      "operation_type": "AST_transform",
+      "modified_code": "def eulerian_num(n, m):\n    if n != 0 and m != 0:\n        return 1\n    elif n > 0 and m == 0:\n        return 0\n    elif n == 0 and m > 0:\n        return eulerian_num(n, m - 1)\n    else:\n        return eulerian_num(n - 1, m - 1) + eulerian_num(n - 1, m)"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.246,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  }
+]

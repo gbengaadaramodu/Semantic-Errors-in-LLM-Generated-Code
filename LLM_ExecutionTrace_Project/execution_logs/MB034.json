@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB034",
+  "dataset": "MBPP",
+  "task_id": "563",
+  "problem_summary": "Write a function to extract values between quotation marks from a string.",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpuju4dxji.py\", line 4, in <module>\n    assert extract_values('\"Python\", \"PHP\", \"Java\"')==['Python', 'PHP', 'Java']\n           ^^^^^^^^^^^^^^\nNameError: name 'extract_values' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpuju4dxji.py\", line 4, in <module>\n    assert extract_values('\"Python\", \"PHP\", \"Java\"')==['Python', 'PHP', 'Java']\n           ^^^^^^^^^^^^^^\nNameError: name 'extract_values' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'extract_values' is not defined",
+  "execution_time": 0.224179,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

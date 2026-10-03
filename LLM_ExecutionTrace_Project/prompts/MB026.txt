@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a function to find the perimeter of a regular pentagon from the length of its sides.
+
+Example test: assert perimeter_pentagon(5) == 25
+[/INST]

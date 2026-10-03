@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB313",
+  "dataset": "MBPP",
+  "task_id": "555",
+  "problem_summary": "Write a python function to find the difference between the sum of cubes of the f",
+  "execution_status": "Completed",
+  "stdout": "",
+  "stderr": "",
+  "traceback": "",
+  "exception_type": "",
+  "exception_message": "",
+  "execution_time": 0.094096,
+  "timed_out": false,
+  "exit_code": 0,
+  "tests_passed": true,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

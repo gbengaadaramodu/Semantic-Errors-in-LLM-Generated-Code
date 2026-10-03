@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB042",
+  "dataset": "MBPP",
+  "task_id": "261",
+  "problem_summary": "Write a function that takes in two tuples and performs mathematical division ope",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmphgjtw9da.py\", line 13, in <module>\n    assert division_elements((10, 4, 6, 9),(5, 2, 3, 3)) == (2, 2, 2, 3)\n           ^^^^^^^^^^^^^^^^^\nNameError: name 'division_elements' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmphgjtw9da.py\", line 13, in <module>\n    assert division_elements((10, 4, 6, 9),(5, 2, 3, 3)) == (2, 2, 2, 3)\n           ^^^^^^^^^^^^^^^^^\nNameError: name 'division_elements' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'division_elements' is not defined",
+  "execution_time": 0.241127,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

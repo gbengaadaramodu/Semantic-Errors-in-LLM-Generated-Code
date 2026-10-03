@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a python function to check if a given number is one less than twice its reverse.
+
+Example test: assert check(70) == False
+[/INST]

@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB179",
+  "dataset": "MBPP",
+  "task_id": "802",
+  "problem_summary": "Write a python function to count the number of rotations required to generate a ",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpsa4as3y1.py\", line 8, in <module>\n    assert count_rotation([3,2,1]) == 1\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpsa4as3y1.py\", line 8, in <module>\n    assert count_rotation([3,2,1]) == 1\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+  "exception_type": "AssertionError",
+  "exception_message": "",
+  "execution_time": 0.219381,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": "benchmark_test",
+  "assertion_failed": true,
+  "parser_prediction": ""
+}

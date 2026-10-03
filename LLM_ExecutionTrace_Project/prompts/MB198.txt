@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a python function that returns the number of integer elements in a given list.
+
+Example test: assert count_integer([1,2,'abc',1.2]) == 2
+[/INST]

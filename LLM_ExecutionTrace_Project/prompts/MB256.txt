@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a function which returns nth catalan number.
+
+Example test: assert catalan_number(10)==16796
+[/INST]

@@ -1,0 +1,189 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def common_element(list1, list2):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "list1",
+        "list2",
+        "common_element"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 3,
+      "runtime_values": {
+        "list1": [
+          "[1, 2, 3, 4, 5]",
+          "[1, 2, 3, 4, 5]"
+        ],
+        "list2": [
+          "[5, 6, 7, 8, 9]",
+          "[6, 7, 8, 9]"
+        ]
+      },
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "return any(x in list2 for x in list1)",
+      "statement_type": "Return",
+      "reads": [
+        "any",
+        "list1",
+        "list2",
+        "x"
+      ],
+      "writes": [
+        "x"
+      ],
+      "function_name": "common_element",
+      "executed": true,
+      "execution_count": 37,
+      "runtime_values": {
+        "list1": [
+          "[1, 2, 3, 4, 5]",
+          "[1, 2, 3, 4, 5]",
+          "[1, 2, 3, 4, 5]",
+          "[1, 2, 3, 4, 5]"
+        ],
+        "list2": [
+          "[5, 6, 7, 8, 9]",
+          "[5, 6, 7, 8, 9]",
+          "[5, 6, 7, 8, 9]",
+          "[5, 6, 7, 8, 9]",
+          "[5, 6, 7, 8, 9]",
+          "[5, 6, 7, 8, 9]",
+          "[5, 6, 7, 8, 9]",
+          "[5, 6, 7, 8, 9]",
+          "[5, 6, 7, 8, 9]",
+          "[5, 6, 7, 8, 9]",
+          "[5, 6, 7, 8, 9]",
+          "[5, 6, 7, 8, 9]",
+          "[5, 6, 7, 8, 9]",
+          "[5, 6, 7, 8, 9]",
+          "[5, 6, 7, 8, 9]",
+          "[5, 6, 7, 8, 9]",
+          "[5, 6, 7, 8, 9]",
+          "[6, 7, 8, 9]",
+          "[6, 7, 8, 9]",
+          "[6, 7, 8, 9]",
+          "[6, 7, 8, 9]",
+          "[6, 7, 8, 9]",
+          "[6, 7, 8, 9]",
+          "[6, 7, 8, 9]",
+          "[6, 7, 8, 9]",
+          "[6, 7, 8, 9]",
+          "[6, 7, 8, 9]",
+          "[6, 7, 8, 9]",
+          "[6, 7, 8, 9]",
+          "[6, 7, 8, 9]",
+          "[6, 7, 8, 9]",
+          "[6, 7, 8, 9]",
+          "[6, 7, 8, 9]",
+          "[6, 7, 8, 9]",
+          "[6, 7, 8, 9]",
+          "[6, 7, 8, 9]",
+          "[6, 7, 8, 9]"
+        ],
+        ".0": [
+          "<list_iterator object at 0x0000022B6C927D00>",
+          "<list_iterator object at 0x0000022B6C927D00>",
+          "<list_iterator object at 0x0000022B6C927D00>",
+          "<list_iterator object at 0x0000022B6C927D00>",
+          "<list_iterator object at 0x0000022B6C927D00>",
+          "<list_iterator object at 0x0000022B6C927D00>",
+          "<list_iterator object at 0x0000022B6C927D00>",
+          "<list_iterator object at 0x0000022B6C927D00>",
+          "<list_iterator object at 0x0000022B6C927D00>",
+          "<list_iterator object at 0x0000022B6C927D00>",
+          "<list_iterator object at 0x0000022B6C927D00>",
+          "<list_iterator object at 0x0000022B6C927D00>",
+          "<list_iterator object at 0x0000022B6C927D00>",
+          "<list_iterator object at 0x0000022B6C927D00>",
+          "<list_iterator object at 0x0000022B6C927D00>",
+          "<list_iterator object at 0x0000022B6C926020>",
+          "<list_iterator object at 0x0000022B6C926020>",
+          "<list_iterator object at 0x0000022B6C926020>",
+          "<list_iterator object at 0x0000022B6C926020>",
+          "<list_iterator object at 0x0000022B6C926020>",
+          "<list_iterator object at 0x0000022B6C926020>",
+          "<list_iterator object at 0x0000022B6C926020>",
+          "<list_iterator object at 0x0000022B6C926020>",
+          "<list_iterator object at 0x0000022B6C926020>",
+          "<list_iterator object at 0x0000022B6C926020>",
+          "<list_iterator object at 0x0000022B6C926020>",
+          "<list_iterator object at 0x0000022B6C926020>",
+          "<list_iterator object at 0x0000022B6C926020>",
+          "<list_iterator object at 0x0000022B6C926020>",
+          "<list_iterator object at 0x0000022B6C926020>",
+          "<list_iterator object at 0x0000022B6C926020>",
+          "<list_iterator object at 0x0000022B6C926020>",
+          "<list_iterator object at 0x0000022B6C926020>"
+        ],
+        "x": [
+          "1",
+          "1",
+          "1",
+          "2",
+          "2",
+          "2",
+          "3",
+          "3",
+          "3",
+          "4",
+          "4",
+          "4",
+          "5",
+          "1",
+          "1",
+          "1",
+          "2",
+          "2",
+          "2",
+          "3",
+          "3",
+          "3",
+          "4",
+          "4",
+          "4",
+          "5",
+          "5",
+          "5",
+          "5"
+        ]
+      },
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "list1",
+      "label": "DATA(list1)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "list2",
+      "label": "DATA(list2)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    2
+  ]
+}

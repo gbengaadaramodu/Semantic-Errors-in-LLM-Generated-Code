@@ -1,0 +1,178 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def even_binomial_coeff_sum(n):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "n",
+        "even_binomial_coeff_sum"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 1,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "result = 0",
+      "statement_type": "Assign",
+      "reads": [],
+      "writes": [
+        "result"
+      ],
+      "function_name": "even_binomial_coeff_sum",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "3": {
+      "node_id": 3,
+      "line_number": 3,
+      "source_code": "for i in range(n+1):",
+      "statement_type": "For",
+      "reads": [
+        "n",
+        "range"
+      ],
+      "writes": [
+        "i"
+      ],
+      "function_name": "even_binomial_coeff_sum",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "4": {
+      "node_id": 4,
+      "line_number": 4,
+      "source_code": "if i % 2 == 0:",
+      "statement_type": "If",
+      "reads": [
+        "i"
+      ],
+      "writes": [],
+      "function_name": "even_binomial_coeff_sum",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "5": {
+      "node_id": 5,
+      "line_number": 5,
+      "source_code": "result += binomial_coefficient(n, i)",
+      "statement_type": "AugAssign",
+      "reads": [
+        "binomial_coefficient",
+        "i",
+        "n"
+      ],
+      "writes": [
+        "result"
+      ],
+      "function_name": "even_binomial_coeff_sum",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "6": {
+      "node_id": 6,
+      "line_number": 6,
+      "source_code": "return result",
+      "statement_type": "Return",
+      "reads": [
+        "result"
+      ],
+      "writes": [],
+      "function_name": "even_binomial_coeff_sum",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 3,
+      "dependency_type": "DATA",
+      "variable": "n",
+      "label": "DATA(n)"
+    },
+    {
+      "source_id": 3,
+      "target_id": 4,
+      "dependency_type": "DATA",
+      "variable": "i",
+      "label": "DATA(i)"
+    },
+    {
+      "source_id": 3,
+      "target_id": 5,
+      "dependency_type": "DATA",
+      "variable": "i",
+      "label": "DATA(i)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 5,
+      "dependency_type": "DATA",
+      "variable": "n",
+      "label": "DATA(n)"
+    },
+    {
+      "source_id": 5,
+      "target_id": 6,
+      "dependency_type": "DATA",
+      "variable": "result",
+      "label": "DATA(result)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 3,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 3,
+      "target_id": 4,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(For)"
+    },
+    {
+      "source_id": 4,
+      "target_id": 5,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(If)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 6,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    6
+  ]
+}

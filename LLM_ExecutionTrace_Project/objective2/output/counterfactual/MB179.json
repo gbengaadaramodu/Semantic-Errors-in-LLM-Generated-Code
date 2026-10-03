@@ -1,0 +1,78 @@
+[
+  {
+    "candidate_rank": 1,
+    "intervention": {
+      "target_variable": "count",
+      "target_line": 6,
+      "observed_value": "2",
+      "counterfactual_value": "1",
+      "operation_type": "AST_transform",
+      "modified_code": "def count_rotation(arr):\n    count = 0\n    for i in range(len(arr)):\n        if arr[i] != i + 1:\n            count += 1\n    return 1"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Completed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "TRUE",
+    "execution_time": 0.1544,
+    "status": "EXECUTED",
+    "explanation": "Intervention successfully flipped execution outcome from FAIL to PASS."
+  },
+  {
+    "candidate_rank": 2,
+    "intervention": {
+      "target_variable": "count",
+      "target_line": 5,
+      "observed_value": "1",
+      "counterfactual_value": "None",
+      "operation_type": "failed_construction",
+      "modified_code": ""
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "FAILED_CONSTRUCTION",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "UNRESOLVED",
+    "execution_time": 0.0,
+    "status": "UNRESOLVED",
+    "explanation": "Failed to construct valid AST counterfactual intervention."
+  },
+  {
+    "candidate_rank": 3,
+    "intervention": {
+      "target_variable": "arr",
+      "target_line": 4,
+      "observed_value": "[3, 2, 1]",
+      "counterfactual_value": "None",
+      "operation_type": "AST_transform",
+      "modified_code": "def count_rotation(arr):\n    count = 0\n    for i in range(len(arr)):\n        if arr[i] == i + 1:\n            count += 1\n    return count"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Completed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "TRUE",
+    "execution_time": 0.1448,
+    "status": "EXECUTED",
+    "explanation": "Intervention successfully flipped execution outcome from FAIL to PASS."
+  },
+  {
+    "candidate_rank": 4,
+    "intervention": {
+      "target_variable": "i",
+      "target_line": 3,
+      "observed_value": "2",
+      "counterfactual_value": "None",
+      "operation_type": "failed_construction",
+      "modified_code": ""
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "FAILED_CONSTRUCTION",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "UNRESOLVED",
+    "execution_time": 0.0,
+    "status": "UNRESOLVED",
+    "explanation": "Failed to construct valid AST counterfactual intervention."
+  }
+]

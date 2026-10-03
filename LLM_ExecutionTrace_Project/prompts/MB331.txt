@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a function to find all words which are at least 4 characters long in a string.
+
+Example test: assert set(find_char_long('Please move back to stream')) == set(['Please', 'move', 'back', 'stream'])
+[/INST]

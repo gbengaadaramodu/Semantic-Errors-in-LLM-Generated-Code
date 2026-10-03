@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB025",
+  "dataset": "MBPP",
+  "task_id": "71",
+  "problem_summary": "Write a function to sort a list of elements.",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp5aj4ishp.py\", line 4, in <module>\n    assert comb_sort([5, 15, 37, 25, 79]) == [5, 15, 25, 37, 79]\n           ^^^^^^^^^\nNameError: name 'comb_sort' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp5aj4ishp.py\", line 4, in <module>\n    assert comb_sort([5, 15, 37, 25, 79]) == [5, 15, 25, 37, 79]\n           ^^^^^^^^^\nNameError: name 'comb_sort' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'comb_sort' is not defined",
+  "execution_time": 0.256087,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

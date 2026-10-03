@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a function to return the sum of all divisors of a number.
+
+Example test: assert sum_div(8)==7
+[/INST]

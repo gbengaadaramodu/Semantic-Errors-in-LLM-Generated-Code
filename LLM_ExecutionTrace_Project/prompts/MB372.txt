@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a python function takes in an integer and check whether the frequency of each digit in the integer is less than or equal to the digit itself.
+
+Example test: assert validate(1234) == True
+[/INST]

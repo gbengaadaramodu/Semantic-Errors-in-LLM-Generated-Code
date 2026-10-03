@@ -1,0 +1,25 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def find_adverbs(text): | W:text,find_adverbs", fillcolor="lightgreen"];
+    "2" [label="L2: adverbs = [] | W:adverbs", fillcolor="lightgrey"];
+    "3" [label="L3: for match in re.finditer(r'\b\w+ly\b', text): | W:match | R:re,text", fillcolor="lightgrey"];
+    "4" [label="L4: start, end = match.span() | W:end,start | R:match", fillcolor="lightgrey"];
+    "5" [label="L5: adverbs.append(f'{start}-{end}: {match.group()}') | R:adverbs,end,match,start", fillcolor="lightgrey"];
+    "6" [label="L6: return ', '.join(adverbs) | R:adverbs", fillcolor="salmon"];
+
+    "1" -> "3" [label="DATA(text)", style="solid"];
+    "3" -> "4" [label="DATA(match)", style="solid"];
+    "2" -> "5" [label="DATA(adverbs)", style="solid"];
+    "4" -> "5" [label="DATA(end)", style="solid"];
+    "3" -> "5" [label="DATA(match)", style="solid"];
+    "4" -> "5" [label="DATA(start)", style="solid"];
+    "2" -> "6" [label="DATA(adverbs)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "3" [label="CONTROL(FunctionDef)", style="dashed"];
+    "3" -> "4" [label="CONTROL(For)", style="dashed"];
+    "3" -> "5" [label="CONTROL(For)", style="dashed"];
+    "1" -> "6" [label="CONTROL(FunctionDef)", style="dashed"];
+}

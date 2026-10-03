@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB188",
+  "dataset": "MBPP",
+  "task_id": "624",
+  "problem_summary": "Write a python function to convert a given string to uppercase.",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpsqmyya1o.py\", line 4, in <module>\n    assert is_upper(\"person\") ==\"PERSON\"\n           ^^^^^^^^\nNameError: name 'is_upper' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpsqmyya1o.py\", line 4, in <module>\n    assert is_upper(\"person\") ==\"PERSON\"\n           ^^^^^^^^\nNameError: name 'is_upper' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'is_upper' is not defined",
+  "execution_time": 0.209984,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

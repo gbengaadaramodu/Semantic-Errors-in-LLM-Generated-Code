@@ -1,0 +1,22 @@
+{
+  "trace_id": "HE163",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/104",
+  "problem_summary": "\ndef unique_digits(x):\n    \"\"\"Given a list of positive integers x. return a sort",
+  "execution_status": "Completed",
+  "stdout": "",
+  "stderr": "",
+  "traceback": "",
+  "exception_type": "",
+  "exception_message": "",
+  "execution_time": 0.105119,
+  "timed_out": false,
+  "exit_code": 0,
+  "tests_passed": true,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

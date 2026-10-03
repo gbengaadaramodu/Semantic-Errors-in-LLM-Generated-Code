@@ -1,0 +1,59 @@
+[
+  {
+    "candidate_rank": 1,
+    "intervention": {
+      "target_variable": "negative_elements",
+      "target_line": 9,
+      "observed_value": "None",
+      "counterfactual_value": "20",
+      "operation_type": "AST_transform",
+      "modified_code": "def re_arrange_array(arr, n):\n    negative_elements = []\n    positive_elements = []\n    for i in range(n):\n        if arr[i] < 0:\n            negative_elements.append(arr[i])\n        else:\n            positive_elements.append(arr[i])\n    negative_elements = 20\n    return negative_elements + positive_elements"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.1926,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  },
+  {
+    "candidate_rank": 2,
+    "intervention": {
+      "target_variable": "negative_elements",
+      "target_line": 2,
+      "observed_value": "None",
+      "counterfactual_value": "None",
+      "operation_type": "AST_transform",
+      "modified_code": "def re_arrange_array(arr, n):\n    negative_elements = None\n    positive_elements = []\n    for i in range(n):\n        if arr[i] < 0:\n            negative_elements.append(arr[i])\n        else:\n            positive_elements.append(arr[i])\n    return negative_elements + positive_elements"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.216,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  },
+  {
+    "candidate_rank": 3,
+    "intervention": {
+      "target_variable": "positive_elements",
+      "target_line": 3,
+      "observed_value": "None",
+      "counterfactual_value": "None",
+      "operation_type": "AST_transform",
+      "modified_code": "def re_arrange_array(arr, n):\n    negative_elements = []\n    positive_elements = None\n    for i in range(n):\n        if arr[i] < 0:\n            negative_elements.append(arr[i])\n        else:\n            positive_elements.append(arr[i])\n    return negative_elements + positive_elements"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.326,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  }
+]

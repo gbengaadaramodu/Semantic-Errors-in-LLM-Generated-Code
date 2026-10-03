@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB030",
+  "dataset": "MBPP",
+  "task_id": "752",
+  "problem_summary": "Write a function to find the nth jacobsthal number. https://www.geeksforgeeks.or",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpvkq2ijeo.py\", line 4, in <module>\n    assert jacobsthal_num(5) == 11\n           ^^^^^^^^^^^^^^\nNameError: name 'jacobsthal_num' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpvkq2ijeo.py\", line 4, in <module>\n    assert jacobsthal_num(5) == 11\n           ^^^^^^^^^^^^^^\nNameError: name 'jacobsthal_num' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'jacobsthal_num' is not defined",
+  "execution_time": 0.352502,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

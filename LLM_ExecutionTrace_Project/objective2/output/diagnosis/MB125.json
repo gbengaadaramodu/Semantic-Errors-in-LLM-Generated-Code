@@ -1,0 +1,815 @@
+{
+  "trace_id": "MB125",
+  "dataset": "MBPP",
+  "task_id": "11",
+  "error_category": "Runtime Exception",
+  "analysis_status": "ANALYZED",
+  "skip_reason": null,
+  "input_record": {
+    "trace_id": "MB125",
+    "dataset": "MBPP",
+    "task_id": "11",
+    "problem_summary": "Write a python function to remove first and last occurrence of a given character",
+    "execution_status": "Failed",
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpgi4afy04.py\", line 21, in <module>\n    assert remove_Occ(\"hello\",\"l\") == \"heo\"\n           ^^^^^^^^^^\nNameError: name 'remove_Occ' is not defined\n",
+    "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpgi4afy04.py\", line 21, in <module>\n    assert remove_Occ(\"hello\",\"l\") == \"heo\"\n           ^^^^^^^^^^\nNameError: name 'remove_Occ' is not defined",
+    "exception_type": "NameError",
+    "exception_message": "name 'remove_Occ' is not defined",
+    "execution_time": 0.179215,
+    "timed_out": false,
+    "exit_code": 1,
+    "tests_passed": false,
+    "tests_failed": 0,
+    "expected_output": null,
+    "actual_output": null,
+    "assertion_source": null,
+    "assertion_failed": false,
+    "parser_prediction": "Runtime Exception"
+  },
+  "scm": {
+    "task_id": "11",
+    "nodes": [
+      {
+        "node_id": "S",
+        "variable_name": "Specification",
+        "symbol": "S",
+        "label": "Specification"
+      },
+      {
+        "node_id": "C",
+        "variable_name": "GeneratedCode",
+        "symbol": "C",
+        "label": "Generated Code"
+      },
+      {
+        "node_id": "E",
+        "variable_name": "ExecutionTrace",
+        "symbol": "E",
+        "label": "Execution Trace"
+      },
+      {
+        "node_id": "T",
+        "variable_name": "TestSuite",
+        "symbol": "T",
+        "label": "Test Suite"
+      },
+      {
+        "node_id": "O",
+        "variable_name": "Outcome",
+        "symbol": "O",
+        "label": "Outcome"
+      }
+    ],
+    "edges": [
+      {
+        "source": "S",
+        "target": "C",
+        "relationship": "generates"
+      },
+      {
+        "source": "C",
+        "target": "E",
+        "relationship": "produces"
+      },
+      {
+        "source": "T",
+        "target": "E",
+        "relationship": "evaluates"
+      },
+      {
+        "source": "E",
+        "target": "O",
+        "relationship": "determines"
+      }
+    ],
+    "variables": {
+      "S": {
+        "name": "Specification",
+        "symbol": "S",
+        "description": "Problem description, prompt, and target function signature",
+        "value": "Write a python function to remove first and last occurrence of a given character"
+      },
+      "C": {
+        "name": "GeneratedCode",
+        "symbol": "C",
+        "description": "LLM-generated Python source code implementation",
+        "value": "def amicable_numbers_sum(n):\n    sum = 0\n    for i in range(1, n+1):\n        if is_amicable(i):\n            sum += i\n    return sum\n\ndef is_amicable(n):\n    s = sum_proper_divisors(n)\n    return s != "
+      },
+      "E": {
+        "name": "ExecutionTrace",
+        "symbol": "E",
+        "description": "Observable runtime trace events, variable states, and stdout/stderr",
+        "value": "status=Failed, exc=NameError, msg=name 'remove_Occ' is not defined"
+      },
+      "T": {
+        "name": "TestSuite",
+        "symbol": "T",
+        "description": "Benchmark assertions, inputs, and check function harness",
+        "value": "assert remove_Occ(\"hello\",\"l\") == \"heo\"\nassert remove_Occ(\"abcda\",\"a\") == \"bcd\"\nassert remove_Occ(\"P"
+      },
+      "O": {
+        "name": "Outcome",
+        "symbol": "O",
+        "description": "Final test execution outcome (Completed/Failed/Timeout)",
+        "value": "Failed"
+      }
+    }
+  },
+  "pdg": {
+    "nodes": {
+      "1": {
+        "node_id": 1,
+        "line_number": 1,
+        "source_code": "def amicable_numbers_sum(n):",
+        "statement_type": "FunctionDef",
+        "reads": [],
+        "writes": [
+          "n",
+          "amicable_numbers_sum"
+        ],
+        "function_name": "<module>",
+        "executed": true,
+        "execution_count": 1,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "2": {
+        "node_id": 2,
+        "line_number": 2,
+        "source_code": "sum = 0",
+        "statement_type": "Assign",
+        "reads": [],
+        "writes": [
+          "sum"
+        ],
+        "function_name": "amicable_numbers_sum",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "3": {
+        "node_id": 3,
+        "line_number": 3,
+        "source_code": "for i in range(1, n+1):",
+        "statement_type": "For",
+        "reads": [
+          "n",
+          "range"
+        ],
+        "writes": [
+          "i"
+        ],
+        "function_name": "amicable_numbers_sum",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "4": {
+        "node_id": 4,
+        "line_number": 4,
+        "source_code": "if is_amicable(i):",
+        "statement_type": "If",
+        "reads": [
+          "i",
+          "is_amicable"
+        ],
+        "writes": [],
+        "function_name": "amicable_numbers_sum",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "5": {
+        "node_id": 5,
+        "line_number": 5,
+        "source_code": "sum += i",
+        "statement_type": "AugAssign",
+        "reads": [
+          "i"
+        ],
+        "writes": [
+          "sum"
+        ],
+        "function_name": "amicable_numbers_sum",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "6": {
+        "node_id": 6,
+        "line_number": 6,
+        "source_code": "return sum",
+        "statement_type": "Return",
+        "reads": [
+          "sum"
+        ],
+        "writes": [],
+        "function_name": "amicable_numbers_sum",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "7": {
+        "node_id": 7,
+        "line_number": 8,
+        "source_code": "def is_amicable(n):",
+        "statement_type": "FunctionDef",
+        "reads": [],
+        "writes": [
+          "n",
+          "is_amicable"
+        ],
+        "function_name": "<module>",
+        "executed": true,
+        "execution_count": 1,
+        "runtime_values": {
+          "amicable_numbers_sum": [
+            "<function amicable_numbers_sum at 0x0000022B6C913C40>"
+          ]
+        },
+        "failure_related": false
+      },
+      "8": {
+        "node_id": 8,
+        "line_number": 9,
+        "source_code": "s = sum_proper_divisors(n)",
+        "statement_type": "Assign",
+        "reads": [
+          "n",
+          "sum_proper_divisors"
+        ],
+        "writes": [
+          "s"
+        ],
+        "function_name": "is_amicable",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "9": {
+        "node_id": 9,
+        "line_number": 10,
+        "source_code": "return s != n and s == sum_proper_divisors(s)",
+        "statement_type": "Return",
+        "reads": [
+          "n",
+          "s",
+          "sum_proper_divisors"
+        ],
+        "writes": [],
+        "function_name": "is_amicable",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "10": {
+        "node_id": 10,
+        "line_number": 12,
+        "source_code": "def sum_proper_divisors(n):",
+        "statement_type": "FunctionDef",
+        "reads": [],
+        "writes": [
+          "n",
+          "sum_proper_divisors"
+        ],
+        "function_name": "<module>",
+        "executed": true,
+        "execution_count": 1,
+        "runtime_values": {
+          "amicable_numbers_sum": [
+            "<function amicable_numbers_sum at 0x0000022B6C913C40>"
+          ],
+          "is_amicable": [
+            "<function is_amicable at 0x0000022B6C92B1A0>"
+          ]
+        },
+        "failure_related": false
+      },
+      "11": {
+        "node_id": 11,
+        "line_number": 13,
+        "source_code": "sum = 0",
+        "statement_type": "Assign",
+        "reads": [],
+        "writes": [
+          "sum"
+        ],
+        "function_name": "sum_proper_divisors",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "12": {
+        "node_id": 12,
+        "line_number": 14,
+        "source_code": "for i in range(1, int(n**0.5) + 1):",
+        "statement_type": "For",
+        "reads": [
+          "int",
+          "n",
+          "range"
+        ],
+        "writes": [
+          "i"
+        ],
+        "function_name": "sum_proper_divisors",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "13": {
+        "node_id": 13,
+        "line_number": 15,
+        "source_code": "if n % i == 0:",
+        "statement_type": "If",
+        "reads": [
+          "i",
+          "n"
+        ],
+        "writes": [],
+        "function_name": "sum_proper_divisors",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "14": {
+        "node_id": 14,
+        "line_number": 16,
+        "source_code": "sum += i",
+        "statement_type": "AugAssign",
+        "reads": [
+          "i"
+        ],
+        "writes": [
+          "sum"
+        ],
+        "function_name": "sum_proper_divisors",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "15": {
+        "node_id": 15,
+        "line_number": 17,
+        "source_code": "if n // i != i:",
+        "statement_type": "If",
+        "reads": [
+          "i",
+          "n"
+        ],
+        "writes": [],
+        "function_name": "sum_proper_divisors",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "16": {
+        "node_id": 16,
+        "line_number": 18,
+        "source_code": "sum += n // i",
+        "statement_type": "AugAssign",
+        "reads": [
+          "i",
+          "n"
+        ],
+        "writes": [
+          "sum"
+        ],
+        "function_name": "sum_proper_divisors",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "17": {
+        "node_id": 17,
+        "line_number": 19,
+        "source_code": "return sum",
+        "statement_type": "Return",
+        "reads": [
+          "sum"
+        ],
+        "writes": [],
+        "function_name": "sum_proper_divisors",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": true
+      }
+    },
+    "edges": [
+      {
+        "source_id": 1,
+        "target_id": 3,
+        "dependency_type": "DATA",
+        "variable": "n",
+        "label": "DATA(n)"
+      },
+      {
+        "source_id": 3,
+        "target_id": 4,
+        "dependency_type": "DATA",
+        "variable": "i",
+        "label": "DATA(i)"
+      },
+      {
+        "source_id": 3,
+        "target_id": 5,
+        "dependency_type": "DATA",
+        "variable": "i",
+        "label": "DATA(i)"
+      },
+      {
+        "source_id": 5,
+        "target_id": 6,
+        "dependency_type": "DATA",
+        "variable": "sum",
+        "label": "DATA(sum)"
+      },
+      {
+        "source_id": 7,
+        "target_id": 8,
+        "dependency_type": "DATA",
+        "variable": "n",
+        "label": "DATA(n)"
+      },
+      {
+        "source_id": 7,
+        "target_id": 9,
+        "dependency_type": "DATA",
+        "variable": "n",
+        "label": "DATA(n)"
+      },
+      {
+        "source_id": 8,
+        "target_id": 9,
+        "dependency_type": "DATA",
+        "variable": "s",
+        "label": "DATA(s)"
+      },
+      {
+        "source_id": 10,
+        "target_id": 12,
+        "dependency_type": "DATA",
+        "variable": "n",
+        "label": "DATA(n)"
+      },
+      {
+        "source_id": 12,
+        "target_id": 13,
+        "dependency_type": "DATA",
+        "variable": "i",
+        "label": "DATA(i)"
+      },
+      {
+        "source_id": 10,
+        "target_id": 13,
+        "dependency_type": "DATA",
+        "variable": "n",
+        "label": "DATA(n)"
+      },
+      {
+        "source_id": 12,
+        "target_id": 14,
+        "dependency_type": "DATA",
+        "variable": "i",
+        "label": "DATA(i)"
+      },
+      {
+        "source_id": 12,
+        "target_id": 15,
+        "dependency_type": "DATA",
+        "variable": "i",
+        "label": "DATA(i)"
+      },
+      {
+        "source_id": 10,
+        "target_id": 15,
+        "dependency_type": "DATA",
+        "variable": "n",
+        "label": "DATA(n)"
+      },
+      {
+        "source_id": 12,
+        "target_id": 16,
+        "dependency_type": "DATA",
+        "variable": "i",
+        "label": "DATA(i)"
+      },
+      {
+        "source_id": 10,
+        "target_id": 16,
+        "dependency_type": "DATA",
+        "variable": "n",
+        "label": "DATA(n)"
+      },
+      {
+        "source_id": 16,
+        "target_id": 17,
+        "dependency_type": "DATA",
+        "variable": "sum",
+        "label": "DATA(sum)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 3,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 3,
+        "target_id": 4,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(For)"
+      },
+      {
+        "source_id": 4,
+        "target_id": 5,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(If)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 6,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 7,
+        "target_id": 8,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 7,
+        "target_id": 9,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 10,
+        "target_id": 11,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 10,
+        "target_id": 12,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 12,
+        "target_id": 13,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(For)"
+      },
+      {
+        "source_id": 13,
+        "target_id": 14,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(If)"
+      },
+      {
+        "source_id": 13,
+        "target_id": 15,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(If)"
+      },
+      {
+        "source_id": 15,
+        "target_id": 16,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(If)"
+      },
+      {
+        "source_id": 10,
+        "target_id": 17,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      }
+    ],
+    "entry_node_id": 1,
+    "failure_node_ids": [
+      17
+    ]
+  },
+  "runtime_events_count": 7,
+  "failure_line": 19,
+  "failure_statement": "return sum",
+  "candidates": [
+    {
+      "rank": 1,
+      "node_id": 16,
+      "line_number": 18,
+      "statement_code": "sum += n // i",
+      "variable_name": "sum",
+      "observed_value": null,
+      "expected_value": null,
+      "proximity_score": 0.85,
+      "dependency_score": 0.9,
+      "explanation": "Reached via reverse traversal (distance=1, type=AugAssign)"
+    },
+    {
+      "rank": 2,
+      "node_id": 12,
+      "line_number": 14,
+      "statement_code": "for i in range(1, int(n**0.5) + 1):",
+      "variable_name": "i",
+      "observed_value": null,
+      "expected_value": null,
+      "proximity_score": 0.7,
+      "dependency_score": 0.81,
+      "explanation": "Reached via reverse traversal (distance=2, type=For)"
+    },
+    {
+      "rank": 3,
+      "node_id": 17,
+      "line_number": 19,
+      "statement_code": "return sum",
+      "variable_name": "sum",
+      "observed_value": null,
+      "expected_value": "heo",
+      "proximity_score": 1.0,
+      "dependency_score": 1.0,
+      "explanation": "Reached via reverse traversal (distance=0, type=Return)"
+    },
+    {
+      "rank": 4,
+      "node_id": 15,
+      "line_number": 17,
+      "statement_code": "if n // i != i:",
+      "variable_name": "i",
+      "observed_value": null,
+      "expected_value": null,
+      "proximity_score": 0.7,
+      "dependency_score": 0.63,
+      "explanation": "Reached via reverse traversal (distance=2, type=If)"
+    },
+    {
+      "rank": 5,
+      "node_id": 13,
+      "line_number": 15,
+      "statement_code": "if n % i == 0:",
+      "variable_name": "i",
+      "observed_value": null,
+      "expected_value": null,
+      "proximity_score": 0.55,
+      "dependency_score": 0.441,
+      "explanation": "Reached via reverse traversal (distance=3, type=If)"
+    }
+  ],
+  "critical_variable": null,
+  "counterfactual_results": [
+    {
+      "candidate_rank": 1,
+      "intervention": {
+        "target_variable": "sum",
+        "target_line": 19,
+        "observed_value": "None",
+        "counterfactual_value": "heo",
+        "operation_type": "AST_transform",
+        "modified_code": "def amicable_numbers_sum(n):\n    sum = 0\n    for i in range(1, n + 1):\n        if is_amicable(i):\n            sum += i\n    return sum\n\ndef is_amicable(n):\n    s = sum_proper_divisors(n)\n    return s != n and s == sum_proper_divisors(s)\n\ndef sum_proper_divisors(n):\n    sum = 0\n    for i in range(1, int(n ** 0.5) + 1):\n        if n % i == 0:\n            sum += i\n            if n // i != i:\n                sum += n // i\n    return 'heo'"
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "Failed",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "FALSE",
+      "execution_time": 0.243,
+      "status": "EXECUTED",
+      "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+    },
+    {
+      "candidate_rank": 2,
+      "intervention": {
+        "target_variable": "sum",
+        "target_line": 18,
+        "observed_value": "None",
+        "counterfactual_value": "None",
+        "operation_type": "failed_construction",
+        "modified_code": ""
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "FAILED_CONSTRUCTION",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "UNRESOLVED",
+      "execution_time": 0.0,
+      "status": "UNRESOLVED",
+      "explanation": "Failed to construct valid AST counterfactual intervention."
+    },
+    {
+      "candidate_rank": 3,
+      "intervention": {
+        "target_variable": "i",
+        "target_line": 14,
+        "observed_value": "None",
+        "counterfactual_value": "None",
+        "operation_type": "failed_construction",
+        "modified_code": ""
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "FAILED_CONSTRUCTION",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "UNRESOLVED",
+      "execution_time": 0.0,
+      "status": "UNRESOLVED",
+      "explanation": "Failed to construct valid AST counterfactual intervention."
+    },
+    {
+      "candidate_rank": 4,
+      "intervention": {
+        "target_variable": "i",
+        "target_line": 17,
+        "observed_value": "None",
+        "counterfactual_value": "None",
+        "operation_type": "AST_transform",
+        "modified_code": "def amicable_numbers_sum(n):\n    sum = 0\n    for i in range(1, n + 1):\n        if is_amicable(i):\n            sum += i\n    return sum\n\ndef is_amicable(n):\n    s = sum_proper_divisors(n)\n    return s != n and s == sum_proper_divisors(s)\n\ndef sum_proper_divisors(n):\n    sum = 0\n    for i in range(1, int(n ** 0.5) + 1):\n        if n % i == 0:\n            sum += i\n            if n // i == i:\n                sum += n // i\n    return sum"
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "Failed",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "FALSE",
+      "execution_time": 0.2733,
+      "status": "EXECUTED",
+      "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+    },
+    {
+      "candidate_rank": 5,
+      "intervention": {
+        "target_variable": "i",
+        "target_line": 15,
+        "observed_value": "None",
+        "counterfactual_value": "None",
+        "operation_type": "AST_transform",
+        "modified_code": "def amicable_numbers_sum(n):\n    sum = 0\n    for i in range(1, n + 1):\n        if is_amicable(i):\n            sum += i\n    return sum\n\ndef is_amicable(n):\n    s = sum_proper_divisors(n)\n    return s != n and s == sum_proper_divisors(s)\n\ndef sum_proper_divisors(n):\n    sum = 0\n    for i in range(1, int(n ** 0.5) + 1):\n        if n % i != 0:\n            sum += i\n            if n // i != i:\n                sum += n // i\n    return sum"
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "Failed",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "FALSE",
+      "execution_time": 0.2959,
+      "status": "EXECUTED",
+      "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+    }
+  ],
+  "fault_location": {
+    "file": "MB125.py",
+    "line_number": 18,
+    "statement_code": "sum += n // i",
+    "function_name": "remove_Occ",
+    "causal_variable": "sum",
+    "evidence_score": 0.875,
+    "confidence": 0.3
+  },
+  "root_cause": {
+    "root_cause_status": "UNRESOLVED",
+    "candidate_explanation": "Runtime exception (NameError: name 'remove_Occ' is not defined) triggered at statement 'sum += n // i' (line 18) involving variable 'sum'.",
+    "causal_variable": "sum",
+    "fault_statement": "sum += n // i",
+    "fault_line": 18,
+    "evidence_summary": "Reverse PDG traversal traced failure from line 1 to statement line 18. Structural dependency identified; counterfactual validation unconfirmed or unresolved.",
+    "counterfactual_validated": false,
+    "confidence": 0.3
+  },
+  "ground_truth_matched": null,
+  "ground_truth_fault_line": null,
+  "execution_time": 0.8334
+}

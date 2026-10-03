@@ -1,0 +1,124 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def eat(number, need, remaining):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "need",
+        "number",
+        "remaining",
+        "eat"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 5,
+      "runtime_values": {
+        "number": [
+          "5",
+          "4",
+          "1",
+          "2"
+        ],
+        "need": [
+          "6",
+          "8",
+          "10",
+          "11"
+        ],
+        "remaining": [
+          "10",
+          "9",
+          "10",
+          "5"
+        ]
+      },
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "return [number + need, max(remaining - need, 0)]",
+      "statement_type": "Return",
+      "reads": [
+        "max",
+        "need",
+        "number",
+        "remaining"
+      ],
+      "writes": [],
+      "function_name": "eat",
+      "executed": true,
+      "execution_count": 8,
+      "runtime_values": {
+        "number": [
+          "5",
+          "5",
+          "4",
+          "4",
+          "1",
+          "1",
+          "2",
+          "2"
+        ],
+        "need": [
+          "6",
+          "6",
+          "8",
+          "8",
+          "10",
+          "10",
+          "11",
+          "11"
+        ],
+        "remaining": [
+          "10",
+          "10",
+          "9",
+          "9",
+          "10",
+          "10",
+          "5",
+          "5"
+        ]
+      },
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "need",
+      "label": "DATA(need)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "number",
+      "label": "DATA(number)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "remaining",
+      "label": "DATA(remaining)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    2
+  ]
+}

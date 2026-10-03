@@ -1,0 +1,22 @@
+{
+  "trace_id": "HE030",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/87",
+  "problem_summary": "\ndef get_row(lst, x):\n    \"\"\"\n    You are given a 2 dimensional data, as a neste",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmph0ftroob.py\", line 42, in <module>\n    check(get_row)\n    ~~~~~^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmph0ftroob.py\", line 11, in check\n    assert candidate([\n           ^^^^^^^^^^^\n    ...<3 lines>...\n    ], 1) == [(0, 0), (1, 4), (1, 0), (2, 5), (2, 0)]\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmph0ftroob.py\", line 42, in <module>\n    check(get_row)\n    ~~~~~^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmph0ftroob.py\", line 11, in check\n    assert candidate([\n           ^^^^^^^^^^^\n    ...<3 lines>...\n    ], 1) == [(0, 0), (1, 4), (1, 0), (2, 5), (2, 0)]\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+  "exception_type": "AssertionError",
+  "exception_message": "",
+  "execution_time": 0.72259,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": "benchmark_test",
+  "assertion_failed": true,
+  "parser_prediction": ""
+}

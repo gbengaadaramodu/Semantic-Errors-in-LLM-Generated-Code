@@ -1,0 +1,97 @@
+[
+  {
+    "candidate_rank": 1,
+    "intervention": {
+      "target_variable": "even_digits",
+      "target_line": 10,
+      "observed_value": "0",
+      "counterfactual_value": "(1, 1)",
+      "operation_type": "AST_transform",
+      "modified_code": "def even_odd_count(num):\n    even_digits = 0\n    odd_digits = 0\n    while num > 0:\n        if num % 10 % 2 == 0:\n            even_digits += 1\n        else:\n            odd_digits += 1\n        num //= 10\n    even_digits = (1, 1)\n    return even_digits, odd_digits"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.2878,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  },
+  {
+    "candidate_rank": 2,
+    "intervention": {
+      "target_variable": "even_digits",
+      "target_line": 6,
+      "observed_value": "None",
+      "counterfactual_value": "None",
+      "operation_type": "failed_construction",
+      "modified_code": ""
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "FAILED_CONSTRUCTION",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "UNRESOLVED",
+    "execution_time": 0.0,
+    "status": "UNRESOLVED",
+    "explanation": "Failed to construct valid AST counterfactual intervention."
+  },
+  {
+    "candidate_rank": 3,
+    "intervention": {
+      "target_variable": "odd_digits",
+      "target_line": 8,
+      "observed_value": "0",
+      "counterfactual_value": "None",
+      "operation_type": "failed_construction",
+      "modified_code": ""
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "FAILED_CONSTRUCTION",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "UNRESOLVED",
+    "execution_time": 0.0,
+    "status": "UNRESOLVED",
+    "explanation": "Failed to construct valid AST counterfactual intervention."
+  },
+  {
+    "candidate_rank": 4,
+    "intervention": {
+      "target_variable": "num",
+      "target_line": 5,
+      "observed_value": "7",
+      "counterfactual_value": "None",
+      "operation_type": "AST_transform",
+      "modified_code": "def even_odd_count(num):\n    even_digits = 0\n    odd_digits = 0\n    while num > 0:\n        if num % 10 % 2 != 0:\n            even_digits += 1\n        else:\n            odd_digits += 1\n        num //= 10\n    return (even_digits, odd_digits)"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.2014,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  },
+  {
+    "candidate_rank": 5,
+    "intervention": {
+      "target_variable": "num",
+      "target_line": 4,
+      "observed_value": "-78",
+      "counterfactual_value": "None",
+      "operation_type": "AST_transform",
+      "modified_code": "def even_odd_count(num):\n    even_digits = 0\n    odd_digits = 0\n    while num <= 0:\n        if num % 10 % 2 == 0:\n            even_digits += 1\n        else:\n            odd_digits += 1\n        num //= 10\n    return (even_digits, odd_digits)"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Timeout",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "UNRESOLVED",
+    "execution_time": 5.0315,
+    "status": "EXECUTED",
+    "explanation": "Counterfactual execution timed out or crashed in an invalid state."
+  }
+]

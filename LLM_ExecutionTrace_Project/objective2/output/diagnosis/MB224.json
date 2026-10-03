@@ -1,0 +1,1146 @@
+{
+  "trace_id": "MB224",
+  "dataset": "MBPP",
+  "task_id": "440",
+  "error_category": "Wrong-Output Error",
+  "analysis_status": "ANALYZED",
+  "skip_reason": null,
+  "input_record": {
+    "trace_id": "MB224",
+    "dataset": "MBPP",
+    "task_id": "440",
+    "problem_summary": "Write a function to find the first adverb and their positions in a given sentenc",
+    "execution_status": "Failed",
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpnawaapb3.py\", line 23, in <module>\n    assert find_adverb_position(\"clearly!! we can see the sky\")==(0, 7, 'clearly')\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+    "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpnawaapb3.py\", line 23, in <module>\n    assert find_adverb_position(\"clearly!! we can see the sky\")==(0, 7, 'clearly')\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+    "exception_type": "AssertionError",
+    "exception_message": "",
+    "execution_time": 0.606198,
+    "timed_out": false,
+    "exit_code": 1,
+    "tests_passed": false,
+    "tests_failed": 0,
+    "expected_output": null,
+    "actual_output": null,
+    "assertion_source": "benchmark_test",
+    "assertion_failed": true,
+    "parser_prediction": "Wrong-Output Error"
+  },
+  "scm": {
+    "task_id": "440",
+    "nodes": [
+      {
+        "node_id": "S",
+        "variable_name": "Specification",
+        "symbol": "S",
+        "label": "Specification"
+      },
+      {
+        "node_id": "C",
+        "variable_name": "GeneratedCode",
+        "symbol": "C",
+        "label": "Generated Code"
+      },
+      {
+        "node_id": "E",
+        "variable_name": "ExecutionTrace",
+        "symbol": "E",
+        "label": "Execution Trace"
+      },
+      {
+        "node_id": "T",
+        "variable_name": "TestSuite",
+        "symbol": "T",
+        "label": "Test Suite"
+      },
+      {
+        "node_id": "O",
+        "variable_name": "Outcome",
+        "symbol": "O",
+        "label": "Outcome"
+      }
+    ],
+    "edges": [
+      {
+        "source": "S",
+        "target": "C",
+        "relationship": "generates"
+      },
+      {
+        "source": "C",
+        "target": "E",
+        "relationship": "produces"
+      },
+      {
+        "source": "T",
+        "target": "E",
+        "relationship": "evaluates"
+      },
+      {
+        "source": "E",
+        "target": "O",
+        "relationship": "determines"
+      }
+    ],
+    "variables": {
+      "S": {
+        "name": "Specification",
+        "symbol": "S",
+        "description": "Problem description, prompt, and target function signature",
+        "value": "Write a function to find the first adverb and their positions in a given sentenc"
+      },
+      "C": {
+        "name": "GeneratedCode",
+        "symbol": "C",
+        "description": "LLM-generated Python source code implementation",
+        "value": "def find_adverb_position(sentence):\n    adverb = \"\"\n    start_index = 0\n    end_index = 0\n    \n    for word in sentence.split():\n        if word[-1] == 'ly':\n            adverb = word\n            brea"
+      },
+      "E": {
+        "name": "ExecutionTrace",
+        "symbol": "E",
+        "description": "Observable runtime trace events, variable states, and stdout/stderr",
+        "value": "status=Failed, exc=AssertionError, msg="
+      },
+      "T": {
+        "name": "TestSuite",
+        "symbol": "T",
+        "description": "Benchmark assertions, inputs, and check function harness",
+        "value": "assert find_adverb_position(\"clearly!! we can see the sky\")==(0, 7, 'clearly')\nassert find_adverb_po"
+      },
+      "O": {
+        "name": "Outcome",
+        "symbol": "O",
+        "description": "Final test execution outcome (Completed/Failed/Timeout)",
+        "value": "Failed"
+      }
+    }
+  },
+  "pdg": {
+    "nodes": {
+      "1": {
+        "node_id": 1,
+        "line_number": 1,
+        "source_code": "def find_adverb_position(sentence):",
+        "statement_type": "FunctionDef",
+        "reads": [],
+        "writes": [
+          "sentence",
+          "find_adverb_position"
+        ],
+        "function_name": "<module>",
+        "executed": true,
+        "execution_count": 2,
+        "runtime_values": {
+          "sentence": [
+            "clearly!! we can see the sky"
+          ]
+        },
+        "failure_related": false
+      },
+      "2": {
+        "node_id": 2,
+        "line_number": 2,
+        "source_code": "adverb = \"\"",
+        "statement_type": "Assign",
+        "reads": [],
+        "writes": [
+          "adverb"
+        ],
+        "function_name": "find_adverb_position",
+        "executed": true,
+        "execution_count": 1,
+        "runtime_values": {
+          "sentence": [
+            "clearly!! we can see the sky"
+          ]
+        },
+        "failure_related": false
+      },
+      "3": {
+        "node_id": 3,
+        "line_number": 3,
+        "source_code": "start_index = 0",
+        "statement_type": "Assign",
+        "reads": [],
+        "writes": [
+          "start_index"
+        ],
+        "function_name": "find_adverb_position",
+        "executed": true,
+        "execution_count": 1,
+        "runtime_values": {
+          "sentence": [
+            "clearly!! we can see the sky"
+          ],
+          "adverb": [
+            ""
+          ]
+        },
+        "failure_related": false
+      },
+      "4": {
+        "node_id": 4,
+        "line_number": 4,
+        "source_code": "end_index = 0",
+        "statement_type": "Assign",
+        "reads": [],
+        "writes": [
+          "end_index"
+        ],
+        "function_name": "find_adverb_position",
+        "executed": true,
+        "execution_count": 1,
+        "runtime_values": {
+          "sentence": [
+            "clearly!! we can see the sky"
+          ],
+          "adverb": [
+            ""
+          ],
+          "start_index": [
+            "0"
+          ]
+        },
+        "failure_related": false
+      },
+      "5": {
+        "node_id": 5,
+        "line_number": 6,
+        "source_code": "for word in sentence.split():",
+        "statement_type": "For",
+        "reads": [
+          "sentence"
+        ],
+        "writes": [
+          "word"
+        ],
+        "function_name": "find_adverb_position",
+        "executed": true,
+        "execution_count": 7,
+        "runtime_values": {
+          "sentence": [
+            "clearly!! we can see the sky",
+            "clearly!! we can see the sky",
+            "clearly!! we can see the sky",
+            "clearly!! we can see the sky",
+            "clearly!! we can see the sky",
+            "clearly!! we can see the sky",
+            "clearly!! we can see the sky"
+          ],
+          "adverb": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "start_index": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "end_index": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "word": [
+            "clearly!!",
+            "we",
+            "can",
+            "see",
+            "the",
+            "sky"
+          ]
+        },
+        "failure_related": false
+      },
+      "6": {
+        "node_id": 6,
+        "line_number": 7,
+        "source_code": "if word[-1] == 'ly':",
+        "statement_type": "If",
+        "reads": [
+          "word"
+        ],
+        "writes": [],
+        "function_name": "find_adverb_position",
+        "executed": true,
+        "execution_count": 6,
+        "runtime_values": {
+          "sentence": [
+            "clearly!! we can see the sky",
+            "clearly!! we can see the sky",
+            "clearly!! we can see the sky",
+            "clearly!! we can see the sky",
+            "clearly!! we can see the sky",
+            "clearly!! we can see the sky"
+          ],
+          "adverb": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "start_index": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "end_index": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "word": [
+            "clearly!!",
+            "we",
+            "can",
+            "see",
+            "the",
+            "sky"
+          ]
+        },
+        "failure_related": false
+      },
+      "7": {
+        "node_id": 7,
+        "line_number": 8,
+        "source_code": "adverb = word",
+        "statement_type": "Assign",
+        "reads": [
+          "word"
+        ],
+        "writes": [
+          "adverb"
+        ],
+        "function_name": "find_adverb_position",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "8": {
+        "node_id": 8,
+        "line_number": 9,
+        "source_code": "break",
+        "statement_type": "Break",
+        "reads": [],
+        "writes": [],
+        "function_name": "find_adverb_position",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "9": {
+        "node_id": 9,
+        "line_number": 11,
+        "source_code": "for i, word in enumerate(sentence.split()):",
+        "statement_type": "For",
+        "reads": [
+          "enumerate",
+          "sentence"
+        ],
+        "writes": [
+          "i",
+          "word"
+        ],
+        "function_name": "find_adverb_position",
+        "executed": true,
+        "execution_count": 7,
+        "runtime_values": {
+          "sentence": [
+            "clearly!! we can see the sky",
+            "clearly!! we can see the sky",
+            "clearly!! we can see the sky",
+            "clearly!! we can see the sky",
+            "clearly!! we can see the sky",
+            "clearly!! we can see the sky",
+            "clearly!! we can see the sky"
+          ],
+          "adverb": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "start_index": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "end_index": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "word": [
+            "sky",
+            "clearly!!",
+            "we",
+            "can",
+            "see",
+            "the",
+            "sky"
+          ],
+          "i": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "failure_related": false
+      },
+      "10": {
+        "node_id": 10,
+        "line_number": 12,
+        "source_code": "if word == adverb:",
+        "statement_type": "If",
+        "reads": [
+          "adverb",
+          "word"
+        ],
+        "writes": [],
+        "function_name": "find_adverb_position",
+        "executed": true,
+        "execution_count": 6,
+        "runtime_values": {
+          "sentence": [
+            "clearly!! we can see the sky",
+            "clearly!! we can see the sky",
+            "clearly!! we can see the sky",
+            "clearly!! we can see the sky",
+            "clearly!! we can see the sky",
+            "clearly!! we can see the sky"
+          ],
+          "adverb": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "start_index": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "end_index": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "word": [
+            "clearly!!",
+            "we",
+            "can",
+            "see",
+            "the",
+            "sky"
+          ],
+          "i": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "failure_related": false
+      },
+      "11": {
+        "node_id": 11,
+        "line_number": 13,
+        "source_code": "start_index = i",
+        "statement_type": "Assign",
+        "reads": [
+          "i"
+        ],
+        "writes": [
+          "start_index"
+        ],
+        "function_name": "find_adverb_position",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "12": {
+        "node_id": 12,
+        "line_number": 14,
+        "source_code": "break",
+        "statement_type": "Break",
+        "reads": [],
+        "writes": [],
+        "function_name": "find_adverb_position",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "13": {
+        "node_id": 13,
+        "line_number": 16,
+        "source_code": "for i, word in enumerate(sentence.split()[::-1]):",
+        "statement_type": "For",
+        "reads": [
+          "enumerate",
+          "sentence"
+        ],
+        "writes": [
+          "i",
+          "word"
+        ],
+        "function_name": "find_adverb_position",
+        "executed": true,
+        "execution_count": 7,
+        "runtime_values": {
+          "sentence": [
+            "clearly!! we can see the sky",
+            "clearly!! we can see the sky",
+            "clearly!! we can see the sky",
+            "clearly!! we can see the sky",
+            "clearly!! we can see the sky",
+            "clearly!! we can see the sky",
+            "clearly!! we can see the sky"
+          ],
+          "adverb": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "start_index": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "end_index": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "word": [
+            "sky",
+            "sky",
+            "the",
+            "see",
+            "can",
+            "we",
+            "clearly!!"
+          ],
+          "i": [
+            "5",
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "failure_related": false
+      },
+      "14": {
+        "node_id": 14,
+        "line_number": 17,
+        "source_code": "if word == adverb:",
+        "statement_type": "If",
+        "reads": [
+          "adverb",
+          "word"
+        ],
+        "writes": [],
+        "function_name": "find_adverb_position",
+        "executed": true,
+        "execution_count": 6,
+        "runtime_values": {
+          "sentence": [
+            "clearly!! we can see the sky",
+            "clearly!! we can see the sky",
+            "clearly!! we can see the sky",
+            "clearly!! we can see the sky",
+            "clearly!! we can see the sky",
+            "clearly!! we can see the sky"
+          ],
+          "adverb": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+          ],
+          "start_index": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "end_index": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "word": [
+            "sky",
+            "the",
+            "see",
+            "can",
+            "we",
+            "clearly!!"
+          ],
+          "i": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "failure_related": false
+      },
+      "15": {
+        "node_id": 15,
+        "line_number": 18,
+        "source_code": "end_index = len(sentence.split()) - i",
+        "statement_type": "Assign",
+        "reads": [
+          "i",
+          "len",
+          "sentence"
+        ],
+        "writes": [
+          "end_index"
+        ],
+        "function_name": "find_adverb_position",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "16": {
+        "node_id": 16,
+        "line_number": 19,
+        "source_code": "break",
+        "statement_type": "Break",
+        "reads": [],
+        "writes": [],
+        "function_name": "find_adverb_position",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "17": {
+        "node_id": 17,
+        "line_number": 21,
+        "source_code": "return (start_index, end_index, adverb)",
+        "statement_type": "Return",
+        "reads": [
+          "adverb",
+          "end_index",
+          "start_index"
+        ],
+        "writes": [],
+        "function_name": "find_adverb_position",
+        "executed": true,
+        "execution_count": 2,
+        "runtime_values": {
+          "sentence": [
+            "clearly!! we can see the sky",
+            "clearly!! we can see the sky"
+          ],
+          "adverb": [
+            "",
+            ""
+          ],
+          "start_index": [
+            "0",
+            "0"
+          ],
+          "end_index": [
+            "0",
+            "0"
+          ],
+          "word": [
+            "clearly!!",
+            "clearly!!"
+          ],
+          "i": [
+            "5",
+            "5"
+          ]
+        },
+        "failure_related": true
+      }
+    },
+    "edges": [
+      {
+        "source_id": 1,
+        "target_id": 5,
+        "dependency_type": "DATA",
+        "variable": "sentence",
+        "label": "DATA(sentence)"
+      },
+      {
+        "source_id": 5,
+        "target_id": 6,
+        "dependency_type": "DATA",
+        "variable": "word",
+        "label": "DATA(word)"
+      },
+      {
+        "source_id": 5,
+        "target_id": 7,
+        "dependency_type": "DATA",
+        "variable": "word",
+        "label": "DATA(word)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 9,
+        "dependency_type": "DATA",
+        "variable": "sentence",
+        "label": "DATA(sentence)"
+      },
+      {
+        "source_id": 7,
+        "target_id": 10,
+        "dependency_type": "DATA",
+        "variable": "adverb",
+        "label": "DATA(adverb)"
+      },
+      {
+        "source_id": 9,
+        "target_id": 10,
+        "dependency_type": "DATA",
+        "variable": "word",
+        "label": "DATA(word)"
+      },
+      {
+        "source_id": 9,
+        "target_id": 11,
+        "dependency_type": "DATA",
+        "variable": "i",
+        "label": "DATA(i)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 13,
+        "dependency_type": "DATA",
+        "variable": "sentence",
+        "label": "DATA(sentence)"
+      },
+      {
+        "source_id": 7,
+        "target_id": 14,
+        "dependency_type": "DATA",
+        "variable": "adverb",
+        "label": "DATA(adverb)"
+      },
+      {
+        "source_id": 13,
+        "target_id": 14,
+        "dependency_type": "DATA",
+        "variable": "word",
+        "label": "DATA(word)"
+      },
+      {
+        "source_id": 13,
+        "target_id": 15,
+        "dependency_type": "DATA",
+        "variable": "i",
+        "label": "DATA(i)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 15,
+        "dependency_type": "DATA",
+        "variable": "sentence",
+        "label": "DATA(sentence)"
+      },
+      {
+        "source_id": 7,
+        "target_id": 17,
+        "dependency_type": "DATA",
+        "variable": "adverb",
+        "label": "DATA(adverb)"
+      },
+      {
+        "source_id": 15,
+        "target_id": 17,
+        "dependency_type": "DATA",
+        "variable": "end_index",
+        "label": "DATA(end_index)"
+      },
+      {
+        "source_id": 11,
+        "target_id": 17,
+        "dependency_type": "DATA",
+        "variable": "start_index",
+        "label": "DATA(start_index)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 3,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 4,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 5,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 5,
+        "target_id": 6,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(For)"
+      },
+      {
+        "source_id": 6,
+        "target_id": 7,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(If)"
+      },
+      {
+        "source_id": 6,
+        "target_id": 8,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(If)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 9,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 9,
+        "target_id": 10,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(For)"
+      },
+      {
+        "source_id": 10,
+        "target_id": 11,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(If)"
+      },
+      {
+        "source_id": 10,
+        "target_id": 12,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(If)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 13,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 13,
+        "target_id": 14,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(For)"
+      },
+      {
+        "source_id": 14,
+        "target_id": 15,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(If)"
+      },
+      {
+        "source_id": 14,
+        "target_id": 16,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(If)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 17,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      }
+    ],
+    "entry_node_id": 1,
+    "failure_node_ids": [
+      17
+    ]
+  },
+  "runtime_events_count": 50,
+  "failure_line": 21,
+  "failure_statement": "return (start_index, end_index, adverb)",
+  "candidates": [
+    {
+      "rank": 1,
+      "node_id": 5,
+      "line_number": 6,
+      "statement_code": "for word in sentence.split():",
+      "variable_name": "word",
+      "observed_value": "sky",
+      "expected_value": null,
+      "proximity_score": 0.7,
+      "dependency_score": 0.81,
+      "explanation": "Reached via reverse traversal (distance=2, type=For)"
+    },
+    {
+      "rank": 2,
+      "node_id": 17,
+      "line_number": 21,
+      "statement_code": "return (start_index, end_index, adverb)",
+      "variable_name": "adverb",
+      "observed_value": "",
+      "expected_value": "(0, 7, 'clearly')",
+      "proximity_score": 1.0,
+      "dependency_score": 1.0,
+      "explanation": "Reached via reverse traversal (distance=0, type=Return)"
+    },
+    {
+      "rank": 3,
+      "node_id": 7,
+      "line_number": 8,
+      "statement_code": "adverb = word",
+      "variable_name": "adverb",
+      "observed_value": null,
+      "expected_value": null,
+      "proximity_score": 0.85,
+      "dependency_score": 0.9,
+      "explanation": "Reached via reverse traversal (distance=1, type=Assign)"
+    },
+    {
+      "rank": 4,
+      "node_id": 15,
+      "line_number": 18,
+      "statement_code": "end_index = len(sentence.split()) - i",
+      "variable_name": "end_index",
+      "observed_value": null,
+      "expected_value": null,
+      "proximity_score": 0.85,
+      "dependency_score": 0.9,
+      "explanation": "Reached via reverse traversal (distance=1, type=Assign)"
+    },
+    {
+      "rank": 5,
+      "node_id": 11,
+      "line_number": 13,
+      "statement_code": "start_index = i",
+      "variable_name": "start_index",
+      "observed_value": null,
+      "expected_value": null,
+      "proximity_score": 0.85,
+      "dependency_score": 0.9,
+      "explanation": "Reached via reverse traversal (distance=1, type=Assign)"
+    }
+  ],
+  "critical_variable": null,
+  "counterfactual_results": [
+    {
+      "candidate_rank": 1,
+      "intervention": {
+        "target_variable": "adverb",
+        "target_line": 21,
+        "observed_value": "",
+        "counterfactual_value": "(0, 7, 'clearly')",
+        "operation_type": "AST_transform",
+        "modified_code": "def find_adverb_position(sentence):\n    adverb = \"\"\n    start_index = 0\n    end_index = 0\n    \n    for word in sentence.split():\n        if word[-1] == 'ly':\n            adverb = word\n            break\n            \n    for i, word in enumerate(sentence.split()):\n        if word == adverb:\n            start_index = i\n            break\n            \n    for i, word in enumerate(sentence.split()[::-1]):\n        if word == adverb:\n            end_index = len(sentence.split()) - i\n            break\n            \n    adverb = (0, 7, 'clearly')\n    return (start_index, end_index, adverb)"
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "Failed",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "FALSE",
+      "execution_time": 0.242,
+      "status": "EXECUTED",
+      "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+    },
+    {
+      "candidate_rank": 2,
+      "intervention": {
+        "target_variable": "adverb",
+        "target_line": 8,
+        "observed_value": "None",
+        "counterfactual_value": "None",
+        "operation_type": "AST_transform",
+        "modified_code": "def find_adverb_position(sentence):\n    adverb = ''\n    start_index = 0\n    end_index = 0\n    for word in sentence.split():\n        if word[-1] == 'ly':\n            adverb = None\n            break\n    for i, word in enumerate(sentence.split()):\n        if word == adverb:\n            start_index = i\n            break\n    for i, word in enumerate(sentence.split()[::-1]):\n        if word == adverb:\n            end_index = len(sentence.split()) - i\n            break\n    return (start_index, end_index, adverb)"
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "Failed",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "FALSE",
+      "execution_time": 0.1961,
+      "status": "EXECUTED",
+      "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+    },
+    {
+      "candidate_rank": 3,
+      "intervention": {
+        "target_variable": "end_index",
+        "target_line": 18,
+        "observed_value": "None",
+        "counterfactual_value": "None",
+        "operation_type": "AST_transform",
+        "modified_code": "def find_adverb_position(sentence):\n    adverb = ''\n    start_index = 0\n    end_index = 0\n    for word in sentence.split():\n        if word[-1] == 'ly':\n            adverb = word\n            break\n    for i, word in enumerate(sentence.split()):\n        if word == adverb:\n            start_index = i\n            break\n    for i, word in enumerate(sentence.split()[::-1]):\n        if word == adverb:\n            end_index = None\n            break\n    return (start_index, end_index, adverb)"
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "Failed",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "FALSE",
+      "execution_time": 0.243,
+      "status": "EXECUTED",
+      "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+    },
+    {
+      "candidate_rank": 4,
+      "intervention": {
+        "target_variable": "start_index",
+        "target_line": 13,
+        "observed_value": "None",
+        "counterfactual_value": "None",
+        "operation_type": "AST_transform",
+        "modified_code": "def find_adverb_position(sentence):\n    adverb = ''\n    start_index = 0\n    end_index = 0\n    for word in sentence.split():\n        if word[-1] == 'ly':\n            adverb = word\n            break\n    for i, word in enumerate(sentence.split()):\n        if word == adverb:\n            start_index = None\n            break\n    for i, word in enumerate(sentence.split()[::-1]):\n        if word == adverb:\n            end_index = len(sentence.split()) - i\n            break\n    return (start_index, end_index, adverb)"
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "Failed",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "FALSE",
+      "execution_time": 0.1728,
+      "status": "EXECUTED",
+      "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+    },
+    {
+      "candidate_rank": 5,
+      "intervention": {
+        "target_variable": "word",
+        "target_line": 6,
+        "observed_value": "sky",
+        "counterfactual_value": "None",
+        "operation_type": "failed_construction",
+        "modified_code": ""
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "FAILED_CONSTRUCTION",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "UNRESOLVED",
+      "execution_time": 0.0,
+      "status": "UNRESOLVED",
+      "explanation": "Failed to construct valid AST counterfactual intervention."
+    }
+  ],
+  "fault_location": {
+    "file": "MB224.py",
+    "line_number": 6,
+    "statement_code": "for word in sentence.split():",
+    "function_name": "find_adverb_position",
+    "causal_variable": "word",
+    "evidence_score": 0.755,
+    "confidence": 0.3
+  },
+  "root_cause": {
+    "root_cause_status": "UNRESOLVED",
+    "candidate_explanation": "Semantic mismatch at line 6 ('for word in sentence.split():') causes return value mismatch.",
+    "causal_variable": "word",
+    "fault_statement": "for word in sentence.split():",
+    "fault_line": 6,
+    "evidence_summary": "Reverse PDG traversal traced failure from line 1 to statement line 6. Structural dependency identified; counterfactual validation unconfirmed or unresolved.",
+    "counterfactual_validated": false,
+    "confidence": 0.3
+  },
+  "ground_truth_matched": null,
+  "ground_truth_fault_line": null,
+  "execution_time": 0.8742
+}

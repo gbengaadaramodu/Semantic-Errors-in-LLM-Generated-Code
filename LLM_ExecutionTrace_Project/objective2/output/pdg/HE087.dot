@@ -1,0 +1,22 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def encrypt(s): | W:s,encrypt", fillcolor="lightgreen"];
+    "2" [label="L3: encrypted_text = \"\" | W:encrypted_text", fillcolor="lightgreen"];
+    "3" [label="L6: for char in s: | W:char | R:s", fillcolor="lightgreen"];
+    "4" [label="L8: rotated_char = chr((ord(char) - 97 + 2) % 26 + 97) | W:rotated_char | R:char,chr,ord", fillcolor="lightgreen"];
+    "5" [label="L11: encrypted_text += rotated_char | W:encrypted_text | R:rotated_char", fillcolor="lightgreen"];
+    "6" [label="L14: return encrypted_text | R:encrypted_text", fillcolor="salmon"];
+
+    "1" -> "3" [label="DATA(s)", style="solid"];
+    "3" -> "4" [label="DATA(char)", style="solid"];
+    "4" -> "5" [label="DATA(rotated_char)", style="solid"];
+    "5" -> "6" [label="DATA(encrypted_text)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "3" [label="CONTROL(FunctionDef)", style="dashed"];
+    "3" -> "4" [label="CONTROL(For)", style="dashed"];
+    "3" -> "5" [label="CONTROL(For)", style="dashed"];
+    "1" -> "6" [label="CONTROL(FunctionDef)", style="dashed"];
+}

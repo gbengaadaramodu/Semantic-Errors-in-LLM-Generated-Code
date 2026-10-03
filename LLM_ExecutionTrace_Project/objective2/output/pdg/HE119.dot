@@ -1,0 +1,19 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def circular_shift(x, shift): | W:shift,x,circular_shift", fillcolor="lightgreen"];
+    "2" [label="L2: if shift > len(str(x)): | R:len,shift,str,x", fillcolor="lightgreen"];
+    "3" [label="L3: return str(x)[::-1] | R:str,x", fillcolor="lightgrey"];
+    "4" [label="L4: return str(x)[shift:] + str(x)[:shift] | R:shift,str,x", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(shift)", style="solid"];
+    "1" -> "2" [label="DATA(x)", style="solid"];
+    "1" -> "3" [label="DATA(x)", style="solid"];
+    "1" -> "4" [label="DATA(shift)", style="solid"];
+    "1" -> "4" [label="DATA(x)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "2" -> "3" [label="CONTROL(If)", style="dashed"];
+    "1" -> "4" [label="CONTROL(FunctionDef)", style="dashed"];
+}

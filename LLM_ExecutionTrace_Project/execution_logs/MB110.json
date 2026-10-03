@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB110",
+  "dataset": "MBPP",
+  "task_id": "631",
+  "problem_summary": "Write a function to replace whitespaces with an underscore and vice versa in a g",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpllwx73w7.py\", line 9, in <module>\n    assert replace_spaces('Jumanji The Jungle') == 'Jumanji_The_Jungle'\n           ^^^^^^^^^^^^^^\nNameError: name 'replace_spaces' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpllwx73w7.py\", line 9, in <module>\n    assert replace_spaces('Jumanji The Jungle') == 'Jumanji_The_Jungle'\n           ^^^^^^^^^^^^^^\nNameError: name 'replace_spaces' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'replace_spaces' is not defined",
+  "execution_time": 0.20985,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a python function to count minimum number of swaps required to convert one binary number represented as a string to another.
+
+Example test: assert min_Swaps("1101","1110") == 1
+[/INST]

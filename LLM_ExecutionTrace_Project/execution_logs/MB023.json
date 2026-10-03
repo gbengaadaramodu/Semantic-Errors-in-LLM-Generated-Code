@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB023",
+  "dataset": "MBPP",
+  "task_id": "285",
+  "problem_summary": "Write a function that checks whether a string contains the 'a' character followe",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpcm8yc3qd.py\", line 5, in <module>\n    assert text_match_two_three(\"ac\")==(False)\n           ^^^^^^^^^^^^^^^^^^^^\nNameError: name 'text_match_two_three' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpcm8yc3qd.py\", line 5, in <module>\n    assert text_match_two_three(\"ac\")==(False)\n           ^^^^^^^^^^^^^^^^^^^^\nNameError: name 'text_match_two_three' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'text_match_two_three' is not defined",
+  "execution_time": 0.205071,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

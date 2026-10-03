@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB178",
+  "dataset": "MBPP",
+  "task_id": "640",
+  "problem_summary": "Write a function to remove the parenthesis and what is inbetween them from a str",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpvw7z2ubp.py\", line 4, in <module>\n    assert remove_parenthesis([\"python (chrome)\"])==(\"python\")\n           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpvw7z2ubp.py\", line 2, in remove_parenthesis\n    return string.split('(')[0]\n           ^^^^^^^^^^^^\nAttributeError: 'list' object has no attribute 'split'\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpvw7z2ubp.py\", line 4, in <module>\n    assert remove_parenthesis([\"python (chrome)\"])==(\"python\")\n           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpvw7z2ubp.py\", line 2, in remove_parenthesis\n    return string.split('(')[0]\n           ^^^^^^^^^^^^\nAttributeError: 'list' object has no attribute 'split'",
+  "exception_type": "AttributeError",
+  "exception_message": "'list' object has no attribute 'split'",
+  "execution_time": 0.2172,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

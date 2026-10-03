@@ -1,0 +1,291 @@
+{
+  "trace_id": "HE013",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/8",
+  "error_category": "Runtime Exception",
+  "analysis_status": "ANALYZED",
+  "skip_reason": null,
+  "input_record": {
+    "trace_id": "HE013",
+    "dataset": "HumanEval",
+    "task_id": "HumanEval/8",
+    "problem_summary": "from typing import List, Tuple\n\n\ndef sum_product(numbers: List[int]) -> Tuple[in",
+    "execution_status": "Failed",
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmperl9743y.py\", line 22, in <module>\n    check(sum_product)\n    ~~~~~^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmperl9743y.py\", line 16, in check\n    assert candidate([1, 1, 1]) == (3, 1)\n           ~~~~~~~~~^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmperl9743y.py\", line 4, in sum_product\n    return sum(numbers), functools.reduce(operator.mul, numbers, 1)\n                         ^^^^^^^^^\nNameError: name 'functools' is not defined. Did you forget to import 'functools'?\n",
+    "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmperl9743y.py\", line 22, in <module>\n    check(sum_product)\n    ~~~~~^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmperl9743y.py\", line 16, in check\n    assert candidate([1, 1, 1]) == (3, 1)\n           ~~~~~~~~~^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmperl9743y.py\", line 4, in sum_product\n    return sum(numbers), functools.reduce(operator.mul, numbers, 1)\n                         ^^^^^^^^^\nNameError: name 'functools' is not defined. Did you forget to import 'functools'?",
+    "exception_type": "NameError",
+    "exception_message": "name 'functools' is not defined. Did you forget to import 'functools'?",
+    "execution_time": 0.206099,
+    "timed_out": false,
+    "exit_code": 1,
+    "tests_passed": false,
+    "tests_failed": 0,
+    "expected_output": null,
+    "actual_output": null,
+    "assertion_source": null,
+    "assertion_failed": false,
+    "parser_prediction": "Runtime Exception"
+  },
+  "scm": {
+    "task_id": "HumanEval/8",
+    "nodes": [
+      {
+        "node_id": "S",
+        "variable_name": "Specification",
+        "symbol": "S",
+        "label": "Specification"
+      },
+      {
+        "node_id": "C",
+        "variable_name": "GeneratedCode",
+        "symbol": "C",
+        "label": "Generated Code"
+      },
+      {
+        "node_id": "E",
+        "variable_name": "ExecutionTrace",
+        "symbol": "E",
+        "label": "Execution Trace"
+      },
+      {
+        "node_id": "T",
+        "variable_name": "TestSuite",
+        "symbol": "T",
+        "label": "Test Suite"
+      },
+      {
+        "node_id": "O",
+        "variable_name": "Outcome",
+        "symbol": "O",
+        "label": "Outcome"
+      }
+    ],
+    "edges": [
+      {
+        "source": "S",
+        "target": "C",
+        "relationship": "generates"
+      },
+      {
+        "source": "C",
+        "target": "E",
+        "relationship": "produces"
+      },
+      {
+        "source": "T",
+        "target": "E",
+        "relationship": "evaluates"
+      },
+      {
+        "source": "E",
+        "target": "O",
+        "relationship": "determines"
+      }
+    ],
+    "variables": {
+      "S": {
+        "name": "Specification",
+        "symbol": "S",
+        "description": "Problem description, prompt, and target function signature",
+        "value": "from typing import List, Tuple\n\n\ndef sum_product(numbers: List[int]) -> Tuple[in"
+      },
+      "C": {
+        "name": "GeneratedCode",
+        "symbol": "C",
+        "description": "LLM-generated Python source code implementation",
+        "value": "def sum_product(numbers: List[int]) -> Tuple[int, int]:\n    if not numbers:\n        return 0, 1\n    return sum(numbers), functools.reduce(operator.mul, numbers, 1)"
+      },
+      "E": {
+        "name": "ExecutionTrace",
+        "symbol": "E",
+        "description": "Observable runtime trace events, variable states, and stdout/stderr",
+        "value": "status=Failed, exc=NameError, msg=name 'functools' is not defined. Did you forget to import 'functools'?"
+      },
+      "T": {
+        "name": "TestSuite",
+        "symbol": "T",
+        "description": "Benchmark assertions, inputs, and check function harness",
+        "value": "\n\nMETADATA = {\n    'author': 'jt',\n    'dataset': 'test'\n}\n\n\ndef check(candidate):\n    assert candid"
+      },
+      "O": {
+        "name": "Outcome",
+        "symbol": "O",
+        "description": "Final test execution outcome (Completed/Failed/Timeout)",
+        "value": "Failed"
+      }
+    }
+  },
+  "pdg": {
+    "nodes": {
+      "1": {
+        "node_id": 1,
+        "line_number": 1,
+        "source_code": "def sum_product(numbers: List[int]) -> Tuple[int, int]:",
+        "statement_type": "FunctionDef",
+        "reads": [
+          "List",
+          "int"
+        ],
+        "writes": [
+          "numbers",
+          "sum_product"
+        ],
+        "function_name": "<module>",
+        "executed": true,
+        "execution_count": 3,
+        "runtime_values": {},
+        "failure_related": true
+      },
+      "2": {
+        "node_id": 2,
+        "line_number": 2,
+        "source_code": "if not numbers:",
+        "statement_type": "If",
+        "reads": [
+          "numbers"
+        ],
+        "writes": [],
+        "function_name": "sum_product",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "3": {
+        "node_id": 3,
+        "line_number": 3,
+        "source_code": "return 0, 1",
+        "statement_type": "Return",
+        "reads": [],
+        "writes": [],
+        "function_name": "sum_product",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "4": {
+        "node_id": 4,
+        "line_number": 4,
+        "source_code": "return sum(numbers), functools.reduce(operator.mul, numbers, 1)",
+        "statement_type": "Return",
+        "reads": [
+          "functools",
+          "numbers",
+          "operator",
+          "sum"
+        ],
+        "writes": [],
+        "function_name": "sum_product",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": true
+      }
+    },
+    "edges": [
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "DATA",
+        "variable": "numbers",
+        "label": "DATA(numbers)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 4,
+        "dependency_type": "DATA",
+        "variable": "numbers",
+        "label": "DATA(numbers)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 2,
+        "target_id": 3,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(If)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 4,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      }
+    ],
+    "entry_node_id": 1,
+    "failure_node_ids": [
+      1,
+      4
+    ]
+  },
+  "runtime_events_count": 4,
+  "failure_line": 4,
+  "failure_statement": "return sum(numbers), functools.reduce(operator.mul, numbers, 1)",
+  "candidates": [
+    {
+      "rank": 1,
+      "node_id": 4,
+      "line_number": 4,
+      "statement_code": "return sum(numbers), functools.reduce(operator.mul, numbers, 1)",
+      "variable_name": "functools",
+      "observed_value": null,
+      "expected_value": "(3, 1)",
+      "proximity_score": 1.0,
+      "dependency_score": 1.0,
+      "explanation": "Reached via reverse traversal (distance=0, type=Return)"
+    }
+  ],
+  "critical_variable": null,
+  "counterfactual_results": [
+    {
+      "candidate_rank": 1,
+      "intervention": {
+        "target_variable": "functools",
+        "target_line": 4,
+        "observed_value": "None",
+        "counterfactual_value": "(3, 1)",
+        "operation_type": "AST_transform",
+        "modified_code": "def sum_product(numbers: List[int]) -> Tuple[int, int]:\n    if not numbers:\n        return 0, 1\n    functools = (3, 1)\n    return sum(numbers), functools.reduce(operator.mul, numbers, 1)"
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "Failed",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "FALSE",
+      "execution_time": 0.1717,
+      "status": "EXECUTED",
+      "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+    }
+  ],
+  "fault_location": {
+    "file": "HE013.py",
+    "line_number": 4,
+    "statement_code": "return sum(numbers), functools.reduce(operator.mul, numbers, 1)",
+    "function_name": "sum_product",
+    "causal_variable": "functools",
+    "evidence_score": 0.5,
+    "confidence": 0.3
+  },
+  "root_cause": {
+    "root_cause_status": "UNRESOLVED",
+    "candidate_explanation": "Runtime exception (NameError: name 'functools' is not defined. Did you forget to import 'functools'?) triggered at statement 'return sum(numbers), functools.reduce(operator.mul, numbers, 1)' (line 4) involving variable 'functools'.",
+    "causal_variable": "functools",
+    "fault_statement": "return sum(numbers), functools.reduce(operator.mul, numbers, 1)",
+    "fault_line": 4,
+    "evidence_summary": "Reverse PDG traversal traced failure from line 1 to statement line 4. Structural dependency identified; counterfactual validation unconfirmed or unresolved.",
+    "counterfactual_validated": false,
+    "confidence": 0.3
+  },
+  "ground_truth_matched": null,
+  "ground_truth_fault_line": null,
+  "execution_time": 0.1791
+}

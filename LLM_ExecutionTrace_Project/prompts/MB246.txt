@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a function to check whether a given string is a decimal number with a precision of 2.
+
+Example test: assert is_decimal('123.11')==True
+[/INST]

@@ -1,0 +1,12 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def lateral_surface_area_cylinder(radius, height): | W:height,radius,lateral_surface_area_cylinder", fillcolor="lightgreen"];
+    "2" [label="L2: return 2 * radius * height + radius ** 2 | R:height,radius", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(height)", style="solid"];
+    "1" -> "2" [label="DATA(radius)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

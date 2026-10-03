@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a function to find the maximum product subarray of the given array.
+
+Example test: assert max_subarray_product([1, -2, -3, 0, 7, -8, -2]) == 112
+[/INST]

@@ -1,0 +1,12 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def will_it_fly(q, w): | W:q,w,will_it_fly", fillcolor="lightgreen"];
+    "2" [label="L2: return all(x <= w for x in q) and any(x == y for x, y in zip(q, reversed(q))) | W:x,y | R:all,any,q,reversed,w,x,y,zip", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(q)", style="solid"];
+    "1" -> "2" [label="DATA(w)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB350",
+  "dataset": "MBPP",
+  "task_id": "445",
+  "problem_summary": "Write a function to perform index wise multiplication of tuple elements in the g",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp50hrhsaw.py\", line 4, in <module>\n    assert index_multiplication(((1, 3), (4, 5), (2, 9), (1, 10)),((6, 7), (3, 9), (1, 1), (7, 3)) ) == ((6, 21), (12, 45), (2, 9), (7, 30))\n           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp50hrhsaw.py\", line 2, in index_multiplication\n    return tuple((tup1 * tup2 for tup1, tup2 in zip(tuple1, tuple2)))\n           ^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp50hrhsaw.py\", line 2, in <genexpr>\n    return tuple((tup1 * tup2 for tup1, tup2 in zip(tuple1, tuple2)))\n                  ~~~~~^~~~~~\nTypeError: can't multiply sequence by non-int of type 'tuple'\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp50hrhsaw.py\", line 4, in <module>\n    assert index_multiplication(((1, 3), (4, 5), (2, 9), (1, 10)),((6, 7), (3, 9), (1, 1), (7, 3)) ) == ((6, 21), (12, 45), (2, 9), (7, 30))\n           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp50hrhsaw.py\", line 2, in index_multiplication\n    return tuple((tup1 * tup2 for tup1, tup2 in zip(tuple1, tuple2)))\n           ^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp50hrhsaw.py\", line 2, in <genexpr>\n    return tuple((tup1 * tup2 for tup1, tup2 in zip(tuple1, tuple2)))\n                  ~~~~~^~~~~~\nTypeError: can't multiply sequence by non-int of type 'tuple'",
+  "exception_type": "TypeError",
+  "exception_message": "can't multiply sequence by non-int of type 'tuple'",
+  "execution_time": 0.158527,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

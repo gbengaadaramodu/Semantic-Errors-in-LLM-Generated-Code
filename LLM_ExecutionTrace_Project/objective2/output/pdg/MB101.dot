@@ -1,0 +1,12 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def perfect_squares(start, end): | W:end,start,perfect_squares", fillcolor="lightgreen"];
+    "2" [label="L2: return [x**2 for x in range(start, int(end**0.5) + 1)] | W:x | R:end,int,range,start,x", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(end)", style="solid"];
+    "1" -> "2" [label="DATA(start)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

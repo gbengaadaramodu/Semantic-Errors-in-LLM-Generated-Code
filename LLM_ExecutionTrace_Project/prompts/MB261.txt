@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a python function to count the number of substrings with the sum of digits equal to their length.
+
+Example test: assert count_Substrings('112112') == 6
+[/INST]

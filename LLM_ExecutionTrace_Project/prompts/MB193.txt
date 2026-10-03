@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a python function that takes in an integer n and finds the sum of the first n even natural numbers that are raised to the fifth power.
+
+Example test: assert even_Power_Sum(2) == 1056
+[/INST]

@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB125",
+  "dataset": "MBPP",
+  "task_id": "11",
+  "problem_summary": "Write a python function to remove first and last occurrence of a given character",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpgi4afy04.py\", line 21, in <module>\n    assert remove_Occ(\"hello\",\"l\") == \"heo\"\n           ^^^^^^^^^^\nNameError: name 'remove_Occ' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpgi4afy04.py\", line 21, in <module>\n    assert remove_Occ(\"hello\",\"l\") == \"heo\"\n           ^^^^^^^^^^\nNameError: name 'remove_Occ' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'remove_Occ' is not defined",
+  "execution_time": 0.179215,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

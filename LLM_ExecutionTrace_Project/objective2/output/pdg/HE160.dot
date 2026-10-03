@@ -1,0 +1,11 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def order_by_points(nums): | W:nums,order_by_points", fillcolor="lightgreen"];
+    "2" [label="L2: return sorted(nums, key=lambda x: (sum(int(d) for d in str(abs(x))), x)) | W:d,x | R:abs,d,int,nums,sorted,str,sum,x", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(nums)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

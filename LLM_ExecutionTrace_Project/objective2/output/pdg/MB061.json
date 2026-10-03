@@ -1,0 +1,79 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def all_bits_set_in_the_given_range(n, start, end):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "end",
+        "n",
+        "start",
+        "all_bits_set_in_the_given_range"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 1,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "return all(bin(i)[2:].zfill(n) for i in range(start, end+1))",
+      "statement_type": "Return",
+      "reads": [
+        "all",
+        "bin",
+        "end",
+        "i",
+        "n",
+        "range",
+        "start"
+      ],
+      "writes": [
+        "i"
+      ],
+      "function_name": "all_bits_set_in_the_given_range",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "end",
+      "label": "DATA(end)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "n",
+      "label": "DATA(n)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "start",
+      "label": "DATA(start)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    2
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def same_chars(s0: str, s1: str):",
+      "statement_type": "FunctionDef",
+      "reads": [
+        "str"
+      ],
+      "writes": [
+        "s0",
+        "s1",
+        "same_chars"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "s0": [
+          "eabcdzzzz"
+        ],
+        "s1": [
+          "dddzzzzzzzddeddabc"
+        ]
+      },
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "return sorted(s0) == sorted(s1)",
+      "statement_type": "Return",
+      "reads": [
+        "s0",
+        "s1",
+        "sorted"
+      ],
+      "writes": [],
+      "function_name": "same_chars",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "s0": [
+          "eabcdzzzz",
+          "eabcdzzzz"
+        ],
+        "s1": [
+          "dddzzzzzzzddeddabc",
+          "dddzzzzzzzddeddabc"
+        ]
+      },
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "s0",
+      "label": "DATA(s0)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "s1",
+      "label": "DATA(s1)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    2
+  ]
+}

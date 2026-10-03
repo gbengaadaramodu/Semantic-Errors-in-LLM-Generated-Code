@@ -1,0 +1,22 @@
+{
+  "trace_id": "HE143",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/72",
+  "problem_summary": "\ndef will_it_fly(q,w):\n    '''\n    Write a function that returns True if the obj",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpm_kob_cg.py\", line 19, in <module>\n    check(will_it_fly)\n    ~~~~~^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpm_kob_cg.py\", line 14, in check\n    assert candidate([1, 2, 3], 6) is False\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpm_kob_cg.py\", line 19, in <module>\n    check(will_it_fly)\n    ~~~~~^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpm_kob_cg.py\", line 14, in check\n    assert candidate([1, 2, 3], 6) is False\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+  "exception_type": "AssertionError",
+  "exception_message": "",
+  "execution_time": 0.36408,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": "benchmark_test",
+  "assertion_failed": true,
+  "parser_prediction": ""
+}

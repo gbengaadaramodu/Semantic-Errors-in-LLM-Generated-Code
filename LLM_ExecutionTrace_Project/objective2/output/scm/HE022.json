@@ -1,0 +1,89 @@
+{
+  "task_id": "HumanEval/155",
+  "nodes": [
+    {
+      "node_id": "S",
+      "variable_name": "Specification",
+      "symbol": "S",
+      "label": "Specification"
+    },
+    {
+      "node_id": "C",
+      "variable_name": "GeneratedCode",
+      "symbol": "C",
+      "label": "Generated Code"
+    },
+    {
+      "node_id": "E",
+      "variable_name": "ExecutionTrace",
+      "symbol": "E",
+      "label": "Execution Trace"
+    },
+    {
+      "node_id": "T",
+      "variable_name": "TestSuite",
+      "symbol": "T",
+      "label": "Test Suite"
+    },
+    {
+      "node_id": "O",
+      "variable_name": "Outcome",
+      "symbol": "O",
+      "label": "Outcome"
+    }
+  ],
+  "edges": [
+    {
+      "source": "S",
+      "target": "C",
+      "relationship": "generates"
+    },
+    {
+      "source": "C",
+      "target": "E",
+      "relationship": "produces"
+    },
+    {
+      "source": "T",
+      "target": "E",
+      "relationship": "evaluates"
+    },
+    {
+      "source": "E",
+      "target": "O",
+      "relationship": "determines"
+    }
+  ],
+  "variables": {
+    "S": {
+      "name": "Specification",
+      "symbol": "S",
+      "description": "Problem description, prompt, and target function signature",
+      "value": "\ndef even_odd_count(num):\n    \"\"\"Given an integer. return a tuple that has the n"
+    },
+    "C": {
+      "name": "GeneratedCode",
+      "symbol": "C",
+      "description": "LLM-generated Python source code implementation",
+      "value": "def even_odd_count(num):\n    even_digits = 0\n    odd_digits = 0\n    while num > 0:\n        if num % 10 % 2 == 0:\n            even_digits += 1\n        else:\n            odd_digits += 1\n        num //= "
+    },
+    "E": {
+      "name": "ExecutionTrace",
+      "symbol": "E",
+      "description": "Observable runtime trace events, variable states, and stdout/stderr",
+      "value": "status=Failed, exc=AssertionError, msg="
+    },
+    "T": {
+      "name": "TestSuite",
+      "symbol": "T",
+      "description": "Benchmark assertions, inputs, and check function harness",
+      "value": "def check(candidate):\n\n    # Check some simple cases\n    assert candidate(7) == (0, 1)\n    assert ca"
+    },
+    "O": {
+      "name": "Outcome",
+      "symbol": "O",
+      "description": "Final test execution outcome (Completed/Failed/Timeout)",
+      "value": "Failed"
+    }
+  }
+}

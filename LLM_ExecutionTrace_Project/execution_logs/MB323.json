@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB323",
+  "dataset": "MBPP",
+  "task_id": "422",
+  "problem_summary": "Write a python function to find the average of cubes of first n natural numbers.",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp045j1ofe.py\", line 7, in <module>\n    assert find_Average_Of_Cube(2) == 4.5\n           ^^^^^^^^^^^^^^^^^^^^\nNameError: name 'find_Average_Of_Cube' is not defined. Did you mean: 'find_average_of_cube'?\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp045j1ofe.py\", line 7, in <module>\n    assert find_Average_Of_Cube(2) == 4.5\n           ^^^^^^^^^^^^^^^^^^^^\nNameError: name 'find_Average_Of_Cube' is not defined. Did you mean: 'find_average_of_cube'?",
+  "exception_type": "NameError",
+  "exception_message": "name 'find_Average_Of_Cube' is not defined. Did you mean: 'find_average_of_cube'?",
+  "execution_time": 0.15995,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

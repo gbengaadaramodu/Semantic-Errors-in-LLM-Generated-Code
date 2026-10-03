@@ -1,0 +1,156 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def geometric_sum(n):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "n",
+        "geometric_sum"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 9,
+      "runtime_values": {
+        "n": [
+          "7",
+          "6",
+          "5",
+          "4",
+          "3",
+          "2",
+          "1",
+          "0"
+        ]
+      },
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "if n == 0:",
+      "statement_type": "If",
+      "reads": [
+        "n"
+      ],
+      "writes": [],
+      "function_name": "geometric_sum",
+      "executed": true,
+      "execution_count": 8,
+      "runtime_values": {
+        "n": [
+          "7",
+          "6",
+          "5",
+          "4",
+          "3",
+          "2",
+          "1",
+          "0"
+        ]
+      },
+      "failure_related": false
+    },
+    "3": {
+      "node_id": 3,
+      "line_number": 3,
+      "source_code": "return 0",
+      "statement_type": "Return",
+      "reads": [],
+      "writes": [],
+      "function_name": "geometric_sum",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "n": [
+          "0",
+          "0"
+        ]
+      },
+      "failure_related": false
+    },
+    "4": {
+      "node_id": 4,
+      "line_number": 5,
+      "source_code": "return (1 / n) + geometric_sum(n-1)",
+      "statement_type": "Return",
+      "reads": [
+        "geometric_sum",
+        "n"
+      ],
+      "writes": [],
+      "function_name": "geometric_sum",
+      "executed": true,
+      "execution_count": 14,
+      "runtime_values": {
+        "n": [
+          "7",
+          "6",
+          "5",
+          "4",
+          "3",
+          "2",
+          "1",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7"
+        ]
+      },
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "n",
+      "label": "DATA(n)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 4,
+      "dependency_type": "DATA",
+      "variable": "geometric_sum",
+      "label": "DATA(geometric_sum)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 4,
+      "dependency_type": "DATA",
+      "variable": "n",
+      "label": "DATA(n)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 2,
+      "target_id": 3,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(If)"
+    },
+    {
+      "source_id": 2,
+      "target_id": 4,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(If)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    4
+  ]
+}

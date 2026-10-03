@@ -1,0 +1,18 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def loss_amount(sale_amount, loss_threshold): | W:loss_threshold,sale_amount,loss_amount", fillcolor="lightgreen"];
+    "2" [label="L2: if sale_amount < loss_threshold: | R:loss_threshold,sale_amount", fillcolor="lightgrey"];
+    "3" [label="L3: return 0", fillcolor="lightgrey"];
+    "4" [label="L5: return sale_amount - loss_threshold | R:loss_threshold,sale_amount", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(loss_threshold)", style="solid"];
+    "1" -> "2" [label="DATA(sale_amount)", style="solid"];
+    "1" -> "4" [label="DATA(loss_threshold)", style="solid"];
+    "1" -> "4" [label="DATA(sale_amount)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "2" -> "3" [label="CONTROL(If)", style="dashed"];
+    "2" -> "4" [label="CONTROL(If)", style="dashed"];
+}

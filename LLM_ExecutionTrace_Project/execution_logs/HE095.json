@@ -1,0 +1,22 @@
+{
+  "trace_id": "HE095",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/96",
+  "problem_summary": "\ndef count_up_to(n):\n    \"\"\"Implement a function that takes an non-negative inte",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpy0gt6qio.py\", line 31, in <module>\n    check(count_up_to)\n    ~~~~~^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpy0gt6qio.py\", line 18, in check\n    assert candidate(5) == [2,3]\n           ^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpy0gt6qio.py\", line 31, in <module>\n    check(count_up_to)\n    ~~~~~^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpy0gt6qio.py\", line 18, in check\n    assert candidate(5) == [2,3]\n           ^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+  "exception_type": "AssertionError",
+  "exception_message": "",
+  "execution_time": 0.238132,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": "benchmark_test",
+  "assertion_failed": true,
+  "parser_prediction": ""
+}

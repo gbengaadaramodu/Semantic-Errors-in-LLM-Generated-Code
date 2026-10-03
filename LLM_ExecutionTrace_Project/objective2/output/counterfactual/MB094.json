@@ -1,0 +1,97 @@
+[
+  {
+    "candidate_rank": 1,
+    "intervention": {
+      "target_variable": "end",
+      "target_line": 16,
+      "observed_value": "None",
+      "counterfactual_value": "4",
+      "operation_type": "AST_transform",
+      "modified_code": "def max_sum(arr):\n    # Find the maximum sum of a bitonic subsequence by dynamic programming\n    \n    # Initialize the maximum sum and its indices\n    max_sum = 0\n    start, end = 0, 0\n    \n    # Loop through the array and find the maximum sum\n    for i in range(len(arr)):\n        for j in range(i+1, len(arr)):\n            if arr[i] + arr[j] > max_sum:\n                max_sum = arr[i] + arr[j]\n                start, end = i, j\n    \n    # Return the maximum sum and its indices\n    end = 4\n    return (max_sum, start, end)"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.22,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  },
+  {
+    "candidate_rank": 2,
+    "intervention": {
+      "target_variable": "end",
+      "target_line": 13,
+      "observed_value": "None",
+      "counterfactual_value": "None",
+      "operation_type": "failed_construction",
+      "modified_code": ""
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "FAILED_CONSTRUCTION",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "UNRESOLVED",
+    "execution_time": 0.0,
+    "status": "UNRESOLVED",
+    "explanation": "Failed to construct valid AST counterfactual intervention."
+  },
+  {
+    "candidate_rank": 3,
+    "intervention": {
+      "target_variable": "max_sum",
+      "target_line": 12,
+      "observed_value": "None",
+      "counterfactual_value": "None",
+      "operation_type": "AST_transform",
+      "modified_code": "def max_sum(arr):\n    max_sum = 0\n    start, end = (0, 0)\n    for i in range(len(arr)):\n        for j in range(i + 1, len(arr)):\n            if arr[i] + arr[j] > max_sum:\n                max_sum = None\n                start, end = (i, j)\n    return (max_sum, start, end)"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.2071,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  },
+  {
+    "candidate_rank": 4,
+    "intervention": {
+      "target_variable": "i",
+      "target_line": 9,
+      "observed_value": "None",
+      "counterfactual_value": "None",
+      "operation_type": "failed_construction",
+      "modified_code": ""
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "FAILED_CONSTRUCTION",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "UNRESOLVED",
+    "execution_time": 0.0,
+    "status": "UNRESOLVED",
+    "explanation": "Failed to construct valid AST counterfactual intervention."
+  },
+  {
+    "candidate_rank": 5,
+    "intervention": {
+      "target_variable": "j",
+      "target_line": 10,
+      "observed_value": "None",
+      "counterfactual_value": "None",
+      "operation_type": "failed_construction",
+      "modified_code": ""
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "FAILED_CONSTRUCTION",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "UNRESOLVED",
+    "execution_time": 0.0,
+    "status": "UNRESOLVED",
+    "explanation": "Failed to construct valid AST counterfactual intervention."
+  }
+]

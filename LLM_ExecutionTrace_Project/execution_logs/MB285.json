@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB285",
+  "dataset": "MBPP",
+  "task_id": "91",
+  "problem_summary": "Write a function to check if a string is present as a substring in a given list ",
+  "execution_status": "Completed",
+  "stdout": "",
+  "stderr": "",
+  "traceback": "",
+  "exception_type": "",
+  "exception_message": "",
+  "execution_time": 0.096178,
+  "timed_out": false,
+  "exit_code": 0,
+  "tests_passed": true,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

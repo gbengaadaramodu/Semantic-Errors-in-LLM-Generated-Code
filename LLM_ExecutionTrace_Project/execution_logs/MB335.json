@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB335",
+  "dataset": "MBPP",
+  "task_id": "420",
+  "problem_summary": "Write a python function to find the cube sum of first n even natural numbers.",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpkhu0zt9b.py\", line 4, in <module>\n    assert cube_Sum(2) == 72\n           ^^^^^^^^\nNameError: name 'cube_Sum' is not defined. Did you mean: 'cube_sum'?\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpkhu0zt9b.py\", line 4, in <module>\n    assert cube_Sum(2) == 72\n           ^^^^^^^^\nNameError: name 'cube_Sum' is not defined. Did you mean: 'cube_sum'?",
+  "exception_type": "NameError",
+  "exception_message": "name 'cube_Sum' is not defined. Did you mean: 'cube_sum'?",
+  "execution_time": 0.160655,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

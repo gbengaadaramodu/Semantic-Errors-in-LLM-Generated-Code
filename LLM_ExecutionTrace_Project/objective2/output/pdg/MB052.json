@@ -1,0 +1,59 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def empty_dict(list_of_dicts):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "list_of_dicts",
+        "empty_dict"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 1,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "return all(not d for d in list_of_dicts)",
+      "statement_type": "Return",
+      "reads": [
+        "all",
+        "d",
+        "list_of_dicts"
+      ],
+      "writes": [
+        "d"
+      ],
+      "function_name": "empty_dict",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "list_of_dicts",
+      "label": "DATA(list_of_dicts)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    2
+  ]
+}

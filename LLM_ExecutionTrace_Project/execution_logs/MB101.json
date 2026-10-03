@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB101",
+  "dataset": "MBPP",
+  "task_id": "452",
+  "problem_summary": "Write a function that gives loss amount on a sale if the given amount has loss e",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp8m4nsbws.py\", line 4, in <module>\n    assert loss_amount(1500,1200)==0\n           ^^^^^^^^^^^\nNameError: name 'loss_amount' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp8m4nsbws.py\", line 4, in <module>\n    assert loss_amount(1500,1200)==0\n           ^^^^^^^^^^^\nNameError: name 'loss_amount' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'loss_amount' is not defined",
+  "execution_time": 0.201532,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

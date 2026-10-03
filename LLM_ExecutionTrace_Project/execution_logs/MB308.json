@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB308",
+  "dataset": "MBPP",
+  "task_id": "734",
+  "problem_summary": "Write a python function to find sum of products of all possible sublists of a gi",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpsv9riean.py\", line 18, in <module>\n    assert sum_Of_Subarray_Prod([1,2,3]) == 20\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpsv9riean.py\", line 18, in <module>\n    assert sum_Of_Subarray_Prod([1,2,3]) == 20\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+  "exception_type": "AssertionError",
+  "exception_message": "",
+  "execution_time": 0.201055,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": "benchmark_test",
+  "assertion_failed": true,
+  "parser_prediction": ""
+}

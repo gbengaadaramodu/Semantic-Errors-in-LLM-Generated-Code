@@ -1,0 +1,11 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def max_difference(tuple_list): | W:tuple_list,max_difference", fillcolor="lightgreen"];
+    "2" [label="L2: return max([x[0] - x[1] for x in tuple_list]) | W:x | R:max,tuple_list,x", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(tuple_list)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

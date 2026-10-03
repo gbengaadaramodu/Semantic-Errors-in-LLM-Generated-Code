@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB137",
+  "dataset": "MBPP",
+  "task_id": "3",
+  "problem_summary": "Write a python function to identify non-prime numbers.",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpsw9t1oz6.py\", line 4, in <module>\n    assert is_not_prime(2) == False\n           ^^^^^^^^^^^^\nNameError: name 'is_not_prime' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpsw9t1oz6.py\", line 4, in <module>\n    assert is_not_prime(2) == False\n           ^^^^^^^^^^^^\nNameError: name 'is_not_prime' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'is_not_prime' is not defined",
+  "execution_time": 0.206746,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

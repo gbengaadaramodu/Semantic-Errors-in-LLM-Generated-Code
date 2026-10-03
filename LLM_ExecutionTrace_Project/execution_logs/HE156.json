@@ -1,0 +1,22 @@
+{
+  "trace_id": "HE156",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/137",
+  "problem_summary": "\ndef compare_one(a, b):\n    \"\"\"\n    Create a function that takes integers, float",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp9wq4g_oy.py\", line 29, in <module>\n    check(compare_one)\n    ~~~~~^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp9wq4g_oy.py\", line 16, in check\n    assert candidate(1, 2.5) == 2.5\n           ~~~~~~~~~^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp9wq4g_oy.py\", line 3, in compare_one\n    raise ValueError(\"a and b must be the same type\")\nValueError: a and b must be the same type\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp9wq4g_oy.py\", line 29, in <module>\n    check(compare_one)\n    ~~~~~^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp9wq4g_oy.py\", line 16, in check\n    assert candidate(1, 2.5) == 2.5\n           ~~~~~~~~~^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp9wq4g_oy.py\", line 3, in compare_one\n    raise ValueError(\"a and b must be the same type\")\nValueError: a and b must be the same type",
+  "exception_type": "ValueError",
+  "exception_message": "a and b must be the same type",
+  "execution_time": 0.411918,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

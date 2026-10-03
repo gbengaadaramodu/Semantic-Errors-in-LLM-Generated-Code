@@ -1,0 +1,369 @@
+{
+  "trace_id": "MB353",
+  "dataset": "MBPP",
+  "task_id": "431",
+  "error_category": "Wrong-Output Error",
+  "analysis_status": "ANALYZED",
+  "skip_reason": null,
+  "input_record": {
+    "trace_id": "MB353",
+    "dataset": "MBPP",
+    "task_id": "431",
+    "problem_summary": "Write a function that takes two lists and returns true if they have at least one",
+    "execution_status": "Failed",
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp05yg5okb.py\", line 5, in <module>\n    assert common_element([1,2,3,4,5], [6,7,8,9])==None\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+    "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp05yg5okb.py\", line 5, in <module>\n    assert common_element([1,2,3,4,5], [6,7,8,9])==None\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+    "exception_type": "AssertionError",
+    "exception_message": "",
+    "execution_time": 0.158131,
+    "timed_out": false,
+    "exit_code": 1,
+    "tests_passed": false,
+    "tests_failed": 0,
+    "expected_output": null,
+    "actual_output": null,
+    "assertion_source": "benchmark_test",
+    "assertion_failed": true,
+    "parser_prediction": "Wrong-Output Error"
+  },
+  "scm": {
+    "task_id": "431",
+    "nodes": [
+      {
+        "node_id": "S",
+        "variable_name": "Specification",
+        "symbol": "S",
+        "label": "Specification"
+      },
+      {
+        "node_id": "C",
+        "variable_name": "GeneratedCode",
+        "symbol": "C",
+        "label": "Generated Code"
+      },
+      {
+        "node_id": "E",
+        "variable_name": "ExecutionTrace",
+        "symbol": "E",
+        "label": "Execution Trace"
+      },
+      {
+        "node_id": "T",
+        "variable_name": "TestSuite",
+        "symbol": "T",
+        "label": "Test Suite"
+      },
+      {
+        "node_id": "O",
+        "variable_name": "Outcome",
+        "symbol": "O",
+        "label": "Outcome"
+      }
+    ],
+    "edges": [
+      {
+        "source": "S",
+        "target": "C",
+        "relationship": "generates"
+      },
+      {
+        "source": "C",
+        "target": "E",
+        "relationship": "produces"
+      },
+      {
+        "source": "T",
+        "target": "E",
+        "relationship": "evaluates"
+      },
+      {
+        "source": "E",
+        "target": "O",
+        "relationship": "determines"
+      }
+    ],
+    "variables": {
+      "S": {
+        "name": "Specification",
+        "symbol": "S",
+        "description": "Problem description, prompt, and target function signature",
+        "value": "Write a function that takes two lists and returns true if they have at least one"
+      },
+      "C": {
+        "name": "GeneratedCode",
+        "symbol": "C",
+        "description": "LLM-generated Python source code implementation",
+        "value": "def common_element(list1, list2):\n    return any(x in list2 for x in list1)"
+      },
+      "E": {
+        "name": "ExecutionTrace",
+        "symbol": "E",
+        "description": "Observable runtime trace events, variable states, and stdout/stderr",
+        "value": "status=Failed, exc=AssertionError, msg="
+      },
+      "T": {
+        "name": "TestSuite",
+        "symbol": "T",
+        "description": "Benchmark assertions, inputs, and check function harness",
+        "value": "assert common_element([1,2,3,4,5], [5,6,7,8,9])==True\nassert common_element([1,2,3,4,5], [6,7,8,9])="
+      },
+      "O": {
+        "name": "Outcome",
+        "symbol": "O",
+        "description": "Final test execution outcome (Completed/Failed/Timeout)",
+        "value": "Failed"
+      }
+    }
+  },
+  "pdg": {
+    "nodes": {
+      "1": {
+        "node_id": 1,
+        "line_number": 1,
+        "source_code": "def common_element(list1, list2):",
+        "statement_type": "FunctionDef",
+        "reads": [],
+        "writes": [
+          "list1",
+          "list2",
+          "common_element"
+        ],
+        "function_name": "<module>",
+        "executed": true,
+        "execution_count": 3,
+        "runtime_values": {
+          "list1": [
+            "[1, 2, 3, 4, 5]",
+            "[1, 2, 3, 4, 5]"
+          ],
+          "list2": [
+            "[5, 6, 7, 8, 9]",
+            "[6, 7, 8, 9]"
+          ]
+        },
+        "failure_related": false
+      },
+      "2": {
+        "node_id": 2,
+        "line_number": 2,
+        "source_code": "return any(x in list2 for x in list1)",
+        "statement_type": "Return",
+        "reads": [
+          "any",
+          "list1",
+          "list2",
+          "x"
+        ],
+        "writes": [
+          "x"
+        ],
+        "function_name": "common_element",
+        "executed": true,
+        "execution_count": 37,
+        "runtime_values": {
+          "list1": [
+            "[1, 2, 3, 4, 5]",
+            "[1, 2, 3, 4, 5]",
+            "[1, 2, 3, 4, 5]",
+            "[1, 2, 3, 4, 5]"
+          ],
+          "list2": [
+            "[5, 6, 7, 8, 9]",
+            "[5, 6, 7, 8, 9]",
+            "[5, 6, 7, 8, 9]",
+            "[5, 6, 7, 8, 9]",
+            "[5, 6, 7, 8, 9]",
+            "[5, 6, 7, 8, 9]",
+            "[5, 6, 7, 8, 9]",
+            "[5, 6, 7, 8, 9]",
+            "[5, 6, 7, 8, 9]",
+            "[5, 6, 7, 8, 9]",
+            "[5, 6, 7, 8, 9]",
+            "[5, 6, 7, 8, 9]",
+            "[5, 6, 7, 8, 9]",
+            "[5, 6, 7, 8, 9]",
+            "[5, 6, 7, 8, 9]",
+            "[5, 6, 7, 8, 9]",
+            "[5, 6, 7, 8, 9]",
+            "[6, 7, 8, 9]",
+            "[6, 7, 8, 9]",
+            "[6, 7, 8, 9]",
+            "[6, 7, 8, 9]",
+            "[6, 7, 8, 9]",
+            "[6, 7, 8, 9]",
+            "[6, 7, 8, 9]",
+            "[6, 7, 8, 9]",
+            "[6, 7, 8, 9]",
+            "[6, 7, 8, 9]",
+            "[6, 7, 8, 9]",
+            "[6, 7, 8, 9]",
+            "[6, 7, 8, 9]",
+            "[6, 7, 8, 9]",
+            "[6, 7, 8, 9]",
+            "[6, 7, 8, 9]",
+            "[6, 7, 8, 9]",
+            "[6, 7, 8, 9]",
+            "[6, 7, 8, 9]",
+            "[6, 7, 8, 9]"
+          ],
+          ".0": [
+            "<list_iterator object at 0x0000022B6C927D00>",
+            "<list_iterator object at 0x0000022B6C927D00>",
+            "<list_iterator object at 0x0000022B6C927D00>",
+            "<list_iterator object at 0x0000022B6C927D00>",
+            "<list_iterator object at 0x0000022B6C927D00>",
+            "<list_iterator object at 0x0000022B6C927D00>",
+            "<list_iterator object at 0x0000022B6C927D00>",
+            "<list_iterator object at 0x0000022B6C927D00>",
+            "<list_iterator object at 0x0000022B6C927D00>",
+            "<list_iterator object at 0x0000022B6C927D00>",
+            "<list_iterator object at 0x0000022B6C927D00>",
+            "<list_iterator object at 0x0000022B6C927D00>",
+            "<list_iterator object at 0x0000022B6C927D00>",
+            "<list_iterator object at 0x0000022B6C927D00>",
+            "<list_iterator object at 0x0000022B6C927D00>",
+            "<list_iterator object at 0x0000022B6C926020>",
+            "<list_iterator object at 0x0000022B6C926020>",
+            "<list_iterator object at 0x0000022B6C926020>",
+            "<list_iterator object at 0x0000022B6C926020>",
+            "<list_iterator object at 0x0000022B6C926020>",
+            "<list_iterator object at 0x0000022B6C926020>",
+            "<list_iterator object at 0x0000022B6C926020>",
+            "<list_iterator object at 0x0000022B6C926020>",
+            "<list_iterator object at 0x0000022B6C926020>",
+            "<list_iterator object at 0x0000022B6C926020>",
+            "<list_iterator object at 0x0000022B6C926020>",
+            "<list_iterator object at 0x0000022B6C926020>",
+            "<list_iterator object at 0x0000022B6C926020>",
+            "<list_iterator object at 0x0000022B6C926020>",
+            "<list_iterator object at 0x0000022B6C926020>",
+            "<list_iterator object at 0x0000022B6C926020>",
+            "<list_iterator object at 0x0000022B6C926020>",
+            "<list_iterator object at 0x0000022B6C926020>"
+          ],
+          "x": [
+            "1",
+            "1",
+            "1",
+            "2",
+            "2",
+            "2",
+            "3",
+            "3",
+            "3",
+            "4",
+            "4",
+            "4",
+            "5",
+            "1",
+            "1",
+            "1",
+            "2",
+            "2",
+            "2",
+            "3",
+            "3",
+            "3",
+            "4",
+            "4",
+            "4",
+            "5",
+            "5",
+            "5",
+            "5"
+          ]
+        },
+        "failure_related": true
+      }
+    },
+    "edges": [
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "DATA",
+        "variable": "list1",
+        "label": "DATA(list1)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "DATA",
+        "variable": "list2",
+        "label": "DATA(list2)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      }
+    ],
+    "entry_node_id": 1,
+    "failure_node_ids": [
+      2
+    ]
+  },
+  "runtime_events_count": 45,
+  "failure_line": 2,
+  "failure_statement": "return any(x in list2 for x in list1)",
+  "candidates": [
+    {
+      "rank": 1,
+      "node_id": 2,
+      "line_number": 2,
+      "statement_code": "return any(x in list2 for x in list1)",
+      "variable_name": "x",
+      "observed_value": "5",
+      "expected_value": null,
+      "proximity_score": 1.0,
+      "dependency_score": 1.0,
+      "explanation": "Reached via reverse traversal (distance=0, type=Return)"
+    }
+  ],
+  "critical_variable": null,
+  "counterfactual_results": [
+    {
+      "candidate_rank": 1,
+      "intervention": {
+        "target_variable": "x",
+        "target_line": 2,
+        "observed_value": "5",
+        "counterfactual_value": "None",
+        "operation_type": "failed_construction",
+        "modified_code": ""
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "FAILED_CONSTRUCTION",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "UNRESOLVED",
+      "execution_time": 0.0,
+      "status": "UNRESOLVED",
+      "explanation": "Failed to construct valid AST counterfactual intervention."
+    }
+  ],
+  "fault_location": {
+    "file": "MB353.py",
+    "line_number": 2,
+    "statement_code": "return any(x in list2 for x in list1)",
+    "function_name": "common_element",
+    "causal_variable": "x",
+    "evidence_score": 1.0,
+    "confidence": 0.5
+  },
+  "root_cause": {
+    "root_cause_status": "UNRESOLVED",
+    "candidate_explanation": "Semantic mismatch at line 2 ('return any(x in list2 for x in list1)') causes return value mismatch.",
+    "causal_variable": "x",
+    "fault_statement": "return any(x in list2 for x in list1)",
+    "fault_line": 2,
+    "evidence_summary": "Reverse PDG traversal traced failure from line 1 to statement line 2. Structural dependency identified; counterfactual validation unconfirmed or unresolved.",
+    "counterfactual_validated": false,
+    "confidence": 0.5
+  },
+  "ground_truth_matched": null,
+  "ground_truth_fault_line": null,
+  "execution_time": 0.0112
+}

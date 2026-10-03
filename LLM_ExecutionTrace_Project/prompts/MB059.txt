@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a function to check if the given integer is a prime number.
+
+Example test: assert prime_num(13)==True
+[/INST]

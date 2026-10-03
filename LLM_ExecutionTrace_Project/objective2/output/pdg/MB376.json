@@ -1,0 +1,82 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def start_withp(words):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "words",
+        "start_withp"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "words": [
+          "['Python PHP', 'Java JavaScript', 'c c++']"
+        ]
+      },
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "return tuple(word for word in words if word.startswith(\"p\"))",
+      "statement_type": "Return",
+      "reads": [
+        "tuple",
+        "word",
+        "words"
+      ],
+      "writes": [
+        "word"
+      ],
+      "function_name": "start_withp",
+      "executed": true,
+      "execution_count": 8,
+      "runtime_values": {
+        "words": [
+          "['Python PHP', 'Java JavaScript', 'c c++']",
+          "['Python PHP', 'Java JavaScript', 'c c++']"
+        ],
+        ".0": [
+          "<list_iterator object at 0x0000022B6CA96470>",
+          "<list_iterator object at 0x0000022B6CA96470>",
+          "<list_iterator object at 0x0000022B6CA96470>",
+          "<list_iterator object at 0x0000022B6CA96470>",
+          "<list_iterator object at 0x0000022B6CA96470>",
+          "<list_iterator object at 0x0000022B6CA96470>"
+        ],
+        "word": [
+          "Python PHP",
+          "Java JavaScript",
+          "c c++",
+          "c c++"
+        ]
+      },
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "words",
+      "label": "DATA(words)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    2
+  ]
+}

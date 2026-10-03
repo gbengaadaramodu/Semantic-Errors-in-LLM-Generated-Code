@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a python function to find the largest negative number from the given list.
+
+Example test: assert largest_neg([1,2,3,-4,-6]) == -6
+[/INST]

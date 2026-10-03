@@ -1,0 +1,581 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def lcs_of_three(str1, str2, str3):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "str1",
+        "str2",
+        "str3",
+        "lcs_of_three"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 1,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "m = len(str1)",
+      "statement_type": "Assign",
+      "reads": [
+        "len",
+        "str1"
+      ],
+      "writes": [
+        "m"
+      ],
+      "function_name": "lcs_of_three",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "3": {
+      "node_id": 3,
+      "line_number": 3,
+      "source_code": "n = len(str2)",
+      "statement_type": "Assign",
+      "reads": [
+        "len",
+        "str2"
+      ],
+      "writes": [
+        "n"
+      ],
+      "function_name": "lcs_of_three",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "4": {
+      "node_id": 4,
+      "line_number": 4,
+      "source_code": "o = len(str3)",
+      "statement_type": "Assign",
+      "reads": [
+        "len",
+        "str3"
+      ],
+      "writes": [
+        "o"
+      ],
+      "function_name": "lcs_of_three",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "5": {
+      "node_id": 5,
+      "line_number": 5,
+      "source_code": "dp = [[0] * (n + 1) for _ in range(m + 1)]",
+      "statement_type": "Assign",
+      "reads": [
+        "m",
+        "n",
+        "range"
+      ],
+      "writes": [
+        "_",
+        "dp"
+      ],
+      "function_name": "lcs_of_three",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "6": {
+      "node_id": 6,
+      "line_number": 6,
+      "source_code": "for i in range(1, m + 1):",
+      "statement_type": "For",
+      "reads": [
+        "m",
+        "range"
+      ],
+      "writes": [
+        "i"
+      ],
+      "function_name": "lcs_of_three",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "7": {
+      "node_id": 7,
+      "line_number": 7,
+      "source_code": "for j in range(1, n + 1):",
+      "statement_type": "For",
+      "reads": [
+        "n",
+        "range"
+      ],
+      "writes": [
+        "j"
+      ],
+      "function_name": "lcs_of_three",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "8": {
+      "node_id": 8,
+      "line_number": 8,
+      "source_code": "if str1[i - 1] == str2[j - 1]:",
+      "statement_type": "If",
+      "reads": [
+        "i",
+        "j",
+        "str1",
+        "str2"
+      ],
+      "writes": [],
+      "function_name": "lcs_of_three",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "9": {
+      "node_id": 9,
+      "line_number": 9,
+      "source_code": "dp[i][j] = dp[i - 1][j - 1] + 1",
+      "statement_type": "Assign",
+      "reads": [
+        "dp",
+        "i",
+        "j"
+      ],
+      "writes": [],
+      "function_name": "lcs_of_three",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "10": {
+      "node_id": 10,
+      "line_number": 11,
+      "source_code": "dp[i][j] = max(dp[i - 1][j], dp[i][j - 1])",
+      "statement_type": "Assign",
+      "reads": [
+        "dp",
+        "i",
+        "j",
+        "max"
+      ],
+      "writes": [],
+      "function_name": "lcs_of_three",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "11": {
+      "node_id": 11,
+      "line_number": 12,
+      "source_code": "for i in range(1, m + 1):",
+      "statement_type": "For",
+      "reads": [
+        "m",
+        "range"
+      ],
+      "writes": [
+        "i"
+      ],
+      "function_name": "lcs_of_three",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "12": {
+      "node_id": 12,
+      "line_number": 13,
+      "source_code": "for j in range(1, n + 1):",
+      "statement_type": "For",
+      "reads": [
+        "n",
+        "range"
+      ],
+      "writes": [
+        "j"
+      ],
+      "function_name": "lcs_of_three",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "13": {
+      "node_id": 13,
+      "line_number": 14,
+      "source_code": "if str2[j - 1] == str3[i - 1]:",
+      "statement_type": "If",
+      "reads": [
+        "i",
+        "j",
+        "str2",
+        "str3"
+      ],
+      "writes": [],
+      "function_name": "lcs_of_three",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "14": {
+      "node_id": 14,
+      "line_number": 15,
+      "source_code": "dp[i][j] = max(dp[i][j], dp[i - 1][j - 1] + 1)",
+      "statement_type": "Assign",
+      "reads": [
+        "dp",
+        "i",
+        "j",
+        "max"
+      ],
+      "writes": [],
+      "function_name": "lcs_of_three",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "15": {
+      "node_id": 15,
+      "line_number": 16,
+      "source_code": "return dp[m][n]",
+      "statement_type": "Return",
+      "reads": [
+        "dp",
+        "m",
+        "n"
+      ],
+      "writes": [],
+      "function_name": "lcs_of_three",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "str1",
+      "label": "DATA(str1)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 3,
+      "dependency_type": "DATA",
+      "variable": "str2",
+      "label": "DATA(str2)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 4,
+      "dependency_type": "DATA",
+      "variable": "str3",
+      "label": "DATA(str3)"
+    },
+    {
+      "source_id": 2,
+      "target_id": 5,
+      "dependency_type": "DATA",
+      "variable": "m",
+      "label": "DATA(m)"
+    },
+    {
+      "source_id": 3,
+      "target_id": 5,
+      "dependency_type": "DATA",
+      "variable": "n",
+      "label": "DATA(n)"
+    },
+    {
+      "source_id": 2,
+      "target_id": 6,
+      "dependency_type": "DATA",
+      "variable": "m",
+      "label": "DATA(m)"
+    },
+    {
+      "source_id": 3,
+      "target_id": 7,
+      "dependency_type": "DATA",
+      "variable": "n",
+      "label": "DATA(n)"
+    },
+    {
+      "source_id": 6,
+      "target_id": 8,
+      "dependency_type": "DATA",
+      "variable": "i",
+      "label": "DATA(i)"
+    },
+    {
+      "source_id": 7,
+      "target_id": 8,
+      "dependency_type": "DATA",
+      "variable": "j",
+      "label": "DATA(j)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 8,
+      "dependency_type": "DATA",
+      "variable": "str1",
+      "label": "DATA(str1)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 8,
+      "dependency_type": "DATA",
+      "variable": "str2",
+      "label": "DATA(str2)"
+    },
+    {
+      "source_id": 5,
+      "target_id": 9,
+      "dependency_type": "DATA",
+      "variable": "dp",
+      "label": "DATA(dp)"
+    },
+    {
+      "source_id": 6,
+      "target_id": 9,
+      "dependency_type": "DATA",
+      "variable": "i",
+      "label": "DATA(i)"
+    },
+    {
+      "source_id": 7,
+      "target_id": 9,
+      "dependency_type": "DATA",
+      "variable": "j",
+      "label": "DATA(j)"
+    },
+    {
+      "source_id": 5,
+      "target_id": 10,
+      "dependency_type": "DATA",
+      "variable": "dp",
+      "label": "DATA(dp)"
+    },
+    {
+      "source_id": 6,
+      "target_id": 10,
+      "dependency_type": "DATA",
+      "variable": "i",
+      "label": "DATA(i)"
+    },
+    {
+      "source_id": 7,
+      "target_id": 10,
+      "dependency_type": "DATA",
+      "variable": "j",
+      "label": "DATA(j)"
+    },
+    {
+      "source_id": 2,
+      "target_id": 11,
+      "dependency_type": "DATA",
+      "variable": "m",
+      "label": "DATA(m)"
+    },
+    {
+      "source_id": 3,
+      "target_id": 12,
+      "dependency_type": "DATA",
+      "variable": "n",
+      "label": "DATA(n)"
+    },
+    {
+      "source_id": 11,
+      "target_id": 13,
+      "dependency_type": "DATA",
+      "variable": "i",
+      "label": "DATA(i)"
+    },
+    {
+      "source_id": 12,
+      "target_id": 13,
+      "dependency_type": "DATA",
+      "variable": "j",
+      "label": "DATA(j)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 13,
+      "dependency_type": "DATA",
+      "variable": "str2",
+      "label": "DATA(str2)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 13,
+      "dependency_type": "DATA",
+      "variable": "str3",
+      "label": "DATA(str3)"
+    },
+    {
+      "source_id": 5,
+      "target_id": 14,
+      "dependency_type": "DATA",
+      "variable": "dp",
+      "label": "DATA(dp)"
+    },
+    {
+      "source_id": 11,
+      "target_id": 14,
+      "dependency_type": "DATA",
+      "variable": "i",
+      "label": "DATA(i)"
+    },
+    {
+      "source_id": 12,
+      "target_id": 14,
+      "dependency_type": "DATA",
+      "variable": "j",
+      "label": "DATA(j)"
+    },
+    {
+      "source_id": 5,
+      "target_id": 15,
+      "dependency_type": "DATA",
+      "variable": "dp",
+      "label": "DATA(dp)"
+    },
+    {
+      "source_id": 2,
+      "target_id": 15,
+      "dependency_type": "DATA",
+      "variable": "m",
+      "label": "DATA(m)"
+    },
+    {
+      "source_id": 3,
+      "target_id": 15,
+      "dependency_type": "DATA",
+      "variable": "n",
+      "label": "DATA(n)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 3,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 4,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 5,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 6,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 6,
+      "target_id": 7,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(For)"
+    },
+    {
+      "source_id": 7,
+      "target_id": 8,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(For)"
+    },
+    {
+      "source_id": 8,
+      "target_id": 9,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(If)"
+    },
+    {
+      "source_id": 8,
+      "target_id": 10,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(If)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 11,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 11,
+      "target_id": 12,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(For)"
+    },
+    {
+      "source_id": 12,
+      "target_id": 13,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(For)"
+    },
+    {
+      "source_id": 13,
+      "target_id": 14,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(If)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 15,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    15
+  ]
+}

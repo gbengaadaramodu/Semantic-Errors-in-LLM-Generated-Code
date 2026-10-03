@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB176",
+  "dataset": "MBPP",
+  "task_id": "763",
+  "problem_summary": "Write a python function to find the minimum difference between any two elements ",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpjcfzjkm_.py\", line 10, in <module>\n    assert find_min_diff((1,5,3,19,18,25),6) == 1\n           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpjcfzjkm_.py\", line 2, in find_min_diff\n    arr.sort()\n    ^^^^^^^^\nAttributeError: 'tuple' object has no attribute 'sort'\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpjcfzjkm_.py\", line 10, in <module>\n    assert find_min_diff((1,5,3,19,18,25),6) == 1\n           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpjcfzjkm_.py\", line 2, in find_min_diff\n    arr.sort()\n    ^^^^^^^^\nAttributeError: 'tuple' object has no attribute 'sort'",
+  "exception_type": "AttributeError",
+  "exception_message": "'tuple' object has no attribute 'sort'",
+  "execution_time": 0.197227,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB353",
+  "dataset": "MBPP",
+  "task_id": "431",
+  "problem_summary": "Write a function that takes two lists and returns true if they have at least one",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp05yg5okb.py\", line 5, in <module>\n    assert common_element([1,2,3,4,5], [6,7,8,9])==None\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp05yg5okb.py\", line 5, in <module>\n    assert common_element([1,2,3,4,5], [6,7,8,9])==None\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+  "exception_type": "AssertionError",
+  "exception_message": "",
+  "execution_time": 0.158131,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": "benchmark_test",
+  "assertion_failed": true,
+  "parser_prediction": ""
+}

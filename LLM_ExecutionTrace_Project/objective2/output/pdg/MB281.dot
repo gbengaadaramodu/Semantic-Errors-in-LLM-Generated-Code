@@ -1,0 +1,37 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def is_majority(sorted_array, n, element): | W:element,n,sorted_array,is_majority", fillcolor="lightgreen"];
+    "2" [label="L2: if sorted_array[n//2] == element: | R:element,n,sorted_array", fillcolor="lightgreen"];
+    "3" [label="L3: return True", fillcolor="lightgreen"];
+    "4" [label="L4: if n % 2 == 0: | R:n", fillcolor="lightgrey"];
+    "5" [label="L5: return False", fillcolor="lightgrey"];
+    "6" [label="L6: if element > sorted_array[n//2]: | R:element,n,sorted_array", fillcolor="lightgrey"];
+    "7" [label="L7: return is_majority(sorted_array, n//2, element) | R:element,is_majority,n,sorted_array", fillcolor="lightgrey"];
+    "8" [label="L9: return is_majority(sorted_array, n//2+1, element) | R:element,is_majority,n,sorted_array", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(element)", style="solid"];
+    "1" -> "2" [label="DATA(n)", style="solid"];
+    "1" -> "2" [label="DATA(sorted_array)", style="solid"];
+    "1" -> "4" [label="DATA(n)", style="solid"];
+    "1" -> "6" [label="DATA(element)", style="solid"];
+    "1" -> "6" [label="DATA(n)", style="solid"];
+    "1" -> "6" [label="DATA(sorted_array)", style="solid"];
+    "1" -> "7" [label="DATA(element)", style="solid"];
+    "1" -> "7" [label="DATA(is_majority)", style="solid"];
+    "1" -> "7" [label="DATA(n)", style="solid"];
+    "1" -> "7" [label="DATA(sorted_array)", style="solid"];
+    "1" -> "8" [label="DATA(element)", style="solid"];
+    "1" -> "8" [label="DATA(is_majority)", style="solid"];
+    "1" -> "8" [label="DATA(n)", style="solid"];
+    "1" -> "8" [label="DATA(sorted_array)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "2" -> "3" [label="CONTROL(If)", style="dashed"];
+    "1" -> "4" [label="CONTROL(FunctionDef)", style="dashed"];
+    "4" -> "5" [label="CONTROL(If)", style="dashed"];
+    "1" -> "6" [label="CONTROL(FunctionDef)", style="dashed"];
+    "6" -> "7" [label="CONTROL(If)", style="dashed"];
+    "6" -> "8" [label="CONTROL(If)", style="dashed"];
+}

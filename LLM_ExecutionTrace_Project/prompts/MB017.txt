@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a python function to find the sum of fourth power of first n odd natural numbers.
+
+Example test: assert odd_num_sum(2) == 82
+[/INST]

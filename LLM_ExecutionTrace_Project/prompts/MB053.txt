@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a function to check whether the given amount has no profit and no loss
+
+Example test: assert noprofit_noloss(1500,1200)==False
+[/INST]

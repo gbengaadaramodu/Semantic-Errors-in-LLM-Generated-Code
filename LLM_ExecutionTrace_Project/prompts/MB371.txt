@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a function to find the volume of a cone.
+
+Example test: assert math.isclose(volume_cone(5,12), 314.15926535897927, rel_tol=0.001)
+[/INST]

@@ -1,0 +1,487 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def count_up_to(n):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "n",
+        "count_up_to"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "n": [
+          "5"
+        ]
+      },
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "prime_numbers = []",
+      "statement_type": "Assign",
+      "reads": [],
+      "writes": [
+        "prime_numbers"
+      ],
+      "function_name": "count_up_to",
+      "executed": true,
+      "execution_count": 1,
+      "runtime_values": {
+        "n": [
+          "5"
+        ]
+      },
+      "failure_related": false
+    },
+    "3": {
+      "node_id": 3,
+      "line_number": 3,
+      "source_code": "for i in range(2, n+1):",
+      "statement_type": "For",
+      "reads": [
+        "n",
+        "range"
+      ],
+      "writes": [
+        "i"
+      ],
+      "function_name": "count_up_to",
+      "executed": true,
+      "execution_count": 5,
+      "runtime_values": {
+        "n": [
+          "5",
+          "5",
+          "5",
+          "5",
+          "5"
+        ],
+        "prime_numbers": [
+          "[]",
+          "[2]",
+          "[2, 3]",
+          "[2, 3]",
+          "[2, 3, 5]"
+        ],
+        "i": [
+          "2",
+          "3",
+          "4",
+          "5"
+        ]
+      },
+      "failure_related": false
+    },
+    "4": {
+      "node_id": 4,
+      "line_number": 4,
+      "source_code": "if is_prime(i):",
+      "statement_type": "If",
+      "reads": [
+        "i",
+        "is_prime"
+      ],
+      "writes": [],
+      "function_name": "count_up_to",
+      "executed": true,
+      "execution_count": 4,
+      "runtime_values": {
+        "n": [
+          "5",
+          "5",
+          "5",
+          "5"
+        ],
+        "prime_numbers": [
+          "[]",
+          "[2]",
+          "[2, 3]",
+          "[2, 3]"
+        ],
+        "i": [
+          "2",
+          "3",
+          "4",
+          "5"
+        ]
+      },
+      "failure_related": false
+    },
+    "5": {
+      "node_id": 5,
+      "line_number": 5,
+      "source_code": "prime_numbers.append(i)",
+      "statement_type": "Expr",
+      "reads": [
+        "i",
+        "prime_numbers"
+      ],
+      "writes": [],
+      "function_name": "count_up_to",
+      "executed": true,
+      "execution_count": 3,
+      "runtime_values": {
+        "n": [
+          "5",
+          "5",
+          "5"
+        ],
+        "prime_numbers": [
+          "[]",
+          "[2]",
+          "[2, 3]"
+        ],
+        "i": [
+          "2",
+          "3",
+          "5"
+        ]
+      },
+      "failure_related": false
+    },
+    "6": {
+      "node_id": 6,
+      "line_number": 6,
+      "source_code": "return prime_numbers",
+      "statement_type": "Return",
+      "reads": [
+        "prime_numbers"
+      ],
+      "writes": [],
+      "function_name": "count_up_to",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "n": [
+          "5",
+          "5"
+        ],
+        "prime_numbers": [
+          "[2, 3, 5]",
+          "[2, 3, 5]"
+        ],
+        "i": [
+          "5",
+          "5"
+        ]
+      },
+      "failure_related": false
+    },
+    "7": {
+      "node_id": 7,
+      "line_number": 8,
+      "source_code": "def is_prime(n):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "n",
+        "is_prime"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 5,
+      "runtime_values": {
+        "count_up_to": [
+          "<function count_up_to at 0x0000022B6C683EC0>"
+        ],
+        "n": [
+          "2",
+          "3",
+          "4",
+          "5"
+        ]
+      },
+      "failure_related": false
+    },
+    "8": {
+      "node_id": 8,
+      "line_number": 9,
+      "source_code": "if n <= 1:",
+      "statement_type": "If",
+      "reads": [
+        "n"
+      ],
+      "writes": [],
+      "function_name": "is_prime",
+      "executed": true,
+      "execution_count": 4,
+      "runtime_values": {
+        "n": [
+          "2",
+          "3",
+          "4",
+          "5"
+        ]
+      },
+      "failure_related": false
+    },
+    "9": {
+      "node_id": 9,
+      "line_number": 10,
+      "source_code": "return False",
+      "statement_type": "Return",
+      "reads": [],
+      "writes": [],
+      "function_name": "is_prime",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "10": {
+      "node_id": 10,
+      "line_number": 11,
+      "source_code": "for i in range(2, int(n ** 0.5) + 1):",
+      "statement_type": "For",
+      "reads": [
+        "int",
+        "n",
+        "range"
+      ],
+      "writes": [
+        "i"
+      ],
+      "function_name": "is_prime",
+      "executed": true,
+      "execution_count": 5,
+      "runtime_values": {
+        "n": [
+          "2",
+          "3",
+          "4",
+          "5",
+          "5"
+        ],
+        "i": [
+          "2"
+        ]
+      },
+      "failure_related": false
+    },
+    "11": {
+      "node_id": 11,
+      "line_number": 12,
+      "source_code": "if n % i == 0:",
+      "statement_type": "If",
+      "reads": [
+        "i",
+        "n"
+      ],
+      "writes": [],
+      "function_name": "is_prime",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "n": [
+          "4",
+          "5"
+        ],
+        "i": [
+          "2",
+          "2"
+        ]
+      },
+      "failure_related": false
+    },
+    "12": {
+      "node_id": 12,
+      "line_number": 13,
+      "source_code": "return False",
+      "statement_type": "Return",
+      "reads": [],
+      "writes": [],
+      "function_name": "is_prime",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "n": [
+          "4",
+          "4"
+        ],
+        "i": [
+          "2",
+          "2"
+        ]
+      },
+      "failure_related": false
+    },
+    "13": {
+      "node_id": 13,
+      "line_number": 14,
+      "source_code": "return True",
+      "statement_type": "Return",
+      "reads": [],
+      "writes": [],
+      "function_name": "is_prime",
+      "executed": true,
+      "execution_count": 6,
+      "runtime_values": {
+        "n": [
+          "2",
+          "2",
+          "3",
+          "3",
+          "5",
+          "5"
+        ],
+        "i": [
+          "2",
+          "2"
+        ]
+      },
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 3,
+      "dependency_type": "DATA",
+      "variable": "n",
+      "label": "DATA(n)"
+    },
+    {
+      "source_id": 3,
+      "target_id": 4,
+      "dependency_type": "DATA",
+      "variable": "i",
+      "label": "DATA(i)"
+    },
+    {
+      "source_id": 3,
+      "target_id": 5,
+      "dependency_type": "DATA",
+      "variable": "i",
+      "label": "DATA(i)"
+    },
+    {
+      "source_id": 2,
+      "target_id": 5,
+      "dependency_type": "DATA",
+      "variable": "prime_numbers",
+      "label": "DATA(prime_numbers)"
+    },
+    {
+      "source_id": 2,
+      "target_id": 6,
+      "dependency_type": "DATA",
+      "variable": "prime_numbers",
+      "label": "DATA(prime_numbers)"
+    },
+    {
+      "source_id": 7,
+      "target_id": 8,
+      "dependency_type": "DATA",
+      "variable": "n",
+      "label": "DATA(n)"
+    },
+    {
+      "source_id": 7,
+      "target_id": 10,
+      "dependency_type": "DATA",
+      "variable": "n",
+      "label": "DATA(n)"
+    },
+    {
+      "source_id": 10,
+      "target_id": 11,
+      "dependency_type": "DATA",
+      "variable": "i",
+      "label": "DATA(i)"
+    },
+    {
+      "source_id": 7,
+      "target_id": 11,
+      "dependency_type": "DATA",
+      "variable": "n",
+      "label": "DATA(n)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 3,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 3,
+      "target_id": 4,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(For)"
+    },
+    {
+      "source_id": 4,
+      "target_id": 5,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(If)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 6,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 7,
+      "target_id": 8,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 8,
+      "target_id": 9,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(If)"
+    },
+    {
+      "source_id": 7,
+      "target_id": 10,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 10,
+      "target_id": 11,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(For)"
+    },
+    {
+      "source_id": 11,
+      "target_id": 12,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(If)"
+    },
+    {
+      "source_id": 7,
+      "target_id": 13,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    13
+  ]
+}

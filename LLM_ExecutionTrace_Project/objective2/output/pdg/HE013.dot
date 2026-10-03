@@ -1,0 +1,16 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def sum_product(numbers: List[int]) -> Tuple[int, int]: | W:numbers,sum_product | R:List,int", fillcolor="salmon"];
+    "2" [label="L2: if not numbers: | R:numbers", fillcolor="lightgrey"];
+    "3" [label="L3: return 0, 1", fillcolor="lightgrey"];
+    "4" [label="L4: return sum(numbers), functools.reduce(operator.mul, numbers, 1) | R:functools,numbers,operator,sum", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(numbers)", style="solid"];
+    "1" -> "4" [label="DATA(numbers)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "2" -> "3" [label="CONTROL(If)", style="dashed"];
+    "1" -> "4" [label="CONTROL(FunctionDef)", style="dashed"];
+}

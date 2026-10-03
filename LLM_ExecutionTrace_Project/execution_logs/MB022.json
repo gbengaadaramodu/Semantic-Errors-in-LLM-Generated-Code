@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB022",
+  "dataset": "MBPP",
+  "task_id": "393",
+  "problem_summary": "Write a function to find the list with maximum length.",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpjj_4l46u.py\", line 7, in <module>\n    assert max_length_list([[0], [1, 3], [5, 7], [9, 11], [13, 15, 17]])==(3, [13, 15, 17])\n           ^^^^^^^^^^^^^^^\nNameError: name 'max_length_list' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpjj_4l46u.py\", line 7, in <module>\n    assert max_length_list([[0], [1, 3], [5, 7], [9, 11], [13, 15, 17]])==(3, [13, 15, 17])\n           ^^^^^^^^^^^^^^^\nNameError: name 'max_length_list' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'max_length_list' is not defined",
+  "execution_time": 0.208936,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

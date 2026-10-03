@@ -1,0 +1,552 @@
+{
+  "trace_id": "HE065",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/98",
+  "error_category": "Wrong-Output Error",
+  "analysis_status": "ANALYZED",
+  "skip_reason": null,
+  "input_record": {
+    "trace_id": "HE065",
+    "dataset": "HumanEval",
+    "task_id": "HumanEval/98",
+    "problem_summary": "\ndef count_upper(s):\n    \"\"\"\n    Given a string s, count the number of uppercase",
+    "execution_status": "Failed",
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp_anc3gle.py\", line 24, in <module>\n    check(count_upper)\n    ~~~~~^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp_anc3gle.py\", line 11, in check\n    assert candidate('aBCdEf')  == 1\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+    "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp_anc3gle.py\", line 24, in <module>\n    check(count_upper)\n    ~~~~~^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp_anc3gle.py\", line 11, in check\n    assert candidate('aBCdEf')  == 1\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+    "exception_type": "AssertionError",
+    "exception_message": "",
+    "execution_time": 0.208171,
+    "timed_out": false,
+    "exit_code": 1,
+    "tests_passed": false,
+    "tests_failed": 0,
+    "expected_output": null,
+    "actual_output": null,
+    "assertion_source": "benchmark_test",
+    "assertion_failed": true,
+    "parser_prediction": "Wrong-Output Error"
+  },
+  "scm": {
+    "task_id": "HumanEval/98",
+    "nodes": [
+      {
+        "node_id": "S",
+        "variable_name": "Specification",
+        "symbol": "S",
+        "label": "Specification"
+      },
+      {
+        "node_id": "C",
+        "variable_name": "GeneratedCode",
+        "symbol": "C",
+        "label": "Generated Code"
+      },
+      {
+        "node_id": "E",
+        "variable_name": "ExecutionTrace",
+        "symbol": "E",
+        "label": "Execution Trace"
+      },
+      {
+        "node_id": "T",
+        "variable_name": "TestSuite",
+        "symbol": "T",
+        "label": "Test Suite"
+      },
+      {
+        "node_id": "O",
+        "variable_name": "Outcome",
+        "symbol": "O",
+        "label": "Outcome"
+      }
+    ],
+    "edges": [
+      {
+        "source": "S",
+        "target": "C",
+        "relationship": "generates"
+      },
+      {
+        "source": "C",
+        "target": "E",
+        "relationship": "produces"
+      },
+      {
+        "source": "T",
+        "target": "E",
+        "relationship": "evaluates"
+      },
+      {
+        "source": "E",
+        "target": "O",
+        "relationship": "determines"
+      }
+    ],
+    "variables": {
+      "S": {
+        "name": "Specification",
+        "symbol": "S",
+        "description": "Problem description, prompt, and target function signature",
+        "value": "\ndef count_upper(s):\n    \"\"\"\n    Given a string s, count the number of uppercase"
+      },
+      "C": {
+        "name": "GeneratedCode",
+        "symbol": "C",
+        "description": "LLM-generated Python source code implementation",
+        "value": "def count_upper(s):\n    count = 0\n    for i, c in enumerate(s):\n        if i % 2 == 0 and c.isupper():\n            count += 1\n    return count"
+      },
+      "E": {
+        "name": "ExecutionTrace",
+        "symbol": "E",
+        "description": "Observable runtime trace events, variable states, and stdout/stderr",
+        "value": "status=Failed, exc=AssertionError, msg="
+      },
+      "T": {
+        "name": "TestSuite",
+        "symbol": "T",
+        "description": "Benchmark assertions, inputs, and check function harness",
+        "value": "def check(candidate):\n\n    # Check some simple cases\n    assert candidate('aBCdEf')  == 1\n    assert"
+      },
+      "O": {
+        "name": "Outcome",
+        "symbol": "O",
+        "description": "Final test execution outcome (Completed/Failed/Timeout)",
+        "value": "Failed"
+      }
+    }
+  },
+  "pdg": {
+    "nodes": {
+      "1": {
+        "node_id": 1,
+        "line_number": 1,
+        "source_code": "def count_upper(s):",
+        "statement_type": "FunctionDef",
+        "reads": [],
+        "writes": [
+          "s",
+          "count_upper"
+        ],
+        "function_name": "<module>",
+        "executed": true,
+        "execution_count": 2,
+        "runtime_values": {
+          "s": [
+            "aBCdEf"
+          ]
+        },
+        "failure_related": false
+      },
+      "2": {
+        "node_id": 2,
+        "line_number": 2,
+        "source_code": "count = 0",
+        "statement_type": "Assign",
+        "reads": [],
+        "writes": [
+          "count"
+        ],
+        "function_name": "count_upper",
+        "executed": true,
+        "execution_count": 1,
+        "runtime_values": {
+          "s": [
+            "aBCdEf"
+          ]
+        },
+        "failure_related": false
+      },
+      "3": {
+        "node_id": 3,
+        "line_number": 3,
+        "source_code": "for i, c in enumerate(s):",
+        "statement_type": "For",
+        "reads": [
+          "enumerate",
+          "s"
+        ],
+        "writes": [
+          "c",
+          "i"
+        ],
+        "function_name": "count_upper",
+        "executed": true,
+        "execution_count": 7,
+        "runtime_values": {
+          "s": [
+            "aBCdEf",
+            "aBCdEf",
+            "aBCdEf",
+            "aBCdEf",
+            "aBCdEf",
+            "aBCdEf",
+            "aBCdEf"
+          ],
+          "count": [
+            "0",
+            "0",
+            "0",
+            "1",
+            "1",
+            "2",
+            "2"
+          ],
+          "i": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "c": [
+            "a",
+            "B",
+            "C",
+            "d",
+            "E",
+            "f"
+          ]
+        },
+        "failure_related": false
+      },
+      "4": {
+        "node_id": 4,
+        "line_number": 4,
+        "source_code": "if i % 2 == 0 and c.isupper():",
+        "statement_type": "If",
+        "reads": [
+          "c",
+          "i"
+        ],
+        "writes": [],
+        "function_name": "count_upper",
+        "executed": true,
+        "execution_count": 6,
+        "runtime_values": {
+          "s": [
+            "aBCdEf",
+            "aBCdEf",
+            "aBCdEf",
+            "aBCdEf",
+            "aBCdEf",
+            "aBCdEf"
+          ],
+          "count": [
+            "0",
+            "0",
+            "0",
+            "1",
+            "1",
+            "2"
+          ],
+          "i": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "c": [
+            "a",
+            "B",
+            "C",
+            "d",
+            "E",
+            "f"
+          ]
+        },
+        "failure_related": false
+      },
+      "5": {
+        "node_id": 5,
+        "line_number": 5,
+        "source_code": "count += 1",
+        "statement_type": "AugAssign",
+        "reads": [],
+        "writes": [
+          "count"
+        ],
+        "function_name": "count_upper",
+        "executed": true,
+        "execution_count": 2,
+        "runtime_values": {
+          "s": [
+            "aBCdEf",
+            "aBCdEf"
+          ],
+          "count": [
+            "0",
+            "1"
+          ],
+          "i": [
+            "2",
+            "4"
+          ],
+          "c": [
+            "C",
+            "E"
+          ]
+        },
+        "failure_related": false
+      },
+      "6": {
+        "node_id": 6,
+        "line_number": 6,
+        "source_code": "return count",
+        "statement_type": "Return",
+        "reads": [
+          "count"
+        ],
+        "writes": [],
+        "function_name": "count_upper",
+        "executed": true,
+        "execution_count": 2,
+        "runtime_values": {
+          "s": [
+            "aBCdEf",
+            "aBCdEf"
+          ],
+          "count": [
+            "2",
+            "2"
+          ],
+          "i": [
+            "5",
+            "5"
+          ],
+          "c": [
+            "f",
+            "f"
+          ]
+        },
+        "failure_related": true
+      }
+    },
+    "edges": [
+      {
+        "source_id": 1,
+        "target_id": 3,
+        "dependency_type": "DATA",
+        "variable": "s",
+        "label": "DATA(s)"
+      },
+      {
+        "source_id": 3,
+        "target_id": 4,
+        "dependency_type": "DATA",
+        "variable": "c",
+        "label": "DATA(c)"
+      },
+      {
+        "source_id": 3,
+        "target_id": 4,
+        "dependency_type": "DATA",
+        "variable": "i",
+        "label": "DATA(i)"
+      },
+      {
+        "source_id": 5,
+        "target_id": 6,
+        "dependency_type": "DATA",
+        "variable": "count",
+        "label": "DATA(count)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 3,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 3,
+        "target_id": 4,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(For)"
+      },
+      {
+        "source_id": 4,
+        "target_id": 5,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(If)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 6,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      }
+    ],
+    "entry_node_id": 1,
+    "failure_node_ids": [
+      6
+    ]
+  },
+  "runtime_events_count": 29,
+  "failure_line": 6,
+  "failure_statement": "return count",
+  "candidates": [
+    {
+      "rank": 1,
+      "node_id": 6,
+      "line_number": 6,
+      "statement_code": "return count",
+      "variable_name": "count",
+      "observed_value": "2",
+      "expected_value": "1",
+      "proximity_score": 1.0,
+      "dependency_score": 1.0,
+      "explanation": "Reached via reverse traversal (distance=0, type=Return)"
+    },
+    {
+      "rank": 2,
+      "node_id": 4,
+      "line_number": 4,
+      "statement_code": "if i % 2 == 0 and c.isupper():",
+      "variable_name": "c",
+      "observed_value": "f",
+      "expected_value": null,
+      "proximity_score": 0.7,
+      "dependency_score": 0.63,
+      "explanation": "Reached via reverse traversal (distance=2, type=If)"
+    },
+    {
+      "rank": 3,
+      "node_id": 5,
+      "line_number": 5,
+      "statement_code": "count += 1",
+      "variable_name": "count",
+      "observed_value": "1",
+      "expected_value": null,
+      "proximity_score": 0.85,
+      "dependency_score": 0.9,
+      "explanation": "Reached via reverse traversal (distance=1, type=AugAssign)"
+    },
+    {
+      "rank": 4,
+      "node_id": 3,
+      "line_number": 3,
+      "statement_code": "for i, c in enumerate(s):",
+      "variable_name": "c",
+      "observed_value": "f",
+      "expected_value": null,
+      "proximity_score": 0.55,
+      "dependency_score": 0.567,
+      "explanation": "Reached via reverse traversal (distance=3, type=For)"
+    }
+  ],
+  "critical_variable": null,
+  "counterfactual_results": [
+    {
+      "candidate_rank": 1,
+      "intervention": {
+        "target_variable": "count",
+        "target_line": 6,
+        "observed_value": "2",
+        "counterfactual_value": "1",
+        "operation_type": "AST_transform",
+        "modified_code": "def count_upper(s):\n    count = 0\n    for i, c in enumerate(s):\n        if i % 2 == 0 and c.isupper():\n            count += 1\n    return 1"
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "Completed",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "TRUE",
+      "execution_time": 0.1277,
+      "status": "EXECUTED",
+      "explanation": "Intervention successfully flipped execution outcome from FAIL to PASS."
+    },
+    {
+      "candidate_rank": 2,
+      "intervention": {
+        "target_variable": "count",
+        "target_line": 5,
+        "observed_value": "1",
+        "counterfactual_value": "None",
+        "operation_type": "failed_construction",
+        "modified_code": ""
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "FAILED_CONSTRUCTION",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "UNRESOLVED",
+      "execution_time": 0.0,
+      "status": "UNRESOLVED",
+      "explanation": "Failed to construct valid AST counterfactual intervention."
+    },
+    {
+      "candidate_rank": 3,
+      "intervention": {
+        "target_variable": "c",
+        "target_line": 4,
+        "observed_value": "f",
+        "counterfactual_value": "None",
+        "operation_type": "AST_transform",
+        "modified_code": "def count_upper(s):\n    count = 0\n    for i, c in enumerate(s):\n        if i % 2 != 0 and c.isupper():\n            count += 1\n    return count"
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "Completed",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "TRUE",
+      "execution_time": 0.1214,
+      "status": "EXECUTED",
+      "explanation": "Intervention successfully flipped execution outcome from FAIL to PASS."
+    },
+    {
+      "candidate_rank": 4,
+      "intervention": {
+        "target_variable": "c",
+        "target_line": 3,
+        "observed_value": "f",
+        "counterfactual_value": "None",
+        "operation_type": "failed_construction",
+        "modified_code": ""
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "FAILED_CONSTRUCTION",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "UNRESOLVED",
+      "execution_time": 0.0,
+      "status": "UNRESOLVED",
+      "explanation": "Failed to construct valid AST counterfactual intervention."
+    }
+  ],
+  "fault_location": {
+    "file": "HE065.py",
+    "line_number": 6,
+    "statement_code": "return count",
+    "function_name": "count_upper",
+    "causal_variable": "count",
+    "evidence_score": 3.0,
+    "confidence": 0.95
+  },
+  "root_cause": {
+    "root_cause_status": "VALIDATED",
+    "candidate_explanation": "Semantic mismatch at line 6 ('return count') causes return value mismatch.",
+    "causal_variable": "count",
+    "fault_statement": "return count",
+    "fault_line": 6,
+    "evidence_summary": "Reverse PDG traversal traced failure from line 1 to statement line 6. Counterfactual intervention do(count = expected) successfully restored PASS state.",
+    "counterfactual_validated": true,
+    "confidence": 0.95
+  },
+  "ground_truth_matched": null,
+  "ground_truth_fault_line": null,
+  "execution_time": 0.2627
+}

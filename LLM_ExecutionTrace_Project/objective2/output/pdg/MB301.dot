@@ -1,0 +1,11 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def len_longest_word(words): | W:words,len_longest_word", fillcolor="lightgreen"];
+    "2" [label="L2: return max(len(word) for word in words) | W:word | R:len,max,word,words", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(words)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a python function to set the left most unset bit.
+
+Example test: assert set_left_most_unset_bit(10) == 14
+[/INST]

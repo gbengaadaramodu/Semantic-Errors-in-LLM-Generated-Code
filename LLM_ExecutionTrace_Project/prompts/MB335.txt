@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a python function to find the cube sum of first n even natural numbers.
+
+Example test: assert cube_Sum(2) == 72
+[/INST]

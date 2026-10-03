@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB186",
+  "dataset": "MBPP",
+  "task_id": "450",
+  "problem_summary": "Write a function to extract specified size of strings from a given list of strin",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp51bv429h.py\", line 4, in <module>\n    assert extract_string(['Python', 'list', 'exercises', 'practice', 'solution'] ,8)==['practice', 'solution']\n           ^^^^^^^^^^^^^^\nNameError: name 'extract_string' is not defined. Did you mean: 'extract_strings'?\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp51bv429h.py\", line 4, in <module>\n    assert extract_string(['Python', 'list', 'exercises', 'practice', 'solution'] ,8)==['practice', 'solution']\n           ^^^^^^^^^^^^^^\nNameError: name 'extract_string' is not defined. Did you mean: 'extract_strings'?",
+  "exception_type": "NameError",
+  "exception_message": "name 'extract_string' is not defined. Did you mean: 'extract_strings'?",
+  "execution_time": 0.220221,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

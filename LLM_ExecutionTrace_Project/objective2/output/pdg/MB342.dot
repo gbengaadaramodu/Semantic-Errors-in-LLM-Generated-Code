@@ -1,0 +1,38 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def find_length(binary_string): | W:binary_string,find_length", fillcolor="lightgreen"];
+    "2" [label="L2: count_zeros = 0 | W:count_zeros", fillcolor="lightgreen"];
+    "3" [label="L3: count_ones = 0 | W:count_ones", fillcolor="lightgreen"];
+    "4" [label="L4: max_diff = 0 | W:max_diff", fillcolor="lightgreen"];
+    "5" [label="L5: for char in binary_string: | W:char | R:binary_string", fillcolor="lightgreen"];
+    "6" [label="L6: if char == \"0\": | R:char", fillcolor="lightgreen"];
+    "7" [label="L7: count_zeros += 1 | W:count_zeros", fillcolor="lightgreen"];
+    "8" [label="L9: count_ones += 1 | W:count_ones", fillcolor="lightgreen"];
+    "9" [label="L10: diff = abs(count_zeros - count_ones) | W:diff | R:abs,count_ones,count_zeros", fillcolor="lightgreen"];
+    "10" [label="L11: if diff > max_diff: | R:diff,max_diff", fillcolor="lightgreen"];
+    "11" [label="L12: max_diff = diff | W:max_diff | R:diff", fillcolor="lightgreen"];
+    "12" [label="L13: return max_diff | R:max_diff", fillcolor="salmon"];
+
+    "1" -> "5" [label="DATA(binary_string)", style="solid"];
+    "5" -> "6" [label="DATA(char)", style="solid"];
+    "8" -> "9" [label="DATA(count_ones)", style="solid"];
+    "7" -> "9" [label="DATA(count_zeros)", style="solid"];
+    "9" -> "10" [label="DATA(diff)", style="solid"];
+    "4" -> "10" [label="DATA(max_diff)", style="solid"];
+    "9" -> "11" [label="DATA(diff)", style="solid"];
+    "11" -> "12" [label="DATA(max_diff)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "3" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "4" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "5" [label="CONTROL(FunctionDef)", style="dashed"];
+    "5" -> "6" [label="CONTROL(For)", style="dashed"];
+    "6" -> "7" [label="CONTROL(If)", style="dashed"];
+    "6" -> "8" [label="CONTROL(If)", style="dashed"];
+    "5" -> "9" [label="CONTROL(For)", style="dashed"];
+    "5" -> "10" [label="CONTROL(For)", style="dashed"];
+    "10" -> "11" [label="CONTROL(If)", style="dashed"];
+    "1" -> "12" [label="CONTROL(FunctionDef)", style="dashed"];
+}

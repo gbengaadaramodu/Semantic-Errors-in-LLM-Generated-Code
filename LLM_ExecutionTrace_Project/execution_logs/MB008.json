@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB008",
+  "dataset": "MBPP",
+  "task_id": "171",
+  "problem_summary": "Write a function to find the perimeter of a regular pentagon from the length of ",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpalqog9_0.py\", line 9, in <module>\n    assert perimeter_pentagon(5) == 25\n           ^^^^^^^^^^^^^^^^^^\nNameError: name 'perimeter_pentagon' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpalqog9_0.py\", line 9, in <module>\n    assert perimeter_pentagon(5) == 25\n           ^^^^^^^^^^^^^^^^^^\nNameError: name 'perimeter_pentagon' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'perimeter_pentagon' is not defined",
+  "execution_time": 0.233998,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

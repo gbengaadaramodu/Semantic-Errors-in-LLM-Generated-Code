@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a function to create a new tuple from the given string and list.
+
+Example test: assert new_tuple(["WEB", "is"], "best") == ('WEB', 'is', 'best')
+[/INST]

@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a python function to find the element of a list having maximum length.
+
+Example test: assert Find_Max([['A'],['A','B'],['A','B','C']]) == ['A','B','C']
+[/INST]

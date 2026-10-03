@@ -1,0 +1,78 @@
+[
+  {
+    "candidate_rank": 1,
+    "intervention": {
+      "target_variable": "dp",
+      "target_line": 16,
+      "observed_value": "None",
+      "counterfactual_value": "True",
+      "operation_type": "AST_transform",
+      "modified_code": "def lcs_of_three(str1, str2, str3):\n    m = len(str1)\n    n = len(str2)\n    o = len(str3)\n    dp = [[0] * (n + 1) for _ in range(m + 1)]\n    for i in range(1, m + 1):\n        for j in range(1, n + 1):\n            if str1[i - 1] == str2[j - 1]:\n                dp[i][j] = dp[i - 1][j - 1] + 1\n            else:\n                dp[i][j] = max(dp[i - 1][j], dp[i][j - 1])\n    for i in range(1, m + 1):\n        for j in range(1, n + 1):\n            if str2[j - 1] == str3[i - 1]:\n                dp[i][j] = max(dp[i][j], dp[i - 1][j - 1] + 1)\n    dp = True\n    return dp[m][n]"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.2115,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  },
+  {
+    "candidate_rank": 2,
+    "intervention": {
+      "target_variable": "_",
+      "target_line": 5,
+      "observed_value": "None",
+      "counterfactual_value": "None",
+      "operation_type": "failed_construction",
+      "modified_code": ""
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "FAILED_CONSTRUCTION",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "UNRESOLVED",
+    "execution_time": 0.0,
+    "status": "UNRESOLVED",
+    "explanation": "Failed to construct valid AST counterfactual intervention."
+  },
+  {
+    "candidate_rank": 3,
+    "intervention": {
+      "target_variable": "m",
+      "target_line": 2,
+      "observed_value": "None",
+      "counterfactual_value": "None",
+      "operation_type": "AST_transform",
+      "modified_code": "def lcs_of_three(str1, str2, str3):\n    m = None\n    n = len(str2)\n    o = len(str3)\n    dp = [[0] * (n + 1) for _ in range(m + 1)]\n    for i in range(1, m + 1):\n        for j in range(1, n + 1):\n            if str1[i - 1] == str2[j - 1]:\n                dp[i][j] = dp[i - 1][j - 1] + 1\n            else:\n                dp[i][j] = max(dp[i - 1][j], dp[i][j - 1])\n    for i in range(1, m + 1):\n        for j in range(1, n + 1):\n            if str2[j - 1] == str3[i - 1]:\n                dp[i][j] = max(dp[i][j], dp[i - 1][j - 1] + 1)\n    return dp[m][n]"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.2109,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  },
+  {
+    "candidate_rank": 4,
+    "intervention": {
+      "target_variable": "n",
+      "target_line": 3,
+      "observed_value": "None",
+      "counterfactual_value": "None",
+      "operation_type": "AST_transform",
+      "modified_code": "def lcs_of_three(str1, str2, str3):\n    m = len(str1)\n    n = None\n    o = len(str3)\n    dp = [[0] * (n + 1) for _ in range(m + 1)]\n    for i in range(1, m + 1):\n        for j in range(1, n + 1):\n            if str1[i - 1] == str2[j - 1]:\n                dp[i][j] = dp[i - 1][j - 1] + 1\n            else:\n                dp[i][j] = max(dp[i - 1][j], dp[i][j - 1])\n    for i in range(1, m + 1):\n        for j in range(1, n + 1):\n            if str2[j - 1] == str3[i - 1]:\n                dp[i][j] = max(dp[i][j], dp[i - 1][j - 1] + 1)\n    return dp[m][n]"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.2051,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  }
+]

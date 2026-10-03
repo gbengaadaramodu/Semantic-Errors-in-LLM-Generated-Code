@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a function to find the first adverb and their positions in a given sentence.
+
+Example test: assert find_adverb_position("clearly!! we can see the sky")==(0, 7, 'clearly')
+[/INST]

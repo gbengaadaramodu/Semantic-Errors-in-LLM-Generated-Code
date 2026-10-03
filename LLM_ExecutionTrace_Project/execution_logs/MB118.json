@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB118",
+  "dataset": "MBPP",
+  "task_id": "616",
+  "problem_summary": "Write a function which takes two tuples of the same length and performs the elem",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpm_7n4ghx.py\", line 4, in <module>\n    assert tuple_modulo((10, 4, 5, 6), (5, 6, 7, 5)) == (0, 4, 5, 1)\n           ^^^^^^^^^^^^\nNameError: name 'tuple_modulo' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpm_7n4ghx.py\", line 4, in <module>\n    assert tuple_modulo((10, 4, 5, 6), (5, 6, 7, 5)) == (0, 4, 5, 1)\n           ^^^^^^^^^^^^\nNameError: name 'tuple_modulo' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'tuple_modulo' is not defined",
+  "execution_time": 0.241541,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

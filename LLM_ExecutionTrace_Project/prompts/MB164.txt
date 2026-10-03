@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a python function to find the next perfect square greater than a given number.
+
+Example test: assert next_Perfect_Square(35) == 36
+[/INST]

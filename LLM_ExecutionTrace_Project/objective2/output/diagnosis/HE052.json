@@ -1,0 +1,289 @@
+{
+  "trace_id": "HE052",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/160",
+  "error_category": "Syntax Error",
+  "analysis_status": "ANALYZED",
+  "skip_reason": null,
+  "input_record": {
+    "trace_id": "HE052",
+    "dataset": "HumanEval",
+    "task_id": "HumanEval/160",
+    "problem_summary": "\ndef do_algebra(operator, operand):\n    \"\"\"\n    Given two lists operator, and op",
+    "execution_status": "Failed",
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpty1qrfor.py\", line 17, in <module>\n    check(do_algebra)\n    ~~~~~^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpty1qrfor.py\", line 8, in check\n    assert candidate(['**', '*', '+'], [2, 3, 4, 5]) == 37\n           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpty1qrfor.py\", line 2, in do_algebra\n    result = eval(\" \".join(map(str, operand)))\n  File \"<string>\", line 1\n    2 3 4 5\n      ^\nSyntaxError: invalid syntax\n",
+    "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpty1qrfor.py\", line 17, in <module>\n    check(do_algebra)\n    ~~~~~^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpty1qrfor.py\", line 8, in check\n    assert candidate(['**', '*', '+'], [2, 3, 4, 5]) == 37\n           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpty1qrfor.py\", line 2, in do_algebra\n    result = eval(\" \".join(map(str, operand)))\n  File \"<string>\", line 1\n    2 3 4 5\n      ^\nSyntaxError: invalid syntax",
+    "exception_type": "SyntaxError",
+    "exception_message": "invalid syntax",
+    "execution_time": 0.286009,
+    "timed_out": false,
+    "exit_code": 1,
+    "tests_passed": false,
+    "tests_failed": 0,
+    "expected_output": null,
+    "actual_output": null,
+    "assertion_source": null,
+    "assertion_failed": false,
+    "parser_prediction": "Syntax Error"
+  },
+  "scm": {
+    "task_id": "HumanEval/160",
+    "nodes": [
+      {
+        "node_id": "S",
+        "variable_name": "Specification",
+        "symbol": "S",
+        "label": "Specification"
+      },
+      {
+        "node_id": "C",
+        "variable_name": "GeneratedCode",
+        "symbol": "C",
+        "label": "Generated Code"
+      },
+      {
+        "node_id": "E",
+        "variable_name": "ExecutionTrace",
+        "symbol": "E",
+        "label": "Execution Trace"
+      },
+      {
+        "node_id": "T",
+        "variable_name": "TestSuite",
+        "symbol": "T",
+        "label": "Test Suite"
+      },
+      {
+        "node_id": "O",
+        "variable_name": "Outcome",
+        "symbol": "O",
+        "label": "Outcome"
+      }
+    ],
+    "edges": [
+      {
+        "source": "S",
+        "target": "C",
+        "relationship": "generates"
+      },
+      {
+        "source": "C",
+        "target": "E",
+        "relationship": "produces"
+      },
+      {
+        "source": "T",
+        "target": "E",
+        "relationship": "evaluates"
+      },
+      {
+        "source": "E",
+        "target": "O",
+        "relationship": "determines"
+      }
+    ],
+    "variables": {
+      "S": {
+        "name": "Specification",
+        "symbol": "S",
+        "description": "Problem description, prompt, and target function signature",
+        "value": "\ndef do_algebra(operator, operand):\n    \"\"\"\n    Given two lists operator, and op"
+      },
+      "C": {
+        "name": "GeneratedCode",
+        "symbol": "C",
+        "description": "LLM-generated Python source code implementation",
+        "value": "def do_algebra(operator, operand):\n    result = eval(\" \".join(map(str, operand)))\n    return result"
+      },
+      "E": {
+        "name": "ExecutionTrace",
+        "symbol": "E",
+        "description": "Observable runtime trace events, variable states, and stdout/stderr",
+        "value": "status=Failed, exc=SyntaxError, msg=invalid syntax"
+      },
+      "T": {
+        "name": "TestSuite",
+        "symbol": "T",
+        "description": "Benchmark assertions, inputs, and check function harness",
+        "value": "def check(candidate):\n\n    # Check some simple cases\n    assert candidate(['**', '*', '+'], [2, 3, 4"
+      },
+      "O": {
+        "name": "Outcome",
+        "symbol": "O",
+        "description": "Final test execution outcome (Completed/Failed/Timeout)",
+        "value": "Failed"
+      }
+    }
+  },
+  "pdg": {
+    "nodes": {
+      "1": {
+        "node_id": 1,
+        "line_number": 1,
+        "source_code": "def do_algebra(operator, operand):",
+        "statement_type": "FunctionDef",
+        "reads": [],
+        "writes": [
+          "operand",
+          "operator",
+          "do_algebra"
+        ],
+        "function_name": "<module>",
+        "executed": true,
+        "execution_count": 2,
+        "runtime_values": {
+          "operator": [
+            "['**', '*', '+']"
+          ],
+          "operand": [
+            "[2, 3, 4, 5]"
+          ]
+        },
+        "failure_related": true
+      },
+      "2": {
+        "node_id": 2,
+        "line_number": 2,
+        "source_code": "result = eval(\" \".join(map(str, operand)))",
+        "statement_type": "Assign",
+        "reads": [
+          "eval",
+          "map",
+          "operand",
+          "str"
+        ],
+        "writes": [
+          "result"
+        ],
+        "function_name": "do_algebra",
+        "executed": true,
+        "execution_count": 3,
+        "runtime_values": {
+          "operator": [
+            "['**', '*', '+']",
+            "['**', '*', '+']",
+            "['**', '*', '+']"
+          ],
+          "operand": [
+            "[2, 3, 4, 5]",
+            "[2, 3, 4, 5]",
+            "[2, 3, 4, 5]"
+          ]
+        },
+        "failure_related": true
+      },
+      "3": {
+        "node_id": 3,
+        "line_number": 3,
+        "source_code": "return result",
+        "statement_type": "Return",
+        "reads": [
+          "result"
+        ],
+        "writes": [],
+        "function_name": "do_algebra",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      }
+    },
+    "edges": [
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "DATA",
+        "variable": "operand",
+        "label": "DATA(operand)"
+      },
+      {
+        "source_id": 2,
+        "target_id": 3,
+        "dependency_type": "DATA",
+        "variable": "result",
+        "label": "DATA(result)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 3,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      }
+    ],
+    "entry_node_id": 1,
+    "failure_node_ids": [
+      2,
+      1
+    ]
+  },
+  "runtime_events_count": 14,
+  "failure_line": 1,
+  "failure_statement": "def do_algebra(operator, operand):",
+  "candidates": [
+    {
+      "rank": 1,
+      "node_id": 2,
+      "line_number": 2,
+      "statement_code": "result = eval(\" \".join(map(str, operand)))",
+      "variable_name": "result",
+      "observed_value": null,
+      "expected_value": null,
+      "proximity_score": 1.0,
+      "dependency_score": 1.0,
+      "explanation": "Reached via reverse traversal (distance=0, type=Assign)"
+    }
+  ],
+  "critical_variable": null,
+  "counterfactual_results": [
+    {
+      "candidate_rank": 1,
+      "intervention": {
+        "target_variable": "result",
+        "target_line": 2,
+        "observed_value": "None",
+        "counterfactual_value": "None",
+        "operation_type": "AST_transform",
+        "modified_code": "def do_algebra(operator, operand):\n    result = None\n    return result"
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "Failed",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "FALSE",
+      "execution_time": 0.1881,
+      "status": "EXECUTED",
+      "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+    }
+  ],
+  "fault_location": {
+    "file": "HE052.py",
+    "line_number": 2,
+    "statement_code": "result = eval(\" \".join(map(str, operand)))",
+    "function_name": "do_algebra",
+    "causal_variable": "result",
+    "evidence_score": 0.5,
+    "confidence": 0.3
+  },
+  "root_cause": {
+    "root_cause_status": "UNRESOLVED",
+    "candidate_explanation": "Runtime exception (SyntaxError: invalid syntax) triggered at statement 'result = eval(\" \".join(map(str, operand)))' (line 2) involving variable 'result'.",
+    "causal_variable": "result",
+    "fault_statement": "result = eval(\" \".join(map(str, operand)))",
+    "fault_line": 2,
+    "evidence_summary": "Reverse PDG traversal traced failure from line 1 to statement line 2. Structural dependency identified; counterfactual validation unconfirmed or unresolved.",
+    "counterfactual_validated": false,
+    "confidence": 0.3
+  },
+  "ground_truth_matched": null,
+  "ground_truth_fault_line": null,
+  "execution_time": 0.1998
+}

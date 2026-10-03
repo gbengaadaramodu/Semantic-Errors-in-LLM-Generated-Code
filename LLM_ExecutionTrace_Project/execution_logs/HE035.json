@@ -1,0 +1,22 @@
+{
+  "trace_id": "HE035",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/156",
+  "problem_summary": "\ndef int_to_mini_roman(number):\n    \"\"\"\n    Given a positive integer, obtain its",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp0ir5azcc.py\", line 28, in <module>\n    check(int_to_mini_roman)\n    ~~~~~^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp0ir5azcc.py\", line 8, in check\n    assert candidate(19) == 'xix'\n           ~~~~~~~~~^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp0ir5azcc.py\", line 3, in int_to_mini_roman\n    return roman_numerals[number]\n           ~~~~~~~~~~~~~~^^^^^^^^\nIndexError: list index out of range\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp0ir5azcc.py\", line 28, in <module>\n    check(int_to_mini_roman)\n    ~~~~~^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp0ir5azcc.py\", line 8, in check\n    assert candidate(19) == 'xix'\n           ~~~~~~~~~^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp0ir5azcc.py\", line 3, in int_to_mini_roman\n    return roman_numerals[number]\n           ~~~~~~~~~~~~~~^^^^^^^^\nIndexError: list index out of range",
+  "exception_type": "IndexError",
+  "exception_message": "list index out of range",
+  "execution_time": 0.30187,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

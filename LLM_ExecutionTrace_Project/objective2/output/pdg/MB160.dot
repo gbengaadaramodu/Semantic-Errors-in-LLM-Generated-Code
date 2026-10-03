@@ -1,0 +1,13 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def merge_dictionaries_three(dict1, dict2, dict3): | W:dict1,dict2,dict3,merge_dictionaries_three", fillcolor="lightgreen"];
+    "2" [label="L2: return {**dict1, **dict2, **dict3} | R:dict1,dict2,dict3", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(dict1)", style="solid"];
+    "1" -> "2" [label="DATA(dict2)", style="solid"];
+    "1" -> "2" [label="DATA(dict3)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

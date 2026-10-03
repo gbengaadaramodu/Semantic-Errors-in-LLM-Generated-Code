@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a python function to find the character made by adding the ASCII value of all the characters of the given string modulo 26.
+
+Example test: assert get_Char("abc") == "f"
+[/INST]

@@ -1,0 +1,25 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def pair_xor_sum(my_list, n): | W:my_list,n,pair_xor_sum", fillcolor="lightgreen"];
+    "2" [label="L2: result = 0 | W:result", fillcolor="lightgrey"];
+    "3" [label="L3: for i in range(n): | W:i | R:n,range", fillcolor="lightgrey"];
+    "4" [label="L4: for j in range(i+1, n): | W:j | R:i,n,range", fillcolor="lightgrey"];
+    "5" [label="L5: result += my_list[i] ^ my_list[j] | W:result | R:i,j,my_list", fillcolor="lightgrey"];
+    "6" [label="L6: return result | R:result", fillcolor="salmon"];
+
+    "1" -> "3" [label="DATA(n)", style="solid"];
+    "3" -> "4" [label="DATA(i)", style="solid"];
+    "1" -> "4" [label="DATA(n)", style="solid"];
+    "3" -> "5" [label="DATA(i)", style="solid"];
+    "4" -> "5" [label="DATA(j)", style="solid"];
+    "1" -> "5" [label="DATA(my_list)", style="solid"];
+    "5" -> "6" [label="DATA(result)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "3" [label="CONTROL(FunctionDef)", style="dashed"];
+    "3" -> "4" [label="CONTROL(For)", style="dashed"];
+    "4" -> "5" [label="CONTROL(For)", style="dashed"];
+    "1" -> "6" [label="CONTROL(FunctionDef)", style="dashed"];
+}

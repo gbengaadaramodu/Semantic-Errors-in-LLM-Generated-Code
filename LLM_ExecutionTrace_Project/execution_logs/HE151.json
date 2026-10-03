@@ -1,0 +1,22 @@
+{
+  "trace_id": "HE151",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/18",
+  "problem_summary": "\n\ndef how_many_times(string: str, substring: str) -> int:\n    \"\"\" Find how many ",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp_8pk7q82.py\", line 19, in <module>\n    check(how_many_times)\n    ~~~~~^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp_8pk7q82.py\", line 15, in check\n    assert candidate('cacacacac', 'cac') == 4\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp_8pk7q82.py\", line 19, in <module>\n    check(how_many_times)\n    ~~~~~^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp_8pk7q82.py\", line 15, in check\n    assert candidate('cacacacac', 'cac') == 4\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+  "exception_type": "AssertionError",
+  "exception_message": "",
+  "execution_time": 0.351548,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": "benchmark_test",
+  "assertion_failed": true,
+  "parser_prediction": ""
+}

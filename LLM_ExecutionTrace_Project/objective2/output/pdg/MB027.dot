@@ -1,0 +1,16 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def max_occurrences(my_list): | W:my_list,max_occurrences", fillcolor="lightgreen"];
+    "2" [label="L2: if not my_list: | R:my_list", fillcolor="lightgrey"];
+    "3" [label="L3: return None", fillcolor="lightgrey"];
+    "4" [label="L4: return max(set(my_list), key=my_list.count) | R:max,my_list,set", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(my_list)", style="solid"];
+    "1" -> "4" [label="DATA(my_list)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "2" -> "3" [label="CONTROL(If)", style="dashed"];
+    "1" -> "4" [label="CONTROL(FunctionDef)", style="dashed"];
+}

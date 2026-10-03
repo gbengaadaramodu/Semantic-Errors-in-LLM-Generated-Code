@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a function to check if the given number is woodball or not.
+
+Example test: assert is_woodall(383) == True
+[/INST]

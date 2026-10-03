@@ -1,0 +1,22 @@
+{
+  "trace_id": "HE069",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/126",
+  "problem_summary": "\ndef is_sorted(lst):\n    '''\n    Given a list of numbers, return whether or not ",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp9t5xo9up.py\", line 25, in <module>\n    check(is_sorted)\n    ~~~~~^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp9t5xo9up.py\", line 20, in check\n    assert candidate([1, 2, 2, 3, 3, 4]) == True, \"This prints if this assert fails 7 (good for debugging!)\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: This prints if this assert fails 7 (good for debugging!)\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp9t5xo9up.py\", line 25, in <module>\n    check(is_sorted)\n    ~~~~~^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp9t5xo9up.py\", line 20, in check\n    assert candidate([1, 2, 2, 3, 3, 4]) == True, \"This prints if this assert fails 7 (good for debugging!)\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: This prints if this assert fails 7 (good for debugging!)",
+  "exception_type": "AssertionError",
+  "exception_message": "This prints if this assert fails 7 (good for debugging!)",
+  "execution_time": 0.223146,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": "benchmark_test",
+  "assertion_failed": true,
+  "parser_prediction": ""
+}

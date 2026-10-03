@@ -1,0 +1,11 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def largest_neg(my_list): | W:my_list,largest_neg", fillcolor="lightgreen"];
+    "2" [label="L2: return max(x for x in my_list if x < 0) | W:x | R:max,my_list,x", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(my_list)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

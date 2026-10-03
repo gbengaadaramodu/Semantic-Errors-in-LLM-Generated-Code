@@ -1,0 +1,22 @@
+{
+  "trace_id": "HE105",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/140",
+  "problem_summary": "\ndef fix_spaces(text):\n    \"\"\"\n    Given a string text, replace all spaces in it",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp5axh_br5.py\", line 17, in <module>\n    check(fix_spaces)\n    ~~~~~^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp5axh_br5.py\", line 12, in check\n    assert candidate(\"Exa   mple\") == \"Exa-mple\", \"This prints if this assert fails 4 (good for debugging!)\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: This prints if this assert fails 4 (good for debugging!)\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp5axh_br5.py\", line 17, in <module>\n    check(fix_spaces)\n    ~~~~~^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp5axh_br5.py\", line 12, in check\n    assert candidate(\"Exa   mple\") == \"Exa-mple\", \"This prints if this assert fails 4 (good for debugging!)\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: This prints if this assert fails 4 (good for debugging!)",
+  "exception_type": "AssertionError",
+  "exception_message": "This prints if this assert fails 4 (good for debugging!)",
+  "execution_time": 0.321578,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": "benchmark_test",
+  "assertion_failed": true,
+  "parser_prediction": ""
+}

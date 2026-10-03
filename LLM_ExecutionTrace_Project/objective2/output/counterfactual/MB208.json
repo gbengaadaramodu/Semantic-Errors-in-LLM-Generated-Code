@@ -1,0 +1,59 @@
+[
+  {
+    "candidate_rank": 1,
+    "intervention": {
+      "target_variable": "n",
+      "target_line": 4,
+      "observed_value": "8",
+      "counterfactual_value": "15",
+      "operation_type": "AST_transform",
+      "modified_code": "def toggle_middle_bits(n):\n    n = n >> 1\n    n = n << 1\n    return 15"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Completed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "TRUE",
+    "execution_time": 0.1113,
+    "status": "EXECUTED",
+    "explanation": "Intervention successfully flipped execution outcome from FAIL to PASS."
+  },
+  {
+    "candidate_rank": 2,
+    "intervention": {
+      "target_variable": "n",
+      "target_line": 3,
+      "observed_value": "4",
+      "counterfactual_value": "None",
+      "operation_type": "AST_transform",
+      "modified_code": "def toggle_middle_bits(n):\n    n = n >> 1\n    n = None\n    return n"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.2088,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  },
+  {
+    "candidate_rank": 3,
+    "intervention": {
+      "target_variable": "n",
+      "target_line": 2,
+      "observed_value": "9",
+      "counterfactual_value": "None",
+      "operation_type": "AST_transform",
+      "modified_code": "def toggle_middle_bits(n):\n    n = None\n    n = n << 1\n    return n"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.2891,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  }
+]

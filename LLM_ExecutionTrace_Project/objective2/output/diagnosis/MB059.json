@@ -1,0 +1,365 @@
+{
+  "trace_id": "MB059",
+  "dataset": "MBPP",
+  "task_id": "443",
+  "error_category": "Runtime Exception",
+  "analysis_status": "ANALYZED",
+  "skip_reason": null,
+  "input_record": {
+    "trace_id": "MB059",
+    "dataset": "MBPP",
+    "task_id": "443",
+    "problem_summary": "Write a python function to find the largest negative number from the given list.",
+    "execution_status": "Failed",
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp2c6aetsc.py\", line 9, in <module>\n    assert largest_neg([1,2,3,-4,-6]) == -6\n           ^^^^^^^^^^^\nNameError: name 'largest_neg' is not defined\n",
+    "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp2c6aetsc.py\", line 9, in <module>\n    assert largest_neg([1,2,3,-4,-6]) == -6\n           ^^^^^^^^^^^\nNameError: name 'largest_neg' is not defined",
+    "exception_type": "NameError",
+    "exception_message": "name 'largest_neg' is not defined",
+    "execution_time": 0.236253,
+    "timed_out": false,
+    "exit_code": 1,
+    "tests_passed": false,
+    "tests_failed": 0,
+    "expected_output": null,
+    "actual_output": null,
+    "assertion_source": null,
+    "assertion_failed": false,
+    "parser_prediction": "Runtime Exception"
+  },
+  "scm": {
+    "task_id": "443",
+    "nodes": [
+      {
+        "node_id": "S",
+        "variable_name": "Specification",
+        "symbol": "S",
+        "label": "Specification"
+      },
+      {
+        "node_id": "C",
+        "variable_name": "GeneratedCode",
+        "symbol": "C",
+        "label": "Generated Code"
+      },
+      {
+        "node_id": "E",
+        "variable_name": "ExecutionTrace",
+        "symbol": "E",
+        "label": "Execution Trace"
+      },
+      {
+        "node_id": "T",
+        "variable_name": "TestSuite",
+        "symbol": "T",
+        "label": "Test Suite"
+      },
+      {
+        "node_id": "O",
+        "variable_name": "Outcome",
+        "symbol": "O",
+        "label": "Outcome"
+      }
+    ],
+    "edges": [
+      {
+        "source": "S",
+        "target": "C",
+        "relationship": "generates"
+      },
+      {
+        "source": "C",
+        "target": "E",
+        "relationship": "produces"
+      },
+      {
+        "source": "T",
+        "target": "E",
+        "relationship": "evaluates"
+      },
+      {
+        "source": "E",
+        "target": "O",
+        "relationship": "determines"
+      }
+    ],
+    "variables": {
+      "S": {
+        "name": "Specification",
+        "symbol": "S",
+        "description": "Problem description, prompt, and target function signature",
+        "value": "Write a python function to find the largest negative number from the given list."
+      },
+      "C": {
+        "name": "GeneratedCode",
+        "symbol": "C",
+        "description": "LLM-generated Python source code implementation",
+        "value": "def prime_num(n):\n    if n <= 1:\n        return False\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0:\n            return False\n    return True"
+      },
+      "E": {
+        "name": "ExecutionTrace",
+        "symbol": "E",
+        "description": "Observable runtime trace events, variable states, and stdout/stderr",
+        "value": "status=Failed, exc=NameError, msg=name 'largest_neg' is not defined"
+      },
+      "T": {
+        "name": "TestSuite",
+        "symbol": "T",
+        "description": "Benchmark assertions, inputs, and check function harness",
+        "value": "assert largest_neg([1,2,3,-4,-6]) == -6\nassert largest_neg([1,2,3,-8,-9]) == -9\nassert largest_neg(["
+      },
+      "O": {
+        "name": "Outcome",
+        "symbol": "O",
+        "description": "Final test execution outcome (Completed/Failed/Timeout)",
+        "value": "Failed"
+      }
+    }
+  },
+  "pdg": {
+    "nodes": {
+      "1": {
+        "node_id": 1,
+        "line_number": 1,
+        "source_code": "def prime_num(n):",
+        "statement_type": "FunctionDef",
+        "reads": [],
+        "writes": [
+          "n",
+          "prime_num"
+        ],
+        "function_name": "<module>",
+        "executed": true,
+        "execution_count": 1,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "2": {
+        "node_id": 2,
+        "line_number": 2,
+        "source_code": "if n <= 1:",
+        "statement_type": "If",
+        "reads": [
+          "n"
+        ],
+        "writes": [],
+        "function_name": "prime_num",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "3": {
+        "node_id": 3,
+        "line_number": 3,
+        "source_code": "return False",
+        "statement_type": "Return",
+        "reads": [],
+        "writes": [],
+        "function_name": "prime_num",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "4": {
+        "node_id": 4,
+        "line_number": 4,
+        "source_code": "for i in range(2, int(n**0.5) + 1):",
+        "statement_type": "For",
+        "reads": [
+          "int",
+          "n",
+          "range"
+        ],
+        "writes": [
+          "i"
+        ],
+        "function_name": "prime_num",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "5": {
+        "node_id": 5,
+        "line_number": 5,
+        "source_code": "if n % i == 0:",
+        "statement_type": "If",
+        "reads": [
+          "i",
+          "n"
+        ],
+        "writes": [],
+        "function_name": "prime_num",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "6": {
+        "node_id": 6,
+        "line_number": 6,
+        "source_code": "return False",
+        "statement_type": "Return",
+        "reads": [],
+        "writes": [],
+        "function_name": "prime_num",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "7": {
+        "node_id": 7,
+        "line_number": 7,
+        "source_code": "return True",
+        "statement_type": "Return",
+        "reads": [],
+        "writes": [],
+        "function_name": "prime_num",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": true
+      }
+    },
+    "edges": [
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "DATA",
+        "variable": "n",
+        "label": "DATA(n)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 4,
+        "dependency_type": "DATA",
+        "variable": "n",
+        "label": "DATA(n)"
+      },
+      {
+        "source_id": 4,
+        "target_id": 5,
+        "dependency_type": "DATA",
+        "variable": "i",
+        "label": "DATA(i)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 5,
+        "dependency_type": "DATA",
+        "variable": "n",
+        "label": "DATA(n)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 2,
+        "target_id": 3,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(If)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 4,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 4,
+        "target_id": 5,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(For)"
+      },
+      {
+        "source_id": 5,
+        "target_id": 6,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(If)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 7,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      }
+    ],
+    "entry_node_id": 1,
+    "failure_node_ids": [
+      7
+    ]
+  },
+  "runtime_events_count": 5,
+  "failure_line": 7,
+  "failure_statement": "return True",
+  "candidates": [
+    {
+      "rank": 1,
+      "node_id": 7,
+      "line_number": 7,
+      "statement_code": "return True",
+      "variable_name": "<statement>",
+      "observed_value": null,
+      "expected_value": "-6",
+      "proximity_score": 1.0,
+      "dependency_score": 1.0,
+      "explanation": "Reached via reverse traversal (distance=0, type=Return)"
+    }
+  ],
+  "critical_variable": null,
+  "counterfactual_results": [
+    {
+      "candidate_rank": 1,
+      "intervention": {
+        "target_variable": "<statement>",
+        "target_line": 7,
+        "observed_value": "None",
+        "counterfactual_value": "-6",
+        "operation_type": "failed_construction",
+        "modified_code": ""
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "FAILED_CONSTRUCTION",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "UNRESOLVED",
+      "execution_time": 0.0,
+      "status": "UNRESOLVED",
+      "explanation": "Failed to construct valid AST counterfactual intervention."
+    }
+  ],
+  "fault_location": {
+    "file": "MB059.py",
+    "line_number": 7,
+    "statement_code": "return True",
+    "function_name": "largest_neg",
+    "causal_variable": "<statement>",
+    "evidence_score": 1.0,
+    "confidence": 0.5
+  },
+  "root_cause": {
+    "root_cause_status": "UNRESOLVED",
+    "candidate_explanation": "Runtime exception (NameError: name 'largest_neg' is not defined) triggered at statement 'return True' (line 7) involving variable '<statement>'.",
+    "causal_variable": "<statement>",
+    "fault_statement": "return True",
+    "fault_line": 7,
+    "evidence_summary": "Reverse PDG traversal traced failure from line 1 to statement line 7. Structural dependency identified; counterfactual validation unconfirmed or unresolved.",
+    "counterfactual_validated": false,
+    "confidence": 0.5
+  },
+  "ground_truth_matched": null,
+  "ground_truth_fault_line": null,
+  "execution_time": 0.0109
+}

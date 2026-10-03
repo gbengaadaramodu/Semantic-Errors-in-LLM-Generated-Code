@@ -1,0 +1,22 @@
+{
+  "trace_id": "HE088",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/147",
+  "problem_summary": "\ndef get_max_triples(n):\n    \"\"\"\n    You are given a positive integer n. You hav",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpujqj6jq7.py\", line 19, in <module>\n    check(get_max_triples)\n    ~~~~~^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpujqj6jq7.py\", line 13, in check\n    assert candidate(5) == 1\n           ^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpujqj6jq7.py\", line 19, in <module>\n    check(get_max_triples)\n    ~~~~~^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpujqj6jq7.py\", line 13, in check\n    assert candidate(5) == 1\n           ^^^^^^^^^^^^^^^^^\nAssertionError",
+  "exception_type": "AssertionError",
+  "exception_message": "",
+  "execution_time": 0.212028,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": "benchmark_test",
+  "assertion_failed": true,
+  "parser_prediction": ""
+}

@@ -1,0 +1,247 @@
+{
+  "trace_id": "MB311",
+  "dataset": "MBPP",
+  "task_id": "252",
+  "error_category": "Runtime Exception",
+  "analysis_status": "ANALYZED",
+  "skip_reason": null,
+  "input_record": {
+    "trace_id": "MB311",
+    "dataset": "MBPP",
+    "task_id": "252",
+    "problem_summary": "Write a python function to convert complex numbers to polar coordinates.",
+    "execution_status": "Failed",
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpbugutnn0.py\", line 4, in <module>\n    assert convert(1) == (1.0, 0.0)\n           ~~~~~~~^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpbugutnn0.py\", line 2, in convert\n    return (abs(z), math.atan2(z.imag, z.real))\n                    ^^^^\nNameError: name 'math' is not defined. Did you forget to import 'math'?\n",
+    "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpbugutnn0.py\", line 4, in <module>\n    assert convert(1) == (1.0, 0.0)\n           ~~~~~~~^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpbugutnn0.py\", line 2, in convert\n    return (abs(z), math.atan2(z.imag, z.real))\n                    ^^^^\nNameError: name 'math' is not defined. Did you forget to import 'math'?",
+    "exception_type": "NameError",
+    "exception_message": "name 'math' is not defined. Did you forget to import 'math'?",
+    "execution_time": 0.18567,
+    "timed_out": false,
+    "exit_code": 1,
+    "tests_passed": false,
+    "tests_failed": 0,
+    "expected_output": null,
+    "actual_output": null,
+    "assertion_source": null,
+    "assertion_failed": false,
+    "parser_prediction": "Runtime Exception"
+  },
+  "scm": {
+    "task_id": "252",
+    "nodes": [
+      {
+        "node_id": "S",
+        "variable_name": "Specification",
+        "symbol": "S",
+        "label": "Specification"
+      },
+      {
+        "node_id": "C",
+        "variable_name": "GeneratedCode",
+        "symbol": "C",
+        "label": "Generated Code"
+      },
+      {
+        "node_id": "E",
+        "variable_name": "ExecutionTrace",
+        "symbol": "E",
+        "label": "Execution Trace"
+      },
+      {
+        "node_id": "T",
+        "variable_name": "TestSuite",
+        "symbol": "T",
+        "label": "Test Suite"
+      },
+      {
+        "node_id": "O",
+        "variable_name": "Outcome",
+        "symbol": "O",
+        "label": "Outcome"
+      }
+    ],
+    "edges": [
+      {
+        "source": "S",
+        "target": "C",
+        "relationship": "generates"
+      },
+      {
+        "source": "C",
+        "target": "E",
+        "relationship": "produces"
+      },
+      {
+        "source": "T",
+        "target": "E",
+        "relationship": "evaluates"
+      },
+      {
+        "source": "E",
+        "target": "O",
+        "relationship": "determines"
+      }
+    ],
+    "variables": {
+      "S": {
+        "name": "Specification",
+        "symbol": "S",
+        "description": "Problem description, prompt, and target function signature",
+        "value": "Write a python function to convert complex numbers to polar coordinates."
+      },
+      "C": {
+        "name": "GeneratedCode",
+        "symbol": "C",
+        "description": "LLM-generated Python source code implementation",
+        "value": "def convert(z):\n    return (abs(z), math.atan2(z.imag, z.real))"
+      },
+      "E": {
+        "name": "ExecutionTrace",
+        "symbol": "E",
+        "description": "Observable runtime trace events, variable states, and stdout/stderr",
+        "value": "status=Failed, exc=NameError, msg=name 'math' is not defined. Did you forget to import 'math'?"
+      },
+      "T": {
+        "name": "TestSuite",
+        "symbol": "T",
+        "description": "Benchmark assertions, inputs, and check function harness",
+        "value": "assert convert(1) == (1.0, 0.0)\nassert convert(4) == (4.0,0.0)\nassert convert(5) == (5.0,0.0)"
+      },
+      "O": {
+        "name": "Outcome",
+        "symbol": "O",
+        "description": "Final test execution outcome (Completed/Failed/Timeout)",
+        "value": "Failed"
+      }
+    }
+  },
+  "pdg": {
+    "nodes": {
+      "1": {
+        "node_id": 1,
+        "line_number": 1,
+        "source_code": "def convert(z):",
+        "statement_type": "FunctionDef",
+        "reads": [],
+        "writes": [
+          "z",
+          "convert"
+        ],
+        "function_name": "<module>",
+        "executed": true,
+        "execution_count": 2,
+        "runtime_values": {
+          "z": [
+            "1"
+          ]
+        },
+        "failure_related": false
+      },
+      "2": {
+        "node_id": 2,
+        "line_number": 2,
+        "source_code": "return (abs(z), math.atan2(z.imag, z.real))",
+        "statement_type": "Return",
+        "reads": [
+          "abs",
+          "math",
+          "z"
+        ],
+        "writes": [],
+        "function_name": "convert",
+        "executed": true,
+        "execution_count": 3,
+        "runtime_values": {
+          "z": [
+            "1",
+            "1",
+            "1"
+          ]
+        },
+        "failure_related": true
+      }
+    },
+    "edges": [
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "DATA",
+        "variable": "z",
+        "label": "DATA(z)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      }
+    ],
+    "entry_node_id": 1,
+    "failure_node_ids": [
+      2
+    ]
+  },
+  "runtime_events_count": 9,
+  "failure_line": 2,
+  "failure_statement": "return (abs(z), math.atan2(z.imag, z.real))",
+  "candidates": [
+    {
+      "rank": 1,
+      "node_id": 2,
+      "line_number": 2,
+      "statement_code": "return (abs(z), math.atan2(z.imag, z.real))",
+      "variable_name": "abs",
+      "observed_value": null,
+      "expected_value": "(1.0, 0.0)",
+      "proximity_score": 1.0,
+      "dependency_score": 1.0,
+      "explanation": "Reached via reverse traversal (distance=0, type=Return)"
+    }
+  ],
+  "critical_variable": null,
+  "counterfactual_results": [
+    {
+      "candidate_rank": 1,
+      "intervention": {
+        "target_variable": "abs",
+        "target_line": 2,
+        "observed_value": "None",
+        "counterfactual_value": "(1.0, 0.0)",
+        "operation_type": "AST_transform",
+        "modified_code": "def convert(z):\n    abs = (1.0, 0.0)\n    return (abs(z), math.atan2(z.imag, z.real))"
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "Failed",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "FALSE",
+      "execution_time": 0.2384,
+      "status": "EXECUTED",
+      "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+    }
+  ],
+  "fault_location": {
+    "file": "MB311.py",
+    "line_number": 2,
+    "statement_code": "return (abs(z), math.atan2(z.imag, z.real))",
+    "function_name": "convert",
+    "causal_variable": "abs",
+    "evidence_score": 0.5,
+    "confidence": 0.3
+  },
+  "root_cause": {
+    "root_cause_status": "UNRESOLVED",
+    "candidate_explanation": "Runtime exception (NameError: name 'math' is not defined. Did you forget to import 'math'?) triggered at statement 'return (abs(z), math.atan2(z.imag, z.real))' (line 2) involving variable 'abs'.",
+    "causal_variable": "abs",
+    "fault_statement": "return (abs(z), math.atan2(z.imag, z.real))",
+    "fault_line": 2,
+    "evidence_summary": "Reverse PDG traversal traced failure from line 1 to statement line 2. Structural dependency identified; counterfactual validation unconfirmed or unresolved.",
+    "counterfactual_validated": false,
+    "confidence": 0.3
+  },
+  "ground_truth_matched": null,
+  "ground_truth_fault_line": null,
+  "execution_time": 0.2475
+}

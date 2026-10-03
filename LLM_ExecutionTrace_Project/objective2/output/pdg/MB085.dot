@@ -1,0 +1,12 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: import math", fillcolor="lightgreen"];
+    "2" [label="L3: def volume_sphere(radius): | W:radius,volume_sphere", fillcolor="lightgreen"];
+    "3" [label="L4: return (4/3) * math.pi * radius**3 | R:math,radius", fillcolor="salmon"];
+
+    "2" -> "3" [label="DATA(radius)", style="solid"];
+    "2" -> "3" [label="CONTROL(FunctionDef)", style="dashed"];
+}

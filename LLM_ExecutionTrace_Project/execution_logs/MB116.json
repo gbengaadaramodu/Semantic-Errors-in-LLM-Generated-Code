@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB116",
+  "dataset": "MBPP",
+  "task_id": "721",
+  "problem_summary": "Given a square matrix of size N*N given as a list of lists, where each cell is a",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpwwo20ayn.py\", line 4, in <module>\n    assert maxAverageOfPath([[1, 2, 3], [6, 5, 4], [7, 3, 9]]) == 5.2\n           ^^^^^^^^^^^^^^^^\nNameError: name 'maxAverageOfPath' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpwwo20ayn.py\", line 4, in <module>\n    assert maxAverageOfPath([[1, 2, 3], [6, 5, 4], [7, 3, 9]]) == 5.2\n           ^^^^^^^^^^^^^^^^\nNameError: name 'maxAverageOfPath' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'maxAverageOfPath' is not defined",
+  "execution_time": 0.246335,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

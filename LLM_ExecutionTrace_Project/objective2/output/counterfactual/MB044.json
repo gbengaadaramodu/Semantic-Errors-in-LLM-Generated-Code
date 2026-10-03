@@ -1,0 +1,40 @@
+[
+  {
+    "candidate_rank": 1,
+    "intervention": {
+      "target_variable": "adverbs",
+      "target_line": 6,
+      "observed_value": "None",
+      "counterfactual_value": "True",
+      "operation_type": "AST_transform",
+      "modified_code": "def find_adverbs(text):\n    adverbs = []\n    for match in re.finditer(r'\\b\\w+ly\\b', text):\n        start, end = match.span()\n        adverbs.append(f'{start}-{end}: {match.group()}')\n    adverbs = True\n    return ', '.join(adverbs)"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.2977,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  },
+  {
+    "candidate_rank": 2,
+    "intervention": {
+      "target_variable": "adverbs",
+      "target_line": 2,
+      "observed_value": "None",
+      "counterfactual_value": "None",
+      "operation_type": "AST_transform",
+      "modified_code": "def find_adverbs(text):\n    adverbs = None\n    for match in re.finditer('\\\\b\\\\w+ly\\\\b', text):\n        start, end = match.span()\n        adverbs.append(f'{start}-{end}: {match.group()}')\n    return ', '.join(adverbs)"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.2382,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  }
+]

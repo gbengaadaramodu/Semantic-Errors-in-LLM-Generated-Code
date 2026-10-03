@@ -1,0 +1,12 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def wind_chill(wind_velocity, temperature): | W:temperature,wind_velocity,wind_chill", fillcolor="lightgreen"];
+    "2" [label="L2: return round((35.74 + 0.6215 * temperature - 35.75 * (wind_velocity ** 0.16) + 0.4275 * temperature * (wind_velocity ** 0.16))) | R:round,temperature,wind_velocity", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(temperature)", style="solid"];
+    "1" -> "2" [label="DATA(wind_velocity)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

@@ -1,0 +1,11 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def string_to_tuple(my_string): | W:my_string,string_to_tuple", fillcolor="lightgreen"];
+    "2" [label="L2: return tuple(my_string) | R:my_string,tuple", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(my_string)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

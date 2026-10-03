@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a python function to interchange the first and last elements in a list.
+
+Example test: assert swap_List([12, 35, 9, 56, 24]) == [24, 35, 9, 56, 12]
+[/INST]

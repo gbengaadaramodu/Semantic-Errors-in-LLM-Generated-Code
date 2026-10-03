@@ -1,0 +1,12 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def union_elements(tuple1, tuple2): | W:tuple1,tuple2,union_elements", fillcolor="lightgreen"];
+    "2" [label="L2: return sorted(set(tuple1 + tuple2)) | R:set,sorted,tuple1,tuple2", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(tuple1)", style="solid"];
+    "1" -> "2" [label="DATA(tuple2)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

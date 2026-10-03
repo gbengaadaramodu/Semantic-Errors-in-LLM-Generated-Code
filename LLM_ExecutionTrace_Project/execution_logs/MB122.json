@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB122",
+  "dataset": "MBPP",
+  "task_id": "622",
+  "problem_summary": "Write a function to find the median of two sorted lists of same size.",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpgkid66_m.py\", line 4, in <module>\n    assert get_median([1, 12, 15, 26, 38], [2, 13, 17, 30, 45], 5) == 16.0\n           ^^^^^^^^^^\nNameError: name 'get_median' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpgkid66_m.py\", line 4, in <module>\n    assert get_median([1, 12, 15, 26, 38], [2, 13, 17, 30, 45], 5) == 16.0\n           ^^^^^^^^^^\nNameError: name 'get_median' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'get_median' is not defined",
+  "execution_time": 0.268605,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

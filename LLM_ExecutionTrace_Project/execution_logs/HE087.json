@@ -1,0 +1,22 @@
+{
+  "trace_id": "HE087",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/89",
+  "problem_summary": "\ndef encrypt(s):\n    \"\"\"Create a function encrypt that takes a string as an argu",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpnyo3xa1v.py\", line 33, in <module>\n    check(encrypt)\n    ~~~~~^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpnyo3xa1v.py\", line 19, in check\n    assert candidate('hi') == 'lm', \"This prints if this assert fails 1 (good for debugging!)\"\n           ^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: This prints if this assert fails 1 (good for debugging!)\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpnyo3xa1v.py\", line 33, in <module>\n    check(encrypt)\n    ~~~~~^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpnyo3xa1v.py\", line 19, in check\n    assert candidate('hi') == 'lm', \"This prints if this assert fails 1 (good for debugging!)\"\n           ^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: This prints if this assert fails 1 (good for debugging!)",
+  "exception_type": "AssertionError",
+  "exception_message": "This prints if this assert fails 1 (good for debugging!)",
+  "execution_time": 0.204039,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": "benchmark_test",
+  "assertion_failed": true,
+  "parser_prediction": ""
+}

@@ -1,0 +1,22 @@
+{
+  "trace_id": "HE044",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/103",
+  "problem_summary": "\ndef rounded_avg(n, m):\n    \"\"\"You are given two positive integers n and m, and ",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpvkx3wemw.py\", line 36, in <module>\n    check(rounded_avg)\n    ~~~~~^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpvkx3wemw.py\", line 18, in check\n    assert candidate(1, 5) == \"0b11\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpvkx3wemw.py\", line 36, in <module>\n    check(rounded_avg)\n    ~~~~~^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpvkx3wemw.py\", line 18, in check\n    assert candidate(1, 5) == \"0b11\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+  "exception_type": "AssertionError",
+  "exception_message": "",
+  "execution_time": 0.238593,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": "benchmark_test",
+  "assertion_failed": true,
+  "parser_prediction": ""
+}

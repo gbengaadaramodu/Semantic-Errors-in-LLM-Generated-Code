@@ -1,0 +1,72 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def unique_product(my_list):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "my_list",
+        "unique_product"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "my_list": [
+          "[10, 20, 30, 40, 20, 50, 60, 40]"
+        ]
+      },
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "return reduce(lambda x, y: x * y, set(my_list))",
+      "statement_type": "Return",
+      "reads": [
+        "my_list",
+        "reduce",
+        "set",
+        "x",
+        "y"
+      ],
+      "writes": [
+        "x",
+        "y"
+      ],
+      "function_name": "unique_product",
+      "executed": true,
+      "execution_count": 3,
+      "runtime_values": {
+        "my_list": [
+          "[10, 20, 30, 40, 20, 50, 60, 40]",
+          "[10, 20, 30, 40, 20, 50, 60, 40]",
+          "[10, 20, 30, 40, 20, 50, 60, 40]"
+        ]
+      },
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "my_list",
+      "label": "DATA(my_list)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    2
+  ]
+}

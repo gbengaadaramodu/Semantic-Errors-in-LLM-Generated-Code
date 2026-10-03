@@ -1,0 +1,40 @@
+[
+  {
+    "candidate_rank": 1,
+    "intervention": {
+      "target_variable": "n",
+      "target_line": 5,
+      "observed_value": "None",
+      "counterfactual_value": "cstyoravoitshos",
+      "operation_type": "AST_transform",
+      "modified_code": "def sequence(n):\n    if n <= 2:\n        return n\n    else:\n        n = 'cstyoravoitshos'\n        return sequence(sequence(n-1)) + sequence(n-sequence(n-1))"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.2453,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  },
+  {
+    "candidate_rank": 2,
+    "intervention": {
+      "target_variable": "n",
+      "target_line": 2,
+      "observed_value": "None",
+      "counterfactual_value": "None",
+      "operation_type": "AST_transform",
+      "modified_code": "def sequence(n):\n    if n > 2:\n        return n\n    else:\n        return sequence(sequence(n - 1)) + sequence(n - sequence(n - 1))"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.2767,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  }
+]

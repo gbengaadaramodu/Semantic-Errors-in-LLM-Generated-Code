@@ -1,0 +1,11 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def is_sorted(lst): | W:lst,is_sorted", fillcolor="lightgreen"];
+    "2" [label="L2: return all(lst[i] <= lst[i+1] for i in range(len(lst)-1)) and len(set(lst)) == len(lst) | W:i | R:all,i,len,lst,range,set", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(lst)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

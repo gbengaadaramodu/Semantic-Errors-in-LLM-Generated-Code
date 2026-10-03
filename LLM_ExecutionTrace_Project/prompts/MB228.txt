@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a python function to find the sum of the product of consecutive binomial co-efficients.
+
+Example test: assert sum_Of_product(3) == 15
+[/INST]

@@ -1,0 +1,678 @@
+trace_id,candidate_rank,target_variable,target_line,observed_value,counterfactual_value,original_outcome,counterfactual_outcome,causal_effect,execution_time
+HE001,1,i,2,10,"[2, 4, 6, 8]",Failed,Failed,FALSE,0.6463
+HE003,1,nesting_levels,11,,"[2, 3, 1, 3]",Failed,Completed,TRUE,0.102
+HE003,2,nesting_levels,2,,,Failed,Failed,FALSE,0.2572
+HE004,1,x,7,9,"[5, 9, 6, 8, 7]",Failed,Failed,FALSE,0.169
+HE004,2,maximum,6,,,Failed,Failed,FALSE,0.2244
+HE004,3,minimum,5,,,Failed,Failed,FALSE,0.2872
+HE004,4,sorted_lst,4,,,Failed,Failed,FALSE,0.2419
+HE008,1,dict,2,,"[1, 4, 5]",Failed,Failed,FALSE,0.2275
+HE009,1,result,5,24,288,Failed,Completed,TRUE,0.1485
+HE009,2,result,4,6,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+HE009,3,i,3,4,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+HE011,1,result,7,41,25,Failed,Completed,TRUE,0.0991
+HE011,2,result,6,25,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+HE011,3,num,3,4,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+HE012,1,d,2,-,0,Failed,Failed,FALSE,0.2475
+HE013,1,functools,4,,"(3, 1)",Failed,Failed,FALSE,0.1717
+HE018,1,<statement>,16,,"[1, 2, 1]",Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+HE021,1,ch,2,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+HE022,1,even_digits,10,0,"(1, 1)",Failed,Failed,FALSE,0.2878
+HE022,2,even_digits,6,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+HE022,3,odd_digits,8,0,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+HE022,4,num,5,7,,Failed,Failed,FALSE,0.2014
+HE022,5,num,4,-78,,Failed,Timeout,UNRESOLVED,5.0315
+HE025,1,i,2,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+HE027,1,groups,6,,,Failed,Failed,FALSE,0.2235
+HE027,2,groups,2,,,Failed,Failed,FALSE,0.2681
+HE030,1,result,6,"[(0, 0), (1, 0), (2, 0)]",,Failed,Failed,FALSE,0.1765
+HE030,2,result,2,,,Failed,Failed,FALSE,0.2265
+HE031,1,n,2,4,False,Failed,Completed,TRUE,0.1596
+HE032,1,a,5,1,2,Failed,Completed,TRUE,0.1171
+HE032,2,a,4,0,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+HE032,3,a,2,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+HE032,4,i,3,0,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+HE033,1,index1,8,2,"('Venus',)",Failed,Failed,FALSE,0.1692
+HE033,2,index1,3,,,Failed,Failed,FALSE,0.1705
+HE033,3,index2,4,,,Failed,Failed,FALSE,0.2421
+HE033,4,planets,2,,,Failed,Failed,FALSE,0.1682
+HE033,5,index1,5,2,,Failed,Failed,FALSE,0.2345
+HE034,1,s,2,Hello World!!!,Hello !!!Wdlor,Failed,Failed,FALSE,0.2914
+HE035,1,number,3,19,xix,Failed,Failed,FALSE,0.1672
+HE035,2,roman_numerals,2,,,Failed,Failed,FALSE,0.2755
+HE036,1,x,2,aaa,['aa'],Failed,Failed,FALSE,0.2205
+HE040,1,<statement>,5,,3,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+HE041,1,res,8,,,Failed,Failed,FALSE,0.1807
+HE041,2,digs,4,,,Failed,Failed,FALSE,0.2244
+HE041,3,r,6,,,Failed,Failed,FALSE,0.2739
+HE041,4,x,5,8,,Failed,Failed,FALSE,0.2126
+HE042,1,a,2,-1,True,Failed,Failed,FALSE,0.1893
+HE043,1,i,7,1,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+HE043,2,i,3,0,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+HE043,3,l_copy,2,,,Failed,Failed,FALSE,0.2342
+HE043,4,i,4,1,,Failed,Failed,FALSE,0.2076
+HE044,1,binary,13,11,0b11,Failed,Completed,TRUE,0.1415
+HE044,2,binary,11,,,Failed,Failed,FALSE,0.2236
+HE044,3,rounded,10,,,Failed,Failed,FALSE,0.2619
+HE044,4,avg,9,,,Failed,Failed,FALSE,0.212
+HE044,5,total,7,10,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+HE045,1,delimeter,2,,[],Failed,Failed,FALSE,0.1905
+HE046,1,encoded_msg,11,VGUV,tgst,Failed,Completed,TRUE,0.1676
+HE046,2,encoded_msg,10,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+HE046,3,char,3,T,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+HE046,4,char,4,T,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+HE051,1,is_palindrome,2,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+HE052,1,result,2,,,Failed,Failed,FALSE,0.1881
+HE053,1,i,2,2,,Failed,Failed,FALSE,0.209
+HE054,1,i,2,2,"[1, 2, 6, 24, 15]",Failed,Failed,FALSE,0.1968
+HE055,1,<statement>,7,,False,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+HE058,1,count,25,4,4,Failed,Failed,FALSE,0.2502
+HE058,2,count,21,3,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+HE058,3,arr,20,"[1, 2, 3, 5, 6, 9, 7, 4]",,Failed,Failed,FALSE,0.2116
+HE058,4,left,17,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+HE058,5,left,19,4,,Failed,Failed,FALSE,0.2267
+HE062,1,<statement>,14,,Yes,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+HE065,1,count,6,2,1,Failed,Completed,TRUE,0.1277
+HE065,2,count,5,1,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+HE065,3,c,4,f,,Failed,Completed,TRUE,0.1214
+HE065,4,c,3,f,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+HE066,1,hist,8,"{'a': 2, ' ': 3, 'b': 2}","{'a': 2, 'b': 2}",Failed,Completed,TRUE,0.1146
+HE066,2,hist,2,,,Failed,Failed,FALSE,0.2103
+HE067,1,i,2,1234567,['the number of odd elements 4n the str4ng 4 of the 4nput.'],Failed,Failed,FALSE,0.1757
+HE068,1,levels,8,"[1, 3, 3]","[3, 5, 7]",Failed,Completed,TRUE,0.1566
+HE068,2,levels,2,,,Failed,Failed,FALSE,0.3306
+HE069,1,i,2,5,True,Failed,Failed,FALSE,0.1792
+HE072,1,word,3,lamb,['little'],Failed,Failed,FALSE,0.311
+HE072,2,words,2,,,Failed,Failed,FALSE,0.2398
+HE073,1,letter_grade,22,C+,,Failed,Failed,FALSE,0.3087
+HE073,2,gpa,21,2,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+HE073,3,gpa_to_letter_grade,3,,,Failed,Failed,FALSE,0.1891
+HE074,1,<statement>,6,,No,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+HE077,1,txt,2,"Hello,world!","['Hello', 'world!']",Failed,Failed,FALSE,0.2037
+HE078,1,num,2,,,Failed,Failed,FALSE,0.1875
+HE079,1,i,2,8,12,Failed,Failed,FALSE,0.2826
+HE081,1,<statement>,7,,False,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+HE083,1,arr,2,"[111, 121, 3, 4000, 5, 6]",0,Failed,Failed,FALSE,0.1869
+HE087,1,encrypted_text,14,jk,lm,Failed,Completed,TRUE,0.1239
+HE087,2,encrypted_text,11,j,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+HE087,3,rotated_char,8,j,,Failed,Failed,FALSE,0.256
+HE087,4,char,6,i,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+HE088,1,count,9,0,1,Failed,Completed,TRUE,0.1281
+HE088,2,count,8,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+HE088,3,a,7,"[1, 3, 7, 13, 21]",,Failed,Failed,FALSE,0.235
+HE088,4,a,2,,,Failed,Failed,FALSE,0.2645
+HE088,5,i,4,2,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+HE089,1,total,22,,,Failed,Failed,FALSE,0.2463
+HE089,2,total,20,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+HE089,3,n,19,,,Failed,Failed,FALSE,0.3418
+HE090,1,s,2,"Hi, my name is John","['Hi', 'my', 'name', 'is', 'John']",Failed,Failed,FALSE,0.3145
+HE091,1,x,2,1,14,Failed,Failed,FALSE,0.3188
+HE093,1,n,2,2,4,Failed,Failed,FALSE,0.3053
+HE094,1,is_prime,2,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+HE095,1,<statement>,14,,"[2, 3]",Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+HE100,1,arr,2,"[-3, -4, 5]","[-4, -3, 5]",Failed,Failed,FALSE,0.2909
+HE104,1,count,6,8,0,Failed,Completed,TRUE,0.1872
+HE104,2,count,5,7,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+HE104,3,i,4,49,,Failed,Failed,FALSE,0.2862
+HE104,4,i,3,49,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+HE105,1,text,2,Exa   mple,Exa-mple,Failed,Completed,TRUE,0.157
+HE106,1,<statement>,6,,False,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+HE107,1,s,2,Is the sky blue?,0,Failed,Failed,FALSE,0.3657
+HE109,1,<statement>,5,,YES,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+HE109,2,i,2,1,,Failed,Failed,FALSE,0.3668
+HE112,1,product,6,1,0,Failed,Completed,TRUE,0.1938
+HE112,2,product,5,875,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+HE112,3,digit,3,8,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+HE112,4,digit,4,8,,Failed,Failed,FALSE,0.4264
+HE113,1,<statement>,7,,1,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+HE113,2,freq,4,4,,Failed,Failed,FALSE,0.3134
+HE113,3,freq,3,,,Failed,Failed,FALSE,0.3233
+HE113,4,max_freq,2,,,Failed,Failed,FALSE,0.3176
+HE116,1,count,7,1,2,Failed,Completed,TRUE,0.1519
+HE116,2,count,6,0,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+HE116,3,c,5,y,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+HE116,4,c,4,y,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+HE116,5,vowels,2,,,Failed,Failed,FALSE,0.31
+HE117,1,num_lowerings,18,-3,6,Failed,Completed,TRUE,0.3006
+HE117,2,num_lowerings,14,0,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+HE117,3,row,7,"[1, 1, 1, 1]",,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+HE117,4,capacity,9,1,,Failed,Failed,FALSE,0.3792
+HE118,1,<statement>,6,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+HE119,1,shift,4,2,001,Failed,Failed,FALSE,0.3173
+HE121,1,float,2,,15,Failed,Failed,FALSE,0.2749
+HE125,1,abs,8,,-9,Failed,Failed,FALSE,0.2649
+HE125,2,_,4,-4,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+HE127,1,<statement>,8,,False,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+HE127,2,a,2,5,,Failed,Completed,TRUE,0.1249
+HE128,1,<statement>,5,,0.0001,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+HE128,2,len,2,,,Failed,Failed,FALSE,0.2308
+HE129,1,s0,2,eabcdzzzz,True,Failed,Completed,TRUE,0.1933
+HE130,1,<statement>,9,,14,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+HE133,1,result,5,1/25,True,Failed,Failed,FALSE,0.2504
+HE133,2,result,4,,,Failed,Failed,FALSE,0.228
+HE133,3,denom1,2,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+HE133,4,denom2,3,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+HE134,1,max_word,6,name,enam,Failed,Completed,TRUE,0.1524
+HE134,2,max_word,5,,,Failed,Failed,FALSE,0.2605
+HE134,3,word,3,game,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+HE134,4,len,4,,,Failed,Failed,FALSE,0.2732
+HE134,5,max_word,2,,,Failed,Failed,FALSE,0.2438
+HE135,1,max,2,,"[7, 0]",Failed,Failed,FALSE,0.2517
+HE136,1,apples,2,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+HE137,1,<statement>,8,,False,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+HE138,1,int,2,,True,Failed,Completed,TRUE,0.1824
+HE141,1,key,4,5,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+HE142,1,<statement>,10,,True,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+HE143,1,x,2,2,False,Failed,Completed,TRUE,0.1433
+HE144,1,groups,4,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+HE144,2,group,3,,,Failed,Failed,FALSE,0.2696
+HE144,3,groups,2,,,Failed,Failed,FALSE,0.2669
+HE145,1,collatz,9,"[14, 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1]","[1, 5, 7, 11, 13, 17]",Failed,Completed,TRUE,0.2052
+HE145,2,collatz,2,,,Failed,Failed,FALSE,0.2912
+HE150,1,<statement>,12,,NO,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+HE150,2,end1,4,2,,Failed,Completed,TRUE,0.1254
+HE150,3,end1,2,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+HE150,4,end2,3,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+HE151,1,string,2,cacacacac,4,Failed,Failed,FALSE,0.2086
+HE152,1,_,2,1,True,Failed,Failed,FALSE,0.2046
+HE156,1,ValueError,3,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+HE156,2,a,2,1,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+HE158,1,array,9,"[2, 4, 3, 0, 1, 5, 6]","[6, 5, 4, 3, 2, 1, 0]",Failed,Failed,FALSE,0.2147
+HE158,2,array,6,"[2, 4, 3, 0, 1, 5, 6]",,Failed,Completed,TRUE,0.1343
+HE159,1,t,14,,,Failed,Failed,FALSE,0.2456
+HE159,2,t,9,,,Failed,Failed,FALSE,0.3461
+HE160,1,d,2,2,"[-1, -11, 1, -12, 11]",Failed,Failed,FALSE,0.3062
+HE162,1,num,6,8,"['Eight', 'Five', 'Four', 'Three', 'Two', 'Two', 'One', 'One']",Failed,Failed,FALSE,0.3353
+HE162,2,names,5,,,Failed,Failed,FALSE,0.3777
+HE162,3,num,4,3,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB001,1,list,2,,"[('Chemistry', 87), ('Physics', 83), ('Math', 81)]",Failed,Failed,FALSE,0.2675
+MB002,1,min_diff,8,,101,Failed,Failed,FALSE,0.2504
+MB002,2,min_diff,7,,,Failed,Failed,FALSE,0.2547
+MB002,3,diff,5,,,Failed,Failed,FALSE,0.2747
+MB002,4,diff,6,,,Failed,Failed,FALSE,0.2158
+MB002,5,i,4,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB003,1,L,2,,3.5,Failed,Failed,FALSE,0.2417
+MB004,1,index,6,,"(True, 3)",Failed,Failed,FALSE,0.2225
+MB004,2,index,2,,,Failed,Failed,FALSE,0.2348
+MB004,3,index,3,,,Failed,Failed,FALSE,0.2209
+MB005,1,area,5,,"[3, 2, 1]",Failed,Failed,FALSE,0.2349
+MB005,2,area,4,,,Failed,Failed,FALSE,0.2295
+MB006,1,end,2,,False,Failed,Failed,FALSE,0.2372
+MB007,1,eulerian_num,9,,1.5707963267948966,Failed,Failed,FALSE,0.2922
+MB007,2,m,6,,,Failed,Failed,FALSE,0.2685
+MB007,3,m,4,,,Failed,Failed,FALSE,0.2507
+MB007,4,m,2,,,Failed,Failed,FALSE,0.246
+MB008,1,count,7,,25,Failed,Failed,FALSE,0.2422
+MB008,2,count,6,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB008,3,i,3,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB009,1,re,2,,2,Failed,Failed,FALSE,0.28
+MB010,1,my_tuple,2,,"(15, 6, 5, 10)",Failed,Failed,FALSE,0.2148
+MB011,1,x,2,,82,Failed,Failed,FALSE,0.221
+MB012,1,<statement>,5,,190,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB013,1,dp,16,,True,Failed,Failed,FALSE,0.2115
+MB013,2,_,5,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB013,3,m,2,,,Failed,Failed,FALSE,0.2109
+MB013,4,n,3,,,Failed,Failed,FALSE,0.2051
+MB014,1,angle,5,,"{(1, 3): 2, (5, 7): 2, (13, 15, 17): 1, (9, 11): 1}",Failed,Failed,FALSE,0.2149
+MB014,2,angle,2,,,Failed,Failed,FALSE,0.2752
+MB015,1,<statement>,23,,4,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB016,1,i,2,,,Failed,Failed,FALSE,0.2977
+MB017,1,x,2,,False,Failed,Failed,FALSE,0.4174
+MB018,1,x,15,,7,Failed,Failed,FALSE,0.2407
+MB018,2,x,6,,,Failed,Failed,FALSE,0.229
+MB018,3,y,10,,,Failed,Failed,FALSE,0.2392
+MB018,4,x,12,,,Failed,Failed,FALSE,0.2149
+MB018,5,i,4,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB019,1,x,2,,112,Failed,Failed,FALSE,0.2881
+MB020,1,next_palindrome,10,,240,Failed,Failed,FALSE,0.2172
+MB020,2,next_palindrome,6,,,Failed,Failed,FALSE,0.2317
+MB020,3,n,7,,,Failed,Failed,FALSE,0.2234
+MB020,4,str_n,2,,,Failed,Failed,FALSE,0.2181
+MB020,5,str_n,3,,,Failed,Failed,FALSE,0.2199
+MB021,1,length,8,,4,Failed,Failed,FALSE,0.2167
+MB021,2,x,2,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB021,3,length,5,,,Failed,Failed,FALSE,0.2136
+MB021,4,length,3,,,Failed,Failed,FALSE,0.2186
+MB022,1,<statement>,5,,"(3, [13, 15, 17])",Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB023,1,my_list,3,,False,Failed,Failed,FALSE,0.226
+MB024,1,i,2,,,Failed,Failed,FALSE,0.2235
+MB025,1,degrees,2,,"[5, 15, 25, 37, 79]",Failed,Failed,FALSE,0.2312
+MB026,1,side,2,,5,Failed,Failed,FALSE,0.2591
+MB027,1,max,4,,0-7: Clearly,Failed,Failed,FALSE,0.2184
+MB028,1,i,2,,271,Failed,Failed,FALSE,0.2237
+MB029,1,len,2,,10,Failed,Failed,FALSE,0.2274
+MB030,1,int,2,,11,Failed,Failed,FALSE,0.2581
+MB031,1,i,2,,1,Failed,Failed,FALSE,0.2127
+MB032,1,sublist,2,,35,Failed,Failed,FALSE,0.1992
+MB033,1,list,2,,"[10, 20, 30, 15]",Failed,Failed,FALSE,0.2082
+MB034,1,n,2,,"['Python', 'PHP', 'Java']",Failed,Failed,FALSE,0.2119
+MB035,1,i,2,,person is most value,Failed,Failed,FALSE,0.2277
+MB036,1,max_product,13,,False,Failed,Failed,FALSE,0.2118
+MB036,2,max_product,9,,,Failed,Failed,FALSE,0.2272
+MB036,3,product,7,,,Failed,Failed,FALSE,0.2923
+MB036,4,max_product,8,,,Failed,Failed,FALSE,0.2159
+MB036,5,i,6,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB037,1,base,2,,True,Failed,Failed,FALSE,0.2246
+MB038,1,int,2,,False,Failed,Failed,FALSE,0.213
+MB039,1,len,2,,"['deR', 'neerG', 'eulB', 'etihW', 'kcalB']",Failed,Failed,FALSE,0.2215
+MB040,1,re,2,,942.45,Failed,Failed,FALSE,0.2105
+MB041,1,x,5,,True,Failed,Failed,FALSE,0.2118
+MB041,2,x,4,,,Failed,Failed,FALSE,0.2166
+MB041,3,x,2,,,Failed,Failed,FALSE,0.2173
+MB041,4,math,3,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB042,1,my_list,11,,"(2, 2, 2, 3)",Failed,Failed,FALSE,0.2055
+MB043,1,dp,20,,"(3, 4, 5, 6, 7, 10)",Failed,Failed,FALSE,0.2289
+MB043,2,dp,3,,,Failed,Failed,FALSE,0.2372
+MB044,1,adverbs,6,,True,Failed,Failed,FALSE,0.2977
+MB044,2,adverbs,2,,,Failed,Failed,FALSE,0.2382
+MB045,1,int,2,,"[2, 3, 4, 5, 12, 12, 23, 56, 81, 95]",Failed,Failed,FALSE,0.218
+MB046,1,list,2,,True,Failed,Failed,FALSE,0.2265
+MB047,1,jacobsthal_num,9,,8,Failed,Failed,FALSE,0.2562
+MB047,2,n,6,,,Failed,Failed,FALSE,0.2843
+MB048,1,c,2,,True,Failed,Failed,FALSE,0.2839
+MB049,1,n,2,,204.20352248333654,Failed,Failed,FALSE,0.2341
+MB050,1,re,2,,3,Failed,Failed,FALSE,0.3044
+MB052,1,d,2,,20,Failed,Failed,FALSE,0.2489
+MB053,1,amount,2,,False,Failed,Failed,FALSE,0.2406
+MB054,1,s,2,,"[4, 3, 2, 1, 5, 6]",Failed,Failed,FALSE,0.2332
+MB055,1,height,2,,"[[2, 3], [2, 4], [2, 5], [3, 3], [3, 4], [3, 5], [4, 3], [4, 4], [4, 5]]",Failed,Failed,FALSE,0.2272
+MB056,1,<statement>,8,,pythonprogram,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB057,1,x,2,,"[-1, -6]",Failed,Failed,FALSE,0.2355
+MB058,1,set,2,,"[1, 3, 5]",Failed,Failed,FALSE,0.2296
+MB059,1,<statement>,7,,-6,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB060,1,arr,12,,"[4, 5, 11, 15, 19, 20, 24, 24, 25, 25, 26, 29, 48, 54, 56, 110, 154, 233]",Failed,Failed,FALSE,0.2149
+MB061,1,i,2,,0,Failed,Failed,FALSE,0.3466
+MB062,1,sum,8,,"{(1, 3): 2, (2, 5): 2, (3, 6): 1}",Failed,Failed,FALSE,0.2758
+MB062,2,sum,6,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB062,3,elem,4,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB062,4,elem,5,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB062,5,seen,2,,,Failed,Failed,FALSE,0.2965
+MB063,1,h,2,,"[(6, 24, 12)]",Failed,Failed,FALSE,0.2493
+MB064,1,input_string,2,,11,Failed,Failed,FALSE,0.2596
+MB065,1,i,2,,True,Failed,Failed,FALSE,0.2563
+MB066,1,x,2,,1,Failed,Failed,FALSE,0.3163
+MB067,1,arr,2,,4,Failed,Failed,FALSE,0.232
+MB069,1,combinations,6,,4,Failed,Failed,FALSE,0.28
+MB069,2,combinations,2,,,Failed,Failed,FALSE,0.3021
+MB070,1,x,2,,,Failed,Failed,FALSE,0.2561
+MB071,1,x,2,,True,Failed,Failed,FALSE,0.241
+MB072,1,x,2,,,Failed,Failed,FALSE,0.2229
+MB073,1,list1,2,,4,Failed,Failed,FALSE,0.2766
+MB074,1,element,2,,True,Failed,Failed,FALSE,0.2124
+MB075,1,occurences,8,,,Failed,Failed,FALSE,0.2218
+MB075,2,occurences,2,,,Failed,Failed,FALSE,0.216
+MB076,1,num,2,,False,Failed,Failed,FALSE,0.212
+MB077,1,max_sum,12,,321,Failed,Failed,FALSE,0.2184
+MB077,2,max_sum,10,,,Failed,Failed,FALSE,0.2322
+MB077,3,j,9,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB077,4,max_sum,8,,,Failed,Failed,FALSE,0.2241
+MB078,1,c,2,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB079,1,count,6,,1,Failed,Failed,FALSE,0.2321
+MB079,2,count,5,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB079,3,i,4,,,Failed,Failed,FALSE,0.2166
+MB079,4,i,3,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB080,1,n,2,,1,Failed,Failed,FALSE,0.2239
+MB081,1,<statement>,10,,194,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB082,1,digit,2,,65,Failed,Failed,FALSE,0.1905
+MB083,1,height,2,,True,Failed,Failed,FALSE,0.2555
+MB084,1,bin,2,,21,Failed,Failed,FALSE,0.2226
+MB085,1,math,4,,"[-1, -3, -7, 4, 5, 6, 2, 8, 9]",Failed,Failed,FALSE,0.2144
+MB086,1,max_length,10,,"{(1, 3): 2, (5, 7): 2, (13, 15, 17): 1, (9, 11): 1}",Failed,Failed,FALSE,0.225
+MB086,2,max_length,9,,,Failed,Failed,FALSE,0.2104
+MB086,3,i,4,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB086,4,j,8,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB086,5,max_length,3,,,Failed,Failed,FALSE,0.2742
+MB087,1,<statement>,5,,"[(3.0, 4.0), (1.0, 26.45), (7.32, 8.0), (4.0, 8.0)]",Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB088,1,height,2,,"[5, 6, 52, 36, 12, 10]",Failed,Failed,FALSE,0.2345
+MB089,1,len,2,,"[1, 4, 9, 16, 25]",Failed,Failed,FALSE,0.2708
+MB090,1,int,2,,True,Failed,Failed,FALSE,0.1882
+MB091,1,n,2,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB092,1,text,2,,True,Failed,Failed,FALSE,0.2398
+MB093,1,n,2,,243,Failed,Failed,FALSE,0.1897
+MB094,1,end,16,,4,Failed,Failed,FALSE,0.22
+MB094,2,end,13,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB094,3,max_sum,12,,,Failed,Failed,FALSE,0.2071
+MB094,4,i,9,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB094,5,j,10,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB095,1,char,2,,Varsha,Failed,Failed,FALSE,0.2053
+MB096,1,count,7,,1,Failed,Failed,FALSE,0.2383
+MB096,2,count,6,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB096,3,i,5,,,Failed,Failed,FALSE,0.1913
+MB096,4,i,3,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB096,5,j,4,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB097,1,negative_elements,9,,20,Failed,Failed,FALSE,0.1926
+MB097,2,negative_elements,2,,,Failed,Failed,FALSE,0.216
+MB097,3,positive_elements,3,,,Failed,Failed,FALSE,0.326
+MB098,1,my_list,2,,76,Failed,Failed,FALSE,0.2812
+MB099,1,i,2,,True,Failed,Failed,FALSE,0.2612
+MB100,1,my_list,2,,ID-is-4-UTS,Failed,Failed,FALSE,0.2663
+MB101,1,x,2,,0,Failed,Failed,FALSE,0.2223
+MB102,1,month,2,,False,Failed,Failed,FALSE,0.2785
+MB103,1,k,2,,4,Failed,Failed,FALSE,0.2283
+MB104,1,x,2,,True,Failed,Failed,FALSE,0.1949
+MB105,1,num,2,,"[('x', 'y', 'z'), ('w', 't')]",Failed,Failed,FALSE,0.2114
+MB106,1,count,7,,False,Failed,Failed,FALSE,0.2457
+MB106,2,count,6,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB106,3,i,5,,,Failed,Failed,FALSE,0.2062
+MB106,4,i,3,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB106,5,j,4,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB107,1,x,2,,3,Failed,Failed,FALSE,0.2611
+MB108,1,l,2,,"['c', 'Red', 'c', 'Green', 'c', 'Black']",Failed,Failed,FALSE,0.231
+MB109,1,a,2,,1,Failed,Failed,FALSE,0.2285
+MB110,1,find_lucas,7,,Jumanji_The_Jungle,Failed,Failed,FALSE,0.2536
+MB110,2,n,4,,,Failed,Failed,FALSE,0.1895
+MB110,3,n,2,,,Failed,Failed,FALSE,0.2826
+MB111,1,digit,2,,"['p', 'y', 't', 'h', 'o', 'n']",Failed,Failed,FALSE,0.2552
+MB112,1,map,2,,150,Failed,Failed,FALSE,0.1863
+MB113,1,loss_threshold,5,,504,Failed,Failed,FALSE,0.2182
+MB113,2,loss_threshold,2,,,Failed,Failed,FALSE,0.2193
+MB114,1,my_list,2,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB115,1,count,6,,12,Failed,Failed,FALSE,0.2167
+MB115,2,count,5,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB115,3,i,4,,,Failed,Failed,FALSE,0.2215
+MB115,4,i,3,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB116,1,i,2,,5.2,Failed,Failed,FALSE,0.1898
+MB117,1,result,8,,49,Failed,Failed,FALSE,0.2343
+MB117,2,result,2,,,Failed,Failed,FALSE,0.3317
+MB118,1,x,2,,"(0, 4, 5, 1)",Failed,Failed,FALSE,0.2727
+MB119,1,arr,2,,6,Failed,Failed,FALSE,0.2575
+MB120,1,element,2,,3,Failed,Failed,FALSE,0.2607
+MB121,1,power,5,,"[(1, 1), (1, 2), (2, 3), (3, 3), (3, 4), (4, 4), (4, 5)]",Failed,Failed,FALSE,0.2633
+MB121,2,power,4,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB121,3,n,3,,,Failed,Failed,FALSE,0.373
+MB121,4,power,2,,,Failed,Failed,FALSE,0.3458
+MB122,1,i,2,,16.0,Failed,Failed,FALSE,0.2939
+MB123,1,t1,2,,2,Failed,Failed,FALSE,0.2637
+MB124,1,size,2,,325,Failed,Failed,FALSE,0.2693
+MB125,1,sum,19,,heo,Failed,Failed,FALSE,0.243
+MB125,2,sum,18,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB125,3,i,14,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB125,4,i,17,,,Failed,Failed,FALSE,0.2733
+MB125,5,i,15,,,Failed,Failed,FALSE,0.2959
+MB126,1,sublist,2,,81,Failed,Failed,FALSE,0.282
+MB127,1,n,2,,"{'Cierra Vega': (6.2, 70)}",Failed,Failed,FALSE,0.2499
+MB128,1,re,2,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB129,1,n,2,,"[1, 2, 3, 4, 0, 0]",Failed,Failed,FALSE,0.3142
+MB130,1,<statement>,5,,2,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB131,1,n,5,,cstyoravoitshos,Failed,Failed,FALSE,0.2453
+MB131,2,n,2,,,Failed,Failed,FALSE,0.2767
+MB132,1,pair,2,,"(4, 5, 6, {'MSAM': 1, 'is': 2, 'best': 3})",Failed,Failed,FALSE,0.2639
+MB133,1,list,2,,"(7, 8)",Failed,Failed,FALSE,0.2677
+MB134,1,<statement>,9,,False,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB134,2,match,6,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB134,3,match,5,,,Failed,Failed,FALSE,0.2704
+MB134,4,regex,4,,,Failed,Failed,FALSE,0.2585
+MB135,1,i,5,,11,Failed,Failed,FALSE,0.2684
+MB135,2,n,2,,,Failed,Failed,FALSE,0.2602
+MB136,1,len,5,,1,Failed,Failed,FALSE,0.2543
+MB137,1,char,2,,False,Failed,Failed,FALSE,0.2528
+MB138,1,a,2,,8,Failed,Failed,FALSE,0.2488
+MB139,1,string,2,,1,Failed,Failed,FALSE,0.2512
+MB140,1,math,4,,"[(2,), (9,), (2,), (2,)]",Failed,Failed,FALSE,0.2442
+MB141,1,ch,2,,"(8, -1, -13)",Failed,Failed,FALSE,0.2489
+MB142,1,number,2,,2,Failed,Failed,FALSE,0.2982
+MB143,1,char,2,,"[1, 10, 100, 2, 20, 200, 3, 30, 300, 4, 40, 400, 5, 50, 500, 6, 60, 600, 7, 70, 700]",Failed,Failed,FALSE,0.2795
+MB144,1,my_string,2,,"[[], ['orange'], ['red'], ['red', 'orange'], ['green'], ['green', 'orange'], ['green', 'red'], ['green', 'red', 'orange'], ['blue'], ['blue', 'orange'], ['blue', 'red'], ['blue', 'red', 'orange'], ['blue', 'green'], ['blue', 'green', 'orange'], ['blue', 'green', 'red'], ['blue', 'green', 'red', 'orange']]",Failed,Failed,FALSE,0.2661
+MB145,1,max_product,8,,Python,Failed,Failed,FALSE,0.2788
+MB145,2,max_product,7,,,Failed,Failed,FALSE,0.2488
+MB145,3,i,5,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB145,4,arr,6,,,Failed,Failed,FALSE,0.2513
+MB145,5,max_product,4,,,Failed,Failed,FALSE,0.2833
+MB146,1,string,2,,30,Failed,Failed,FALSE,0.2257
+MB147,1,x,2,,27,Failed,Failed,FALSE,0.2255
+MB148,1,a,2,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB149,1,arr,2,,"(0, 0.0, 100.0)",Failed,Failed,FALSE,0.2004
+MB150,1,x,2,,"[{}, {}, {}, {}, {}]",Failed,Failed,FALSE,0.252
+MB153,1,sublist,2,"['white', 'black', 'orange']","[['green', 'orange'], ['black', 'white'], ['black', 'orange', 'white']]",Failed,Failed,FALSE,0.202
+MB156,1,t,2,"(3, 4)","{(4, 5), (5, 6), (3, 4)}",Failed,Failed,FALSE,0.1827
+MB158,1,sublist,2,"['m', 'n', 'o']","[['x', 'a', 'm'], ['y', 'b', 'n'], ['z', 'c', 'o']]",Failed,Failed,FALSE,0.1853
+MB160,1,dict1,2,"{'R': 'Red', 'B': 'Black', 'P': 'Pink'}","{'W': 'White', 'P': 'Pink', 'B': 'Black', 'R': 'Red', 'G': 'Green', 'L': 'lavender'}",Failed,Failed,FALSE,0.1947
+MB161,1,divisors,2,,False,Failed,Failed,FALSE,0.25
+MB162,1,count,10,2,7,Failed,Completed,TRUE,0.1442
+MB162,2,count,9,0,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB162,3,i,8,11,,Failed,Failed,FALSE,0.2032
+MB162,4,i,4,13,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB162,5,vowels,2,,,Failed,Failed,FALSE,0.2061
+MB164,1,int,2,,36,Failed,Failed,FALSE,0.2432
+MB166,1,digit,2,1,"[1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 15, 22]",Failed,Failed,FALSE,0.1983
+MB171,1,count_no_of_ways,8,,228,Failed,Failed,FALSE,0.2356
+MB172,1,a,2,"(1, 10)","((6, 7), (4, 9), (2, 9), (7, 10))",Failed,Failed,FALSE,0.2141
+MB174,1,arr,4,,3,Failed,Failed,FALSE,0.2502
+MB174,2,arr,3,,,Failed,Failed,FALSE,0.2299
+MB174,3,query,2,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB176,1,arr,2,"(1, 5, 3, 19, 18, 25)",,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB177,1,my_string,2,,invalid,Failed,Failed,FALSE,0.211
+MB178,1,string,2,['python (chrome)'],python,Failed,Completed,TRUE,0.1418
+MB179,1,count,6,2,1,Failed,Completed,TRUE,0.1544
+MB179,2,count,5,1,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB179,3,arr,4,"[3, 2, 1]",,Failed,Completed,TRUE,0.1448
+MB179,4,i,3,2,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB180,1,num,2,,False,Failed,Failed,FALSE,0.1852
+MB181,1,max_product,7,5400000,3000,Failed,Completed,TRUE,0.1388
+MB181,2,max_product,6,900000,,Failed,Failed,FALSE,0.2647
+MB181,3,i,5,5,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB181,4,max_product,4,,,Failed,Failed,FALSE,0.1774
+MB184,1,dict,2,,"[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 4]",Failed,Failed,FALSE,0.2825
+MB186,1,i,2,,"['practice', 'solution']",Failed,Failed,FALSE,0.1904
+MB187,1,len,2,,3,Failed,Failed,FALSE,0.2152
+MB188,1,s,2,,PERSON,Failed,Failed,FALSE,0.2367
+MB189,1,n,2,5,65,Failed,Failed,FALSE,0.232
+MB193,1,sum,5,,1056,Failed,Failed,FALSE,0.2364
+MB193,2,sum,4,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB193,3,i,3,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB194,1,count,7,,2,Failed,Failed,FALSE,0.2155
+MB194,2,count,6,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB194,3,i,5,,,Failed,Failed,FALSE,0.2413
+MB194,4,i,3,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB194,5,j,4,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB196,1,human_age,2,12,61,Failed,Failed,FALSE,0.2188
+MB197,1,x,2,,True,Failed,Failed,FALSE,0.2189
+MB199,1,geometric_sum,5,,1.9921875,Failed,Failed,FALSE,0.2028
+MB199,2,n,2,0,,Failed,Failed,FALSE,0.2167
+MB200,1,sublist,2,,"[1, 3, 6]",Failed,Failed,FALSE,0.178
+MB201,1,x,2,1,1,Failed,Failed,FALSE,0.18
+MB202,1,c,2,n,yhn,Failed,Failed,FALSE,0.2538
+MB203,1,a,2,,True,Failed,Failed,FALSE,0.2137
+MB204,1,num_odd_values,16,,3,Failed,Failed,FALSE,0.2095
+MB204,2,num_odd_values,13,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB204,3,num,11,,,Failed,Failed,FALSE,0.1898
+MB204,4,num,8,,,Failed,Failed,FALSE,0.2645
+MB204,5,i,6,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB205,1,length,2,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB206,1,cmath,4,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB208,1,n,4,8,15,Failed,Completed,TRUE,0.1113
+MB208,2,n,3,4,,Failed,Failed,FALSE,0.2088
+MB208,3,n,2,9,,Failed,Failed,FALSE,0.2891
+MB210,1,side,2,5,100,Failed,Failed,FALSE,0.2638
+MB211,1,power,9,,8,Failed,Failed,FALSE,0.22
+MB211,2,power,7,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB211,3,n,6,,,Failed,Failed,FALSE,0.1812
+MB211,4,power,5,,,Failed,Failed,FALSE,0.2803
+MB216,1,bool,2,,False,Failed,Failed,FALSE,0.1982
+MB218,1,max_depth,6,3,4,Failed,Completed,TRUE,0.1111
+MB218,2,max_depth,5,0,,Failed,Failed,FALSE,0.1778
+MB218,3,max_depth,2,,,Failed,Failed,FALSE,0.2816
+MB218,4,key,3,b,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB218,5,dict,4,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB219,1,num,5,6,37,Failed,Completed,TRUE,0.1021
+MB219,2,num,4,3,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB219,3,i,3,3,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB220,1,index,6,,"('python', 0, 6)",Failed,Failed,FALSE,0.1991
+MB220,2,index,2,,,Failed,Failed,FALSE,0.2773
+MB220,3,index,3,,,Failed,Failed,FALSE,0.254
+MB222,1,i,2,,True,Failed,Failed,FALSE,0.1986
+MB223,1,i,14,6,,Failed,Failed,FALSE,0.2286
+MB223,2,i,12,5,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB223,3,j,13,3,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB223,4,m,2,,,Failed,Failed,FALSE,0.215
+MB223,5,n,3,,,Failed,Failed,FALSE,0.1851
+MB224,1,adverb,21,,"(0, 7, 'clearly')",Failed,Failed,FALSE,0.242
+MB224,2,adverb,8,,,Failed,Failed,FALSE,0.1961
+MB224,3,end_index,18,,,Failed,Failed,FALSE,0.243
+MB224,4,start_index,13,,,Failed,Failed,FALSE,0.1728
+MB224,5,word,6,sky,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB227,1,num,2,56,14,Failed,Failed,FALSE,0.2574
+MB228,1,i,2,,15,Failed,Failed,FALSE,0.234
+MB230,1,left_half,10,"[1, 1]",3,Failed,Failed,FALSE,0.2937
+MB230,2,left_half,5,,,Failed,Failed,FALSE,0.2493
+MB230,3,left_half,7,"[1, 1]",,Failed,Failed,FALSE,0.1904
+MB230,4,mid,2,,,Failed,Completed,TRUE,0.1425
+MB230,5,right_half,6,,,Failed,Failed,FALSE,0.2318
+MB237,1,products,10,"[18, 36, 48]","[60, 54, 50]",Failed,Completed,TRUE,0.1261
+MB237,2,products,2,,,Failed,Failed,FALSE,0.1782
+MB241,1,arr1,2,"[1, 2, 3, 5, 7, 8, 9, 10]","[1, 2, 8, 9]",Failed,Failed,FALSE,0.2069
+MB247,1,max_product,8,46,36,Failed,Completed,TRUE,0.1316
+MB247,2,max_product,7,26,,Failed,Failed,FALSE,0.2314
+MB247,3,product,5,42,,Failed,Failed,FALSE,0.1887
+MB247,4,max_product,6,46,,Failed,Failed,FALSE,0.2264
+MB247,5,i,3,3,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB257,1,round,2,,40,Failed,Failed,FALSE,0.2694
+MB261,1,count,7,,6,Failed,Failed,FALSE,0.1808
+MB261,2,count,6,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB261,3,x,5,,,Failed,Failed,FALSE,0.2385
+MB261,4,i,3,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB261,5,j,4,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB262,1,lucid_numbers,14,,"[1, 2, 3, 5, 7]",Failed,Failed,FALSE,0.186
+MB262,2,lucid_numbers,2,,,Failed,Failed,FALSE,0.2202
+MB265,1,re,2,,False,Failed,Failed,FALSE,0.1865
+MB267,1,x,2,,,Failed,Failed,FALSE,0.1944
+MB268,1,chr,2,,f,Failed,Failed,FALSE,0.222
+MB270,1,area,2,,,Failed,Failed,FALSE,0.2001
+MB271,1,i,2,4,"{1: 5, 7: 10, 13: 5}",Failed,Failed,FALSE,0.2302
+MB272,1,a,2,-1,0,Failed,Failed,FALSE,0.2156
+MB274,1,re,2,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB275,1,x,15,,"(2, 1)",Failed,Failed,FALSE,0.2319
+MB275,2,x,6,,,Failed,Failed,FALSE,0.2693
+MB275,3,y,10,,,Failed,Failed,FALSE,0.2118
+MB275,4,x,12,0,,Failed,Failed,FALSE,0.2129
+MB275,5,i,4,6,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB277,1,common_elements,5,"[1, 5, 7, 8, 12, 45, 15, 16, 18, 23, 24, 25, 28]",,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB277,2,common_elements,2,,,Failed,Failed,FALSE,0.2622
+MB279,1,i,2,,4,Failed,Failed,FALSE,0.2563
+MB280,1,a,2,5,-198,Failed,Failed,FALSE,0.2175
+MB281,1,element,9,,False,Failed,Failed,FALSE,0.2518
+MB281,2,element,6,,,Failed,Failed,FALSE,0.2634
+MB282,1,result,5,"[[1, 2], [3, 4]]","[[1, 2], [1, 4]]",Failed,Completed,TRUE,0.1411
+MB282,2,result,2,,,Failed,Failed,FALSE,0.2607
+MB286,1,count,6,,1,Failed,Failed,FALSE,0.2919
+MB286,2,count,4,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB286,3,n,3,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB287,1,min_rotations,7,,1,Failed,Failed,FALSE,0.2609
+MB287,2,min_rotations,5,,,Failed,Failed,FALSE,0.21
+MB287,3,i,3,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB287,4,i,4,,,Failed,Failed,FALSE,0.2632
+MB289,1,my_string,2,python 3.0,"('p', 'y', 't', 'h', 'o', 'n', '3', '.', '0')",Failed,Completed,TRUE,0.1092
+MB291,1,count,7,4,2,Failed,Completed,TRUE,0.1372
+MB291,2,count,6,3,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB291,3,i,3,3,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB295,1,len,2,,4,Failed,Failed,FALSE,0.221
+MB296,1,min,2,,2,Failed,Failed,FALSE,0.2354
+MB301,1,word,2,,7,Failed,Failed,FALSE,0.2559
+MB303,1,angle,5,45,6.283185307179586,Failed,Failed,FALSE,0.2169
+MB303,2,angle,2,45,,Failed,Failed,FALSE,0.2157
+MB304,1,my_list,3,,"[24, 35, 9, 56, 12]",Failed,Failed,FALSE,0.2143
+MB305,1,unique_nums,6,"[1, 2, 3, 4, 5]","[1, 4, 5]",Failed,Completed,TRUE,0.109
+MB305,2,unique_nums,2,,,Failed,Failed,FALSE,0.2137
+MB307,1,s,2,Vers,"['s', 'r', 's']",Failed,Failed,FALSE,0.2396
+MB308,1,dp,16,"[[1, 2, 4, 10], [1, 0, 0, 0], [1, 0, 0, 0], [1, 0, 0, 0]]",20,Failed,Failed,FALSE,0.2153
+MB308,2,_,3,3,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB308,3,n,2,,,Failed,Failed,FALSE,0.2088
+MB309,1,name,2,,16,Failed,Failed,FALSE,0.2505
+MB311,1,abs,2,,"(1.0, 0.0)",Failed,Failed,FALSE,0.2384
+MB314,1,max,5,,30,Failed,Failed,FALSE,0.1878
+MB314,2,modified_array,4,"[10, 20, -30, -1, 10, 20, -30, -1, 10, 20, -30, -1, 10, 20, -30, -1, 10, 20, -30, -1]",,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB314,3,i,3,3,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB316,1,t,2,"(1, 2, 3, 4)","[30.5, 34.25, 27.0, 23.25]",Failed,Failed,FALSE,0.2645
+MB317,1,n,2,20,30,Failed,Completed,TRUE,0.1192
+MB318,1,abs,2,,6,Failed,Failed,FALSE,0.2444
+MB319,1,arr,2,,6,Failed,Failed,FALSE,0.2077
+MB321,1,i,2,c,6,Failed,Failed,FALSE,0.1899
+MB323,1,n,5,,4.5,Failed,Failed,FALSE,0.202
+MB323,2,total,4,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB323,3,i,3,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB324,1,x,2,7,"[1, 7]",Failed,Failed,FALSE,0.1878
+MB325,1,len,2,,18,Failed,Failed,FALSE,0.1954
+MB326,1,n,2,,True,Failed,Failed,FALSE,0.2659
+MB329,1,num1,2,,6,Failed,Failed,FALSE,0.1924
+MB335,1,i,2,,72,Failed,Failed,FALSE,0.1983
+MB336,1,<statement>,22,,,Timeout,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB336,2,i,21,2,,Timeout,Failed,FALSE,0.244
+MB336,3,i,20,,,Timeout,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB340,1,result,7,7,14,Failed,Completed,TRUE,0.1578
+MB340,2,result,6,3,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB340,3,j,4,2,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB340,4,i,5,2,,Failed,Failed,FALSE,0.1744
+MB340,5,i,3,2,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB341,1,number,2,,"[2, 4]",Failed,Failed,FALSE,0.2087
+MB342,1,max_diff,13,4,6,Failed,Completed,TRUE,0.1659
+MB342,2,max_diff,12,3,,Failed,Failed,FALSE,0.2053
+MB342,3,diff,10,4,,Failed,Failed,FALSE,0.2016
+MB342,4,diff,11,3,,Failed,Failed,FALSE,0.2302
+MB342,5,count_ones,9,3,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB347,1,n,2,10,14,Failed,Failed,FALSE,0.2395
+MB350,1,tup1,2,"(1, 3)","((6, 21), (12, 45), (2, 9), (7, 30))",Failed,Failed,FALSE,0.2275
+MB351,1,len,2,,True,Failed,Completed,TRUE,0.1341
+MB353,1,x,2,5,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB355,1,max_count,11,4,6,Failed,Completed,TRUE,0.1373
+MB355,2,max_count,9,1,,Failed,Failed,FALSE,0.2122
+MB355,3,current_count,6,5,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB355,4,current_count,8,0,,Failed,Failed,FALSE,0.2091
+MB355,5,c,5,T,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB360,1,x,2,-500,"[-500, -12, 0, 4, 7, 12, 45, 100, 200]",Failed,Failed,FALSE,0.2319
+MB361,1,result,6,,8,Failed,Failed,FALSE,0.2378
+MB361,2,result,5,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB361,3,i,3,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB361,4,i,4,,,Failed,Failed,FALSE,0.2094
+MB366,1,i,2,,True,Failed,Failed,FALSE,0.2323
+MB374,1,inv_count,7,,5,Failed,Failed,FALSE,0.2191
+MB374,2,inv_count,6,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB374,3,arr,5,,,Failed,Failed,FALSE,0.23
+MB374,4,i,3,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB374,5,j,4,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB376,1,word,2,c c++,"('Python', 'PHP')",Failed,Failed,FALSE,0.2208
+MB377,1,result,6,,47,Failed,Failed,FALSE,0.225
+MB377,2,result,5,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB377,3,i,3,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB377,4,j,4,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB378,1,x,2,,720000000,Failed,Failed,FALSE,0.2286
+MB379,1,base_edge,2,,33,Failed,Failed,FALSE,0.2104
+MB380,1,i,2,,6,Failed,Failed,FALSE,0.2532
+MB382,1,int,5,,False,Failed,Failed,FALSE,0.2149
+MB382,2,num_list,3,,,Failed,Failed,FALSE,0.2133
+MB382,3,num_str,2,,,Failed,Failed,FALSE,0.2366
+MB384,1,x,2,,False,Failed,Failed,FALSE,0.2433
+MB387,1,combinations,5,"[('Red', 'Green', 'Blue')]","[('Red',), ('Green',), ('Blue',)]",Failed,Completed,TRUE,0.1304
+MB387,2,combinations,2,,,Failed,Failed,FALSE,0.2504
+MB388,1,n,2,,False,Failed,Failed,FALSE,0.2188
+MB389,1,re,2,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB390,1,count,6,,,Failed,Failed,FALSE,0.2037
+MB390,2,count,5,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB390,3,num,4,,,Failed,Failed,FALSE,0.2497
+MB390,4,num,3,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB391,1,my_list,2,,"(5, 10, 7, 4, 15, 3)",Failed,Failed,FALSE,0.2515
+MB393,1,len,5,,4,Failed,Failed,FALSE,0.1977
+MB395,1,max,2,,5,Failed,Failed,FALSE,0.2031
+MB396,1,x,2,"(11, 12)",15,Failed,Failed,FALSE,0.234
+MB397,1,x,2,"('Sabah Colley', 84)","('Juan Whelan', 212)",Failed,Failed,FALSE,0.2153
+MB400,1,my_tuple,2,"('A', 1, 'B', 2, 'C', 3)",,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB401,1,<statement>,7,,6,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB401,2,arr1,4,,,Failed,Failed,FALSE,0.2722
+MB401,3,arr1,2,"[2, 3, 6, 7, 9]",,Failed,Failed,FALSE,0.2227
+MB402,1,<statement>,14,,2,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB404,1,i,2,,10,Failed,Failed,FALSE,0.2174
+MB409,1,k,2,3,"[1, 1, 3, 4, 4, 5, 1]",Failed,Failed,FALSE,0.2165
+MB410,1,arr,6,"[0, 1, 2, -1, -5, 6, 0, -3, -2, 3, 4, 6, 8]",0.54,Failed,Failed,FALSE,0.2489
+MB410,2,count,5,6,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB410,3,num,4,8,,Failed,Failed,FALSE,0.2769
+MB410,4,num,3,8,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB411,1,i,2,,26,Failed,Failed,FALSE,0.2815
+MB415,1,end,2,,"('HELLO', 5, [50], True)",Failed,Failed,FALSE,0.2521
+MB416,1,sorted_list,3,"[-2, -2, -0.5, 0, 1, 1, 2]",-0.5,Failed,Failed,FALSE,0.2156
+MB416,2,sorted_list,2,,,Failed,Failed,FALSE,0.2202
+MB421,1,count,6,,3,Failed,Failed,FALSE,0.2158
+MB421,2,count,5,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB421,3,i,4,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB421,4,i,3,,,Failed,FAILED_CONSTRUCTION,UNRESOLVED,0.0
+MB423,1,sublist,2,"['white', 'black', 'orange']","[['green', 'orange'], ['black', 'white'], ['black', 'orange', 'white']]",Failed,Failed,FALSE,0.253
+MB426,1,n,2,,3,Failed,Failed,FALSE,0.2264
+MB427,1,word,2,PythonProgrammingExamples,Python Programming Examples,Failed,Failed,FALSE,0.2656

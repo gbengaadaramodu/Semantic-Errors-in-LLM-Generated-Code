@@ -1,0 +1,515 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def count_no_of_ways(n, k):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "k",
+        "n",
+        "count_no_of_ways"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 24,
+      "runtime_values": {
+        "n": [
+          "2",
+          "1",
+          "1",
+          "3",
+          "2",
+          "2",
+          "1",
+          "1",
+          "4",
+          "3",
+          "2",
+          "1",
+          "1",
+          "2",
+          "1",
+          "1",
+          "3",
+          "2",
+          "1",
+          "1",
+          "2",
+          "1",
+          "1"
+        ],
+        "k": [
+          "4",
+          "3",
+          "4",
+          "2",
+          "1",
+          "2",
+          "1",
+          "2",
+          "4",
+          "3",
+          "2",
+          "1",
+          "2",
+          "3",
+          "2",
+          "3",
+          "4",
+          "3",
+          "2",
+          "3",
+          "4",
+          "3",
+          "4"
+        ]
+      },
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "if n == 0:",
+      "statement_type": "If",
+      "reads": [
+        "n"
+      ],
+      "writes": [],
+      "function_name": "count_no_of_ways",
+      "executed": true,
+      "execution_count": 23,
+      "runtime_values": {
+        "n": [
+          "2",
+          "1",
+          "1",
+          "3",
+          "2",
+          "2",
+          "1",
+          "1",
+          "4",
+          "3",
+          "2",
+          "1",
+          "1",
+          "2",
+          "1",
+          "1",
+          "3",
+          "2",
+          "1",
+          "1",
+          "2",
+          "1",
+          "1"
+        ],
+        "k": [
+          "4",
+          "3",
+          "4",
+          "2",
+          "1",
+          "2",
+          "1",
+          "2",
+          "4",
+          "3",
+          "2",
+          "1",
+          "2",
+          "3",
+          "2",
+          "3",
+          "4",
+          "3",
+          "2",
+          "3",
+          "4",
+          "3",
+          "4"
+        ]
+      },
+      "failure_related": false
+    },
+    "3": {
+      "node_id": 3,
+      "line_number": 3,
+      "source_code": "return 0",
+      "statement_type": "Return",
+      "reads": [],
+      "writes": [],
+      "function_name": "count_no_of_ways",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "4": {
+      "node_id": 4,
+      "line_number": 4,
+      "source_code": "if n == 1:",
+      "statement_type": "If",
+      "reads": [
+        "n"
+      ],
+      "writes": [],
+      "function_name": "count_no_of_ways",
+      "executed": true,
+      "execution_count": 23,
+      "runtime_values": {
+        "n": [
+          "2",
+          "1",
+          "1",
+          "3",
+          "2",
+          "2",
+          "1",
+          "1",
+          "4",
+          "3",
+          "2",
+          "1",
+          "1",
+          "2",
+          "1",
+          "1",
+          "3",
+          "2",
+          "1",
+          "1",
+          "2",
+          "1",
+          "1"
+        ],
+        "k": [
+          "4",
+          "3",
+          "4",
+          "2",
+          "1",
+          "2",
+          "1",
+          "2",
+          "4",
+          "3",
+          "2",
+          "1",
+          "2",
+          "3",
+          "2",
+          "3",
+          "4",
+          "3",
+          "2",
+          "3",
+          "4",
+          "3",
+          "4"
+        ]
+      },
+      "failure_related": false
+    },
+    "5": {
+      "node_id": 5,
+      "line_number": 5,
+      "source_code": "return k",
+      "statement_type": "Return",
+      "reads": [
+        "k"
+      ],
+      "writes": [],
+      "function_name": "count_no_of_ways",
+      "executed": true,
+      "execution_count": 24,
+      "runtime_values": {
+        "n": [
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        "k": [
+          "3",
+          "3",
+          "4",
+          "4",
+          "1",
+          "1",
+          "2",
+          "2",
+          "1",
+          "1",
+          "2",
+          "2",
+          "2",
+          "2",
+          "3",
+          "3",
+          "2",
+          "2",
+          "3",
+          "3",
+          "3",
+          "3",
+          "4",
+          "4"
+        ]
+      },
+      "failure_related": false
+    },
+    "6": {
+      "node_id": 6,
+      "line_number": 6,
+      "source_code": "if k == 1:",
+      "statement_type": "If",
+      "reads": [
+        "k"
+      ],
+      "writes": [],
+      "function_name": "count_no_of_ways",
+      "executed": true,
+      "execution_count": 11,
+      "runtime_values": {
+        "n": [
+          "2",
+          "3",
+          "2",
+          "2",
+          "4",
+          "3",
+          "2",
+          "2",
+          "3",
+          "2",
+          "2"
+        ],
+        "k": [
+          "4",
+          "2",
+          "1",
+          "2",
+          "4",
+          "3",
+          "2",
+          "3",
+          "4",
+          "3",
+          "4"
+        ]
+      },
+      "failure_related": false
+    },
+    "7": {
+      "node_id": 7,
+      "line_number": 7,
+      "source_code": "return 1",
+      "statement_type": "Return",
+      "reads": [],
+      "writes": [],
+      "function_name": "count_no_of_ways",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "n": [
+          "2",
+          "2"
+        ],
+        "k": [
+          "1",
+          "1"
+        ]
+      },
+      "failure_related": false
+    },
+    "8": {
+      "node_id": 8,
+      "line_number": 8,
+      "source_code": "return (k * count_no_of_ways(n-1, k-1)) + count_no_of_ways(n-1, k)",
+      "statement_type": "Return",
+      "reads": [
+        "count_no_of_ways",
+        "k",
+        "n"
+      ],
+      "writes": [],
+      "function_name": "count_no_of_ways",
+      "executed": true,
+      "execution_count": 20,
+      "runtime_values": {
+        "n": [
+          "2",
+          "2",
+          "3",
+          "2",
+          "2",
+          "3",
+          "4",
+          "3",
+          "2",
+          "2",
+          "2",
+          "2",
+          "3",
+          "3",
+          "2",
+          "2",
+          "2",
+          "2",
+          "3",
+          "4"
+        ],
+        "k": [
+          "4",
+          "4",
+          "2",
+          "2",
+          "2",
+          "2",
+          "4",
+          "3",
+          "2",
+          "2",
+          "3",
+          "3",
+          "3",
+          "4",
+          "3",
+          "3",
+          "4",
+          "4",
+          "4",
+          "4"
+        ]
+      },
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "n",
+      "label": "DATA(n)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 4,
+      "dependency_type": "DATA",
+      "variable": "n",
+      "label": "DATA(n)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 5,
+      "dependency_type": "DATA",
+      "variable": "k",
+      "label": "DATA(k)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 6,
+      "dependency_type": "DATA",
+      "variable": "k",
+      "label": "DATA(k)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 8,
+      "dependency_type": "DATA",
+      "variable": "count_no_of_ways",
+      "label": "DATA(count_no_of_ways)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 8,
+      "dependency_type": "DATA",
+      "variable": "k",
+      "label": "DATA(k)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 8,
+      "dependency_type": "DATA",
+      "variable": "n",
+      "label": "DATA(n)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 2,
+      "target_id": 3,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(If)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 4,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 4,
+      "target_id": 5,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(If)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 6,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 6,
+      "target_id": 7,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(If)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 8,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    8
+  ]
+}

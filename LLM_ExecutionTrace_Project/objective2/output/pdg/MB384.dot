@@ -1,0 +1,12 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def is_subarray(arr1, arr2): | W:arr1,arr2,is_subarray", fillcolor="lightgreen"];
+    "2" [label="L2: return all(x in arr1 for x in arr2) | W:x | R:all,arr1,arr2,x", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(arr1)", style="solid"];
+    "1" -> "2" [label="DATA(arr2)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

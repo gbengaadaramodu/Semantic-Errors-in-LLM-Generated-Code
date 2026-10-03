@@ -1,0 +1,22 @@
+{
+  "trace_id": "HE081",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/82",
+  "problem_summary": "\ndef prime_length(string):\n    \"\"\"Write a function that takes a string and retur",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpl8atj3xb.py\", line 33, in <module>\n    check(prime_length)\n    ~~~~~^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpl8atj3xb.py\", line 20, in check\n    assert candidate('') == False\n           ^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpl8atj3xb.py\", line 33, in <module>\n    check(prime_length)\n    ~~~~~^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpl8atj3xb.py\", line 20, in check\n    assert candidate('') == False\n           ^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+  "exception_type": "AssertionError",
+  "exception_message": "",
+  "execution_time": 0.239622,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": "benchmark_test",
+  "assertion_failed": true,
+  "parser_prediction": ""
+}

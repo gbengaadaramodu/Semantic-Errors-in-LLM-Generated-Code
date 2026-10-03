@@ -1,0 +1,97 @@
+[
+  {
+    "candidate_rank": 1,
+    "intervention": {
+      "target_variable": "max_product",
+      "target_line": 8,
+      "observed_value": "46",
+      "counterfactual_value": "36",
+      "operation_type": "AST_transform",
+      "modified_code": "def max_product_tuple(tuples):\n    max_product = 0\n    for i in range(len(tuples)):\n        for j in range(i + 1, len(tuples)):\n            product = abs(tuples[i][0] * tuples[j][1]) + abs(tuples[i][1] * tuples[j][0])\n            if product > max_product:\n                max_product = product\n    return 36"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Completed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "TRUE",
+    "execution_time": 0.1316,
+    "status": "EXECUTED",
+    "explanation": "Intervention successfully flipped execution outcome from FAIL to PASS."
+  },
+  {
+    "candidate_rank": 2,
+    "intervention": {
+      "target_variable": "max_product",
+      "target_line": 7,
+      "observed_value": "26",
+      "counterfactual_value": "None",
+      "operation_type": "AST_transform",
+      "modified_code": "def max_product_tuple(tuples):\n    max_product = 0\n    for i in range(len(tuples)):\n        for j in range(i + 1, len(tuples)):\n            product = abs(tuples[i][0] * tuples[j][1]) + abs(tuples[i][1] * tuples[j][0])\n            if product > max_product:\n                max_product = None\n    return max_product"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.2314,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  },
+  {
+    "candidate_rank": 3,
+    "intervention": {
+      "target_variable": "product",
+      "target_line": 5,
+      "observed_value": "42",
+      "counterfactual_value": "None",
+      "operation_type": "AST_transform",
+      "modified_code": "def max_product_tuple(tuples):\n    max_product = 0\n    for i in range(len(tuples)):\n        for j in range(i + 1, len(tuples)):\n            product = None\n            if product > max_product:\n                max_product = product\n    return max_product"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.1887,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  },
+  {
+    "candidate_rank": 4,
+    "intervention": {
+      "target_variable": "max_product",
+      "target_line": 6,
+      "observed_value": "46",
+      "counterfactual_value": "None",
+      "operation_type": "AST_transform",
+      "modified_code": "def max_product_tuple(tuples):\n    max_product = 0\n    for i in range(len(tuples)):\n        for j in range(i + 1, len(tuples)):\n            product = abs(tuples[i][0] * tuples[j][1]) + abs(tuples[i][1] * tuples[j][0])\n            if product <= max_product:\n                max_product = product\n    return max_product"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.2264,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  },
+  {
+    "candidate_rank": 5,
+    "intervention": {
+      "target_variable": "i",
+      "target_line": 3,
+      "observed_value": "3",
+      "counterfactual_value": "None",
+      "operation_type": "failed_construction",
+      "modified_code": ""
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "FAILED_CONSTRUCTION",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "UNRESOLVED",
+    "execution_time": 0.0,
+    "status": "UNRESOLVED",
+    "explanation": "Failed to construct valid AST counterfactual intervention."
+  }
+]

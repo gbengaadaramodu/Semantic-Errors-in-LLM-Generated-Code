@@ -1,0 +1,26 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def choose_num(x, y): | W:x,y,choose_num", fillcolor="lightgreen"];
+    "2" [label="L2: if x > y: | R:x,y", fillcolor="lightgreen"];
+    "3" [label="L3: return -1", fillcolor="lightgrey"];
+    "4" [label="L5: for i in range(x, y+1): | W:i | R:range,x,y", fillcolor="lightgreen"];
+    "5" [label="L6: if i % 2 == 0: | R:i", fillcolor="lightgreen"];
+    "6" [label="L7: return i | R:i", fillcolor="lightgreen"];
+    "7" [label="L9: return -1", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(x)", style="solid"];
+    "1" -> "2" [label="DATA(y)", style="solid"];
+    "1" -> "4" [label="DATA(x)", style="solid"];
+    "1" -> "4" [label="DATA(y)", style="solid"];
+    "4" -> "5" [label="DATA(i)", style="solid"];
+    "4" -> "6" [label="DATA(i)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "2" -> "3" [label="CONTROL(If)", style="dashed"];
+    "1" -> "4" [label="CONTROL(FunctionDef)", style="dashed"];
+    "4" -> "5" [label="CONTROL(For)", style="dashed"];
+    "5" -> "6" [label="CONTROL(If)", style="dashed"];
+    "1" -> "7" [label="CONTROL(FunctionDef)", style="dashed"];
+}

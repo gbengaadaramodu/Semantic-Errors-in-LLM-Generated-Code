@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB261",
+  "dataset": "MBPP",
+  "task_id": "61",
+  "problem_summary": "Write a python function to count the number of substrings with the sum of digits",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpjmjrc5qy.py\", line 9, in <module>\n    assert count_Substrings('112112') == 6\n           ^^^^^^^^^^^^^^^^\nNameError: name 'count_Substrings' is not defined. Did you mean: 'count_substrings'?\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpjmjrc5qy.py\", line 9, in <module>\n    assert count_Substrings('112112') == 6\n           ^^^^^^^^^^^^^^^^\nNameError: name 'count_Substrings' is not defined. Did you mean: 'count_substrings'?",
+  "exception_type": "NameError",
+  "exception_message": "name 'count_Substrings' is not defined. Did you mean: 'count_substrings'?",
+  "execution_time": 0.277638,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

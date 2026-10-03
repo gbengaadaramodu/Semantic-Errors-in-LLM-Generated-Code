@@ -1,0 +1,193 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "import re",
+      "statement_type": "Import",
+      "reads": [],
+      "writes": [],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 1,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 3,
+      "source_code": "def find_literals(string, pattern):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "pattern",
+        "string",
+        "find_literals"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 1,
+      "runtime_values": {
+        "re": [
+          "<module 're' from 'C:\\\\ProgramData\\\\anaconda3\\\\Lib\\\\re\\\\__init__.py'>"
+        ]
+      },
+      "failure_related": false
+    },
+    "3": {
+      "node_id": 3,
+      "line_number": 4,
+      "source_code": "regex = re.compile(pattern)",
+      "statement_type": "Assign",
+      "reads": [
+        "pattern",
+        "re"
+      ],
+      "writes": [
+        "regex"
+      ],
+      "function_name": "find_literals",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "4": {
+      "node_id": 4,
+      "line_number": 5,
+      "source_code": "match = regex.search(string)",
+      "statement_type": "Assign",
+      "reads": [
+        "regex",
+        "string"
+      ],
+      "writes": [
+        "match"
+      ],
+      "function_name": "find_literals",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "5": {
+      "node_id": 5,
+      "line_number": 6,
+      "source_code": "if match:",
+      "statement_type": "If",
+      "reads": [
+        "match"
+      ],
+      "writes": [],
+      "function_name": "find_literals",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "6": {
+      "node_id": 6,
+      "line_number": 7,
+      "source_code": "return (match.group(), match.start(), match.end())",
+      "statement_type": "Return",
+      "reads": [
+        "match"
+      ],
+      "writes": [],
+      "function_name": "find_literals",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "7": {
+      "node_id": 7,
+      "line_number": 9,
+      "source_code": "return (None, None, None)",
+      "statement_type": "Return",
+      "reads": [],
+      "writes": [],
+      "function_name": "find_literals",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 2,
+      "target_id": 3,
+      "dependency_type": "DATA",
+      "variable": "pattern",
+      "label": "DATA(pattern)"
+    },
+    {
+      "source_id": 3,
+      "target_id": 4,
+      "dependency_type": "DATA",
+      "variable": "regex",
+      "label": "DATA(regex)"
+    },
+    {
+      "source_id": 2,
+      "target_id": 4,
+      "dependency_type": "DATA",
+      "variable": "string",
+      "label": "DATA(string)"
+    },
+    {
+      "source_id": 4,
+      "target_id": 5,
+      "dependency_type": "DATA",
+      "variable": "match",
+      "label": "DATA(match)"
+    },
+    {
+      "source_id": 4,
+      "target_id": 6,
+      "dependency_type": "DATA",
+      "variable": "match",
+      "label": "DATA(match)"
+    },
+    {
+      "source_id": 2,
+      "target_id": 3,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 2,
+      "target_id": 4,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 2,
+      "target_id": 5,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 5,
+      "target_id": 6,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(If)"
+    },
+    {
+      "source_id": 5,
+      "target_id": 7,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(If)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    7
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def is_subarray(arr1, arr2):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "arr1",
+        "arr2",
+        "is_subarray"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 1,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "return all(x in arr1 for x in arr2)",
+      "statement_type": "Return",
+      "reads": [
+        "all",
+        "arr1",
+        "arr2",
+        "x"
+      ],
+      "writes": [
+        "x"
+      ],
+      "function_name": "is_subarray",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "arr1",
+      "label": "DATA(arr1)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "arr2",
+      "label": "DATA(arr2)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    2
+  ]
+}

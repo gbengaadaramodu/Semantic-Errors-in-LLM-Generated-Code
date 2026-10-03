@@ -1,0 +1,22 @@
+{
+  "trace_id": "HE128",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/32",
+  "problem_summary": "import math\n\n\ndef poly(xs: list, x: float):\n    \"\"\"\n    Evaluates polynomial wit",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpzeshw49c.py\", line 30, in <module>\n    check(find_zero)\n    ~~~~~^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpzeshw49c.py\", line 26, in check\n    assert math.fabs(poly(coeffs, solution)) < 1e-4\n                     ^^^^\nNameError: name 'poly' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpzeshw49c.py\", line 30, in <module>\n    check(find_zero)\n    ~~~~~^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpzeshw49c.py\", line 26, in check\n    assert math.fabs(poly(coeffs, solution)) < 1e-4\n                     ^^^^\nNameError: name 'poly' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'poly' is not defined",
+  "execution_time": 0.339483,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

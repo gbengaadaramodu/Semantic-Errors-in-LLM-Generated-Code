@@ -1,0 +1,11 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def min_product_tuple(tuple_list): | W:tuple_list,min_product_tuple", fillcolor="lightgreen"];
+    "2" [label="L2: return min((x * y for x, y in tuple_list)) | W:x,y | R:min,tuple_list,x,y", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(tuple_list)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

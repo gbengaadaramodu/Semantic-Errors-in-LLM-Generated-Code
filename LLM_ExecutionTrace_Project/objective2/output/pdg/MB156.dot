@@ -1,0 +1,12 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def tuple_intersection(tuple_list1, tuple_list2): | W:tuple_list1,tuple_list2,tuple_intersection", fillcolor="lightgreen"];
+    "2" [label="L2: return {t for t in set(tuple_list1) & set(tuple_list2)} | W:t | R:set,t,tuple_list1,tuple_list2", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(tuple_list1)", style="solid"];
+    "1" -> "2" [label="DATA(tuple_list2)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

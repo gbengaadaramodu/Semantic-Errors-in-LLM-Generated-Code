@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB356",
+  "dataset": "MBPP",
+  "task_id": "56",
+  "problem_summary": "Write a python function to check if a given number is one less than twice its re",
+  "execution_status": "Completed",
+  "stdout": "",
+  "stderr": "",
+  "traceback": "",
+  "exception_type": "",
+  "exception_message": "",
+  "execution_time": 0.087721,
+  "timed_out": false,
+  "exit_code": 0,
+  "tests_passed": true,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

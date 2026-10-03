@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB150",
+  "dataset": "MBPP",
+  "task_id": "568",
+  "problem_summary": "Write a function to create a list of N empty dictionaries.",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpyc_eh_j_.py\", line 4, in <module>\n    assert empty_list(5)==[{},{},{},{},{}]\n           ^^^^^^^^^^\nNameError: name 'empty_list' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpyc_eh_j_.py\", line 4, in <module>\n    assert empty_list(5)==[{},{},{},{},{}]\n           ^^^^^^^^^^\nNameError: name 'empty_list' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'empty_list' is not defined",
+  "execution_time": 0.206504,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB077",
+  "dataset": "MBPP",
+  "task_id": "57",
+  "problem_summary": "Write a python function to find the largest number that can be formed with the g",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmphkeyl2sx.py\", line 14, in <module>\n    assert find_Max_Num([1,2,3]) == 321\n           ^^^^^^^^^^^^\nNameError: name 'find_Max_Num' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmphkeyl2sx.py\", line 14, in <module>\n    assert find_Max_Num([1,2,3]) == 321\n           ^^^^^^^^^^^^\nNameError: name 'find_Max_Num' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'find_Max_Num' is not defined",
+  "execution_time": 0.238237,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

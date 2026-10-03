@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a function to find sum and average of first n natural numbers.
+
+Example test: assert sum_average(10)==(55, 5.5)
+[/INST]

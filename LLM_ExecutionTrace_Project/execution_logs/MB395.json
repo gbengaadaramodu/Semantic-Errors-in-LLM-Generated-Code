@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB395",
+  "dataset": "MBPP",
+  "task_id": "294",
+  "problem_summary": "Write a function to find the maximum value in a given heterogeneous list.",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpft5ee389.py\", line 4, in <module>\n    assert max_val(['Python', 3, 2, 4, 5, 'version'])==5\n           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpft5ee389.py\", line 2, in max_val\n    return max(my_list)\nTypeError: '>' not supported between instances of 'int' and 'str'\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpft5ee389.py\", line 4, in <module>\n    assert max_val(['Python', 3, 2, 4, 5, 'version'])==5\n           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpft5ee389.py\", line 2, in max_val\n    return max(my_list)\nTypeError: '>' not supported between instances of 'int' and 'str'",
+  "exception_type": "TypeError",
+  "exception_message": "'>' not supported between instances of 'int' and 'str'",
+  "execution_time": 0.174796,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

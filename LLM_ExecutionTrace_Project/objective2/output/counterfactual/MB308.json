@@ -1,0 +1,59 @@
+[
+  {
+    "candidate_rank": 1,
+    "intervention": {
+      "target_variable": "dp",
+      "target_line": 16,
+      "observed_value": "[[1, 2, 4, 10], [1, 0, 0, 0], [1, 0, 0, 0], [1, 0, 0, 0]]",
+      "counterfactual_value": "20",
+      "operation_type": "AST_transform",
+      "modified_code": "def sum_Of_Subarray_Prod(arr):\n    n = len(arr)\n    dp = [[0 for _ in range(n+1)] for _ in range(n+1)]\n    \n    for i in range(n+1):\n        dp[i][0] = 1\n        \n    for j in range(1, n+1):\n        for i in range(j):\n            dp[i][j] = dp[i][j-1] * arr[j-1]\n    \n    for i in range(n+1):\n        for j in range(i+1, n+1):\n            dp[i][j] += dp[i][j-1]\n    \n    dp = 20\n    return dp[0][n]"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.2153,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  },
+  {
+    "candidate_rank": 2,
+    "intervention": {
+      "target_variable": "_",
+      "target_line": 3,
+      "observed_value": "3",
+      "counterfactual_value": "None",
+      "operation_type": "failed_construction",
+      "modified_code": ""
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "FAILED_CONSTRUCTION",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "UNRESOLVED",
+    "execution_time": 0.0,
+    "status": "UNRESOLVED",
+    "explanation": "Failed to construct valid AST counterfactual intervention."
+  },
+  {
+    "candidate_rank": 3,
+    "intervention": {
+      "target_variable": "n",
+      "target_line": 2,
+      "observed_value": "None",
+      "counterfactual_value": "None",
+      "operation_type": "AST_transform",
+      "modified_code": "def sum_Of_Subarray_Prod(arr):\n    n = None\n    dp = [[0 for _ in range(n + 1)] for _ in range(n + 1)]\n    for i in range(n + 1):\n        dp[i][0] = 1\n    for j in range(1, n + 1):\n        for i in range(j):\n            dp[i][j] = dp[i][j - 1] * arr[j - 1]\n    for i in range(n + 1):\n        for j in range(i + 1, n + 1):\n            dp[i][j] += dp[i][j - 1]\n    return dp[0][n]"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.2088,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  }
+]

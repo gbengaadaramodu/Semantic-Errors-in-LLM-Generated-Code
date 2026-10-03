@@ -1,0 +1,22 @@
+{
+  "trace_id": "HE038",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/12",
+  "problem_summary": "from typing import List, Optional\n\n\ndef longest(strings: List[str]) -> Optional[",
+  "execution_status": "Completed",
+  "stdout": "",
+  "stderr": "",
+  "traceback": "",
+  "exception_type": "",
+  "exception_message": "",
+  "execution_time": 0.142296,
+  "timed_out": false,
+  "exit_code": 0,
+  "tests_passed": true,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

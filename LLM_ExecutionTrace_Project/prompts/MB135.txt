@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a function to find the number of ways to partition a set of Bell numbers.
+
+Example test: assert bell_number(2)==2
+[/INST]

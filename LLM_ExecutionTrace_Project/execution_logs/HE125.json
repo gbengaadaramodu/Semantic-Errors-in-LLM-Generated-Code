@@ -1,0 +1,22 @@
+{
+  "trace_id": "HE125",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/128",
+  "problem_summary": "\ndef prod_signs(arr):\n    \"\"\"\n    You are given an array arr of integers and you",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmplv_a4dpb.py\", line 28, in <module>\n    check(prod_signs)\n    ~~~~~^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmplv_a4dpb.py\", line 14, in check\n    assert candidate([1, 2, 2, -4]) == -9\n           ~~~~~~~~~^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmplv_a4dpb.py\", line 8, in prod_signs\n    return sum(map(abs, arr)) * prod(signs)\n                                ^^^^\nNameError: name 'prod' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmplv_a4dpb.py\", line 28, in <module>\n    check(prod_signs)\n    ~~~~~^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmplv_a4dpb.py\", line 14, in check\n    assert candidate([1, 2, 2, -4]) == -9\n           ~~~~~~~~~^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmplv_a4dpb.py\", line 8, in prod_signs\n    return sum(map(abs, arr)) * prod(signs)\n                                ^^^^\nNameError: name 'prod' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'prod' is not defined",
+  "execution_time": 0.267876,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

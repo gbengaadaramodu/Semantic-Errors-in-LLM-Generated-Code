@@ -1,0 +1,486 @@
+{
+  "trace_id": "HE137",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/109",
+  "error_category": "Wrong-Output Error",
+  "analysis_status": "ANALYZED",
+  "skip_reason": null,
+  "input_record": {
+    "trace_id": "HE137",
+    "dataset": "HumanEval",
+    "task_id": "HumanEval/109",
+    "problem_summary": "\ndef move_one_ball(arr):\n    \"\"\"We have an array 'arr' of N integers arr[1], arr",
+    "execution_status": "Failed",
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpvt8gn6it.py\", line 21, in <module>\n    check(move_one_ball)\n    ~~~~~^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpvt8gn6it.py\", line 15, in check\n    assert candidate([4, 3, 1, 2])==False\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+    "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpvt8gn6it.py\", line 21, in <module>\n    check(move_one_ball)\n    ~~~~~^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpvt8gn6it.py\", line 15, in check\n    assert candidate([4, 3, 1, 2])==False\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+    "exception_type": "AssertionError",
+    "exception_message": "",
+    "execution_time": 0.384549,
+    "timed_out": false,
+    "exit_code": 1,
+    "tests_passed": false,
+    "tests_failed": 0,
+    "expected_output": null,
+    "actual_output": null,
+    "assertion_source": "benchmark_test",
+    "assertion_failed": true,
+    "parser_prediction": "Wrong-Output Error"
+  },
+  "scm": {
+    "task_id": "HumanEval/109",
+    "nodes": [
+      {
+        "node_id": "S",
+        "variable_name": "Specification",
+        "symbol": "S",
+        "label": "Specification"
+      },
+      {
+        "node_id": "C",
+        "variable_name": "GeneratedCode",
+        "symbol": "C",
+        "label": "Generated Code"
+      },
+      {
+        "node_id": "E",
+        "variable_name": "ExecutionTrace",
+        "symbol": "E",
+        "label": "Execution Trace"
+      },
+      {
+        "node_id": "T",
+        "variable_name": "TestSuite",
+        "symbol": "T",
+        "label": "Test Suite"
+      },
+      {
+        "node_id": "O",
+        "variable_name": "Outcome",
+        "symbol": "O",
+        "label": "Outcome"
+      }
+    ],
+    "edges": [
+      {
+        "source": "S",
+        "target": "C",
+        "relationship": "generates"
+      },
+      {
+        "source": "C",
+        "target": "E",
+        "relationship": "produces"
+      },
+      {
+        "source": "T",
+        "target": "E",
+        "relationship": "evaluates"
+      },
+      {
+        "source": "E",
+        "target": "O",
+        "relationship": "determines"
+      }
+    ],
+    "variables": {
+      "S": {
+        "name": "Specification",
+        "symbol": "S",
+        "description": "Problem description, prompt, and target function signature",
+        "value": "\ndef move_one_ball(arr):\n    \"\"\"We have an array 'arr' of N integers arr[1], arr"
+      },
+      "C": {
+        "name": "GeneratedCode",
+        "symbol": "C",
+        "description": "LLM-generated Python source code implementation",
+        "value": "def move_one_ball(arr):\n    if not arr:\n        return True\n    arr.sort()\n    for i in range(len(arr)-1):\n        if arr[i] > arr[i+1]:\n            return False\n    return True"
+      },
+      "E": {
+        "name": "ExecutionTrace",
+        "symbol": "E",
+        "description": "Observable runtime trace events, variable states, and stdout/stderr",
+        "value": "status=Failed, exc=AssertionError, msg="
+      },
+      "T": {
+        "name": "TestSuite",
+        "symbol": "T",
+        "description": "Benchmark assertions, inputs, and check function harness",
+        "value": "def check(candidate):\n\n    # Check some simple cases\n    assert candidate([3, 4, 5, 1, 2])==True, \"T"
+      },
+      "O": {
+        "name": "Outcome",
+        "symbol": "O",
+        "description": "Final test execution outcome (Completed/Failed/Timeout)",
+        "value": "Failed"
+      }
+    }
+  },
+  "pdg": {
+    "nodes": {
+      "1": {
+        "node_id": 1,
+        "line_number": 1,
+        "source_code": "def move_one_ball(arr):",
+        "statement_type": "FunctionDef",
+        "reads": [],
+        "writes": [
+          "arr",
+          "move_one_ball"
+        ],
+        "function_name": "<module>",
+        "executed": true,
+        "execution_count": 4,
+        "runtime_values": {
+          "arr": [
+            "[3, 4, 5, 1, 2]",
+            "[3, 5, 10, 1, 2]",
+            "[4, 3, 1, 2]"
+          ]
+        },
+        "failure_related": false
+      },
+      "2": {
+        "node_id": 2,
+        "line_number": 2,
+        "source_code": "if not arr:",
+        "statement_type": "If",
+        "reads": [
+          "arr"
+        ],
+        "writes": [],
+        "function_name": "move_one_ball",
+        "executed": true,
+        "execution_count": 3,
+        "runtime_values": {
+          "arr": [
+            "[3, 4, 5, 1, 2]",
+            "[3, 5, 10, 1, 2]",
+            "[4, 3, 1, 2]"
+          ]
+        },
+        "failure_related": false
+      },
+      "3": {
+        "node_id": 3,
+        "line_number": 3,
+        "source_code": "return True",
+        "statement_type": "Return",
+        "reads": [],
+        "writes": [],
+        "function_name": "move_one_ball",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "4": {
+        "node_id": 4,
+        "line_number": 4,
+        "source_code": "arr.sort()",
+        "statement_type": "Expr",
+        "reads": [
+          "arr"
+        ],
+        "writes": [],
+        "function_name": "move_one_ball",
+        "executed": true,
+        "execution_count": 3,
+        "runtime_values": {
+          "arr": [
+            "[3, 4, 5, 1, 2]",
+            "[3, 5, 10, 1, 2]",
+            "[4, 3, 1, 2]"
+          ]
+        },
+        "failure_related": false
+      },
+      "5": {
+        "node_id": 5,
+        "line_number": 5,
+        "source_code": "for i in range(len(arr)-1):",
+        "statement_type": "For",
+        "reads": [
+          "arr",
+          "len",
+          "range"
+        ],
+        "writes": [
+          "i"
+        ],
+        "function_name": "move_one_ball",
+        "executed": true,
+        "execution_count": 14,
+        "runtime_values": {
+          "arr": [
+            "[1, 2, 3, 4, 5]",
+            "[1, 2, 3, 4, 5]",
+            "[1, 2, 3, 4, 5]",
+            "[1, 2, 3, 4, 5]",
+            "[1, 2, 3, 4, 5]",
+            "[1, 2, 3, 5, 10]",
+            "[1, 2, 3, 5, 10]",
+            "[1, 2, 3, 5, 10]",
+            "[1, 2, 3, 5, 10]",
+            "[1, 2, 3, 5, 10]",
+            "[1, 2, 3, 4]",
+            "[1, 2, 3, 4]",
+            "[1, 2, 3, 4]",
+            "[1, 2, 3, 4]"
+          ],
+          "i": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "0",
+            "1",
+            "2",
+            "3",
+            "0",
+            "1",
+            "2"
+          ]
+        },
+        "failure_related": false
+      },
+      "6": {
+        "node_id": 6,
+        "line_number": 6,
+        "source_code": "if arr[i] > arr[i+1]:",
+        "statement_type": "If",
+        "reads": [
+          "arr",
+          "i"
+        ],
+        "writes": [],
+        "function_name": "move_one_ball",
+        "executed": true,
+        "execution_count": 11,
+        "runtime_values": {
+          "arr": [
+            "[1, 2, 3, 4, 5]",
+            "[1, 2, 3, 4, 5]",
+            "[1, 2, 3, 4, 5]",
+            "[1, 2, 3, 4, 5]",
+            "[1, 2, 3, 5, 10]",
+            "[1, 2, 3, 5, 10]",
+            "[1, 2, 3, 5, 10]",
+            "[1, 2, 3, 5, 10]",
+            "[1, 2, 3, 4]",
+            "[1, 2, 3, 4]",
+            "[1, 2, 3, 4]"
+          ],
+          "i": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "0",
+            "1",
+            "2",
+            "3",
+            "0",
+            "1",
+            "2"
+          ]
+        },
+        "failure_related": false
+      },
+      "7": {
+        "node_id": 7,
+        "line_number": 7,
+        "source_code": "return False",
+        "statement_type": "Return",
+        "reads": [],
+        "writes": [],
+        "function_name": "move_one_ball",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "8": {
+        "node_id": 8,
+        "line_number": 8,
+        "source_code": "return True",
+        "statement_type": "Return",
+        "reads": [],
+        "writes": [],
+        "function_name": "move_one_ball",
+        "executed": true,
+        "execution_count": 6,
+        "runtime_values": {
+          "arr": [
+            "[1, 2, 3, 4, 5]",
+            "[1, 2, 3, 4, 5]",
+            "[1, 2, 3, 5, 10]",
+            "[1, 2, 3, 5, 10]",
+            "[1, 2, 3, 4]",
+            "[1, 2, 3, 4]"
+          ],
+          "i": [
+            "3",
+            "3",
+            "3",
+            "3",
+            "2",
+            "2"
+          ]
+        },
+        "failure_related": true
+      }
+    },
+    "edges": [
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "DATA",
+        "variable": "arr",
+        "label": "DATA(arr)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 4,
+        "dependency_type": "DATA",
+        "variable": "arr",
+        "label": "DATA(arr)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 5,
+        "dependency_type": "DATA",
+        "variable": "arr",
+        "label": "DATA(arr)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 6,
+        "dependency_type": "DATA",
+        "variable": "arr",
+        "label": "DATA(arr)"
+      },
+      {
+        "source_id": 5,
+        "target_id": 6,
+        "dependency_type": "DATA",
+        "variable": "i",
+        "label": "DATA(i)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 2,
+        "target_id": 3,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(If)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 4,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 5,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 5,
+        "target_id": 6,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(For)"
+      },
+      {
+        "source_id": 6,
+        "target_id": 7,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(If)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 8,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      }
+    ],
+    "entry_node_id": 1,
+    "failure_node_ids": [
+      8
+    ]
+  },
+  "runtime_events_count": 52,
+  "failure_line": 8,
+  "failure_statement": "return True",
+  "candidates": [
+    {
+      "rank": 1,
+      "node_id": 8,
+      "line_number": 8,
+      "statement_code": "return True",
+      "variable_name": "<statement>",
+      "observed_value": null,
+      "expected_value": "False",
+      "proximity_score": 1.0,
+      "dependency_score": 1.0,
+      "explanation": "Reached via reverse traversal (distance=0, type=Return)"
+    }
+  ],
+  "critical_variable": null,
+  "counterfactual_results": [
+    {
+      "candidate_rank": 1,
+      "intervention": {
+        "target_variable": "<statement>",
+        "target_line": 8,
+        "observed_value": "None",
+        "counterfactual_value": "False",
+        "operation_type": "failed_construction",
+        "modified_code": ""
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "FAILED_CONSTRUCTION",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "UNRESOLVED",
+      "execution_time": 0.0,
+      "status": "UNRESOLVED",
+      "explanation": "Failed to construct valid AST counterfactual intervention."
+    }
+  ],
+  "fault_location": {
+    "file": "HE137.py",
+    "line_number": 8,
+    "statement_code": "return True",
+    "function_name": "move_one_ball",
+    "causal_variable": "<statement>",
+    "evidence_score": 1.0,
+    "confidence": 0.5
+  },
+  "root_cause": {
+    "root_cause_status": "UNRESOLVED",
+    "candidate_explanation": "Semantic mismatch at line 8 ('return True') causes return value mismatch.",
+    "causal_variable": "<statement>",
+    "fault_statement": "return True",
+    "fault_line": 8,
+    "evidence_summary": "Reverse PDG traversal traced failure from line 1 to statement line 8. Structural dependency identified; counterfactual validation unconfirmed or unresolved.",
+    "counterfactual_validated": false,
+    "confidence": 0.5
+  },
+  "ground_truth_matched": null,
+  "ground_truth_fault_line": null,
+  "execution_time": 0.0155
+}

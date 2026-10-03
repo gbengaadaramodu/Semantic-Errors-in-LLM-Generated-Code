@@ -1,0 +1,71 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def bitwise_xor(tup1, tup2):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "tup1",
+        "tup2",
+        "bitwise_xor"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 1,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "return tuple(i ^ j for i, j in zip(tup1, tup2))",
+      "statement_type": "Return",
+      "reads": [
+        "i",
+        "j",
+        "tup1",
+        "tup2",
+        "tuple",
+        "zip"
+      ],
+      "writes": [
+        "i",
+        "j"
+      ],
+      "function_name": "bitwise_xor",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "tup1",
+      "label": "DATA(tup1)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "tup2",
+      "label": "DATA(tup2)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    2
+  ]
+}

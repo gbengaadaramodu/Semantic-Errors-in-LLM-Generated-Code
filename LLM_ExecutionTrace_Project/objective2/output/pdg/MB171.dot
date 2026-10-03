@@ -1,0 +1,29 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def count_no_of_ways(n, k): | W:k,n,count_no_of_ways", fillcolor="lightgreen"];
+    "2" [label="L2: if n == 0: | R:n", fillcolor="lightgreen"];
+    "3" [label="L3: return 0", fillcolor="lightgrey"];
+    "4" [label="L4: if n == 1: | R:n", fillcolor="lightgreen"];
+    "5" [label="L5: return k | R:k", fillcolor="lightgreen"];
+    "6" [label="L6: if k == 1: | R:k", fillcolor="lightgreen"];
+    "7" [label="L7: return 1", fillcolor="lightgreen"];
+    "8" [label="L8: return (k * count_no_of_ways(n-1, k-1)) + count_no_of_ways(n-1, k) | R:count_no_of_ways,k,n", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(n)", style="solid"];
+    "1" -> "4" [label="DATA(n)", style="solid"];
+    "1" -> "5" [label="DATA(k)", style="solid"];
+    "1" -> "6" [label="DATA(k)", style="solid"];
+    "1" -> "8" [label="DATA(count_no_of_ways)", style="solid"];
+    "1" -> "8" [label="DATA(k)", style="solid"];
+    "1" -> "8" [label="DATA(n)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "2" -> "3" [label="CONTROL(If)", style="dashed"];
+    "1" -> "4" [label="CONTROL(FunctionDef)", style="dashed"];
+    "4" -> "5" [label="CONTROL(If)", style="dashed"];
+    "1" -> "6" [label="CONTROL(FunctionDef)", style="dashed"];
+    "6" -> "7" [label="CONTROL(If)", style="dashed"];
+    "1" -> "8" [label="CONTROL(FunctionDef)", style="dashed"];
+}

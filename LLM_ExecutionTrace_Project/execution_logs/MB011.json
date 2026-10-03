@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB011",
+  "dataset": "MBPP",
+  "task_id": "770",
+  "problem_summary": "Write a python function to find the sum of fourth power of first n odd natural n",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp0la1jue3.py\", line 4, in <module>\n    assert odd_num_sum(2) == 82\n           ^^^^^^^^^^^\nNameError: name 'odd_num_sum' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp0la1jue3.py\", line 4, in <module>\n    assert odd_num_sum(2) == 82\n           ^^^^^^^^^^^\nNameError: name 'odd_num_sum' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'odd_num_sum' is not defined",
+  "execution_time": 0.246095,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

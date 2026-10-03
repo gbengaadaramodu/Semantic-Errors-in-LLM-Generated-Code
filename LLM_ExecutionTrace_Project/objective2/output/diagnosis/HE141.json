@@ -1,0 +1,469 @@
+{
+  "trace_id": "HE141",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/95",
+  "error_category": "Runtime Exception",
+  "analysis_status": "ANALYZED",
+  "skip_reason": null,
+  "input_record": {
+    "trace_id": "HE141",
+    "dataset": "HumanEval",
+    "task_id": "HumanEval/95",
+    "problem_summary": "\ndef check_dict_case(dict):\n    \"\"\"\n    Given a dictionary, return True if all k",
+    "execution_status": "Failed",
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpjc4w7rgz.py\", line 24, in <module>\n    check(check_dict_case)\n    ~~~~~^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpjc4w7rgz.py\", line 13, in check\n    assert candidate({\"p\":\"pineapple\", 5:\"banana\", \"a\":\"apple\"}) == False, \"Third test error: \" + str(candidate({\"p\":\"pineapple\", 5:\"banana\", \"a\":\"apple\"}))\n           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpjc4w7rgz.py\", line 4, in check_dict_case\n    lowercase_keys = all(key.islower() for key in my_dict.keys())\n                     ^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpjc4w7rgz.py\", line 4, in <genexpr>\n    lowercase_keys = all(key.islower() for key in my_dict.keys())\n                         ^^^^^^^^^^^\nAttributeError: 'int' object has no attribute 'islower'\n",
+    "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpjc4w7rgz.py\", line 24, in <module>\n    check(check_dict_case)\n    ~~~~~^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpjc4w7rgz.py\", line 13, in check\n    assert candidate({\"p\":\"pineapple\", 5:\"banana\", \"a\":\"apple\"}) == False, \"Third test error: \" + str(candidate({\"p\":\"pineapple\", 5:\"banana\", \"a\":\"apple\"}))\n           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpjc4w7rgz.py\", line 4, in check_dict_case\n    lowercase_keys = all(key.islower() for key in my_dict.keys())\n                     ^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpjc4w7rgz.py\", line 4, in <genexpr>\n    lowercase_keys = all(key.islower() for key in my_dict.keys())\n                         ^^^^^^^^^^^\nAttributeError: 'int' object has no attribute 'islower'",
+    "exception_type": "AttributeError",
+    "exception_message": "'int' object has no attribute 'islower'",
+    "execution_time": 0.209023,
+    "timed_out": false,
+    "exit_code": 1,
+    "tests_passed": false,
+    "tests_failed": 0,
+    "expected_output": null,
+    "actual_output": null,
+    "assertion_source": null,
+    "assertion_failed": false,
+    "parser_prediction": "Runtime Exception"
+  },
+  "scm": {
+    "task_id": "HumanEval/95",
+    "nodes": [
+      {
+        "node_id": "S",
+        "variable_name": "Specification",
+        "symbol": "S",
+        "label": "Specification"
+      },
+      {
+        "node_id": "C",
+        "variable_name": "GeneratedCode",
+        "symbol": "C",
+        "label": "Generated Code"
+      },
+      {
+        "node_id": "E",
+        "variable_name": "ExecutionTrace",
+        "symbol": "E",
+        "label": "Execution Trace"
+      },
+      {
+        "node_id": "T",
+        "variable_name": "TestSuite",
+        "symbol": "T",
+        "label": "Test Suite"
+      },
+      {
+        "node_id": "O",
+        "variable_name": "Outcome",
+        "symbol": "O",
+        "label": "Outcome"
+      }
+    ],
+    "edges": [
+      {
+        "source": "S",
+        "target": "C",
+        "relationship": "generates"
+      },
+      {
+        "source": "C",
+        "target": "E",
+        "relationship": "produces"
+      },
+      {
+        "source": "T",
+        "target": "E",
+        "relationship": "evaluates"
+      },
+      {
+        "source": "E",
+        "target": "O",
+        "relationship": "determines"
+      }
+    ],
+    "variables": {
+      "S": {
+        "name": "Specification",
+        "symbol": "S",
+        "description": "Problem description, prompt, and target function signature",
+        "value": "\ndef check_dict_case(dict):\n    \"\"\"\n    Given a dictionary, return True if all k"
+      },
+      "C": {
+        "name": "GeneratedCode",
+        "symbol": "C",
+        "description": "LLM-generated Python source code implementation",
+        "value": "def check_dict_case(my_dict):\n    if not my_dict:\n        return False\n    lowercase_keys = all(key.islower() for key in my_dict.keys())\n    uppercase_keys = all(key.isupper() for key in my_dict.keys("
+      },
+      "E": {
+        "name": "ExecutionTrace",
+        "symbol": "E",
+        "description": "Observable runtime trace events, variable states, and stdout/stderr",
+        "value": "status=Failed, exc=AttributeError, msg='int' object has no attribute 'islower'"
+      },
+      "T": {
+        "name": "TestSuite",
+        "symbol": "T",
+        "description": "Benchmark assertions, inputs, and check function harness",
+        "value": "def check(candidate):\n\n    # Check some simple cases\n    assert candidate({\"p\":\"pineapple\", \"b\":\"ban"
+      },
+      "O": {
+        "name": "Outcome",
+        "symbol": "O",
+        "description": "Final test execution outcome (Completed/Failed/Timeout)",
+        "value": "Failed"
+      }
+    }
+  },
+  "pdg": {
+    "nodes": {
+      "1": {
+        "node_id": 1,
+        "line_number": 1,
+        "source_code": "def check_dict_case(my_dict):",
+        "statement_type": "FunctionDef",
+        "reads": [],
+        "writes": [
+          "my_dict",
+          "check_dict_case"
+        ],
+        "function_name": "<module>",
+        "executed": true,
+        "execution_count": 4,
+        "runtime_values": {
+          "my_dict": [
+            "{'p': 'pineapple', 'b': 'banana'}",
+            "{'p': 'pineapple', 'A': 'banana', 'B': 'banana'}",
+            "{'p': 'pineapple', '5': 'banana', 'a': 'apple'}"
+          ]
+        },
+        "failure_related": false
+      },
+      "2": {
+        "node_id": 2,
+        "line_number": 2,
+        "source_code": "if not my_dict:",
+        "statement_type": "If",
+        "reads": [
+          "my_dict"
+        ],
+        "writes": [],
+        "function_name": "check_dict_case",
+        "executed": true,
+        "execution_count": 3,
+        "runtime_values": {
+          "my_dict": [
+            "{'p': 'pineapple', 'b': 'banana'}",
+            "{'p': 'pineapple', 'A': 'banana', 'B': 'banana'}",
+            "{'p': 'pineapple', '5': 'banana', 'a': 'apple'}"
+          ]
+        },
+        "failure_related": false
+      },
+      "3": {
+        "node_id": 3,
+        "line_number": 3,
+        "source_code": "return False",
+        "statement_type": "Return",
+        "reads": [],
+        "writes": [],
+        "function_name": "check_dict_case",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "4": {
+        "node_id": 4,
+        "line_number": 4,
+        "source_code": "lowercase_keys = all(key.islower() for key in my_dict.keys())",
+        "statement_type": "Assign",
+        "reads": [
+          "all",
+          "key",
+          "my_dict"
+        ],
+        "writes": [
+          "key",
+          "lowercase_keys"
+        ],
+        "function_name": "check_dict_case",
+        "executed": true,
+        "execution_count": 27,
+        "runtime_values": {
+          "my_dict": [
+            "{'p': 'pineapple', 'b': 'banana'}",
+            "{'p': 'pineapple', 'A': 'banana', 'B': 'banana'}",
+            "{'p': 'pineapple', '5': 'banana', 'a': 'apple'}",
+            "{'p': 'pineapple', '5': 'banana', 'a': 'apple'}",
+            "{'p': 'pineapple', '5': 'banana', 'a': 'apple'}"
+          ],
+          ".0": [
+            "<dict_keyiterator object at 0x0000022B6C665FD0>",
+            "<dict_keyiterator object at 0x0000022B6C665FD0>",
+            "<dict_keyiterator object at 0x0000022B6C665FD0>",
+            "<dict_keyiterator object at 0x0000022B6C665FD0>",
+            "<dict_keyiterator object at 0x0000022B6C665FD0>",
+            "<dict_keyiterator object at 0x0000022B6C665FD0>",
+            "<dict_keyiterator object at 0x0000022B6C665FD0>",
+            "<dict_keyiterator object at 0x0000022B6C665FD0>",
+            "<dict_keyiterator object at 0x0000022B6C665FD0>",
+            "<dict_keyiterator object at 0x0000022B6C665FD0>",
+            "<dict_keyiterator object at 0x0000022B6C665FD0>",
+            "<dict_keyiterator object at 0x0000022B6C665FD0>",
+            "<dict_keyiterator object at 0x0000022B6C665FD0>",
+            "<dict_keyiterator object at 0x0000022B6C665FD0>",
+            "<dict_keyiterator object at 0x0000022B6C665FD0>",
+            "<dict_keyiterator object at 0x0000022B6C665FD0>",
+            "<dict_keyiterator object at 0x0000022B6C665FD0>",
+            "<dict_keyiterator object at 0x0000022B6C665FD0>",
+            "<dict_keyiterator object at 0x0000022B6C665FD0>",
+            "<dict_keyiterator object at 0x0000022B6C665FD0>",
+            "<dict_keyiterator object at 0x0000022B6C665FD0>",
+            "<dict_keyiterator object at 0x0000022B6C665FD0>"
+          ],
+          "key": [
+            "p",
+            "p",
+            "p",
+            "b",
+            "b",
+            "b",
+            "b",
+            "p",
+            "p",
+            "p",
+            "A",
+            "p",
+            "p",
+            "p",
+            "5",
+            "5"
+          ]
+        },
+        "failure_related": true
+      },
+      "5": {
+        "node_id": 5,
+        "line_number": 5,
+        "source_code": "uppercase_keys = all(key.isupper() for key in my_dict.keys())",
+        "statement_type": "Assign",
+        "reads": [
+          "all",
+          "key",
+          "my_dict"
+        ],
+        "writes": [
+          "key",
+          "uppercase_keys"
+        ],
+        "function_name": "check_dict_case",
+        "executed": true,
+        "execution_count": 8,
+        "runtime_values": {
+          "my_dict": [
+            "{'p': 'pineapple', 'b': 'banana'}",
+            "{'p': 'pineapple', 'A': 'banana', 'B': 'banana'}"
+          ],
+          "lowercase_keys": [
+            "True",
+            "False"
+          ],
+          ".0": [
+            "<dict_keyiterator object at 0x0000022B6C665FD0>",
+            "<dict_keyiterator object at 0x0000022B6C665FD0>",
+            "<dict_keyiterator object at 0x0000022B6C665FD0>",
+            "<dict_keyiterator object at 0x0000022B6C665FD0>",
+            "<dict_keyiterator object at 0x0000022B6C665FD0>",
+            "<dict_keyiterator object at 0x0000022B6C665FD0>"
+          ],
+          "key": [
+            "p",
+            "p"
+          ]
+        },
+        "failure_related": false
+      },
+      "6": {
+        "node_id": 6,
+        "line_number": 6,
+        "source_code": "return lowercase_keys or uppercase_keys",
+        "statement_type": "Return",
+        "reads": [
+          "lowercase_keys",
+          "uppercase_keys"
+        ],
+        "writes": [],
+        "function_name": "check_dict_case",
+        "executed": true,
+        "execution_count": 4,
+        "runtime_values": {
+          "my_dict": [
+            "{'p': 'pineapple', 'b': 'banana'}",
+            "{'p': 'pineapple', 'b': 'banana'}",
+            "{'p': 'pineapple', 'A': 'banana', 'B': 'banana'}",
+            "{'p': 'pineapple', 'A': 'banana', 'B': 'banana'}"
+          ],
+          "lowercase_keys": [
+            "True",
+            "True",
+            "False",
+            "False"
+          ],
+          "uppercase_keys": [
+            "False",
+            "False",
+            "False",
+            "False"
+          ]
+        },
+        "failure_related": false
+      }
+    },
+    "edges": [
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "DATA",
+        "variable": "my_dict",
+        "label": "DATA(my_dict)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 4,
+        "dependency_type": "DATA",
+        "variable": "my_dict",
+        "label": "DATA(my_dict)"
+      },
+      {
+        "source_id": 4,
+        "target_id": 5,
+        "dependency_type": "DATA",
+        "variable": "key",
+        "label": "DATA(key)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 5,
+        "dependency_type": "DATA",
+        "variable": "my_dict",
+        "label": "DATA(my_dict)"
+      },
+      {
+        "source_id": 4,
+        "target_id": 6,
+        "dependency_type": "DATA",
+        "variable": "lowercase_keys",
+        "label": "DATA(lowercase_keys)"
+      },
+      {
+        "source_id": 5,
+        "target_id": 6,
+        "dependency_type": "DATA",
+        "variable": "uppercase_keys",
+        "label": "DATA(uppercase_keys)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 2,
+        "target_id": 3,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(If)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 4,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 5,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 6,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      }
+    ],
+    "entry_node_id": 1,
+    "failure_node_ids": [
+      4
+    ]
+  },
+  "runtime_events_count": 57,
+  "failure_line": 4,
+  "failure_statement": "lowercase_keys = all(key.islower() for key in my_dict.keys())",
+  "candidates": [
+    {
+      "rank": 1,
+      "node_id": 4,
+      "line_number": 4,
+      "statement_code": "lowercase_keys = all(key.islower() for key in my_dict.keys())",
+      "variable_name": "key",
+      "observed_value": "5",
+      "expected_value": null,
+      "proximity_score": 1.0,
+      "dependency_score": 1.0,
+      "explanation": "Reached via reverse traversal (distance=0, type=Assign)"
+    }
+  ],
+  "critical_variable": null,
+  "counterfactual_results": [
+    {
+      "candidate_rank": 1,
+      "intervention": {
+        "target_variable": "key",
+        "target_line": 4,
+        "observed_value": "5",
+        "counterfactual_value": "None",
+        "operation_type": "failed_construction",
+        "modified_code": ""
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "FAILED_CONSTRUCTION",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "UNRESOLVED",
+      "execution_time": 0.0,
+      "status": "UNRESOLVED",
+      "explanation": "Failed to construct valid AST counterfactual intervention."
+    }
+  ],
+  "fault_location": {
+    "file": "HE141.py",
+    "line_number": 4,
+    "statement_code": "lowercase_keys = all(key.islower() for key in my_dict.keys())",
+    "function_name": "check_dict_case",
+    "causal_variable": "key",
+    "evidence_score": 1.0,
+    "confidence": 0.5
+  },
+  "root_cause": {
+    "root_cause_status": "UNRESOLVED",
+    "candidate_explanation": "Runtime exception (AttributeError: 'int' object has no attribute 'islower') triggered at statement 'lowercase_keys = all(key.islower() for key in my_dict.keys())' (line 4) involving variable 'key'.",
+    "causal_variable": "key",
+    "fault_statement": "lowercase_keys = all(key.islower() for key in my_dict.keys())",
+    "fault_line": 4,
+    "evidence_summary": "Reverse PDG traversal traced failure from line 1 to statement line 4. Structural dependency identified; counterfactual validation unconfirmed or unresolved.",
+    "counterfactual_validated": false,
+    "confidence": 0.5
+  },
+  "ground_truth_matched": null,
+  "ground_truth_fault_line": null,
+  "execution_time": 0.0146
+}

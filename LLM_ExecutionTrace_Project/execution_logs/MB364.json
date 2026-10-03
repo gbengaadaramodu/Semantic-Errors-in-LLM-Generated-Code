@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB364",
+  "dataset": "MBPP",
+  "task_id": "726",
+  "problem_summary": "Write a function that takes as input a tuple of numbers (t_1,...,t_{N+1}) and re",
+  "execution_status": "Completed",
+  "stdout": "",
+  "stderr": "",
+  "traceback": "",
+  "exception_type": "",
+  "exception_message": "",
+  "execution_time": 0.088644,
+  "timed_out": false,
+  "exit_code": 0,
+  "tests_passed": true,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

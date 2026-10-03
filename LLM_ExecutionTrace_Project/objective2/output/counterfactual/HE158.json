@@ -1,0 +1,40 @@
+[
+  {
+    "candidate_rank": 1,
+    "intervention": {
+      "target_variable": "array",
+      "target_line": 9,
+      "observed_value": "[2, 4, 3, 0, 1, 5, 6]",
+      "counterfactual_value": "[6, 5, 4, 3, 2, 1, 0]",
+      "operation_type": "AST_transform",
+      "modified_code": "def sort_array(array):\n    if len(array) == 0:\n        return []\n    if len(array) == 1:\n        return [array[0]]\n    if array[0] + array[-1] % 2 == 0:\n        return sorted(array, reverse=True)\n    else:\n        array = [6, 5, 4, 3, 2, 1, 0]\n        return sorted(array)"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.2147,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  },
+  {
+    "candidate_rank": 2,
+    "intervention": {
+      "target_variable": "array",
+      "target_line": 6,
+      "observed_value": "[2, 4, 3, 0, 1, 5, 6]",
+      "counterfactual_value": "None",
+      "operation_type": "AST_transform",
+      "modified_code": "def sort_array(array):\n    if len(array) == 0:\n        return []\n    if len(array) == 1:\n        return [array[0]]\n    if array[0] + array[-1] % 2 != 0:\n        return sorted(array, reverse=True)\n    else:\n        return sorted(array)"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Completed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "TRUE",
+    "execution_time": 0.1343,
+    "status": "EXECUTED",
+    "explanation": "Intervention successfully flipped execution outcome from FAIL to PASS."
+  }
+]

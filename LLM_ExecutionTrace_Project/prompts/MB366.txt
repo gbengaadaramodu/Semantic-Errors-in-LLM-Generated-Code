@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a python function to check whether the given list contains consecutive numbers or not.
+
+Example test: assert check_Consecutive([1,2,3,4,5]) == True
+[/INST]

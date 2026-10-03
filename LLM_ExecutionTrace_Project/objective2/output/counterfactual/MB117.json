@@ -1,0 +1,40 @@
+[
+  {
+    "candidate_rank": 1,
+    "intervention": {
+      "target_variable": "result",
+      "target_line": 8,
+      "observed_value": "None",
+      "counterfactual_value": "49",
+      "operation_type": "AST_transform",
+      "modified_code": "def group_tuples(my_list):\n    result = []\n    for tup in my_list:\n        if tup[0] in [tup[0] for tup in result]:\n            result.append(tup)\n        else:\n            result.append([tup[0], tup[1]])\n    return 49"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.2343,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  },
+  {
+    "candidate_rank": 2,
+    "intervention": {
+      "target_variable": "result",
+      "target_line": 2,
+      "observed_value": "None",
+      "counterfactual_value": "None",
+      "operation_type": "AST_transform",
+      "modified_code": "def group_tuples(my_list):\n    result = None\n    for tup in my_list:\n        if tup[0] in [tup[0] for tup in result]:\n            result.append(tup)\n        else:\n            result.append([tup[0], tup[1]])\n    return result"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.3317,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  }
+]

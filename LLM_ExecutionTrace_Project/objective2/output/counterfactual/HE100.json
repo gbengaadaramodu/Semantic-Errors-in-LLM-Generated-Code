@@ -1,0 +1,21 @@
+[
+  {
+    "candidate_rank": 1,
+    "intervention": {
+      "target_variable": "arr",
+      "target_line": 2,
+      "observed_value": "[-3, -4, 5]",
+      "counterfactual_value": "[-4, -3, 5]",
+      "operation_type": "AST_transform",
+      "modified_code": "def maximum(arr, k):\n    arr = [-4, -3, 5]\n    return sorted(arr, reverse=True)[:k]"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.2909,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  }
+]

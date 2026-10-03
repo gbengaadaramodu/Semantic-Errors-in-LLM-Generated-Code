@@ -1,0 +1,81 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def is_simple_power(x, n):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "n",
+        "x",
+        "is_simple_power"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "x": [
+          "16"
+        ],
+        "n": [
+          "2"
+        ]
+      },
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "return x == n**int(x**0.5)**2",
+      "statement_type": "Return",
+      "reads": [
+        "int",
+        "n",
+        "x"
+      ],
+      "writes": [],
+      "function_name": "is_simple_power",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "x": [
+          "16",
+          "16"
+        ],
+        "n": [
+          "2",
+          "2"
+        ]
+      },
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "n",
+      "label": "DATA(n)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "x",
+      "label": "DATA(x)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    2
+  ]
+}

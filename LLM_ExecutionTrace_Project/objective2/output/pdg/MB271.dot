@@ -1,0 +1,11 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def tuple_to_dict(my_tuple): | W:my_tuple,tuple_to_dict", fillcolor="lightgreen"];
+    "2" [label="L2: return {my_tuple[i]: my_tuple[i+1] for i in range(len(my_tuple)-1)} | W:i | R:i,len,my_tuple,range", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(my_tuple)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

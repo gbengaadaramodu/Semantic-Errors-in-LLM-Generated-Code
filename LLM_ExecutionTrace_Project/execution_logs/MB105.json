@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB105",
+  "dataset": "MBPP",
+  "task_id": "417",
+  "problem_summary": "Write a function to find common first element in given list of tuple.",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpzzct33xr.py\", line 4, in <module>\n    assert group_tuples([('x', 'y'), ('x', 'z'), ('w', 't')]) == [('x', 'y', 'z'), ('w', 't')]\n           ^^^^^^^^^^^^\nNameError: name 'group_tuples' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpzzct33xr.py\", line 4, in <module>\n    assert group_tuples([('x', 'y'), ('x', 'z'), ('w', 't')]) == [('x', 'y', 'z'), ('w', 't')]\n           ^^^^^^^^^^^^\nNameError: name 'group_tuples' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'group_tuples' is not defined",
+  "execution_time": 0.239288,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

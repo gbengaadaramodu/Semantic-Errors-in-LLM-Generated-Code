@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB421",
+  "dataset": "MBPP",
+  "task_id": "446",
+  "problem_summary": "Write a python function to count the occurence of all elements of list in a tupl",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpvrqjjeiz.py\", line 8, in <module>\n    assert count_Occurrence(('a', 'a', 'c', 'b', 'd'),['a', 'b'] ) == 3\n           ^^^^^^^^^^^^^^^^\nNameError: name 'count_Occurrence' is not defined. Did you mean: 'count_occurrence'?\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpvrqjjeiz.py\", line 8, in <module>\n    assert count_Occurrence(('a', 'a', 'c', 'b', 'd'),['a', 'b'] ) == 3\n           ^^^^^^^^^^^^^^^^\nNameError: name 'count_Occurrence' is not defined. Did you mean: 'count_occurrence'?",
+  "exception_type": "NameError",
+  "exception_message": "name 'count_Occurrence' is not defined. Did you mean: 'count_occurrence'?",
+  "execution_time": 0.165814,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

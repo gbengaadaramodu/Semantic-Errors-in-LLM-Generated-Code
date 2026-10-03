@@ -1,0 +1,66 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def area_polygon(length, num_sides):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "length",
+        "num_sides",
+        "area_polygon"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 1,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "return length ** 2 * num_sides / (4 * tan(pi / num_sides))",
+      "statement_type": "Return",
+      "reads": [
+        "length",
+        "num_sides",
+        "pi",
+        "tan"
+      ],
+      "writes": [],
+      "function_name": "area_polygon",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "length",
+      "label": "DATA(length)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "num_sides",
+      "label": "DATA(num_sides)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    2
+  ]
+}

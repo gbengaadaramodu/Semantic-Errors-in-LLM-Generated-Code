@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB214",
+  "dataset": "MBPP",
+  "task_id": "478",
+  "problem_summary": "Write a function to remove lowercase substrings from a given string.",
+  "execution_status": "Completed",
+  "stdout": "",
+  "stderr": "",
+  "traceback": "",
+  "exception_type": "",
+  "exception_message": "",
+  "execution_time": 0.156327,
+  "timed_out": false,
+  "exit_code": 0,
+  "tests_passed": true,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

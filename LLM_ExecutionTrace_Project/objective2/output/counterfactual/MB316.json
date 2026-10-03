@@ -1,0 +1,21 @@
+[
+  {
+    "candidate_rank": 1,
+    "intervention": {
+      "target_variable": "t",
+      "target_line": 2,
+      "observed_value": "(1, 2, 3, 4)",
+      "counterfactual_value": "[30.5, 34.25, 27.0, 23.25]",
+      "operation_type": "AST_transform",
+      "modified_code": "def average_tuple(tuple_of_tuples):\n    t = [30.5, 34.25, 27.0, 23.25]\n    return [sum(t)/len(t) for t in tuple_of_tuples]"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.2645,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  }
+]

@@ -1,0 +1,82 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def intersection_array(arr1, arr2):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "arr1",
+        "arr2",
+        "intersection_array"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "arr1": [
+          "[1, 2, 3, 5, 7, 8, 9, 10]"
+        ],
+        "arr2": [
+          "[1, 2, 4, 8, 9]"
+        ]
+      },
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "return list(set(arr1) & set(arr2))",
+      "statement_type": "Return",
+      "reads": [
+        "arr1",
+        "arr2",
+        "list",
+        "set"
+      ],
+      "writes": [],
+      "function_name": "intersection_array",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "arr1": [
+          "[1, 2, 3, 5, 7, 8, 9, 10]",
+          "[1, 2, 3, 5, 7, 8, 9, 10]"
+        ],
+        "arr2": [
+          "[1, 2, 4, 8, 9]",
+          "[1, 2, 4, 8, 9]"
+        ]
+      },
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "arr1",
+      "label": "DATA(arr1)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "arr2",
+      "label": "DATA(arr2)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    2
+  ]
+}

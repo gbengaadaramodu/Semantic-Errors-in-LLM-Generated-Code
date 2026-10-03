@@ -1,0 +1,40 @@
+[
+  {
+    "candidate_rank": 1,
+    "intervention": {
+      "target_variable": "loss_threshold",
+      "target_line": 5,
+      "observed_value": "None",
+      "counterfactual_value": "504",
+      "operation_type": "AST_transform",
+      "modified_code": "def loss_amount(sale_amount, loss_threshold):\n    if sale_amount < loss_threshold:\n        return 0\n    else:\n        loss_threshold = 504\n        return sale_amount - loss_threshold"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.2182,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  },
+  {
+    "candidate_rank": 2,
+    "intervention": {
+      "target_variable": "loss_threshold",
+      "target_line": 2,
+      "observed_value": "None",
+      "counterfactual_value": "None",
+      "operation_type": "AST_transform",
+      "modified_code": "def loss_amount(sale_amount, loss_threshold):\n    if sale_amount >= loss_threshold:\n        return 0\n    else:\n        return sale_amount - loss_threshold"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.2193,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  }
+]

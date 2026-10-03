@@ -1,0 +1,12 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def divisible_by_digits(start_num, end_num): | W:end_num,start_num,divisible_by_digits", fillcolor="lightgreen"];
+    "2" [label="L2: return [num for num in range(start_num, end_num+1) if all(int(digit) for digit in str(num))] | W:digit,num | R:all,digit,end_num,int,num,range,start_num,str", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(end_num)", style="solid"];
+    "1" -> "2" [label="DATA(start_num)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

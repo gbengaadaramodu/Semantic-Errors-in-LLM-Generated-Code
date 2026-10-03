@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB415",
+  "dataset": "MBPP",
+  "task_id": "307",
+  "problem_summary": "Write a function to get a colon of a tuple.",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpshg2vcfd.py\", line 4, in <module>\n    assert colon_tuplex((\"HELLO\", 5, [], True) ,2,50)==(\"HELLO\", 5, [50], True)\n           ^^^^^^^^^^^^\nNameError: name 'colon_tuplex' is not defined. Did you mean: 'colon_tuple'?\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpshg2vcfd.py\", line 4, in <module>\n    assert colon_tuplex((\"HELLO\", 5, [], True) ,2,50)==(\"HELLO\", 5, [50], True)\n           ^^^^^^^^^^^^\nNameError: name 'colon_tuplex' is not defined. Did you mean: 'colon_tuple'?",
+  "exception_type": "NameError",
+  "exception_message": "name 'colon_tuplex' is not defined. Did you mean: 'colon_tuple'?",
+  "execution_time": 0.174257,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

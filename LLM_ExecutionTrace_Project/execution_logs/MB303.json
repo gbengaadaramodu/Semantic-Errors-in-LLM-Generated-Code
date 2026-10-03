@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB303",
+  "dataset": "MBPP",
+  "task_id": "746",
+  "problem_summary": "Write a function to find area of a sector. The function takes the radius and ang",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpekhodlv5.py\", line 7, in <module>\n    assert sector_area(4,45)==6.283185307179586\n           ~~~~~~~~~~~^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpekhodlv5.py\", line 5, in sector_area\n    return (angle / 360) * (2 * math.pi * radius**2)\n                                ^^^^\nNameError: name 'math' is not defined. Did you forget to import 'math'?\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpekhodlv5.py\", line 7, in <module>\n    assert sector_area(4,45)==6.283185307179586\n           ~~~~~~~~~~~^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpekhodlv5.py\", line 5, in sector_area\n    return (angle / 360) * (2 * math.pi * radius**2)\n                                ^^^^\nNameError: name 'math' is not defined. Did you forget to import 'math'?",
+  "exception_type": "NameError",
+  "exception_message": "name 'math' is not defined. Did you forget to import 'math'?",
+  "execution_time": 0.207967,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write function to find the sum of all items in the given dictionary.
+
+Example test: assert return_sum({'a': 100, 'b':200, 'c':300}) == 600
+[/INST]

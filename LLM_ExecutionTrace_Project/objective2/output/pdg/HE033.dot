@@ -1,0 +1,29 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def bf(planet1, planet2): | W:planet1,planet2,bf", fillcolor="lightgreen"];
+    "2" [label="L2: planets = [\"Mercury\", \"Venus\", \"Earth\", \"Mars\", \"Jupiter\", \"Saturn\", \"Uranus\", \"Neptune\"] | W:planets", fillcolor="lightgreen"];
+    "3" [label="L3: index1 = planets.index(planet1) | W:index1 | R:planet1,planets", fillcolor="lightgreen"];
+    "4" [label="L4: index2 = planets.index(planet2) | W:index2 | R:planet2,planets", fillcolor="lightgreen"];
+    "5" [label="L5: if index1 == -1 or index2 == -1: | R:index1,index2", fillcolor="lightgreen"];
+    "6" [label="L6: return ()", fillcolor="lightgrey"];
+    "7" [label="L8: return tuple(planets[index1+1:index2]) | R:index1,index2,planets,tuple", fillcolor="salmon"];
+
+    "1" -> "3" [label="DATA(planet1)", style="solid"];
+    "2" -> "3" [label="DATA(planets)", style="solid"];
+    "1" -> "4" [label="DATA(planet2)", style="solid"];
+    "2" -> "4" [label="DATA(planets)", style="solid"];
+    "3" -> "5" [label="DATA(index1)", style="solid"];
+    "4" -> "5" [label="DATA(index2)", style="solid"];
+    "3" -> "7" [label="DATA(index1)", style="solid"];
+    "4" -> "7" [label="DATA(index2)", style="solid"];
+    "2" -> "7" [label="DATA(planets)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "3" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "4" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "5" [label="CONTROL(FunctionDef)", style="dashed"];
+    "5" -> "6" [label="CONTROL(If)", style="dashed"];
+    "5" -> "7" [label="CONTROL(If)", style="dashed"];
+}

@@ -1,0 +1,26 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def find_combinations(tuple_list): | W:tuple_list,find_combinations", fillcolor="lightgreen"];
+    "2" [label="L2: combinations = [] | W:combinations", fillcolor="lightgrey"];
+    "3" [label="L3: for i in range(len(tuple_list)): | W:i | R:len,range,tuple_list", fillcolor="lightgrey"];
+    "4" [label="L4: for j in range(i+1, len(tuple_list)): | W:j | R:i,len,range,tuple_list", fillcolor="lightgrey"];
+    "5" [label="L5: combinations.append((tuple_list[i][0] + tuple_list[j][0], tuple_list[i][1] + tuple_list[j][1])) | R:combinations,i,j,tuple_list", fillcolor="lightgrey"];
+    "6" [label="L6: return combinations | R:combinations", fillcolor="salmon"];
+
+    "1" -> "3" [label="DATA(tuple_list)", style="solid"];
+    "3" -> "4" [label="DATA(i)", style="solid"];
+    "1" -> "4" [label="DATA(tuple_list)", style="solid"];
+    "2" -> "5" [label="DATA(combinations)", style="solid"];
+    "3" -> "5" [label="DATA(i)", style="solid"];
+    "4" -> "5" [label="DATA(j)", style="solid"];
+    "1" -> "5" [label="DATA(tuple_list)", style="solid"];
+    "2" -> "6" [label="DATA(combinations)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "3" [label="CONTROL(FunctionDef)", style="dashed"];
+    "3" -> "4" [label="CONTROL(For)", style="dashed"];
+    "4" -> "5" [label="CONTROL(For)", style="dashed"];
+    "1" -> "6" [label="CONTROL(FunctionDef)", style="dashed"];
+}

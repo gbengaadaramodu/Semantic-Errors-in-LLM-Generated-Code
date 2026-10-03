@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB181",
+  "dataset": "MBPP",
+  "task_id": "468",
+  "problem_summary": "Write a function to find the maximum product formed by multiplying numbers of an",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmptj_sr6tt.py\", line 9, in <module>\n    assert max_product([3, 100, 4, 5, 150, 6]) == 3000\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmptj_sr6tt.py\", line 9, in <module>\n    assert max_product([3, 100, 4, 5, 150, 6]) == 3000\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+  "exception_type": "AssertionError",
+  "exception_message": "",
+  "execution_time": 0.205199,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": "benchmark_test",
+  "assertion_failed": true,
+  "parser_prediction": ""
+}

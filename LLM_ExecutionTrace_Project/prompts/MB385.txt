@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a function to check whether the product of numbers in a list is even or not.
+
+Example test: assert is_product_even([1,2,3])
+[/INST]

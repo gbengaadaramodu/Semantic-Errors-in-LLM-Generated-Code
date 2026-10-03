@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a function that gives loss amount on a sale if the given amount has loss else return 0.
+
+Example test: assert loss_amount(1500,1200)==0
+[/INST]

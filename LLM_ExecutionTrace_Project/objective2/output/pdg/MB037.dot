@@ -1,0 +1,13 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def find_volume(base, height, depth): | W:base,depth,height,find_volume", fillcolor="lightgreen"];
+    "2" [label="L2: return base * height * depth | R:base,depth,height", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(base)", style="solid"];
+    "1" -> "2" [label="DATA(depth)", style="solid"];
+    "1" -> "2" [label="DATA(height)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

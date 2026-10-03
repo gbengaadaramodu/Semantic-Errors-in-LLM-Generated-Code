@@ -1,0 +1,425 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def get_odd_collatz(n):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "n",
+        "get_odd_collatz"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "n": [
+          "14"
+        ]
+      },
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "collatz = [n]",
+      "statement_type": "Assign",
+      "reads": [
+        "n"
+      ],
+      "writes": [
+        "collatz"
+      ],
+      "function_name": "get_odd_collatz",
+      "executed": true,
+      "execution_count": 1,
+      "runtime_values": {
+        "n": [
+          "14"
+        ]
+      },
+      "failure_related": false
+    },
+    "3": {
+      "node_id": 3,
+      "line_number": 3,
+      "source_code": "while n != 1:",
+      "statement_type": "While",
+      "reads": [
+        "n"
+      ],
+      "writes": [],
+      "function_name": "get_odd_collatz",
+      "executed": true,
+      "execution_count": 18,
+      "runtime_values": {
+        "n": [
+          "14",
+          "7",
+          "22",
+          "11",
+          "34",
+          "17",
+          "52",
+          "26",
+          "13",
+          "40",
+          "20",
+          "10",
+          "5",
+          "16",
+          "8",
+          "4",
+          "2",
+          "1"
+        ],
+        "collatz": [
+          "[14]",
+          "[14, 7]",
+          "[14, 7, 22]",
+          "[14, 7, 22, 11]",
+          "[14, 7, 22, 11, 34]",
+          "[14, 7, 22, 11, 34, 17]",
+          "[14, 7, 22, 11, 34, 17, 52]",
+          "[14, 7, 22, 11, 34, 17, 52, 26]",
+          "[14, 7, 22, 11, 34, 17, 52, 26, 13]",
+          "[14, 7, 22, 11, 34, 17, 52, 26, 13, 40]",
+          "[14, 7, 22, 11, 34, 17, 52, 26, 13, 40, 20]",
+          "[14, 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10]",
+          "[14, 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5]",
+          "[14, 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16]",
+          "[14, 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8]",
+          "[14, 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4]",
+          "[14, 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2]",
+          "[14, 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1]"
+        ]
+      },
+      "failure_related": false
+    },
+    "4": {
+      "node_id": 4,
+      "line_number": 4,
+      "source_code": "if n % 2 == 0:",
+      "statement_type": "If",
+      "reads": [
+        "n"
+      ],
+      "writes": [],
+      "function_name": "get_odd_collatz",
+      "executed": true,
+      "execution_count": 17,
+      "runtime_values": {
+        "n": [
+          "14",
+          "7",
+          "22",
+          "11",
+          "34",
+          "17",
+          "52",
+          "26",
+          "13",
+          "40",
+          "20",
+          "10",
+          "5",
+          "16",
+          "8",
+          "4",
+          "2"
+        ],
+        "collatz": [
+          "[14]",
+          "[14, 7]",
+          "[14, 7, 22]",
+          "[14, 7, 22, 11]",
+          "[14, 7, 22, 11, 34]",
+          "[14, 7, 22, 11, 34, 17]",
+          "[14, 7, 22, 11, 34, 17, 52]",
+          "[14, 7, 22, 11, 34, 17, 52, 26]",
+          "[14, 7, 22, 11, 34, 17, 52, 26, 13]",
+          "[14, 7, 22, 11, 34, 17, 52, 26, 13, 40]",
+          "[14, 7, 22, 11, 34, 17, 52, 26, 13, 40, 20]",
+          "[14, 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10]",
+          "[14, 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5]",
+          "[14, 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16]",
+          "[14, 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8]",
+          "[14, 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4]",
+          "[14, 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2]"
+        ]
+      },
+      "failure_related": false
+    },
+    "5": {
+      "node_id": 5,
+      "line_number": 5,
+      "source_code": "n = n // 2",
+      "statement_type": "Assign",
+      "reads": [
+        "n"
+      ],
+      "writes": [
+        "n"
+      ],
+      "function_name": "get_odd_collatz",
+      "executed": true,
+      "execution_count": 12,
+      "runtime_values": {
+        "n": [
+          "14",
+          "22",
+          "34",
+          "52",
+          "26",
+          "40",
+          "20",
+          "10",
+          "16",
+          "8",
+          "4",
+          "2"
+        ],
+        "collatz": [
+          "[14]",
+          "[14, 7, 22]",
+          "[14, 7, 22, 11, 34]",
+          "[14, 7, 22, 11, 34, 17, 52]",
+          "[14, 7, 22, 11, 34, 17, 52, 26]",
+          "[14, 7, 22, 11, 34, 17, 52, 26, 13, 40]",
+          "[14, 7, 22, 11, 34, 17, 52, 26, 13, 40, 20]",
+          "[14, 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10]",
+          "[14, 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16]",
+          "[14, 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8]",
+          "[14, 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4]",
+          "[14, 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2]"
+        ]
+      },
+      "failure_related": false
+    },
+    "6": {
+      "node_id": 6,
+      "line_number": 7,
+      "source_code": "n = 3 * n + 1",
+      "statement_type": "Assign",
+      "reads": [
+        "n"
+      ],
+      "writes": [
+        "n"
+      ],
+      "function_name": "get_odd_collatz",
+      "executed": true,
+      "execution_count": 5,
+      "runtime_values": {
+        "n": [
+          "7",
+          "11",
+          "17",
+          "13",
+          "5"
+        ],
+        "collatz": [
+          "[14, 7]",
+          "[14, 7, 22, 11]",
+          "[14, 7, 22, 11, 34, 17]",
+          "[14, 7, 22, 11, 34, 17, 52, 26, 13]",
+          "[14, 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5]"
+        ]
+      },
+      "failure_related": false
+    },
+    "7": {
+      "node_id": 7,
+      "line_number": 8,
+      "source_code": "collatz.append(n)",
+      "statement_type": "Expr",
+      "reads": [
+        "collatz",
+        "n"
+      ],
+      "writes": [],
+      "function_name": "get_odd_collatz",
+      "executed": true,
+      "execution_count": 17,
+      "runtime_values": {
+        "n": [
+          "7",
+          "22",
+          "11",
+          "34",
+          "17",
+          "52",
+          "26",
+          "13",
+          "40",
+          "20",
+          "10",
+          "5",
+          "16",
+          "8",
+          "4",
+          "2",
+          "1"
+        ],
+        "collatz": [
+          "[14]",
+          "[14, 7]",
+          "[14, 7, 22]",
+          "[14, 7, 22, 11]",
+          "[14, 7, 22, 11, 34]",
+          "[14, 7, 22, 11, 34, 17]",
+          "[14, 7, 22, 11, 34, 17, 52]",
+          "[14, 7, 22, 11, 34, 17, 52, 26]",
+          "[14, 7, 22, 11, 34, 17, 52, 26, 13]",
+          "[14, 7, 22, 11, 34, 17, 52, 26, 13, 40]",
+          "[14, 7, 22, 11, 34, 17, 52, 26, 13, 40, 20]",
+          "[14, 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10]",
+          "[14, 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5]",
+          "[14, 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16]",
+          "[14, 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8]",
+          "[14, 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4]",
+          "[14, 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2]"
+        ]
+      },
+      "failure_related": false
+    },
+    "8": {
+      "node_id": 8,
+      "line_number": 9,
+      "source_code": "return sorted(set(collatz))",
+      "statement_type": "Return",
+      "reads": [
+        "collatz",
+        "set",
+        "sorted"
+      ],
+      "writes": [],
+      "function_name": "get_odd_collatz",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "n": [
+          "1",
+          "1"
+        ],
+        "collatz": [
+          "[14, 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1]",
+          "[14, 7, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1]"
+        ]
+      },
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "n",
+      "label": "DATA(n)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 3,
+      "dependency_type": "DATA",
+      "variable": "n",
+      "label": "DATA(n)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 4,
+      "dependency_type": "DATA",
+      "variable": "n",
+      "label": "DATA(n)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 5,
+      "dependency_type": "DATA",
+      "variable": "n",
+      "label": "DATA(n)"
+    },
+    {
+      "source_id": 5,
+      "target_id": 6,
+      "dependency_type": "DATA",
+      "variable": "n",
+      "label": "DATA(n)"
+    },
+    {
+      "source_id": 2,
+      "target_id": 7,
+      "dependency_type": "DATA",
+      "variable": "collatz",
+      "label": "DATA(collatz)"
+    },
+    {
+      "source_id": 6,
+      "target_id": 7,
+      "dependency_type": "DATA",
+      "variable": "n",
+      "label": "DATA(n)"
+    },
+    {
+      "source_id": 2,
+      "target_id": 8,
+      "dependency_type": "DATA",
+      "variable": "collatz",
+      "label": "DATA(collatz)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 3,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 3,
+      "target_id": 4,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(While)"
+    },
+    {
+      "source_id": 4,
+      "target_id": 5,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(If)"
+    },
+    {
+      "source_id": 4,
+      "target_id": 6,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(If)"
+    },
+    {
+      "source_id": 3,
+      "target_id": 7,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(While)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 8,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    8
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "trace_id": "HE083",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/122",
+  "problem_summary": "\ndef add_elements(arr, k):\n    \"\"\"\n    Given a non-empty array of integers arr a",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpp25y7iv5.py\", line 17, in <module>\n    check(add_elements)\n    ~~~~~^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpp25y7iv5.py\", line 8, in check\n    assert candidate([111,121,3,4000,5,6], 2) == 0\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpp25y7iv5.py\", line 17, in <module>\n    check(add_elements)\n    ~~~~~^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpp25y7iv5.py\", line 8, in check\n    assert candidate([111,121,3,4000,5,6], 2) == 0\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+  "exception_type": "AssertionError",
+  "exception_message": "",
+  "execution_time": 0.231888,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": "benchmark_test",
+  "assertion_failed": true,
+  "parser_prediction": ""
+}

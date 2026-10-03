@@ -1,0 +1,81 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def wind_chill(wind_velocity, temperature):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "temperature",
+        "wind_velocity",
+        "wind_chill"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "wind_velocity": [
+          "120"
+        ],
+        "temperature": [
+          "35"
+        ]
+      },
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "return round((35.74 + 0.6215 * temperature - 35.75 * (wind_velocity ** 0.16) + 0.4275 * temperature * (wind_velocity ** 0.16)))",
+      "statement_type": "Return",
+      "reads": [
+        "round",
+        "temperature",
+        "wind_velocity"
+      ],
+      "writes": [],
+      "function_name": "wind_chill",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "wind_velocity": [
+          "120",
+          "120"
+        ],
+        "temperature": [
+          "35",
+          "35"
+        ]
+      },
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "temperature",
+      "label": "DATA(temperature)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "wind_velocity",
+      "label": "DATA(wind_velocity)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    2
+  ]
+}

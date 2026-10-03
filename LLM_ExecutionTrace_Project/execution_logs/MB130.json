@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB130",
+  "dataset": "MBPP",
+  "task_id": "757",
+  "problem_summary": "Write a function to count the pairs of reverse strings in the given string list.",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpnej5m2la.py\", line 7, in <module>\n    assert count_reverse_pairs([\"julia\", \"best\", \"tseb\", \"for\", \"ailuj\"])== 2\n           ^^^^^^^^^^^^^^^^^^^\nNameError: name 'count_reverse_pairs' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpnej5m2la.py\", line 7, in <module>\n    assert count_reverse_pairs([\"julia\", \"best\", \"tseb\", \"for\", \"ailuj\"])== 2\n           ^^^^^^^^^^^^^^^^^^^\nNameError: name 'count_reverse_pairs' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'count_reverse_pairs' is not defined",
+  "execution_time": 0.203409,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

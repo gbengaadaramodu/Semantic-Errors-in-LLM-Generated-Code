@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB149",
+  "dataset": "MBPP",
+  "task_id": "783",
+  "problem_summary": "Write a function to convert rgb color to hsv color. https://www.geeksforgeeks.or",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpu2szt93m.py\", line 4, in <module>\n    assert rgb_to_hsv(255, 255, 255)==(0, 0.0, 100.0)\n           ^^^^^^^^^^\nNameError: name 'rgb_to_hsv' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpu2szt93m.py\", line 4, in <module>\n    assert rgb_to_hsv(255, 255, 255)==(0, 0.0, 100.0)\n           ^^^^^^^^^^\nNameError: name 'rgb_to_hsv' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'rgb_to_hsv' is not defined",
+  "execution_time": 0.194452,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

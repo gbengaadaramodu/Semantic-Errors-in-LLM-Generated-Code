@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB131",
+  "dataset": "MBPP",
+  "task_id": "459",
+  "problem_summary": "Write a function to remove uppercase substrings from a given string.",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpc_leq7sx.py\", line 7, in <module>\n    assert remove_uppercase('cAstyoUrFavoRitETVshoWs') == 'cstyoravoitshos'\n           ^^^^^^^^^^^^^^^^\nNameError: name 'remove_uppercase' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpc_leq7sx.py\", line 7, in <module>\n    assert remove_uppercase('cAstyoUrFavoRitETVshoWs') == 'cstyoravoitshos'\n           ^^^^^^^^^^^^^^^^\nNameError: name 'remove_uppercase' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'remove_uppercase' is not defined",
+  "execution_time": 0.199904,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB404",
+  "dataset": "MBPP",
+  "task_id": "267",
+  "problem_summary": "Write a python function that takes in an integer n and returns the sum of the sq",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp40ie7ero.py\", line 4, in <module>\n    assert square_Sum(2) == 10\n           ^^^^^^^^^^\nNameError: name 'square_Sum' is not defined. Did you mean: 'square_sum'?\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp40ie7ero.py\", line 4, in <module>\n    assert square_Sum(2) == 10\n           ^^^^^^^^^^\nNameError: name 'square_Sum' is not defined. Did you mean: 'square_sum'?",
+  "exception_type": "NameError",
+  "exception_message": "name 'square_Sum' is not defined. Did you mean: 'square_sum'?",
+  "execution_time": 0.173064,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

@@ -1,0 +1,426 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def max_fill(grid, capacity):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "capacity",
+        "grid",
+        "max_fill"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "grid": [
+          "[[0, 0, 1, 0], [0, 1, 0, 0], [1, 1, 1, 1]]"
+        ],
+        "capacity": [
+          "1"
+        ]
+      },
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 3,
+      "source_code": "total_units = 0",
+      "statement_type": "Assign",
+      "reads": [],
+      "writes": [
+        "total_units"
+      ],
+      "function_name": "max_fill",
+      "executed": true,
+      "execution_count": 1,
+      "runtime_values": {
+        "grid": [
+          "[[0, 0, 1, 0], [0, 1, 0, 0], [1, 1, 1, 1]]"
+        ],
+        "capacity": [
+          "1"
+        ]
+      },
+      "failure_related": false
+    },
+    "3": {
+      "node_id": 3,
+      "line_number": 4,
+      "source_code": "num_lowerings = 0",
+      "statement_type": "Assign",
+      "reads": [],
+      "writes": [
+        "num_lowerings"
+      ],
+      "function_name": "max_fill",
+      "executed": true,
+      "execution_count": 1,
+      "runtime_values": {
+        "grid": [
+          "[[0, 0, 1, 0], [0, 1, 0, 0], [1, 1, 1, 1]]"
+        ],
+        "capacity": [
+          "1"
+        ],
+        "total_units": [
+          "0"
+        ]
+      },
+      "failure_related": false
+    },
+    "4": {
+      "node_id": 4,
+      "line_number": 7,
+      "source_code": "for row in grid:",
+      "statement_type": "For",
+      "reads": [
+        "grid"
+      ],
+      "writes": [
+        "row"
+      ],
+      "function_name": "max_fill",
+      "executed": true,
+      "execution_count": 4,
+      "runtime_values": {
+        "grid": [
+          "[[0, 0, 1, 0], [0, 1, 0, 0], [1, 1, 1, 1]]",
+          "[[0, 0, 1, 0], [0, 1, 0, 0], [1, 1, 1, 1]]",
+          "[[0, 0, 1, 0], [0, 1, 0, 0], [1, 1, 1, 1]]",
+          "[[0, 0, 1, 0], [0, 1, 0, 0], [1, 1, 1, 1]]"
+        ],
+        "capacity": [
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        "total_units": [
+          "0",
+          "1",
+          "2",
+          "6"
+        ],
+        "num_lowerings": [
+          "0",
+          "0",
+          "0",
+          "-3"
+        ],
+        "row": [
+          "[0, 0, 1, 0]",
+          "[0, 1, 0, 0]",
+          "[1, 1, 1, 1]"
+        ]
+      },
+      "failure_related": false
+    },
+    "5": {
+      "node_id": 5,
+      "line_number": 9,
+      "source_code": "if sum(row) == capacity:",
+      "statement_type": "If",
+      "reads": [
+        "capacity",
+        "row",
+        "sum"
+      ],
+      "writes": [],
+      "function_name": "max_fill",
+      "executed": true,
+      "execution_count": 3,
+      "runtime_values": {
+        "grid": [
+          "[[0, 0, 1, 0], [0, 1, 0, 0], [1, 1, 1, 1]]",
+          "[[0, 0, 1, 0], [0, 1, 0, 0], [1, 1, 1, 1]]",
+          "[[0, 0, 1, 0], [0, 1, 0, 0], [1, 1, 1, 1]]"
+        ],
+        "capacity": [
+          "1",
+          "1",
+          "1"
+        ],
+        "total_units": [
+          "0",
+          "1",
+          "2"
+        ],
+        "num_lowerings": [
+          "0",
+          "0",
+          "0"
+        ],
+        "row": [
+          "[0, 0, 1, 0]",
+          "[0, 1, 0, 0]",
+          "[1, 1, 1, 1]"
+        ]
+      },
+      "failure_related": false
+    },
+    "6": {
+      "node_id": 6,
+      "line_number": 11,
+      "source_code": "total_units += capacity",
+      "statement_type": "AugAssign",
+      "reads": [
+        "capacity"
+      ],
+      "writes": [
+        "total_units"
+      ],
+      "function_name": "max_fill",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "grid": [
+          "[[0, 0, 1, 0], [0, 1, 0, 0], [1, 1, 1, 1]]",
+          "[[0, 0, 1, 0], [0, 1, 0, 0], [1, 1, 1, 1]]"
+        ],
+        "capacity": [
+          "1",
+          "1"
+        ],
+        "total_units": [
+          "0",
+          "1"
+        ],
+        "num_lowerings": [
+          "0",
+          "0"
+        ],
+        "row": [
+          "[0, 0, 1, 0]",
+          "[0, 1, 0, 0]"
+        ]
+      },
+      "failure_related": false
+    },
+    "7": {
+      "node_id": 7,
+      "line_number": 14,
+      "source_code": "num_lowerings += capacity - sum(row)",
+      "statement_type": "AugAssign",
+      "reads": [
+        "capacity",
+        "row",
+        "sum"
+      ],
+      "writes": [
+        "num_lowerings"
+      ],
+      "function_name": "max_fill",
+      "executed": true,
+      "execution_count": 1,
+      "runtime_values": {
+        "grid": [
+          "[[0, 0, 1, 0], [0, 1, 0, 0], [1, 1, 1, 1]]"
+        ],
+        "capacity": [
+          "1"
+        ],
+        "total_units": [
+          "2"
+        ],
+        "num_lowerings": [
+          "0"
+        ],
+        "row": [
+          "[1, 1, 1, 1]"
+        ]
+      },
+      "failure_related": false
+    },
+    "8": {
+      "node_id": 8,
+      "line_number": 16,
+      "source_code": "total_units += sum(row)",
+      "statement_type": "AugAssign",
+      "reads": [
+        "row",
+        "sum"
+      ],
+      "writes": [
+        "total_units"
+      ],
+      "function_name": "max_fill",
+      "executed": true,
+      "execution_count": 1,
+      "runtime_values": {
+        "grid": [
+          "[[0, 0, 1, 0], [0, 1, 0, 0], [1, 1, 1, 1]]"
+        ],
+        "capacity": [
+          "1"
+        ],
+        "total_units": [
+          "2"
+        ],
+        "num_lowerings": [
+          "-3"
+        ],
+        "row": [
+          "[1, 1, 1, 1]"
+        ]
+      },
+      "failure_related": false
+    },
+    "9": {
+      "node_id": 9,
+      "line_number": 18,
+      "source_code": "return num_lowerings",
+      "statement_type": "Return",
+      "reads": [
+        "num_lowerings"
+      ],
+      "writes": [],
+      "function_name": "max_fill",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "grid": [
+          "[[0, 0, 1, 0], [0, 1, 0, 0], [1, 1, 1, 1]]",
+          "[[0, 0, 1, 0], [0, 1, 0, 0], [1, 1, 1, 1]]"
+        ],
+        "capacity": [
+          "1",
+          "1"
+        ],
+        "total_units": [
+          "6",
+          "6"
+        ],
+        "num_lowerings": [
+          "-3",
+          "-3"
+        ],
+        "row": [
+          "[1, 1, 1, 1]",
+          "[1, 1, 1, 1]"
+        ]
+      },
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 4,
+      "dependency_type": "DATA",
+      "variable": "grid",
+      "label": "DATA(grid)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 5,
+      "dependency_type": "DATA",
+      "variable": "capacity",
+      "label": "DATA(capacity)"
+    },
+    {
+      "source_id": 4,
+      "target_id": 5,
+      "dependency_type": "DATA",
+      "variable": "row",
+      "label": "DATA(row)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 6,
+      "dependency_type": "DATA",
+      "variable": "capacity",
+      "label": "DATA(capacity)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 7,
+      "dependency_type": "DATA",
+      "variable": "capacity",
+      "label": "DATA(capacity)"
+    },
+    {
+      "source_id": 4,
+      "target_id": 7,
+      "dependency_type": "DATA",
+      "variable": "row",
+      "label": "DATA(row)"
+    },
+    {
+      "source_id": 4,
+      "target_id": 8,
+      "dependency_type": "DATA",
+      "variable": "row",
+      "label": "DATA(row)"
+    },
+    {
+      "source_id": 7,
+      "target_id": 9,
+      "dependency_type": "DATA",
+      "variable": "num_lowerings",
+      "label": "DATA(num_lowerings)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 3,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 4,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 4,
+      "target_id": 5,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(For)"
+    },
+    {
+      "source_id": 5,
+      "target_id": 6,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(If)"
+    },
+    {
+      "source_id": 5,
+      "target_id": 7,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(If)"
+    },
+    {
+      "source_id": 5,
+      "target_id": 8,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(If)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 9,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    9
+  ]
+}

@@ -1,0 +1,12 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def how_many_times(string: str, substring: str) -> int: | W:string,substring,how_many_times | R:str", fillcolor="lightgreen"];
+    "2" [label="L2: return string.count(substring) | R:string,substring", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(string)", style="solid"];
+    "1" -> "2" [label="DATA(substring)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

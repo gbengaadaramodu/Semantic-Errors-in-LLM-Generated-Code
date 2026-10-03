@@ -1,0 +1,25 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def find_rotations(string): | W:string,find_rotations", fillcolor="lightgreen"];
+    "2" [label="L2: min_rotations = 1 | W:min_rotations", fillcolor="lightgrey"];
+    "3" [label="L3: for i in range(len(string)): | W:i | R:len,range,string", fillcolor="lightgrey"];
+    "4" [label="L4: if string[i:] + string[:i] == string: | R:i,string", fillcolor="lightgrey"];
+    "5" [label="L5: min_rotations = i + 1 | W:min_rotations | R:i", fillcolor="lightgrey"];
+    "6" [label="L6: break", fillcolor="lightgrey"];
+    "7" [label="L7: return min_rotations | R:min_rotations", fillcolor="salmon"];
+
+    "1" -> "3" [label="DATA(string)", style="solid"];
+    "3" -> "4" [label="DATA(i)", style="solid"];
+    "1" -> "4" [label="DATA(string)", style="solid"];
+    "3" -> "5" [label="DATA(i)", style="solid"];
+    "5" -> "7" [label="DATA(min_rotations)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "3" [label="CONTROL(FunctionDef)", style="dashed"];
+    "3" -> "4" [label="CONTROL(For)", style="dashed"];
+    "4" -> "5" [label="CONTROL(If)", style="dashed"];
+    "4" -> "6" [label="CONTROL(If)", style="dashed"];
+    "1" -> "7" [label="CONTROL(FunctionDef)", style="dashed"];
+}

@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB089",
+  "dataset": "MBPP",
+  "task_id": "589",
+  "problem_summary": "Write a function to find perfect squares between two given numbers.",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpnrm33fay.py\", line 4, in <module>\n    assert perfect_squares(1,30)==[1, 4, 9, 16, 25]\n           ^^^^^^^^^^^^^^^\nNameError: name 'perfect_squares' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpnrm33fay.py\", line 4, in <module>\n    assert perfect_squares(1,30)==[1, 4, 9, 16, 25]\n           ^^^^^^^^^^^^^^^\nNameError: name 'perfect_squares' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'perfect_squares' is not defined",
+  "execution_time": 0.21548,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

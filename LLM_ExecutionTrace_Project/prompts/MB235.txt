@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a function to sort a list of elements.
+
+Example test: assert pancake_sort([15, 79, 25, 38, 69]) == [15, 25, 38, 69, 79]
+[/INST]

@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB050",
+  "dataset": "MBPP",
+  "task_id": "172",
+  "problem_summary": "Write a function to count the number of occurence of the string 'std' in a given",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpizqctchz.py\", line 4, in <module>\n    assert count_occurance(\"letstdlenstdporstd\") == 3\n           ^^^^^^^^^^^^^^^\nNameError: name 'count_occurance' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpizqctchz.py\", line 4, in <module>\n    assert count_occurance(\"letstdlenstdporstd\") == 3\n           ^^^^^^^^^^^^^^^\nNameError: name 'count_occurance' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'count_occurance' is not defined",
+  "execution_time": 0.234397,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

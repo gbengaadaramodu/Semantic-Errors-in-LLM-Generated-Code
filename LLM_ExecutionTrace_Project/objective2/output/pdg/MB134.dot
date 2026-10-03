@@ -1,0 +1,24 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: import re", fillcolor="lightgreen"];
+    "2" [label="L3: def find_literals(string, pattern): | W:pattern,string,find_literals", fillcolor="lightgreen"];
+    "3" [label="L4: regex = re.compile(pattern) | W:regex | R:pattern,re", fillcolor="lightgrey"];
+    "4" [label="L5: match = regex.search(string) | W:match | R:regex,string", fillcolor="lightgrey"];
+    "5" [label="L6: if match: | R:match", fillcolor="lightgrey"];
+    "6" [label="L7: return (match.group(), match.start(), match.end()) | R:match", fillcolor="lightgrey"];
+    "7" [label="L9: return (None, None, None)", fillcolor="salmon"];
+
+    "2" -> "3" [label="DATA(pattern)", style="solid"];
+    "3" -> "4" [label="DATA(regex)", style="solid"];
+    "2" -> "4" [label="DATA(string)", style="solid"];
+    "4" -> "5" [label="DATA(match)", style="solid"];
+    "4" -> "6" [label="DATA(match)", style="solid"];
+    "2" -> "3" [label="CONTROL(FunctionDef)", style="dashed"];
+    "2" -> "4" [label="CONTROL(FunctionDef)", style="dashed"];
+    "2" -> "5" [label="CONTROL(FunctionDef)", style="dashed"];
+    "5" -> "6" [label="CONTROL(If)", style="dashed"];
+    "5" -> "7" [label="CONTROL(If)", style="dashed"];
+}

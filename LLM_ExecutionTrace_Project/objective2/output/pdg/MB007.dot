@@ -1,0 +1,34 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def eulerian_num(n, m): | W:m,n,eulerian_num", fillcolor="lightgreen"];
+    "2" [label="L2: if n == 0 and m == 0: | R:m,n", fillcolor="lightgrey"];
+    "3" [label="L3: return 1", fillcolor="lightgrey"];
+    "4" [label="L4: elif n > 0 and m == 0: | R:m,n", fillcolor="lightgrey"];
+    "5" [label="L5: return 0", fillcolor="lightgrey"];
+    "6" [label="L6: elif n == 0 and m > 0: | R:m,n", fillcolor="lightgrey"];
+    "7" [label="L7: return eulerian_num(n, m-1) | R:eulerian_num,m,n", fillcolor="lightgrey"];
+    "8" [label="L9: return eulerian_num(n-1, m-1) + eulerian_num(n-1, m) | R:eulerian_num,m,n", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(m)", style="solid"];
+    "1" -> "2" [label="DATA(n)", style="solid"];
+    "1" -> "4" [label="DATA(m)", style="solid"];
+    "1" -> "4" [label="DATA(n)", style="solid"];
+    "1" -> "6" [label="DATA(m)", style="solid"];
+    "1" -> "6" [label="DATA(n)", style="solid"];
+    "1" -> "7" [label="DATA(eulerian_num)", style="solid"];
+    "1" -> "7" [label="DATA(m)", style="solid"];
+    "1" -> "7" [label="DATA(n)", style="solid"];
+    "1" -> "8" [label="DATA(eulerian_num)", style="solid"];
+    "1" -> "8" [label="DATA(m)", style="solid"];
+    "1" -> "8" [label="DATA(n)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "2" -> "3" [label="CONTROL(If)", style="dashed"];
+    "2" -> "4" [label="CONTROL(If)", style="dashed"];
+    "4" -> "5" [label="CONTROL(If)", style="dashed"];
+    "4" -> "6" [label="CONTROL(If)", style="dashed"];
+    "6" -> "7" [label="CONTROL(If)", style="dashed"];
+    "6" -> "8" [label="CONTROL(If)", style="dashed"];
+}

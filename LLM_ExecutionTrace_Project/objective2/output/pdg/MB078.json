@@ -1,0 +1,59 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def text_lowercase_underscore(input_string):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "input_string",
+        "text_lowercase_underscore"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 1,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "return any(c.islower() for c in input_string) and \"_\" in input_string",
+      "statement_type": "Return",
+      "reads": [
+        "any",
+        "c",
+        "input_string"
+      ],
+      "writes": [
+        "c"
+      ],
+      "function_name": "text_lowercase_underscore",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "input_string",
+      "label": "DATA(input_string)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    2
+  ]
+}

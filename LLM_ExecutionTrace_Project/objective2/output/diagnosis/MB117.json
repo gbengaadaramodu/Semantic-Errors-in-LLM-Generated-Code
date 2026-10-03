@@ -1,0 +1,432 @@
+{
+  "trace_id": "MB117",
+  "dataset": "MBPP",
+  "task_id": "448",
+  "error_category": "Runtime Exception",
+  "analysis_status": "ANALYZED",
+  "skip_reason": null,
+  "input_record": {
+    "trace_id": "MB117",
+    "dataset": "MBPP",
+    "task_id": "448",
+    "problem_summary": "Write a function to calculate the sum of perrin numbers.",
+    "execution_status": "Failed",
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp5_5jajqd.py\", line 10, in <module>\n    assert cal_sum(9) == 49\n           ^^^^^^^\nNameError: name 'cal_sum' is not defined\n",
+    "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp5_5jajqd.py\", line 10, in <module>\n    assert cal_sum(9) == 49\n           ^^^^^^^\nNameError: name 'cal_sum' is not defined",
+    "exception_type": "NameError",
+    "exception_message": "name 'cal_sum' is not defined",
+    "execution_time": 0.233604,
+    "timed_out": false,
+    "exit_code": 1,
+    "tests_passed": false,
+    "tests_failed": 0,
+    "expected_output": null,
+    "actual_output": null,
+    "assertion_source": null,
+    "assertion_failed": false,
+    "parser_prediction": "Runtime Exception"
+  },
+  "scm": {
+    "task_id": "448",
+    "nodes": [
+      {
+        "node_id": "S",
+        "variable_name": "Specification",
+        "symbol": "S",
+        "label": "Specification"
+      },
+      {
+        "node_id": "C",
+        "variable_name": "GeneratedCode",
+        "symbol": "C",
+        "label": "Generated Code"
+      },
+      {
+        "node_id": "E",
+        "variable_name": "ExecutionTrace",
+        "symbol": "E",
+        "label": "Execution Trace"
+      },
+      {
+        "node_id": "T",
+        "variable_name": "TestSuite",
+        "symbol": "T",
+        "label": "Test Suite"
+      },
+      {
+        "node_id": "O",
+        "variable_name": "Outcome",
+        "symbol": "O",
+        "label": "Outcome"
+      }
+    ],
+    "edges": [
+      {
+        "source": "S",
+        "target": "C",
+        "relationship": "generates"
+      },
+      {
+        "source": "C",
+        "target": "E",
+        "relationship": "produces"
+      },
+      {
+        "source": "T",
+        "target": "E",
+        "relationship": "evaluates"
+      },
+      {
+        "source": "E",
+        "target": "O",
+        "relationship": "determines"
+      }
+    ],
+    "variables": {
+      "S": {
+        "name": "Specification",
+        "symbol": "S",
+        "description": "Problem description, prompt, and target function signature",
+        "value": "Write a function to calculate the sum of perrin numbers."
+      },
+      "C": {
+        "name": "GeneratedCode",
+        "symbol": "C",
+        "description": "LLM-generated Python source code implementation",
+        "value": "def group_tuples(my_list):\n    result = []\n    for tup in my_list:\n        if tup[0] in [tup[0] for tup in result]:\n            result.append(tup)\n        else:\n            result.append([tup[0], tup["
+      },
+      "E": {
+        "name": "ExecutionTrace",
+        "symbol": "E",
+        "description": "Observable runtime trace events, variable states, and stdout/stderr",
+        "value": "status=Failed, exc=NameError, msg=name 'cal_sum' is not defined"
+      },
+      "T": {
+        "name": "TestSuite",
+        "symbol": "T",
+        "description": "Benchmark assertions, inputs, and check function harness",
+        "value": "assert cal_sum(9) == 49\nassert cal_sum(10) == 66\nassert cal_sum(11) == 88"
+      },
+      "O": {
+        "name": "Outcome",
+        "symbol": "O",
+        "description": "Final test execution outcome (Completed/Failed/Timeout)",
+        "value": "Failed"
+      }
+    }
+  },
+  "pdg": {
+    "nodes": {
+      "1": {
+        "node_id": 1,
+        "line_number": 1,
+        "source_code": "def group_tuples(my_list):",
+        "statement_type": "FunctionDef",
+        "reads": [],
+        "writes": [
+          "my_list",
+          "group_tuples"
+        ],
+        "function_name": "<module>",
+        "executed": true,
+        "execution_count": 1,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "2": {
+        "node_id": 2,
+        "line_number": 2,
+        "source_code": "result = []",
+        "statement_type": "Assign",
+        "reads": [],
+        "writes": [
+          "result"
+        ],
+        "function_name": "group_tuples",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "3": {
+        "node_id": 3,
+        "line_number": 3,
+        "source_code": "for tup in my_list:",
+        "statement_type": "For",
+        "reads": [
+          "my_list"
+        ],
+        "writes": [
+          "tup"
+        ],
+        "function_name": "group_tuples",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "4": {
+        "node_id": 4,
+        "line_number": 4,
+        "source_code": "if tup[0] in [tup[0] for tup in result]:",
+        "statement_type": "If",
+        "reads": [
+          "result",
+          "tup"
+        ],
+        "writes": [
+          "tup"
+        ],
+        "function_name": "group_tuples",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "5": {
+        "node_id": 5,
+        "line_number": 5,
+        "source_code": "result.append(tup)",
+        "statement_type": "Expr",
+        "reads": [
+          "result",
+          "tup"
+        ],
+        "writes": [],
+        "function_name": "group_tuples",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "6": {
+        "node_id": 6,
+        "line_number": 7,
+        "source_code": "result.append([tup[0], tup[1]])",
+        "statement_type": "Expr",
+        "reads": [
+          "result",
+          "tup"
+        ],
+        "writes": [],
+        "function_name": "group_tuples",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "7": {
+        "node_id": 7,
+        "line_number": 8,
+        "source_code": "return result",
+        "statement_type": "Return",
+        "reads": [
+          "result"
+        ],
+        "writes": [],
+        "function_name": "group_tuples",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": true
+      }
+    },
+    "edges": [
+      {
+        "source_id": 1,
+        "target_id": 3,
+        "dependency_type": "DATA",
+        "variable": "my_list",
+        "label": "DATA(my_list)"
+      },
+      {
+        "source_id": 2,
+        "target_id": 4,
+        "dependency_type": "DATA",
+        "variable": "result",
+        "label": "DATA(result)"
+      },
+      {
+        "source_id": 3,
+        "target_id": 4,
+        "dependency_type": "DATA",
+        "variable": "tup",
+        "label": "DATA(tup)"
+      },
+      {
+        "source_id": 2,
+        "target_id": 5,
+        "dependency_type": "DATA",
+        "variable": "result",
+        "label": "DATA(result)"
+      },
+      {
+        "source_id": 4,
+        "target_id": 5,
+        "dependency_type": "DATA",
+        "variable": "tup",
+        "label": "DATA(tup)"
+      },
+      {
+        "source_id": 2,
+        "target_id": 6,
+        "dependency_type": "DATA",
+        "variable": "result",
+        "label": "DATA(result)"
+      },
+      {
+        "source_id": 4,
+        "target_id": 6,
+        "dependency_type": "DATA",
+        "variable": "tup",
+        "label": "DATA(tup)"
+      },
+      {
+        "source_id": 2,
+        "target_id": 7,
+        "dependency_type": "DATA",
+        "variable": "result",
+        "label": "DATA(result)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 3,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 3,
+        "target_id": 4,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(For)"
+      },
+      {
+        "source_id": 4,
+        "target_id": 5,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(If)"
+      },
+      {
+        "source_id": 4,
+        "target_id": 6,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(If)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 7,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      }
+    ],
+    "entry_node_id": 1,
+    "failure_node_ids": [
+      7
+    ]
+  },
+  "runtime_events_count": 5,
+  "failure_line": 8,
+  "failure_statement": "return result",
+  "candidates": [
+    {
+      "rank": 1,
+      "node_id": 7,
+      "line_number": 8,
+      "statement_code": "return result",
+      "variable_name": "result",
+      "observed_value": null,
+      "expected_value": "49",
+      "proximity_score": 1.0,
+      "dependency_score": 1.0,
+      "explanation": "Reached via reverse traversal (distance=0, type=Return)"
+    },
+    {
+      "rank": 2,
+      "node_id": 2,
+      "line_number": 2,
+      "statement_code": "result = []",
+      "variable_name": "result",
+      "observed_value": null,
+      "expected_value": null,
+      "proximity_score": 0.85,
+      "dependency_score": 0.9,
+      "explanation": "Reached via reverse traversal (distance=1, type=Assign)"
+    }
+  ],
+  "critical_variable": null,
+  "counterfactual_results": [
+    {
+      "candidate_rank": 1,
+      "intervention": {
+        "target_variable": "result",
+        "target_line": 8,
+        "observed_value": "None",
+        "counterfactual_value": "49",
+        "operation_type": "AST_transform",
+        "modified_code": "def group_tuples(my_list):\n    result = []\n    for tup in my_list:\n        if tup[0] in [tup[0] for tup in result]:\n            result.append(tup)\n        else:\n            result.append([tup[0], tup[1]])\n    return 49"
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "Failed",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "FALSE",
+      "execution_time": 0.2343,
+      "status": "EXECUTED",
+      "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+    },
+    {
+      "candidate_rank": 2,
+      "intervention": {
+        "target_variable": "result",
+        "target_line": 2,
+        "observed_value": "None",
+        "counterfactual_value": "None",
+        "operation_type": "AST_transform",
+        "modified_code": "def group_tuples(my_list):\n    result = None\n    for tup in my_list:\n        if tup[0] in [tup[0] for tup in result]:\n            result.append(tup)\n        else:\n            result.append([tup[0], tup[1]])\n    return result"
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "Failed",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "FALSE",
+      "execution_time": 0.3317,
+      "status": "EXECUTED",
+      "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+    }
+  ],
+  "fault_location": {
+    "file": "MB117.py",
+    "line_number": 8,
+    "statement_code": "return result",
+    "function_name": "cal_sum",
+    "causal_variable": "result",
+    "evidence_score": 0.5,
+    "confidence": 0.3
+  },
+  "root_cause": {
+    "root_cause_status": "UNRESOLVED",
+    "candidate_explanation": "Runtime exception (NameError: name 'cal_sum' is not defined) triggered at statement 'return result' (line 8) involving variable 'result'.",
+    "causal_variable": "result",
+    "fault_statement": "return result",
+    "fault_line": 8,
+    "evidence_summary": "Reverse PDG traversal traced failure from line 1 to statement line 8. Structural dependency identified; counterfactual validation unconfirmed or unresolved.",
+    "counterfactual_validated": false,
+    "confidence": 0.3
+  },
+  "ground_truth_matched": null,
+  "ground_truth_fault_line": null,
+  "execution_time": 0.5764
+}

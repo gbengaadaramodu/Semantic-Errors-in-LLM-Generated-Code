@@ -1,0 +1,21 @@
+[
+  {
+    "candidate_rank": 1,
+    "intervention": {
+      "target_variable": "end",
+      "target_line": 2,
+      "observed_value": "None",
+      "counterfactual_value": "('HELLO', 5, [50], True)",
+      "operation_type": "AST_transform",
+      "modified_code": "def colon_tuple(my_tuple, start, end):\n    end = ('HELLO', 5, [50], True)\n    return my_tuple[:start] + (end,) + my_tuple[start+1:]"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.2521,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  }
+]

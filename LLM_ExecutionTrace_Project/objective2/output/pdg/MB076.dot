@@ -1,0 +1,12 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def find_tuples(tuples, k): | W:k,tuples,find_tuples", fillcolor="lightgreen"];
+    "2" [label="L2: return [tuple for tuple in tuples if all(num % k == 0 for num in tuple)] | W:num,tuple | R:all,k,num,tuple,tuples", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(k)", style="solid"];
+    "1" -> "2" [label="DATA(tuples)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

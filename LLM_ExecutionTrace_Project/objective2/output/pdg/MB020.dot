@@ -1,0 +1,30 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def next_smallest_palindrome(n): | W:n,next_smallest_palindrome", fillcolor="lightgreen"];
+    "2" [label="L2: str_n = str(n) | W:str_n | R:n,str", fillcolor="lightgrey"];
+    "3" [label="L3: if str_n == str_n[::-1]: | R:str_n", fillcolor="lightgrey"];
+    "4" [label="L4: return n | R:n", fillcolor="lightgrey"];
+    "5" [label="L6: next_palindrome = int(str_n[::-1]) | W:next_palindrome | R:int,str_n", fillcolor="lightgrey"];
+    "6" [label="L7: if next_palindrome <= n: | R:n,next_palindrome", fillcolor="lightgrey"];
+    "7" [label="L8: return next_palindrome | R:next_palindrome", fillcolor="lightgrey"];
+    "8" [label="L10: return next_palindrome - 1 | R:next_palindrome", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(n)", style="solid"];
+    "2" -> "3" [label="DATA(str_n)", style="solid"];
+    "1" -> "4" [label="DATA(n)", style="solid"];
+    "2" -> "5" [label="DATA(str_n)", style="solid"];
+    "1" -> "6" [label="DATA(n)", style="solid"];
+    "5" -> "6" [label="DATA(next_palindrome)", style="solid"];
+    "5" -> "7" [label="DATA(next_palindrome)", style="solid"];
+    "5" -> "8" [label="DATA(next_palindrome)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "3" [label="CONTROL(FunctionDef)", style="dashed"];
+    "3" -> "4" [label="CONTROL(If)", style="dashed"];
+    "3" -> "5" [label="CONTROL(If)", style="dashed"];
+    "3" -> "6" [label="CONTROL(If)", style="dashed"];
+    "6" -> "7" [label="CONTROL(If)", style="dashed"];
+    "6" -> "8" [label="CONTROL(If)", style="dashed"];
+}

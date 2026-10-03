@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB138",
+  "dataset": "MBPP",
+  "task_id": "409",
+  "problem_summary": "Write a function to find the minimum product from the pairs of tuples within a g",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmprqge00bu.py\", line 4, in <module>\n    assert min_product_tuple([(2, 7), (2, 6), (1, 8), (4, 9)] )==8\n           ^^^^^^^^^^^^^^^^^\nNameError: name 'min_product_tuple' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmprqge00bu.py\", line 4, in <module>\n    assert min_product_tuple([(2, 7), (2, 6), (1, 8), (4, 9)] )==8\n           ^^^^^^^^^^^^^^^^^\nNameError: name 'min_product_tuple' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'min_product_tuple' is not defined",
+  "execution_time": 0.199735,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

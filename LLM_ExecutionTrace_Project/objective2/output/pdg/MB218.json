@@ -1,0 +1,318 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def dict_depth(my_dict):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "my_dict",
+        "dict_depth"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 5,
+      "runtime_values": {
+        "my_dict": [
+          "{'a': 1, 'b': {'c': \"{'d': {}}\"}}",
+          "{'c': {'d': '{}'}}",
+          "{'d': {}}",
+          "{}"
+        ]
+      },
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "max_depth = 0",
+      "statement_type": "Assign",
+      "reads": [],
+      "writes": [
+        "max_depth"
+      ],
+      "function_name": "dict_depth",
+      "executed": true,
+      "execution_count": 4,
+      "runtime_values": {
+        "my_dict": [
+          "{'a': 1, 'b': {'c': \"{'d': {}}\"}}",
+          "{'c': {'d': '{}'}}",
+          "{'d': {}}",
+          "{}"
+        ]
+      },
+      "failure_related": false
+    },
+    "3": {
+      "node_id": 3,
+      "line_number": 3,
+      "source_code": "for key, value in my_dict.items():",
+      "statement_type": "For",
+      "reads": [
+        "my_dict"
+      ],
+      "writes": [
+        "key",
+        "value"
+      ],
+      "function_name": "dict_depth",
+      "executed": true,
+      "execution_count": 8,
+      "runtime_values": {
+        "my_dict": [
+          "{'a': 1, 'b': {'c': \"{'d': {}}\"}}",
+          "{'a': 1, 'b': {'c': \"{'d': {}}\"}}",
+          "{'c': {'d': '{}'}}",
+          "{'d': {}}",
+          "{}",
+          "{'d': {}}",
+          "{'c': {'d': '{}'}}",
+          "{'a': 1, 'b': {'c': \"{'d': {}}\"}}"
+        ],
+        "max_depth": [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "2",
+          "3"
+        ],
+        "key": [
+          "a",
+          "d",
+          "c",
+          "b"
+        ],
+        "value": [
+          "1",
+          "{}",
+          "{'d': {}}",
+          "{'c': {'d': '{}'}}"
+        ]
+      },
+      "failure_related": false
+    },
+    "4": {
+      "node_id": 4,
+      "line_number": 4,
+      "source_code": "if isinstance(value, dict):",
+      "statement_type": "If",
+      "reads": [
+        "dict",
+        "isinstance",
+        "value"
+      ],
+      "writes": [],
+      "function_name": "dict_depth",
+      "executed": true,
+      "execution_count": 4,
+      "runtime_values": {
+        "my_dict": [
+          "{'a': 1, 'b': {'c': \"{'d': {}}\"}}",
+          "{'a': 1, 'b': {'c': \"{'d': {}}\"}}",
+          "{'c': {'d': '{}'}}",
+          "{'d': {}}"
+        ],
+        "max_depth": [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "key": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ],
+        "value": [
+          "1",
+          "{'c': {'d': '{}'}}",
+          "{'d': {}}",
+          "{}"
+        ]
+      },
+      "failure_related": false
+    },
+    "5": {
+      "node_id": 5,
+      "line_number": 5,
+      "source_code": "max_depth = max(max_depth, dict_depth(value) + 1)",
+      "statement_type": "Assign",
+      "reads": [
+        "dict_depth",
+        "max",
+        "max_depth",
+        "value"
+      ],
+      "writes": [
+        "max_depth"
+      ],
+      "function_name": "dict_depth",
+      "executed": true,
+      "execution_count": 3,
+      "runtime_values": {
+        "my_dict": [
+          "{'a': 1, 'b': {'c': \"{'d': {}}\"}}",
+          "{'c': {'d': '{}'}}",
+          "{'d': {}}"
+        ],
+        "max_depth": [
+          "0",
+          "0",
+          "0"
+        ],
+        "key": [
+          "b",
+          "c",
+          "d"
+        ],
+        "value": [
+          "{'c': {'d': '{}'}}",
+          "{'d': {}}",
+          "{}"
+        ]
+      },
+      "failure_related": false
+    },
+    "6": {
+      "node_id": 6,
+      "line_number": 6,
+      "source_code": "return max_depth",
+      "statement_type": "Return",
+      "reads": [
+        "max_depth"
+      ],
+      "writes": [],
+      "function_name": "dict_depth",
+      "executed": true,
+      "execution_count": 8,
+      "runtime_values": {
+        "my_dict": [
+          "{}",
+          "{}",
+          "{'d': {}}",
+          "{'d': {}}",
+          "{'c': {'d': '{}'}}",
+          "{'c': {'d': '{}'}}",
+          "{'a': 1, 'b': {'c': \"{'d': {}}\"}}",
+          "{'a': 1, 'b': {'c': \"{'d': {}}\"}}"
+        ],
+        "max_depth": [
+          "0",
+          "0",
+          "1",
+          "1",
+          "2",
+          "2",
+          "3",
+          "3"
+        ],
+        "key": [
+          "d",
+          "d",
+          "c",
+          "c",
+          "b",
+          "b"
+        ],
+        "value": [
+          "{}",
+          "{}",
+          "{'d': {}}",
+          "{'d': {}}",
+          "{'c': {'d': '{}'}}",
+          "{'c': {'d': '{}'}}"
+        ]
+      },
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 3,
+      "dependency_type": "DATA",
+      "variable": "my_dict",
+      "label": "DATA(my_dict)"
+    },
+    {
+      "source_id": 3,
+      "target_id": 4,
+      "dependency_type": "DATA",
+      "variable": "value",
+      "label": "DATA(value)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 5,
+      "dependency_type": "DATA",
+      "variable": "dict_depth",
+      "label": "DATA(dict_depth)"
+    },
+    {
+      "source_id": 2,
+      "target_id": 5,
+      "dependency_type": "DATA",
+      "variable": "max_depth",
+      "label": "DATA(max_depth)"
+    },
+    {
+      "source_id": 3,
+      "target_id": 5,
+      "dependency_type": "DATA",
+      "variable": "value",
+      "label": "DATA(value)"
+    },
+    {
+      "source_id": 5,
+      "target_id": 6,
+      "dependency_type": "DATA",
+      "variable": "max_depth",
+      "label": "DATA(max_depth)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 3,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 3,
+      "target_id": 4,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(For)"
+    },
+    {
+      "source_id": 4,
+      "target_id": 5,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(If)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 6,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    6
+  ]
+}

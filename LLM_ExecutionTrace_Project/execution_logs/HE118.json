@@ -1,0 +1,22 @@
+{
+  "trace_id": "HE118",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/118",
+  "problem_summary": "\ndef get_closest_vowel(word):\n    \"\"\"You are given a word. Your task is to find ",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmps5db2ml7.py\", line 30, in <module>\n    check(get_closest_vowel)\n    ~~~~~^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmps5db2ml7.py\", line 13, in check\n    assert candidate(\"easy\") == \"\"\n           ^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmps5db2ml7.py\", line 30, in <module>\n    check(get_closest_vowel)\n    ~~~~~^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmps5db2ml7.py\", line 13, in check\n    assert candidate(\"easy\") == \"\"\n           ^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+  "exception_type": "AssertionError",
+  "exception_message": "",
+  "execution_time": 0.414048,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": "benchmark_test",
+  "assertion_failed": true,
+  "parser_prediction": ""
+}

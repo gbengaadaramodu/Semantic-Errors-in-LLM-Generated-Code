@@ -1,0 +1,40 @@
+[
+  {
+    "candidate_rank": 1,
+    "intervention": {
+      "target_variable": "abs",
+      "target_line": 8,
+      "observed_value": "None",
+      "counterfactual_value": "-9",
+      "operation_type": "AST_transform",
+      "modified_code": "def prod_signs(arr):\n    if not arr:\n        return None\n    signs = [1 for _ in arr]\n    for i, num in enumerate(arr):\n        if num < 0:\n            signs[i] *= -1\n    abs = -9\n    return sum(map(abs, arr)) * prod(signs)"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.2649,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  },
+  {
+    "candidate_rank": 2,
+    "intervention": {
+      "target_variable": "_",
+      "target_line": 4,
+      "observed_value": "-4",
+      "counterfactual_value": "None",
+      "operation_type": "failed_construction",
+      "modified_code": ""
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "FAILED_CONSTRUCTION",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "UNRESOLVED",
+    "execution_time": 0.0,
+    "status": "UNRESOLVED",
+    "explanation": "Failed to construct valid AST counterfactual intervention."
+  }
+]

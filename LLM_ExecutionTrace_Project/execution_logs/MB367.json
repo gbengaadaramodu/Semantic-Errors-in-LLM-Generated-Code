@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB367",
+  "dataset": "MBPP",
+  "task_id": "265",
+  "problem_summary": "Write a function that takes in a list and an integer n and splits a list for eve",
+  "execution_status": "Completed",
+  "stdout": "",
+  "stderr": "",
+  "traceback": "",
+  "exception_type": "",
+  "exception_message": "",
+  "execution_time": 0.095327,
+  "timed_out": false,
+  "exit_code": 0,
+  "tests_passed": true,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

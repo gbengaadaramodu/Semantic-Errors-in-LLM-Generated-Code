@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB084",
+  "dataset": "MBPP",
+  "task_id": "777",
+  "problem_summary": "Write a python function to find the sum of non-repeated elements in a given list",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpdtjjfsqb.py\", line 4, in <module>\n    assert find_sum([1,2,3,1,1,4,5,6]) == 21\n           ^^^^^^^^\nNameError: name 'find_sum' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpdtjjfsqb.py\", line 4, in <module>\n    assert find_sum([1,2,3,1,1,4,5,6]) == 21\n           ^^^^^^^^\nNameError: name 'find_sum' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'find_sum' is not defined",
+  "execution_time": 0.210151,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

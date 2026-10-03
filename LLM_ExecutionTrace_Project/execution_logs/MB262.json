@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB262",
+  "dataset": "MBPP",
+  "task_id": "603",
+  "problem_summary": "Write a function to get all lucid numbers smaller than or equal to a given integ",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp6uunnort.py\", line 16, in <module>\n    assert get_ludic(10) == [1, 2, 3, 5, 7]\n           ^^^^^^^^^\nNameError: name 'get_ludic' is not defined. Did you mean: 'get_lucid'?\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp6uunnort.py\", line 16, in <module>\n    assert get_ludic(10) == [1, 2, 3, 5, 7]\n           ^^^^^^^^^\nNameError: name 'get_ludic' is not defined. Did you mean: 'get_lucid'?",
+  "exception_type": "NameError",
+  "exception_message": "name 'get_ludic' is not defined. Did you mean: 'get_lucid'?",
+  "execution_time": 0.280554,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

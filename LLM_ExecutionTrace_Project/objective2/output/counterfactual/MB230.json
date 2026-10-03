@@ -1,0 +1,97 @@
+[
+  {
+    "candidate_rank": 1,
+    "intervention": {
+      "target_variable": "left_half",
+      "target_line": 10,
+      "observed_value": "[1, 1]",
+      "counterfactual_value": "3",
+      "operation_type": "AST_transform",
+      "modified_code": "def search(my_list):\n    mid = len(my_list) // 2\n    if mid == 0:\n        return my_list[0]\n    left_half = my_list[:mid]\n    right_half = my_list[mid:]\n    if left_half[-1] == right_half[0]:\n        return search(left_half)\n    else:\n        left_half = 3\n        return left_half[-1]"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.2937,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  },
+  {
+    "candidate_rank": 2,
+    "intervention": {
+      "target_variable": "left_half",
+      "target_line": 5,
+      "observed_value": "None",
+      "counterfactual_value": "None",
+      "operation_type": "AST_transform",
+      "modified_code": "def search(my_list):\n    mid = len(my_list) // 2\n    if mid == 0:\n        return my_list[0]\n    left_half = None\n    right_half = my_list[mid:]\n    if left_half[-1] == right_half[0]:\n        return search(left_half)\n    else:\n        return left_half[-1]"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.2493,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  },
+  {
+    "candidate_rank": 3,
+    "intervention": {
+      "target_variable": "left_half",
+      "target_line": 7,
+      "observed_value": "[1, 1]",
+      "counterfactual_value": "None",
+      "operation_type": "AST_transform",
+      "modified_code": "def search(my_list):\n    mid = len(my_list) // 2\n    if mid == 0:\n        return my_list[0]\n    left_half = my_list[:mid]\n    right_half = my_list[mid:]\n    if left_half[-1] != right_half[0]:\n        return search(left_half)\n    else:\n        return left_half[-1]"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.1904,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  },
+  {
+    "candidate_rank": 4,
+    "intervention": {
+      "target_variable": "mid",
+      "target_line": 2,
+      "observed_value": "None",
+      "counterfactual_value": "None",
+      "operation_type": "AST_transform",
+      "modified_code": "def search(my_list):\n    mid = None\n    if mid == 0:\n        return my_list[0]\n    left_half = my_list[:mid]\n    right_half = my_list[mid:]\n    if left_half[-1] == right_half[0]:\n        return search(left_half)\n    else:\n        return left_half[-1]"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Completed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "TRUE",
+    "execution_time": 0.1425,
+    "status": "EXECUTED",
+    "explanation": "Intervention successfully flipped execution outcome from FAIL to PASS."
+  },
+  {
+    "candidate_rank": 5,
+    "intervention": {
+      "target_variable": "right_half",
+      "target_line": 6,
+      "observed_value": "None",
+      "counterfactual_value": "None",
+      "operation_type": "AST_transform",
+      "modified_code": "def search(my_list):\n    mid = len(my_list) // 2\n    if mid == 0:\n        return my_list[0]\n    left_half = my_list[:mid]\n    right_half = None\n    if left_half[-1] == right_half[0]:\n        return search(left_half)\n    else:\n        return left_half[-1]"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.2318,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  }
+]

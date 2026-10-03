@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a function that takes in an integer n and calculates the harmonic sum of n-1.
+
+Example test: assert math.isclose(harmonic_sum(7), 2.5928571428571425, rel_tol=0.001)
+[/INST]

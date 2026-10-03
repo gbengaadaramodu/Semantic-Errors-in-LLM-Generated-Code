@@ -1,0 +1,22 @@
+{
+  "trace_id": "HE116",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/64",
+  "problem_summary": "\nFIX = \"\"\"\nAdd more test cases.\n\"\"\"\n\ndef vowels_count(s):\n    \"\"\"Write a functio",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpu6t4x5tg.py\", line 25, in <module>\n    check(vowels_count)\n    ~~~~~^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpu6t4x5tg.py\", line 14, in check\n    assert candidate(\"key\") == 2, \"Test 3\"\n           ^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Test 3\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpu6t4x5tg.py\", line 25, in <module>\n    check(vowels_count)\n    ~~~~~^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpu6t4x5tg.py\", line 14, in check\n    assert candidate(\"key\") == 2, \"Test 3\"\n           ^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Test 3",
+  "exception_type": "AssertionError",
+  "exception_message": "Test 3",
+  "execution_time": 0.21348,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": "benchmark_test",
+  "assertion_failed": true,
+  "parser_prediction": ""
+}

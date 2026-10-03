@@ -1,0 +1,40 @@
+[
+  {
+    "candidate_rank": 1,
+    "intervention": {
+      "target_variable": "unique_nums",
+      "target_line": 6,
+      "observed_value": "[1, 2, 3, 4, 5]",
+      "counterfactual_value": "[1, 4, 5]",
+      "operation_type": "AST_transform",
+      "modified_code": "def two_unique_nums(my_lists):\n    unique_nums = []\n    for num in my_lists:\n        if num not in unique_nums:\n            unique_nums.append(num)\n    return [1, 4, 5]"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Completed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "TRUE",
+    "execution_time": 0.109,
+    "status": "EXECUTED",
+    "explanation": "Intervention successfully flipped execution outcome from FAIL to PASS."
+  },
+  {
+    "candidate_rank": 2,
+    "intervention": {
+      "target_variable": "unique_nums",
+      "target_line": 2,
+      "observed_value": "None",
+      "counterfactual_value": "None",
+      "operation_type": "AST_transform",
+      "modified_code": "def two_unique_nums(my_lists):\n    unique_nums = None\n    for num in my_lists:\n        if num not in unique_nums:\n            unique_nums.append(num)\n    return unique_nums"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.2137,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  }
+]

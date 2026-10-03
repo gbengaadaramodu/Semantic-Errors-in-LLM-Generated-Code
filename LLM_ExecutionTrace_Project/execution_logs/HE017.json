@@ -1,0 +1,22 @@
+{
+  "trace_id": "HE017",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/59",
+  "problem_summary": "\n\ndef largest_prime_factor(n: int):\n    \"\"\"Return the largest prime factor of n.",
+  "execution_status": "Completed",
+  "stdout": "",
+  "stderr": "",
+  "traceback": "",
+  "exception_type": "",
+  "exception_message": "",
+  "execution_time": 0.119268,
+  "timed_out": false,
+  "exit_code": 0,
+  "tests_passed": true,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

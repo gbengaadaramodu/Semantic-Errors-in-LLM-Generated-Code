@@ -1,0 +1,22 @@
+{
+  "trace_id": "HE107",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/91",
+  "problem_summary": "\ndef is_bored(S):\n    \"\"\"\n    You'll be given a string of words, and your task i",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp16k2krik.py\", line 19, in <module>\n    check(is_bored)\n    ~~~~~^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp16k2krik.py\", line 8, in check\n    assert candidate(\"Is the sky blue?\") == 0, \"Test 2\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Test 2\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp16k2krik.py\", line 19, in <module>\n    check(is_bored)\n    ~~~~~^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp16k2krik.py\", line 8, in check\n    assert candidate(\"Is the sky blue?\") == 0, \"Test 2\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Test 2",
+  "exception_type": "AssertionError",
+  "exception_message": "Test 2",
+  "execution_time": 0.288013,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": "benchmark_test",
+  "assertion_failed": true,
+  "parser_prediction": ""
+}

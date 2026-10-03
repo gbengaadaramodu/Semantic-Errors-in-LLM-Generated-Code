@@ -1,0 +1,544 @@
+{
+  "trace_id": "HE066",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/111",
+  "error_category": "Wrong-Output Error",
+  "analysis_status": "ANALYZED",
+  "skip_reason": null,
+  "input_record": {
+    "trace_id": "HE066",
+    "dataset": "HumanEval",
+    "task_id": "HumanEval/111",
+    "problem_summary": "\ndef histogram(test):\n    \"\"\"Given a string representing a space separated lower",
+    "execution_status": "Failed",
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpw395sh8m.py\", line 27, in <module>\n    check(histogram)\n    ~~~~~^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpw395sh8m.py\", line 13, in check\n    assert candidate('a b b a') == {'a':2,'b': 2}, \"This prints if this assert fails 1 (good for debugging!)\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: This prints if this assert fails 1 (good for debugging!)\n",
+    "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpw395sh8m.py\", line 27, in <module>\n    check(histogram)\n    ~~~~~^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpw395sh8m.py\", line 13, in check\n    assert candidate('a b b a') == {'a':2,'b': 2}, \"This prints if this assert fails 1 (good for debugging!)\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: This prints if this assert fails 1 (good for debugging!)",
+    "exception_type": "AssertionError",
+    "exception_message": "This prints if this assert fails 1 (good for debugging!)",
+    "execution_time": 0.569676,
+    "timed_out": false,
+    "exit_code": 1,
+    "tests_passed": false,
+    "tests_failed": 0,
+    "expected_output": null,
+    "actual_output": null,
+    "assertion_source": "benchmark_test",
+    "assertion_failed": true,
+    "parser_prediction": "Wrong-Output Error"
+  },
+  "scm": {
+    "task_id": "HumanEval/111",
+    "nodes": [
+      {
+        "node_id": "S",
+        "variable_name": "Specification",
+        "symbol": "S",
+        "label": "Specification"
+      },
+      {
+        "node_id": "C",
+        "variable_name": "GeneratedCode",
+        "symbol": "C",
+        "label": "Generated Code"
+      },
+      {
+        "node_id": "E",
+        "variable_name": "ExecutionTrace",
+        "symbol": "E",
+        "label": "Execution Trace"
+      },
+      {
+        "node_id": "T",
+        "variable_name": "TestSuite",
+        "symbol": "T",
+        "label": "Test Suite"
+      },
+      {
+        "node_id": "O",
+        "variable_name": "Outcome",
+        "symbol": "O",
+        "label": "Outcome"
+      }
+    ],
+    "edges": [
+      {
+        "source": "S",
+        "target": "C",
+        "relationship": "generates"
+      },
+      {
+        "source": "C",
+        "target": "E",
+        "relationship": "produces"
+      },
+      {
+        "source": "T",
+        "target": "E",
+        "relationship": "evaluates"
+      },
+      {
+        "source": "E",
+        "target": "O",
+        "relationship": "determines"
+      }
+    ],
+    "variables": {
+      "S": {
+        "name": "Specification",
+        "symbol": "S",
+        "description": "Problem description, prompt, and target function signature",
+        "value": "\ndef histogram(test):\n    \"\"\"Given a string representing a space separated lower"
+      },
+      "C": {
+        "name": "GeneratedCode",
+        "symbol": "C",
+        "description": "LLM-generated Python source code implementation",
+        "value": "def histogram(test):\n    hist = {}\n    for char in test:\n        if char not in hist:\n            hist[char] = 1\n        else:\n            hist[char] += 1\n    return hist"
+      },
+      "E": {
+        "name": "ExecutionTrace",
+        "symbol": "E",
+        "description": "Observable runtime trace events, variable states, and stdout/stderr",
+        "value": "status=Failed, exc=AssertionError, msg=This prints if this assert fails 1 (good for debugging!)"
+      },
+      "T": {
+        "name": "TestSuite",
+        "symbol": "T",
+        "description": "Benchmark assertions, inputs, and check function harness",
+        "value": "def check(candidate):\n\n    # Check some simple cases\n    assert candidate('a b b a') == {'a':2,'b': "
+      },
+      "O": {
+        "name": "Outcome",
+        "symbol": "O",
+        "description": "Final test execution outcome (Completed/Failed/Timeout)",
+        "value": "Failed"
+      }
+    }
+  },
+  "pdg": {
+    "nodes": {
+      "1": {
+        "node_id": 1,
+        "line_number": 1,
+        "source_code": "def histogram(test):",
+        "statement_type": "FunctionDef",
+        "reads": [],
+        "writes": [
+          "test",
+          "histogram"
+        ],
+        "function_name": "<module>",
+        "executed": true,
+        "execution_count": 2,
+        "runtime_values": {
+          "test": [
+            "a b b a"
+          ]
+        },
+        "failure_related": false
+      },
+      "2": {
+        "node_id": 2,
+        "line_number": 2,
+        "source_code": "hist = {}",
+        "statement_type": "Assign",
+        "reads": [],
+        "writes": [
+          "hist"
+        ],
+        "function_name": "histogram",
+        "executed": true,
+        "execution_count": 1,
+        "runtime_values": {
+          "test": [
+            "a b b a"
+          ]
+        },
+        "failure_related": false
+      },
+      "3": {
+        "node_id": 3,
+        "line_number": 3,
+        "source_code": "for char in test:",
+        "statement_type": "For",
+        "reads": [
+          "test"
+        ],
+        "writes": [
+          "char"
+        ],
+        "function_name": "histogram",
+        "executed": true,
+        "execution_count": 8,
+        "runtime_values": {
+          "test": [
+            "a b b a",
+            "a b b a",
+            "a b b a",
+            "a b b a",
+            "a b b a",
+            "a b b a",
+            "a b b a",
+            "a b b a"
+          ],
+          "hist": [
+            "{}",
+            "{'a': 1}",
+            "{'a': 1, ' ': 1}",
+            "{'a': 1, ' ': 1, 'b': 1}",
+            "{'a': 1, ' ': 2, 'b': 1}",
+            "{'a': 1, ' ': 2, 'b': 2}",
+            "{'a': 1, ' ': 3, 'b': 2}",
+            "{'a': 2, ' ': 3, 'b': 2}"
+          ],
+          "char": [
+            "a",
+            " ",
+            "b",
+            " ",
+            "b",
+            " ",
+            "a"
+          ]
+        },
+        "failure_related": false
+      },
+      "4": {
+        "node_id": 4,
+        "line_number": 4,
+        "source_code": "if char not in hist:",
+        "statement_type": "If",
+        "reads": [
+          "char",
+          "hist"
+        ],
+        "writes": [],
+        "function_name": "histogram",
+        "executed": true,
+        "execution_count": 7,
+        "runtime_values": {
+          "test": [
+            "a b b a",
+            "a b b a",
+            "a b b a",
+            "a b b a",
+            "a b b a",
+            "a b b a",
+            "a b b a"
+          ],
+          "hist": [
+            "{}",
+            "{'a': 1}",
+            "{'a': 1, ' ': 1}",
+            "{'a': 1, ' ': 1, 'b': 1}",
+            "{'a': 1, ' ': 2, 'b': 1}",
+            "{'a': 1, ' ': 2, 'b': 2}",
+            "{'a': 1, ' ': 3, 'b': 2}"
+          ],
+          "char": [
+            "a",
+            " ",
+            "b",
+            " ",
+            "b",
+            " ",
+            "a"
+          ]
+        },
+        "failure_related": false
+      },
+      "5": {
+        "node_id": 5,
+        "line_number": 5,
+        "source_code": "hist[char] = 1",
+        "statement_type": "Assign",
+        "reads": [
+          "char",
+          "hist"
+        ],
+        "writes": [],
+        "function_name": "histogram",
+        "executed": true,
+        "execution_count": 3,
+        "runtime_values": {
+          "test": [
+            "a b b a",
+            "a b b a",
+            "a b b a"
+          ],
+          "hist": [
+            "{}",
+            "{'a': 1}",
+            "{'a': 1, ' ': 1}"
+          ],
+          "char": [
+            "a",
+            " ",
+            "b"
+          ]
+        },
+        "failure_related": false
+      },
+      "6": {
+        "node_id": 6,
+        "line_number": 7,
+        "source_code": "hist[char] += 1",
+        "statement_type": "AugAssign",
+        "reads": [
+          "char",
+          "hist"
+        ],
+        "writes": [],
+        "function_name": "histogram",
+        "executed": true,
+        "execution_count": 4,
+        "runtime_values": {
+          "test": [
+            "a b b a",
+            "a b b a",
+            "a b b a",
+            "a b b a"
+          ],
+          "hist": [
+            "{'a': 1, ' ': 1, 'b': 1}",
+            "{'a': 1, ' ': 2, 'b': 1}",
+            "{'a': 1, ' ': 2, 'b': 2}",
+            "{'a': 1, ' ': 3, 'b': 2}"
+          ],
+          "char": [
+            " ",
+            "b",
+            " ",
+            "a"
+          ]
+        },
+        "failure_related": false
+      },
+      "7": {
+        "node_id": 7,
+        "line_number": 8,
+        "source_code": "return hist",
+        "statement_type": "Return",
+        "reads": [
+          "hist"
+        ],
+        "writes": [],
+        "function_name": "histogram",
+        "executed": true,
+        "execution_count": 2,
+        "runtime_values": {
+          "test": [
+            "a b b a",
+            "a b b a"
+          ],
+          "hist": [
+            "{'a': 2, ' ': 3, 'b': 2}",
+            "{'a': 2, ' ': 3, 'b': 2}"
+          ],
+          "char": [
+            "a",
+            "a"
+          ]
+        },
+        "failure_related": true
+      }
+    },
+    "edges": [
+      {
+        "source_id": 1,
+        "target_id": 3,
+        "dependency_type": "DATA",
+        "variable": "test",
+        "label": "DATA(test)"
+      },
+      {
+        "source_id": 3,
+        "target_id": 4,
+        "dependency_type": "DATA",
+        "variable": "char",
+        "label": "DATA(char)"
+      },
+      {
+        "source_id": 2,
+        "target_id": 4,
+        "dependency_type": "DATA",
+        "variable": "hist",
+        "label": "DATA(hist)"
+      },
+      {
+        "source_id": 3,
+        "target_id": 5,
+        "dependency_type": "DATA",
+        "variable": "char",
+        "label": "DATA(char)"
+      },
+      {
+        "source_id": 2,
+        "target_id": 5,
+        "dependency_type": "DATA",
+        "variable": "hist",
+        "label": "DATA(hist)"
+      },
+      {
+        "source_id": 3,
+        "target_id": 6,
+        "dependency_type": "DATA",
+        "variable": "char",
+        "label": "DATA(char)"
+      },
+      {
+        "source_id": 2,
+        "target_id": 6,
+        "dependency_type": "DATA",
+        "variable": "hist",
+        "label": "DATA(hist)"
+      },
+      {
+        "source_id": 2,
+        "target_id": 7,
+        "dependency_type": "DATA",
+        "variable": "hist",
+        "label": "DATA(hist)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 3,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 3,
+        "target_id": 4,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(For)"
+      },
+      {
+        "source_id": 4,
+        "target_id": 5,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(If)"
+      },
+      {
+        "source_id": 4,
+        "target_id": 6,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(If)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 7,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      }
+    ],
+    "entry_node_id": 1,
+    "failure_node_ids": [
+      7
+    ]
+  },
+  "runtime_events_count": 36,
+  "failure_line": 8,
+  "failure_statement": "return hist",
+  "candidates": [
+    {
+      "rank": 1,
+      "node_id": 7,
+      "line_number": 8,
+      "statement_code": "return hist",
+      "variable_name": "hist",
+      "observed_value": "{'a': 2, ' ': 3, 'b': 2}",
+      "expected_value": "{'a': 2, 'b': 2}",
+      "proximity_score": 1.0,
+      "dependency_score": 1.0,
+      "explanation": "Reached via reverse traversal (distance=0, type=Return)"
+    },
+    {
+      "rank": 2,
+      "node_id": 2,
+      "line_number": 2,
+      "statement_code": "hist = {}",
+      "variable_name": "hist",
+      "observed_value": null,
+      "expected_value": null,
+      "proximity_score": 0.85,
+      "dependency_score": 0.9,
+      "explanation": "Reached via reverse traversal (distance=1, type=Assign)"
+    }
+  ],
+  "critical_variable": null,
+  "counterfactual_results": [
+    {
+      "candidate_rank": 1,
+      "intervention": {
+        "target_variable": "hist",
+        "target_line": 8,
+        "observed_value": "{'a': 2, ' ': 3, 'b': 2}",
+        "counterfactual_value": "{'a': 2, 'b': 2}",
+        "operation_type": "AST_transform",
+        "modified_code": "def histogram(test):\n    hist = {}\n    for char in test:\n        if char not in hist:\n            hist[char] = 1\n        else:\n            hist[char] += 1\n    return {'a': 2, 'b': 2}"
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "Completed",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "TRUE",
+      "execution_time": 0.1146,
+      "status": "EXECUTED",
+      "explanation": "Intervention successfully flipped execution outcome from FAIL to PASS."
+    },
+    {
+      "candidate_rank": 2,
+      "intervention": {
+        "target_variable": "hist",
+        "target_line": 2,
+        "observed_value": "None",
+        "counterfactual_value": "None",
+        "operation_type": "AST_transform",
+        "modified_code": "def histogram(test):\n    hist = None\n    for char in test:\n        if char not in hist:\n            hist[char] = 1\n        else:\n            hist[char] += 1\n    return hist"
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "Failed",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "FALSE",
+      "execution_time": 0.2103,
+      "status": "EXECUTED",
+      "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+    }
+  ],
+  "fault_location": {
+    "file": "HE066.py",
+    "line_number": 8,
+    "statement_code": "return hist",
+    "function_name": "histogram",
+    "causal_variable": "hist",
+    "evidence_score": 3.0,
+    "confidence": 0.95
+  },
+  "root_cause": {
+    "root_cause_status": "VALIDATED",
+    "candidate_explanation": "Semantic mismatch at line 8 ('return hist') causes return value mismatch.",
+    "causal_variable": "hist",
+    "fault_statement": "return hist",
+    "fault_line": 8,
+    "evidence_summary": "Reverse PDG traversal traced failure from line 1 to statement line 8. Counterfactual intervention do(hist = expected) successfully restored PASS state.",
+    "counterfactual_validated": true,
+    "confidence": 0.95
+  },
+  "ground_truth_matched": null,
+  "ground_truth_fault_line": null,
+  "execution_time": 0.336
+}

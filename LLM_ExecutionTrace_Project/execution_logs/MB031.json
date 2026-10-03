@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB031",
+  "dataset": "MBPP",
+  "task_id": "461",
+  "problem_summary": "Write a python function to count the upper case characters in a given string.",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp0kcw4ue5.py\", line 4, in <module>\n    assert upper_ctr('PYthon') == 1\n           ^^^^^^^^^\nNameError: name 'upper_ctr' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp0kcw4ue5.py\", line 4, in <module>\n    assert upper_ctr('PYthon') == 1\n           ^^^^^^^^^\nNameError: name 'upper_ctr' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'upper_ctr' is not defined",
+  "execution_time": 0.234639,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

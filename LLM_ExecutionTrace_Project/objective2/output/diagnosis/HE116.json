@@ -1,0 +1,713 @@
+{
+  "trace_id": "HE116",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/64",
+  "error_category": "Wrong-Output Error",
+  "analysis_status": "ANALYZED",
+  "skip_reason": null,
+  "input_record": {
+    "trace_id": "HE116",
+    "dataset": "HumanEval",
+    "task_id": "HumanEval/64",
+    "problem_summary": "\nFIX = \"\"\"\nAdd more test cases.\n\"\"\"\n\ndef vowels_count(s):\n    \"\"\"Write a functio",
+    "execution_status": "Failed",
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpu6t4x5tg.py\", line 25, in <module>\n    check(vowels_count)\n    ~~~~~^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpu6t4x5tg.py\", line 14, in check\n    assert candidate(\"key\") == 2, \"Test 3\"\n           ^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Test 3\n",
+    "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpu6t4x5tg.py\", line 25, in <module>\n    check(vowels_count)\n    ~~~~~^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpu6t4x5tg.py\", line 14, in check\n    assert candidate(\"key\") == 2, \"Test 3\"\n           ^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Test 3",
+    "exception_type": "AssertionError",
+    "exception_message": "Test 3",
+    "execution_time": 0.21348,
+    "timed_out": false,
+    "exit_code": 1,
+    "tests_passed": false,
+    "tests_failed": 0,
+    "expected_output": null,
+    "actual_output": null,
+    "assertion_source": "benchmark_test",
+    "assertion_failed": true,
+    "parser_prediction": "Wrong-Output Error"
+  },
+  "scm": {
+    "task_id": "HumanEval/64",
+    "nodes": [
+      {
+        "node_id": "S",
+        "variable_name": "Specification",
+        "symbol": "S",
+        "label": "Specification"
+      },
+      {
+        "node_id": "C",
+        "variable_name": "GeneratedCode",
+        "symbol": "C",
+        "label": "Generated Code"
+      },
+      {
+        "node_id": "E",
+        "variable_name": "ExecutionTrace",
+        "symbol": "E",
+        "label": "Execution Trace"
+      },
+      {
+        "node_id": "T",
+        "variable_name": "TestSuite",
+        "symbol": "T",
+        "label": "Test Suite"
+      },
+      {
+        "node_id": "O",
+        "variable_name": "Outcome",
+        "symbol": "O",
+        "label": "Outcome"
+      }
+    ],
+    "edges": [
+      {
+        "source": "S",
+        "target": "C",
+        "relationship": "generates"
+      },
+      {
+        "source": "C",
+        "target": "E",
+        "relationship": "produces"
+      },
+      {
+        "source": "T",
+        "target": "E",
+        "relationship": "evaluates"
+      },
+      {
+        "source": "E",
+        "target": "O",
+        "relationship": "determines"
+      }
+    ],
+    "variables": {
+      "S": {
+        "name": "Specification",
+        "symbol": "S",
+        "description": "Problem description, prompt, and target function signature",
+        "value": "\nFIX = \"\"\"\nAdd more test cases.\n\"\"\"\n\ndef vowels_count(s):\n    \"\"\"Write a functio"
+      },
+      "C": {
+        "name": "GeneratedCode",
+        "symbol": "C",
+        "description": "LLM-generated Python source code implementation",
+        "value": "def vowels_count(s):\n    vowels = [\"a\", \"e\", \"i\", \"o\", \"u\"]\n    count = 0\n    for c in s:\n        if c.lower() in vowels:\n            count += 1\n    return count"
+      },
+      "E": {
+        "name": "ExecutionTrace",
+        "symbol": "E",
+        "description": "Observable runtime trace events, variable states, and stdout/stderr",
+        "value": "status=Failed, exc=AssertionError, msg=Test 3"
+      },
+      "T": {
+        "name": "TestSuite",
+        "symbol": "T",
+        "description": "Benchmark assertions, inputs, and check function harness",
+        "value": "def check(candidate):\n\n    # Check some simple cases\n    assert candidate(\"abcde\") == 2, \"Test 1\"\n  "
+      },
+      "O": {
+        "name": "Outcome",
+        "symbol": "O",
+        "description": "Final test execution outcome (Completed/Failed/Timeout)",
+        "value": "Failed"
+      }
+    }
+  },
+  "pdg": {
+    "nodes": {
+      "1": {
+        "node_id": 1,
+        "line_number": 1,
+        "source_code": "def vowels_count(s):",
+        "statement_type": "FunctionDef",
+        "reads": [],
+        "writes": [
+          "s",
+          "vowels_count"
+        ],
+        "function_name": "<module>",
+        "executed": true,
+        "execution_count": 4,
+        "runtime_values": {
+          "s": [
+            "abcde",
+            "Alone",
+            "key"
+          ]
+        },
+        "failure_related": false
+      },
+      "2": {
+        "node_id": 2,
+        "line_number": 2,
+        "source_code": "vowels = [\"a\", \"e\", \"i\", \"o\", \"u\"]",
+        "statement_type": "Assign",
+        "reads": [],
+        "writes": [
+          "vowels"
+        ],
+        "function_name": "vowels_count",
+        "executed": true,
+        "execution_count": 3,
+        "runtime_values": {
+          "s": [
+            "abcde",
+            "Alone",
+            "key"
+          ]
+        },
+        "failure_related": false
+      },
+      "3": {
+        "node_id": 3,
+        "line_number": 3,
+        "source_code": "count = 0",
+        "statement_type": "Assign",
+        "reads": [],
+        "writes": [
+          "count"
+        ],
+        "function_name": "vowels_count",
+        "executed": true,
+        "execution_count": 3,
+        "runtime_values": {
+          "s": [
+            "abcde",
+            "Alone",
+            "key"
+          ],
+          "vowels": [
+            "['a', 'e', 'i', 'o', 'u']",
+            "['a', 'e', 'i', 'o', 'u']",
+            "['a', 'e', 'i', 'o', 'u']"
+          ]
+        },
+        "failure_related": false
+      },
+      "4": {
+        "node_id": 4,
+        "line_number": 4,
+        "source_code": "for c in s:",
+        "statement_type": "For",
+        "reads": [
+          "s"
+        ],
+        "writes": [
+          "c"
+        ],
+        "function_name": "vowels_count",
+        "executed": true,
+        "execution_count": 16,
+        "runtime_values": {
+          "s": [
+            "abcde",
+            "abcde",
+            "abcde",
+            "abcde",
+            "abcde",
+            "abcde",
+            "Alone",
+            "Alone",
+            "Alone",
+            "Alone",
+            "Alone",
+            "Alone",
+            "key",
+            "key",
+            "key",
+            "key"
+          ],
+          "vowels": [
+            "['a', 'e', 'i', 'o', 'u']",
+            "['a', 'e', 'i', 'o', 'u']",
+            "['a', 'e', 'i', 'o', 'u']",
+            "['a', 'e', 'i', 'o', 'u']",
+            "['a', 'e', 'i', 'o', 'u']",
+            "['a', 'e', 'i', 'o', 'u']",
+            "['a', 'e', 'i', 'o', 'u']",
+            "['a', 'e', 'i', 'o', 'u']",
+            "['a', 'e', 'i', 'o', 'u']",
+            "['a', 'e', 'i', 'o', 'u']",
+            "['a', 'e', 'i', 'o', 'u']",
+            "['a', 'e', 'i', 'o', 'u']",
+            "['a', 'e', 'i', 'o', 'u']",
+            "['a', 'e', 'i', 'o', 'u']",
+            "['a', 'e', 'i', 'o', 'u']",
+            "['a', 'e', 'i', 'o', 'u']"
+          ],
+          "count": [
+            "0",
+            "1",
+            "1",
+            "1",
+            "1",
+            "2",
+            "0",
+            "1",
+            "1",
+            "2",
+            "2",
+            "3",
+            "0",
+            "0",
+            "1",
+            "1"
+          ],
+          "c": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e",
+            "A",
+            "l",
+            "o",
+            "n",
+            "e",
+            "k",
+            "e",
+            "y"
+          ]
+        },
+        "failure_related": false
+      },
+      "5": {
+        "node_id": 5,
+        "line_number": 5,
+        "source_code": "if c.lower() in vowels:",
+        "statement_type": "If",
+        "reads": [
+          "c",
+          "vowels"
+        ],
+        "writes": [],
+        "function_name": "vowels_count",
+        "executed": true,
+        "execution_count": 13,
+        "runtime_values": {
+          "s": [
+            "abcde",
+            "abcde",
+            "abcde",
+            "abcde",
+            "abcde",
+            "Alone",
+            "Alone",
+            "Alone",
+            "Alone",
+            "Alone",
+            "key",
+            "key",
+            "key"
+          ],
+          "vowels": [
+            "['a', 'e', 'i', 'o', 'u']",
+            "['a', 'e', 'i', 'o', 'u']",
+            "['a', 'e', 'i', 'o', 'u']",
+            "['a', 'e', 'i', 'o', 'u']",
+            "['a', 'e', 'i', 'o', 'u']",
+            "['a', 'e', 'i', 'o', 'u']",
+            "['a', 'e', 'i', 'o', 'u']",
+            "['a', 'e', 'i', 'o', 'u']",
+            "['a', 'e', 'i', 'o', 'u']",
+            "['a', 'e', 'i', 'o', 'u']",
+            "['a', 'e', 'i', 'o', 'u']",
+            "['a', 'e', 'i', 'o', 'u']",
+            "['a', 'e', 'i', 'o', 'u']"
+          ],
+          "count": [
+            "0",
+            "1",
+            "1",
+            "1",
+            "1",
+            "0",
+            "1",
+            "1",
+            "2",
+            "2",
+            "0",
+            "0",
+            "1"
+          ],
+          "c": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e",
+            "A",
+            "l",
+            "o",
+            "n",
+            "e",
+            "k",
+            "e",
+            "y"
+          ]
+        },
+        "failure_related": false
+      },
+      "6": {
+        "node_id": 6,
+        "line_number": 6,
+        "source_code": "count += 1",
+        "statement_type": "AugAssign",
+        "reads": [],
+        "writes": [
+          "count"
+        ],
+        "function_name": "vowels_count",
+        "executed": true,
+        "execution_count": 6,
+        "runtime_values": {
+          "s": [
+            "abcde",
+            "abcde",
+            "Alone",
+            "Alone",
+            "Alone",
+            "key"
+          ],
+          "vowels": [
+            "['a', 'e', 'i', 'o', 'u']",
+            "['a', 'e', 'i', 'o', 'u']",
+            "['a', 'e', 'i', 'o', 'u']",
+            "['a', 'e', 'i', 'o', 'u']",
+            "['a', 'e', 'i', 'o', 'u']",
+            "['a', 'e', 'i', 'o', 'u']"
+          ],
+          "count": [
+            "0",
+            "1",
+            "0",
+            "1",
+            "2",
+            "0"
+          ],
+          "c": [
+            "a",
+            "e",
+            "A",
+            "o",
+            "e",
+            "e"
+          ]
+        },
+        "failure_related": false
+      },
+      "7": {
+        "node_id": 7,
+        "line_number": 7,
+        "source_code": "return count",
+        "statement_type": "Return",
+        "reads": [
+          "count"
+        ],
+        "writes": [],
+        "function_name": "vowels_count",
+        "executed": true,
+        "execution_count": 6,
+        "runtime_values": {
+          "s": [
+            "abcde",
+            "abcde",
+            "Alone",
+            "Alone",
+            "key",
+            "key"
+          ],
+          "vowels": [
+            "['a', 'e', 'i', 'o', 'u']",
+            "['a', 'e', 'i', 'o', 'u']",
+            "['a', 'e', 'i', 'o', 'u']",
+            "['a', 'e', 'i', 'o', 'u']",
+            "['a', 'e', 'i', 'o', 'u']",
+            "['a', 'e', 'i', 'o', 'u']"
+          ],
+          "count": [
+            "2",
+            "2",
+            "3",
+            "3",
+            "1",
+            "1"
+          ],
+          "c": [
+            "e",
+            "e",
+            "e",
+            "e",
+            "y",
+            "y"
+          ]
+        },
+        "failure_related": true
+      }
+    },
+    "edges": [
+      {
+        "source_id": 1,
+        "target_id": 4,
+        "dependency_type": "DATA",
+        "variable": "s",
+        "label": "DATA(s)"
+      },
+      {
+        "source_id": 4,
+        "target_id": 5,
+        "dependency_type": "DATA",
+        "variable": "c",
+        "label": "DATA(c)"
+      },
+      {
+        "source_id": 2,
+        "target_id": 5,
+        "dependency_type": "DATA",
+        "variable": "vowels",
+        "label": "DATA(vowels)"
+      },
+      {
+        "source_id": 6,
+        "target_id": 7,
+        "dependency_type": "DATA",
+        "variable": "count",
+        "label": "DATA(count)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 3,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 4,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 4,
+        "target_id": 5,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(For)"
+      },
+      {
+        "source_id": 5,
+        "target_id": 6,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(If)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 7,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      }
+    ],
+    "entry_node_id": 1,
+    "failure_node_ids": [
+      7
+    ]
+  },
+  "runtime_events_count": 62,
+  "failure_line": 7,
+  "failure_statement": "return count",
+  "candidates": [
+    {
+      "rank": 1,
+      "node_id": 7,
+      "line_number": 7,
+      "statement_code": "return count",
+      "variable_name": "count",
+      "observed_value": "1",
+      "expected_value": "2",
+      "proximity_score": 1.0,
+      "dependency_score": 1.0,
+      "explanation": "Reached via reverse traversal (distance=0, type=Return)"
+    },
+    {
+      "rank": 2,
+      "node_id": 6,
+      "line_number": 6,
+      "statement_code": "count += 1",
+      "variable_name": "count",
+      "observed_value": "0",
+      "expected_value": null,
+      "proximity_score": 0.85,
+      "dependency_score": 0.9,
+      "explanation": "Reached via reverse traversal (distance=1, type=AugAssign)"
+    },
+    {
+      "rank": 3,
+      "node_id": 5,
+      "line_number": 5,
+      "statement_code": "if c.lower() in vowels:",
+      "variable_name": "c",
+      "observed_value": "y",
+      "expected_value": null,
+      "proximity_score": 0.7,
+      "dependency_score": 0.63,
+      "explanation": "Reached via reverse traversal (distance=2, type=If)"
+    },
+    {
+      "rank": 4,
+      "node_id": 4,
+      "line_number": 4,
+      "statement_code": "for c in s:",
+      "variable_name": "c",
+      "observed_value": "y",
+      "expected_value": null,
+      "proximity_score": 0.55,
+      "dependency_score": 0.567,
+      "explanation": "Reached via reverse traversal (distance=3, type=For)"
+    },
+    {
+      "rank": 5,
+      "node_id": 2,
+      "line_number": 2,
+      "statement_code": "vowels = [\"a\", \"e\", \"i\", \"o\", \"u\"]",
+      "variable_name": "vowels",
+      "observed_value": null,
+      "expected_value": null,
+      "proximity_score": 0.55,
+      "dependency_score": 0.567,
+      "explanation": "Reached via reverse traversal (distance=3, type=Assign)"
+    }
+  ],
+  "critical_variable": null,
+  "counterfactual_results": [
+    {
+      "candidate_rank": 1,
+      "intervention": {
+        "target_variable": "count",
+        "target_line": 7,
+        "observed_value": "1",
+        "counterfactual_value": "2",
+        "operation_type": "AST_transform",
+        "modified_code": "def vowels_count(s):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    count = 0\n    for c in s:\n        if c.lower() in vowels:\n            count += 1\n    return 2"
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "Completed",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "TRUE",
+      "execution_time": 0.1519,
+      "status": "EXECUTED",
+      "explanation": "Intervention successfully flipped execution outcome from FAIL to PASS."
+    },
+    {
+      "candidate_rank": 2,
+      "intervention": {
+        "target_variable": "count",
+        "target_line": 6,
+        "observed_value": "0",
+        "counterfactual_value": "None",
+        "operation_type": "failed_construction",
+        "modified_code": ""
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "FAILED_CONSTRUCTION",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "UNRESOLVED",
+      "execution_time": 0.0,
+      "status": "UNRESOLVED",
+      "explanation": "Failed to construct valid AST counterfactual intervention."
+    },
+    {
+      "candidate_rank": 3,
+      "intervention": {
+        "target_variable": "c",
+        "target_line": 5,
+        "observed_value": "y",
+        "counterfactual_value": "None",
+        "operation_type": "failed_construction",
+        "modified_code": ""
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "FAILED_CONSTRUCTION",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "UNRESOLVED",
+      "execution_time": 0.0,
+      "status": "UNRESOLVED",
+      "explanation": "Failed to construct valid AST counterfactual intervention."
+    },
+    {
+      "candidate_rank": 4,
+      "intervention": {
+        "target_variable": "c",
+        "target_line": 4,
+        "observed_value": "y",
+        "counterfactual_value": "None",
+        "operation_type": "failed_construction",
+        "modified_code": ""
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "FAILED_CONSTRUCTION",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "UNRESOLVED",
+      "execution_time": 0.0,
+      "status": "UNRESOLVED",
+      "explanation": "Failed to construct valid AST counterfactual intervention."
+    },
+    {
+      "candidate_rank": 5,
+      "intervention": {
+        "target_variable": "vowels",
+        "target_line": 2,
+        "observed_value": "None",
+        "counterfactual_value": "None",
+        "operation_type": "AST_transform",
+        "modified_code": "def vowels_count(s):\n    vowels = None\n    count = 0\n    for c in s:\n        if c.lower() in vowels:\n            count += 1\n    return count"
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "Failed",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "FALSE",
+      "execution_time": 0.31,
+      "status": "EXECUTED",
+      "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+    }
+  ],
+  "fault_location": {
+    "file": "HE116.py",
+    "line_number": 7,
+    "statement_code": "return count",
+    "function_name": "vowels_count",
+    "causal_variable": "count",
+    "evidence_score": 3.0,
+    "confidence": 0.95
+  },
+  "root_cause": {
+    "root_cause_status": "VALIDATED",
+    "candidate_explanation": "Semantic mismatch at line 7 ('return count') causes return value mismatch.",
+    "causal_variable": "count",
+    "fault_statement": "return count",
+    "fault_line": 7,
+    "evidence_summary": "Reverse PDG traversal traced failure from line 1 to statement line 7. Counterfactual intervention do(count = expected) successfully restored PASS state.",
+    "counterfactual_validated": true,
+    "confidence": 0.95
+  },
+  "ground_truth_matched": null,
+  "ground_truth_fault_line": null,
+  "execution_time": 0.4815
+}

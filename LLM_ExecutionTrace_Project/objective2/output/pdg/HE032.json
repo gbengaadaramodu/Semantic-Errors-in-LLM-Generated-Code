@@ -1,0 +1,206 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def prime_fib(n: int):",
+      "statement_type": "FunctionDef",
+      "reads": [
+        "int"
+      ],
+      "writes": [
+        "n",
+        "prime_fib"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "n": [
+          "1"
+        ]
+      },
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "a, b = 0, 1",
+      "statement_type": "Assign",
+      "reads": [],
+      "writes": [
+        "a",
+        "b"
+      ],
+      "function_name": "prime_fib",
+      "executed": true,
+      "execution_count": 1,
+      "runtime_values": {
+        "n": [
+          "1"
+        ]
+      },
+      "failure_related": false
+    },
+    "3": {
+      "node_id": 3,
+      "line_number": 3,
+      "source_code": "for i in range(n):",
+      "statement_type": "For",
+      "reads": [
+        "n",
+        "range"
+      ],
+      "writes": [
+        "i"
+      ],
+      "function_name": "prime_fib",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "n": [
+          "1",
+          "1"
+        ],
+        "a": [
+          "0",
+          "1"
+        ],
+        "b": [
+          "1",
+          "1"
+        ],
+        "i": [
+          "0"
+        ]
+      },
+      "failure_related": false
+    },
+    "4": {
+      "node_id": 4,
+      "line_number": 4,
+      "source_code": "a, b = b, a + b",
+      "statement_type": "Assign",
+      "reads": [
+        "a",
+        "b"
+      ],
+      "writes": [
+        "a",
+        "b"
+      ],
+      "function_name": "prime_fib",
+      "executed": true,
+      "execution_count": 1,
+      "runtime_values": {
+        "n": [
+          "1"
+        ],
+        "a": [
+          "0"
+        ],
+        "b": [
+          "1"
+        ],
+        "i": [
+          "0"
+        ]
+      },
+      "failure_related": false
+    },
+    "5": {
+      "node_id": 5,
+      "line_number": 5,
+      "source_code": "return a",
+      "statement_type": "Return",
+      "reads": [
+        "a"
+      ],
+      "writes": [],
+      "function_name": "prime_fib",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "n": [
+          "1",
+          "1"
+        ],
+        "a": [
+          "1",
+          "1"
+        ],
+        "b": [
+          "1",
+          "1"
+        ],
+        "i": [
+          "0",
+          "0"
+        ]
+      },
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 3,
+      "dependency_type": "DATA",
+      "variable": "n",
+      "label": "DATA(n)"
+    },
+    {
+      "source_id": 2,
+      "target_id": 4,
+      "dependency_type": "DATA",
+      "variable": "a",
+      "label": "DATA(a)"
+    },
+    {
+      "source_id": 2,
+      "target_id": 4,
+      "dependency_type": "DATA",
+      "variable": "b",
+      "label": "DATA(b)"
+    },
+    {
+      "source_id": 4,
+      "target_id": 5,
+      "dependency_type": "DATA",
+      "variable": "a",
+      "label": "DATA(a)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 3,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 3,
+      "target_id": 4,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(For)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 5,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    5
+  ]
+}

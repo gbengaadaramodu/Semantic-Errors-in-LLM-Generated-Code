@@ -1,0 +1,61 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def check_consecutive(my_list):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "my_list",
+        "check_consecutive"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 1,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "return all(my_list[i+1] == my_list[i] + 1 for i in range(len(my_list)-1))",
+      "statement_type": "Return",
+      "reads": [
+        "all",
+        "i",
+        "len",
+        "my_list",
+        "range"
+      ],
+      "writes": [
+        "i"
+      ],
+      "function_name": "check_consecutive",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "my_list",
+      "label": "DATA(my_list)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    2
+  ]
+}

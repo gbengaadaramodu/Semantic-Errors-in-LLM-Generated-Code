@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a function to find the Eulerian number a(n, m).
+
+Example test: assert eulerian_num(3, 1) == 4
+[/INST]

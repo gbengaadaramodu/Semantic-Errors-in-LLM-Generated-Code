@@ -1,0 +1,11 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def is_bored(S): | W:S,is_bored", fillcolor="lightgreen"];
+    "2" [label="L2: return len([s for s in S.split('.') if s.startswith('I')]) | W:s | R:S,len,s", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(S)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

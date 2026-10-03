@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a python function to remove duplicate numbers from a given number of lists.
+
+Example test: assert two_unique_nums([1,2,3,2,3,4,5]) == [1, 4, 5]
+[/INST]

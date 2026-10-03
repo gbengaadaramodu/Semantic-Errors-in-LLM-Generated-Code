@@ -1,0 +1,237 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def find_sum(my_list):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "my_list",
+        "find_sum"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 1,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "seen = set()",
+      "statement_type": "Assign",
+      "reads": [
+        "set"
+      ],
+      "writes": [
+        "seen"
+      ],
+      "function_name": "find_sum",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "3": {
+      "node_id": 3,
+      "line_number": 3,
+      "source_code": "sum = 0",
+      "statement_type": "Assign",
+      "reads": [],
+      "writes": [
+        "sum"
+      ],
+      "function_name": "find_sum",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "4": {
+      "node_id": 4,
+      "line_number": 4,
+      "source_code": "for elem in my_list:",
+      "statement_type": "For",
+      "reads": [
+        "my_list"
+      ],
+      "writes": [
+        "elem"
+      ],
+      "function_name": "find_sum",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "5": {
+      "node_id": 5,
+      "line_number": 5,
+      "source_code": "if elem not in seen:",
+      "statement_type": "If",
+      "reads": [
+        "elem",
+        "seen"
+      ],
+      "writes": [],
+      "function_name": "find_sum",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "6": {
+      "node_id": 6,
+      "line_number": 6,
+      "source_code": "sum += elem",
+      "statement_type": "AugAssign",
+      "reads": [
+        "elem"
+      ],
+      "writes": [
+        "sum"
+      ],
+      "function_name": "find_sum",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "7": {
+      "node_id": 7,
+      "line_number": 7,
+      "source_code": "seen.add(elem)",
+      "statement_type": "Expr",
+      "reads": [
+        "elem",
+        "seen"
+      ],
+      "writes": [],
+      "function_name": "find_sum",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "8": {
+      "node_id": 8,
+      "line_number": 8,
+      "source_code": "return sum",
+      "statement_type": "Return",
+      "reads": [
+        "sum"
+      ],
+      "writes": [],
+      "function_name": "find_sum",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 4,
+      "dependency_type": "DATA",
+      "variable": "my_list",
+      "label": "DATA(my_list)"
+    },
+    {
+      "source_id": 4,
+      "target_id": 5,
+      "dependency_type": "DATA",
+      "variable": "elem",
+      "label": "DATA(elem)"
+    },
+    {
+      "source_id": 2,
+      "target_id": 5,
+      "dependency_type": "DATA",
+      "variable": "seen",
+      "label": "DATA(seen)"
+    },
+    {
+      "source_id": 4,
+      "target_id": 6,
+      "dependency_type": "DATA",
+      "variable": "elem",
+      "label": "DATA(elem)"
+    },
+    {
+      "source_id": 4,
+      "target_id": 7,
+      "dependency_type": "DATA",
+      "variable": "elem",
+      "label": "DATA(elem)"
+    },
+    {
+      "source_id": 2,
+      "target_id": 7,
+      "dependency_type": "DATA",
+      "variable": "seen",
+      "label": "DATA(seen)"
+    },
+    {
+      "source_id": 6,
+      "target_id": 8,
+      "dependency_type": "DATA",
+      "variable": "sum",
+      "label": "DATA(sum)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 3,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 4,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 4,
+      "target_id": 5,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(For)"
+    },
+    {
+      "source_id": 5,
+      "target_id": 6,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(If)"
+    },
+    {
+      "source_id": 5,
+      "target_id": 7,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(If)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 8,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    8
+  ]
+}

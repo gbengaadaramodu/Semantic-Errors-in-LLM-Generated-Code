@@ -1,0 +1,447 @@
+{
+  "trace_id": "HE143",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/72",
+  "error_category": "Wrong-Output Error",
+  "analysis_status": "ANALYZED",
+  "skip_reason": null,
+  "input_record": {
+    "trace_id": "HE143",
+    "dataset": "HumanEval",
+    "task_id": "HumanEval/72",
+    "problem_summary": "\ndef will_it_fly(q,w):\n    '''\n    Write a function that returns True if the obj",
+    "execution_status": "Failed",
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpm_kob_cg.py\", line 19, in <module>\n    check(will_it_fly)\n    ~~~~~^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpm_kob_cg.py\", line 14, in check\n    assert candidate([1, 2, 3], 6) is False\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+    "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpm_kob_cg.py\", line 19, in <module>\n    check(will_it_fly)\n    ~~~~~^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpm_kob_cg.py\", line 14, in check\n    assert candidate([1, 2, 3], 6) is False\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+    "exception_type": "AssertionError",
+    "exception_message": "",
+    "execution_time": 0.36408,
+    "timed_out": false,
+    "exit_code": 1,
+    "tests_passed": false,
+    "tests_failed": 0,
+    "expected_output": null,
+    "actual_output": null,
+    "assertion_source": "benchmark_test",
+    "assertion_failed": true,
+    "parser_prediction": "Wrong-Output Error"
+  },
+  "scm": {
+    "task_id": "HumanEval/72",
+    "nodes": [
+      {
+        "node_id": "S",
+        "variable_name": "Specification",
+        "symbol": "S",
+        "label": "Specification"
+      },
+      {
+        "node_id": "C",
+        "variable_name": "GeneratedCode",
+        "symbol": "C",
+        "label": "Generated Code"
+      },
+      {
+        "node_id": "E",
+        "variable_name": "ExecutionTrace",
+        "symbol": "E",
+        "label": "Execution Trace"
+      },
+      {
+        "node_id": "T",
+        "variable_name": "TestSuite",
+        "symbol": "T",
+        "label": "Test Suite"
+      },
+      {
+        "node_id": "O",
+        "variable_name": "Outcome",
+        "symbol": "O",
+        "label": "Outcome"
+      }
+    ],
+    "edges": [
+      {
+        "source": "S",
+        "target": "C",
+        "relationship": "generates"
+      },
+      {
+        "source": "C",
+        "target": "E",
+        "relationship": "produces"
+      },
+      {
+        "source": "T",
+        "target": "E",
+        "relationship": "evaluates"
+      },
+      {
+        "source": "E",
+        "target": "O",
+        "relationship": "determines"
+      }
+    ],
+    "variables": {
+      "S": {
+        "name": "Specification",
+        "symbol": "S",
+        "description": "Problem description, prompt, and target function signature",
+        "value": "\ndef will_it_fly(q,w):\n    '''\n    Write a function that returns True if the obj"
+      },
+      "C": {
+        "name": "GeneratedCode",
+        "symbol": "C",
+        "description": "LLM-generated Python source code implementation",
+        "value": "def will_it_fly(q, w):\n    return all(x <= w for x in q) and any(x == y for x, y in zip(q, reversed(q)))"
+      },
+      "E": {
+        "name": "ExecutionTrace",
+        "symbol": "E",
+        "description": "Observable runtime trace events, variable states, and stdout/stderr",
+        "value": "status=Failed, exc=AssertionError, msg="
+      },
+      "T": {
+        "name": "TestSuite",
+        "symbol": "T",
+        "description": "Benchmark assertions, inputs, and check function harness",
+        "value": "def check(candidate):\n\n    # Check some simple cases\n    assert candidate([3, 2, 3], 9) is True\n    "
+      },
+      "O": {
+        "name": "Outcome",
+        "symbol": "O",
+        "description": "Final test execution outcome (Completed/Failed/Timeout)",
+        "value": "Failed"
+      }
+    }
+  },
+  "pdg": {
+    "nodes": {
+      "1": {
+        "node_id": 1,
+        "line_number": 1,
+        "source_code": "def will_it_fly(q, w):",
+        "statement_type": "FunctionDef",
+        "reads": [],
+        "writes": [
+          "q",
+          "w",
+          "will_it_fly"
+        ],
+        "function_name": "<module>",
+        "executed": true,
+        "execution_count": 6,
+        "runtime_values": {
+          "q": [
+            "[3, 2, 3]",
+            "[1, 2]",
+            "[3]",
+            "[3, 2, 3]",
+            "[1, 2, 3]"
+          ],
+          "w": [
+            "9",
+            "5",
+            "5",
+            "1",
+            "6"
+          ]
+        },
+        "failure_related": false
+      },
+      "2": {
+        "node_id": 2,
+        "line_number": 2,
+        "source_code": "return all(x <= w for x in q) and any(x == y for x, y in zip(q, reversed(q)))",
+        "statement_type": "Return",
+        "reads": [
+          "all",
+          "any",
+          "q",
+          "reversed",
+          "w",
+          "x",
+          "y",
+          "zip"
+        ],
+        "writes": [
+          "x",
+          "y"
+        ],
+        "function_name": "will_it_fly",
+        "executed": true,
+        "execution_count": 73,
+        "runtime_values": {
+          "q": [
+            "[3, 2, 3]",
+            "[3, 2, 3]",
+            "[1, 2]",
+            "[1, 2]",
+            "[3]",
+            "[3]",
+            "[3, 2, 3]",
+            "[3, 2, 3]",
+            "[1, 2, 3]",
+            "[1, 2, 3]"
+          ],
+          "w": [
+            "9",
+            "9",
+            "9",
+            "9",
+            "9",
+            "9",
+            "9",
+            "9",
+            "9",
+            "9",
+            "9",
+            "9",
+            "9",
+            "9",
+            "5",
+            "5",
+            "5",
+            "5",
+            "5",
+            "5",
+            "5",
+            "5",
+            "5",
+            "5",
+            "5",
+            "5",
+            "5",
+            "5",
+            "5",
+            "5",
+            "5",
+            "5",
+            "5",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "6",
+            "6",
+            "6",
+            "6",
+            "6",
+            "6",
+            "6",
+            "6",
+            "6",
+            "6",
+            "6",
+            "6"
+          ],
+          ".0": [
+            "<list_iterator object at 0x0000022B6B8281F0>",
+            "<list_iterator object at 0x0000022B6B8281F0>",
+            "<list_iterator object at 0x0000022B6B8281F0>",
+            "<list_iterator object at 0x0000022B6B8281F0>",
+            "<list_iterator object at 0x0000022B6B8281F0>",
+            "<list_iterator object at 0x0000022B6B8281F0>",
+            "<list_iterator object at 0x0000022B6B8281F0>",
+            "<list_iterator object at 0x0000022B6B8281F0>",
+            "<list_iterator object at 0x0000022B6B8281F0>",
+            "<list_iterator object at 0x0000022B6B8281F0>",
+            "<list_iterator object at 0x0000022B6B8281F0>",
+            "<list_iterator object at 0x0000022B6B8281F0>",
+            "<zip object at 0x0000022B6C763C00>",
+            "<zip object at 0x0000022B6C763C00>",
+            "<zip object at 0x0000022B6C763C00>",
+            "<list_iterator object at 0x0000022B6B8281F0>",
+            "<list_iterator object at 0x0000022B6B8281F0>",
+            "<list_iterator object at 0x0000022B6B8281F0>",
+            "<list_iterator object at 0x0000022B6B8281F0>",
+            "<list_iterator object at 0x0000022B6B8281F0>",
+            "<list_iterator object at 0x0000022B6B8281F0>",
+            "<list_iterator object at 0x0000022B6B8281F0>",
+            "<list_iterator object at 0x0000022B6B8281F0>",
+            "<list_iterator object at 0x0000022B6B8281F0>",
+            "<zip object at 0x0000022B6C7836C0>",
+            "<zip object at 0x0000022B6C7836C0>",
+            "<zip object at 0x0000022B6C7836C0>",
+            "<zip object at 0x0000022B6C7836C0>",
+            "<zip object at 0x0000022B6C7836C0>",
+            "<zip object at 0x0000022B6C7836C0>",
+            "<zip object at 0x0000022B6C7836C0>",
+            "<zip object at 0x0000022B6C7836C0>",
+            "<zip object at 0x0000022B6C7836C0>",
+            "<list_iterator object at 0x0000022B6B8281F0>",
+            "<list_iterator object at 0x0000022B6B8281F0>",
+            "<list_iterator object at 0x0000022B6B8281F0>",
+            "<list_iterator object at 0x0000022B6B8281F0>",
+            "<list_iterator object at 0x0000022B6B8281F0>",
+            "<list_iterator object at 0x0000022B6B8281F0>",
+            "<zip object at 0x0000022B6C7812C0>",
+            "<zip object at 0x0000022B6C7812C0>",
+            "<zip object at 0x0000022B6C7812C0>",
+            "<list_iterator object at 0x0000022B6B8281F0>",
+            "<list_iterator object at 0x0000022B6B8281F0>",
+            "<list_iterator object at 0x0000022B6B8281F0>",
+            "<list_iterator object at 0x0000022B6B8281F0>",
+            "<list_iterator object at 0x0000022B6B8281F0>",
+            "<list_iterator object at 0x0000022B6B8281F0>",
+            "<list_iterator object at 0x0000022B6B8281F0>",
+            "<list_iterator object at 0x0000022B6B8281F0>"
+          ],
+          "x": [
+            "3",
+            "3",
+            "3",
+            "2",
+            "2",
+            "2",
+            "3",
+            "3",
+            "3",
+            "3",
+            "3",
+            "1",
+            "1",
+            "1",
+            "2",
+            "2",
+            "2",
+            "2",
+            "1",
+            "1",
+            "1",
+            "2",
+            "2",
+            "2",
+            "2",
+            "3",
+            "3",
+            "3",
+            "3",
+            "3",
+            "3",
+            "1",
+            "1",
+            "1",
+            "2",
+            "2",
+            "2",
+            "3",
+            "3",
+            "3",
+            "3",
+            "1",
+            "1",
+            "1",
+            "2"
+          ],
+          "y": [
+            "3",
+            "2",
+            "2",
+            "2",
+            "1",
+            "1",
+            "1",
+            "1",
+            "3",
+            "3",
+            "3",
+            "3",
+            "2"
+          ]
+        },
+        "failure_related": true
+      }
+    },
+    "edges": [
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "DATA",
+        "variable": "q",
+        "label": "DATA(q)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "DATA",
+        "variable": "w",
+        "label": "DATA(w)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      }
+    ],
+    "entry_node_id": 1,
+    "failure_node_ids": [
+      2
+    ]
+  },
+  "runtime_events_count": 92,
+  "failure_line": 2,
+  "failure_statement": "return all(x <= w for x in q) and any(x == y for x, y in zip(q, reversed(q)))",
+  "candidates": [
+    {
+      "rank": 1,
+      "node_id": 2,
+      "line_number": 2,
+      "statement_code": "return all(x <= w for x in q) and any(x == y for x, y in zip(q, reversed(q)))",
+      "variable_name": "x",
+      "observed_value": "2",
+      "expected_value": "False",
+      "proximity_score": 1.0,
+      "dependency_score": 1.0,
+      "explanation": "Reached via reverse traversal (distance=0, type=Return)"
+    }
+  ],
+  "critical_variable": null,
+  "counterfactual_results": [
+    {
+      "candidate_rank": 1,
+      "intervention": {
+        "target_variable": "x",
+        "target_line": 2,
+        "observed_value": "2",
+        "counterfactual_value": "False",
+        "operation_type": "AST_transform",
+        "modified_code": "def will_it_fly(q, w):\n    return all((x > w for x in q)) and any((x != y for x, y in zip(q, reversed(q))))"
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "Completed",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "TRUE",
+      "execution_time": 0.1433,
+      "status": "EXECUTED",
+      "explanation": "Intervention successfully flipped execution outcome from FAIL to PASS."
+    }
+  ],
+  "fault_location": {
+    "file": "HE143.py",
+    "line_number": 2,
+    "statement_code": "return all(x <= w for x in q) and any(x == y for x, y in zip(q, reversed(q)))",
+    "function_name": "will_it_fly",
+    "causal_variable": "x",
+    "evidence_score": 3.0,
+    "confidence": 0.95
+  },
+  "root_cause": {
+    "root_cause_status": "VALIDATED",
+    "candidate_explanation": "Incorrect state computation at line 2 ('return all(x <= w for x in q) and any(x == y for x, y in zip(q, reversed(q)))') produces invalid variable state for 'x'.",
+    "causal_variable": "x",
+    "fault_statement": "return all(x <= w for x in q) and any(x == y for x, y in zip(q, reversed(q)))",
+    "fault_line": 2,
+    "evidence_summary": "Reverse PDG traversal traced failure from line 1 to statement line 2. Counterfactual intervention do(x = expected) successfully restored PASS state.",
+    "counterfactual_validated": true,
+    "confidence": 0.95
+  },
+  "ground_truth_matched": null,
+  "ground_truth_fault_line": null,
+  "execution_time": 0.157
+}

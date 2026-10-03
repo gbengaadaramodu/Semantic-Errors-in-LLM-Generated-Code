@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a function to calculate the value of 'a' to the power 'b'.
+
+Example test: assert power(3,4) == 81
+[/INST]

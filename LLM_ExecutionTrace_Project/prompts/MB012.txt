@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a python function to identify non-prime numbers.
+
+Example test: assert is_not_prime(2) == False
+[/INST]

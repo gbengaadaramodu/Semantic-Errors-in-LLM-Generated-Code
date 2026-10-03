@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a function to convert a date of yyyy-mm-dd format to dd-mm-yyyy format.
+
+Example test: assert change_date_format("2026-01-02") == '02-01-2026'
+[/INST]

@@ -1,0 +1,65 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def string_to_tuple(my_string):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "my_string",
+        "string_to_tuple"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "my_string": [
+          "python 3.0"
+        ]
+      },
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "return tuple(my_string)",
+      "statement_type": "Return",
+      "reads": [
+        "my_string",
+        "tuple"
+      ],
+      "writes": [],
+      "function_name": "string_to_tuple",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "my_string": [
+          "python 3.0",
+          "python 3.0"
+        ]
+      },
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "my_string",
+      "label": "DATA(my_string)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    2
+  ]
+}

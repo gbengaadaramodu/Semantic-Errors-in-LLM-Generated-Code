@@ -1,0 +1,72 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def find_odd_pair(arr, k):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "arr",
+        "k",
+        "find_odd_pair"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 1,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "return sum(1 for i in range(len(arr)) for j in range(i+1, len(arr)) if (arr[i] ^ arr[j]) % k == 0)",
+      "statement_type": "Return",
+      "reads": [
+        "arr",
+        "i",
+        "j",
+        "k",
+        "len",
+        "range",
+        "sum"
+      ],
+      "writes": [
+        "i",
+        "j"
+      ],
+      "function_name": "find_odd_pair",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "arr",
+      "label": "DATA(arr)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "k",
+      "label": "DATA(k)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    2
+  ]
+}

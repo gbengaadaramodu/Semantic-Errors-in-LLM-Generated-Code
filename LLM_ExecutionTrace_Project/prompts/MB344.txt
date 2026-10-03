@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a function to convert tuple string to integer tuple.
+
+Example test: assert tuple_str_int("(7, 8, 9)") == (7, 8, 9)
+[/INST]

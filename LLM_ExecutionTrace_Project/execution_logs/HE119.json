@@ -1,0 +1,22 @@
+{
+  "trace_id": "HE119",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/65",
+  "problem_summary": "\ndef circular_shift(x, shift):\n    \"\"\"Circular shift the digits of the integer x",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpzgkltd61.py\", line 19, in <module>\n    check(circular_shift)\n    ~~~~~^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpzgkltd61.py\", line 9, in check\n    assert candidate(100, 2) == \"001\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpzgkltd61.py\", line 19, in <module>\n    check(circular_shift)\n    ~~~~~^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpzgkltd61.py\", line 9, in check\n    assert candidate(100, 2) == \"001\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+  "exception_type": "AssertionError",
+  "exception_message": "",
+  "execution_time": 0.322405,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": "benchmark_test",
+  "assertion_failed": true,
+  "parser_prediction": ""
+}

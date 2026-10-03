@@ -1,0 +1,11 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def multiply_elements(my_tuple): | W:my_tuple,multiply_elements", fillcolor="lightgreen"];
+    "2" [label="L2: return tuple(x * y for x, y in zip(my_tuple, my_tuple[1:])) | W:x,y | R:my_tuple,tuple,x,y,zip", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(my_tuple)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

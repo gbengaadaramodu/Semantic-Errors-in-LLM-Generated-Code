@@ -1,0 +1,40 @@
+[
+  {
+    "candidate_rank": 1,
+    "intervention": {
+      "target_variable": "element",
+      "target_line": 9,
+      "observed_value": "None",
+      "counterfactual_value": "False",
+      "operation_type": "AST_transform",
+      "modified_code": "def is_majority(sorted_array, n, element):\n    if sorted_array[n//2] == element:\n        return True\n    if n % 2 == 0:\n        return False\n    if element > sorted_array[n//2]:\n        return is_majority(sorted_array, n//2, element)\n    else:\n        element = False\n        return is_majority(sorted_array, n//2+1, element)"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.2518,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  },
+  {
+    "candidate_rank": 2,
+    "intervention": {
+      "target_variable": "element",
+      "target_line": 6,
+      "observed_value": "None",
+      "counterfactual_value": "None",
+      "operation_type": "AST_transform",
+      "modified_code": "def is_majority(sorted_array, n, element):\n    if sorted_array[n // 2] == element:\n        return True\n    if n % 2 == 0:\n        return False\n    if element <= sorted_array[n // 2]:\n        return is_majority(sorted_array, n // 2, element)\n    else:\n        return is_majority(sorted_array, n // 2 + 1, element)"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.2634,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  }
+]

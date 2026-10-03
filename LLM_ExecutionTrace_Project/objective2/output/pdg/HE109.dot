@@ -1,0 +1,15 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def exchange(lst1, lst2): | W:lst1,lst2,exchange", fillcolor="lightgreen"];
+    "2" [label="L2: if all(i % 2 == 0 for i in lst1): | W:i | R:all,i,lst1", fillcolor="lightgreen"];
+    "3" [label="L3: return \"YES\"", fillcolor="lightgrey"];
+    "4" [label="L5: return \"NO\"", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(lst1)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "2" -> "3" [label="CONTROL(If)", style="dashed"];
+    "2" -> "4" [label="CONTROL(If)", style="dashed"];
+}

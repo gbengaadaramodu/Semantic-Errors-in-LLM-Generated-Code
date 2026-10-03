@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB103",
+  "dataset": "MBPP",
+  "task_id": "96",
+  "problem_summary": "Write a python function to find the number of divisors of a given integer.",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp6jqcig17.py\", line 4, in <module>\n    assert divisor(15) == 4\n           ^^^^^^^\nNameError: name 'divisor' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp6jqcig17.py\", line 4, in <module>\n    assert divisor(15) == 4\n           ^^^^^^^\nNameError: name 'divisor' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'divisor' is not defined",
+  "execution_time": 0.192647,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

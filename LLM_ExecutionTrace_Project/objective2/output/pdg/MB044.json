@@ -1,0 +1,194 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def find_adverbs(text):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "text",
+        "find_adverbs"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 1,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "adverbs = []",
+      "statement_type": "Assign",
+      "reads": [],
+      "writes": [
+        "adverbs"
+      ],
+      "function_name": "find_adverbs",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "3": {
+      "node_id": 3,
+      "line_number": 3,
+      "source_code": "for match in re.finditer(r'\\b\\w+ly\\b', text):",
+      "statement_type": "For",
+      "reads": [
+        "re",
+        "text"
+      ],
+      "writes": [
+        "match"
+      ],
+      "function_name": "find_adverbs",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "4": {
+      "node_id": 4,
+      "line_number": 4,
+      "source_code": "start, end = match.span()",
+      "statement_type": "Assign",
+      "reads": [
+        "match"
+      ],
+      "writes": [
+        "end",
+        "start"
+      ],
+      "function_name": "find_adverbs",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "5": {
+      "node_id": 5,
+      "line_number": 5,
+      "source_code": "adverbs.append(f'{start}-{end}: {match.group()}')",
+      "statement_type": "Expr",
+      "reads": [
+        "adverbs",
+        "end",
+        "match",
+        "start"
+      ],
+      "writes": [],
+      "function_name": "find_adverbs",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "6": {
+      "node_id": 6,
+      "line_number": 6,
+      "source_code": "return ', '.join(adverbs)",
+      "statement_type": "Return",
+      "reads": [
+        "adverbs"
+      ],
+      "writes": [],
+      "function_name": "find_adverbs",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 3,
+      "dependency_type": "DATA",
+      "variable": "text",
+      "label": "DATA(text)"
+    },
+    {
+      "source_id": 3,
+      "target_id": 4,
+      "dependency_type": "DATA",
+      "variable": "match",
+      "label": "DATA(match)"
+    },
+    {
+      "source_id": 2,
+      "target_id": 5,
+      "dependency_type": "DATA",
+      "variable": "adverbs",
+      "label": "DATA(adverbs)"
+    },
+    {
+      "source_id": 4,
+      "target_id": 5,
+      "dependency_type": "DATA",
+      "variable": "end",
+      "label": "DATA(end)"
+    },
+    {
+      "source_id": 3,
+      "target_id": 5,
+      "dependency_type": "DATA",
+      "variable": "match",
+      "label": "DATA(match)"
+    },
+    {
+      "source_id": 4,
+      "target_id": 5,
+      "dependency_type": "DATA",
+      "variable": "start",
+      "label": "DATA(start)"
+    },
+    {
+      "source_id": 2,
+      "target_id": 6,
+      "dependency_type": "DATA",
+      "variable": "adverbs",
+      "label": "DATA(adverbs)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 3,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 3,
+      "target_id": 4,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(For)"
+    },
+    {
+      "source_id": 3,
+      "target_id": 5,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(For)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 6,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    6
+  ]
+}

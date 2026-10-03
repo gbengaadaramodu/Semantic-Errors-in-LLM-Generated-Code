@@ -1,0 +1,17 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def sector_area(radius, angle): | W:angle,radius,sector_area", fillcolor="lightgreen"];
+    "2" [label="L2: if angle > 360: | R:angle", fillcolor="lightgreen"];
+    "3" [label="L3: return None", fillcolor="lightgrey"];
+    "4" [label="L5: return (angle / 360) * (2 * math.pi * radius**2) | R:angle,math,radius", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(angle)", style="solid"];
+    "1" -> "4" [label="DATA(angle)", style="solid"];
+    "1" -> "4" [label="DATA(radius)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "2" -> "3" [label="CONTROL(If)", style="dashed"];
+    "2" -> "4" [label="CONTROL(If)", style="dashed"];
+}

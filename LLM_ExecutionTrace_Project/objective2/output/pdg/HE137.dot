@@ -1,0 +1,27 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def move_one_ball(arr): | W:arr,move_one_ball", fillcolor="lightgreen"];
+    "2" [label="L2: if not arr: | R:arr", fillcolor="lightgreen"];
+    "3" [label="L3: return True", fillcolor="lightgrey"];
+    "4" [label="L4: arr.sort() | R:arr", fillcolor="lightgreen"];
+    "5" [label="L5: for i in range(len(arr)-1): | W:i | R:arr,len,range", fillcolor="lightgreen"];
+    "6" [label="L6: if arr[i] > arr[i+1]: | R:arr,i", fillcolor="lightgreen"];
+    "7" [label="L7: return False", fillcolor="lightgrey"];
+    "8" [label="L8: return True", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(arr)", style="solid"];
+    "1" -> "4" [label="DATA(arr)", style="solid"];
+    "1" -> "5" [label="DATA(arr)", style="solid"];
+    "1" -> "6" [label="DATA(arr)", style="solid"];
+    "5" -> "6" [label="DATA(i)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "2" -> "3" [label="CONTROL(If)", style="dashed"];
+    "1" -> "4" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "5" [label="CONTROL(FunctionDef)", style="dashed"];
+    "5" -> "6" [label="CONTROL(For)", style="dashed"];
+    "6" -> "7" [label="CONTROL(If)", style="dashed"];
+    "1" -> "8" [label="CONTROL(FunctionDef)", style="dashed"];
+}

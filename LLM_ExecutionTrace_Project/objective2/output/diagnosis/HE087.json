@@ -1,0 +1,522 @@
+{
+  "trace_id": "HE087",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/89",
+  "error_category": "Wrong-Output Error",
+  "analysis_status": "ANALYZED",
+  "skip_reason": null,
+  "input_record": {
+    "trace_id": "HE087",
+    "dataset": "HumanEval",
+    "task_id": "HumanEval/89",
+    "problem_summary": "\ndef encrypt(s):\n    \"\"\"Create a function encrypt that takes a string as an argu",
+    "execution_status": "Failed",
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpnyo3xa1v.py\", line 33, in <module>\n    check(encrypt)\n    ~~~~~^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpnyo3xa1v.py\", line 19, in check\n    assert candidate('hi') == 'lm', \"This prints if this assert fails 1 (good for debugging!)\"\n           ^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: This prints if this assert fails 1 (good for debugging!)\n",
+    "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpnyo3xa1v.py\", line 33, in <module>\n    check(encrypt)\n    ~~~~~^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpnyo3xa1v.py\", line 19, in check\n    assert candidate('hi') == 'lm', \"This prints if this assert fails 1 (good for debugging!)\"\n           ^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: This prints if this assert fails 1 (good for debugging!)",
+    "exception_type": "AssertionError",
+    "exception_message": "This prints if this assert fails 1 (good for debugging!)",
+    "execution_time": 0.204039,
+    "timed_out": false,
+    "exit_code": 1,
+    "tests_passed": false,
+    "tests_failed": 0,
+    "expected_output": null,
+    "actual_output": null,
+    "assertion_source": "benchmark_test",
+    "assertion_failed": true,
+    "parser_prediction": "Wrong-Output Error"
+  },
+  "scm": {
+    "task_id": "HumanEval/89",
+    "nodes": [
+      {
+        "node_id": "S",
+        "variable_name": "Specification",
+        "symbol": "S",
+        "label": "Specification"
+      },
+      {
+        "node_id": "C",
+        "variable_name": "GeneratedCode",
+        "symbol": "C",
+        "label": "Generated Code"
+      },
+      {
+        "node_id": "E",
+        "variable_name": "ExecutionTrace",
+        "symbol": "E",
+        "label": "Execution Trace"
+      },
+      {
+        "node_id": "T",
+        "variable_name": "TestSuite",
+        "symbol": "T",
+        "label": "Test Suite"
+      },
+      {
+        "node_id": "O",
+        "variable_name": "Outcome",
+        "symbol": "O",
+        "label": "Outcome"
+      }
+    ],
+    "edges": [
+      {
+        "source": "S",
+        "target": "C",
+        "relationship": "generates"
+      },
+      {
+        "source": "C",
+        "target": "E",
+        "relationship": "produces"
+      },
+      {
+        "source": "T",
+        "target": "E",
+        "relationship": "evaluates"
+      },
+      {
+        "source": "E",
+        "target": "O",
+        "relationship": "determines"
+      }
+    ],
+    "variables": {
+      "S": {
+        "name": "Specification",
+        "symbol": "S",
+        "description": "Problem description, prompt, and target function signature",
+        "value": "\ndef encrypt(s):\n    \"\"\"Create a function encrypt that takes a string as an argu"
+      },
+      "C": {
+        "name": "GeneratedCode",
+        "symbol": "C",
+        "description": "LLM-generated Python source code implementation",
+        "value": "def encrypt(s):\n    # Create a new string to store the encrypted text\n    encrypted_text = \"\"\n\n    # Iterate through each character in the input string\n    for char in s:\n        # Rotate the characte"
+      },
+      "E": {
+        "name": "ExecutionTrace",
+        "symbol": "E",
+        "description": "Observable runtime trace events, variable states, and stdout/stderr",
+        "value": "status=Failed, exc=AssertionError, msg=This prints if this assert fails 1 (good for debugging!)"
+      },
+      "T": {
+        "name": "TestSuite",
+        "symbol": "T",
+        "description": "Benchmark assertions, inputs, and check function harness",
+        "value": "def check(candidate):\n\n    # Check some simple cases\n    assert candidate('hi') == 'lm', \"This print"
+      },
+      "O": {
+        "name": "Outcome",
+        "symbol": "O",
+        "description": "Final test execution outcome (Completed/Failed/Timeout)",
+        "value": "Failed"
+      }
+    }
+  },
+  "pdg": {
+    "nodes": {
+      "1": {
+        "node_id": 1,
+        "line_number": 1,
+        "source_code": "def encrypt(s):",
+        "statement_type": "FunctionDef",
+        "reads": [],
+        "writes": [
+          "s",
+          "encrypt"
+        ],
+        "function_name": "<module>",
+        "executed": true,
+        "execution_count": 2,
+        "runtime_values": {
+          "s": [
+            "hi"
+          ]
+        },
+        "failure_related": false
+      },
+      "2": {
+        "node_id": 2,
+        "line_number": 3,
+        "source_code": "encrypted_text = \"\"",
+        "statement_type": "Assign",
+        "reads": [],
+        "writes": [
+          "encrypted_text"
+        ],
+        "function_name": "encrypt",
+        "executed": true,
+        "execution_count": 1,
+        "runtime_values": {
+          "s": [
+            "hi"
+          ]
+        },
+        "failure_related": false
+      },
+      "3": {
+        "node_id": 3,
+        "line_number": 6,
+        "source_code": "for char in s:",
+        "statement_type": "For",
+        "reads": [
+          "s"
+        ],
+        "writes": [
+          "char"
+        ],
+        "function_name": "encrypt",
+        "executed": true,
+        "execution_count": 3,
+        "runtime_values": {
+          "s": [
+            "hi",
+            "hi",
+            "hi"
+          ],
+          "encrypted_text": [
+            "",
+            "j",
+            "jk"
+          ],
+          "char": [
+            "h",
+            "i"
+          ],
+          "rotated_char": [
+            "j",
+            "k"
+          ]
+        },
+        "failure_related": false
+      },
+      "4": {
+        "node_id": 4,
+        "line_number": 8,
+        "source_code": "rotated_char = chr((ord(char) - 97 + 2) % 26 + 97)",
+        "statement_type": "Assign",
+        "reads": [
+          "char",
+          "chr",
+          "ord"
+        ],
+        "writes": [
+          "rotated_char"
+        ],
+        "function_name": "encrypt",
+        "executed": true,
+        "execution_count": 2,
+        "runtime_values": {
+          "s": [
+            "hi",
+            "hi"
+          ],
+          "encrypted_text": [
+            "",
+            "j"
+          ],
+          "char": [
+            "h",
+            "i"
+          ],
+          "rotated_char": [
+            "j"
+          ]
+        },
+        "failure_related": false
+      },
+      "5": {
+        "node_id": 5,
+        "line_number": 11,
+        "source_code": "encrypted_text += rotated_char",
+        "statement_type": "AugAssign",
+        "reads": [
+          "rotated_char"
+        ],
+        "writes": [
+          "encrypted_text"
+        ],
+        "function_name": "encrypt",
+        "executed": true,
+        "execution_count": 2,
+        "runtime_values": {
+          "s": [
+            "hi",
+            "hi"
+          ],
+          "encrypted_text": [
+            "",
+            "j"
+          ],
+          "char": [
+            "h",
+            "i"
+          ],
+          "rotated_char": [
+            "j",
+            "k"
+          ]
+        },
+        "failure_related": false
+      },
+      "6": {
+        "node_id": 6,
+        "line_number": 14,
+        "source_code": "return encrypted_text",
+        "statement_type": "Return",
+        "reads": [
+          "encrypted_text"
+        ],
+        "writes": [],
+        "function_name": "encrypt",
+        "executed": true,
+        "execution_count": 2,
+        "runtime_values": {
+          "s": [
+            "hi",
+            "hi"
+          ],
+          "encrypted_text": [
+            "jk",
+            "jk"
+          ],
+          "char": [
+            "i",
+            "i"
+          ],
+          "rotated_char": [
+            "k",
+            "k"
+          ]
+        },
+        "failure_related": true
+      }
+    },
+    "edges": [
+      {
+        "source_id": 1,
+        "target_id": 3,
+        "dependency_type": "DATA",
+        "variable": "s",
+        "label": "DATA(s)"
+      },
+      {
+        "source_id": 3,
+        "target_id": 4,
+        "dependency_type": "DATA",
+        "variable": "char",
+        "label": "DATA(char)"
+      },
+      {
+        "source_id": 4,
+        "target_id": 5,
+        "dependency_type": "DATA",
+        "variable": "rotated_char",
+        "label": "DATA(rotated_char)"
+      },
+      {
+        "source_id": 5,
+        "target_id": 6,
+        "dependency_type": "DATA",
+        "variable": "encrypted_text",
+        "label": "DATA(encrypted_text)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 3,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 3,
+        "target_id": 4,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(For)"
+      },
+      {
+        "source_id": 3,
+        "target_id": 5,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(For)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 6,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      }
+    ],
+    "entry_node_id": 1,
+    "failure_node_ids": [
+      6
+    ]
+  },
+  "runtime_events_count": 21,
+  "failure_line": 14,
+  "failure_statement": "return encrypted_text",
+  "candidates": [
+    {
+      "rank": 1,
+      "node_id": 6,
+      "line_number": 14,
+      "statement_code": "return encrypted_text",
+      "variable_name": "encrypted_text",
+      "observed_value": "jk",
+      "expected_value": "lm",
+      "proximity_score": 1.0,
+      "dependency_score": 1.0,
+      "explanation": "Reached via reverse traversal (distance=0, type=Return)"
+    },
+    {
+      "rank": 2,
+      "node_id": 5,
+      "line_number": 11,
+      "statement_code": "encrypted_text += rotated_char",
+      "variable_name": "encrypted_text",
+      "observed_value": "j",
+      "expected_value": null,
+      "proximity_score": 0.85,
+      "dependency_score": 0.9,
+      "explanation": "Reached via reverse traversal (distance=1, type=AugAssign)"
+    },
+    {
+      "rank": 3,
+      "node_id": 3,
+      "line_number": 6,
+      "statement_code": "for char in s:",
+      "variable_name": "char",
+      "observed_value": "i",
+      "expected_value": null,
+      "proximity_score": 0.7,
+      "dependency_score": 0.63,
+      "explanation": "Reached via reverse traversal (distance=2, type=For)"
+    },
+    {
+      "rank": 4,
+      "node_id": 4,
+      "line_number": 8,
+      "statement_code": "rotated_char = chr((ord(char) - 97 + 2) % 26 + 97)",
+      "variable_name": "rotated_char",
+      "observed_value": "j",
+      "expected_value": null,
+      "proximity_score": 0.7,
+      "dependency_score": 0.81,
+      "explanation": "Reached via reverse traversal (distance=2, type=Assign)"
+    }
+  ],
+  "critical_variable": null,
+  "counterfactual_results": [
+    {
+      "candidate_rank": 1,
+      "intervention": {
+        "target_variable": "encrypted_text",
+        "target_line": 14,
+        "observed_value": "jk",
+        "counterfactual_value": "lm",
+        "operation_type": "AST_transform",
+        "modified_code": "def encrypt(s):\n    encrypted_text = ''\n    for char in s:\n        rotated_char = chr((ord(char) - 97 + 2) % 26 + 97)\n        encrypted_text += rotated_char\n    return 'lm'"
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "Completed",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "TRUE",
+      "execution_time": 0.1239,
+      "status": "EXECUTED",
+      "explanation": "Intervention successfully flipped execution outcome from FAIL to PASS."
+    },
+    {
+      "candidate_rank": 2,
+      "intervention": {
+        "target_variable": "encrypted_text",
+        "target_line": 11,
+        "observed_value": "j",
+        "counterfactual_value": "None",
+        "operation_type": "failed_construction",
+        "modified_code": ""
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "FAILED_CONSTRUCTION",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "UNRESOLVED",
+      "execution_time": 0.0,
+      "status": "UNRESOLVED",
+      "explanation": "Failed to construct valid AST counterfactual intervention."
+    },
+    {
+      "candidate_rank": 3,
+      "intervention": {
+        "target_variable": "rotated_char",
+        "target_line": 8,
+        "observed_value": "j",
+        "counterfactual_value": "None",
+        "operation_type": "AST_transform",
+        "modified_code": "def encrypt(s):\n    encrypted_text = ''\n    for char in s:\n        rotated_char = None\n        encrypted_text += rotated_char\n    return encrypted_text"
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "Failed",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "FALSE",
+      "execution_time": 0.256,
+      "status": "EXECUTED",
+      "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+    },
+    {
+      "candidate_rank": 4,
+      "intervention": {
+        "target_variable": "char",
+        "target_line": 6,
+        "observed_value": "i",
+        "counterfactual_value": "None",
+        "operation_type": "failed_construction",
+        "modified_code": ""
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "FAILED_CONSTRUCTION",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "UNRESOLVED",
+      "execution_time": 0.0,
+      "status": "UNRESOLVED",
+      "explanation": "Failed to construct valid AST counterfactual intervention."
+    }
+  ],
+  "fault_location": {
+    "file": "HE087.py",
+    "line_number": 14,
+    "statement_code": "return encrypted_text",
+    "function_name": "encrypt",
+    "causal_variable": "encrypted_text",
+    "evidence_score": 3.0,
+    "confidence": 0.95
+  },
+  "root_cause": {
+    "root_cause_status": "VALIDATED",
+    "candidate_explanation": "Semantic mismatch at line 14 ('return encrypted_text') causes return value mismatch.",
+    "causal_variable": "encrypted_text",
+    "fault_statement": "return encrypted_text",
+    "fault_line": 14,
+    "evidence_summary": "Reverse PDG traversal traced failure from line 1 to statement line 14. Counterfactual intervention do(encrypted_text = expected) successfully restored PASS state.",
+    "counterfactual_validated": true,
+    "confidence": 0.95
+  },
+  "ground_truth_matched": null,
+  "ground_truth_fault_line": null,
+  "execution_time": 0.3956
+}

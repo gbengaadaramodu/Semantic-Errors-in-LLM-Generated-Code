@@ -1,0 +1,22 @@
+{
+  "trace_id": "HE080",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/34",
+  "problem_summary": "\n\ndef unique(l: list):\n    \"\"\"Return sorted unique elements in a list\n    >>> un",
+  "execution_status": "Completed",
+  "stdout": "",
+  "stderr": "",
+  "traceback": "",
+  "exception_type": "",
+  "exception_message": "",
+  "execution_time": 0.129049,
+  "timed_out": false,
+  "exit_code": 0,
+  "tests_passed": true,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

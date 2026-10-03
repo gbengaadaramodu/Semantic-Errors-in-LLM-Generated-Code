@@ -1,0 +1,248 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def find_kth(arr1, arr2, k):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "arr1",
+        "arr2",
+        "k",
+        "find_kth"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "arr1": [
+          "[2, 3, 6, 7, 9]"
+        ],
+        "arr2": [
+          "[1, 4, 8, 10]"
+        ],
+        "k": [
+          "5"
+        ]
+      },
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "if len(arr1) > k - 1:",
+      "statement_type": "If",
+      "reads": [
+        "arr1",
+        "k",
+        "len"
+      ],
+      "writes": [],
+      "function_name": "find_kth",
+      "executed": true,
+      "execution_count": 1,
+      "runtime_values": {
+        "arr1": [
+          "[2, 3, 6, 7, 9]"
+        ],
+        "arr2": [
+          "[1, 4, 8, 10]"
+        ],
+        "k": [
+          "5"
+        ]
+      },
+      "failure_related": false
+    },
+    "3": {
+      "node_id": 3,
+      "line_number": 3,
+      "source_code": "return arr1[k - 1]",
+      "statement_type": "Return",
+      "reads": [
+        "arr1",
+        "k"
+      ],
+      "writes": [],
+      "function_name": "find_kth",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "arr1": [
+          "[2, 3, 6, 7, 9]",
+          "[2, 3, 6, 7, 9]"
+        ],
+        "arr2": [
+          "[1, 4, 8, 10]",
+          "[1, 4, 8, 10]"
+        ],
+        "k": [
+          "5",
+          "5"
+        ]
+      },
+      "failure_related": false
+    },
+    "4": {
+      "node_id": 4,
+      "line_number": 4,
+      "source_code": "elif len(arr2) > k - len(arr1) - 1:",
+      "statement_type": "If",
+      "reads": [
+        "arr1",
+        "arr2",
+        "k",
+        "len"
+      ],
+      "writes": [],
+      "function_name": "find_kth",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "5": {
+      "node_id": 5,
+      "line_number": 5,
+      "source_code": "return arr2[k - len(arr1) - 1]",
+      "statement_type": "Return",
+      "reads": [
+        "arr1",
+        "arr2",
+        "k",
+        "len"
+      ],
+      "writes": [],
+      "function_name": "find_kth",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "6": {
+      "node_id": 6,
+      "line_number": 7,
+      "source_code": "return -1",
+      "statement_type": "Return",
+      "reads": [],
+      "writes": [],
+      "function_name": "find_kth",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "arr1",
+      "label": "DATA(arr1)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "k",
+      "label": "DATA(k)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 3,
+      "dependency_type": "DATA",
+      "variable": "arr1",
+      "label": "DATA(arr1)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 3,
+      "dependency_type": "DATA",
+      "variable": "k",
+      "label": "DATA(k)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 4,
+      "dependency_type": "DATA",
+      "variable": "arr1",
+      "label": "DATA(arr1)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 4,
+      "dependency_type": "DATA",
+      "variable": "arr2",
+      "label": "DATA(arr2)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 4,
+      "dependency_type": "DATA",
+      "variable": "k",
+      "label": "DATA(k)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 5,
+      "dependency_type": "DATA",
+      "variable": "arr1",
+      "label": "DATA(arr1)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 5,
+      "dependency_type": "DATA",
+      "variable": "arr2",
+      "label": "DATA(arr2)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 5,
+      "dependency_type": "DATA",
+      "variable": "k",
+      "label": "DATA(k)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 2,
+      "target_id": 3,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(If)"
+    },
+    {
+      "source_id": 2,
+      "target_id": 4,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(If)"
+    },
+    {
+      "source_id": 4,
+      "target_id": 5,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(If)"
+    },
+    {
+      "source_id": 4,
+      "target_id": 6,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(If)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    6
+  ]
+}

@@ -1,0 +1,21 @@
+[
+  {
+    "candidate_rank": 1,
+    "intervention": {
+      "target_variable": "a",
+      "target_line": 2,
+      "observed_value": "5",
+      "counterfactual_value": "-198",
+      "operation_type": "AST_transform",
+      "modified_code": "def parabola_directrix(a, b, c):\n    a = -198\n    return -b/(2*a)"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.2175,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  }
+]

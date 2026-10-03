@@ -1,0 +1,65 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def lateralsurface_cone(r, h):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "h",
+        "r",
+        "lateralsurface_cone"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 1,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "return 2 * r * h + (r ** 2) * math.acos(-1)",
+      "statement_type": "Return",
+      "reads": [
+        "h",
+        "math",
+        "r"
+      ],
+      "writes": [],
+      "function_name": "lateralsurface_cone",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "h",
+      "label": "DATA(h)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "r",
+      "label": "DATA(r)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    2
+  ]
+}

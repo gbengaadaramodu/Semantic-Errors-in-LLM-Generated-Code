@@ -1,0 +1,12 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def add_tuple(my_list, my_tuple): | W:my_list,my_tuple,add_tuple", fillcolor="lightgreen"];
+    "2" [label="L2: return my_list + list(my_tuple) | R:list,my_list,my_tuple", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(my_list)", style="solid"];
+    "1" -> "2" [label="DATA(my_tuple)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

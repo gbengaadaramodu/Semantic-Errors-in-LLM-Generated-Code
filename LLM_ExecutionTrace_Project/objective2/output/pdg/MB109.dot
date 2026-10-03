@@ -1,0 +1,13 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def median_trapezium(a, b, c): | W:a,b,c,median_trapezium", fillcolor="lightgreen"];
+    "2" [label="L2: return (a + b + c) / 3 | R:a,b,c", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(a)", style="solid"];
+    "1" -> "2" [label="DATA(b)", style="solid"];
+    "1" -> "2" [label="DATA(c)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

@@ -1,0 +1,15 @@
+[INST] Complete the following Python function. Return ONLY the function implementation, no explanations.
+
+
+
+def fib(n: int):
+    """Return n-th Fibonacci number.
+    >>> fib(10)
+    55
+    >>> fib(1)
+    1
+    >>> fib(8)
+    21
+    """
+
+[/INST]

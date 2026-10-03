@@ -1,0 +1,11 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def get_char(s): | W:s,get_char", fillcolor="lightgreen"];
+    "2" [label="L2: return chr((ord(s[0]) + ord(s[1]) + ord(s[2])) % 26) | R:chr,ord,s", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(s)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

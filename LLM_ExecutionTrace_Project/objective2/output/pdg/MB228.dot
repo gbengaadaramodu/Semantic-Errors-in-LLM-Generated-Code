@@ -1,0 +1,11 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def sum_of_product(n): | W:n,sum_of_product", fillcolor="lightgreen"];
+    "2" [label="L2: return sum(binomial(i, j) * binomial(i + 1, j) for i in range(n) for j in range(i + 1)) | W:i,j | R:binomial,i,j,n,range,sum", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(n)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a function to return two words from a list of words starting with letter 'p'.
+
+Example test: assert start_withp(["Python PHP", "Java JavaScript", "c c++"])==('Python', 'PHP')
+[/INST]

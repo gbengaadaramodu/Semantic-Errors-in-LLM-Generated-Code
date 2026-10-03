@@ -1,0 +1,322 @@
+{
+  "trace_id": "HE094",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/150",
+  "error_category": "Runtime Exception",
+  "analysis_status": "ANALYZED",
+  "skip_reason": null,
+  "input_record": {
+    "trace_id": "HE094",
+    "dataset": "HumanEval",
+    "task_id": "HumanEval/150",
+    "problem_summary": "\ndef x_or_y(n, x, y):\n    \"\"\"A simple program which should return the value of x",
+    "execution_status": "Failed",
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp5fe357k3.py\", line 26, in <module>\n    check(x_or_y)\n    ~~~~~^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp5fe357k3.py\", line 10, in check\n    assert candidate(7, 34, 12) == 34\n           ~~~~~~~~~^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp5fe357k3.py\", line 2, in x_or_y\n    if is_prime(n):\n       ^^^^^^^^\nNameError: name 'is_prime' is not defined\n",
+    "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp5fe357k3.py\", line 26, in <module>\n    check(x_or_y)\n    ~~~~~^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp5fe357k3.py\", line 10, in check\n    assert candidate(7, 34, 12) == 34\n           ~~~~~~~~~^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp5fe357k3.py\", line 2, in x_or_y\n    if is_prime(n):\n       ^^^^^^^^\nNameError: name 'is_prime' is not defined",
+    "exception_type": "NameError",
+    "exception_message": "name 'is_prime' is not defined",
+    "execution_time": 0.239348,
+    "timed_out": false,
+    "exit_code": 1,
+    "tests_passed": false,
+    "tests_failed": 0,
+    "expected_output": null,
+    "actual_output": null,
+    "assertion_source": null,
+    "assertion_failed": false,
+    "parser_prediction": "Runtime Exception"
+  },
+  "scm": {
+    "task_id": "HumanEval/150",
+    "nodes": [
+      {
+        "node_id": "S",
+        "variable_name": "Specification",
+        "symbol": "S",
+        "label": "Specification"
+      },
+      {
+        "node_id": "C",
+        "variable_name": "GeneratedCode",
+        "symbol": "C",
+        "label": "Generated Code"
+      },
+      {
+        "node_id": "E",
+        "variable_name": "ExecutionTrace",
+        "symbol": "E",
+        "label": "Execution Trace"
+      },
+      {
+        "node_id": "T",
+        "variable_name": "TestSuite",
+        "symbol": "T",
+        "label": "Test Suite"
+      },
+      {
+        "node_id": "O",
+        "variable_name": "Outcome",
+        "symbol": "O",
+        "label": "Outcome"
+      }
+    ],
+    "edges": [
+      {
+        "source": "S",
+        "target": "C",
+        "relationship": "generates"
+      },
+      {
+        "source": "C",
+        "target": "E",
+        "relationship": "produces"
+      },
+      {
+        "source": "T",
+        "target": "E",
+        "relationship": "evaluates"
+      },
+      {
+        "source": "E",
+        "target": "O",
+        "relationship": "determines"
+      }
+    ],
+    "variables": {
+      "S": {
+        "name": "Specification",
+        "symbol": "S",
+        "description": "Problem description, prompt, and target function signature",
+        "value": "\ndef x_or_y(n, x, y):\n    \"\"\"A simple program which should return the value of x"
+      },
+      "C": {
+        "name": "GeneratedCode",
+        "symbol": "C",
+        "description": "LLM-generated Python source code implementation",
+        "value": "def x_or_y(n, x, y):\n    if is_prime(n):\n        return x\n    else:\n        return y"
+      },
+      "E": {
+        "name": "ExecutionTrace",
+        "symbol": "E",
+        "description": "Observable runtime trace events, variable states, and stdout/stderr",
+        "value": "status=Failed, exc=NameError, msg=name 'is_prime' is not defined"
+      },
+      "T": {
+        "name": "TestSuite",
+        "symbol": "T",
+        "description": "Benchmark assertions, inputs, and check function harness",
+        "value": "def check(candidate):\n\n    # Check some simple cases\n    assert candidate(7, 34, 12) == 34\n    asser"
+      },
+      "O": {
+        "name": "Outcome",
+        "symbol": "O",
+        "description": "Final test execution outcome (Completed/Failed/Timeout)",
+        "value": "Failed"
+      }
+    }
+  },
+  "pdg": {
+    "nodes": {
+      "1": {
+        "node_id": 1,
+        "line_number": 1,
+        "source_code": "def x_or_y(n, x, y):",
+        "statement_type": "FunctionDef",
+        "reads": [],
+        "writes": [
+          "n",
+          "x",
+          "y",
+          "x_or_y"
+        ],
+        "function_name": "<module>",
+        "executed": true,
+        "execution_count": 2,
+        "runtime_values": {
+          "n": [
+            "7"
+          ],
+          "x": [
+            "34"
+          ],
+          "y": [
+            "12"
+          ]
+        },
+        "failure_related": false
+      },
+      "2": {
+        "node_id": 2,
+        "line_number": 2,
+        "source_code": "if is_prime(n):",
+        "statement_type": "If",
+        "reads": [
+          "is_prime",
+          "n"
+        ],
+        "writes": [],
+        "function_name": "x_or_y",
+        "executed": true,
+        "execution_count": 3,
+        "runtime_values": {
+          "n": [
+            "7",
+            "7",
+            "7"
+          ],
+          "x": [
+            "34",
+            "34",
+            "34"
+          ],
+          "y": [
+            "12",
+            "12",
+            "12"
+          ]
+        },
+        "failure_related": true
+      },
+      "3": {
+        "node_id": 3,
+        "line_number": 3,
+        "source_code": "return x",
+        "statement_type": "Return",
+        "reads": [
+          "x"
+        ],
+        "writes": [],
+        "function_name": "x_or_y",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "4": {
+        "node_id": 4,
+        "line_number": 5,
+        "source_code": "return y",
+        "statement_type": "Return",
+        "reads": [
+          "y"
+        ],
+        "writes": [],
+        "function_name": "x_or_y",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      }
+    },
+    "edges": [
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "DATA",
+        "variable": "n",
+        "label": "DATA(n)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 3,
+        "dependency_type": "DATA",
+        "variable": "x",
+        "label": "DATA(x)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 4,
+        "dependency_type": "DATA",
+        "variable": "y",
+        "label": "DATA(y)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 2,
+        "target_id": 3,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(If)"
+      },
+      {
+        "source_id": 2,
+        "target_id": 4,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(If)"
+      }
+    ],
+    "entry_node_id": 1,
+    "failure_node_ids": [
+      2
+    ]
+  },
+  "runtime_events_count": 14,
+  "failure_line": 2,
+  "failure_statement": "if is_prime(n):",
+  "candidates": [
+    {
+      "rank": 1,
+      "node_id": 2,
+      "line_number": 2,
+      "statement_code": "if is_prime(n):",
+      "variable_name": "is_prime",
+      "observed_value": null,
+      "expected_value": null,
+      "proximity_score": 1.0,
+      "dependency_score": 1.0,
+      "explanation": "Reached via reverse traversal (distance=0, type=If)"
+    }
+  ],
+  "critical_variable": null,
+  "counterfactual_results": [
+    {
+      "candidate_rank": 1,
+      "intervention": {
+        "target_variable": "is_prime",
+        "target_line": 2,
+        "observed_value": "None",
+        "counterfactual_value": "None",
+        "operation_type": "failed_construction",
+        "modified_code": ""
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "FAILED_CONSTRUCTION",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "UNRESOLVED",
+      "execution_time": 0.0,
+      "status": "UNRESOLVED",
+      "explanation": "Failed to construct valid AST counterfactual intervention."
+    }
+  ],
+  "fault_location": {
+    "file": "HE094.py",
+    "line_number": 2,
+    "statement_code": "if is_prime(n):",
+    "function_name": "x_or_y",
+    "causal_variable": "is_prime",
+    "evidence_score": 1.0,
+    "confidence": 0.5
+  },
+  "root_cause": {
+    "root_cause_status": "UNRESOLVED",
+    "candidate_explanation": "Runtime exception (NameError: name 'is_prime' is not defined) triggered at statement 'if is_prime(n):' (line 2) involving variable 'is_prime'.",
+    "causal_variable": "is_prime",
+    "fault_statement": "if is_prime(n):",
+    "fault_line": 2,
+    "evidence_summary": "Reverse PDG traversal traced failure from line 1 to statement line 2. Structural dependency identified; counterfactual validation unconfirmed or unresolved.",
+    "counterfactual_validated": false,
+    "confidence": 0.5
+  },
+  "ground_truth_matched": null,
+  "ground_truth_fault_line": null,
+  "execution_time": 0.0144
+}

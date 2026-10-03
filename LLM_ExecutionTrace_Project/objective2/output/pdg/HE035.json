@@ -1,0 +1,104 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def int_to_mini_roman(number):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "number",
+        "int_to_mini_roman"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "number": [
+          "19"
+        ]
+      },
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "roman_numerals = ['', 'x', 'xx', 'xxx', 'xxxx', 'xix', 'xxi', 'xxii', 'xxiii', 'xxiv', 'xxv', 'xxvi']",
+      "statement_type": "Assign",
+      "reads": [],
+      "writes": [
+        "roman_numerals"
+      ],
+      "function_name": "int_to_mini_roman",
+      "executed": true,
+      "execution_count": 1,
+      "runtime_values": {
+        "number": [
+          "19"
+        ]
+      },
+      "failure_related": false
+    },
+    "3": {
+      "node_id": 3,
+      "line_number": 3,
+      "source_code": "return roman_numerals[number]",
+      "statement_type": "Return",
+      "reads": [
+        "number",
+        "roman_numerals"
+      ],
+      "writes": [],
+      "function_name": "int_to_mini_roman",
+      "executed": true,
+      "execution_count": 3,
+      "runtime_values": {
+        "number": [
+          "19",
+          "19",
+          "19"
+        ],
+        "roman_numerals": [
+          "['', 'x', 'xx', 'xxx', 'xxxx', 'xix', 'xxi', 'xxii', 'xxiii', 'xxiv', 'xxv', 'xxvi']",
+          "['', 'x', 'xx', 'xxx', 'xxxx', 'xix', 'xxi', 'xxii', 'xxiii', 'xxiv', 'xxv', 'xxvi']",
+          "['', 'x', 'xx', 'xxx', 'xxxx', 'xix', 'xxi', 'xxii', 'xxiii', 'xxiv', 'xxv', 'xxvi']"
+        ]
+      },
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 3,
+      "dependency_type": "DATA",
+      "variable": "number",
+      "label": "DATA(number)"
+    },
+    {
+      "source_id": 2,
+      "target_id": 3,
+      "dependency_type": "DATA",
+      "variable": "roman_numerals",
+      "label": "DATA(roman_numerals)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 3,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    3
+  ]
+}

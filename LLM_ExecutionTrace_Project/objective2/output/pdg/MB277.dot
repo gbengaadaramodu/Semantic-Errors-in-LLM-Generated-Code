@@ -1,0 +1,20 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def common_in_nested_lists(nested_lists): | W:nested_lists,common_in_nested_lists", fillcolor="lightgreen"];
+    "2" [label="L2: common_elements = set() | W:common_elements | R:set", fillcolor="lightgreen"];
+    "3" [label="L3: for nested_list in nested_lists: | W:nested_list | R:nested_lists", fillcolor="lightgreen"];
+    "4" [label="L4: common_elements.update(set(nested_list)) | R:common_elements,nested_list,set", fillcolor="lightgreen"];
+    "5" [label="L5: return list(common_elements) | R:common_elements,list", fillcolor="salmon"];
+
+    "1" -> "3" [label="DATA(nested_lists)", style="solid"];
+    "2" -> "4" [label="DATA(common_elements)", style="solid"];
+    "3" -> "4" [label="DATA(nested_list)", style="solid"];
+    "2" -> "5" [label="DATA(common_elements)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "3" [label="CONTROL(FunctionDef)", style="dashed"];
+    "3" -> "4" [label="CONTROL(For)", style="dashed"];
+    "1" -> "5" [label="CONTROL(FunctionDef)", style="dashed"];
+}

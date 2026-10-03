@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a python function to count the number of non-empty substrings of a given string.
+
+Example test: assert number_of_substrings("abc") == 6
+[/INST]

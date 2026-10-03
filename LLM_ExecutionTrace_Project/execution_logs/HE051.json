@@ -1,0 +1,22 @@
+{
+  "trace_id": "HE051",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/10",
+  "problem_summary": "\n\ndef is_palindrome(string: str) -> bool:\n    \"\"\" Test if given string is a pali",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp_5i0uchy.py\", line 29, in <module>\n    check(make_palindrome)\n    ~~~~~^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp_5i0uchy.py\", line 22, in check\n    assert candidate('') == ''\n           ~~~~~~~~~^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp_5i0uchy.py\", line 2, in make_palindrome\n    if is_palindrome(string):\n       ^^^^^^^^^^^^^\nNameError: name 'is_palindrome' is not defined. Did you mean: 'make_palindrome'?\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp_5i0uchy.py\", line 29, in <module>\n    check(make_palindrome)\n    ~~~~~^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp_5i0uchy.py\", line 22, in check\n    assert candidate('') == ''\n           ~~~~~~~~~^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp_5i0uchy.py\", line 2, in make_palindrome\n    if is_palindrome(string):\n       ^^^^^^^^^^^^^\nNameError: name 'is_palindrome' is not defined. Did you mean: 'make_palindrome'?",
+  "exception_type": "NameError",
+  "exception_message": "name 'is_palindrome' is not defined. Did you mean: 'make_palindrome'?",
+  "execution_time": 0.227383,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

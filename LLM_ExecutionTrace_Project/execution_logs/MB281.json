@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB281",
+  "dataset": "MBPP",
+  "task_id": "223",
+  "problem_summary": "Write a function that takes in a sorted array, its length (n), and an element an",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp86iehxto.py\", line 12, in <module>\n    assert is_majority([1, 1, 2, 4, 4, 4, 6, 6], 8, 4) == False\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp86iehxto.py\", line 12, in <module>\n    assert is_majority([1, 1, 2, 4, 4, 4, 6, 6], 8, 4) == False\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+  "exception_type": "AssertionError",
+  "exception_message": "",
+  "execution_time": 0.182624,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": "benchmark_test",
+  "assertion_failed": true,
+  "parser_prediction": ""
+}

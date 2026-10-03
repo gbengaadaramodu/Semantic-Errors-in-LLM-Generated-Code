@@ -1,0 +1,356 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def bf(planet1, planet2):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "planet1",
+        "planet2",
+        "bf"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 4,
+      "runtime_values": {
+        "planet1": [
+          "Jupiter",
+          "Earth",
+          "Earth"
+        ],
+        "planet2": [
+          "Neptune",
+          "Mercury",
+          "Mercury"
+        ]
+      },
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "planets = [\"Mercury\", \"Venus\", \"Earth\", \"Mars\", \"Jupiter\", \"Saturn\", \"Uranus\", \"Neptune\"]",
+      "statement_type": "Assign",
+      "reads": [],
+      "writes": [
+        "planets"
+      ],
+      "function_name": "bf",
+      "executed": true,
+      "execution_count": 3,
+      "runtime_values": {
+        "planet1": [
+          "Jupiter",
+          "Earth",
+          "Earth"
+        ],
+        "planet2": [
+          "Neptune",
+          "Mercury",
+          "Mercury"
+        ]
+      },
+      "failure_related": false
+    },
+    "3": {
+      "node_id": 3,
+      "line_number": 3,
+      "source_code": "index1 = planets.index(planet1)",
+      "statement_type": "Assign",
+      "reads": [
+        "planet1",
+        "planets"
+      ],
+      "writes": [
+        "index1"
+      ],
+      "function_name": "bf",
+      "executed": true,
+      "execution_count": 3,
+      "runtime_values": {
+        "planet1": [
+          "Jupiter",
+          "Earth",
+          "Earth"
+        ],
+        "planet2": [
+          "Neptune",
+          "Mercury",
+          "Mercury"
+        ],
+        "planets": [
+          "['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune']",
+          "['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune']",
+          "['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune']"
+        ]
+      },
+      "failure_related": false
+    },
+    "4": {
+      "node_id": 4,
+      "line_number": 4,
+      "source_code": "index2 = planets.index(planet2)",
+      "statement_type": "Assign",
+      "reads": [
+        "planet2",
+        "planets"
+      ],
+      "writes": [
+        "index2"
+      ],
+      "function_name": "bf",
+      "executed": true,
+      "execution_count": 3,
+      "runtime_values": {
+        "planet1": [
+          "Jupiter",
+          "Earth",
+          "Earth"
+        ],
+        "planet2": [
+          "Neptune",
+          "Mercury",
+          "Mercury"
+        ],
+        "planets": [
+          "['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune']",
+          "['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune']",
+          "['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune']"
+        ],
+        "index1": [
+          "4",
+          "2",
+          "2"
+        ]
+      },
+      "failure_related": false
+    },
+    "5": {
+      "node_id": 5,
+      "line_number": 5,
+      "source_code": "if index1 == -1 or index2 == -1:",
+      "statement_type": "If",
+      "reads": [
+        "index1",
+        "index2"
+      ],
+      "writes": [],
+      "function_name": "bf",
+      "executed": true,
+      "execution_count": 3,
+      "runtime_values": {
+        "planet1": [
+          "Jupiter",
+          "Earth",
+          "Earth"
+        ],
+        "planet2": [
+          "Neptune",
+          "Mercury",
+          "Mercury"
+        ],
+        "planets": [
+          "['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune']",
+          "['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune']",
+          "['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune']"
+        ],
+        "index1": [
+          "4",
+          "2",
+          "2"
+        ],
+        "index2": [
+          "7",
+          "0",
+          "0"
+        ]
+      },
+      "failure_related": false
+    },
+    "6": {
+      "node_id": 6,
+      "line_number": 6,
+      "source_code": "return ()",
+      "statement_type": "Return",
+      "reads": [],
+      "writes": [],
+      "function_name": "bf",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "7": {
+      "node_id": 7,
+      "line_number": 8,
+      "source_code": "return tuple(planets[index1+1:index2])",
+      "statement_type": "Return",
+      "reads": [
+        "index1",
+        "index2",
+        "planets",
+        "tuple"
+      ],
+      "writes": [],
+      "function_name": "bf",
+      "executed": true,
+      "execution_count": 6,
+      "runtime_values": {
+        "planet1": [
+          "Jupiter",
+          "Jupiter",
+          "Earth",
+          "Earth",
+          "Earth",
+          "Earth"
+        ],
+        "planet2": [
+          "Neptune",
+          "Neptune",
+          "Mercury",
+          "Mercury",
+          "Mercury",
+          "Mercury"
+        ],
+        "planets": [
+          "['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune']",
+          "['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune']",
+          "['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune']",
+          "['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune']",
+          "['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune']",
+          "['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune']"
+        ],
+        "index1": [
+          "4",
+          "4",
+          "2",
+          "2",
+          "2",
+          "2"
+        ],
+        "index2": [
+          "7",
+          "7",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      },
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 3,
+      "dependency_type": "DATA",
+      "variable": "planet1",
+      "label": "DATA(planet1)"
+    },
+    {
+      "source_id": 2,
+      "target_id": 3,
+      "dependency_type": "DATA",
+      "variable": "planets",
+      "label": "DATA(planets)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 4,
+      "dependency_type": "DATA",
+      "variable": "planet2",
+      "label": "DATA(planet2)"
+    },
+    {
+      "source_id": 2,
+      "target_id": 4,
+      "dependency_type": "DATA",
+      "variable": "planets",
+      "label": "DATA(planets)"
+    },
+    {
+      "source_id": 3,
+      "target_id": 5,
+      "dependency_type": "DATA",
+      "variable": "index1",
+      "label": "DATA(index1)"
+    },
+    {
+      "source_id": 4,
+      "target_id": 5,
+      "dependency_type": "DATA",
+      "variable": "index2",
+      "label": "DATA(index2)"
+    },
+    {
+      "source_id": 3,
+      "target_id": 7,
+      "dependency_type": "DATA",
+      "variable": "index1",
+      "label": "DATA(index1)"
+    },
+    {
+      "source_id": 4,
+      "target_id": 7,
+      "dependency_type": "DATA",
+      "variable": "index2",
+      "label": "DATA(index2)"
+    },
+    {
+      "source_id": 2,
+      "target_id": 7,
+      "dependency_type": "DATA",
+      "variable": "planets",
+      "label": "DATA(planets)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 3,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 4,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 5,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 5,
+      "target_id": 6,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(If)"
+    },
+    {
+      "source_id": 5,
+      "target_id": 7,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(If)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    7
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB066",
+  "dataset": "MBPP",
+  "task_id": "595",
+  "problem_summary": "Write a python function to count minimum number of swaps required to convert one",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp4f67e0iv.py\", line 4, in <module>\n    assert min_Swaps(\"1101\",\"1110\") == 1\n           ^^^^^^^^^\nNameError: name 'min_Swaps' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp4f67e0iv.py\", line 4, in <module>\n    assert min_Swaps(\"1101\",\"1110\") == 1\n           ^^^^^^^^^\nNameError: name 'min_Swaps' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'min_Swaps' is not defined",
+  "execution_time": 0.256256,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

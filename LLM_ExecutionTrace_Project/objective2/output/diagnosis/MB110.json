@@ -1,0 +1,403 @@
+{
+  "trace_id": "MB110",
+  "dataset": "MBPP",
+  "task_id": "631",
+  "error_category": "Runtime Exception",
+  "analysis_status": "ANALYZED",
+  "skip_reason": null,
+  "input_record": {
+    "trace_id": "MB110",
+    "dataset": "MBPP",
+    "task_id": "631",
+    "problem_summary": "Write a function to replace whitespaces with an underscore and vice versa in a g",
+    "execution_status": "Failed",
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpllwx73w7.py\", line 9, in <module>\n    assert replace_spaces('Jumanji The Jungle') == 'Jumanji_The_Jungle'\n           ^^^^^^^^^^^^^^\nNameError: name 'replace_spaces' is not defined\n",
+    "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpllwx73w7.py\", line 9, in <module>\n    assert replace_spaces('Jumanji The Jungle') == 'Jumanji_The_Jungle'\n           ^^^^^^^^^^^^^^\nNameError: name 'replace_spaces' is not defined",
+    "exception_type": "NameError",
+    "exception_message": "name 'replace_spaces' is not defined",
+    "execution_time": 0.20985,
+    "timed_out": false,
+    "exit_code": 1,
+    "tests_passed": false,
+    "tests_failed": 0,
+    "expected_output": null,
+    "actual_output": null,
+    "assertion_source": null,
+    "assertion_failed": false,
+    "parser_prediction": "Runtime Exception"
+  },
+  "scm": {
+    "task_id": "631",
+    "nodes": [
+      {
+        "node_id": "S",
+        "variable_name": "Specification",
+        "symbol": "S",
+        "label": "Specification"
+      },
+      {
+        "node_id": "C",
+        "variable_name": "GeneratedCode",
+        "symbol": "C",
+        "label": "Generated Code"
+      },
+      {
+        "node_id": "E",
+        "variable_name": "ExecutionTrace",
+        "symbol": "E",
+        "label": "Execution Trace"
+      },
+      {
+        "node_id": "T",
+        "variable_name": "TestSuite",
+        "symbol": "T",
+        "label": "Test Suite"
+      },
+      {
+        "node_id": "O",
+        "variable_name": "Outcome",
+        "symbol": "O",
+        "label": "Outcome"
+      }
+    ],
+    "edges": [
+      {
+        "source": "S",
+        "target": "C",
+        "relationship": "generates"
+      },
+      {
+        "source": "C",
+        "target": "E",
+        "relationship": "produces"
+      },
+      {
+        "source": "T",
+        "target": "E",
+        "relationship": "evaluates"
+      },
+      {
+        "source": "E",
+        "target": "O",
+        "relationship": "determines"
+      }
+    ],
+    "variables": {
+      "S": {
+        "name": "Specification",
+        "symbol": "S",
+        "description": "Problem description, prompt, and target function signature",
+        "value": "Write a function to replace whitespaces with an underscore and vice versa in a g"
+      },
+      "C": {
+        "name": "GeneratedCode",
+        "symbol": "C",
+        "description": "LLM-generated Python source code implementation",
+        "value": "def find_lucas(n):\n    if n == 0:\n        return 2\n    elif n == 1:\n        return 1\n    else:\n        return find_lucas(n-1) + find_lucas(n-2)"
+      },
+      "E": {
+        "name": "ExecutionTrace",
+        "symbol": "E",
+        "description": "Observable runtime trace events, variable states, and stdout/stderr",
+        "value": "status=Failed, exc=NameError, msg=name 'replace_spaces' is not defined"
+      },
+      "T": {
+        "name": "TestSuite",
+        "symbol": "T",
+        "description": "Benchmark assertions, inputs, and check function harness",
+        "value": "assert replace_spaces('Jumanji The Jungle') == 'Jumanji_The_Jungle'\nassert replace_spaces('The_Aveng"
+      },
+      "O": {
+        "name": "Outcome",
+        "symbol": "O",
+        "description": "Final test execution outcome (Completed/Failed/Timeout)",
+        "value": "Failed"
+      }
+    }
+  },
+  "pdg": {
+    "nodes": {
+      "1": {
+        "node_id": 1,
+        "line_number": 1,
+        "source_code": "def find_lucas(n):",
+        "statement_type": "FunctionDef",
+        "reads": [],
+        "writes": [
+          "n",
+          "find_lucas"
+        ],
+        "function_name": "<module>",
+        "executed": true,
+        "execution_count": 1,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "2": {
+        "node_id": 2,
+        "line_number": 2,
+        "source_code": "if n == 0:",
+        "statement_type": "If",
+        "reads": [
+          "n"
+        ],
+        "writes": [],
+        "function_name": "find_lucas",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "3": {
+        "node_id": 3,
+        "line_number": 3,
+        "source_code": "return 2",
+        "statement_type": "Return",
+        "reads": [],
+        "writes": [],
+        "function_name": "find_lucas",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "4": {
+        "node_id": 4,
+        "line_number": 4,
+        "source_code": "elif n == 1:",
+        "statement_type": "If",
+        "reads": [
+          "n"
+        ],
+        "writes": [],
+        "function_name": "find_lucas",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "5": {
+        "node_id": 5,
+        "line_number": 5,
+        "source_code": "return 1",
+        "statement_type": "Return",
+        "reads": [],
+        "writes": [],
+        "function_name": "find_lucas",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "6": {
+        "node_id": 6,
+        "line_number": 7,
+        "source_code": "return find_lucas(n-1) + find_lucas(n-2)",
+        "statement_type": "Return",
+        "reads": [
+          "find_lucas",
+          "n"
+        ],
+        "writes": [],
+        "function_name": "find_lucas",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": true
+      }
+    },
+    "edges": [
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "DATA",
+        "variable": "n",
+        "label": "DATA(n)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 4,
+        "dependency_type": "DATA",
+        "variable": "n",
+        "label": "DATA(n)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 6,
+        "dependency_type": "DATA",
+        "variable": "find_lucas",
+        "label": "DATA(find_lucas)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 6,
+        "dependency_type": "DATA",
+        "variable": "n",
+        "label": "DATA(n)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 2,
+        "target_id": 3,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(If)"
+      },
+      {
+        "source_id": 2,
+        "target_id": 4,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(If)"
+      },
+      {
+        "source_id": 4,
+        "target_id": 5,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(If)"
+      },
+      {
+        "source_id": 4,
+        "target_id": 6,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(If)"
+      }
+    ],
+    "entry_node_id": 1,
+    "failure_node_ids": [
+      6
+    ]
+  },
+  "runtime_events_count": 5,
+  "failure_line": 7,
+  "failure_statement": "return find_lucas(n-1) + find_lucas(n-2)",
+  "candidates": [
+    {
+      "rank": 1,
+      "node_id": 6,
+      "line_number": 7,
+      "statement_code": "return find_lucas(n-1) + find_lucas(n-2)",
+      "variable_name": "find_lucas",
+      "observed_value": null,
+      "expected_value": "Jumanji_The_Jungle",
+      "proximity_score": 1.0,
+      "dependency_score": 1.0,
+      "explanation": "Reached via reverse traversal (distance=0, type=Return)"
+    },
+    {
+      "rank": 2,
+      "node_id": 4,
+      "line_number": 4,
+      "statement_code": "elif n == 1:",
+      "variable_name": "n",
+      "observed_value": null,
+      "expected_value": null,
+      "proximity_score": 0.85,
+      "dependency_score": 0.7,
+      "explanation": "Reached via reverse traversal (distance=1, type=If)"
+    },
+    {
+      "rank": 3,
+      "node_id": 2,
+      "line_number": 2,
+      "statement_code": "if n == 0:",
+      "variable_name": "n",
+      "observed_value": null,
+      "expected_value": null,
+      "proximity_score": 0.7,
+      "dependency_score": 0.49,
+      "explanation": "Reached via reverse traversal (distance=2, type=If)"
+    }
+  ],
+  "critical_variable": null,
+  "counterfactual_results": [
+    {
+      "candidate_rank": 1,
+      "intervention": {
+        "target_variable": "find_lucas",
+        "target_line": 7,
+        "observed_value": "None",
+        "counterfactual_value": "Jumanji_The_Jungle",
+        "operation_type": "AST_transform",
+        "modified_code": "def find_lucas(n):\n    if n == 0:\n        return 2\n    elif n == 1:\n        return 1\n    else:\n        find_lucas = 'Jumanji_The_Jungle'\n        return find_lucas(n-1) + find_lucas(n-2)"
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "Failed",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "FALSE",
+      "execution_time": 0.2536,
+      "status": "EXECUTED",
+      "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+    },
+    {
+      "candidate_rank": 2,
+      "intervention": {
+        "target_variable": "n",
+        "target_line": 4,
+        "observed_value": "None",
+        "counterfactual_value": "None",
+        "operation_type": "AST_transform",
+        "modified_code": "def find_lucas(n):\n    if n == 0:\n        return 2\n    elif n != 1:\n        return 1\n    else:\n        return find_lucas(n - 1) + find_lucas(n - 2)"
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "Failed",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "FALSE",
+      "execution_time": 0.1895,
+      "status": "EXECUTED",
+      "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+    },
+    {
+      "candidate_rank": 3,
+      "intervention": {
+        "target_variable": "n",
+        "target_line": 2,
+        "observed_value": "None",
+        "counterfactual_value": "None",
+        "operation_type": "AST_transform",
+        "modified_code": "def find_lucas(n):\n    if n != 0:\n        return 2\n    elif n == 1:\n        return 1\n    else:\n        return find_lucas(n - 1) + find_lucas(n - 2)"
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "Failed",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "FALSE",
+      "execution_time": 0.2826,
+      "status": "EXECUTED",
+      "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+    }
+  ],
+  "fault_location": {
+    "file": "MB110.py",
+    "line_number": 7,
+    "statement_code": "return find_lucas(n-1) + find_lucas(n-2)",
+    "function_name": "replace_spaces",
+    "causal_variable": "find_lucas",
+    "evidence_score": 0.5,
+    "confidence": 0.3
+  },
+  "root_cause": {
+    "root_cause_status": "UNRESOLVED",
+    "candidate_explanation": "Runtime exception (NameError: name 'replace_spaces' is not defined) triggered at statement 'return find_lucas(n-1) + find_lucas(n-2)' (line 7) involving variable 'find_lucas'.",
+    "causal_variable": "find_lucas",
+    "fault_statement": "return find_lucas(n-1) + find_lucas(n-2)",
+    "fault_line": 7,
+    "evidence_summary": "Reverse PDG traversal traced failure from line 1 to statement line 7. Structural dependency identified; counterfactual validation unconfirmed or unresolved.",
+    "counterfactual_validated": false,
+    "confidence": 0.3
+  },
+  "ground_truth_matched": null,
+  "ground_truth_fault_line": null,
+  "execution_time": 0.7374
+}

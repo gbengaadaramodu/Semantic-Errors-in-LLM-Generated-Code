@@ -1,0 +1,33 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def change_base(x: int, base: int): | W:base,x,change_base | R:int", fillcolor="lightgreen"];
+    "2" [label="L2: if x == 0: | R:x", fillcolor="lightgreen"];
+    "3" [label="L3: return \"0\"", fillcolor="lightgrey"];
+    "4" [label="L4: digs = \"0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ\" | W:digs", fillcolor="lightgreen"];
+    "5" [label="L5: while x > 0: | R:x", fillcolor="lightgreen"];
+    "6" [label="L6: r = x % base | W:r | R:base,x", fillcolor="lightgreen"];
+    "7" [label="L7: x = x // base | W:x | R:base,x", fillcolor="lightgreen"];
+    "8" [label="L8: res = digs[r] + res | W:res | R:digs,r,res", fillcolor="salmon"];
+    "9" [label="L9: return res | R:res", fillcolor="lightgrey"];
+
+    "1" -> "2" [label="DATA(x)", style="solid"];
+    "1" -> "5" [label="DATA(x)", style="solid"];
+    "1" -> "6" [label="DATA(base)", style="solid"];
+    "1" -> "6" [label="DATA(x)", style="solid"];
+    "1" -> "7" [label="DATA(base)", style="solid"];
+    "1" -> "7" [label="DATA(x)", style="solid"];
+    "4" -> "8" [label="DATA(digs)", style="solid"];
+    "6" -> "8" [label="DATA(r)", style="solid"];
+    "8" -> "9" [label="DATA(res)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "2" -> "3" [label="CONTROL(If)", style="dashed"];
+    "1" -> "4" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "5" [label="CONTROL(FunctionDef)", style="dashed"];
+    "5" -> "6" [label="CONTROL(While)", style="dashed"];
+    "5" -> "7" [label="CONTROL(While)", style="dashed"];
+    "5" -> "8" [label="CONTROL(While)", style="dashed"];
+    "1" -> "9" [label="CONTROL(FunctionDef)", style="dashed"];
+}

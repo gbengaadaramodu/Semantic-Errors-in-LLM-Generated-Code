@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB265",
+  "dataset": "MBPP",
+  "task_id": "434",
+  "problem_summary": "Write a function that matches a string that has an a followed by one or more b's",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp85mz84ek.py\", line 4, in <module>\n    assert text_match_one(\"ac\")==False\n           ~~~~~~~~~~~~~~^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp85mz84ek.py\", line 2, in text_match_one\n    return re.search(r\"a+b+\", string) is not None\n           ^^\nNameError: name 're' is not defined. Did you forget to import 're'?\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp85mz84ek.py\", line 4, in <module>\n    assert text_match_one(\"ac\")==False\n           ~~~~~~~~~~~~~~^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp85mz84ek.py\", line 2, in text_match_one\n    return re.search(r\"a+b+\", string) is not None\n           ^^\nNameError: name 're' is not defined. Did you forget to import 're'?",
+  "exception_type": "NameError",
+  "exception_message": "name 're' is not defined. Did you forget to import 're'?",
+  "execution_time": 0.239077,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

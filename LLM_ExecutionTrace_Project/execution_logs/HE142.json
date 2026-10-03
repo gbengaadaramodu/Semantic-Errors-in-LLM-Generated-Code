@@ -1,0 +1,22 @@
+{
+  "trace_id": "HE142",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/132",
+  "problem_summary": "\ndef is_nested(string):\n    '''\n    Create a function that takes a string as inp",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpb6v8l7c2.py\", line 34, in <module>\n    check(is_nested)\n    ~~~~~^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpb6v8l7c2.py\", line 15, in check\n    assert candidate('[[]]') == True, \"This prints if this assert fails 1 (good for debugging!)\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: This prints if this assert fails 1 (good for debugging!)\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpb6v8l7c2.py\", line 34, in <module>\n    check(is_nested)\n    ~~~~~^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpb6v8l7c2.py\", line 15, in check\n    assert candidate('[[]]') == True, \"This prints if this assert fails 1 (good for debugging!)\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: This prints if this assert fails 1 (good for debugging!)",
+  "exception_type": "AssertionError",
+  "exception_message": "This prints if this assert fails 1 (good for debugging!)",
+  "execution_time": 0.212775,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": "benchmark_test",
+  "assertion_failed": true,
+  "parser_prediction": ""
+}

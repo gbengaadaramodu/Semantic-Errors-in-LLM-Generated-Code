@@ -1,0 +1,94 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def how_many_times(string: str, substring: str) -> int:",
+      "statement_type": "FunctionDef",
+      "reads": [
+        "str"
+      ],
+      "writes": [
+        "string",
+        "substring",
+        "how_many_times"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 4,
+      "runtime_values": {
+        "string": [
+          "",
+          "xyxyxyx",
+          "cacacacac"
+        ],
+        "substring": [
+          "x",
+          "x",
+          "cac"
+        ]
+      },
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "return string.count(substring)",
+      "statement_type": "Return",
+      "reads": [
+        "string",
+        "substring"
+      ],
+      "writes": [],
+      "function_name": "how_many_times",
+      "executed": true,
+      "execution_count": 6,
+      "runtime_values": {
+        "string": [
+          "",
+          "",
+          "xyxyxyx",
+          "xyxyxyx",
+          "cacacacac",
+          "cacacacac"
+        ],
+        "substring": [
+          "x",
+          "x",
+          "x",
+          "x",
+          "cac",
+          "cac"
+        ]
+      },
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "string",
+      "label": "DATA(string)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "substring",
+      "label": "DATA(substring)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    2
+  ]
+}

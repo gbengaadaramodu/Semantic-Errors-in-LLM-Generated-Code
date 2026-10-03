@@ -1,0 +1,73 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def iscube(a):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "a",
+        "iscube"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 5,
+      "runtime_values": {
+        "a": [
+          "1",
+          "2",
+          "-1",
+          "-1"
+        ]
+      },
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "return a > 0 and (a ** (1/3)) % 1 == 0",
+      "statement_type": "Return",
+      "reads": [
+        "a"
+      ],
+      "writes": [],
+      "function_name": "iscube",
+      "executed": true,
+      "execution_count": 8,
+      "runtime_values": {
+        "a": [
+          "1",
+          "1",
+          "2",
+          "2",
+          "-1",
+          "-1",
+          "-1",
+          "-1"
+        ]
+      },
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "a",
+      "label": "DATA(a)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    2
+  ]
+}

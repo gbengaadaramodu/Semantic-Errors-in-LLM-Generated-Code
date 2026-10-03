@@ -1,0 +1,38 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def largest_subset(my_list): | W:my_list,largest_subset", fillcolor="lightgreen"];
+    "2" [label="L2: my_list.sort() | R:my_list", fillcolor="lightgrey"];
+    "3" [label="L3: max_length = 0 | W:max_length", fillcolor="lightgrey"];
+    "4" [label="L4: for i in range(len(my_list)): | W:i | R:len,my_list,range", fillcolor="lightgrey"];
+    "5" [label="L5: num = my_list[i] | W:num | R:i,my_list", fillcolor="lightgrey"];
+    "6" [label="L6: j = i + 1 | W:j | R:i", fillcolor="lightgrey"];
+    "7" [label="L7: while j < len(my_list) and my_list[j] % num == 0: | R:j,len,my_list,num", fillcolor="lightgrey"];
+    "8" [label="L8: j += 1 | W:j", fillcolor="lightgrey"];
+    "9" [label="L9: max_length = max(max_length, j - i) | W:max_length | R:i,j,max,max_length", fillcolor="lightgrey"];
+    "10" [label="L10: return max_length | R:max_length", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(my_list)", style="solid"];
+    "1" -> "4" [label="DATA(my_list)", style="solid"];
+    "4" -> "5" [label="DATA(i)", style="solid"];
+    "1" -> "5" [label="DATA(my_list)", style="solid"];
+    "4" -> "6" [label="DATA(i)", style="solid"];
+    "6" -> "7" [label="DATA(j)", style="solid"];
+    "1" -> "7" [label="DATA(my_list)", style="solid"];
+    "5" -> "7" [label="DATA(num)", style="solid"];
+    "4" -> "9" [label="DATA(i)", style="solid"];
+    "8" -> "9" [label="DATA(j)", style="solid"];
+    "3" -> "9" [label="DATA(max_length)", style="solid"];
+    "9" -> "10" [label="DATA(max_length)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "3" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "4" [label="CONTROL(FunctionDef)", style="dashed"];
+    "4" -> "5" [label="CONTROL(For)", style="dashed"];
+    "4" -> "6" [label="CONTROL(For)", style="dashed"];
+    "4" -> "7" [label="CONTROL(For)", style="dashed"];
+    "7" -> "8" [label="CONTROL(While)", style="dashed"];
+    "4" -> "9" [label="CONTROL(For)", style="dashed"];
+    "1" -> "10" [label="CONTROL(FunctionDef)", style="dashed"];
+}

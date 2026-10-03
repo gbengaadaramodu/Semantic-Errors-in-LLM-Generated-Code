@@ -1,0 +1,28 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def group_tuples(my_list): | W:my_list,group_tuples", fillcolor="lightgreen"];
+    "2" [label="L2: result = [] | W:result", fillcolor="lightgrey"];
+    "3" [label="L3: for tup in my_list: | W:tup | R:my_list", fillcolor="lightgrey"];
+    "4" [label="L4: if tup[0] in [tup[0] for tup in result]: | W:tup | R:result,tup", fillcolor="lightgrey"];
+    "5" [label="L5: result.append(tup) | R:result,tup", fillcolor="lightgrey"];
+    "6" [label="L7: result.append([tup[0], tup[1]]) | R:result,tup", fillcolor="lightgrey"];
+    "7" [label="L8: return result | R:result", fillcolor="salmon"];
+
+    "1" -> "3" [label="DATA(my_list)", style="solid"];
+    "2" -> "4" [label="DATA(result)", style="solid"];
+    "3" -> "4" [label="DATA(tup)", style="solid"];
+    "2" -> "5" [label="DATA(result)", style="solid"];
+    "4" -> "5" [label="DATA(tup)", style="solid"];
+    "2" -> "6" [label="DATA(result)", style="solid"];
+    "4" -> "6" [label="DATA(tup)", style="solid"];
+    "2" -> "7" [label="DATA(result)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "3" [label="CONTROL(FunctionDef)", style="dashed"];
+    "3" -> "4" [label="CONTROL(For)", style="dashed"];
+    "4" -> "5" [label="CONTROL(If)", style="dashed"];
+    "4" -> "6" [label="CONTROL(If)", style="dashed"];
+    "1" -> "7" [label="CONTROL(FunctionDef)", style="dashed"];
+}

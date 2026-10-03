@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB076",
+  "dataset": "MBPP",
+  "task_id": "79",
+  "problem_summary": "Write a python function to check whether the length of the word is odd or not.",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmplz6xfali.py\", line 4, in <module>\n    assert word_len(\"Hadoop\") == False\n           ^^^^^^^^\nNameError: name 'word_len' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmplz6xfali.py\", line 4, in <module>\n    assert word_len(\"Hadoop\") == False\n           ^^^^^^^^\nNameError: name 'word_len' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'word_len' is not defined",
+  "execution_time": 0.236637,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

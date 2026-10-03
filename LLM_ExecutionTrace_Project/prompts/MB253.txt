@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a function to check whether the given string starts and ends with the same character or not.
+
+Example test: assert check_char("abba") == "Valid"
+[/INST]

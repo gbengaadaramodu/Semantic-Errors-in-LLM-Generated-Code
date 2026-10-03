@@ -1,0 +1,17 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def toggle_middle_bits(n): | W:n,toggle_middle_bits", fillcolor="lightgreen"];
+    "2" [label="L2: n = n >> 1 | W:n | R:n", fillcolor="lightgreen"];
+    "3" [label="L3: n = n << 1 | W:n | R:n", fillcolor="lightgreen"];
+    "4" [label="L4: return n | R:n", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(n)", style="solid"];
+    "2" -> "3" [label="DATA(n)", style="solid"];
+    "3" -> "4" [label="DATA(n)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "3" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "4" [label="CONTROL(FunctionDef)", style="dashed"];
+}

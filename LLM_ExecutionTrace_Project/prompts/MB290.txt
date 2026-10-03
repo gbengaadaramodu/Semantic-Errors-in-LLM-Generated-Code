@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a function to get the sum of the digits of a non-negative integer.
+
+Example test: assert sum_digits(345)==12
+[/INST]

@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB400",
+  "dataset": "MBPP",
+  "task_id": "596",
+  "problem_summary": "Write a function to find the size in bytes of the given tuple.",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpb0e9reo4.py\", line 4, in <module>\n    assert tuple_size((\"A\", 1, \"B\", 2, \"C\", 3) ) == sys.getsizeof((\"A\", 1, \"B\", 2, \"C\", 3))\n           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpb0e9reo4.py\", line 2, in tuple_size\n    return sys.getsizeof(my_tuple)\n           ^^^\nNameError: name 'sys' is not defined. Did you forget to import 'sys'?\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpb0e9reo4.py\", line 4, in <module>\n    assert tuple_size((\"A\", 1, \"B\", 2, \"C\", 3) ) == sys.getsizeof((\"A\", 1, \"B\", 2, \"C\", 3))\n           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpb0e9reo4.py\", line 2, in tuple_size\n    return sys.getsizeof(my_tuple)\n           ^^^\nNameError: name 'sys' is not defined. Did you forget to import 'sys'?",
+  "exception_type": "NameError",
+  "exception_message": "name 'sys' is not defined. Did you forget to import 'sys'?",
+  "execution_time": 0.177713,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

@@ -1,0 +1,24 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def check_dict_case(my_dict): | W:my_dict,check_dict_case", fillcolor="lightgreen"];
+    "2" [label="L2: if not my_dict: | R:my_dict", fillcolor="lightgreen"];
+    "3" [label="L3: return False", fillcolor="lightgrey"];
+    "4" [label="L4: lowercase_keys = all(key.islower() for key in my_dict.keys()) | W:key,lowercase_keys | R:all,key,my_dict", fillcolor="salmon"];
+    "5" [label="L5: uppercase_keys = all(key.isupper() for key in my_dict.keys()) | W:key,uppercase_keys | R:all,key,my_dict", fillcolor="lightgreen"];
+    "6" [label="L6: return lowercase_keys or uppercase_keys | R:lowercase_keys,uppercase_keys", fillcolor="lightgreen"];
+
+    "1" -> "2" [label="DATA(my_dict)", style="solid"];
+    "1" -> "4" [label="DATA(my_dict)", style="solid"];
+    "4" -> "5" [label="DATA(key)", style="solid"];
+    "1" -> "5" [label="DATA(my_dict)", style="solid"];
+    "4" -> "6" [label="DATA(lowercase_keys)", style="solid"];
+    "5" -> "6" [label="DATA(uppercase_keys)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "2" -> "3" [label="CONTROL(If)", style="dashed"];
+    "1" -> "4" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "5" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "6" [label="CONTROL(FunctionDef)", style="dashed"];
+}

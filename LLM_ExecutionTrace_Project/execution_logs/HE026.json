@@ -1,0 +1,22 @@
+{
+  "trace_id": "HE026",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/71",
+  "problem_summary": "\ndef triangle_area(a, b, c):\n    '''\n    Given the lengths of the three sides of",
+  "execution_status": "Completed",
+  "stdout": "",
+  "stderr": "",
+  "traceback": "",
+  "exception_type": "",
+  "exception_message": "",
+  "execution_time": 0.137361,
+  "timed_out": false,
+  "exit_code": 0,
+  "tests_passed": true,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

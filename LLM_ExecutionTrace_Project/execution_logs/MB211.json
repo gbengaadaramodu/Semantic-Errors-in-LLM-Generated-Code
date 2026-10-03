@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB211",
+  "dataset": "MBPP",
+  "task_id": "388",
+  "problem_summary": "Write a python function to find the highest power of 2 that is less than or equa",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmptrvh8urj.py\", line 11, in <module>\n    assert highest_Power_of_2(10) == 8\n           ^^^^^^^^^^^^^^^^^^\nNameError: name 'highest_Power_of_2' is not defined. Did you mean: 'highest_power_of_2'?\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmptrvh8urj.py\", line 11, in <module>\n    assert highest_Power_of_2(10) == 8\n           ^^^^^^^^^^^^^^^^^^\nNameError: name 'highest_Power_of_2' is not defined. Did you mean: 'highest_power_of_2'?",
+  "exception_type": "NameError",
+  "exception_message": "name 'highest_Power_of_2' is not defined. Did you mean: 'highest_power_of_2'?",
+  "execution_time": 0.28603,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

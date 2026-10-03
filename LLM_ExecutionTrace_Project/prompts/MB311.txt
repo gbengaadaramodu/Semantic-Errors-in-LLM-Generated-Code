@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a python function to convert complex numbers to polar coordinates.
+
+Example test: assert convert(1) == (1.0, 0.0)
+[/INST]

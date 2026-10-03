@@ -1,0 +1,11 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def remove_duplicates(numbers: List[int]) -> List[int]: | W:numbers,remove_duplicates | R:List,int", fillcolor="salmon"];
+    "2" [label="L2: return list(dict.fromkeys(numbers)) | R:dict,list,numbers", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(numbers)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

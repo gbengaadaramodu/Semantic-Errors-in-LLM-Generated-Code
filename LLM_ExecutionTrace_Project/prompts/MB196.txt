@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a function to calculate a dog's age in dog's years.
+
+Example test: assert dog_age(12)==61
+[/INST]

@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a python function to find the sum of an array.
+
+Example test: assert _sum([1, 2, 3]) == 6
+[/INST]

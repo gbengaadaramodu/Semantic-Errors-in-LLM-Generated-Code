@@ -1,0 +1,22 @@
+{
+  "trace_id": "HE043",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/33",
+  "problem_summary": "\n\ndef sort_third(l: list):\n    \"\"\"This function takes a list l and returns a lis",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpb30ywzdo.py\", line 26, in <module>\n    check(sort_third)\n    ~~~~~^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpb30ywzdo.py\", line 16, in check\n    assert tuple(candidate([1, 2, 3])) == tuple(sort_third([1, 2, 3]))\n                 ~~~~~~~~~^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpb30ywzdo.py\", line 7, in sort_third\n    l_copy[i] = sorted(l_copy[i])\n                ~~~~~~^^^^^^^^^^^\nTypeError: 'int' object is not iterable\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpb30ywzdo.py\", line 26, in <module>\n    check(sort_third)\n    ~~~~~^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpb30ywzdo.py\", line 16, in check\n    assert tuple(candidate([1, 2, 3])) == tuple(sort_third([1, 2, 3]))\n                 ~~~~~~~~~^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpb30ywzdo.py\", line 7, in sort_third\n    l_copy[i] = sorted(l_copy[i])\n                ~~~~~~^^^^^^^^^^^\nTypeError: 'int' object is not iterable",
+  "exception_type": "TypeError",
+  "exception_message": "'int' object is not iterable",
+  "execution_time": 0.253837,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

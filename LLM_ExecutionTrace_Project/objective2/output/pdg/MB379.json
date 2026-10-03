@@ -1,0 +1,64 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def surface_area(base_edge, height):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "base_edge",
+        "height",
+        "surface_area"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 1,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "return (base_edge * base_edge + base_edge * height) * 2",
+      "statement_type": "Return",
+      "reads": [
+        "base_edge",
+        "height"
+      ],
+      "writes": [],
+      "function_name": "surface_area",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "base_edge",
+      "label": "DATA(base_edge)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "height",
+      "label": "DATA(height)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    2
+  ]
+}

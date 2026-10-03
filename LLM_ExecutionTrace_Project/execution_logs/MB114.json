@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB114",
+  "dataset": "MBPP",
+  "task_id": "626",
+  "problem_summary": "Write a python function to find the area of the largest triangle that can be ins",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpw3jg9zj3.py\", line 4, in <module>\n    assert triangle_area(-1) == None\n           ^^^^^^^^^^^^^\nNameError: name 'triangle_area' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpw3jg9zj3.py\", line 4, in <module>\n    assert triangle_area(-1) == None\n           ^^^^^^^^^^^^^\nNameError: name 'triangle_area' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'triangle_area' is not defined",
+  "execution_time": 0.245908,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

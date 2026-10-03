@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a function to that returns true if the input string contains sequences of lowercase letters joined with an underscore and false otherwise.
+
+Example test: assert text_lowercase_underscore("aab_cbbbc")==(True)
+[/INST]

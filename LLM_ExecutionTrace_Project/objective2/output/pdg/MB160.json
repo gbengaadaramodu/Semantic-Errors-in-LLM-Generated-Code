@@ -1,0 +1,105 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def merge_dictionaries_three(dict1, dict2, dict3):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "dict1",
+        "dict2",
+        "dict3",
+        "merge_dictionaries_three"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 3,
+      "runtime_values": {
+        "dict1": [
+          "{'R': 'Red', 'B': 'Black', 'P': 'Pink'}",
+          "{'R': 'Red', 'B': 'Black', 'P': 'Pink'}"
+        ],
+        "dict2": [
+          "{'G': 'Green', 'W': 'White'}",
+          "{'G': 'Green', 'W': 'White'}"
+        ],
+        "dict3": [
+          "{'O': 'Orange', 'W': 'White', 'B': 'Black'}",
+          "{'L': 'lavender', 'B': 'Blue'}"
+        ]
+      },
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "return {**dict1, **dict2, **dict3}",
+      "statement_type": "Return",
+      "reads": [
+        "dict1",
+        "dict2",
+        "dict3"
+      ],
+      "writes": [],
+      "function_name": "merge_dictionaries_three",
+      "executed": true,
+      "execution_count": 4,
+      "runtime_values": {
+        "dict1": [
+          "{'R': 'Red', 'B': 'Black', 'P': 'Pink'}",
+          "{'R': 'Red', 'B': 'Black', 'P': 'Pink'}",
+          "{'R': 'Red', 'B': 'Black', 'P': 'Pink'}",
+          "{'R': 'Red', 'B': 'Black', 'P': 'Pink'}"
+        ],
+        "dict2": [
+          "{'G': 'Green', 'W': 'White'}",
+          "{'G': 'Green', 'W': 'White'}",
+          "{'G': 'Green', 'W': 'White'}",
+          "{'G': 'Green', 'W': 'White'}"
+        ],
+        "dict3": [
+          "{'O': 'Orange', 'W': 'White', 'B': 'Black'}",
+          "{'O': 'Orange', 'W': 'White', 'B': 'Black'}",
+          "{'L': 'lavender', 'B': 'Blue'}",
+          "{'L': 'lavender', 'B': 'Blue'}"
+        ]
+      },
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "dict1",
+      "label": "DATA(dict1)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "dict2",
+      "label": "DATA(dict2)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "dict3",
+      "label": "DATA(dict3)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    2
+  ]
+}

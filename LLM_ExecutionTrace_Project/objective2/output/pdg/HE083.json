@@ -1,0 +1,87 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def add_elements(arr, k):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "arr",
+        "k",
+        "add_elements"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 3,
+      "runtime_values": {
+        "arr": [
+          "[1, -2, -3, 41, 57, 76, 87, 88, 99]",
+          "[111, 121, 3, 4000, 5, 6]"
+        ],
+        "k": [
+          "3",
+          "2"
+        ]
+      },
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "return sum(arr[:k])",
+      "statement_type": "Return",
+      "reads": [
+        "arr",
+        "k",
+        "sum"
+      ],
+      "writes": [],
+      "function_name": "add_elements",
+      "executed": true,
+      "execution_count": 4,
+      "runtime_values": {
+        "arr": [
+          "[1, -2, -3, 41, 57, 76, 87, 88, 99]",
+          "[1, -2, -3, 41, 57, 76, 87, 88, 99]",
+          "[111, 121, 3, 4000, 5, 6]",
+          "[111, 121, 3, 4000, 5, 6]"
+        ],
+        "k": [
+          "3",
+          "3",
+          "2",
+          "2"
+        ]
+      },
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "arr",
+      "label": "DATA(arr)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "k",
+      "label": "DATA(k)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    2
+  ]
+}

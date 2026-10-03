@@ -1,0 +1,73 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def fix_spaces(text):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "text",
+        "fix_spaces"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 5,
+      "runtime_values": {
+        "text": [
+          "Example",
+          "Mudasir Hanif ",
+          "Yellow Yellow  Dirty  Fellow",
+          "Exa   mple"
+        ]
+      },
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "return text.replace(\" \", \"_\").replace(\"  \", \"-\")",
+      "statement_type": "Return",
+      "reads": [
+        "text"
+      ],
+      "writes": [],
+      "function_name": "fix_spaces",
+      "executed": true,
+      "execution_count": 8,
+      "runtime_values": {
+        "text": [
+          "Example",
+          "Example",
+          "Mudasir Hanif ",
+          "Mudasir Hanif ",
+          "Yellow Yellow  Dirty  Fellow",
+          "Yellow Yellow  Dirty  Fellow",
+          "Exa   mple",
+          "Exa   mple"
+        ]
+      },
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "text",
+      "label": "DATA(text)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    2
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "trace_id": "HE097",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/136",
+  "problem_summary": "\ndef largest_smallest_integers(lst):\n    '''\n    Create a function that returns ",
+  "execution_status": "Completed",
+  "stdout": "",
+  "stderr": "",
+  "traceback": "",
+  "exception_type": "",
+  "exception_message": "",
+  "execution_time": 0.128362,
+  "timed_out": false,
+  "exit_code": 0,
+  "tests_passed": true,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

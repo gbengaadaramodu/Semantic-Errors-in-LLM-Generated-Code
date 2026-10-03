@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB306",
+  "dataset": "MBPP",
+  "task_id": "412",
+  "problem_summary": "Write a python function to remove odd numbers from a given list.",
+  "execution_status": "Completed",
+  "stdout": "",
+  "stderr": "",
+  "traceback": "",
+  "exception_type": "",
+  "exception_message": "",
+  "execution_time": 0.148539,
+  "timed_out": false,
+  "exit_code": 0,
+  "tests_passed": true,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

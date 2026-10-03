@@ -1,0 +1,11 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def round_and_sum(my_list): | W:my_list,round_and_sum", fillcolor="lightgreen"];
+    "2" [label="L2: return sum(round(num) for num in my_list) * len(my_list) | W:num | R:len,my_list,num,round,sum", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(my_list)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

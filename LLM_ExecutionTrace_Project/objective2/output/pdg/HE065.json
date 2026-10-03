@@ -1,0 +1,279 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def count_upper(s):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "s",
+        "count_upper"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "s": [
+          "aBCdEf"
+        ]
+      },
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "count = 0",
+      "statement_type": "Assign",
+      "reads": [],
+      "writes": [
+        "count"
+      ],
+      "function_name": "count_upper",
+      "executed": true,
+      "execution_count": 1,
+      "runtime_values": {
+        "s": [
+          "aBCdEf"
+        ]
+      },
+      "failure_related": false
+    },
+    "3": {
+      "node_id": 3,
+      "line_number": 3,
+      "source_code": "for i, c in enumerate(s):",
+      "statement_type": "For",
+      "reads": [
+        "enumerate",
+        "s"
+      ],
+      "writes": [
+        "c",
+        "i"
+      ],
+      "function_name": "count_upper",
+      "executed": true,
+      "execution_count": 7,
+      "runtime_values": {
+        "s": [
+          "aBCdEf",
+          "aBCdEf",
+          "aBCdEf",
+          "aBCdEf",
+          "aBCdEf",
+          "aBCdEf",
+          "aBCdEf"
+        ],
+        "count": [
+          "0",
+          "0",
+          "0",
+          "1",
+          "1",
+          "2",
+          "2"
+        ],
+        "i": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "c": [
+          "a",
+          "B",
+          "C",
+          "d",
+          "E",
+          "f"
+        ]
+      },
+      "failure_related": false
+    },
+    "4": {
+      "node_id": 4,
+      "line_number": 4,
+      "source_code": "if i % 2 == 0 and c.isupper():",
+      "statement_type": "If",
+      "reads": [
+        "c",
+        "i"
+      ],
+      "writes": [],
+      "function_name": "count_upper",
+      "executed": true,
+      "execution_count": 6,
+      "runtime_values": {
+        "s": [
+          "aBCdEf",
+          "aBCdEf",
+          "aBCdEf",
+          "aBCdEf",
+          "aBCdEf",
+          "aBCdEf"
+        ],
+        "count": [
+          "0",
+          "0",
+          "0",
+          "1",
+          "1",
+          "2"
+        ],
+        "i": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "c": [
+          "a",
+          "B",
+          "C",
+          "d",
+          "E",
+          "f"
+        ]
+      },
+      "failure_related": false
+    },
+    "5": {
+      "node_id": 5,
+      "line_number": 5,
+      "source_code": "count += 1",
+      "statement_type": "AugAssign",
+      "reads": [],
+      "writes": [
+        "count"
+      ],
+      "function_name": "count_upper",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "s": [
+          "aBCdEf",
+          "aBCdEf"
+        ],
+        "count": [
+          "0",
+          "1"
+        ],
+        "i": [
+          "2",
+          "4"
+        ],
+        "c": [
+          "C",
+          "E"
+        ]
+      },
+      "failure_related": false
+    },
+    "6": {
+      "node_id": 6,
+      "line_number": 6,
+      "source_code": "return count",
+      "statement_type": "Return",
+      "reads": [
+        "count"
+      ],
+      "writes": [],
+      "function_name": "count_upper",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "s": [
+          "aBCdEf",
+          "aBCdEf"
+        ],
+        "count": [
+          "2",
+          "2"
+        ],
+        "i": [
+          "5",
+          "5"
+        ],
+        "c": [
+          "f",
+          "f"
+        ]
+      },
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 3,
+      "dependency_type": "DATA",
+      "variable": "s",
+      "label": "DATA(s)"
+    },
+    {
+      "source_id": 3,
+      "target_id": 4,
+      "dependency_type": "DATA",
+      "variable": "c",
+      "label": "DATA(c)"
+    },
+    {
+      "source_id": 3,
+      "target_id": 4,
+      "dependency_type": "DATA",
+      "variable": "i",
+      "label": "DATA(i)"
+    },
+    {
+      "source_id": 5,
+      "target_id": 6,
+      "dependency_type": "DATA",
+      "variable": "count",
+      "label": "DATA(count)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 3,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 3,
+      "target_id": 4,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(For)"
+    },
+    {
+      "source_id": 4,
+      "target_id": 5,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(If)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 6,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    6
+  ]
+}

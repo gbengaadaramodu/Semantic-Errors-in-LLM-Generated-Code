@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB384",
+  "dataset": "MBPP",
+  "task_id": "576",
+  "problem_summary": "Write a python function to check whether a list is sublist of another or not.",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpirbtmw5m.py\", line 4, in <module>\n    assert is_Sub_Array([1,4,3,5],[1,2]) == False\n           ^^^^^^^^^^^^\nNameError: name 'is_Sub_Array' is not defined. Did you mean: 'is_subarray'?\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpirbtmw5m.py\", line 4, in <module>\n    assert is_Sub_Array([1,4,3,5],[1,2]) == False\n           ^^^^^^^^^^^^\nNameError: name 'is_Sub_Array' is not defined. Did you mean: 'is_subarray'?",
+  "exception_type": "NameError",
+  "exception_message": "name 'is_Sub_Array' is not defined. Did you mean: 'is_subarray'?",
+  "execution_time": 0.175725,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

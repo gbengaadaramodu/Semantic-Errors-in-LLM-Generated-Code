@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB227",
+  "dataset": "MBPP",
+  "task_id": "398",
+  "problem_summary": "Write a function to compute the sum of digits of each number of a given list.",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpoo1p1wbn.py\", line 4, in <module>\n    assert sum_of_digits([10,2,56])==14\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpoo1p1wbn.py\", line 4, in <module>\n    assert sum_of_digits([10,2,56])==14\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+  "exception_type": "AssertionError",
+  "exception_message": "",
+  "execution_time": 0.514277,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": "benchmark_test",
+  "assertion_failed": true,
+  "parser_prediction": ""
+}

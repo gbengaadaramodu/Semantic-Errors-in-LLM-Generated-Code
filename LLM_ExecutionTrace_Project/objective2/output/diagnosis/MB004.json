@@ -1,0 +1,395 @@
+{
+  "trace_id": "MB004",
+  "dataset": "MBPP",
+  "task_id": "280",
+  "error_category": "Runtime Exception",
+  "analysis_status": "ANALYZED",
+  "skip_reason": null,
+  "input_record": {
+    "trace_id": "MB004",
+    "dataset": "MBPP",
+    "task_id": "280",
+    "problem_summary": "Write a function that takes in an array and element and returns a tuple containi",
+    "execution_status": "Failed",
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp2r879atd.py\", line 8, in <module>\n    assert sequential_search([11,23,58,31,56,77,43,12,65,19],31) == (True, 3)\n           ^^^^^^^^^^^^^^^^^\nNameError: name 'sequential_search' is not defined\n",
+    "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp2r879atd.py\", line 8, in <module>\n    assert sequential_search([11,23,58,31,56,77,43,12,65,19],31) == (True, 3)\n           ^^^^^^^^^^^^^^^^^\nNameError: name 'sequential_search' is not defined",
+    "exception_type": "NameError",
+    "exception_message": "name 'sequential_search' is not defined",
+    "execution_time": 0.234401,
+    "timed_out": false,
+    "exit_code": 1,
+    "tests_passed": false,
+    "tests_failed": 0,
+    "expected_output": null,
+    "actual_output": null,
+    "assertion_source": null,
+    "assertion_failed": false,
+    "parser_prediction": "Runtime Exception"
+  },
+  "scm": {
+    "task_id": "280",
+    "nodes": [
+      {
+        "node_id": "S",
+        "variable_name": "Specification",
+        "symbol": "S",
+        "label": "Specification"
+      },
+      {
+        "node_id": "C",
+        "variable_name": "GeneratedCode",
+        "symbol": "C",
+        "label": "Generated Code"
+      },
+      {
+        "node_id": "E",
+        "variable_name": "ExecutionTrace",
+        "symbol": "E",
+        "label": "Execution Trace"
+      },
+      {
+        "node_id": "T",
+        "variable_name": "TestSuite",
+        "symbol": "T",
+        "label": "Test Suite"
+      },
+      {
+        "node_id": "O",
+        "variable_name": "Outcome",
+        "symbol": "O",
+        "label": "Outcome"
+      }
+    ],
+    "edges": [
+      {
+        "source": "S",
+        "target": "C",
+        "relationship": "generates"
+      },
+      {
+        "source": "C",
+        "target": "E",
+        "relationship": "produces"
+      },
+      {
+        "source": "T",
+        "target": "E",
+        "relationship": "evaluates"
+      },
+      {
+        "source": "E",
+        "target": "O",
+        "relationship": "determines"
+      }
+    ],
+    "variables": {
+      "S": {
+        "name": "Specification",
+        "symbol": "S",
+        "description": "Problem description, prompt, and target function signature",
+        "value": "Write a function that takes in an array and element and returns a tuple containi"
+      },
+      "C": {
+        "name": "GeneratedCode",
+        "symbol": "C",
+        "description": "LLM-generated Python source code implementation",
+        "value": "def occurrence_substring(string, substring):\n    index = string.find(substring)\n    if index == -1:\n        return None\n    else:\n        return (substring, index, index + len(substring))"
+      },
+      "E": {
+        "name": "ExecutionTrace",
+        "symbol": "E",
+        "description": "Observable runtime trace events, variable states, and stdout/stderr",
+        "value": "status=Failed, exc=NameError, msg=name 'sequential_search' is not defined"
+      },
+      "T": {
+        "name": "TestSuite",
+        "symbol": "T",
+        "description": "Benchmark assertions, inputs, and check function harness",
+        "value": "assert sequential_search([11,23,58,31,56,77,43,12,65,19],31) == (True, 3)\nassert sequential_search(["
+      },
+      "O": {
+        "name": "Outcome",
+        "symbol": "O",
+        "description": "Final test execution outcome (Completed/Failed/Timeout)",
+        "value": "Failed"
+      }
+    }
+  },
+  "pdg": {
+    "nodes": {
+      "1": {
+        "node_id": 1,
+        "line_number": 1,
+        "source_code": "def occurrence_substring(string, substring):",
+        "statement_type": "FunctionDef",
+        "reads": [],
+        "writes": [
+          "string",
+          "substring",
+          "occurrence_substring"
+        ],
+        "function_name": "<module>",
+        "executed": true,
+        "execution_count": 1,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "2": {
+        "node_id": 2,
+        "line_number": 2,
+        "source_code": "index = string.find(substring)",
+        "statement_type": "Assign",
+        "reads": [
+          "string",
+          "substring"
+        ],
+        "writes": [
+          "index"
+        ],
+        "function_name": "occurrence_substring",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "3": {
+        "node_id": 3,
+        "line_number": 3,
+        "source_code": "if index == -1:",
+        "statement_type": "If",
+        "reads": [
+          "index"
+        ],
+        "writes": [],
+        "function_name": "occurrence_substring",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "4": {
+        "node_id": 4,
+        "line_number": 4,
+        "source_code": "return None",
+        "statement_type": "Return",
+        "reads": [],
+        "writes": [],
+        "function_name": "occurrence_substring",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "5": {
+        "node_id": 5,
+        "line_number": 6,
+        "source_code": "return (substring, index, index + len(substring))",
+        "statement_type": "Return",
+        "reads": [
+          "index",
+          "len",
+          "substring"
+        ],
+        "writes": [],
+        "function_name": "occurrence_substring",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": true
+      }
+    },
+    "edges": [
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "DATA",
+        "variable": "string",
+        "label": "DATA(string)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "DATA",
+        "variable": "substring",
+        "label": "DATA(substring)"
+      },
+      {
+        "source_id": 2,
+        "target_id": 3,
+        "dependency_type": "DATA",
+        "variable": "index",
+        "label": "DATA(index)"
+      },
+      {
+        "source_id": 2,
+        "target_id": 5,
+        "dependency_type": "DATA",
+        "variable": "index",
+        "label": "DATA(index)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 5,
+        "dependency_type": "DATA",
+        "variable": "substring",
+        "label": "DATA(substring)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 3,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 3,
+        "target_id": 4,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(If)"
+      },
+      {
+        "source_id": 3,
+        "target_id": 5,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(If)"
+      }
+    ],
+    "entry_node_id": 1,
+    "failure_node_ids": [
+      5
+    ]
+  },
+  "runtime_events_count": 5,
+  "failure_line": 6,
+  "failure_statement": "return (substring, index, index + len(substring))",
+  "candidates": [
+    {
+      "rank": 1,
+      "node_id": 5,
+      "line_number": 6,
+      "statement_code": "return (substring, index, index + len(substring))",
+      "variable_name": "index",
+      "observed_value": null,
+      "expected_value": "(True, 3)",
+      "proximity_score": 1.0,
+      "dependency_score": 1.0,
+      "explanation": "Reached via reverse traversal (distance=0, type=Return)"
+    },
+    {
+      "rank": 2,
+      "node_id": 2,
+      "line_number": 2,
+      "statement_code": "index = string.find(substring)",
+      "variable_name": "index",
+      "observed_value": null,
+      "expected_value": null,
+      "proximity_score": 0.85,
+      "dependency_score": 0.9,
+      "explanation": "Reached via reverse traversal (distance=1, type=Assign)"
+    },
+    {
+      "rank": 3,
+      "node_id": 3,
+      "line_number": 3,
+      "statement_code": "if index == -1:",
+      "variable_name": "index",
+      "observed_value": null,
+      "expected_value": null,
+      "proximity_score": 0.85,
+      "dependency_score": 0.7,
+      "explanation": "Reached via reverse traversal (distance=1, type=If)"
+    }
+  ],
+  "critical_variable": null,
+  "counterfactual_results": [
+    {
+      "candidate_rank": 1,
+      "intervention": {
+        "target_variable": "index",
+        "target_line": 6,
+        "observed_value": "None",
+        "counterfactual_value": "(True, 3)",
+        "operation_type": "AST_transform",
+        "modified_code": "def occurrence_substring(string, substring):\n    index = string.find(substring)\n    if index == -1:\n        return None\n    else:\n        index = (True, 3)\n        return (substring, index, index + len(substring))"
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "Failed",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "FALSE",
+      "execution_time": 0.2225,
+      "status": "EXECUTED",
+      "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+    },
+    {
+      "candidate_rank": 2,
+      "intervention": {
+        "target_variable": "index",
+        "target_line": 2,
+        "observed_value": "None",
+        "counterfactual_value": "None",
+        "operation_type": "AST_transform",
+        "modified_code": "def occurrence_substring(string, substring):\n    index = None\n    if index == -1:\n        return None\n    else:\n        return (substring, index, index + len(substring))"
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "Failed",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "FALSE",
+      "execution_time": 0.2348,
+      "status": "EXECUTED",
+      "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+    },
+    {
+      "candidate_rank": 3,
+      "intervention": {
+        "target_variable": "index",
+        "target_line": 3,
+        "observed_value": "None",
+        "counterfactual_value": "None",
+        "operation_type": "AST_transform",
+        "modified_code": "def occurrence_substring(string, substring):\n    index = string.find(substring)\n    if index != -1:\n        return None\n    else:\n        return (substring, index, index + len(substring))"
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "Failed",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "FALSE",
+      "execution_time": 0.2209,
+      "status": "EXECUTED",
+      "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+    }
+  ],
+  "fault_location": {
+    "file": "MB004.py",
+    "line_number": 6,
+    "statement_code": "return (substring, index, index + len(substring))",
+    "function_name": "sequential_search",
+    "causal_variable": "index",
+    "evidence_score": 0.5,
+    "confidence": 0.3
+  },
+  "root_cause": {
+    "root_cause_status": "UNRESOLVED",
+    "candidate_explanation": "Runtime exception (NameError: name 'sequential_search' is not defined) triggered at statement 'return (substring, index, index + len(substring))' (line 6) involving variable 'index'.",
+    "causal_variable": "index",
+    "fault_statement": "return (substring, index, index + len(substring))",
+    "fault_line": 6,
+    "evidence_summary": "Reverse PDG traversal traced failure from line 1 to statement line 6. Structural dependency identified; counterfactual validation unconfirmed or unresolved.",
+    "counterfactual_validated": false,
+    "confidence": 0.3
+  },
+  "ground_truth_matched": null,
+  "ground_truth_fault_line": null,
+  "execution_time": 0.6913
+}

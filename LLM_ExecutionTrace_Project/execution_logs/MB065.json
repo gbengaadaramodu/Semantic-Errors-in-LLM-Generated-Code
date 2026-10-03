@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB065",
+  "dataset": "MBPP",
+  "task_id": "16",
+  "problem_summary": "Write a function to that returns true if the input string contains sequences of ",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpxyowlolw.py\", line 4, in <module>\n    assert text_lowercase_underscore(\"aab_cbbbc\")==(True)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\nNameError: name 'text_lowercase_underscore' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpxyowlolw.py\", line 4, in <module>\n    assert text_lowercase_underscore(\"aab_cbbbc\")==(True)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\nNameError: name 'text_lowercase_underscore' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'text_lowercase_underscore' is not defined",
+  "execution_time": 0.255622,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

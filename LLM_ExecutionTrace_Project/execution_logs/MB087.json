@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB087",
+  "dataset": "MBPP",
+  "task_id": "117",
+  "problem_summary": "Write a function to convert all possible convertible elements in a list of lists",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpournq85t.py\", line 7, in <module>\n    assert list_to_float( [(\"3\", \"4\"), (\"1\", \"26.45\"), (\"7.32\", \"8\"), (\"4\", \"8\")] ) == [(3.0, 4.0), (1.0, 26.45), (7.32, 8.0), (4.0, 8.0)]\n           ^^^^^^^^^^^^^\nNameError: name 'list_to_float' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpournq85t.py\", line 7, in <module>\n    assert list_to_float( [(\"3\", \"4\"), (\"1\", \"26.45\"), (\"7.32\", \"8\"), (\"4\", \"8\")] ) == [(3.0, 4.0), (1.0, 26.45), (7.32, 8.0), (4.0, 8.0)]\n           ^^^^^^^^^^^^^\nNameError: name 'list_to_float' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'list_to_float' is not defined",
+  "execution_time": 0.230115,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

@@ -1,0 +1,11 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def upper_ctr(s): | W:s,upper_ctr", fillcolor="lightgreen"];
+    "2" [label="L2: return sum(1 for c in s if c.isupper()) | W:c | R:c,s,sum", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(s)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

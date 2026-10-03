@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB036",
+  "dataset": "MBPP",
+  "task_id": "113",
+  "problem_summary": "Write a function to check if a string represents an integer or not.",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmph18t9s14.py\", line 15, in <module>\n    assert check_integer(\"python\")==False\n           ^^^^^^^^^^^^^\nNameError: name 'check_integer' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmph18t9s14.py\", line 15, in <module>\n    assert check_integer(\"python\")==False\n           ^^^^^^^^^^^^^\nNameError: name 'check_integer' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'check_integer' is not defined",
+  "execution_time": 0.259114,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

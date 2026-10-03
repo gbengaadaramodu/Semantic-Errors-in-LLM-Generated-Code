@@ -1,0 +1,11 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def reverse_string_list(my_list): | W:my_list,reverse_string_list", fillcolor="lightgreen"];
+    "2" [label="L2: return [''.join(reversed(s)) for s in my_list] | W:s | R:my_list,reversed,s", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(my_list)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

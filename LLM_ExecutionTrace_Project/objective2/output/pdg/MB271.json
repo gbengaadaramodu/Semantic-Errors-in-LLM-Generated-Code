@@ -1,0 +1,81 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def tuple_to_dict(my_tuple):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "my_tuple",
+        "tuple_to_dict"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "my_tuple": [
+          "(1, 5, 7, 10, 13, 5)"
+        ]
+      },
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "return {my_tuple[i]: my_tuple[i+1] for i in range(len(my_tuple)-1)}",
+      "statement_type": "Return",
+      "reads": [
+        "i",
+        "len",
+        "my_tuple",
+        "range"
+      ],
+      "writes": [
+        "i"
+      ],
+      "function_name": "tuple_to_dict",
+      "executed": true,
+      "execution_count": 7,
+      "runtime_values": {
+        "my_tuple": [
+          "(1, 5, 7, 10, 13, 5)",
+          "(1, 5, 7, 10, 13, 5)",
+          "(1, 5, 7, 10, 13, 5)",
+          "(1, 5, 7, 10, 13, 5)",
+          "(1, 5, 7, 10, 13, 5)",
+          "(1, 5, 7, 10, 13, 5)",
+          "(1, 5, 7, 10, 13, 5)"
+        ],
+        "i": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      },
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "my_tuple",
+      "label": "DATA(my_tuple)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    2
+  ]
+}

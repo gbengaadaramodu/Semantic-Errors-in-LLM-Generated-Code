@@ -1,0 +1,21 @@
+[
+  {
+    "candidate_rank": 1,
+    "intervention": {
+      "target_variable": "x",
+      "target_line": 2,
+      "observed_value": "7",
+      "counterfactual_value": "[1, 7]",
+      "operation_type": "AST_transform",
+      "modified_code": "def extract_index_list(l1, l2, l3):\n    x = [1, 7]\n    return [x for x in l1 if x in l2 and x in l3]"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.1878,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  }
+]

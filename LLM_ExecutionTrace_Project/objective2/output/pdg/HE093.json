@@ -1,0 +1,66 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def car_race_collision(n: int):",
+      "statement_type": "FunctionDef",
+      "reads": [
+        "int"
+      ],
+      "writes": [
+        "n",
+        "car_race_collision"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "n": [
+          "2"
+        ]
+      },
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "return n * (n - 1) // 2",
+      "statement_type": "Return",
+      "reads": [
+        "n"
+      ],
+      "writes": [],
+      "function_name": "car_race_collision",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "n": [
+          "2",
+          "2"
+        ]
+      },
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "n",
+      "label": "DATA(n)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    2
+  ]
+}

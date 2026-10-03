@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a function that checks if a strings contains 'z', except at the start and end of the word.
+
+Example test: assert text_match_wordz_middle("pythonzabc.")==True
+[/INST]

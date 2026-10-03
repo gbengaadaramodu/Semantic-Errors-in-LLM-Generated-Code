@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a python function to find the area of the largest triangle that can be inscribed in a semicircle with a given radius.
+
+Example test: assert triangle_area(-1) == None
+[/INST]

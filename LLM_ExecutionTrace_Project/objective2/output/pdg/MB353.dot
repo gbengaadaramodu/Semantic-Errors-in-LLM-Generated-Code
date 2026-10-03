@@ -1,0 +1,12 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def common_element(list1, list2): | W:list1,list2,common_element", fillcolor="lightgreen"];
+    "2" [label="L2: return any(x in list2 for x in list1) | W:x | R:any,list1,list2,x", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(list1)", style="solid"];
+    "1" -> "2" [label="DATA(list2)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

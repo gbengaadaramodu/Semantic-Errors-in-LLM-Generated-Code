@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a function to move all the numbers to the end of the given string.
+
+Example test: assert move_num('I1love143you55three3000thousand') == 'Iloveyouthreethousand1143553000'
+[/INST]

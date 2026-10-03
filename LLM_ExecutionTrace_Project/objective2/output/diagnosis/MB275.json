@@ -1,0 +1,1091 @@
+{
+  "trace_id": "MB275",
+  "dataset": "MBPP",
+  "task_id": "160",
+  "error_category": "Wrong-Output Error",
+  "analysis_status": "ANALYZED",
+  "skip_reason": null,
+  "input_record": {
+    "trace_id": "MB275",
+    "dataset": "MBPP",
+    "task_id": "160",
+    "problem_summary": "Write a function that returns integers x and y that satisfy ax + by = n as a tup",
+    "execution_status": "Failed",
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp_lk0ipxm.py\", line 17, in <module>\n    assert find_solution(2, 3, 7) == (2, 1)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+    "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp_lk0ipxm.py\", line 17, in <module>\n    assert find_solution(2, 3, 7) == (2, 1)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+    "exception_type": "AssertionError",
+    "exception_message": "",
+    "execution_time": 0.219084,
+    "timed_out": false,
+    "exit_code": 1,
+    "tests_passed": false,
+    "tests_failed": 0,
+    "expected_output": null,
+    "actual_output": null,
+    "assertion_source": "benchmark_test",
+    "assertion_failed": true,
+    "parser_prediction": "Wrong-Output Error"
+  },
+  "scm": {
+    "task_id": "160",
+    "nodes": [
+      {
+        "node_id": "S",
+        "variable_name": "Specification",
+        "symbol": "S",
+        "label": "Specification"
+      },
+      {
+        "node_id": "C",
+        "variable_name": "GeneratedCode",
+        "symbol": "C",
+        "label": "Generated Code"
+      },
+      {
+        "node_id": "E",
+        "variable_name": "ExecutionTrace",
+        "symbol": "E",
+        "label": "Execution Trace"
+      },
+      {
+        "node_id": "T",
+        "variable_name": "TestSuite",
+        "symbol": "T",
+        "label": "Test Suite"
+      },
+      {
+        "node_id": "O",
+        "variable_name": "Outcome",
+        "symbol": "O",
+        "label": "Outcome"
+      }
+    ],
+    "edges": [
+      {
+        "source": "S",
+        "target": "C",
+        "relationship": "generates"
+      },
+      {
+        "source": "C",
+        "target": "E",
+        "relationship": "produces"
+      },
+      {
+        "source": "T",
+        "target": "E",
+        "relationship": "evaluates"
+      },
+      {
+        "source": "E",
+        "target": "O",
+        "relationship": "determines"
+      }
+    ],
+    "variables": {
+      "S": {
+        "name": "Specification",
+        "symbol": "S",
+        "description": "Problem description, prompt, and target function signature",
+        "value": "Write a function that returns integers x and y that satisfy ax + by = n as a tup"
+      },
+      "C": {
+        "name": "GeneratedCode",
+        "symbol": "C",
+        "description": "LLM-generated Python source code implementation",
+        "value": "def find_solution(a, b, n):\n    x = 0\n    y = 0\n    for i in range(n):\n        if a*i + b*y == n:\n            x = i\n            break\n    for j in range(n):\n        if a*x + b*j == n:\n            y = "
+      },
+      "E": {
+        "name": "ExecutionTrace",
+        "symbol": "E",
+        "description": "Observable runtime trace events, variable states, and stdout/stderr",
+        "value": "status=Failed, exc=AssertionError, msg="
+      },
+      "T": {
+        "name": "TestSuite",
+        "symbol": "T",
+        "description": "Benchmark assertions, inputs, and check function harness",
+        "value": "assert find_solution(2, 3, 7) == (2, 1)\nassert find_solution(4, 2, 7) == None\nassert find_solution(1"
+      },
+      "O": {
+        "name": "Outcome",
+        "symbol": "O",
+        "description": "Final test execution outcome (Completed/Failed/Timeout)",
+        "value": "Failed"
+      }
+    }
+  },
+  "pdg": {
+    "nodes": {
+      "1": {
+        "node_id": 1,
+        "line_number": 1,
+        "source_code": "def find_solution(a, b, n):",
+        "statement_type": "FunctionDef",
+        "reads": [],
+        "writes": [
+          "a",
+          "b",
+          "n",
+          "find_solution"
+        ],
+        "function_name": "<module>",
+        "executed": true,
+        "execution_count": 2,
+        "runtime_values": {
+          "a": [
+            "2"
+          ],
+          "b": [
+            "3"
+          ],
+          "n": [
+            "7"
+          ]
+        },
+        "failure_related": false
+      },
+      "2": {
+        "node_id": 2,
+        "line_number": 2,
+        "source_code": "x = 0",
+        "statement_type": "Assign",
+        "reads": [],
+        "writes": [
+          "x"
+        ],
+        "function_name": "find_solution",
+        "executed": true,
+        "execution_count": 1,
+        "runtime_values": {
+          "a": [
+            "2"
+          ],
+          "b": [
+            "3"
+          ],
+          "n": [
+            "7"
+          ]
+        },
+        "failure_related": false
+      },
+      "3": {
+        "node_id": 3,
+        "line_number": 3,
+        "source_code": "y = 0",
+        "statement_type": "Assign",
+        "reads": [],
+        "writes": [
+          "y"
+        ],
+        "function_name": "find_solution",
+        "executed": true,
+        "execution_count": 1,
+        "runtime_values": {
+          "a": [
+            "2"
+          ],
+          "b": [
+            "3"
+          ],
+          "n": [
+            "7"
+          ],
+          "x": [
+            "0"
+          ]
+        },
+        "failure_related": false
+      },
+      "4": {
+        "node_id": 4,
+        "line_number": 4,
+        "source_code": "for i in range(n):",
+        "statement_type": "For",
+        "reads": [
+          "n",
+          "range"
+        ],
+        "writes": [
+          "i"
+        ],
+        "function_name": "find_solution",
+        "executed": true,
+        "execution_count": 8,
+        "runtime_values": {
+          "a": [
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2"
+          ],
+          "b": [
+            "3",
+            "3",
+            "3",
+            "3",
+            "3",
+            "3",
+            "3",
+            "3"
+          ],
+          "n": [
+            "7",
+            "7",
+            "7",
+            "7",
+            "7",
+            "7",
+            "7",
+            "7"
+          ],
+          "x": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "y": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "i": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ]
+        },
+        "failure_related": false
+      },
+      "5": {
+        "node_id": 5,
+        "line_number": 5,
+        "source_code": "if a*i + b*y == n:",
+        "statement_type": "If",
+        "reads": [
+          "a",
+          "b",
+          "i",
+          "n",
+          "y"
+        ],
+        "writes": [],
+        "function_name": "find_solution",
+        "executed": true,
+        "execution_count": 7,
+        "runtime_values": {
+          "a": [
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2"
+          ],
+          "b": [
+            "3",
+            "3",
+            "3",
+            "3",
+            "3",
+            "3",
+            "3"
+          ],
+          "n": [
+            "7",
+            "7",
+            "7",
+            "7",
+            "7",
+            "7",
+            "7"
+          ],
+          "x": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "y": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "i": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ]
+        },
+        "failure_related": false
+      },
+      "6": {
+        "node_id": 6,
+        "line_number": 6,
+        "source_code": "x = i",
+        "statement_type": "Assign",
+        "reads": [
+          "i"
+        ],
+        "writes": [
+          "x"
+        ],
+        "function_name": "find_solution",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "7": {
+        "node_id": 7,
+        "line_number": 7,
+        "source_code": "break",
+        "statement_type": "Break",
+        "reads": [],
+        "writes": [],
+        "function_name": "find_solution",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "8": {
+        "node_id": 8,
+        "line_number": 8,
+        "source_code": "for j in range(n):",
+        "statement_type": "For",
+        "reads": [
+          "n",
+          "range"
+        ],
+        "writes": [
+          "j"
+        ],
+        "function_name": "find_solution",
+        "executed": true,
+        "execution_count": 8,
+        "runtime_values": {
+          "a": [
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2"
+          ],
+          "b": [
+            "3",
+            "3",
+            "3",
+            "3",
+            "3",
+            "3",
+            "3",
+            "3"
+          ],
+          "n": [
+            "7",
+            "7",
+            "7",
+            "7",
+            "7",
+            "7",
+            "7",
+            "7"
+          ],
+          "x": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "y": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "i": [
+            "6",
+            "6",
+            "6",
+            "6",
+            "6",
+            "6",
+            "6",
+            "6"
+          ],
+          "j": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ]
+        },
+        "failure_related": false
+      },
+      "9": {
+        "node_id": 9,
+        "line_number": 9,
+        "source_code": "if a*x + b*j == n:",
+        "statement_type": "If",
+        "reads": [
+          "a",
+          "b",
+          "j",
+          "n",
+          "x"
+        ],
+        "writes": [],
+        "function_name": "find_solution",
+        "executed": true,
+        "execution_count": 7,
+        "runtime_values": {
+          "a": [
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2",
+            "2"
+          ],
+          "b": [
+            "3",
+            "3",
+            "3",
+            "3",
+            "3",
+            "3",
+            "3"
+          ],
+          "n": [
+            "7",
+            "7",
+            "7",
+            "7",
+            "7",
+            "7",
+            "7"
+          ],
+          "x": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "y": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "i": [
+            "6",
+            "6",
+            "6",
+            "6",
+            "6",
+            "6",
+            "6"
+          ],
+          "j": [
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6"
+          ]
+        },
+        "failure_related": false
+      },
+      "10": {
+        "node_id": 10,
+        "line_number": 10,
+        "source_code": "y = j",
+        "statement_type": "Assign",
+        "reads": [
+          "j"
+        ],
+        "writes": [
+          "y"
+        ],
+        "function_name": "find_solution",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "11": {
+        "node_id": 11,
+        "line_number": 11,
+        "source_code": "break",
+        "statement_type": "Break",
+        "reads": [],
+        "writes": [],
+        "function_name": "find_solution",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "12": {
+        "node_id": 12,
+        "line_number": 12,
+        "source_code": "if x==0 and y==0:",
+        "statement_type": "If",
+        "reads": [
+          "x",
+          "y"
+        ],
+        "writes": [],
+        "function_name": "find_solution",
+        "executed": true,
+        "execution_count": 1,
+        "runtime_values": {
+          "a": [
+            "2"
+          ],
+          "b": [
+            "3"
+          ],
+          "n": [
+            "7"
+          ],
+          "x": [
+            "0"
+          ],
+          "y": [
+            "0"
+          ],
+          "i": [
+            "6"
+          ],
+          "j": [
+            "6"
+          ]
+        },
+        "failure_related": false
+      },
+      "13": {
+        "node_id": 13,
+        "line_number": 13,
+        "source_code": "return None",
+        "statement_type": "Return",
+        "reads": [],
+        "writes": [],
+        "function_name": "find_solution",
+        "executed": true,
+        "execution_count": 2,
+        "runtime_values": {
+          "a": [
+            "2",
+            "2"
+          ],
+          "b": [
+            "3",
+            "3"
+          ],
+          "n": [
+            "7",
+            "7"
+          ],
+          "x": [
+            "0",
+            "0"
+          ],
+          "y": [
+            "0",
+            "0"
+          ],
+          "i": [
+            "6",
+            "6"
+          ],
+          "j": [
+            "6",
+            "6"
+          ]
+        },
+        "failure_related": false
+      },
+      "14": {
+        "node_id": 14,
+        "line_number": 15,
+        "source_code": "return (x,y)",
+        "statement_type": "Return",
+        "reads": [
+          "x",
+          "y"
+        ],
+        "writes": [],
+        "function_name": "find_solution",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": true
+      }
+    },
+    "edges": [
+      {
+        "source_id": 1,
+        "target_id": 4,
+        "dependency_type": "DATA",
+        "variable": "n",
+        "label": "DATA(n)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 5,
+        "dependency_type": "DATA",
+        "variable": "a",
+        "label": "DATA(a)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 5,
+        "dependency_type": "DATA",
+        "variable": "b",
+        "label": "DATA(b)"
+      },
+      {
+        "source_id": 4,
+        "target_id": 5,
+        "dependency_type": "DATA",
+        "variable": "i",
+        "label": "DATA(i)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 5,
+        "dependency_type": "DATA",
+        "variable": "n",
+        "label": "DATA(n)"
+      },
+      {
+        "source_id": 3,
+        "target_id": 5,
+        "dependency_type": "DATA",
+        "variable": "y",
+        "label": "DATA(y)"
+      },
+      {
+        "source_id": 4,
+        "target_id": 6,
+        "dependency_type": "DATA",
+        "variable": "i",
+        "label": "DATA(i)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 8,
+        "dependency_type": "DATA",
+        "variable": "n",
+        "label": "DATA(n)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 9,
+        "dependency_type": "DATA",
+        "variable": "a",
+        "label": "DATA(a)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 9,
+        "dependency_type": "DATA",
+        "variable": "b",
+        "label": "DATA(b)"
+      },
+      {
+        "source_id": 8,
+        "target_id": 9,
+        "dependency_type": "DATA",
+        "variable": "j",
+        "label": "DATA(j)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 9,
+        "dependency_type": "DATA",
+        "variable": "n",
+        "label": "DATA(n)"
+      },
+      {
+        "source_id": 6,
+        "target_id": 9,
+        "dependency_type": "DATA",
+        "variable": "x",
+        "label": "DATA(x)"
+      },
+      {
+        "source_id": 8,
+        "target_id": 10,
+        "dependency_type": "DATA",
+        "variable": "j",
+        "label": "DATA(j)"
+      },
+      {
+        "source_id": 6,
+        "target_id": 12,
+        "dependency_type": "DATA",
+        "variable": "x",
+        "label": "DATA(x)"
+      },
+      {
+        "source_id": 10,
+        "target_id": 12,
+        "dependency_type": "DATA",
+        "variable": "y",
+        "label": "DATA(y)"
+      },
+      {
+        "source_id": 6,
+        "target_id": 14,
+        "dependency_type": "DATA",
+        "variable": "x",
+        "label": "DATA(x)"
+      },
+      {
+        "source_id": 10,
+        "target_id": 14,
+        "dependency_type": "DATA",
+        "variable": "y",
+        "label": "DATA(y)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 3,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 4,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 4,
+        "target_id": 5,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(For)"
+      },
+      {
+        "source_id": 5,
+        "target_id": 6,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(If)"
+      },
+      {
+        "source_id": 5,
+        "target_id": 7,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(If)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 8,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 8,
+        "target_id": 9,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(For)"
+      },
+      {
+        "source_id": 9,
+        "target_id": 10,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(If)"
+      },
+      {
+        "source_id": 9,
+        "target_id": 11,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(If)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 12,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 12,
+        "target_id": 13,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(If)"
+      },
+      {
+        "source_id": 12,
+        "target_id": 14,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(If)"
+      }
+    ],
+    "entry_node_id": 1,
+    "failure_node_ids": [
+      14
+    ]
+  },
+  "runtime_events_count": 41,
+  "failure_line": 15,
+  "failure_statement": "return (x,y)",
+  "candidates": [
+    {
+      "rank": 1,
+      "node_id": 4,
+      "line_number": 4,
+      "statement_code": "for i in range(n):",
+      "variable_name": "i",
+      "observed_value": "6",
+      "expected_value": null,
+      "proximity_score": 0.7,
+      "dependency_score": 0.81,
+      "explanation": "Reached via reverse traversal (distance=2, type=For)"
+    },
+    {
+      "rank": 2,
+      "node_id": 14,
+      "line_number": 15,
+      "statement_code": "return (x,y)",
+      "variable_name": "x",
+      "observed_value": null,
+      "expected_value": "(2, 1)",
+      "proximity_score": 1.0,
+      "dependency_score": 1.0,
+      "explanation": "Reached via reverse traversal (distance=0, type=Return)"
+    },
+    {
+      "rank": 3,
+      "node_id": 6,
+      "line_number": 6,
+      "statement_code": "x = i",
+      "variable_name": "x",
+      "observed_value": null,
+      "expected_value": null,
+      "proximity_score": 0.85,
+      "dependency_score": 0.9,
+      "explanation": "Reached via reverse traversal (distance=1, type=Assign)"
+    },
+    {
+      "rank": 4,
+      "node_id": 10,
+      "line_number": 10,
+      "statement_code": "y = j",
+      "variable_name": "y",
+      "observed_value": null,
+      "expected_value": null,
+      "proximity_score": 0.85,
+      "dependency_score": 0.9,
+      "explanation": "Reached via reverse traversal (distance=1, type=Assign)"
+    },
+    {
+      "rank": 5,
+      "node_id": 12,
+      "line_number": 12,
+      "statement_code": "if x==0 and y==0:",
+      "variable_name": "x",
+      "observed_value": "0",
+      "expected_value": null,
+      "proximity_score": 0.85,
+      "dependency_score": 0.7,
+      "explanation": "Reached via reverse traversal (distance=1, type=If)"
+    }
+  ],
+  "critical_variable": null,
+  "counterfactual_results": [
+    {
+      "candidate_rank": 1,
+      "intervention": {
+        "target_variable": "x",
+        "target_line": 15,
+        "observed_value": "None",
+        "counterfactual_value": "(2, 1)",
+        "operation_type": "AST_transform",
+        "modified_code": "def find_solution(a, b, n):\n    x = 0\n    y = 0\n    for i in range(n):\n        if a*i + b*y == n:\n            x = i\n            break\n    for j in range(n):\n        if a*x + b*j == n:\n            y = j\n            break\n    if x==0 and y==0:\n        return None\n    else:\n        x = (2, 1)\n        return (x,y)"
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "Failed",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "FALSE",
+      "execution_time": 0.2319,
+      "status": "EXECUTED",
+      "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+    },
+    {
+      "candidate_rank": 2,
+      "intervention": {
+        "target_variable": "x",
+        "target_line": 6,
+        "observed_value": "None",
+        "counterfactual_value": "None",
+        "operation_type": "AST_transform",
+        "modified_code": "def find_solution(a, b, n):\n    x = 0\n    y = 0\n    for i in range(n):\n        if a * i + b * y == n:\n            x = None\n            break\n    for j in range(n):\n        if a * x + b * j == n:\n            y = j\n            break\n    if x == 0 and y == 0:\n        return None\n    else:\n        return (x, y)"
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "Failed",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "FALSE",
+      "execution_time": 0.2693,
+      "status": "EXECUTED",
+      "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+    },
+    {
+      "candidate_rank": 3,
+      "intervention": {
+        "target_variable": "y",
+        "target_line": 10,
+        "observed_value": "None",
+        "counterfactual_value": "None",
+        "operation_type": "AST_transform",
+        "modified_code": "def find_solution(a, b, n):\n    x = 0\n    y = 0\n    for i in range(n):\n        if a * i + b * y == n:\n            x = i\n            break\n    for j in range(n):\n        if a * x + b * j == n:\n            y = None\n            break\n    if x == 0 and y == 0:\n        return None\n    else:\n        return (x, y)"
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "Failed",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "FALSE",
+      "execution_time": 0.2118,
+      "status": "EXECUTED",
+      "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+    },
+    {
+      "candidate_rank": 4,
+      "intervention": {
+        "target_variable": "x",
+        "target_line": 12,
+        "observed_value": "0",
+        "counterfactual_value": "None",
+        "operation_type": "AST_transform",
+        "modified_code": "def find_solution(a, b, n):\n    x = 0\n    y = 0\n    for i in range(n):\n        if a * i + b * y == n:\n            x = i\n            break\n    for j in range(n):\n        if a * x + b * j == n:\n            y = j\n            break\n    if x != 0 and y != 0:\n        return None\n    else:\n        return (x, y)"
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "Failed",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "FALSE",
+      "execution_time": 0.2129,
+      "status": "EXECUTED",
+      "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+    },
+    {
+      "candidate_rank": 5,
+      "intervention": {
+        "target_variable": "i",
+        "target_line": 4,
+        "observed_value": "6",
+        "counterfactual_value": "None",
+        "operation_type": "failed_construction",
+        "modified_code": ""
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "FAILED_CONSTRUCTION",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "UNRESOLVED",
+      "execution_time": 0.0,
+      "status": "UNRESOLVED",
+      "explanation": "Failed to construct valid AST counterfactual intervention."
+    }
+  ],
+  "fault_location": {
+    "file": "MB275.py",
+    "line_number": 4,
+    "statement_code": "for i in range(n):",
+    "function_name": "find_solution",
+    "causal_variable": "i",
+    "evidence_score": 0.755,
+    "confidence": 0.3
+  },
+  "root_cause": {
+    "root_cause_status": "UNRESOLVED",
+    "candidate_explanation": "Semantic mismatch at line 4 ('for i in range(n):') causes return value mismatch.",
+    "causal_variable": "i",
+    "fault_statement": "for i in range(n):",
+    "fault_line": 4,
+    "evidence_summary": "Reverse PDG traversal traced failure from line 1 to statement line 4. Structural dependency identified; counterfactual validation unconfirmed or unresolved.",
+    "counterfactual_validated": false,
+    "confidence": 0.3
+  },
+  "ground_truth_matched": null,
+  "ground_truth_fault_line": null,
+  "execution_time": 0.9502
+}

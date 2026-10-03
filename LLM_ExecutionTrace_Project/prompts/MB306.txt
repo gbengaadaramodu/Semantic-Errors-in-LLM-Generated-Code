@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a python function to remove odd numbers from a given list.
+
+Example test: assert remove_odd([1,2,3]) == [2]
+[/INST]

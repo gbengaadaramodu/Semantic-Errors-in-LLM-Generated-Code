@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB095",
+  "dataset": "MBPP",
+  "task_id": "94",
+  "problem_summary": "Given a list of tuples, write a function that returns the first value of the tup",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp2o6cex2g.py\", line 4, in <module>\n    assert index_minimum([('Rash', 143), ('Manjeet', 200), ('Varsha', 100)]) == 'Varsha'\n           ^^^^^^^^^^^^^\nNameError: name 'index_minimum' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp2o6cex2g.py\", line 4, in <module>\n    assert index_minimum([('Rash', 143), ('Manjeet', 200), ('Varsha', 100)]) == 'Varsha'\n           ^^^^^^^^^^^^^\nNameError: name 'index_minimum' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'index_minimum' is not defined",
+  "execution_time": 0.215756,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

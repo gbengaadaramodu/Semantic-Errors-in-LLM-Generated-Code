@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB029",
+  "dataset": "MBPP",
+  "task_id": "89",
+  "problem_summary": "Write a function to find the closest smaller number than n.",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp5sfjdugc.py\", line 4, in <module>\n    assert closest_num(11) == 10\n           ^^^^^^^^^^^\nNameError: name 'closest_num' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp5sfjdugc.py\", line 4, in <module>\n    assert closest_num(11) == 10\n           ^^^^^^^^^^^\nNameError: name 'closest_num' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'closest_num' is not defined",
+  "execution_time": 0.270564,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

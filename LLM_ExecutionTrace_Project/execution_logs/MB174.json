@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB174",
+  "dataset": "MBPP",
+  "task_id": "304",
+  "problem_summary": "Write a python function to find element at a given index after number of rotatio",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpvctp25kd.py\", line 6, in <module>\n    assert find_Element([1,2,3,4,5],[[0,2],[0,3]],2,1) == 3\n           ^^^^^^^^^^^^\nNameError: name 'find_Element' is not defined. Did you mean: 'find_element'?\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpvctp25kd.py\", line 6, in <module>\n    assert find_Element([1,2,3,4,5],[[0,2],[0,3]],2,1) == 3\n           ^^^^^^^^^^^^\nNameError: name 'find_Element' is not defined. Did you mean: 'find_element'?",
+  "exception_type": "NameError",
+  "exception_message": "name 'find_Element' is not defined. Did you mean: 'find_element'?",
+  "execution_time": 0.19318,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

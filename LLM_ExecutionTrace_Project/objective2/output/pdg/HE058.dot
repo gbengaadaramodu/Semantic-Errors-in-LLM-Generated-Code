@@ -1,0 +1,48 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def smallest_change(arr): | W:arr,smallest_change", fillcolor="lightgreen"];
+    "2" [label="L3: if arr == arr[::-1]: | R:arr", fillcolor="lightgreen"];
+    "3" [label="L4: return 0", fillcolor="lightgrey"];
+    "4" [label="L7: mid = len(arr) // 2 | W:mid | R:arr,len", fillcolor="lightgreen"];
+    "5" [label="L10: arr[mid:] = arr[mid:][::-1] | R:arr,mid", fillcolor="lightgreen"];
+    "6" [label="L13: if arr == arr[::-1]: | R:arr", fillcolor="lightgreen"];
+    "7" [label="L14: return 1", fillcolor="lightgrey"];
+    "8" [label="L17: left, right = 0, len(arr) - 1 | W:left,right | R:arr,len", fillcolor="lightgreen"];
+    "9" [label="L18: count = 0 | W:count", fillcolor="lightgreen"];
+    "10" [label="L19: while left < right: | R:left,right", fillcolor="lightgreen"];
+    "11" [label="L20: if arr[left] != arr[right]: | R:arr,left,right", fillcolor="lightgreen"];
+    "12" [label="L21: count += 1 | W:count", fillcolor="lightgreen"];
+    "13" [label="L22: left += 1 | W:left", fillcolor="lightgreen"];
+    "14" [label="L23: right -= 1 | W:right", fillcolor="lightgreen"];
+    "15" [label="L25: return count + 2 | R:count", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(arr)", style="solid"];
+    "1" -> "4" [label="DATA(arr)", style="solid"];
+    "1" -> "5" [label="DATA(arr)", style="solid"];
+    "4" -> "5" [label="DATA(mid)", style="solid"];
+    "1" -> "6" [label="DATA(arr)", style="solid"];
+    "1" -> "8" [label="DATA(arr)", style="solid"];
+    "8" -> "10" [label="DATA(left)", style="solid"];
+    "8" -> "10" [label="DATA(right)", style="solid"];
+    "1" -> "11" [label="DATA(arr)", style="solid"];
+    "8" -> "11" [label="DATA(left)", style="solid"];
+    "8" -> "11" [label="DATA(right)", style="solid"];
+    "12" -> "15" [label="DATA(count)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "2" -> "3" [label="CONTROL(If)", style="dashed"];
+    "1" -> "4" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "5" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "6" [label="CONTROL(FunctionDef)", style="dashed"];
+    "6" -> "7" [label="CONTROL(If)", style="dashed"];
+    "1" -> "8" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "9" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "10" [label="CONTROL(FunctionDef)", style="dashed"];
+    "10" -> "11" [label="CONTROL(While)", style="dashed"];
+    "11" -> "12" [label="CONTROL(If)", style="dashed"];
+    "10" -> "13" [label="CONTROL(While)", style="dashed"];
+    "10" -> "14" [label="CONTROL(While)", style="dashed"];
+    "1" -> "15" [label="CONTROL(FunctionDef)", style="dashed"];
+}

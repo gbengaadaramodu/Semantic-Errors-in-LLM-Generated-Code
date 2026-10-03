@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a function to check whether the given string is starting with a vowel or not using regex.
+
+Example test: assert check_str("annie")
+[/INST]

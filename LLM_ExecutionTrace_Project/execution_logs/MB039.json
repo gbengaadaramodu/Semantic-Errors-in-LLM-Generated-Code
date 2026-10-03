@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB039",
+  "dataset": "MBPP",
+  "task_id": "456",
+  "problem_summary": "Write a function to reverse each string in a given list of string values.",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpy009qxnu.py\", line 4, in <module>\n    assert reverse_string_list(['Red', 'Green', 'Blue', 'White', 'Black'])==['deR', 'neerG', 'eulB', 'etihW', 'kcalB']\n           ^^^^^^^^^^^^^^^^^^^\nNameError: name 'reverse_string_list' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpy009qxnu.py\", line 4, in <module>\n    assert reverse_string_list(['Red', 'Green', 'Blue', 'White', 'Black'])==['deR', 'neerG', 'eulB', 'etihW', 'kcalB']\n           ^^^^^^^^^^^^^^^^^^^\nNameError: name 'reverse_string_list' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'reverse_string_list' is not defined",
+  "execution_time": 0.242521,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

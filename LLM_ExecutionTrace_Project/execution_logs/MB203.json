@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB203",
+  "dataset": "MBPP",
+  "task_id": "58",
+  "problem_summary": "Write a python function to check whether the given two integers have opposite si",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp5r58fkl7.py\", line 4, in <module>\n    assert opposite_Signs(1,-2) == True\n           ^^^^^^^^^^^^^^\nNameError: name 'opposite_Signs' is not defined. Did you mean: 'opposite_signs'?\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp5r58fkl7.py\", line 4, in <module>\n    assert opposite_Signs(1,-2) == True\n           ^^^^^^^^^^^^^^\nNameError: name 'opposite_Signs' is not defined. Did you mean: 'opposite_signs'?",
+  "exception_type": "NameError",
+  "exception_message": "name 'opposite_Signs' is not defined. Did you mean: 'opposite_signs'?",
+  "execution_time": 0.24373,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

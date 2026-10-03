@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB193",
+  "dataset": "MBPP",
+  "task_id": "271",
+  "problem_summary": "Write a python function that takes in an integer n and finds the sum of the firs",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp1_14mywo.py\", line 7, in <module>\n    assert even_Power_Sum(2) == 1056\n           ^^^^^^^^^^^^^^\nNameError: name 'even_Power_Sum' is not defined. Did you mean: 'even_power_sum'?\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp1_14mywo.py\", line 7, in <module>\n    assert even_Power_Sum(2) == 1056\n           ^^^^^^^^^^^^^^\nNameError: name 'even_Power_Sum' is not defined. Did you mean: 'even_power_sum'?",
+  "exception_type": "NameError",
+  "exception_message": "name 'even_Power_Sum' is not defined. Did you mean: 'even_power_sum'?",
+  "execution_time": 0.232902,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

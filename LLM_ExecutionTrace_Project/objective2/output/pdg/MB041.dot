@@ -1,0 +1,22 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def babylonian_squareroot(n): | W:n,babylonian_squareroot", fillcolor="lightgreen"];
+    "2" [label="L2: x = n | W:x | R:n", fillcolor="lightgrey"];
+    "3" [label="L3: while not math.isclose(x**2, n, rel_tol=0.001): | R:math,n,x", fillcolor="lightgrey"];
+    "4" [label="L4: x = (x + n/x) / 2 | W:x | R:n,x", fillcolor="lightgrey"];
+    "5" [label="L5: return x | R:x", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(n)", style="solid"];
+    "1" -> "3" [label="DATA(n)", style="solid"];
+    "2" -> "3" [label="DATA(x)", style="solid"];
+    "1" -> "4" [label="DATA(n)", style="solid"];
+    "2" -> "4" [label="DATA(x)", style="solid"];
+    "4" -> "5" [label="DATA(x)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "3" [label="CONTROL(FunctionDef)", style="dashed"];
+    "3" -> "4" [label="CONTROL(While)", style="dashed"];
+    "1" -> "5" [label="CONTROL(FunctionDef)", style="dashed"];
+}

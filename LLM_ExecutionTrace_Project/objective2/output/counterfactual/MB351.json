@@ -1,0 +1,21 @@
+[
+  {
+    "candidate_rank": 1,
+    "intervention": {
+      "target_variable": "len",
+      "target_line": 2,
+      "observed_value": "None",
+      "counterfactual_value": "True",
+      "operation_type": "AST_transform",
+      "modified_code": "def is_undulating(num):\n    return len(set(str(num))) != 1"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Completed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "TRUE",
+    "execution_time": 0.1341,
+    "status": "EXECUTED",
+    "explanation": "Intervention successfully flipped execution outcome from FAIL to PASS."
+  }
+]

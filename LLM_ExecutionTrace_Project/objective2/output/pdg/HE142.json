@@ -1,0 +1,409 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def is_nested(string):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "string",
+        "is_nested"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "string": [
+          "[[]]"
+        ]
+      },
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "stack = []",
+      "statement_type": "Assign",
+      "reads": [],
+      "writes": [
+        "stack"
+      ],
+      "function_name": "is_nested",
+      "executed": true,
+      "execution_count": 1,
+      "runtime_values": {
+        "string": [
+          "[[]]"
+        ]
+      },
+      "failure_related": false
+    },
+    "3": {
+      "node_id": 3,
+      "line_number": 3,
+      "source_code": "for char in string:",
+      "statement_type": "For",
+      "reads": [
+        "string"
+      ],
+      "writes": [
+        "char"
+      ],
+      "function_name": "is_nested",
+      "executed": true,
+      "execution_count": 5,
+      "runtime_values": {
+        "string": [
+          "[[]]",
+          "[[]]",
+          "[[]]",
+          "[[]]",
+          "[[]]"
+        ],
+        "stack": [
+          "[]",
+          "['[']",
+          "['[', '[']",
+          "['[']",
+          "[]"
+        ],
+        "char": [
+          "[",
+          "[",
+          "]",
+          "]"
+        ]
+      },
+      "failure_related": false
+    },
+    "4": {
+      "node_id": 4,
+      "line_number": 4,
+      "source_code": "if char == \"[\" and len(stack) > 0 and stack[-1] == \"]\":",
+      "statement_type": "If",
+      "reads": [
+        "char",
+        "len",
+        "stack"
+      ],
+      "writes": [],
+      "function_name": "is_nested",
+      "executed": true,
+      "execution_count": 4,
+      "runtime_values": {
+        "string": [
+          "[[]]",
+          "[[]]",
+          "[[]]",
+          "[[]]"
+        ],
+        "stack": [
+          "[]",
+          "['[']",
+          "['[', '[']",
+          "['[']"
+        ],
+        "char": [
+          "[",
+          "[",
+          "]",
+          "]"
+        ]
+      },
+      "failure_related": false
+    },
+    "5": {
+      "node_id": 5,
+      "line_number": 5,
+      "source_code": "return True",
+      "statement_type": "Return",
+      "reads": [],
+      "writes": [],
+      "function_name": "is_nested",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "6": {
+      "node_id": 6,
+      "line_number": 6,
+      "source_code": "elif char == \"[\":",
+      "statement_type": "If",
+      "reads": [
+        "char"
+      ],
+      "writes": [],
+      "function_name": "is_nested",
+      "executed": true,
+      "execution_count": 4,
+      "runtime_values": {
+        "string": [
+          "[[]]",
+          "[[]]",
+          "[[]]",
+          "[[]]"
+        ],
+        "stack": [
+          "[]",
+          "['[']",
+          "['[', '[']",
+          "['[']"
+        ],
+        "char": [
+          "[",
+          "[",
+          "]",
+          "]"
+        ]
+      },
+      "failure_related": false
+    },
+    "7": {
+      "node_id": 7,
+      "line_number": 7,
+      "source_code": "stack.append(char)",
+      "statement_type": "Expr",
+      "reads": [
+        "char",
+        "stack"
+      ],
+      "writes": [],
+      "function_name": "is_nested",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "string": [
+          "[[]]",
+          "[[]]"
+        ],
+        "stack": [
+          "[]",
+          "['[']"
+        ],
+        "char": [
+          "[",
+          "["
+        ]
+      },
+      "failure_related": false
+    },
+    "8": {
+      "node_id": 8,
+      "line_number": 8,
+      "source_code": "elif char == \"]\" and len(stack) > 0 and stack[-1] == \"[\":",
+      "statement_type": "If",
+      "reads": [
+        "char",
+        "len",
+        "stack"
+      ],
+      "writes": [],
+      "function_name": "is_nested",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "string": [
+          "[[]]",
+          "[[]]"
+        ],
+        "stack": [
+          "['[', '[']",
+          "['[']"
+        ],
+        "char": [
+          "]",
+          "]"
+        ]
+      },
+      "failure_related": false
+    },
+    "9": {
+      "node_id": 9,
+      "line_number": 9,
+      "source_code": "stack.pop()",
+      "statement_type": "Expr",
+      "reads": [
+        "stack"
+      ],
+      "writes": [],
+      "function_name": "is_nested",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "string": [
+          "[[]]",
+          "[[]]"
+        ],
+        "stack": [
+          "['[', '[']",
+          "['[']"
+        ],
+        "char": [
+          "]",
+          "]"
+        ]
+      },
+      "failure_related": false
+    },
+    "10": {
+      "node_id": 10,
+      "line_number": 10,
+      "source_code": "return False",
+      "statement_type": "Return",
+      "reads": [],
+      "writes": [],
+      "function_name": "is_nested",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "string": [
+          "[[]]",
+          "[[]]"
+        ],
+        "stack": [
+          "[]",
+          "[]"
+        ],
+        "char": [
+          "]",
+          "]"
+        ]
+      },
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 3,
+      "dependency_type": "DATA",
+      "variable": "string",
+      "label": "DATA(string)"
+    },
+    {
+      "source_id": 3,
+      "target_id": 4,
+      "dependency_type": "DATA",
+      "variable": "char",
+      "label": "DATA(char)"
+    },
+    {
+      "source_id": 2,
+      "target_id": 4,
+      "dependency_type": "DATA",
+      "variable": "stack",
+      "label": "DATA(stack)"
+    },
+    {
+      "source_id": 3,
+      "target_id": 6,
+      "dependency_type": "DATA",
+      "variable": "char",
+      "label": "DATA(char)"
+    },
+    {
+      "source_id": 3,
+      "target_id": 7,
+      "dependency_type": "DATA",
+      "variable": "char",
+      "label": "DATA(char)"
+    },
+    {
+      "source_id": 2,
+      "target_id": 7,
+      "dependency_type": "DATA",
+      "variable": "stack",
+      "label": "DATA(stack)"
+    },
+    {
+      "source_id": 3,
+      "target_id": 8,
+      "dependency_type": "DATA",
+      "variable": "char",
+      "label": "DATA(char)"
+    },
+    {
+      "source_id": 2,
+      "target_id": 8,
+      "dependency_type": "DATA",
+      "variable": "stack",
+      "label": "DATA(stack)"
+    },
+    {
+      "source_id": 2,
+      "target_id": 9,
+      "dependency_type": "DATA",
+      "variable": "stack",
+      "label": "DATA(stack)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 3,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 3,
+      "target_id": 4,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(For)"
+    },
+    {
+      "source_id": 4,
+      "target_id": 5,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(If)"
+    },
+    {
+      "source_id": 4,
+      "target_id": 6,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(If)"
+    },
+    {
+      "source_id": 6,
+      "target_id": 7,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(If)"
+    },
+    {
+      "source_id": 6,
+      "target_id": 8,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(If)"
+    },
+    {
+      "source_id": 8,
+      "target_id": 9,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(If)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 10,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    10
+  ]
+}

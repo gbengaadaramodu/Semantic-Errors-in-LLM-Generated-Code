@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB085",
+  "dataset": "MBPP",
+  "task_id": "229",
+  "problem_summary": "Write a function that takes in an array and an integer n, and re-arranges the fi",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmppkpyv6b1.py\", line 6, in <module>\n    assert re_arrange_array([-1, 2, -3, 4, 5, 6, -7, 8, 9], 9) == [-1, -3, -7, 4, 5, 6, 2, 8, 9]\n           ^^^^^^^^^^^^^^^^\nNameError: name 're_arrange_array' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmppkpyv6b1.py\", line 6, in <module>\n    assert re_arrange_array([-1, 2, -3, 4, 5, 6, -7, 8, 9], 9) == [-1, -3, -7, 4, 5, 6, 2, 8, 9]\n           ^^^^^^^^^^^^^^^^\nNameError: name 're_arrange_array' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 're_arrange_array' is not defined",
+  "execution_time": 0.213018,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

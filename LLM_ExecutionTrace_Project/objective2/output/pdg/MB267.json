@@ -1,0 +1,162 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def polar_rect(r, theta):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "r",
+        "theta",
+        "polar_rect"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "r": [
+          "3"
+        ],
+        "theta": [
+          "4"
+        ]
+      },
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "x = r * math.cos(theta)",
+      "statement_type": "Assign",
+      "reads": [
+        "math",
+        "r",
+        "theta"
+      ],
+      "writes": [
+        "x"
+      ],
+      "function_name": "polar_rect",
+      "executed": true,
+      "execution_count": 3,
+      "runtime_values": {
+        "r": [
+          "3",
+          "3",
+          "3"
+        ],
+        "theta": [
+          "4",
+          "4",
+          "4"
+        ]
+      },
+      "failure_related": true
+    },
+    "3": {
+      "node_id": 3,
+      "line_number": 3,
+      "source_code": "y = r * math.sin(theta)",
+      "statement_type": "Assign",
+      "reads": [
+        "math",
+        "r",
+        "theta"
+      ],
+      "writes": [
+        "y"
+      ],
+      "function_name": "polar_rect",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "4": {
+      "node_id": 4,
+      "line_number": 4,
+      "source_code": "return (x, y)",
+      "statement_type": "Return",
+      "reads": [
+        "x",
+        "y"
+      ],
+      "writes": [],
+      "function_name": "polar_rect",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "r",
+      "label": "DATA(r)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "theta",
+      "label": "DATA(theta)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 3,
+      "dependency_type": "DATA",
+      "variable": "r",
+      "label": "DATA(r)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 3,
+      "dependency_type": "DATA",
+      "variable": "theta",
+      "label": "DATA(theta)"
+    },
+    {
+      "source_id": 2,
+      "target_id": 4,
+      "dependency_type": "DATA",
+      "variable": "x",
+      "label": "DATA(x)"
+    },
+    {
+      "source_id": 3,
+      "target_id": 4,
+      "dependency_type": "DATA",
+      "variable": "y",
+      "label": "DATA(y)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 3,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 4,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    2
+  ]
+}

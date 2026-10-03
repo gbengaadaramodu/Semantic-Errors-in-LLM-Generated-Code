@@ -1,0 +1,124 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def fruit_distribution(s, n):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "n",
+        "s",
+        "fruit_distribution"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "s": [
+          "5 apples and 6 oranges"
+        ],
+        "n": [
+          "19"
+        ]
+      },
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "apples, oranges = map(int, s.split()[:2])",
+      "statement_type": "Assign",
+      "reads": [
+        "int",
+        "map",
+        "s"
+      ],
+      "writes": [
+        "apples",
+        "oranges"
+      ],
+      "function_name": "fruit_distribution",
+      "executed": true,
+      "execution_count": 3,
+      "runtime_values": {
+        "s": [
+          "5 apples and 6 oranges",
+          "5 apples and 6 oranges",
+          "5 apples and 6 oranges"
+        ],
+        "n": [
+          "19",
+          "19",
+          "19"
+        ]
+      },
+      "failure_related": true
+    },
+    "3": {
+      "node_id": 3,
+      "line_number": 3,
+      "source_code": "return n - apples - oranges",
+      "statement_type": "Return",
+      "reads": [
+        "apples",
+        "n",
+        "oranges"
+      ],
+      "writes": [],
+      "function_name": "fruit_distribution",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "s",
+      "label": "DATA(s)"
+    },
+    {
+      "source_id": 2,
+      "target_id": 3,
+      "dependency_type": "DATA",
+      "variable": "apples",
+      "label": "DATA(apples)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 3,
+      "dependency_type": "DATA",
+      "variable": "n",
+      "label": "DATA(n)"
+    },
+    {
+      "source_id": 2,
+      "target_id": 3,
+      "dependency_type": "DATA",
+      "variable": "oranges",
+      "label": "DATA(oranges)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 3,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    2
+  ]
+}

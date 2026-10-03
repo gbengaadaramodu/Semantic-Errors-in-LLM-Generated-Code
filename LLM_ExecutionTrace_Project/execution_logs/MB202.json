@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB202",
+  "dataset": "MBPP",
+  "task_id": "437",
+  "problem_summary": "Write a function to remove odd characters in a string.",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpjnk_2qz7.py\", line 4, in <module>\n    assert remove_odd(\"python\")==(\"yhn\")\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpjnk_2qz7.py\", line 4, in <module>\n    assert remove_odd(\"python\")==(\"yhn\")\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+  "exception_type": "AssertionError",
+  "exception_message": "",
+  "execution_time": 0.269723,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": "benchmark_test",
+  "assertion_failed": true,
+  "parser_prediction": ""
+}

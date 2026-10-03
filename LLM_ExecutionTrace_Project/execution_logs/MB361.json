@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB361",
+  "dataset": "MBPP",
+  "task_id": "274",
+  "problem_summary": "Write a python function that takes in a positive integer n and finds the sum of ",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpxuujgywk.py\", line 8, in <module>\n    assert even_binomial_Coeff_Sum(4) == 8\n           ^^^^^^^^^^^^^^^^^^^^^^^\nNameError: name 'even_binomial_Coeff_Sum' is not defined. Did you mean: 'even_binomial_coeff_sum'?\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpxuujgywk.py\", line 8, in <module>\n    assert even_binomial_Coeff_Sum(4) == 8\n           ^^^^^^^^^^^^^^^^^^^^^^^\nNameError: name 'even_binomial_Coeff_Sum' is not defined. Did you mean: 'even_binomial_coeff_sum'?",
+  "exception_type": "NameError",
+  "exception_message": "name 'even_binomial_Coeff_Sum' is not defined. Did you mean: 'even_binomial_coeff_sum'?",
+  "execution_time": 0.156557,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

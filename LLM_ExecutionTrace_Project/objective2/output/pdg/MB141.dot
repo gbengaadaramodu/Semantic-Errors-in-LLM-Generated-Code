@@ -1,0 +1,11 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def move_num(my_str): | W:my_str,move_num", fillcolor="lightgreen"];
+    "2" [label="L2: return ''.join(ch for ch in my_str if not ch.isdigit()) + ''.join(ch for ch in my_str if ch.isdigit()) | W:ch | R:ch,my_str", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(my_str)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

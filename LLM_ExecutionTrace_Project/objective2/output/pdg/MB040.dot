@@ -1,0 +1,11 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def text_match_two_three(string): | W:string,text_match_two_three", fillcolor="lightgreen"];
+    "2" [label="L2: return re.search(r\"a(b{2,3})\", string) is not None | R:re,string", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(string)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

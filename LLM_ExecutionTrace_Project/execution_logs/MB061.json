@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB061",
+  "dataset": "MBPP",
+  "task_id": "250",
+  "problem_summary": "Write a python function that takes in a tuple and an element and counts the occc",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpd78fjogn.py\", line 4, in <module>\n    assert count_X((10, 8, 5, 2, 10, 15, 10, 8, 5, 8, 8, 2),4) == 0\n           ^^^^^^^\nNameError: name 'count_X' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpd78fjogn.py\", line 4, in <module>\n    assert count_X((10, 8, 5, 2, 10, 15, 10, 8, 5, 8, 8, 2),4) == 0\n           ^^^^^^^\nNameError: name 'count_X' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'count_X' is not defined",
+  "execution_time": 0.236015,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

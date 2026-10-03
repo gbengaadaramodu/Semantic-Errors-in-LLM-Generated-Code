@@ -1,0 +1,13 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def merge_sorted_list(list1, list2, list3): | W:list1,list2,list3,merge_sorted_list", fillcolor="lightgreen"];
+    "2" [label="L2: return sorted(list1 + list2 + list3) | R:list1,list2,list3,sorted", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(list1)", style="solid"];
+    "1" -> "2" [label="DATA(list2)", style="solid"];
+    "1" -> "2" [label="DATA(list3)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

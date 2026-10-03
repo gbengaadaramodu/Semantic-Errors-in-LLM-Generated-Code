@@ -1,0 +1,22 @@
+{
+  "trace_id": "HE025",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/114",
+  "problem_summary": "\ndef minSubArraySum(nums):\n    \"\"\"\n    Given an array of integers nums, find the",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpeps7_are.py\", line 23, in <module>\n    check(minSubArraySum)\n          ^^^^^^^^^^^^^^\nNameError: name 'minSubArraySum' is not defined. Did you mean: 'min_sub_array_sum'?\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpeps7_are.py\", line 23, in <module>\n    check(minSubArraySum)\n          ^^^^^^^^^^^^^^\nNameError: name 'minSubArraySum' is not defined. Did you mean: 'min_sub_array_sum'?",
+  "exception_type": "NameError",
+  "exception_message": "name 'minSubArraySum' is not defined. Did you mean: 'min_sub_array_sum'?",
+  "execution_time": 0.241974,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

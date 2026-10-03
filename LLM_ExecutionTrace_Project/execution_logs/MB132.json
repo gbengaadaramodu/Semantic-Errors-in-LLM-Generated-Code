@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB132",
+  "dataset": "MBPP",
+  "task_id": "720",
+  "problem_summary": "Write a function to add a dictionary to the tuple. The output should be a tuple.",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpjdyfz7it.py\", line 4, in <module>\n    assert add_dict_to_tuple((4, 5, 6), {\"MSAM\" : 1, \"is\" : 2, \"best\" : 3} ) == (4, 5, 6, {'MSAM': 1, 'is': 2, 'best': 3})\n           ^^^^^^^^^^^^^^^^^\nNameError: name 'add_dict_to_tuple' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpjdyfz7it.py\", line 4, in <module>\n    assert add_dict_to_tuple((4, 5, 6), {\"MSAM\" : 1, \"is\" : 2, \"best\" : 3} ) == (4, 5, 6, {'MSAM': 1, 'is': 2, 'best': 3})\n           ^^^^^^^^^^^^^^^^^\nNameError: name 'add_dict_to_tuple' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'add_dict_to_tuple' is not defined",
+  "execution_time": 0.207702,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

@@ -1,0 +1,635 @@
+{
+  "trace_id": "HE046",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/93",
+  "error_category": "Wrong-Output Error",
+  "analysis_status": "ANALYZED",
+  "skip_reason": null,
+  "input_record": {
+    "trace_id": "HE046",
+    "dataset": "HumanEval",
+    "task_id": "HumanEval/93",
+    "problem_summary": "\ndef encode(message):\n    \"\"\"\n    Write a function that takes a message, and enc",
+    "execution_status": "Failed",
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp9h13xrnl.py\", line 26, in <module>\n    check(encode)\n    ~~~~~^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp9h13xrnl.py\", line 16, in check\n    assert candidate('TEST') == 'tgst', \"This prints if this assert fails 1 (good for debugging!)\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: This prints if this assert fails 1 (good for debugging!)\n",
+    "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp9h13xrnl.py\", line 26, in <module>\n    check(encode)\n    ~~~~~^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp9h13xrnl.py\", line 16, in check\n    assert candidate('TEST') == 'tgst', \"This prints if this assert fails 1 (good for debugging!)\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: This prints if this assert fails 1 (good for debugging!)",
+    "exception_type": "AssertionError",
+    "exception_message": "This prints if this assert fails 1 (good for debugging!)",
+    "execution_time": 0.255067,
+    "timed_out": false,
+    "exit_code": 1,
+    "tests_passed": false,
+    "tests_failed": 0,
+    "expected_output": null,
+    "actual_output": null,
+    "assertion_source": "benchmark_test",
+    "assertion_failed": true,
+    "parser_prediction": "Wrong-Output Error"
+  },
+  "scm": {
+    "task_id": "HumanEval/93",
+    "nodes": [
+      {
+        "node_id": "S",
+        "variable_name": "Specification",
+        "symbol": "S",
+        "label": "Specification"
+      },
+      {
+        "node_id": "C",
+        "variable_name": "GeneratedCode",
+        "symbol": "C",
+        "label": "Generated Code"
+      },
+      {
+        "node_id": "E",
+        "variable_name": "ExecutionTrace",
+        "symbol": "E",
+        "label": "Execution Trace"
+      },
+      {
+        "node_id": "T",
+        "variable_name": "TestSuite",
+        "symbol": "T",
+        "label": "Test Suite"
+      },
+      {
+        "node_id": "O",
+        "variable_name": "Outcome",
+        "symbol": "O",
+        "label": "Outcome"
+      }
+    ],
+    "edges": [
+      {
+        "source": "S",
+        "target": "C",
+        "relationship": "generates"
+      },
+      {
+        "source": "C",
+        "target": "E",
+        "relationship": "produces"
+      },
+      {
+        "source": "T",
+        "target": "E",
+        "relationship": "evaluates"
+      },
+      {
+        "source": "E",
+        "target": "O",
+        "relationship": "determines"
+      }
+    ],
+    "variables": {
+      "S": {
+        "name": "Specification",
+        "symbol": "S",
+        "description": "Problem description, prompt, and target function signature",
+        "value": "\ndef encode(message):\n    \"\"\"\n    Write a function that takes a message, and enc"
+      },
+      "C": {
+        "name": "GeneratedCode",
+        "symbol": "C",
+        "description": "LLM-generated Python source code implementation",
+        "value": "def encode(message):\n    encoded_msg = ''\n    for char in message:\n        if char.isalpha():\n            if char.islower():\n                encoded_msg += chr(ord('a') + (ord(char) - ord('a') + 2) % "
+      },
+      "E": {
+        "name": "ExecutionTrace",
+        "symbol": "E",
+        "description": "Observable runtime trace events, variable states, and stdout/stderr",
+        "value": "status=Failed, exc=AssertionError, msg=This prints if this assert fails 1 (good for debugging!)"
+      },
+      "T": {
+        "name": "TestSuite",
+        "symbol": "T",
+        "description": "Benchmark assertions, inputs, and check function harness",
+        "value": "def check(candidate):\n\n    # Check some simple cases\n    assert candidate('TEST') == 'tgst', \"This p"
+      },
+      "O": {
+        "name": "Outcome",
+        "symbol": "O",
+        "description": "Final test execution outcome (Completed/Failed/Timeout)",
+        "value": "Failed"
+      }
+    }
+  },
+  "pdg": {
+    "nodes": {
+      "1": {
+        "node_id": 1,
+        "line_number": 1,
+        "source_code": "def encode(message):",
+        "statement_type": "FunctionDef",
+        "reads": [],
+        "writes": [
+          "message",
+          "encode"
+        ],
+        "function_name": "<module>",
+        "executed": true,
+        "execution_count": 2,
+        "runtime_values": {
+          "message": [
+            "TEST"
+          ]
+        },
+        "failure_related": false
+      },
+      "2": {
+        "node_id": 2,
+        "line_number": 2,
+        "source_code": "encoded_msg = ''",
+        "statement_type": "Assign",
+        "reads": [],
+        "writes": [
+          "encoded_msg"
+        ],
+        "function_name": "encode",
+        "executed": true,
+        "execution_count": 1,
+        "runtime_values": {
+          "message": [
+            "TEST"
+          ]
+        },
+        "failure_related": false
+      },
+      "3": {
+        "node_id": 3,
+        "line_number": 3,
+        "source_code": "for char in message:",
+        "statement_type": "For",
+        "reads": [
+          "message"
+        ],
+        "writes": [
+          "char"
+        ],
+        "function_name": "encode",
+        "executed": true,
+        "execution_count": 5,
+        "runtime_values": {
+          "message": [
+            "TEST",
+            "TEST",
+            "TEST",
+            "TEST",
+            "TEST"
+          ],
+          "encoded_msg": [
+            "",
+            "V",
+            "VG",
+            "VGU",
+            "VGUV"
+          ],
+          "char": [
+            "T",
+            "E",
+            "S",
+            "T"
+          ]
+        },
+        "failure_related": false
+      },
+      "4": {
+        "node_id": 4,
+        "line_number": 4,
+        "source_code": "if char.isalpha():",
+        "statement_type": "If",
+        "reads": [
+          "char"
+        ],
+        "writes": [],
+        "function_name": "encode",
+        "executed": true,
+        "execution_count": 4,
+        "runtime_values": {
+          "message": [
+            "TEST",
+            "TEST",
+            "TEST",
+            "TEST"
+          ],
+          "encoded_msg": [
+            "",
+            "V",
+            "VG",
+            "VGU"
+          ],
+          "char": [
+            "T",
+            "E",
+            "S",
+            "T"
+          ]
+        },
+        "failure_related": false
+      },
+      "5": {
+        "node_id": 5,
+        "line_number": 5,
+        "source_code": "if char.islower():",
+        "statement_type": "If",
+        "reads": [
+          "char"
+        ],
+        "writes": [],
+        "function_name": "encode",
+        "executed": true,
+        "execution_count": 4,
+        "runtime_values": {
+          "message": [
+            "TEST",
+            "TEST",
+            "TEST",
+            "TEST"
+          ],
+          "encoded_msg": [
+            "",
+            "V",
+            "VG",
+            "VGU"
+          ],
+          "char": [
+            "T",
+            "E",
+            "S",
+            "T"
+          ]
+        },
+        "failure_related": false
+      },
+      "6": {
+        "node_id": 6,
+        "line_number": 6,
+        "source_code": "encoded_msg += chr(ord('a') + (ord(char) - ord('a') + 2) % 26)",
+        "statement_type": "AugAssign",
+        "reads": [
+          "char",
+          "chr",
+          "ord"
+        ],
+        "writes": [
+          "encoded_msg"
+        ],
+        "function_name": "encode",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "7": {
+        "node_id": 7,
+        "line_number": 8,
+        "source_code": "encoded_msg += chr(ord('A') + (ord(char) - ord('A') + 2) % 26)",
+        "statement_type": "AugAssign",
+        "reads": [
+          "char",
+          "chr",
+          "ord"
+        ],
+        "writes": [
+          "encoded_msg"
+        ],
+        "function_name": "encode",
+        "executed": true,
+        "execution_count": 4,
+        "runtime_values": {
+          "message": [
+            "TEST",
+            "TEST",
+            "TEST",
+            "TEST"
+          ],
+          "encoded_msg": [
+            "",
+            "V",
+            "VG",
+            "VGU"
+          ],
+          "char": [
+            "T",
+            "E",
+            "S",
+            "T"
+          ]
+        },
+        "failure_related": false
+      },
+      "8": {
+        "node_id": 8,
+        "line_number": 10,
+        "source_code": "encoded_msg += char",
+        "statement_type": "AugAssign",
+        "reads": [
+          "char"
+        ],
+        "writes": [
+          "encoded_msg"
+        ],
+        "function_name": "encode",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "9": {
+        "node_id": 9,
+        "line_number": 11,
+        "source_code": "return encoded_msg",
+        "statement_type": "Return",
+        "reads": [
+          "encoded_msg"
+        ],
+        "writes": [],
+        "function_name": "encode",
+        "executed": true,
+        "execution_count": 2,
+        "runtime_values": {
+          "message": [
+            "TEST",
+            "TEST"
+          ],
+          "encoded_msg": [
+            "VGUV",
+            "VGUV"
+          ],
+          "char": [
+            "T",
+            "T"
+          ]
+        },
+        "failure_related": true
+      }
+    },
+    "edges": [
+      {
+        "source_id": 1,
+        "target_id": 3,
+        "dependency_type": "DATA",
+        "variable": "message",
+        "label": "DATA(message)"
+      },
+      {
+        "source_id": 3,
+        "target_id": 4,
+        "dependency_type": "DATA",
+        "variable": "char",
+        "label": "DATA(char)"
+      },
+      {
+        "source_id": 3,
+        "target_id": 5,
+        "dependency_type": "DATA",
+        "variable": "char",
+        "label": "DATA(char)"
+      },
+      {
+        "source_id": 3,
+        "target_id": 6,
+        "dependency_type": "DATA",
+        "variable": "char",
+        "label": "DATA(char)"
+      },
+      {
+        "source_id": 3,
+        "target_id": 7,
+        "dependency_type": "DATA",
+        "variable": "char",
+        "label": "DATA(char)"
+      },
+      {
+        "source_id": 3,
+        "target_id": 8,
+        "dependency_type": "DATA",
+        "variable": "char",
+        "label": "DATA(char)"
+      },
+      {
+        "source_id": 8,
+        "target_id": 9,
+        "dependency_type": "DATA",
+        "variable": "encoded_msg",
+        "label": "DATA(encoded_msg)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 3,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 3,
+        "target_id": 4,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(For)"
+      },
+      {
+        "source_id": 4,
+        "target_id": 5,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(If)"
+      },
+      {
+        "source_id": 5,
+        "target_id": 6,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(If)"
+      },
+      {
+        "source_id": 5,
+        "target_id": 7,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(If)"
+      },
+      {
+        "source_id": 4,
+        "target_id": 8,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(If)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 9,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      }
+    ],
+    "entry_node_id": 1,
+    "failure_node_ids": [
+      9
+    ]
+  },
+  "runtime_events_count": 31,
+  "failure_line": 11,
+  "failure_statement": "return encoded_msg",
+  "candidates": [
+    {
+      "rank": 1,
+      "node_id": 9,
+      "line_number": 11,
+      "statement_code": "return encoded_msg",
+      "variable_name": "encoded_msg",
+      "observed_value": "VGUV",
+      "expected_value": "tgst",
+      "proximity_score": 1.0,
+      "dependency_score": 1.0,
+      "explanation": "Reached via reverse traversal (distance=0, type=Return)"
+    },
+    {
+      "rank": 2,
+      "node_id": 8,
+      "line_number": 10,
+      "statement_code": "encoded_msg += char",
+      "variable_name": "encoded_msg",
+      "observed_value": null,
+      "expected_value": null,
+      "proximity_score": 0.85,
+      "dependency_score": 0.9,
+      "explanation": "Reached via reverse traversal (distance=1, type=AugAssign)"
+    },
+    {
+      "rank": 3,
+      "node_id": 3,
+      "line_number": 3,
+      "statement_code": "for char in message:",
+      "variable_name": "char",
+      "observed_value": "T",
+      "expected_value": null,
+      "proximity_score": 0.7,
+      "dependency_score": 0.81,
+      "explanation": "Reached via reverse traversal (distance=2, type=For)"
+    },
+    {
+      "rank": 4,
+      "node_id": 4,
+      "line_number": 4,
+      "statement_code": "if char.isalpha():",
+      "variable_name": "char",
+      "observed_value": "T",
+      "expected_value": null,
+      "proximity_score": 0.7,
+      "dependency_score": 0.63,
+      "explanation": "Reached via reverse traversal (distance=2, type=If)"
+    }
+  ],
+  "critical_variable": null,
+  "counterfactual_results": [
+    {
+      "candidate_rank": 1,
+      "intervention": {
+        "target_variable": "encoded_msg",
+        "target_line": 11,
+        "observed_value": "VGUV",
+        "counterfactual_value": "tgst",
+        "operation_type": "AST_transform",
+        "modified_code": "def encode(message):\n    encoded_msg = ''\n    for char in message:\n        if char.isalpha():\n            if char.islower():\n                encoded_msg += chr(ord('a') + (ord(char) - ord('a') + 2) % 26)\n            else:\n                encoded_msg += chr(ord('A') + (ord(char) - ord('A') + 2) % 26)\n        else:\n            encoded_msg += char\n    return 'tgst'"
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "Completed",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "TRUE",
+      "execution_time": 0.1676,
+      "status": "EXECUTED",
+      "explanation": "Intervention successfully flipped execution outcome from FAIL to PASS."
+    },
+    {
+      "candidate_rank": 2,
+      "intervention": {
+        "target_variable": "encoded_msg",
+        "target_line": 10,
+        "observed_value": "None",
+        "counterfactual_value": "None",
+        "operation_type": "failed_construction",
+        "modified_code": ""
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "FAILED_CONSTRUCTION",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "UNRESOLVED",
+      "execution_time": 0.0,
+      "status": "UNRESOLVED",
+      "explanation": "Failed to construct valid AST counterfactual intervention."
+    },
+    {
+      "candidate_rank": 3,
+      "intervention": {
+        "target_variable": "char",
+        "target_line": 3,
+        "observed_value": "T",
+        "counterfactual_value": "None",
+        "operation_type": "failed_construction",
+        "modified_code": ""
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "FAILED_CONSTRUCTION",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "UNRESOLVED",
+      "execution_time": 0.0,
+      "status": "UNRESOLVED",
+      "explanation": "Failed to construct valid AST counterfactual intervention."
+    },
+    {
+      "candidate_rank": 4,
+      "intervention": {
+        "target_variable": "char",
+        "target_line": 4,
+        "observed_value": "T",
+        "counterfactual_value": "None",
+        "operation_type": "failed_construction",
+        "modified_code": ""
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "FAILED_CONSTRUCTION",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "UNRESOLVED",
+      "execution_time": 0.0,
+      "status": "UNRESOLVED",
+      "explanation": "Failed to construct valid AST counterfactual intervention."
+    }
+  ],
+  "fault_location": {
+    "file": "HE046.py",
+    "line_number": 11,
+    "statement_code": "return encoded_msg",
+    "function_name": "encode",
+    "causal_variable": "encoded_msg",
+    "evidence_score": 3.0,
+    "confidence": 0.95
+  },
+  "root_cause": {
+    "root_cause_status": "VALIDATED",
+    "candidate_explanation": "Semantic mismatch at line 11 ('return encoded_msg') causes return value mismatch.",
+    "causal_variable": "encoded_msg",
+    "fault_statement": "return encoded_msg",
+    "fault_line": 11,
+    "evidence_summary": "Reverse PDG traversal traced failure from line 1 to statement line 11. Counterfactual intervention do(encoded_msg = expected) successfully restored PASS state.",
+    "counterfactual_validated": true,
+    "confidence": 0.95
+  },
+  "ground_truth_matched": null,
+  "ground_truth_fault_line": null,
+  "execution_time": 0.1811
+}

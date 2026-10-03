@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a python function that takes in a positive integer n and finds the sum of even index binomial coefficients.
+
+Example test: assert even_binomial_Coeff_Sum(4) == 8
+[/INST]

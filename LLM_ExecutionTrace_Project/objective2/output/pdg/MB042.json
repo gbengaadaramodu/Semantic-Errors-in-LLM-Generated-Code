@@ -1,0 +1,353 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def comb_sort(my_list):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "my_list",
+        "comb_sort"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 1,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "gap = len(my_list)",
+      "statement_type": "Assign",
+      "reads": [
+        "len",
+        "my_list"
+      ],
+      "writes": [
+        "gap"
+      ],
+      "function_name": "comb_sort",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "3": {
+      "node_id": 3,
+      "line_number": 3,
+      "source_code": "swapped = True",
+      "statement_type": "Assign",
+      "reads": [],
+      "writes": [
+        "swapped"
+      ],
+      "function_name": "comb_sort",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "4": {
+      "node_id": 4,
+      "line_number": 4,
+      "source_code": "while gap > 1 or swapped:",
+      "statement_type": "While",
+      "reads": [
+        "gap",
+        "swapped"
+      ],
+      "writes": [],
+      "function_name": "comb_sort",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "5": {
+      "node_id": 5,
+      "line_number": 5,
+      "source_code": "gap = int(gap * 10 / 13)",
+      "statement_type": "Assign",
+      "reads": [
+        "gap",
+        "int"
+      ],
+      "writes": [
+        "gap"
+      ],
+      "function_name": "comb_sort",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "6": {
+      "node_id": 6,
+      "line_number": 6,
+      "source_code": "swapped = False",
+      "statement_type": "Assign",
+      "reads": [],
+      "writes": [
+        "swapped"
+      ],
+      "function_name": "comb_sort",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "7": {
+      "node_id": 7,
+      "line_number": 7,
+      "source_code": "for i in range(len(my_list) - gap):",
+      "statement_type": "For",
+      "reads": [
+        "gap",
+        "len",
+        "my_list",
+        "range"
+      ],
+      "writes": [
+        "i"
+      ],
+      "function_name": "comb_sort",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "8": {
+      "node_id": 8,
+      "line_number": 8,
+      "source_code": "if my_list[i] > my_list[i + gap]:",
+      "statement_type": "If",
+      "reads": [
+        "gap",
+        "i",
+        "my_list"
+      ],
+      "writes": [],
+      "function_name": "comb_sort",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "9": {
+      "node_id": 9,
+      "line_number": 9,
+      "source_code": "my_list[i], my_list[i + gap] = my_list[i + gap], my_list[i]",
+      "statement_type": "Assign",
+      "reads": [
+        "gap",
+        "i",
+        "my_list"
+      ],
+      "writes": [],
+      "function_name": "comb_sort",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "10": {
+      "node_id": 10,
+      "line_number": 10,
+      "source_code": "swapped = True",
+      "statement_type": "Assign",
+      "reads": [],
+      "writes": [
+        "swapped"
+      ],
+      "function_name": "comb_sort",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "11": {
+      "node_id": 11,
+      "line_number": 11,
+      "source_code": "return my_list",
+      "statement_type": "Return",
+      "reads": [
+        "my_list"
+      ],
+      "writes": [],
+      "function_name": "comb_sort",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "my_list",
+      "label": "DATA(my_list)"
+    },
+    {
+      "source_id": 2,
+      "target_id": 4,
+      "dependency_type": "DATA",
+      "variable": "gap",
+      "label": "DATA(gap)"
+    },
+    {
+      "source_id": 3,
+      "target_id": 4,
+      "dependency_type": "DATA",
+      "variable": "swapped",
+      "label": "DATA(swapped)"
+    },
+    {
+      "source_id": 2,
+      "target_id": 5,
+      "dependency_type": "DATA",
+      "variable": "gap",
+      "label": "DATA(gap)"
+    },
+    {
+      "source_id": 5,
+      "target_id": 7,
+      "dependency_type": "DATA",
+      "variable": "gap",
+      "label": "DATA(gap)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 7,
+      "dependency_type": "DATA",
+      "variable": "my_list",
+      "label": "DATA(my_list)"
+    },
+    {
+      "source_id": 5,
+      "target_id": 8,
+      "dependency_type": "DATA",
+      "variable": "gap",
+      "label": "DATA(gap)"
+    },
+    {
+      "source_id": 7,
+      "target_id": 8,
+      "dependency_type": "DATA",
+      "variable": "i",
+      "label": "DATA(i)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 8,
+      "dependency_type": "DATA",
+      "variable": "my_list",
+      "label": "DATA(my_list)"
+    },
+    {
+      "source_id": 5,
+      "target_id": 9,
+      "dependency_type": "DATA",
+      "variable": "gap",
+      "label": "DATA(gap)"
+    },
+    {
+      "source_id": 7,
+      "target_id": 9,
+      "dependency_type": "DATA",
+      "variable": "i",
+      "label": "DATA(i)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 9,
+      "dependency_type": "DATA",
+      "variable": "my_list",
+      "label": "DATA(my_list)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 11,
+      "dependency_type": "DATA",
+      "variable": "my_list",
+      "label": "DATA(my_list)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 3,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 4,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 4,
+      "target_id": 5,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(While)"
+    },
+    {
+      "source_id": 4,
+      "target_id": 6,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(While)"
+    },
+    {
+      "source_id": 4,
+      "target_id": 7,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(While)"
+    },
+    {
+      "source_id": 7,
+      "target_id": 8,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(For)"
+    },
+    {
+      "source_id": 8,
+      "target_id": 9,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(If)"
+    },
+    {
+      "source_id": 8,
+      "target_id": 10,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(If)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 11,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    11
+  ]
+}

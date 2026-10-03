@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a function for computing square roots using the babylonian method.
+
+Example test: assert math.isclose(babylonian_squareroot(10), 3.162277660168379, rel_tol=0.001)
+[/INST]

@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB326",
+  "dataset": "MBPP",
+  "task_id": "20",
+  "problem_summary": "Write a function to check if the given number is woodball or not.",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpd9rkuk0p.py\", line 4, in <module>\n    assert is_woodall(383) == True\n           ^^^^^^^^^^\nNameError: name 'is_woodall' is not defined. Did you mean: 'is_woodball'?\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpd9rkuk0p.py\", line 4, in <module>\n    assert is_woodall(383) == True\n           ^^^^^^^^^^\nNameError: name 'is_woodall' is not defined. Did you mean: 'is_woodball'?",
+  "exception_type": "NameError",
+  "exception_message": "name 'is_woodall' is not defined. Did you mean: 'is_woodball'?",
+  "execution_time": 0.15117,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

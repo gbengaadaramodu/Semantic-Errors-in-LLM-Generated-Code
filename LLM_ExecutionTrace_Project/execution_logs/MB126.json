@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB126",
+  "dataset": "MBPP",
+  "task_id": "93",
+  "problem_summary": "Write a function to calculate the value of 'a' to the power 'b'.",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpz6af8aps.py\", line 4, in <module>\n    assert power(3,4) == 81\n           ^^^^^\nNameError: name 'power' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpz6af8aps.py\", line 4, in <module>\n    assert power(3,4) == 81\n           ^^^^^\nNameError: name 'power' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'power' is not defined",
+  "execution_time": 0.183862,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

@@ -1,0 +1,19 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def find_element(arr, queries, index): | W:arr,index,queries,find_element", fillcolor="lightgreen"];
+    "2" [label="L2: for query in queries: | W:query | R:queries", fillcolor="lightgrey"];
+    "3" [label="L3: arr = arr[query[0]:] + arr[:query[0]] | W:arr | R:arr,query", fillcolor="lightgrey"];
+    "4" [label="L4: return arr[index] | R:arr,index", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(queries)", style="solid"];
+    "1" -> "3" [label="DATA(arr)", style="solid"];
+    "2" -> "3" [label="DATA(query)", style="solid"];
+    "3" -> "4" [label="DATA(arr)", style="solid"];
+    "1" -> "4" [label="DATA(index)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "2" -> "3" [label="CONTROL(For)", style="dashed"];
+    "1" -> "4" [label="CONTROL(FunctionDef)", style="dashed"];
+}

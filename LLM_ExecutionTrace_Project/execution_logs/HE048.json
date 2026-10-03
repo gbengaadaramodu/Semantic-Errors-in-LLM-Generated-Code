@@ -1,0 +1,22 @@
+{
+  "trace_id": "HE048",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/68",
+  "problem_summary": "\ndef pluck(arr):\n    \"\"\"\n    \"Given an array representing a branch of a tree tha",
+  "execution_status": "Completed",
+  "stdout": "",
+  "stderr": "",
+  "traceback": "",
+  "exception_type": "",
+  "exception_message": "",
+  "execution_time": 0.115178,
+  "timed_out": false,
+  "exit_code": 0,
+  "tests_passed": true,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

@@ -1,0 +1,12 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def add_elements(arr, k): | W:arr,k,add_elements", fillcolor="lightgreen"];
+    "2" [label="L2: return sum(arr[:k]) | R:arr,k,sum", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(arr)", style="solid"];
+    "1" -> "2" [label="DATA(k)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

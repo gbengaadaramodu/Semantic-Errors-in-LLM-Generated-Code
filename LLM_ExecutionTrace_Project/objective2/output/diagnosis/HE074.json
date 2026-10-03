@@ -1,0 +1,447 @@
+{
+  "trace_id": "HE074",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/141",
+  "error_category": "Wrong-Output Error",
+  "analysis_status": "ANALYZED",
+  "skip_reason": null,
+  "input_record": {
+    "trace_id": "HE074",
+    "dataset": "HumanEval",
+    "task_id": "HumanEval/141",
+    "problem_summary": "\ndef file_name_check(file_name):\n    \"\"\"Create a function which takes a string r",
+    "execution_status": "Failed",
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpgrl6h2_g.py\", line 44, in <module>\n    check(file_name_check)\n    ~~~~~^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpgrl6h2_g.py\", line 16, in check\n    assert candidate('His12FILE94.exe') == 'No'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+    "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpgrl6h2_g.py\", line 44, in <module>\n    check(file_name_check)\n    ~~~~~^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpgrl6h2_g.py\", line 16, in check\n    assert candidate('His12FILE94.exe') == 'No'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+    "exception_type": "AssertionError",
+    "exception_message": "",
+    "execution_time": 0.222085,
+    "timed_out": false,
+    "exit_code": 1,
+    "tests_passed": false,
+    "tests_failed": 0,
+    "expected_output": null,
+    "actual_output": null,
+    "assertion_source": "benchmark_test",
+    "assertion_failed": true,
+    "parser_prediction": "Wrong-Output Error"
+  },
+  "scm": {
+    "task_id": "HumanEval/141",
+    "nodes": [
+      {
+        "node_id": "S",
+        "variable_name": "Specification",
+        "symbol": "S",
+        "label": "Specification"
+      },
+      {
+        "node_id": "C",
+        "variable_name": "GeneratedCode",
+        "symbol": "C",
+        "label": "Generated Code"
+      },
+      {
+        "node_id": "E",
+        "variable_name": "ExecutionTrace",
+        "symbol": "E",
+        "label": "Execution Trace"
+      },
+      {
+        "node_id": "T",
+        "variable_name": "TestSuite",
+        "symbol": "T",
+        "label": "Test Suite"
+      },
+      {
+        "node_id": "O",
+        "variable_name": "Outcome",
+        "symbol": "O",
+        "label": "Outcome"
+      }
+    ],
+    "edges": [
+      {
+        "source": "S",
+        "target": "C",
+        "relationship": "generates"
+      },
+      {
+        "source": "C",
+        "target": "E",
+        "relationship": "produces"
+      },
+      {
+        "source": "T",
+        "target": "E",
+        "relationship": "evaluates"
+      },
+      {
+        "source": "E",
+        "target": "O",
+        "relationship": "determines"
+      }
+    ],
+    "variables": {
+      "S": {
+        "name": "Specification",
+        "symbol": "S",
+        "description": "Problem description, prompt, and target function signature",
+        "value": "\ndef file_name_check(file_name):\n    \"\"\"Create a function which takes a string r"
+      },
+      "C": {
+        "name": "GeneratedCode",
+        "symbol": "C",
+        "description": "LLM-generated Python source code implementation",
+        "value": "def file_name_check(file_name):\n    if len(file_name) > 3 and \".\" in file_name:\n        prefix, suffix = file_name.split(\".\")\n        if prefix and prefix[0].isalpha() and suffix in [\"txt\", \"exe\", \"dl"
+      },
+      "E": {
+        "name": "ExecutionTrace",
+        "symbol": "E",
+        "description": "Observable runtime trace events, variable states, and stdout/stderr",
+        "value": "status=Failed, exc=AssertionError, msg="
+      },
+      "T": {
+        "name": "TestSuite",
+        "symbol": "T",
+        "description": "Benchmark assertions, inputs, and check function harness",
+        "value": "def check(candidate):\n\n    # Check some simple cases\n    assert candidate(\"example.txt\") == 'Yes'\n  "
+      },
+      "O": {
+        "name": "Outcome",
+        "symbol": "O",
+        "description": "Final test execution outcome (Completed/Failed/Timeout)",
+        "value": "Failed"
+      }
+    }
+  },
+  "pdg": {
+    "nodes": {
+      "1": {
+        "node_id": 1,
+        "line_number": 1,
+        "source_code": "def file_name_check(file_name):",
+        "statement_type": "FunctionDef",
+        "reads": [],
+        "writes": [
+          "file_name",
+          "file_name_check"
+        ],
+        "function_name": "<module>",
+        "executed": true,
+        "execution_count": 7,
+        "runtime_values": {
+          "file_name": [
+            "example.txt",
+            "1example.dll",
+            "s1sdf3.asd",
+            "K.dll",
+            "MY16FILE3.exe",
+            "His12FILE94.exe"
+          ]
+        },
+        "failure_related": false
+      },
+      "2": {
+        "node_id": 2,
+        "line_number": 2,
+        "source_code": "if len(file_name) > 3 and \".\" in file_name:",
+        "statement_type": "If",
+        "reads": [
+          "file_name",
+          "len"
+        ],
+        "writes": [],
+        "function_name": "file_name_check",
+        "executed": true,
+        "execution_count": 6,
+        "runtime_values": {
+          "file_name": [
+            "example.txt",
+            "1example.dll",
+            "s1sdf3.asd",
+            "K.dll",
+            "MY16FILE3.exe",
+            "His12FILE94.exe"
+          ]
+        },
+        "failure_related": false
+      },
+      "3": {
+        "node_id": 3,
+        "line_number": 3,
+        "source_code": "prefix, suffix = file_name.split(\".\")",
+        "statement_type": "Assign",
+        "reads": [
+          "file_name"
+        ],
+        "writes": [
+          "prefix",
+          "suffix"
+        ],
+        "function_name": "file_name_check",
+        "executed": true,
+        "execution_count": 6,
+        "runtime_values": {
+          "file_name": [
+            "example.txt",
+            "1example.dll",
+            "s1sdf3.asd",
+            "K.dll",
+            "MY16FILE3.exe",
+            "His12FILE94.exe"
+          ]
+        },
+        "failure_related": false
+      },
+      "4": {
+        "node_id": 4,
+        "line_number": 4,
+        "source_code": "if prefix and prefix[0].isalpha() and suffix in [\"txt\", \"exe\", \"dll\"]:",
+        "statement_type": "If",
+        "reads": [
+          "prefix",
+          "suffix"
+        ],
+        "writes": [],
+        "function_name": "file_name_check",
+        "executed": true,
+        "execution_count": 6,
+        "runtime_values": {
+          "file_name": [
+            "example.txt",
+            "1example.dll",
+            "s1sdf3.asd",
+            "K.dll",
+            "MY16FILE3.exe",
+            "His12FILE94.exe"
+          ],
+          "prefix": [
+            "example",
+            "1example",
+            "s1sdf3",
+            "K",
+            "MY16FILE3",
+            "His12FILE94"
+          ],
+          "suffix": [
+            "txt",
+            "dll",
+            "asd",
+            "dll",
+            "exe",
+            "exe"
+          ]
+        },
+        "failure_related": false
+      },
+      "5": {
+        "node_id": 5,
+        "line_number": 5,
+        "source_code": "return \"Yes\"",
+        "statement_type": "Return",
+        "reads": [],
+        "writes": [],
+        "function_name": "file_name_check",
+        "executed": true,
+        "execution_count": 8,
+        "runtime_values": {
+          "file_name": [
+            "example.txt",
+            "example.txt",
+            "K.dll",
+            "K.dll",
+            "MY16FILE3.exe",
+            "MY16FILE3.exe",
+            "His12FILE94.exe",
+            "His12FILE94.exe"
+          ],
+          "prefix": [
+            "example",
+            "example",
+            "K",
+            "K",
+            "MY16FILE3",
+            "MY16FILE3",
+            "His12FILE94",
+            "His12FILE94"
+          ],
+          "suffix": [
+            "txt",
+            "txt",
+            "dll",
+            "dll",
+            "exe",
+            "exe",
+            "exe",
+            "exe"
+          ]
+        },
+        "failure_related": false
+      },
+      "6": {
+        "node_id": 6,
+        "line_number": 6,
+        "source_code": "return \"No\"",
+        "statement_type": "Return",
+        "reads": [],
+        "writes": [],
+        "function_name": "file_name_check",
+        "executed": true,
+        "execution_count": 4,
+        "runtime_values": {
+          "file_name": [
+            "1example.dll",
+            "1example.dll",
+            "s1sdf3.asd",
+            "s1sdf3.asd"
+          ],
+          "prefix": [
+            "1example",
+            "1example",
+            "s1sdf3",
+            "s1sdf3"
+          ],
+          "suffix": [
+            "dll",
+            "dll",
+            "asd",
+            "asd"
+          ]
+        },
+        "failure_related": true
+      }
+    },
+    "edges": [
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "DATA",
+        "variable": "file_name",
+        "label": "DATA(file_name)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 3,
+        "dependency_type": "DATA",
+        "variable": "file_name",
+        "label": "DATA(file_name)"
+      },
+      {
+        "source_id": 3,
+        "target_id": 4,
+        "dependency_type": "DATA",
+        "variable": "prefix",
+        "label": "DATA(prefix)"
+      },
+      {
+        "source_id": 3,
+        "target_id": 4,
+        "dependency_type": "DATA",
+        "variable": "suffix",
+        "label": "DATA(suffix)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 2,
+        "target_id": 3,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(If)"
+      },
+      {
+        "source_id": 2,
+        "target_id": 4,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(If)"
+      },
+      {
+        "source_id": 4,
+        "target_id": 5,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(If)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 6,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      }
+    ],
+    "entry_node_id": 1,
+    "failure_node_ids": [
+      6
+    ]
+  },
+  "runtime_events_count": 51,
+  "failure_line": 6,
+  "failure_statement": "return \"No\"",
+  "candidates": [
+    {
+      "rank": 1,
+      "node_id": 6,
+      "line_number": 6,
+      "statement_code": "return \"No\"",
+      "variable_name": "<statement>",
+      "observed_value": null,
+      "expected_value": "No",
+      "proximity_score": 1.0,
+      "dependency_score": 1.0,
+      "explanation": "Reached via reverse traversal (distance=0, type=Return)"
+    }
+  ],
+  "critical_variable": null,
+  "counterfactual_results": [
+    {
+      "candidate_rank": 1,
+      "intervention": {
+        "target_variable": "<statement>",
+        "target_line": 6,
+        "observed_value": "None",
+        "counterfactual_value": "No",
+        "operation_type": "failed_construction",
+        "modified_code": ""
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "FAILED_CONSTRUCTION",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "UNRESOLVED",
+      "execution_time": 0.0,
+      "status": "UNRESOLVED",
+      "explanation": "Failed to construct valid AST counterfactual intervention."
+    }
+  ],
+  "fault_location": {
+    "file": "HE074.py",
+    "line_number": 6,
+    "statement_code": "return \"No\"",
+    "function_name": "file_name_check",
+    "causal_variable": "<statement>",
+    "evidence_score": 1.0,
+    "confidence": 0.5
+  },
+  "root_cause": {
+    "root_cause_status": "UNRESOLVED",
+    "candidate_explanation": "Semantic mismatch at line 6 ('return \"No\"') causes return value mismatch.",
+    "causal_variable": "<statement>",
+    "fault_statement": "return \"No\"",
+    "fault_line": 6,
+    "evidence_summary": "Reverse PDG traversal traced failure from line 1 to statement line 6. Structural dependency identified; counterfactual validation unconfirmed or unresolved.",
+    "counterfactual_validated": false,
+    "confidence": 0.5
+  },
+  "ground_truth_matched": null,
+  "ground_truth_fault_line": null,
+  "execution_time": 0.0119
+}

@@ -1,0 +1,97 @@
+[
+  {
+    "candidate_rank": 1,
+    "intervention": {
+      "target_variable": "x",
+      "target_line": 15,
+      "observed_value": "None",
+      "counterfactual_value": "7",
+      "operation_type": "AST_transform",
+      "modified_code": "def find_solution(a, b, n):\n    x = 0\n    y = 0\n    for i in range(n):\n        if a*i + b*y == n:\n            x = i\n            break\n    for j in range(n):\n        if a*x + b*j == n:\n            y = j\n            break\n    if x==0 and y==0:\n        return None\n    else:\n        x = 7\n        return (x,y)"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.2407,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  },
+  {
+    "candidate_rank": 2,
+    "intervention": {
+      "target_variable": "x",
+      "target_line": 6,
+      "observed_value": "None",
+      "counterfactual_value": "None",
+      "operation_type": "AST_transform",
+      "modified_code": "def find_solution(a, b, n):\n    x = 0\n    y = 0\n    for i in range(n):\n        if a * i + b * y == n:\n            x = None\n            break\n    for j in range(n):\n        if a * x + b * j == n:\n            y = j\n            break\n    if x == 0 and y == 0:\n        return None\n    else:\n        return (x, y)"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.229,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  },
+  {
+    "candidate_rank": 3,
+    "intervention": {
+      "target_variable": "y",
+      "target_line": 10,
+      "observed_value": "None",
+      "counterfactual_value": "None",
+      "operation_type": "AST_transform",
+      "modified_code": "def find_solution(a, b, n):\n    x = 0\n    y = 0\n    for i in range(n):\n        if a * i + b * y == n:\n            x = i\n            break\n    for j in range(n):\n        if a * x + b * j == n:\n            y = None\n            break\n    if x == 0 and y == 0:\n        return None\n    else:\n        return (x, y)"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.2392,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  },
+  {
+    "candidate_rank": 4,
+    "intervention": {
+      "target_variable": "x",
+      "target_line": 12,
+      "observed_value": "None",
+      "counterfactual_value": "None",
+      "operation_type": "AST_transform",
+      "modified_code": "def find_solution(a, b, n):\n    x = 0\n    y = 0\n    for i in range(n):\n        if a * i + b * y == n:\n            x = i\n            break\n    for j in range(n):\n        if a * x + b * j == n:\n            y = j\n            break\n    if x != 0 and y != 0:\n        return None\n    else:\n        return (x, y)"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.2149,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  },
+  {
+    "candidate_rank": 5,
+    "intervention": {
+      "target_variable": "i",
+      "target_line": 4,
+      "observed_value": "None",
+      "counterfactual_value": "None",
+      "operation_type": "failed_construction",
+      "modified_code": ""
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "FAILED_CONSTRUCTION",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "UNRESOLVED",
+    "execution_time": 0.0,
+    "status": "UNRESOLVED",
+    "explanation": "Failed to construct valid AST counterfactual intervention."
+  }
+]

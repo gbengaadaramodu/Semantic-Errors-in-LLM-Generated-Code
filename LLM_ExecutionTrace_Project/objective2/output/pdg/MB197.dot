@@ -1,0 +1,12 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def check_k(tuple, k): | W:k,tuple,check_k", fillcolor="lightgreen"];
+    "2" [label="L2: return any(x == k for x in tuple) | W:x | R:any,k,tuple,x", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(k)", style="solid"];
+    "1" -> "2" [label="DATA(tuple)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

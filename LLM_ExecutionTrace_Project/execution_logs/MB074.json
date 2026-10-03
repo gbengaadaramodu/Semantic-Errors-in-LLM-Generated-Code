@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB074",
+  "dataset": "MBPP",
+  "task_id": "72",
+  "problem_summary": "Write a python function to check whether the given number can be represented as ",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp0_hb9wbn.py\", line 4, in <module>\n    assert dif_Square(5) == True\n           ^^^^^^^^^^\nNameError: name 'dif_Square' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp0_hb9wbn.py\", line 4, in <module>\n    assert dif_Square(5) == True\n           ^^^^^^^^^^\nNameError: name 'dif_Square' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'dif_Square' is not defined",
+  "execution_time": 0.25116,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

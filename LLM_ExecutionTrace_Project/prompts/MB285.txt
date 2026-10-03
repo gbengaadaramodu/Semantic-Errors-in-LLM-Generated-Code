@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a function to check if a string is present as a substring in a given list of string values.
+
+Example test: assert find_substring(["red", "black", "white", "green", "orange"],"ack")==True
+[/INST]

@@ -1,0 +1,11 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def text_lowercase_underscore(input_string): | W:input_string,text_lowercase_underscore", fillcolor="lightgreen"];
+    "2" [label="L2: return any(c.islower() for c in input_string) and \"_\" in input_string | W:c | R:any,c,input_string", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(input_string)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

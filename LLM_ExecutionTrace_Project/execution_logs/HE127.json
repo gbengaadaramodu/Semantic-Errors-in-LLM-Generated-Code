@@ -1,0 +1,22 @@
+{
+  "trace_id": "HE127",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/75",
+  "problem_summary": "\ndef is_multiply_prime(a):\n    \"\"\"Write a function that returns true if the give",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp2mgsifwk.py\", line 25, in <module>\n    check(is_multiply_prime)\n    ~~~~~^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp2mgsifwk.py\", line 12, in check\n    assert candidate(5) == False\n           ^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp2mgsifwk.py\", line 25, in <module>\n    check(is_multiply_prime)\n    ~~~~~^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp2mgsifwk.py\", line 12, in check\n    assert candidate(5) == False\n           ^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+  "exception_type": "AssertionError",
+  "exception_message": "",
+  "execution_time": 0.325758,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": "benchmark_test",
+  "assertion_failed": true,
+  "parser_prediction": ""
+}

@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB377",
+  "dataset": "MBPP",
+  "task_id": "633",
+  "problem_summary": "Write a python function to find the sum of xor of all pairs of numbers in the gi",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpx2p2wnr3.py\", line 8, in <module>\n    assert pair_xor_Sum([5,9,7,6],4) == 47\n           ^^^^^^^^^^^^\nNameError: name 'pair_xor_Sum' is not defined. Did you mean: 'pair_xor_sum'?\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpx2p2wnr3.py\", line 8, in <module>\n    assert pair_xor_Sum([5,9,7,6],4) == 47\n           ^^^^^^^^^^^^\nNameError: name 'pair_xor_Sum' is not defined. Did you mean: 'pair_xor_sum'?",
+  "exception_type": "NameError",
+  "exception_message": "name 'pair_xor_Sum' is not defined. Did you mean: 'pair_xor_sum'?",
+  "execution_time": 0.174709,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

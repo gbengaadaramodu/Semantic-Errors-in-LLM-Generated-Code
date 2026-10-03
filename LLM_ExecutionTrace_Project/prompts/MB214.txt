@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a function to remove lowercase substrings from a given string.
+
+Example test: assert remove_lowercase("PYTHon")==('PYTH')
+[/INST]

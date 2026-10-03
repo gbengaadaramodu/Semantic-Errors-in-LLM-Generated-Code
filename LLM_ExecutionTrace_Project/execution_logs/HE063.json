@@ -1,0 +1,22 @@
+{
+  "trace_id": "HE063",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/84",
+  "problem_summary": "\ndef solve(N):\n    \"\"\"Given a positive integer N, return the total sum of its di",
+  "execution_status": "Completed",
+  "stdout": "",
+  "stderr": "",
+  "traceback": "",
+  "exception_type": "",
+  "exception_message": "",
+  "execution_time": 0.111829,
+  "timed_out": false,
+  "exit_code": 0,
+  "tests_passed": true,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

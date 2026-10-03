@@ -1,0 +1,35 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def is_nested(string): | W:string,is_nested", fillcolor="lightgreen"];
+    "2" [label="L2: stack = [] | W:stack", fillcolor="lightgreen"];
+    "3" [label="L3: for char in string: | W:char | R:string", fillcolor="lightgreen"];
+    "4" [label="L4: if char == \"[\" and len(stack) > 0 and stack[-1] == \"]\": | R:char,len,stack", fillcolor="lightgreen"];
+    "5" [label="L5: return True", fillcolor="lightgrey"];
+    "6" [label="L6: elif char == \"[\": | R:char", fillcolor="lightgreen"];
+    "7" [label="L7: stack.append(char) | R:char,stack", fillcolor="lightgreen"];
+    "8" [label="L8: elif char == \"]\" and len(stack) > 0 and stack[-1] == \"[\": | R:char,len,stack", fillcolor="lightgreen"];
+    "9" [label="L9: stack.pop() | R:stack", fillcolor="lightgreen"];
+    "10" [label="L10: return False", fillcolor="salmon"];
+
+    "1" -> "3" [label="DATA(string)", style="solid"];
+    "3" -> "4" [label="DATA(char)", style="solid"];
+    "2" -> "4" [label="DATA(stack)", style="solid"];
+    "3" -> "6" [label="DATA(char)", style="solid"];
+    "3" -> "7" [label="DATA(char)", style="solid"];
+    "2" -> "7" [label="DATA(stack)", style="solid"];
+    "3" -> "8" [label="DATA(char)", style="solid"];
+    "2" -> "8" [label="DATA(stack)", style="solid"];
+    "2" -> "9" [label="DATA(stack)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "3" [label="CONTROL(FunctionDef)", style="dashed"];
+    "3" -> "4" [label="CONTROL(For)", style="dashed"];
+    "4" -> "5" [label="CONTROL(If)", style="dashed"];
+    "4" -> "6" [label="CONTROL(If)", style="dashed"];
+    "6" -> "7" [label="CONTROL(If)", style="dashed"];
+    "6" -> "8" [label="CONTROL(If)", style="dashed"];
+    "8" -> "9" [label="CONTROL(If)", style="dashed"];
+    "1" -> "10" [label="CONTROL(FunctionDef)", style="dashed"];
+}

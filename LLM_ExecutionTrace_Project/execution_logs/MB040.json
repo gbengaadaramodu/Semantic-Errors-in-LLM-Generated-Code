@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB040",
+  "dataset": "MBPP",
+  "task_id": "574",
+  "problem_summary": "Write a function to find the surface area of a cylinder.",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpqyh9v6br.py\", line 4, in <module>\n    assert surfacearea_cylinder(10,5)==942.45\n           ^^^^^^^^^^^^^^^^^^^^\nNameError: name 'surfacearea_cylinder' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpqyh9v6br.py\", line 4, in <module>\n    assert surfacearea_cylinder(10,5)==942.45\n           ^^^^^^^^^^^^^^^^^^^^\nNameError: name 'surfacearea_cylinder' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'surfacearea_cylinder' is not defined",
+  "execution_time": 0.226648,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

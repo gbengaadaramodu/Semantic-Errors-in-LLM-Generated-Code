@@ -1,0 +1,430 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def max_subarray_product(arr):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "arr",
+        "max_subarray_product"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 1,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "if len(arr) == 0:",
+      "statement_type": "If",
+      "reads": [
+        "arr",
+        "len"
+      ],
+      "writes": [],
+      "function_name": "max_subarray_product",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "3": {
+      "node_id": 3,
+      "line_number": 3,
+      "source_code": "return None",
+      "statement_type": "Return",
+      "reads": [],
+      "writes": [],
+      "function_name": "max_subarray_product",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "4": {
+      "node_id": 4,
+      "line_number": 4,
+      "source_code": "max_product = arr[0]",
+      "statement_type": "Assign",
+      "reads": [
+        "arr"
+      ],
+      "writes": [
+        "max_product"
+      ],
+      "function_name": "max_subarray_product",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "5": {
+      "node_id": 5,
+      "line_number": 5,
+      "source_code": "min_product = arr[0]",
+      "statement_type": "Assign",
+      "reads": [
+        "arr"
+      ],
+      "writes": [
+        "min_product"
+      ],
+      "function_name": "max_subarray_product",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "6": {
+      "node_id": 6,
+      "line_number": 6,
+      "source_code": "for i in range(1, len(arr)):",
+      "statement_type": "For",
+      "reads": [
+        "arr",
+        "len",
+        "range"
+      ],
+      "writes": [
+        "i"
+      ],
+      "function_name": "max_subarray_product",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "7": {
+      "node_id": 7,
+      "line_number": 7,
+      "source_code": "product = arr[i] * max_product",
+      "statement_type": "Assign",
+      "reads": [
+        "arr",
+        "i",
+        "max_product"
+      ],
+      "writes": [
+        "product"
+      ],
+      "function_name": "max_subarray_product",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "8": {
+      "node_id": 8,
+      "line_number": 8,
+      "source_code": "if product > max_product:",
+      "statement_type": "If",
+      "reads": [
+        "max_product",
+        "product"
+      ],
+      "writes": [],
+      "function_name": "max_subarray_product",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "9": {
+      "node_id": 9,
+      "line_number": 9,
+      "source_code": "max_product = product",
+      "statement_type": "Assign",
+      "reads": [
+        "product"
+      ],
+      "writes": [
+        "max_product"
+      ],
+      "function_name": "max_subarray_product",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "10": {
+      "node_id": 10,
+      "line_number": 10,
+      "source_code": "product = arr[i] * min_product",
+      "statement_type": "Assign",
+      "reads": [
+        "arr",
+        "i",
+        "min_product"
+      ],
+      "writes": [
+        "product"
+      ],
+      "function_name": "max_subarray_product",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "11": {
+      "node_id": 11,
+      "line_number": 11,
+      "source_code": "if product < min_product:",
+      "statement_type": "If",
+      "reads": [
+        "min_product",
+        "product"
+      ],
+      "writes": [],
+      "function_name": "max_subarray_product",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "12": {
+      "node_id": 12,
+      "line_number": 12,
+      "source_code": "min_product = product",
+      "statement_type": "Assign",
+      "reads": [
+        "product"
+      ],
+      "writes": [
+        "min_product"
+      ],
+      "function_name": "max_subarray_product",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "13": {
+      "node_id": 13,
+      "line_number": 13,
+      "source_code": "return max_product",
+      "statement_type": "Return",
+      "reads": [
+        "max_product"
+      ],
+      "writes": [],
+      "function_name": "max_subarray_product",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "arr",
+      "label": "DATA(arr)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 4,
+      "dependency_type": "DATA",
+      "variable": "arr",
+      "label": "DATA(arr)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 5,
+      "dependency_type": "DATA",
+      "variable": "arr",
+      "label": "DATA(arr)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 6,
+      "dependency_type": "DATA",
+      "variable": "arr",
+      "label": "DATA(arr)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 7,
+      "dependency_type": "DATA",
+      "variable": "arr",
+      "label": "DATA(arr)"
+    },
+    {
+      "source_id": 6,
+      "target_id": 7,
+      "dependency_type": "DATA",
+      "variable": "i",
+      "label": "DATA(i)"
+    },
+    {
+      "source_id": 4,
+      "target_id": 7,
+      "dependency_type": "DATA",
+      "variable": "max_product",
+      "label": "DATA(max_product)"
+    },
+    {
+      "source_id": 4,
+      "target_id": 8,
+      "dependency_type": "DATA",
+      "variable": "max_product",
+      "label": "DATA(max_product)"
+    },
+    {
+      "source_id": 7,
+      "target_id": 8,
+      "dependency_type": "DATA",
+      "variable": "product",
+      "label": "DATA(product)"
+    },
+    {
+      "source_id": 7,
+      "target_id": 9,
+      "dependency_type": "DATA",
+      "variable": "product",
+      "label": "DATA(product)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 10,
+      "dependency_type": "DATA",
+      "variable": "arr",
+      "label": "DATA(arr)"
+    },
+    {
+      "source_id": 6,
+      "target_id": 10,
+      "dependency_type": "DATA",
+      "variable": "i",
+      "label": "DATA(i)"
+    },
+    {
+      "source_id": 5,
+      "target_id": 10,
+      "dependency_type": "DATA",
+      "variable": "min_product",
+      "label": "DATA(min_product)"
+    },
+    {
+      "source_id": 5,
+      "target_id": 11,
+      "dependency_type": "DATA",
+      "variable": "min_product",
+      "label": "DATA(min_product)"
+    },
+    {
+      "source_id": 10,
+      "target_id": 11,
+      "dependency_type": "DATA",
+      "variable": "product",
+      "label": "DATA(product)"
+    },
+    {
+      "source_id": 10,
+      "target_id": 12,
+      "dependency_type": "DATA",
+      "variable": "product",
+      "label": "DATA(product)"
+    },
+    {
+      "source_id": 9,
+      "target_id": 13,
+      "dependency_type": "DATA",
+      "variable": "max_product",
+      "label": "DATA(max_product)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 2,
+      "target_id": 3,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(If)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 4,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 5,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 6,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 6,
+      "target_id": 7,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(For)"
+    },
+    {
+      "source_id": 6,
+      "target_id": 8,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(For)"
+    },
+    {
+      "source_id": 8,
+      "target_id": 9,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(If)"
+    },
+    {
+      "source_id": 6,
+      "target_id": 10,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(For)"
+    },
+    {
+      "source_id": 6,
+      "target_id": 11,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(For)"
+    },
+    {
+      "source_id": 11,
+      "target_id": 12,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(If)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 13,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    13
+  ]
+}

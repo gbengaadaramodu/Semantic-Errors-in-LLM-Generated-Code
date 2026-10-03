@@ -1,0 +1,634 @@
+{
+  "trace_id": "MB015",
+  "dataset": "MBPP",
+  "task_id": "562",
+  "error_category": "Runtime Exception",
+  "analysis_status": "ANALYZED",
+  "skip_reason": null,
+  "input_record": {
+    "trace_id": "MB015",
+    "dataset": "MBPP",
+    "task_id": "562",
+    "problem_summary": "Write a python function to find the length of the longest sublists.",
+    "execution_status": "Failed",
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp6t4d1gci.py\", line 25, in <module>\n    assert Find_Max_Length([[1],[1,4],[5,6,7,8]]) == 4\n           ^^^^^^^^^^^^^^^\nNameError: name 'Find_Max_Length' is not defined\n",
+    "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp6t4d1gci.py\", line 25, in <module>\n    assert Find_Max_Length([[1],[1,4],[5,6,7,8]]) == 4\n           ^^^^^^^^^^^^^^^\nNameError: name 'Find_Max_Length' is not defined",
+    "exception_type": "NameError",
+    "exception_message": "name 'Find_Max_Length' is not defined",
+    "execution_time": 0.231229,
+    "timed_out": false,
+    "exit_code": 1,
+    "tests_passed": false,
+    "tests_failed": 0,
+    "expected_output": null,
+    "actual_output": null,
+    "assertion_source": null,
+    "assertion_failed": false,
+    "parser_prediction": "Runtime Exception"
+  },
+  "scm": {
+    "task_id": "562",
+    "nodes": [
+      {
+        "node_id": "S",
+        "variable_name": "Specification",
+        "symbol": "S",
+        "label": "Specification"
+      },
+      {
+        "node_id": "C",
+        "variable_name": "GeneratedCode",
+        "symbol": "C",
+        "label": "Generated Code"
+      },
+      {
+        "node_id": "E",
+        "variable_name": "ExecutionTrace",
+        "symbol": "E",
+        "label": "Execution Trace"
+      },
+      {
+        "node_id": "T",
+        "variable_name": "TestSuite",
+        "symbol": "T",
+        "label": "Test Suite"
+      },
+      {
+        "node_id": "O",
+        "variable_name": "Outcome",
+        "symbol": "O",
+        "label": "Outcome"
+      }
+    ],
+    "edges": [
+      {
+        "source": "S",
+        "target": "C",
+        "relationship": "generates"
+      },
+      {
+        "source": "C",
+        "target": "E",
+        "relationship": "produces"
+      },
+      {
+        "source": "T",
+        "target": "E",
+        "relationship": "evaluates"
+      },
+      {
+        "source": "E",
+        "target": "O",
+        "relationship": "determines"
+      }
+    ],
+    "variables": {
+      "S": {
+        "name": "Specification",
+        "symbol": "S",
+        "description": "Problem description, prompt, and target function signature",
+        "value": "Write a python function to find the length of the longest sublists."
+      },
+      "C": {
+        "name": "GeneratedCode",
+        "symbol": "C",
+        "description": "LLM-generated Python source code implementation",
+        "value": "def newman_prime(n):\n    if n < 1:\n        return None\n    if n == 1:\n        return 2\n    \n    # find the previous prime number\n    prev_prime = newman_prime(n-1)\n    \n    # find the next prime numbe"
+      },
+      "E": {
+        "name": "ExecutionTrace",
+        "symbol": "E",
+        "description": "Observable runtime trace events, variable states, and stdout/stderr",
+        "value": "status=Failed, exc=NameError, msg=name 'Find_Max_Length' is not defined"
+      },
+      "T": {
+        "name": "TestSuite",
+        "symbol": "T",
+        "description": "Benchmark assertions, inputs, and check function harness",
+        "value": "assert Find_Max_Length([[1],[1,4],[5,6,7,8]]) == 4\nassert Find_Max_Length([[0,1],[2,2,],[3,2,1]]) =="
+      },
+      "O": {
+        "name": "Outcome",
+        "symbol": "O",
+        "description": "Final test execution outcome (Completed/Failed/Timeout)",
+        "value": "Failed"
+      }
+    }
+  },
+  "pdg": {
+    "nodes": {
+      "1": {
+        "node_id": 1,
+        "line_number": 1,
+        "source_code": "def newman_prime(n):",
+        "statement_type": "FunctionDef",
+        "reads": [],
+        "writes": [
+          "n",
+          "newman_prime"
+        ],
+        "function_name": "<module>",
+        "executed": true,
+        "execution_count": 1,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "2": {
+        "node_id": 2,
+        "line_number": 2,
+        "source_code": "if n < 1:",
+        "statement_type": "If",
+        "reads": [
+          "n"
+        ],
+        "writes": [],
+        "function_name": "newman_prime",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "3": {
+        "node_id": 3,
+        "line_number": 3,
+        "source_code": "return None",
+        "statement_type": "Return",
+        "reads": [],
+        "writes": [],
+        "function_name": "newman_prime",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "4": {
+        "node_id": 4,
+        "line_number": 4,
+        "source_code": "if n == 1:",
+        "statement_type": "If",
+        "reads": [
+          "n"
+        ],
+        "writes": [],
+        "function_name": "newman_prime",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "5": {
+        "node_id": 5,
+        "line_number": 5,
+        "source_code": "return 2",
+        "statement_type": "Return",
+        "reads": [],
+        "writes": [],
+        "function_name": "newman_prime",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "6": {
+        "node_id": 6,
+        "line_number": 8,
+        "source_code": "prev_prime = newman_prime(n-1)",
+        "statement_type": "Assign",
+        "reads": [
+          "n",
+          "newman_prime"
+        ],
+        "writes": [
+          "prev_prime"
+        ],
+        "function_name": "newman_prime",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "7": {
+        "node_id": 7,
+        "line_number": 11,
+        "source_code": "next_prime = prev_prime + 2",
+        "statement_type": "Assign",
+        "reads": [
+          "prev_prime"
+        ],
+        "writes": [
+          "next_prime"
+        ],
+        "function_name": "newman_prime",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "8": {
+        "node_id": 8,
+        "line_number": 12,
+        "source_code": "while not is_prime(next_prime):",
+        "statement_type": "While",
+        "reads": [
+          "is_prime",
+          "next_prime"
+        ],
+        "writes": [],
+        "function_name": "newman_prime",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "9": {
+        "node_id": 9,
+        "line_number": 13,
+        "source_code": "next_prime += 2",
+        "statement_type": "AugAssign",
+        "reads": [],
+        "writes": [
+          "next_prime"
+        ],
+        "function_name": "newman_prime",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "10": {
+        "node_id": 10,
+        "line_number": 15,
+        "source_code": "return next_prime",
+        "statement_type": "Return",
+        "reads": [
+          "next_prime"
+        ],
+        "writes": [],
+        "function_name": "newman_prime",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "11": {
+        "node_id": 11,
+        "line_number": 17,
+        "source_code": "def is_prime(n):",
+        "statement_type": "FunctionDef",
+        "reads": [],
+        "writes": [
+          "n",
+          "is_prime"
+        ],
+        "function_name": "<module>",
+        "executed": true,
+        "execution_count": 1,
+        "runtime_values": {
+          "newman_prime": [
+            "<function newman_prime at 0x0000022B6C878180>"
+          ]
+        },
+        "failure_related": false
+      },
+      "12": {
+        "node_id": 12,
+        "line_number": 18,
+        "source_code": "if n <= 1:",
+        "statement_type": "If",
+        "reads": [
+          "n"
+        ],
+        "writes": [],
+        "function_name": "is_prime",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "13": {
+        "node_id": 13,
+        "line_number": 19,
+        "source_code": "return False",
+        "statement_type": "Return",
+        "reads": [],
+        "writes": [],
+        "function_name": "is_prime",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "14": {
+        "node_id": 14,
+        "line_number": 20,
+        "source_code": "for i in range(2, int(n**0.5) + 1):",
+        "statement_type": "For",
+        "reads": [
+          "int",
+          "n",
+          "range"
+        ],
+        "writes": [
+          "i"
+        ],
+        "function_name": "is_prime",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "15": {
+        "node_id": 15,
+        "line_number": 21,
+        "source_code": "if n % i == 0:",
+        "statement_type": "If",
+        "reads": [
+          "i",
+          "n"
+        ],
+        "writes": [],
+        "function_name": "is_prime",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "16": {
+        "node_id": 16,
+        "line_number": 22,
+        "source_code": "return False",
+        "statement_type": "Return",
+        "reads": [],
+        "writes": [],
+        "function_name": "is_prime",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "17": {
+        "node_id": 17,
+        "line_number": 23,
+        "source_code": "return True",
+        "statement_type": "Return",
+        "reads": [],
+        "writes": [],
+        "function_name": "is_prime",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": true
+      }
+    },
+    "edges": [
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "DATA",
+        "variable": "n",
+        "label": "DATA(n)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 4,
+        "dependency_type": "DATA",
+        "variable": "n",
+        "label": "DATA(n)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 6,
+        "dependency_type": "DATA",
+        "variable": "n",
+        "label": "DATA(n)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 6,
+        "dependency_type": "DATA",
+        "variable": "newman_prime",
+        "label": "DATA(newman_prime)"
+      },
+      {
+        "source_id": 6,
+        "target_id": 7,
+        "dependency_type": "DATA",
+        "variable": "prev_prime",
+        "label": "DATA(prev_prime)"
+      },
+      {
+        "source_id": 7,
+        "target_id": 8,
+        "dependency_type": "DATA",
+        "variable": "next_prime",
+        "label": "DATA(next_prime)"
+      },
+      {
+        "source_id": 9,
+        "target_id": 10,
+        "dependency_type": "DATA",
+        "variable": "next_prime",
+        "label": "DATA(next_prime)"
+      },
+      {
+        "source_id": 11,
+        "target_id": 12,
+        "dependency_type": "DATA",
+        "variable": "n",
+        "label": "DATA(n)"
+      },
+      {
+        "source_id": 11,
+        "target_id": 14,
+        "dependency_type": "DATA",
+        "variable": "n",
+        "label": "DATA(n)"
+      },
+      {
+        "source_id": 14,
+        "target_id": 15,
+        "dependency_type": "DATA",
+        "variable": "i",
+        "label": "DATA(i)"
+      },
+      {
+        "source_id": 11,
+        "target_id": 15,
+        "dependency_type": "DATA",
+        "variable": "n",
+        "label": "DATA(n)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 2,
+        "target_id": 3,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(If)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 4,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 4,
+        "target_id": 5,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(If)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 6,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 7,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 8,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 8,
+        "target_id": 9,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(While)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 10,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 11,
+        "target_id": 12,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 12,
+        "target_id": 13,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(If)"
+      },
+      {
+        "source_id": 11,
+        "target_id": 14,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 14,
+        "target_id": 15,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(For)"
+      },
+      {
+        "source_id": 15,
+        "target_id": 16,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(If)"
+      },
+      {
+        "source_id": 11,
+        "target_id": 17,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      }
+    ],
+    "entry_node_id": 1,
+    "failure_node_ids": [
+      17
+    ]
+  },
+  "runtime_events_count": 6,
+  "failure_line": 23,
+  "failure_statement": "return True",
+  "candidates": [
+    {
+      "rank": 1,
+      "node_id": 17,
+      "line_number": 23,
+      "statement_code": "return True",
+      "variable_name": "<statement>",
+      "observed_value": null,
+      "expected_value": "4",
+      "proximity_score": 1.0,
+      "dependency_score": 1.0,
+      "explanation": "Reached via reverse traversal (distance=0, type=Return)"
+    }
+  ],
+  "critical_variable": null,
+  "counterfactual_results": [
+    {
+      "candidate_rank": 1,
+      "intervention": {
+        "target_variable": "<statement>",
+        "target_line": 23,
+        "observed_value": "None",
+        "counterfactual_value": "4",
+        "operation_type": "failed_construction",
+        "modified_code": ""
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "FAILED_CONSTRUCTION",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "UNRESOLVED",
+      "execution_time": 0.0,
+      "status": "UNRESOLVED",
+      "explanation": "Failed to construct valid AST counterfactual intervention."
+    }
+  ],
+  "fault_location": {
+    "file": "MB015.py",
+    "line_number": 23,
+    "statement_code": "return True",
+    "function_name": "Find_Max_Length",
+    "causal_variable": "<statement>",
+    "evidence_score": 1.0,
+    "confidence": 0.5
+  },
+  "root_cause": {
+    "root_cause_status": "UNRESOLVED",
+    "candidate_explanation": "Runtime exception (NameError: name 'Find_Max_Length' is not defined) triggered at statement 'return True' (line 23) involving variable '<statement>'.",
+    "causal_variable": "<statement>",
+    "fault_statement": "return True",
+    "fault_line": 23,
+    "evidence_summary": "Reverse PDG traversal traced failure from line 1 to statement line 23. Structural dependency identified; counterfactual validation unconfirmed or unresolved.",
+    "counterfactual_validated": false,
+    "confidence": 0.5
+  },
+  "ground_truth_matched": null,
+  "ground_truth_fault_line": null,
+  "execution_time": 0.0147
+}

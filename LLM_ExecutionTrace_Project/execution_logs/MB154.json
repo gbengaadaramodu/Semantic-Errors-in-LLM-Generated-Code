@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB154",
+  "dataset": "MBPP",
+  "task_id": "598",
+  "problem_summary": "Write a function to check whether the given number is armstrong or not.",
+  "execution_status": "Completed",
+  "stdout": "",
+  "stderr": "",
+  "traceback": "",
+  "exception_type": "",
+  "exception_message": "",
+  "execution_time": 0.121514,
+  "timed_out": false,
+  "exit_code": 0,
+  "tests_passed": true,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

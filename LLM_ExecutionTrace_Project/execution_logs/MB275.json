@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB275",
+  "dataset": "MBPP",
+  "task_id": "160",
+  "problem_summary": "Write a function that returns integers x and y that satisfy ax + by = n as a tup",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp_lk0ipxm.py\", line 17, in <module>\n    assert find_solution(2, 3, 7) == (2, 1)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp_lk0ipxm.py\", line 17, in <module>\n    assert find_solution(2, 3, 7) == (2, 1)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+  "exception_type": "AssertionError",
+  "exception_message": "",
+  "execution_time": 0.219084,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": "benchmark_test",
+  "assertion_failed": true,
+  "parser_prediction": ""
+}

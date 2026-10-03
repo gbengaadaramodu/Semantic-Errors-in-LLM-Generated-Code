@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a function to find the first adverb ending with ly and its positions in a given string.
+
+Example test: assert find_adverbs("Clearly, he has no excuse for such behavior.") == '0-7: Clearly'
+[/INST]

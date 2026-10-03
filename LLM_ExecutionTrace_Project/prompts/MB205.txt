@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a function to calculate the area of a regular polygon given the length and number of its sides.
+
+Example test: assert math.isclose(area_polygon(4, 20), 400., rel_tol=0.001)
+[/INST]

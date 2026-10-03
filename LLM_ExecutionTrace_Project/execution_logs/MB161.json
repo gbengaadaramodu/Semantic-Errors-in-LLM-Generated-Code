@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB161",
+  "dataset": "MBPP",
+  "task_id": "164",
+  "problem_summary": "Write a function to determine if the sum of the divisors of two integers are the",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpjji7cs10.py\", line 4, in <module>\n    assert are_equivalent(36, 57) == False\n           ~~~~~~~~~~~~~~^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpjji7cs10.py\", line 2, in are_equivalent\n    return sum(divisors(num1)) == sum(divisors(num2))\n               ^^^^^^^^\nNameError: name 'divisors' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpjji7cs10.py\", line 4, in <module>\n    assert are_equivalent(36, 57) == False\n           ~~~~~~~~~~~~~~^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpjji7cs10.py\", line 2, in are_equivalent\n    return sum(divisors(num1)) == sum(divisors(num2))\n               ^^^^^^^^\nNameError: name 'divisors' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'divisors' is not defined",
+  "execution_time": 0.232373,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

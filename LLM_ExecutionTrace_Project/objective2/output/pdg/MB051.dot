@@ -1,0 +1,11 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def check_integer(s): | W:s,check_integer", fillcolor="salmon"];
+    "2" [label="L2: try:         int(s)         return True     except ValueError:         return False | R:ValueError,int,s", fillcolor="lightgrey"];
+
+    "1" -> "2" [label="DATA(s)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

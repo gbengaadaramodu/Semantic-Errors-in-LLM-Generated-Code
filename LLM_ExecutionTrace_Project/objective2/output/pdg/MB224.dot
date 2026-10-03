@@ -1,0 +1,55 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def find_adverb_position(sentence): | W:sentence,find_adverb_position", fillcolor="lightgreen"];
+    "2" [label="L2: adverb = \"\" | W:adverb", fillcolor="lightgreen"];
+    "3" [label="L3: start_index = 0 | W:start_index", fillcolor="lightgreen"];
+    "4" [label="L4: end_index = 0 | W:end_index", fillcolor="lightgreen"];
+    "5" [label="L6: for word in sentence.split(): | W:word | R:sentence", fillcolor="lightgreen"];
+    "6" [label="L7: if word[-1] == 'ly': | R:word", fillcolor="lightgreen"];
+    "7" [label="L8: adverb = word | W:adverb | R:word", fillcolor="lightgrey"];
+    "8" [label="L9: break", fillcolor="lightgrey"];
+    "9" [label="L11: for i, word in enumerate(sentence.split()): | W:i,word | R:enumerate,sentence", fillcolor="lightgreen"];
+    "10" [label="L12: if word == adverb: | R:adverb,word", fillcolor="lightgreen"];
+    "11" [label="L13: start_index = i | W:start_index | R:i", fillcolor="lightgrey"];
+    "12" [label="L14: break", fillcolor="lightgrey"];
+    "13" [label="L16: for i, word in enumerate(sentence.split()[::-1]): | W:i,word | R:enumerate,sentence", fillcolor="lightgreen"];
+    "14" [label="L17: if word == adverb: | R:adverb,word", fillcolor="lightgreen"];
+    "15" [label="L18: end_index = len(sentence.split()) - i | W:end_index | R:i,len,sentence", fillcolor="lightgrey"];
+    "16" [label="L19: break", fillcolor="lightgrey"];
+    "17" [label="L21: return (start_index, end_index, adverb) | R:adverb,end_index,start_index", fillcolor="salmon"];
+
+    "1" -> "5" [label="DATA(sentence)", style="solid"];
+    "5" -> "6" [label="DATA(word)", style="solid"];
+    "5" -> "7" [label="DATA(word)", style="solid"];
+    "1" -> "9" [label="DATA(sentence)", style="solid"];
+    "7" -> "10" [label="DATA(adverb)", style="solid"];
+    "9" -> "10" [label="DATA(word)", style="solid"];
+    "9" -> "11" [label="DATA(i)", style="solid"];
+    "1" -> "13" [label="DATA(sentence)", style="solid"];
+    "7" -> "14" [label="DATA(adverb)", style="solid"];
+    "13" -> "14" [label="DATA(word)", style="solid"];
+    "13" -> "15" [label="DATA(i)", style="solid"];
+    "1" -> "15" [label="DATA(sentence)", style="solid"];
+    "7" -> "17" [label="DATA(adverb)", style="solid"];
+    "15" -> "17" [label="DATA(end_index)", style="solid"];
+    "11" -> "17" [label="DATA(start_index)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "3" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "4" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "5" [label="CONTROL(FunctionDef)", style="dashed"];
+    "5" -> "6" [label="CONTROL(For)", style="dashed"];
+    "6" -> "7" [label="CONTROL(If)", style="dashed"];
+    "6" -> "8" [label="CONTROL(If)", style="dashed"];
+    "1" -> "9" [label="CONTROL(FunctionDef)", style="dashed"];
+    "9" -> "10" [label="CONTROL(For)", style="dashed"];
+    "10" -> "11" [label="CONTROL(If)", style="dashed"];
+    "10" -> "12" [label="CONTROL(If)", style="dashed"];
+    "1" -> "13" [label="CONTROL(FunctionDef)", style="dashed"];
+    "13" -> "14" [label="CONTROL(For)", style="dashed"];
+    "14" -> "15" [label="CONTROL(If)", style="dashed"];
+    "14" -> "16" [label="CONTROL(If)", style="dashed"];
+    "1" -> "17" [label="CONTROL(FunctionDef)", style="dashed"];
+}

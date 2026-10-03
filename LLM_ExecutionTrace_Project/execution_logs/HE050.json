@@ -1,0 +1,22 @@
+{
+  "trace_id": "HE050",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/48",
+  "problem_summary": "\n\ndef is_palindrome(text: str):\n    \"\"\"\n    Checks if given string is a palindro",
+  "execution_status": "Completed",
+  "stdout": "",
+  "stderr": "",
+  "traceback": "",
+  "exception_type": "",
+  "exception_message": "",
+  "execution_time": 0.111849,
+  "timed_out": false,
+  "exit_code": 0,
+  "tests_passed": true,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

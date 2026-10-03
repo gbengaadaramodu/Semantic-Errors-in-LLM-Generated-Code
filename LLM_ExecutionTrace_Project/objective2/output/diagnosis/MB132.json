@@ -1,0 +1,242 @@
+{
+  "trace_id": "MB132",
+  "dataset": "MBPP",
+  "task_id": "720",
+  "error_category": "Runtime Exception",
+  "analysis_status": "ANALYZED",
+  "skip_reason": null,
+  "input_record": {
+    "trace_id": "MB132",
+    "dataset": "MBPP",
+    "task_id": "720",
+    "problem_summary": "Write a function to add a dictionary to the tuple. The output should be a tuple.",
+    "execution_status": "Failed",
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpjdyfz7it.py\", line 4, in <module>\n    assert add_dict_to_tuple((4, 5, 6), {\"MSAM\" : 1, \"is\" : 2, \"best\" : 3} ) == (4, 5, 6, {'MSAM': 1, 'is': 2, 'best': 3})\n           ^^^^^^^^^^^^^^^^^\nNameError: name 'add_dict_to_tuple' is not defined\n",
+    "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpjdyfz7it.py\", line 4, in <module>\n    assert add_dict_to_tuple((4, 5, 6), {\"MSAM\" : 1, \"is\" : 2, \"best\" : 3} ) == (4, 5, 6, {'MSAM': 1, 'is': 2, 'best': 3})\n           ^^^^^^^^^^^^^^^^^\nNameError: name 'add_dict_to_tuple' is not defined",
+    "exception_type": "NameError",
+    "exception_message": "name 'add_dict_to_tuple' is not defined",
+    "execution_time": 0.207702,
+    "timed_out": false,
+    "exit_code": 1,
+    "tests_passed": false,
+    "tests_failed": 0,
+    "expected_output": null,
+    "actual_output": null,
+    "assertion_source": null,
+    "assertion_failed": false,
+    "parser_prediction": "Runtime Exception"
+  },
+  "scm": {
+    "task_id": "720",
+    "nodes": [
+      {
+        "node_id": "S",
+        "variable_name": "Specification",
+        "symbol": "S",
+        "label": "Specification"
+      },
+      {
+        "node_id": "C",
+        "variable_name": "GeneratedCode",
+        "symbol": "C",
+        "label": "Generated Code"
+      },
+      {
+        "node_id": "E",
+        "variable_name": "ExecutionTrace",
+        "symbol": "E",
+        "label": "Execution Trace"
+      },
+      {
+        "node_id": "T",
+        "variable_name": "TestSuite",
+        "symbol": "T",
+        "label": "Test Suite"
+      },
+      {
+        "node_id": "O",
+        "variable_name": "Outcome",
+        "symbol": "O",
+        "label": "Outcome"
+      }
+    ],
+    "edges": [
+      {
+        "source": "S",
+        "target": "C",
+        "relationship": "generates"
+      },
+      {
+        "source": "C",
+        "target": "E",
+        "relationship": "produces"
+      },
+      {
+        "source": "T",
+        "target": "E",
+        "relationship": "evaluates"
+      },
+      {
+        "source": "E",
+        "target": "O",
+        "relationship": "determines"
+      }
+    ],
+    "variables": {
+      "S": {
+        "name": "Specification",
+        "symbol": "S",
+        "description": "Problem description, prompt, and target function signature",
+        "value": "Write a function to add a dictionary to the tuple. The output should be a tuple."
+      },
+      "C": {
+        "name": "GeneratedCode",
+        "symbol": "C",
+        "description": "LLM-generated Python source code implementation",
+        "value": "def count_bidirectional(tuple_pairs):\n    return len(set((frozenset(pair), frozenset(reversed(pair))) for pair in tuple_pairs))"
+      },
+      "E": {
+        "name": "ExecutionTrace",
+        "symbol": "E",
+        "description": "Observable runtime trace events, variable states, and stdout/stderr",
+        "value": "status=Failed, exc=NameError, msg=name 'add_dict_to_tuple' is not defined"
+      },
+      "T": {
+        "name": "TestSuite",
+        "symbol": "T",
+        "description": "Benchmark assertions, inputs, and check function harness",
+        "value": "assert add_dict_to_tuple((4, 5, 6), {\"MSAM\" : 1, \"is\" : 2, \"best\" : 3} ) == (4, 5, 6, {'MSAM': 1, 'i"
+      },
+      "O": {
+        "name": "Outcome",
+        "symbol": "O",
+        "description": "Final test execution outcome (Completed/Failed/Timeout)",
+        "value": "Failed"
+      }
+    }
+  },
+  "pdg": {
+    "nodes": {
+      "1": {
+        "node_id": 1,
+        "line_number": 1,
+        "source_code": "def count_bidirectional(tuple_pairs):",
+        "statement_type": "FunctionDef",
+        "reads": [],
+        "writes": [
+          "tuple_pairs",
+          "count_bidirectional"
+        ],
+        "function_name": "<module>",
+        "executed": true,
+        "execution_count": 1,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "2": {
+        "node_id": 2,
+        "line_number": 2,
+        "source_code": "return len(set((frozenset(pair), frozenset(reversed(pair))) for pair in tuple_pairs))",
+        "statement_type": "Return",
+        "reads": [
+          "frozenset",
+          "len",
+          "pair",
+          "reversed",
+          "set",
+          "tuple_pairs"
+        ],
+        "writes": [
+          "pair"
+        ],
+        "function_name": "count_bidirectional",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": true
+      }
+    },
+    "edges": [
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "DATA",
+        "variable": "tuple_pairs",
+        "label": "DATA(tuple_pairs)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      }
+    ],
+    "entry_node_id": 1,
+    "failure_node_ids": [
+      2
+    ]
+  },
+  "runtime_events_count": 5,
+  "failure_line": 2,
+  "failure_statement": "return len(set((frozenset(pair), frozenset(reversed(pair))) for pair in tuple_pairs))",
+  "candidates": [
+    {
+      "rank": 1,
+      "node_id": 2,
+      "line_number": 2,
+      "statement_code": "return len(set((frozenset(pair), frozenset(reversed(pair))) for pair in tuple_pairs))",
+      "variable_name": "pair",
+      "observed_value": null,
+      "expected_value": "(4, 5, 6, {'MSAM': 1, 'is': 2, 'best': 3})",
+      "proximity_score": 1.0,
+      "dependency_score": 1.0,
+      "explanation": "Reached via reverse traversal (distance=0, type=Return)"
+    }
+  ],
+  "critical_variable": null,
+  "counterfactual_results": [
+    {
+      "candidate_rank": 1,
+      "intervention": {
+        "target_variable": "pair",
+        "target_line": 2,
+        "observed_value": "None",
+        "counterfactual_value": "(4, 5, 6, {'MSAM': 1, 'is': 2, 'best': 3})",
+        "operation_type": "AST_transform",
+        "modified_code": "def count_bidirectional(tuple_pairs):\n    pair = (4, 5, 6, {'MSAM': 1, 'is': 2, 'best': 3})\n    return len(set((frozenset(pair), frozenset(reversed(pair))) for pair in tuple_pairs))"
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "Failed",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "FALSE",
+      "execution_time": 0.2639,
+      "status": "EXECUTED",
+      "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+    }
+  ],
+  "fault_location": {
+    "file": "MB132.py",
+    "line_number": 2,
+    "statement_code": "return len(set((frozenset(pair), frozenset(reversed(pair))) for pair in tuple_pairs))",
+    "function_name": "add_dict_to_tuple",
+    "causal_variable": "pair",
+    "evidence_score": 0.5,
+    "confidence": 0.3
+  },
+  "root_cause": {
+    "root_cause_status": "UNRESOLVED",
+    "candidate_explanation": "Runtime exception (NameError: name 'add_dict_to_tuple' is not defined) triggered at statement 'return len(set((frozenset(pair), frozenset(reversed(pair))) for pair in tuple_pairs))' (line 2) involving variable 'pair'.",
+    "causal_variable": "pair",
+    "fault_statement": "return len(set((frozenset(pair), frozenset(reversed(pair))) for pair in tuple_pairs))",
+    "fault_line": 2,
+    "evidence_summary": "Reverse PDG traversal traced failure from line 1 to statement line 2. Structural dependency identified; counterfactual validation unconfirmed or unresolved.",
+    "counterfactual_validated": false,
+    "confidence": 0.3
+  },
+  "ground_truth_matched": null,
+  "ground_truth_fault_line": null,
+  "execution_time": 0.2769
+}

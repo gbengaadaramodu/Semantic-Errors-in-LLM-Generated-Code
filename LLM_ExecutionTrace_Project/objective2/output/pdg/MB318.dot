@@ -1,0 +1,12 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def digit_distance_nums(num1, num2): | W:num1,num2,digit_distance_nums", fillcolor="lightgreen"];
+    "2" [label="L2: return abs(num1 - num2) | R:abs,num1,num2", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(num1)", style="solid"];
+    "1" -> "2" [label="DATA(num2)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

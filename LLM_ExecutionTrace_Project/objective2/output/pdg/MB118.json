@@ -1,0 +1,62 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def multiply_elements(my_tuple):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "my_tuple",
+        "multiply_elements"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 1,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "return tuple(x * y for x, y in zip(my_tuple, my_tuple[1:]))",
+      "statement_type": "Return",
+      "reads": [
+        "my_tuple",
+        "tuple",
+        "x",
+        "y",
+        "zip"
+      ],
+      "writes": [
+        "x",
+        "y"
+      ],
+      "function_name": "multiply_elements",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "my_tuple",
+      "label": "DATA(my_tuple)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    2
+  ]
+}

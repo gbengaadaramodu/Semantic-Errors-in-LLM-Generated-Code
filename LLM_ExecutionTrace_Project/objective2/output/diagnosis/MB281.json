@@ -1,0 +1,549 @@
+{
+  "trace_id": "MB281",
+  "dataset": "MBPP",
+  "task_id": "223",
+  "error_category": "Wrong-Output Error",
+  "analysis_status": "ANALYZED",
+  "skip_reason": null,
+  "input_record": {
+    "trace_id": "MB281",
+    "dataset": "MBPP",
+    "task_id": "223",
+    "problem_summary": "Write a function that takes in a sorted array, its length (n), and an element an",
+    "execution_status": "Failed",
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp86iehxto.py\", line 12, in <module>\n    assert is_majority([1, 1, 2, 4, 4, 4, 6, 6], 8, 4) == False\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+    "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp86iehxto.py\", line 12, in <module>\n    assert is_majority([1, 1, 2, 4, 4, 4, 6, 6], 8, 4) == False\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+    "exception_type": "AssertionError",
+    "exception_message": "",
+    "execution_time": 0.182624,
+    "timed_out": false,
+    "exit_code": 1,
+    "tests_passed": false,
+    "tests_failed": 0,
+    "expected_output": null,
+    "actual_output": null,
+    "assertion_source": "benchmark_test",
+    "assertion_failed": true,
+    "parser_prediction": "Wrong-Output Error"
+  },
+  "scm": {
+    "task_id": "223",
+    "nodes": [
+      {
+        "node_id": "S",
+        "variable_name": "Specification",
+        "symbol": "S",
+        "label": "Specification"
+      },
+      {
+        "node_id": "C",
+        "variable_name": "GeneratedCode",
+        "symbol": "C",
+        "label": "Generated Code"
+      },
+      {
+        "node_id": "E",
+        "variable_name": "ExecutionTrace",
+        "symbol": "E",
+        "label": "Execution Trace"
+      },
+      {
+        "node_id": "T",
+        "variable_name": "TestSuite",
+        "symbol": "T",
+        "label": "Test Suite"
+      },
+      {
+        "node_id": "O",
+        "variable_name": "Outcome",
+        "symbol": "O",
+        "label": "Outcome"
+      }
+    ],
+    "edges": [
+      {
+        "source": "S",
+        "target": "C",
+        "relationship": "generates"
+      },
+      {
+        "source": "C",
+        "target": "E",
+        "relationship": "produces"
+      },
+      {
+        "source": "T",
+        "target": "E",
+        "relationship": "evaluates"
+      },
+      {
+        "source": "E",
+        "target": "O",
+        "relationship": "determines"
+      }
+    ],
+    "variables": {
+      "S": {
+        "name": "Specification",
+        "symbol": "S",
+        "description": "Problem description, prompt, and target function signature",
+        "value": "Write a function that takes in a sorted array, its length (n), and an element an"
+      },
+      "C": {
+        "name": "GeneratedCode",
+        "symbol": "C",
+        "description": "LLM-generated Python source code implementation",
+        "value": "def is_majority(sorted_array, n, element):\n    if sorted_array[n//2] == element:\n        return True\n    if n % 2 == 0:\n        return False\n    if element > sorted_array[n//2]:\n        return is_majo"
+      },
+      "E": {
+        "name": "ExecutionTrace",
+        "symbol": "E",
+        "description": "Observable runtime trace events, variable states, and stdout/stderr",
+        "value": "status=Failed, exc=AssertionError, msg="
+      },
+      "T": {
+        "name": "TestSuite",
+        "symbol": "T",
+        "description": "Benchmark assertions, inputs, and check function harness",
+        "value": "assert is_majority([1, 2, 3, 3, 3, 3, 10], 7, 3) == True\nassert is_majority([1, 1, 2, 4, 4, 4, 6, 6]"
+      },
+      "O": {
+        "name": "Outcome",
+        "symbol": "O",
+        "description": "Final test execution outcome (Completed/Failed/Timeout)",
+        "value": "Failed"
+      }
+    }
+  },
+  "pdg": {
+    "nodes": {
+      "1": {
+        "node_id": 1,
+        "line_number": 1,
+        "source_code": "def is_majority(sorted_array, n, element):",
+        "statement_type": "FunctionDef",
+        "reads": [],
+        "writes": [
+          "element",
+          "n",
+          "sorted_array",
+          "is_majority"
+        ],
+        "function_name": "<module>",
+        "executed": true,
+        "execution_count": 3,
+        "runtime_values": {
+          "sorted_array": [
+            "[1, 2, 3, 3, 3, 3, 10]",
+            "[1, 1, 2, 4, 4, 4, 6, 6]"
+          ],
+          "n": [
+            "7",
+            "8"
+          ],
+          "element": [
+            "3",
+            "4"
+          ]
+        },
+        "failure_related": false
+      },
+      "2": {
+        "node_id": 2,
+        "line_number": 2,
+        "source_code": "if sorted_array[n//2] == element:",
+        "statement_type": "If",
+        "reads": [
+          "element",
+          "n",
+          "sorted_array"
+        ],
+        "writes": [],
+        "function_name": "is_majority",
+        "executed": true,
+        "execution_count": 2,
+        "runtime_values": {
+          "sorted_array": [
+            "[1, 2, 3, 3, 3, 3, 10]",
+            "[1, 1, 2, 4, 4, 4, 6, 6]"
+          ],
+          "n": [
+            "7",
+            "8"
+          ],
+          "element": [
+            "3",
+            "4"
+          ]
+        },
+        "failure_related": false
+      },
+      "3": {
+        "node_id": 3,
+        "line_number": 3,
+        "source_code": "return True",
+        "statement_type": "Return",
+        "reads": [],
+        "writes": [],
+        "function_name": "is_majority",
+        "executed": true,
+        "execution_count": 4,
+        "runtime_values": {
+          "sorted_array": [
+            "[1, 2, 3, 3, 3, 3, 10]",
+            "[1, 2, 3, 3, 3, 3, 10]",
+            "[1, 1, 2, 4, 4, 4, 6, 6]",
+            "[1, 1, 2, 4, 4, 4, 6, 6]"
+          ],
+          "n": [
+            "7",
+            "7",
+            "8",
+            "8"
+          ],
+          "element": [
+            "3",
+            "3",
+            "4",
+            "4"
+          ]
+        },
+        "failure_related": false
+      },
+      "4": {
+        "node_id": 4,
+        "line_number": 4,
+        "source_code": "if n % 2 == 0:",
+        "statement_type": "If",
+        "reads": [
+          "n"
+        ],
+        "writes": [],
+        "function_name": "is_majority",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "5": {
+        "node_id": 5,
+        "line_number": 5,
+        "source_code": "return False",
+        "statement_type": "Return",
+        "reads": [],
+        "writes": [],
+        "function_name": "is_majority",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "6": {
+        "node_id": 6,
+        "line_number": 6,
+        "source_code": "if element > sorted_array[n//2]:",
+        "statement_type": "If",
+        "reads": [
+          "element",
+          "n",
+          "sorted_array"
+        ],
+        "writes": [],
+        "function_name": "is_majority",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "7": {
+        "node_id": 7,
+        "line_number": 7,
+        "source_code": "return is_majority(sorted_array, n//2, element)",
+        "statement_type": "Return",
+        "reads": [
+          "element",
+          "is_majority",
+          "n",
+          "sorted_array"
+        ],
+        "writes": [],
+        "function_name": "is_majority",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "8": {
+        "node_id": 8,
+        "line_number": 9,
+        "source_code": "return is_majority(sorted_array, n//2+1, element)",
+        "statement_type": "Return",
+        "reads": [
+          "element",
+          "is_majority",
+          "n",
+          "sorted_array"
+        ],
+        "writes": [],
+        "function_name": "is_majority",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": true
+      }
+    },
+    "edges": [
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "DATA",
+        "variable": "element",
+        "label": "DATA(element)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "DATA",
+        "variable": "n",
+        "label": "DATA(n)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "DATA",
+        "variable": "sorted_array",
+        "label": "DATA(sorted_array)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 4,
+        "dependency_type": "DATA",
+        "variable": "n",
+        "label": "DATA(n)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 6,
+        "dependency_type": "DATA",
+        "variable": "element",
+        "label": "DATA(element)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 6,
+        "dependency_type": "DATA",
+        "variable": "n",
+        "label": "DATA(n)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 6,
+        "dependency_type": "DATA",
+        "variable": "sorted_array",
+        "label": "DATA(sorted_array)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 7,
+        "dependency_type": "DATA",
+        "variable": "element",
+        "label": "DATA(element)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 7,
+        "dependency_type": "DATA",
+        "variable": "is_majority",
+        "label": "DATA(is_majority)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 7,
+        "dependency_type": "DATA",
+        "variable": "n",
+        "label": "DATA(n)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 7,
+        "dependency_type": "DATA",
+        "variable": "sorted_array",
+        "label": "DATA(sorted_array)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 8,
+        "dependency_type": "DATA",
+        "variable": "element",
+        "label": "DATA(element)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 8,
+        "dependency_type": "DATA",
+        "variable": "is_majority",
+        "label": "DATA(is_majority)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 8,
+        "dependency_type": "DATA",
+        "variable": "n",
+        "label": "DATA(n)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 8,
+        "dependency_type": "DATA",
+        "variable": "sorted_array",
+        "label": "DATA(sorted_array)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 2,
+        "target_id": 3,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(If)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 4,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 4,
+        "target_id": 5,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(If)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 6,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 6,
+        "target_id": 7,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(If)"
+      },
+      {
+        "source_id": 6,
+        "target_id": 8,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(If)"
+      }
+    ],
+    "entry_node_id": 1,
+    "failure_node_ids": [
+      8
+    ]
+  },
+  "runtime_events_count": 14,
+  "failure_line": 9,
+  "failure_statement": "return is_majority(sorted_array, n//2+1, element)",
+  "candidates": [
+    {
+      "rank": 1,
+      "node_id": 8,
+      "line_number": 9,
+      "statement_code": "return is_majority(sorted_array, n//2+1, element)",
+      "variable_name": "element",
+      "observed_value": null,
+      "expected_value": "False",
+      "proximity_score": 1.0,
+      "dependency_score": 1.0,
+      "explanation": "Reached via reverse traversal (distance=0, type=Return)"
+    },
+    {
+      "rank": 2,
+      "node_id": 6,
+      "line_number": 6,
+      "statement_code": "if element > sorted_array[n//2]:",
+      "variable_name": "element",
+      "observed_value": null,
+      "expected_value": null,
+      "proximity_score": 0.85,
+      "dependency_score": 0.7,
+      "explanation": "Reached via reverse traversal (distance=1, type=If)"
+    }
+  ],
+  "critical_variable": null,
+  "counterfactual_results": [
+    {
+      "candidate_rank": 1,
+      "intervention": {
+        "target_variable": "element",
+        "target_line": 9,
+        "observed_value": "None",
+        "counterfactual_value": "False",
+        "operation_type": "AST_transform",
+        "modified_code": "def is_majority(sorted_array, n, element):\n    if sorted_array[n//2] == element:\n        return True\n    if n % 2 == 0:\n        return False\n    if element > sorted_array[n//2]:\n        return is_majority(sorted_array, n//2, element)\n    else:\n        element = False\n        return is_majority(sorted_array, n//2+1, element)"
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "Failed",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "FALSE",
+      "execution_time": 0.2518,
+      "status": "EXECUTED",
+      "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+    },
+    {
+      "candidate_rank": 2,
+      "intervention": {
+        "target_variable": "element",
+        "target_line": 6,
+        "observed_value": "None",
+        "counterfactual_value": "None",
+        "operation_type": "AST_transform",
+        "modified_code": "def is_majority(sorted_array, n, element):\n    if sorted_array[n // 2] == element:\n        return True\n    if n % 2 == 0:\n        return False\n    if element <= sorted_array[n // 2]:\n        return is_majority(sorted_array, n // 2, element)\n    else:\n        return is_majority(sorted_array, n // 2 + 1, element)"
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "Failed",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "FALSE",
+      "execution_time": 0.2634,
+      "status": "EXECUTED",
+      "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+    }
+  ],
+  "fault_location": {
+    "file": "MB281.py",
+    "line_number": 9,
+    "statement_code": "return is_majority(sorted_array, n//2+1, element)",
+    "function_name": "is_majority",
+    "causal_variable": "element",
+    "evidence_score": 0.5,
+    "confidence": 0.3
+  },
+  "root_cause": {
+    "root_cause_status": "UNRESOLVED",
+    "candidate_explanation": "Semantic mismatch at line 9 ('return is_majority(sorted_array, n//2+1, element)') causes return value mismatch.",
+    "causal_variable": "element",
+    "fault_statement": "return is_majority(sorted_array, n//2+1, element)",
+    "fault_line": 9,
+    "evidence_summary": "Reverse PDG traversal traced failure from line 1 to statement line 9. Structural dependency identified; counterfactual validation unconfirmed or unresolved.",
+    "counterfactual_validated": false,
+    "confidence": 0.3
+  },
+  "ground_truth_matched": null,
+  "ground_truth_fault_line": null,
+  "execution_time": 0.5273
+}

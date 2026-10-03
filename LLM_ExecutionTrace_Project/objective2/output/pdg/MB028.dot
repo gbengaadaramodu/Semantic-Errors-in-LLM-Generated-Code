@@ -1,0 +1,12 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def bitwise_xor(tup1, tup2): | W:tup1,tup2,bitwise_xor", fillcolor="lightgreen"];
+    "2" [label="L2: return tuple(i ^ j for i, j in zip(tup1, tup2)) | W:i,j | R:i,j,tup1,tup2,tuple,zip", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(tup1)", style="solid"];
+    "1" -> "2" [label="DATA(tup2)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

@@ -1,0 +1,506 @@
+{
+  "trace_id": "HE162",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/105",
+  "error_category": "Wrong-Output Error",
+  "analysis_status": "ANALYZED",
+  "skip_reason": null,
+  "input_record": {
+    "trace_id": "HE162",
+    "dataset": "HumanEval",
+    "task_id": "HumanEval/105",
+    "problem_summary": "\ndef by_length(arr):\n    \"\"\"\n    Given an array of integers, sort the integers t",
+    "execution_status": "Failed",
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp968vzjwl.py\", line 23, in <module>\n    check(by_length)\n    ~~~~~^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp968vzjwl.py\", line 12, in check\n    assert candidate([2, 1, 1, 4, 5, 8, 2, 3]) == [\"Eight\", \"Five\", \"Four\", \"Three\", \"Two\", \"Two\", \"One\", \"One\"], \"Error\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Error\n",
+    "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp968vzjwl.py\", line 23, in <module>\n    check(by_length)\n    ~~~~~^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp968vzjwl.py\", line 12, in check\n    assert candidate([2, 1, 1, 4, 5, 8, 2, 3]) == [\"Eight\", \"Five\", \"Four\", \"Three\", \"Two\", \"Two\", \"One\", \"One\"], \"Error\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Error",
+    "exception_type": "AssertionError",
+    "exception_message": "Error",
+    "execution_time": 0.217908,
+    "timed_out": false,
+    "exit_code": 1,
+    "tests_passed": false,
+    "tests_failed": 0,
+    "expected_output": null,
+    "actual_output": null,
+    "assertion_source": "benchmark_test",
+    "assertion_failed": true,
+    "parser_prediction": "Wrong-Output Error"
+  },
+  "scm": {
+    "task_id": "HumanEval/105",
+    "nodes": [
+      {
+        "node_id": "S",
+        "variable_name": "Specification",
+        "symbol": "S",
+        "label": "Specification"
+      },
+      {
+        "node_id": "C",
+        "variable_name": "GeneratedCode",
+        "symbol": "C",
+        "label": "Generated Code"
+      },
+      {
+        "node_id": "E",
+        "variable_name": "ExecutionTrace",
+        "symbol": "E",
+        "label": "Execution Trace"
+      },
+      {
+        "node_id": "T",
+        "variable_name": "TestSuite",
+        "symbol": "T",
+        "label": "Test Suite"
+      },
+      {
+        "node_id": "O",
+        "variable_name": "Outcome",
+        "symbol": "O",
+        "label": "Outcome"
+      }
+    ],
+    "edges": [
+      {
+        "source": "S",
+        "target": "C",
+        "relationship": "generates"
+      },
+      {
+        "source": "C",
+        "target": "E",
+        "relationship": "produces"
+      },
+      {
+        "source": "T",
+        "target": "E",
+        "relationship": "evaluates"
+      },
+      {
+        "source": "E",
+        "target": "O",
+        "relationship": "determines"
+      }
+    ],
+    "variables": {
+      "S": {
+        "name": "Specification",
+        "symbol": "S",
+        "description": "Problem description, prompt, and target function signature",
+        "value": "\ndef by_length(arr):\n    \"\"\"\n    Given an array of integers, sort the integers t"
+      },
+      "C": {
+        "name": "GeneratedCode",
+        "symbol": "C",
+        "description": "LLM-generated Python source code implementation",
+        "value": "def by_length(arr):\n    if not arr:\n        return []\n    nums = sorted([str(num) for num in arr])\n    names = [\"One\", \"Two\", \"Three\", \"Four\", \"Five\", \"Six\", \"Seven\", \"Eight\", \"Nine\"]\n    return [name"
+      },
+      "E": {
+        "name": "ExecutionTrace",
+        "symbol": "E",
+        "description": "Observable runtime trace events, variable states, and stdout/stderr",
+        "value": "status=Failed, exc=AssertionError, msg=Error"
+      },
+      "T": {
+        "name": "TestSuite",
+        "symbol": "T",
+        "description": "Benchmark assertions, inputs, and check function harness",
+        "value": "def check(candidate):\n\n    # Check some simple cases\n    assert True, \"This prints if this assert fa"
+      },
+      "O": {
+        "name": "Outcome",
+        "symbol": "O",
+        "description": "Final test execution outcome (Completed/Failed/Timeout)",
+        "value": "Failed"
+      }
+    }
+  },
+  "pdg": {
+    "nodes": {
+      "1": {
+        "node_id": 1,
+        "line_number": 1,
+        "source_code": "def by_length(arr):",
+        "statement_type": "FunctionDef",
+        "reads": [],
+        "writes": [
+          "arr",
+          "by_length"
+        ],
+        "function_name": "<module>",
+        "executed": true,
+        "execution_count": 2,
+        "runtime_values": {
+          "arr": [
+            "[2, 1, 1, 4, 5, 8, 2, 3]"
+          ]
+        },
+        "failure_related": false
+      },
+      "2": {
+        "node_id": 2,
+        "line_number": 2,
+        "source_code": "if not arr:",
+        "statement_type": "If",
+        "reads": [
+          "arr"
+        ],
+        "writes": [],
+        "function_name": "by_length",
+        "executed": true,
+        "execution_count": 1,
+        "runtime_values": {
+          "arr": [
+            "[2, 1, 1, 4, 5, 8, 2, 3]"
+          ]
+        },
+        "failure_related": false
+      },
+      "3": {
+        "node_id": 3,
+        "line_number": 3,
+        "source_code": "return []",
+        "statement_type": "Return",
+        "reads": [],
+        "writes": [],
+        "function_name": "by_length",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "4": {
+        "node_id": 4,
+        "line_number": 4,
+        "source_code": "nums = sorted([str(num) for num in arr])",
+        "statement_type": "Assign",
+        "reads": [
+          "arr",
+          "num",
+          "sorted",
+          "str"
+        ],
+        "writes": [
+          "num",
+          "nums"
+        ],
+        "function_name": "by_length",
+        "executed": true,
+        "execution_count": 9,
+        "runtime_values": {
+          "arr": [
+            "[2, 1, 1, 4, 5, 8, 2, 3]",
+            "[2, 1, 1, 4, 5, 8, 2, 3]",
+            "[2, 1, 1, 4, 5, 8, 2, 3]",
+            "[2, 1, 1, 4, 5, 8, 2, 3]",
+            "[2, 1, 1, 4, 5, 8, 2, 3]",
+            "[2, 1, 1, 4, 5, 8, 2, 3]",
+            "[2, 1, 1, 4, 5, 8, 2, 3]",
+            "[2, 1, 1, 4, 5, 8, 2, 3]",
+            "[2, 1, 1, 4, 5, 8, 2, 3]"
+          ],
+          "num": [
+            "2",
+            "1",
+            "1",
+            "4",
+            "5",
+            "8",
+            "2",
+            "3"
+          ]
+        },
+        "failure_related": false
+      },
+      "5": {
+        "node_id": 5,
+        "line_number": 5,
+        "source_code": "names = [\"One\", \"Two\", \"Three\", \"Four\", \"Five\", \"Six\", \"Seven\", \"Eight\", \"Nine\"]",
+        "statement_type": "Assign",
+        "reads": [],
+        "writes": [
+          "names"
+        ],
+        "function_name": "by_length",
+        "executed": true,
+        "execution_count": 1,
+        "runtime_values": {
+          "arr": [
+            "[2, 1, 1, 4, 5, 8, 2, 3]"
+          ],
+          "nums": [
+            "['1', '1', '2', '2', '3', '4', '5', '8']"
+          ]
+        },
+        "failure_related": false
+      },
+      "6": {
+        "node_id": 6,
+        "line_number": 6,
+        "source_code": "return [names[int(num)-1] for num in nums]",
+        "statement_type": "Return",
+        "reads": [
+          "int",
+          "names",
+          "num",
+          "nums"
+        ],
+        "writes": [
+          "num"
+        ],
+        "function_name": "by_length",
+        "executed": true,
+        "execution_count": 10,
+        "runtime_values": {
+          "arr": [
+            "[2, 1, 1, 4, 5, 8, 2, 3]",
+            "[2, 1, 1, 4, 5, 8, 2, 3]",
+            "[2, 1, 1, 4, 5, 8, 2, 3]",
+            "[2, 1, 1, 4, 5, 8, 2, 3]",
+            "[2, 1, 1, 4, 5, 8, 2, 3]",
+            "[2, 1, 1, 4, 5, 8, 2, 3]",
+            "[2, 1, 1, 4, 5, 8, 2, 3]",
+            "[2, 1, 1, 4, 5, 8, 2, 3]",
+            "[2, 1, 1, 4, 5, 8, 2, 3]",
+            "[2, 1, 1, 4, 5, 8, 2, 3]"
+          ],
+          "nums": [
+            "['1', '1', '2', '2', '3', '4', '5', '8']",
+            "['1', '1', '2', '2', '3', '4', '5', '8']",
+            "['1', '1', '2', '2', '3', '4', '5', '8']",
+            "['1', '1', '2', '2', '3', '4', '5', '8']",
+            "['1', '1', '2', '2', '3', '4', '5', '8']",
+            "['1', '1', '2', '2', '3', '4', '5', '8']",
+            "['1', '1', '2', '2', '3', '4', '5', '8']",
+            "['1', '1', '2', '2', '3', '4', '5', '8']",
+            "['1', '1', '2', '2', '3', '4', '5', '8']",
+            "['1', '1', '2', '2', '3', '4', '5', '8']"
+          ],
+          "names": [
+            "['One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine']",
+            "['One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine']",
+            "['One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine']",
+            "['One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine']",
+            "['One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine']",
+            "['One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine']",
+            "['One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine']",
+            "['One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine']",
+            "['One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine']",
+            "['One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine']"
+          ],
+          "num": [
+            "1",
+            "1",
+            "2",
+            "2",
+            "3",
+            "4",
+            "5",
+            "8"
+          ]
+        },
+        "failure_related": true
+      }
+    },
+    "edges": [
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "DATA",
+        "variable": "arr",
+        "label": "DATA(arr)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 4,
+        "dependency_type": "DATA",
+        "variable": "arr",
+        "label": "DATA(arr)"
+      },
+      {
+        "source_id": 5,
+        "target_id": 6,
+        "dependency_type": "DATA",
+        "variable": "names",
+        "label": "DATA(names)"
+      },
+      {
+        "source_id": 4,
+        "target_id": 6,
+        "dependency_type": "DATA",
+        "variable": "num",
+        "label": "DATA(num)"
+      },
+      {
+        "source_id": 4,
+        "target_id": 6,
+        "dependency_type": "DATA",
+        "variable": "nums",
+        "label": "DATA(nums)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 2,
+        "target_id": 3,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(If)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 4,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 5,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 6,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      }
+    ],
+    "entry_node_id": 1,
+    "failure_node_ids": [
+      6
+    ]
+  },
+  "runtime_events_count": 33,
+  "failure_line": 6,
+  "failure_statement": "return [names[int(num)-1] for num in nums]",
+  "candidates": [
+    {
+      "rank": 1,
+      "node_id": 4,
+      "line_number": 4,
+      "statement_code": "nums = sorted([str(num) for num in arr])",
+      "variable_name": "num",
+      "observed_value": "3",
+      "expected_value": null,
+      "proximity_score": 0.85,
+      "dependency_score": 0.9,
+      "explanation": "Reached via reverse traversal (distance=1, type=Assign)"
+    },
+    {
+      "rank": 2,
+      "node_id": 6,
+      "line_number": 6,
+      "statement_code": "return [names[int(num)-1] for num in nums]",
+      "variable_name": "num",
+      "observed_value": "8",
+      "expected_value": "['Eight', 'Five', 'Four', 'Three', 'Two', 'Two', 'One', 'One']",
+      "proximity_score": 1.0,
+      "dependency_score": 1.0,
+      "explanation": "Reached via reverse traversal (distance=0, type=Return)"
+    },
+    {
+      "rank": 3,
+      "node_id": 5,
+      "line_number": 5,
+      "statement_code": "names = [\"One\", \"Two\", \"Three\", \"Four\", \"Five\", \"Six\", \"Seven\", \"Eight\", \"Nine\"]",
+      "variable_name": "names",
+      "observed_value": null,
+      "expected_value": null,
+      "proximity_score": 0.85,
+      "dependency_score": 0.9,
+      "explanation": "Reached via reverse traversal (distance=1, type=Assign)"
+    }
+  ],
+  "critical_variable": null,
+  "counterfactual_results": [
+    {
+      "candidate_rank": 1,
+      "intervention": {
+        "target_variable": "num",
+        "target_line": 6,
+        "observed_value": "8",
+        "counterfactual_value": "['Eight', 'Five', 'Four', 'Three', 'Two', 'Two', 'One', 'One']",
+        "operation_type": "AST_transform",
+        "modified_code": "def by_length(arr):\n    if not arr:\n        return []\n    nums = sorted([str(num) for num in arr])\n    names = [\"One\", \"Two\", \"Three\", \"Four\", \"Five\", \"Six\", \"Seven\", \"Eight\", \"Nine\"]\n    num = ['Eight', 'Five', 'Four', 'Three', 'Two', 'Two', 'One', 'One']\n    return [names[int(num)-1] for num in nums]"
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "Failed",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "FALSE",
+      "execution_time": 0.3353,
+      "status": "EXECUTED",
+      "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+    },
+    {
+      "candidate_rank": 2,
+      "intervention": {
+        "target_variable": "names",
+        "target_line": 5,
+        "observed_value": "None",
+        "counterfactual_value": "None",
+        "operation_type": "AST_transform",
+        "modified_code": "def by_length(arr):\n    if not arr:\n        return []\n    nums = sorted([str(num) for num in arr])\n    names = None\n    return [names[int(num) - 1] for num in nums]"
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "Failed",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "FALSE",
+      "execution_time": 0.3777,
+      "status": "EXECUTED",
+      "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+    },
+    {
+      "candidate_rank": 3,
+      "intervention": {
+        "target_variable": "num",
+        "target_line": 4,
+        "observed_value": "3",
+        "counterfactual_value": "None",
+        "operation_type": "failed_construction",
+        "modified_code": ""
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "FAILED_CONSTRUCTION",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "UNRESOLVED",
+      "execution_time": 0.0,
+      "status": "UNRESOLVED",
+      "explanation": "Failed to construct valid AST counterfactual intervention."
+    }
+  ],
+  "fault_location": {
+    "file": "HE162.py",
+    "line_number": 4,
+    "statement_code": "nums = sorted([str(num) for num in arr])",
+    "function_name": "by_length",
+    "causal_variable": "num",
+    "evidence_score": 0.875,
+    "confidence": 0.3
+  },
+  "root_cause": {
+    "root_cause_status": "UNRESOLVED",
+    "candidate_explanation": "Incorrect state computation at line 4 ('nums = sorted([str(num) for num in arr])') produces invalid variable state for 'num'.",
+    "causal_variable": "num",
+    "fault_statement": "nums = sorted([str(num) for num in arr])",
+    "fault_line": 4,
+    "evidence_summary": "Reverse PDG traversal traced failure from line 1 to statement line 4. Structural dependency identified; counterfactual validation unconfirmed or unresolved.",
+    "counterfactual_validated": false,
+    "confidence": 0.3
+  },
+  "ground_truth_matched": null,
+  "ground_truth_fault_line": null,
+  "execution_time": 0.7308
+}

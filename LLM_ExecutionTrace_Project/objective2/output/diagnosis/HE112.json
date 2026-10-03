@@ -1,0 +1,743 @@
+{
+  "trace_id": "HE112",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/131",
+  "error_category": "Wrong-Output Error",
+  "analysis_status": "ANALYZED",
+  "skip_reason": null,
+  "input_record": {
+    "trace_id": "HE112",
+    "dataset": "HumanEval",
+    "task_id": "HumanEval/131",
+    "problem_summary": "\ndef digits(n):\n    \"\"\"Given a positive integer n, return the product of the odd",
+    "execution_status": "Failed",
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpqus8e2pk.py\", line 23, in <module>\n    check(digits)\n    ~~~~~^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpqus8e2pk.py\", line 19, in check\n    assert candidate(2468) == 0\n           ^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+    "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpqus8e2pk.py\", line 23, in <module>\n    check(digits)\n    ~~~~~^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpqus8e2pk.py\", line 19, in check\n    assert candidate(2468) == 0\n           ^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+    "exception_type": "AssertionError",
+    "exception_message": "",
+    "execution_time": 0.256805,
+    "timed_out": false,
+    "exit_code": 1,
+    "tests_passed": false,
+    "tests_failed": 0,
+    "expected_output": null,
+    "actual_output": null,
+    "assertion_source": "benchmark_test",
+    "assertion_failed": true,
+    "parser_prediction": "Wrong-Output Error"
+  },
+  "scm": {
+    "task_id": "HumanEval/131",
+    "nodes": [
+      {
+        "node_id": "S",
+        "variable_name": "Specification",
+        "symbol": "S",
+        "label": "Specification"
+      },
+      {
+        "node_id": "C",
+        "variable_name": "GeneratedCode",
+        "symbol": "C",
+        "label": "Generated Code"
+      },
+      {
+        "node_id": "E",
+        "variable_name": "ExecutionTrace",
+        "symbol": "E",
+        "label": "Execution Trace"
+      },
+      {
+        "node_id": "T",
+        "variable_name": "TestSuite",
+        "symbol": "T",
+        "label": "Test Suite"
+      },
+      {
+        "node_id": "O",
+        "variable_name": "Outcome",
+        "symbol": "O",
+        "label": "Outcome"
+      }
+    ],
+    "edges": [
+      {
+        "source": "S",
+        "target": "C",
+        "relationship": "generates"
+      },
+      {
+        "source": "C",
+        "target": "E",
+        "relationship": "produces"
+      },
+      {
+        "source": "T",
+        "target": "E",
+        "relationship": "evaluates"
+      },
+      {
+        "source": "E",
+        "target": "O",
+        "relationship": "determines"
+      }
+    ],
+    "variables": {
+      "S": {
+        "name": "Specification",
+        "symbol": "S",
+        "description": "Problem description, prompt, and target function signature",
+        "value": "\ndef digits(n):\n    \"\"\"Given a positive integer n, return the product of the odd"
+      },
+      "C": {
+        "name": "GeneratedCode",
+        "symbol": "C",
+        "description": "LLM-generated Python source code implementation",
+        "value": "def digits(n):\n    product = 1\n    for digit in str(n):\n        if digit.isdigit() and int(digit) % 2 != 0:\n            product *= int(digit)\n    return product"
+      },
+      "E": {
+        "name": "ExecutionTrace",
+        "symbol": "E",
+        "description": "Observable runtime trace events, variable states, and stdout/stderr",
+        "value": "status=Failed, exc=AssertionError, msg="
+      },
+      "T": {
+        "name": "TestSuite",
+        "symbol": "T",
+        "description": "Benchmark assertions, inputs, and check function harness",
+        "value": "def check(candidate):\n\n    # Check some simple cases\n    assert candidate(5) == 5\n    assert candida"
+      },
+      "O": {
+        "name": "Outcome",
+        "symbol": "O",
+        "description": "Final test execution outcome (Completed/Failed/Timeout)",
+        "value": "Failed"
+      }
+    }
+  },
+  "pdg": {
+    "nodes": {
+      "1": {
+        "node_id": 1,
+        "line_number": 1,
+        "source_code": "def digits(n):",
+        "statement_type": "FunctionDef",
+        "reads": [],
+        "writes": [
+          "n",
+          "digits"
+        ],
+        "function_name": "<module>",
+        "executed": true,
+        "execution_count": 8,
+        "runtime_values": {
+          "n": [
+            "5",
+            "54",
+            "120",
+            "5014",
+            "98765",
+            "5576543",
+            "2468"
+          ]
+        },
+        "failure_related": false
+      },
+      "2": {
+        "node_id": 2,
+        "line_number": 2,
+        "source_code": "product = 1",
+        "statement_type": "Assign",
+        "reads": [],
+        "writes": [
+          "product"
+        ],
+        "function_name": "digits",
+        "executed": true,
+        "execution_count": 7,
+        "runtime_values": {
+          "n": [
+            "5",
+            "54",
+            "120",
+            "5014",
+            "98765",
+            "5576543",
+            "2468"
+          ]
+        },
+        "failure_related": false
+      },
+      "3": {
+        "node_id": 3,
+        "line_number": 3,
+        "source_code": "for digit in str(n):",
+        "statement_type": "For",
+        "reads": [
+          "n",
+          "str"
+        ],
+        "writes": [
+          "digit"
+        ],
+        "function_name": "digits",
+        "executed": true,
+        "execution_count": 33,
+        "runtime_values": {
+          "n": [
+            "5",
+            "5",
+            "54",
+            "54",
+            "54",
+            "120",
+            "120",
+            "120",
+            "120",
+            "5014",
+            "5014",
+            "5014",
+            "5014",
+            "5014",
+            "98765",
+            "98765",
+            "98765",
+            "98765",
+            "98765",
+            "98765",
+            "5576543",
+            "5576543",
+            "5576543",
+            "5576543",
+            "5576543",
+            "5576543",
+            "5576543",
+            "5576543",
+            "2468",
+            "2468",
+            "2468",
+            "2468",
+            "2468"
+          ],
+          "product": [
+            "1",
+            "5",
+            "1",
+            "5",
+            "5",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "5",
+            "5",
+            "5",
+            "5",
+            "1",
+            "9",
+            "9",
+            "63",
+            "63",
+            "315",
+            "1",
+            "5",
+            "25",
+            "175",
+            "175",
+            "875",
+            "875",
+            "2625",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1"
+          ],
+          "digit": [
+            "5",
+            "5",
+            "4",
+            "1",
+            "2",
+            "0",
+            "5",
+            "0",
+            "1",
+            "4",
+            "9",
+            "8",
+            "7",
+            "6",
+            "5",
+            "5",
+            "5",
+            "7",
+            "6",
+            "5",
+            "4",
+            "3",
+            "2",
+            "4",
+            "6",
+            "8"
+          ]
+        },
+        "failure_related": false
+      },
+      "4": {
+        "node_id": 4,
+        "line_number": 4,
+        "source_code": "if digit.isdigit() and int(digit) % 2 != 0:",
+        "statement_type": "If",
+        "reads": [
+          "digit",
+          "int"
+        ],
+        "writes": [],
+        "function_name": "digits",
+        "executed": true,
+        "execution_count": 26,
+        "runtime_values": {
+          "n": [
+            "5",
+            "54",
+            "54",
+            "120",
+            "120",
+            "120",
+            "5014",
+            "5014",
+            "5014",
+            "5014",
+            "98765",
+            "98765",
+            "98765",
+            "98765",
+            "98765",
+            "5576543",
+            "5576543",
+            "5576543",
+            "5576543",
+            "5576543",
+            "5576543",
+            "5576543",
+            "2468",
+            "2468",
+            "2468",
+            "2468"
+          ],
+          "product": [
+            "1",
+            "1",
+            "5",
+            "1",
+            "1",
+            "1",
+            "1",
+            "5",
+            "5",
+            "5",
+            "1",
+            "9",
+            "9",
+            "63",
+            "63",
+            "1",
+            "5",
+            "25",
+            "175",
+            "175",
+            "875",
+            "875",
+            "1",
+            "1",
+            "1",
+            "1"
+          ],
+          "digit": [
+            "5",
+            "5",
+            "4",
+            "1",
+            "2",
+            "0",
+            "5",
+            "0",
+            "1",
+            "4",
+            "9",
+            "8",
+            "7",
+            "6",
+            "5",
+            "5",
+            "5",
+            "7",
+            "6",
+            "5",
+            "4",
+            "3",
+            "2",
+            "4",
+            "6",
+            "8"
+          ]
+        },
+        "failure_related": false
+      },
+      "5": {
+        "node_id": 5,
+        "line_number": 5,
+        "source_code": "product *= int(digit)",
+        "statement_type": "AugAssign",
+        "reads": [
+          "digit",
+          "int"
+        ],
+        "writes": [
+          "product"
+        ],
+        "function_name": "digits",
+        "executed": true,
+        "execution_count": 13,
+        "runtime_values": {
+          "n": [
+            "5",
+            "54",
+            "120",
+            "5014",
+            "5014",
+            "98765",
+            "98765",
+            "98765",
+            "5576543",
+            "5576543",
+            "5576543",
+            "5576543",
+            "5576543"
+          ],
+          "product": [
+            "1",
+            "1",
+            "1",
+            "1",
+            "5",
+            "1",
+            "9",
+            "63",
+            "1",
+            "5",
+            "25",
+            "175",
+            "875"
+          ],
+          "digit": [
+            "5",
+            "5",
+            "1",
+            "5",
+            "1",
+            "9",
+            "7",
+            "5",
+            "5",
+            "5",
+            "7",
+            "5",
+            "3"
+          ]
+        },
+        "failure_related": false
+      },
+      "6": {
+        "node_id": 6,
+        "line_number": 6,
+        "source_code": "return product",
+        "statement_type": "Return",
+        "reads": [
+          "product"
+        ],
+        "writes": [],
+        "function_name": "digits",
+        "executed": true,
+        "execution_count": 14,
+        "runtime_values": {
+          "n": [
+            "5",
+            "5",
+            "54",
+            "54",
+            "120",
+            "120",
+            "5014",
+            "5014",
+            "98765",
+            "98765",
+            "5576543",
+            "5576543",
+            "2468",
+            "2468"
+          ],
+          "product": [
+            "5",
+            "5",
+            "5",
+            "5",
+            "1",
+            "1",
+            "5",
+            "5",
+            "315",
+            "315",
+            "2625",
+            "2625",
+            "1",
+            "1"
+          ],
+          "digit": [
+            "5",
+            "5",
+            "4",
+            "4",
+            "0",
+            "0",
+            "4",
+            "4",
+            "5",
+            "5",
+            "3",
+            "3",
+            "8",
+            "8"
+          ]
+        },
+        "failure_related": true
+      }
+    },
+    "edges": [
+      {
+        "source_id": 1,
+        "target_id": 3,
+        "dependency_type": "DATA",
+        "variable": "n",
+        "label": "DATA(n)"
+      },
+      {
+        "source_id": 3,
+        "target_id": 4,
+        "dependency_type": "DATA",
+        "variable": "digit",
+        "label": "DATA(digit)"
+      },
+      {
+        "source_id": 3,
+        "target_id": 5,
+        "dependency_type": "DATA",
+        "variable": "digit",
+        "label": "DATA(digit)"
+      },
+      {
+        "source_id": 5,
+        "target_id": 6,
+        "dependency_type": "DATA",
+        "variable": "product",
+        "label": "DATA(product)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 3,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 3,
+        "target_id": 4,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(For)"
+      },
+      {
+        "source_id": 4,
+        "target_id": 5,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(If)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 6,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      }
+    ],
+    "entry_node_id": 1,
+    "failure_node_ids": [
+      6
+    ]
+  },
+  "runtime_events_count": 116,
+  "failure_line": 6,
+  "failure_statement": "return product",
+  "candidates": [
+    {
+      "rank": 1,
+      "node_id": 6,
+      "line_number": 6,
+      "statement_code": "return product",
+      "variable_name": "product",
+      "observed_value": "1",
+      "expected_value": "0",
+      "proximity_score": 1.0,
+      "dependency_score": 1.0,
+      "explanation": "Reached via reverse traversal (distance=0, type=Return)"
+    },
+    {
+      "rank": 2,
+      "node_id": 5,
+      "line_number": 5,
+      "statement_code": "product *= int(digit)",
+      "variable_name": "product",
+      "observed_value": "875",
+      "expected_value": null,
+      "proximity_score": 0.85,
+      "dependency_score": 0.9,
+      "explanation": "Reached via reverse traversal (distance=1, type=AugAssign)"
+    },
+    {
+      "rank": 3,
+      "node_id": 3,
+      "line_number": 3,
+      "statement_code": "for digit in str(n):",
+      "variable_name": "digit",
+      "observed_value": "8",
+      "expected_value": null,
+      "proximity_score": 0.7,
+      "dependency_score": 0.81,
+      "explanation": "Reached via reverse traversal (distance=2, type=For)"
+    },
+    {
+      "rank": 4,
+      "node_id": 4,
+      "line_number": 4,
+      "statement_code": "if digit.isdigit() and int(digit) % 2 != 0:",
+      "variable_name": "digit",
+      "observed_value": "8",
+      "expected_value": null,
+      "proximity_score": 0.7,
+      "dependency_score": 0.63,
+      "explanation": "Reached via reverse traversal (distance=2, type=If)"
+    }
+  ],
+  "critical_variable": null,
+  "counterfactual_results": [
+    {
+      "candidate_rank": 1,
+      "intervention": {
+        "target_variable": "product",
+        "target_line": 6,
+        "observed_value": "1",
+        "counterfactual_value": "0",
+        "operation_type": "AST_transform",
+        "modified_code": "def digits(n):\n    product = 1\n    for digit in str(n):\n        if digit.isdigit() and int(digit) % 2 != 0:\n            product *= int(digit)\n    return 0"
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "Completed",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "TRUE",
+      "execution_time": 0.1938,
+      "status": "EXECUTED",
+      "explanation": "Intervention successfully flipped execution outcome from FAIL to PASS."
+    },
+    {
+      "candidate_rank": 2,
+      "intervention": {
+        "target_variable": "product",
+        "target_line": 5,
+        "observed_value": "875",
+        "counterfactual_value": "None",
+        "operation_type": "failed_construction",
+        "modified_code": ""
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "FAILED_CONSTRUCTION",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "UNRESOLVED",
+      "execution_time": 0.0,
+      "status": "UNRESOLVED",
+      "explanation": "Failed to construct valid AST counterfactual intervention."
+    },
+    {
+      "candidate_rank": 3,
+      "intervention": {
+        "target_variable": "digit",
+        "target_line": 3,
+        "observed_value": "8",
+        "counterfactual_value": "None",
+        "operation_type": "failed_construction",
+        "modified_code": ""
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "FAILED_CONSTRUCTION",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "UNRESOLVED",
+      "execution_time": 0.0,
+      "status": "UNRESOLVED",
+      "explanation": "Failed to construct valid AST counterfactual intervention."
+    },
+    {
+      "candidate_rank": 4,
+      "intervention": {
+        "target_variable": "digit",
+        "target_line": 4,
+        "observed_value": "8",
+        "counterfactual_value": "None",
+        "operation_type": "AST_transform",
+        "modified_code": "def digits(n):\n    product = 1\n    for digit in str(n):\n        if digit.isdigit() and int(digit) % 2 == 0:\n            product *= int(digit)\n    return product"
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "Failed",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "FALSE",
+      "execution_time": 0.4264,
+      "status": "EXECUTED",
+      "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+    }
+  ],
+  "fault_location": {
+    "file": "HE112.py",
+    "line_number": 6,
+    "statement_code": "return product",
+    "function_name": "digits",
+    "causal_variable": "product",
+    "evidence_score": 3.0,
+    "confidence": 0.95
+  },
+  "root_cause": {
+    "root_cause_status": "VALIDATED",
+    "candidate_explanation": "Semantic mismatch at line 6 ('return product') causes return value mismatch.",
+    "causal_variable": "product",
+    "fault_statement": "return product",
+    "fault_line": 6,
+    "evidence_summary": "Reverse PDG traversal traced failure from line 1 to statement line 6. Counterfactual intervention do(product = expected) successfully restored PASS state.",
+    "counterfactual_validated": true,
+    "confidence": 0.95
+  },
+  "ground_truth_matched": null,
+  "ground_truth_fault_line": null,
+  "execution_time": 0.6391
+}

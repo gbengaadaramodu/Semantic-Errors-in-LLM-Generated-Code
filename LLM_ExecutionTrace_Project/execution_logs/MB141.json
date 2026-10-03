@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB141",
+  "dataset": "MBPP",
+  "task_id": "273",
+  "problem_summary": "Write a function that takes in two tuples and subtracts the elements of the firs",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpi8f12n3z.py\", line 4, in <module>\n    assert substract_elements((10, 4, 5), (2, 5, 18)) == (8, -1, -13)\n           ^^^^^^^^^^^^^^^^^^\nNameError: name 'substract_elements' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpi8f12n3z.py\", line 4, in <module>\n    assert substract_elements((10, 4, 5), (2, 5, 18)) == (8, -1, -13)\n           ^^^^^^^^^^^^^^^^^^\nNameError: name 'substract_elements' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'substract_elements' is not defined",
+  "execution_time": 0.211603,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

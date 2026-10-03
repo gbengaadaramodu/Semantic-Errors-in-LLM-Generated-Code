@@ -1,0 +1,11 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def text_match_wordz_middle(text): | W:text,text_match_wordz_middle", fillcolor="lightgreen"];
+    "2" [label="L2: return \"z\" in text[1:-1] | R:text", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(text)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

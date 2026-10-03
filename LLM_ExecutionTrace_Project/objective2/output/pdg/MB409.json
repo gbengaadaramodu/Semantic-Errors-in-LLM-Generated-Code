@@ -1,0 +1,80 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def remove_kth_element(my_list, k):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "k",
+        "my_list",
+        "remove_kth_element"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "my_list": [
+          "[1, 1, 2, 3, 4, 4, 5, 1]"
+        ],
+        "k": [
+          "3"
+        ]
+      },
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "return my_list[:k] + my_list[k+1:]",
+      "statement_type": "Return",
+      "reads": [
+        "k",
+        "my_list"
+      ],
+      "writes": [],
+      "function_name": "remove_kth_element",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "my_list": [
+          "[1, 1, 2, 3, 4, 4, 5, 1]",
+          "[1, 1, 2, 3, 4, 4, 5, 1]"
+        ],
+        "k": [
+          "3",
+          "3"
+        ]
+      },
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "k",
+      "label": "DATA(k)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "my_list",
+      "label": "DATA(my_list)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    2
+  ]
+}

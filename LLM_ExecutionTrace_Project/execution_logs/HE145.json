@@ -1,0 +1,22 @@
+{
+  "trace_id": "HE145",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/123",
+  "problem_summary": "\ndef get_odd_collatz(n):\n    \"\"\"\n    Given a positive integer n, return a sorted",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp34wiwhjs.py\", line 23, in <module>\n    check(get_odd_collatz)\n    ~~~~~^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp34wiwhjs.py\", line 14, in check\n    assert candidate(14) == [1, 5, 7, 11, 13, 17]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp34wiwhjs.py\", line 23, in <module>\n    check(get_odd_collatz)\n    ~~~~~^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp34wiwhjs.py\", line 14, in check\n    assert candidate(14) == [1, 5, 7, 11, 13, 17]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+  "exception_type": "AssertionError",
+  "exception_message": "",
+  "execution_time": 0.252988,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": "benchmark_test",
+  "assertion_failed": true,
+  "parser_prediction": ""
+}

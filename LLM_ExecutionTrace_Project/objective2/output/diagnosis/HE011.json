@@ -1,0 +1,500 @@
+{
+  "trace_id": "HE011",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/151",
+  "error_category": "Wrong-Output Error",
+  "analysis_status": "ANALYZED",
+  "skip_reason": null,
+  "input_record": {
+    "trace_id": "HE011",
+    "dataset": "HumanEval",
+    "task_id": "HumanEval/151",
+    "problem_summary": "\ndef double_the_difference(lst):\n    '''\n    Given a list of numbers, return the",
+    "execution_status": "Failed",
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp5qtbke80.py\", line 27, in <module>\n    check(double_the_difference)\n    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp5qtbke80.py\", line 13, in check\n    assert candidate([5, 4]) == 25 , \"This prints if this assert fails 2 (good for debugging!)\"\n           ^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: This prints if this assert fails 2 (good for debugging!)\n",
+    "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp5qtbke80.py\", line 27, in <module>\n    check(double_the_difference)\n    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp5qtbke80.py\", line 13, in check\n    assert candidate([5, 4]) == 25 , \"This prints if this assert fails 2 (good for debugging!)\"\n           ^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: This prints if this assert fails 2 (good for debugging!)",
+    "exception_type": "AssertionError",
+    "exception_message": "This prints if this assert fails 2 (good for debugging!)",
+    "execution_time": 0.201614,
+    "timed_out": false,
+    "exit_code": 1,
+    "tests_passed": false,
+    "tests_failed": 0,
+    "expected_output": null,
+    "actual_output": null,
+    "assertion_source": "benchmark_test",
+    "assertion_failed": true,
+    "parser_prediction": "Wrong-Output Error"
+  },
+  "scm": {
+    "task_id": "HumanEval/151",
+    "nodes": [
+      {
+        "node_id": "S",
+        "variable_name": "Specification",
+        "symbol": "S",
+        "label": "Specification"
+      },
+      {
+        "node_id": "C",
+        "variable_name": "GeneratedCode",
+        "symbol": "C",
+        "label": "Generated Code"
+      },
+      {
+        "node_id": "E",
+        "variable_name": "ExecutionTrace",
+        "symbol": "E",
+        "label": "Execution Trace"
+      },
+      {
+        "node_id": "T",
+        "variable_name": "TestSuite",
+        "symbol": "T",
+        "label": "Test Suite"
+      },
+      {
+        "node_id": "O",
+        "variable_name": "Outcome",
+        "symbol": "O",
+        "label": "Outcome"
+      }
+    ],
+    "edges": [
+      {
+        "source": "S",
+        "target": "C",
+        "relationship": "generates"
+      },
+      {
+        "source": "C",
+        "target": "E",
+        "relationship": "produces"
+      },
+      {
+        "source": "T",
+        "target": "E",
+        "relationship": "evaluates"
+      },
+      {
+        "source": "E",
+        "target": "O",
+        "relationship": "determines"
+      }
+    ],
+    "variables": {
+      "S": {
+        "name": "Specification",
+        "symbol": "S",
+        "description": "Problem description, prompt, and target function signature",
+        "value": "\ndef double_the_difference(lst):\n    '''\n    Given a list of numbers, return the"
+      },
+      "C": {
+        "name": "GeneratedCode",
+        "symbol": "C",
+        "description": "LLM-generated Python source code implementation",
+        "value": "def double_the_difference(lst):\n    result = 0\n    for num in lst:\n        if num < 0 or not num.is_integer():\n            continue\n        result += (num * num)\n    return result"
+      },
+      "E": {
+        "name": "ExecutionTrace",
+        "symbol": "E",
+        "description": "Observable runtime trace events, variable states, and stdout/stderr",
+        "value": "status=Failed, exc=AssertionError, msg=This prints if this assert fails 2 (good for debugging!)"
+      },
+      "T": {
+        "name": "TestSuite",
+        "symbol": "T",
+        "description": "Benchmark assertions, inputs, and check function harness",
+        "value": "def check(candidate):\n\n    # Check some simple cases\n    assert candidate([]) == 0 , \"This prints if"
+      },
+      "O": {
+        "name": "Outcome",
+        "symbol": "O",
+        "description": "Final test execution outcome (Completed/Failed/Timeout)",
+        "value": "Failed"
+      }
+    }
+  },
+  "pdg": {
+    "nodes": {
+      "1": {
+        "node_id": 1,
+        "line_number": 1,
+        "source_code": "def double_the_difference(lst):",
+        "statement_type": "FunctionDef",
+        "reads": [],
+        "writes": [
+          "lst",
+          "double_the_difference"
+        ],
+        "function_name": "<module>",
+        "executed": true,
+        "execution_count": 3,
+        "runtime_values": {
+          "lst": [
+            "[]",
+            "[5, 4]"
+          ]
+        },
+        "failure_related": false
+      },
+      "2": {
+        "node_id": 2,
+        "line_number": 2,
+        "source_code": "result = 0",
+        "statement_type": "Assign",
+        "reads": [],
+        "writes": [
+          "result"
+        ],
+        "function_name": "double_the_difference",
+        "executed": true,
+        "execution_count": 2,
+        "runtime_values": {
+          "lst": [
+            "[]",
+            "[5, 4]"
+          ]
+        },
+        "failure_related": false
+      },
+      "3": {
+        "node_id": 3,
+        "line_number": 3,
+        "source_code": "for num in lst:",
+        "statement_type": "For",
+        "reads": [
+          "lst"
+        ],
+        "writes": [
+          "num"
+        ],
+        "function_name": "double_the_difference",
+        "executed": true,
+        "execution_count": 4,
+        "runtime_values": {
+          "lst": [
+            "[]",
+            "[5, 4]",
+            "[5, 4]",
+            "[5, 4]"
+          ],
+          "result": [
+            "0",
+            "0",
+            "25",
+            "41"
+          ],
+          "num": [
+            "5",
+            "4"
+          ]
+        },
+        "failure_related": false
+      },
+      "4": {
+        "node_id": 4,
+        "line_number": 4,
+        "source_code": "if num < 0 or not num.is_integer():",
+        "statement_type": "If",
+        "reads": [
+          "num"
+        ],
+        "writes": [],
+        "function_name": "double_the_difference",
+        "executed": true,
+        "execution_count": 2,
+        "runtime_values": {
+          "lst": [
+            "[5, 4]",
+            "[5, 4]"
+          ],
+          "result": [
+            "0",
+            "25"
+          ],
+          "num": [
+            "5",
+            "4"
+          ]
+        },
+        "failure_related": false
+      },
+      "5": {
+        "node_id": 5,
+        "line_number": 5,
+        "source_code": "continue",
+        "statement_type": "Continue",
+        "reads": [],
+        "writes": [],
+        "function_name": "double_the_difference",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "6": {
+        "node_id": 6,
+        "line_number": 6,
+        "source_code": "result += (num * num)",
+        "statement_type": "AugAssign",
+        "reads": [
+          "num"
+        ],
+        "writes": [
+          "result"
+        ],
+        "function_name": "double_the_difference",
+        "executed": true,
+        "execution_count": 2,
+        "runtime_values": {
+          "lst": [
+            "[5, 4]",
+            "[5, 4]"
+          ],
+          "result": [
+            "0",
+            "25"
+          ],
+          "num": [
+            "5",
+            "4"
+          ]
+        },
+        "failure_related": false
+      },
+      "7": {
+        "node_id": 7,
+        "line_number": 7,
+        "source_code": "return result",
+        "statement_type": "Return",
+        "reads": [
+          "result"
+        ],
+        "writes": [],
+        "function_name": "double_the_difference",
+        "executed": true,
+        "execution_count": 4,
+        "runtime_values": {
+          "lst": [
+            "[]",
+            "[]",
+            "[5, 4]",
+            "[5, 4]"
+          ],
+          "result": [
+            "0",
+            "0",
+            "41",
+            "41"
+          ],
+          "num": [
+            "4",
+            "4"
+          ]
+        },
+        "failure_related": true
+      }
+    },
+    "edges": [
+      {
+        "source_id": 1,
+        "target_id": 3,
+        "dependency_type": "DATA",
+        "variable": "lst",
+        "label": "DATA(lst)"
+      },
+      {
+        "source_id": 3,
+        "target_id": 4,
+        "dependency_type": "DATA",
+        "variable": "num",
+        "label": "DATA(num)"
+      },
+      {
+        "source_id": 3,
+        "target_id": 6,
+        "dependency_type": "DATA",
+        "variable": "num",
+        "label": "DATA(num)"
+      },
+      {
+        "source_id": 6,
+        "target_id": 7,
+        "dependency_type": "DATA",
+        "variable": "result",
+        "label": "DATA(result)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 3,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 3,
+        "target_id": 4,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(For)"
+      },
+      {
+        "source_id": 4,
+        "target_id": 5,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(If)"
+      },
+      {
+        "source_id": 3,
+        "target_id": 6,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(For)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 7,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      }
+    ],
+    "entry_node_id": 1,
+    "failure_node_ids": [
+      7
+    ]
+  },
+  "runtime_events_count": 27,
+  "failure_line": 7,
+  "failure_statement": "return result",
+  "candidates": [
+    {
+      "rank": 1,
+      "node_id": 7,
+      "line_number": 7,
+      "statement_code": "return result",
+      "variable_name": "result",
+      "observed_value": "41",
+      "expected_value": "25",
+      "proximity_score": 1.0,
+      "dependency_score": 1.0,
+      "explanation": "Reached via reverse traversal (distance=0, type=Return)"
+    },
+    {
+      "rank": 2,
+      "node_id": 6,
+      "line_number": 6,
+      "statement_code": "result += (num * num)",
+      "variable_name": "result",
+      "observed_value": "25",
+      "expected_value": null,
+      "proximity_score": 0.85,
+      "dependency_score": 0.9,
+      "explanation": "Reached via reverse traversal (distance=1, type=AugAssign)"
+    },
+    {
+      "rank": 3,
+      "node_id": 3,
+      "line_number": 3,
+      "statement_code": "for num in lst:",
+      "variable_name": "num",
+      "observed_value": "4",
+      "expected_value": null,
+      "proximity_score": 0.7,
+      "dependency_score": 0.81,
+      "explanation": "Reached via reverse traversal (distance=2, type=For)"
+    }
+  ],
+  "critical_variable": null,
+  "counterfactual_results": [
+    {
+      "candidate_rank": 1,
+      "intervention": {
+        "target_variable": "result",
+        "target_line": 7,
+        "observed_value": "41",
+        "counterfactual_value": "25",
+        "operation_type": "AST_transform",
+        "modified_code": "def double_the_difference(lst):\n    result = 0\n    for num in lst:\n        if num < 0 or not num.is_integer():\n            continue\n        result += num * num\n    return 25"
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "Completed",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "TRUE",
+      "execution_time": 0.0991,
+      "status": "EXECUTED",
+      "explanation": "Intervention successfully flipped execution outcome from FAIL to PASS."
+    },
+    {
+      "candidate_rank": 2,
+      "intervention": {
+        "target_variable": "result",
+        "target_line": 6,
+        "observed_value": "25",
+        "counterfactual_value": "None",
+        "operation_type": "failed_construction",
+        "modified_code": ""
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "FAILED_CONSTRUCTION",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "UNRESOLVED",
+      "execution_time": 0.0,
+      "status": "UNRESOLVED",
+      "explanation": "Failed to construct valid AST counterfactual intervention."
+    },
+    {
+      "candidate_rank": 3,
+      "intervention": {
+        "target_variable": "num",
+        "target_line": 3,
+        "observed_value": "4",
+        "counterfactual_value": "None",
+        "operation_type": "failed_construction",
+        "modified_code": ""
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "FAILED_CONSTRUCTION",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "UNRESOLVED",
+      "execution_time": 0.0,
+      "status": "UNRESOLVED",
+      "explanation": "Failed to construct valid AST counterfactual intervention."
+    }
+  ],
+  "fault_location": {
+    "file": "HE011.py",
+    "line_number": 7,
+    "statement_code": "return result",
+    "function_name": "double_the_difference",
+    "causal_variable": "result",
+    "evidence_score": 3.0,
+    "confidence": 0.95
+  },
+  "root_cause": {
+    "root_cause_status": "VALIDATED",
+    "candidate_explanation": "Semantic mismatch at line 7 ('return result') causes return value mismatch.",
+    "causal_variable": "result",
+    "fault_statement": "return result",
+    "fault_line": 7,
+    "evidence_summary": "Reverse PDG traversal traced failure from line 1 to statement line 7. Counterfactual intervention do(result = expected) successfully restored PASS state.",
+    "counterfactual_validated": true,
+    "confidence": 0.95
+  },
+  "ground_truth_matched": null,
+  "ground_truth_fault_line": null,
+  "execution_time": 0.1107
+}

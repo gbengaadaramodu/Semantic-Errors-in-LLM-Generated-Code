@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB129",
+  "dataset": "MBPP",
+  "task_id": "632",
+  "problem_summary": "Write a python function to move all zeroes to the end of the given list.",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpwi19qp55.py\", line 4, in <module>\n    assert move_zero([1,0,2,0,3,4]) == [1,2,3,4,0,0]\n           ^^^^^^^^^\nNameError: name 'move_zero' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpwi19qp55.py\", line 4, in <module>\n    assert move_zero([1,0,2,0,3,4]) == [1,2,3,4,0,0]\n           ^^^^^^^^^\nNameError: name 'move_zero' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'move_zero' is not defined",
+  "execution_time": 0.200802,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

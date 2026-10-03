@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a python function to find the surface area of a square pyramid with a given base edge and height.
+
+Example test: assert surface_Area(3,4) == 33
+[/INST]

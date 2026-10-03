@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB269",
+  "dataset": "MBPP",
+  "task_id": "230",
+  "problem_summary": "Write a function that takes in a string and character, replaces blank spaces in ",
+  "execution_status": "Completed",
+  "stdout": "",
+  "stderr": "",
+  "traceback": "",
+  "exception_type": "",
+  "exception_message": "",
+  "execution_time": 0.113792,
+  "timed_out": false,
+  "exit_code": 0,
+  "tests_passed": true,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

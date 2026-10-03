@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a python function to find the difference between the sum of cubes of the first n natural numbers and the sum of the first n natural numbers.
+
+Example test: assert difference(3) == 30
+[/INST]

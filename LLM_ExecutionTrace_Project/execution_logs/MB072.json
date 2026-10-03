@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB072",
+  "dataset": "MBPP",
+  "task_id": "82",
+  "problem_summary": "Write a function to find the volume of a sphere.",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmphc_l09tm.py\", line 6, in <module>\n    assert math.isclose(volume_sphere(10), 4188.790204786391, rel_tol=0.001)\n                        ^^^^^^^^^^^^^\nNameError: name 'volume_sphere' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmphc_l09tm.py\", line 6, in <module>\n    assert math.isclose(volume_sphere(10), 4188.790204786391, rel_tol=0.001)\n                        ^^^^^^^^^^^^^\nNameError: name 'volume_sphere' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'volume_sphere' is not defined",
+  "execution_time": 0.267373,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

@@ -1,0 +1,22 @@
+{
+  "trace_id": "HE021",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/50",
+  "problem_summary": "\n\ndef encode_shift(s: str):\n    \"\"\"\n    returns encoded string by shifting every",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpm3qmlb7q.py\", line 22, in <module>\n    check(decode_shift)\n    ~~~~~^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpm3qmlb7q.py\", line 17, in check\n    encoded_str = encode_shift(str)\n                  ^^^^^^^^^^^^\nNameError: name 'encode_shift' is not defined. Did you mean: 'decode_shift'?\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpm3qmlb7q.py\", line 22, in <module>\n    check(decode_shift)\n    ~~~~~^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpm3qmlb7q.py\", line 17, in check\n    encoded_str = encode_shift(str)\n                  ^^^^^^^^^^^^\nNameError: name 'encode_shift' is not defined. Did you mean: 'decode_shift'?",
+  "exception_type": "NameError",
+  "exception_message": "name 'encode_shift' is not defined. Did you mean: 'decode_shift'?",
+  "execution_time": 0.255521,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

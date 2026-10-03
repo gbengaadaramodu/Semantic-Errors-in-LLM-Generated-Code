@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB139",
+  "dataset": "MBPP",
+  "task_id": "764",
+  "problem_summary": "Write a python function to count number of digits in a given string.",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpc2vvxrtq.py\", line 4, in <module>\n    assert number_ctr('program2bedone') == 1\n           ^^^^^^^^^^\nNameError: name 'number_ctr' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpc2vvxrtq.py\", line 4, in <module>\n    assert number_ctr('program2bedone') == 1\n           ^^^^^^^^^^\nNameError: name 'number_ctr' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'number_ctr' is not defined",
+  "execution_time": 0.221677,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

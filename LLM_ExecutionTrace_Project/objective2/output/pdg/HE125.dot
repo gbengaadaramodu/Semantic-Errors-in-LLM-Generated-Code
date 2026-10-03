@@ -1,0 +1,30 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def prod_signs(arr): | W:arr,prod_signs", fillcolor="lightgreen"];
+    "2" [label="L2: if not arr: | R:arr", fillcolor="lightgreen"];
+    "3" [label="L3: return None", fillcolor="lightgrey"];
+    "4" [label="L4: signs = [1 for _ in arr] | W:_,signs | R:arr", fillcolor="lightgreen"];
+    "5" [label="L5: for i, num in enumerate(arr): | W:i,num | R:arr,enumerate", fillcolor="lightgreen"];
+    "6" [label="L6: if num < 0: | R:num", fillcolor="lightgreen"];
+    "7" [label="L7: signs[i] *= -1 | R:i,signs", fillcolor="lightgreen"];
+    "8" [label="L8: return sum(map(abs, arr)) * prod(signs) | R:abs,arr,map,prod,signs,sum", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(arr)", style="solid"];
+    "1" -> "4" [label="DATA(arr)", style="solid"];
+    "1" -> "5" [label="DATA(arr)", style="solid"];
+    "5" -> "6" [label="DATA(num)", style="solid"];
+    "5" -> "7" [label="DATA(i)", style="solid"];
+    "4" -> "7" [label="DATA(signs)", style="solid"];
+    "1" -> "8" [label="DATA(arr)", style="solid"];
+    "4" -> "8" [label="DATA(signs)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "2" -> "3" [label="CONTROL(If)", style="dashed"];
+    "1" -> "4" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "5" [label="CONTROL(FunctionDef)", style="dashed"];
+    "5" -> "6" [label="CONTROL(For)", style="dashed"];
+    "6" -> "7" [label="CONTROL(If)", style="dashed"];
+    "1" -> "8" [label="CONTROL(FunctionDef)", style="dashed"];
+}

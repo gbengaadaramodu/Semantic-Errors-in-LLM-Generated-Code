@@ -1,0 +1,97 @@
+[
+  {
+    "candidate_rank": 1,
+    "intervention": {
+      "target_variable": "adverb",
+      "target_line": 21,
+      "observed_value": "",
+      "counterfactual_value": "(0, 7, 'clearly')",
+      "operation_type": "AST_transform",
+      "modified_code": "def find_adverb_position(sentence):\n    adverb = \"\"\n    start_index = 0\n    end_index = 0\n    \n    for word in sentence.split():\n        if word[-1] == 'ly':\n            adverb = word\n            break\n            \n    for i, word in enumerate(sentence.split()):\n        if word == adverb:\n            start_index = i\n            break\n            \n    for i, word in enumerate(sentence.split()[::-1]):\n        if word == adverb:\n            end_index = len(sentence.split()) - i\n            break\n            \n    adverb = (0, 7, 'clearly')\n    return (start_index, end_index, adverb)"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.242,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  },
+  {
+    "candidate_rank": 2,
+    "intervention": {
+      "target_variable": "adverb",
+      "target_line": 8,
+      "observed_value": "None",
+      "counterfactual_value": "None",
+      "operation_type": "AST_transform",
+      "modified_code": "def find_adverb_position(sentence):\n    adverb = ''\n    start_index = 0\n    end_index = 0\n    for word in sentence.split():\n        if word[-1] == 'ly':\n            adverb = None\n            break\n    for i, word in enumerate(sentence.split()):\n        if word == adverb:\n            start_index = i\n            break\n    for i, word in enumerate(sentence.split()[::-1]):\n        if word == adverb:\n            end_index = len(sentence.split()) - i\n            break\n    return (start_index, end_index, adverb)"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.1961,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  },
+  {
+    "candidate_rank": 3,
+    "intervention": {
+      "target_variable": "end_index",
+      "target_line": 18,
+      "observed_value": "None",
+      "counterfactual_value": "None",
+      "operation_type": "AST_transform",
+      "modified_code": "def find_adverb_position(sentence):\n    adverb = ''\n    start_index = 0\n    end_index = 0\n    for word in sentence.split():\n        if word[-1] == 'ly':\n            adverb = word\n            break\n    for i, word in enumerate(sentence.split()):\n        if word == adverb:\n            start_index = i\n            break\n    for i, word in enumerate(sentence.split()[::-1]):\n        if word == adverb:\n            end_index = None\n            break\n    return (start_index, end_index, adverb)"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.243,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  },
+  {
+    "candidate_rank": 4,
+    "intervention": {
+      "target_variable": "start_index",
+      "target_line": 13,
+      "observed_value": "None",
+      "counterfactual_value": "None",
+      "operation_type": "AST_transform",
+      "modified_code": "def find_adverb_position(sentence):\n    adverb = ''\n    start_index = 0\n    end_index = 0\n    for word in sentence.split():\n        if word[-1] == 'ly':\n            adverb = word\n            break\n    for i, word in enumerate(sentence.split()):\n        if word == adverb:\n            start_index = None\n            break\n    for i, word in enumerate(sentence.split()[::-1]):\n        if word == adverb:\n            end_index = len(sentence.split()) - i\n            break\n    return (start_index, end_index, adverb)"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.1728,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  },
+  {
+    "candidate_rank": 5,
+    "intervention": {
+      "target_variable": "word",
+      "target_line": 6,
+      "observed_value": "sky",
+      "counterfactual_value": "None",
+      "operation_type": "failed_construction",
+      "modified_code": ""
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "FAILED_CONSTRUCTION",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "UNRESOLVED",
+    "execution_time": 0.0,
+    "status": "UNRESOLVED",
+    "explanation": "Failed to construct valid AST counterfactual intervention."
+  }
+]

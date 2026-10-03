@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a python function to find the sum of the per-digit difference between two integers.
+
+Example test: assert digit_distance_nums(1,2) == 1
+[/INST]

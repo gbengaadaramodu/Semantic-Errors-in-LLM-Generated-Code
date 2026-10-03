@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB297",
+  "dataset": "MBPP",
+  "task_id": "723",
+  "problem_summary": "The input is defined as two lists of the same length. Write a function to count ",
+  "execution_status": "Completed",
+  "stdout": "",
+  "stderr": "",
+  "traceback": "",
+  "exception_type": "",
+  "exception_message": "",
+  "execution_time": 0.148295,
+  "timed_out": false,
+  "exit_code": 0,
+  "tests_passed": true,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

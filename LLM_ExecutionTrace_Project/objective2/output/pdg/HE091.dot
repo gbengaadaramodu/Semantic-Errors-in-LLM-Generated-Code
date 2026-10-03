@@ -1,0 +1,11 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def sum_squares(lst): | W:lst,sum_squares", fillcolor="lightgreen"];
+    "2" [label="L2: return sum([int(ceil(x))**2 for x in lst]) | W:x | R:ceil,int,lst,sum,x", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(lst)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

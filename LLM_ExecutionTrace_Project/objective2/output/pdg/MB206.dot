@@ -1,0 +1,12 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: import cmath", fillcolor="lightgreen"];
+    "2" [label="L3: def angle_complex(z): | W:z,angle_complex", fillcolor="lightgreen"];
+    "3" [label="L4: return cmath.phase(z) | R:cmath,z", fillcolor="salmon"];
+
+    "2" -> "3" [label="DATA(z)", style="solid"];
+    "2" -> "3" [label="CONTROL(FunctionDef)", style="dashed"];
+}

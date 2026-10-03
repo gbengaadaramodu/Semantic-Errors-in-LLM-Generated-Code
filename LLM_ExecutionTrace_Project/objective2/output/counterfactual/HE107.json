@@ -1,0 +1,21 @@
+[
+  {
+    "candidate_rank": 1,
+    "intervention": {
+      "target_variable": "s",
+      "target_line": 2,
+      "observed_value": "Is the sky blue?",
+      "counterfactual_value": "0",
+      "operation_type": "AST_transform",
+      "modified_code": "def is_bored(S):\n    s = 0\n    return len([s for s in S.split('.') if s.startswith('I')])"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.3657,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  }
+]

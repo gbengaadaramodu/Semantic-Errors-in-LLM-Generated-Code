@@ -1,0 +1,21 @@
+[
+  {
+    "candidate_rank": 1,
+    "intervention": {
+      "target_variable": "coordinate",
+      "target_line": 1,
+      "observed_value": "None",
+      "counterfactual_value": "4",
+      "operation_type": "AST_transform",
+      "modified_code": "coordinate = 4\ndef get_coordinates(coordinate):\n    x, y = coordinate\n    return [[x-1, y-1], [x-1, y], [x-1, y+1],\n            [x,   y-1],           [x,   y+1],\n            [x+1, y-1], [x+1, y], [x+1, y+1]]"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.2042,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  }
+]

@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a function to find the maximum absolute product between numbers in pairs of tuples within a given list.
+
+Example test: assert max_product_tuple([(2, 7), (2, 6), (1, 8), (4, 9)] )==36
+[/INST]

@@ -1,0 +1,22 @@
+{
+  "trace_id": "HE137",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/109",
+  "problem_summary": "\ndef move_one_ball(arr):\n    \"\"\"We have an array 'arr' of N integers arr[1], arr",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpvt8gn6it.py\", line 21, in <module>\n    check(move_one_ball)\n    ~~~~~^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpvt8gn6it.py\", line 15, in check\n    assert candidate([4, 3, 1, 2])==False\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpvt8gn6it.py\", line 21, in <module>\n    check(move_one_ball)\n    ~~~~~^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpvt8gn6it.py\", line 15, in check\n    assert candidate([4, 3, 1, 2])==False\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+  "exception_type": "AssertionError",
+  "exception_message": "",
+  "execution_time": 0.384549,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": "benchmark_test",
+  "assertion_failed": true,
+  "parser_prediction": ""
+}

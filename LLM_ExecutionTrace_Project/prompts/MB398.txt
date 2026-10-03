@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a python function to check whether every even index contains even numbers of a given list.
+
+Example test: assert even_position([3,2,1]) == False
+[/INST]

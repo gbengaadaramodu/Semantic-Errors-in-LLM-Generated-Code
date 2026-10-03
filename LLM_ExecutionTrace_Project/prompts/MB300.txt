@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a function to check whether the given month number contains 30 days or not. Months are given as number from 1 to 12.
+
+Example test: assert check_monthnumber_number(6)==True
+[/INST]

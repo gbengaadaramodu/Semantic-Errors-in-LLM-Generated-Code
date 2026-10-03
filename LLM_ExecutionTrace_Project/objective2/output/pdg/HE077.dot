@@ -1,0 +1,11 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def split_words(txt): | W:txt,split_words", fillcolor="lightgreen"];
+    "2" [label="L2: return txt.split() | R:txt", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(txt)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

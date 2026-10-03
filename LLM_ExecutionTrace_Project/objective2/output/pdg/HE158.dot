@@ -1,0 +1,28 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def sort_array(array): | W:array,sort_array", fillcolor="lightgreen"];
+    "2" [label="L2: if len(array) == 0: | R:array,len", fillcolor="lightgreen"];
+    "3" [label="L3: return []", fillcolor="lightgreen"];
+    "4" [label="L4: if len(array) == 1: | R:array,len", fillcolor="lightgreen"];
+    "5" [label="L5: return [array[0]] | R:array", fillcolor="lightgreen"];
+    "6" [label="L6: if array[0] + array[-1] % 2 == 0: | R:array", fillcolor="lightgreen"];
+    "7" [label="L7: return sorted(array, reverse=True) | R:array,sorted", fillcolor="lightgrey"];
+    "8" [label="L9: return sorted(array) | R:array,sorted", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(array)", style="solid"];
+    "1" -> "4" [label="DATA(array)", style="solid"];
+    "1" -> "5" [label="DATA(array)", style="solid"];
+    "1" -> "6" [label="DATA(array)", style="solid"];
+    "1" -> "7" [label="DATA(array)", style="solid"];
+    "1" -> "8" [label="DATA(array)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "2" -> "3" [label="CONTROL(If)", style="dashed"];
+    "1" -> "4" [label="CONTROL(FunctionDef)", style="dashed"];
+    "4" -> "5" [label="CONTROL(If)", style="dashed"];
+    "1" -> "6" [label="CONTROL(FunctionDef)", style="dashed"];
+    "6" -> "7" [label="CONTROL(If)", style="dashed"];
+    "6" -> "8" [label="CONTROL(If)", style="dashed"];
+}

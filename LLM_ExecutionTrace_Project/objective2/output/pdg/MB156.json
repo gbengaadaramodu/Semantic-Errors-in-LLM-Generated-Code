@@ -1,0 +1,89 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def tuple_intersection(tuple_list1, tuple_list2):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "tuple_list1",
+        "tuple_list2",
+        "tuple_intersection"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "tuple_list1": [
+          "[(3, 4), (5, 6), (9, 10), (4, 5)]"
+        ],
+        "tuple_list2": [
+          "[(5, 4), (3, 4), (6, 5), (9, 11)]"
+        ]
+      },
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "return {t for t in set(tuple_list1) & set(tuple_list2)}",
+      "statement_type": "Return",
+      "reads": [
+        "set",
+        "t",
+        "tuple_list1",
+        "tuple_list2"
+      ],
+      "writes": [
+        "t"
+      ],
+      "function_name": "tuple_intersection",
+      "executed": true,
+      "execution_count": 3,
+      "runtime_values": {
+        "tuple_list1": [
+          "[(3, 4), (5, 6), (9, 10), (4, 5)]",
+          "[(3, 4), (5, 6), (9, 10), (4, 5)]",
+          "[(3, 4), (5, 6), (9, 10), (4, 5)]"
+        ],
+        "tuple_list2": [
+          "[(5, 4), (3, 4), (6, 5), (9, 11)]",
+          "[(5, 4), (3, 4), (6, 5), (9, 11)]",
+          "[(5, 4), (3, 4), (6, 5), (9, 11)]"
+        ],
+        "t": [
+          "(3, 4)"
+        ]
+      },
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "tuple_list1",
+      "label": "DATA(tuple_list1)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "tuple_list2",
+      "label": "DATA(tuple_list2)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    2
+  ]
+}

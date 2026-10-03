@@ -1,0 +1,79 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def filter_data(student_heights, minimal_height, minimal_weight):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "minimal_height",
+        "minimal_weight",
+        "student_heights",
+        "filter_data"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 1,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "return {name: height for name, height in student_heights.items() if height >= minimal_height and weight >= minimal_weight}",
+      "statement_type": "Return",
+      "reads": [
+        "height",
+        "minimal_height",
+        "minimal_weight",
+        "name",
+        "student_heights",
+        "weight"
+      ],
+      "writes": [
+        "height",
+        "name"
+      ],
+      "function_name": "filter_data",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "minimal_height",
+      "label": "DATA(minimal_height)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "minimal_weight",
+      "label": "DATA(minimal_weight)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "student_heights",
+      "label": "DATA(student_heights)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    2
+  ]
+}

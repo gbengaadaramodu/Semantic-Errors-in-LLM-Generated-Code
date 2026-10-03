@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a function to count the pairs of reverse strings in the given string list. https://www.geeksforgeeks.org/python-program-to-count-the-pairs-of-reverse-strings/
+
+Example test: assert count_reverse_pairs(["julia", "best", "tseb", "for", "ailuj"])== 2
+[/INST]

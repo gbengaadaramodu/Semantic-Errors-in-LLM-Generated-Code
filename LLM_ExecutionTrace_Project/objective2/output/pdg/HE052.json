@@ -1,0 +1,109 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def do_algebra(operator, operand):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "operand",
+        "operator",
+        "do_algebra"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "operator": [
+          "['**', '*', '+']"
+        ],
+        "operand": [
+          "[2, 3, 4, 5]"
+        ]
+      },
+      "failure_related": true
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "result = eval(\" \".join(map(str, operand)))",
+      "statement_type": "Assign",
+      "reads": [
+        "eval",
+        "map",
+        "operand",
+        "str"
+      ],
+      "writes": [
+        "result"
+      ],
+      "function_name": "do_algebra",
+      "executed": true,
+      "execution_count": 3,
+      "runtime_values": {
+        "operator": [
+          "['**', '*', '+']",
+          "['**', '*', '+']",
+          "['**', '*', '+']"
+        ],
+        "operand": [
+          "[2, 3, 4, 5]",
+          "[2, 3, 4, 5]",
+          "[2, 3, 4, 5]"
+        ]
+      },
+      "failure_related": true
+    },
+    "3": {
+      "node_id": 3,
+      "line_number": 3,
+      "source_code": "return result",
+      "statement_type": "Return",
+      "reads": [
+        "result"
+      ],
+      "writes": [],
+      "function_name": "do_algebra",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "operand",
+      "label": "DATA(operand)"
+    },
+    {
+      "source_id": 2,
+      "target_id": 3,
+      "dependency_type": "DATA",
+      "variable": "result",
+      "label": "DATA(result)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 3,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    2,
+    1
+  ]
+}

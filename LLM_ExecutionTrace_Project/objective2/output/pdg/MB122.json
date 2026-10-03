@@ -1,0 +1,70 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def div_list(list1, list2):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "list1",
+        "list2",
+        "div_list"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 1,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "return [i / j for i, j in zip(list1, list2)]",
+      "statement_type": "Return",
+      "reads": [
+        "i",
+        "j",
+        "list1",
+        "list2",
+        "zip"
+      ],
+      "writes": [
+        "i",
+        "j"
+      ],
+      "function_name": "div_list",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "list1",
+      "label": "DATA(list1)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "list2",
+      "label": "DATA(list2)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    2
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB379",
+  "dataset": "MBPP",
+  "task_id": "581",
+  "problem_summary": "Write a python function to find the surface area of a square pyramid with a give",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpkvogmwbq.py\", line 4, in <module>\n    assert surface_Area(3,4) == 33\n           ^^^^^^^^^^^^\nNameError: name 'surface_Area' is not defined. Did you mean: 'surface_area'?\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpkvogmwbq.py\", line 4, in <module>\n    assert surface_Area(3,4) == 33\n           ^^^^^^^^^^^^\nNameError: name 'surface_Area' is not defined. Did you mean: 'surface_area'?",
+  "exception_type": "NameError",
+  "exception_message": "name 'surface_Area' is not defined. Did you mean: 'surface_area'?",
+  "execution_time": 0.170761,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

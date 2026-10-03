@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB325",
+  "dataset": "MBPP",
+  "task_id": "242",
+  "problem_summary": "Write a function to count the total number of characters in a string.",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmps8cy4b54.py\", line 4, in <module>\n    assert count_charac(\"python programming\")==18\n           ^^^^^^^^^^^^\nNameError: name 'count_charac' is not defined. Did you mean: 'count_characters'?\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmps8cy4b54.py\", line 4, in <module>\n    assert count_charac(\"python programming\")==18\n           ^^^^^^^^^^^^\nNameError: name 'count_charac' is not defined. Did you mean: 'count_characters'?",
+  "exception_type": "NameError",
+  "exception_message": "name 'count_charac' is not defined. Did you mean: 'count_characters'?",
+  "execution_time": 0.162241,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

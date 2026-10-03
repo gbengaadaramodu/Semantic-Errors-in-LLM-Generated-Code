@@ -1,0 +1,22 @@
+{
+  "trace_id": "HE053",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/37",
+  "problem_summary": "\n\ndef sort_even(l: list):\n    \"\"\"This function takes a list l and returns a list",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpup70n7pb.py\", line 16, in <module>\n    check(sort_even)\n    ~~~~~^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpup70n7pb.py\", line 10, in check\n    assert tuple(candidate([1, 2, 3])) == tuple([1, 2, 3])\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpup70n7pb.py\", line 16, in <module>\n    check(sort_even)\n    ~~~~~^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpup70n7pb.py\", line 10, in check\n    assert tuple(candidate([1, 2, 3])) == tuple([1, 2, 3])\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+  "exception_type": "AssertionError",
+  "exception_message": "",
+  "execution_time": 0.224773,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": "benchmark_test",
+  "assertion_failed": true,
+  "parser_prediction": ""
+}

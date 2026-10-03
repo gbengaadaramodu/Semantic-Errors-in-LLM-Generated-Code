@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB123",
+  "dataset": "MBPP",
+  "task_id": "67",
+  "problem_summary": "Write a function to find the number of ways to partition a set of Bell numbers.",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp9zapyq4j.py\", line 4, in <module>\n    assert bell_number(2)==2\n           ^^^^^^^^^^^\nNameError: name 'bell_number' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp9zapyq4j.py\", line 4, in <module>\n    assert bell_number(2)==2\n           ^^^^^^^^^^^\nNameError: name 'bell_number' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'bell_number' is not defined",
+  "execution_time": 0.225435,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

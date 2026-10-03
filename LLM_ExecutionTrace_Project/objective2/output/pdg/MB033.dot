@@ -1,0 +1,12 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def similar_elements(list1, list2): | W:list1,list2,similar_elements", fillcolor="lightgreen"];
+    "2" [label="L2: return list(set(list1) & set(list2)) | R:list,list1,list2,set", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(list1)", style="solid"];
+    "1" -> "2" [label="DATA(list2)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

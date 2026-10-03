@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB080",
+  "dataset": "MBPP",
+  "task_id": "479",
+  "problem_summary": "Write a python function to find the first digit of a given number.",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpd28kh6ha.py\", line 4, in <module>\n    assert first_Digit(123) == 1\n           ^^^^^^^^^^^\nNameError: name 'first_Digit' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpd28kh6ha.py\", line 4, in <module>\n    assert first_Digit(123) == 1\n           ^^^^^^^^^^^\nNameError: name 'first_Digit' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'first_Digit' is not defined",
+  "execution_time": 0.212275,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

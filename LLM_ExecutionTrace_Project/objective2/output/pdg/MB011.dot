@@ -1,0 +1,12 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def trim_tuple(my_list, k): | W:k,my_list,trim_tuple", fillcolor="lightgreen"];
+    "2" [label="L2: return [(x[k],) for x in my_list] | W:x | R:k,my_list,x", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(k)", style="solid"];
+    "1" -> "2" [label="DATA(my_list)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

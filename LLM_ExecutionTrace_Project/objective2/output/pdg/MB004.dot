@@ -1,0 +1,21 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def occurrence_substring(string, substring): | W:string,substring,occurrence_substring", fillcolor="lightgreen"];
+    "2" [label="L2: index = string.find(substring) | W:index | R:string,substring", fillcolor="lightgrey"];
+    "3" [label="L3: if index == -1: | R:index", fillcolor="lightgrey"];
+    "4" [label="L4: return None", fillcolor="lightgrey"];
+    "5" [label="L6: return (substring, index, index + len(substring)) | R:index,len,substring", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(string)", style="solid"];
+    "1" -> "2" [label="DATA(substring)", style="solid"];
+    "2" -> "3" [label="DATA(index)", style="solid"];
+    "2" -> "5" [label="DATA(index)", style="solid"];
+    "1" -> "5" [label="DATA(substring)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "3" [label="CONTROL(FunctionDef)", style="dashed"];
+    "3" -> "4" [label="CONTROL(If)", style="dashed"];
+    "3" -> "5" [label="CONTROL(If)", style="dashed"];
+}

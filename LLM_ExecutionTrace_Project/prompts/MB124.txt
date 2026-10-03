@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a function to find the surface area of a cube of a given size.
+
+Example test: assert surfacearea_cube(5)==150
+[/INST]

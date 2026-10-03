@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a function to check whether the given number is undulating or not.
+
+Example test: assert is_undulating(1212121) == True
+[/INST]

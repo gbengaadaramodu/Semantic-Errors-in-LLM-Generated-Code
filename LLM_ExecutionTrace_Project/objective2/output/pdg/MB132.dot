@@ -1,0 +1,11 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def count_bidirectional(tuple_pairs): | W:tuple_pairs,count_bidirectional", fillcolor="lightgreen"];
+    "2" [label="L2: return len(set((frozenset(pair), frozenset(reversed(pair))) for pair in tuple_pairs)) | W:pair | R:frozenset,len,pair,reversed,set,tuple_pairs", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(tuple_pairs)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

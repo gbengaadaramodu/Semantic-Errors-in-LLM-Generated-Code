@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB070",
+  "dataset": "MBPP",
+  "task_id": "233",
+  "problem_summary": "Write a function to find the lateral surface area of a cylinder.",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp6ka08xnz.py\", line 6, in <module>\n    assert math.isclose(lateralsuface_cylinder(10,5), 314.15000000000003, rel_tol=0.001)\n                        ^^^^^^^^^^^^^^^^^^^^^^\nNameError: name 'lateralsuface_cylinder' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp6ka08xnz.py\", line 6, in <module>\n    assert math.isclose(lateralsuface_cylinder(10,5), 314.15000000000003, rel_tol=0.001)\n                        ^^^^^^^^^^^^^^^^^^^^^^\nNameError: name 'lateralsuface_cylinder' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'lateralsuface_cylinder' is not defined",
+  "execution_time": 0.269811,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

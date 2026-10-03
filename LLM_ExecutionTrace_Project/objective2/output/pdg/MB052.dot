@@ -1,0 +1,11 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def empty_dict(list_of_dicts): | W:list_of_dicts,empty_dict", fillcolor="lightgreen"];
+    "2" [label="L2: return all(not d for d in list_of_dicts) | W:d | R:all,d,list_of_dicts", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(list_of_dicts)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

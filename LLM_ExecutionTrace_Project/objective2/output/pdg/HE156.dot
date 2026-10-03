@@ -1,0 +1,30 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def compare_one(a, b): | W:a,b,compare_one", fillcolor="lightgreen"];
+    "2" [label="L2: if type(a) is not type(b): | R:a,b,type", fillcolor="lightgreen"];
+    "3" [label="L3: raise ValueError(\"a and b must be the same type\") | R:ValueError", fillcolor="salmon"];
+    "4" [label="L5: if a == b: | R:a,b", fillcolor="lightgreen"];
+    "5" [label="L6: return None", fillcolor="lightgrey"];
+    "6" [label="L7: elif a > b: | R:a,b", fillcolor="lightgreen"];
+    "7" [label="L8: return a | R:a", fillcolor="lightgrey"];
+    "8" [label="L10: return b | R:b", fillcolor="lightgreen"];
+
+    "1" -> "2" [label="DATA(a)", style="solid"];
+    "1" -> "2" [label="DATA(b)", style="solid"];
+    "1" -> "4" [label="DATA(a)", style="solid"];
+    "1" -> "4" [label="DATA(b)", style="solid"];
+    "1" -> "6" [label="DATA(a)", style="solid"];
+    "1" -> "6" [label="DATA(b)", style="solid"];
+    "1" -> "7" [label="DATA(a)", style="solid"];
+    "1" -> "8" [label="DATA(b)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "2" -> "3" [label="CONTROL(If)", style="dashed"];
+    "1" -> "4" [label="CONTROL(FunctionDef)", style="dashed"];
+    "4" -> "5" [label="CONTROL(If)", style="dashed"];
+    "4" -> "6" [label="CONTROL(If)", style="dashed"];
+    "6" -> "7" [label="CONTROL(If)", style="dashed"];
+    "6" -> "8" [label="CONTROL(If)", style="dashed"];
+}

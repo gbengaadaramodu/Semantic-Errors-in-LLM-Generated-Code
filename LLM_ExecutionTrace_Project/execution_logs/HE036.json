@@ -1,0 +1,22 @@
+{
+  "trace_id": "HE036",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/149",
+  "problem_summary": "\ndef sorted_list_sum(lst):\n    \"\"\"Write a function that accepts a list of string",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpqvpqy9c3.py\", line 19, in <module>\n    check(sorted_list_sum)\n    ~~~~~^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpqvpqy9c3.py\", line 7, in check\n    assert candidate([\"aa\", \"a\", \"aaa\"]) == [\"aa\"]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpqvpqy9c3.py\", line 19, in <module>\n    check(sorted_list_sum)\n    ~~~~~^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpqvpqy9c3.py\", line 7, in check\n    assert candidate([\"aa\", \"a\", \"aaa\"]) == [\"aa\"]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+  "exception_type": "AssertionError",
+  "exception_message": "",
+  "execution_time": 0.298399,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": "benchmark_test",
+  "assertion_failed": true,
+  "parser_prediction": ""
+}

@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB424",
+  "dataset": "MBPP",
+  "task_id": "168",
+  "problem_summary": "Write a function to count the number of occurrences of a number in a given list.",
+  "execution_status": "Completed",
+  "stdout": "",
+  "stderr": "",
+  "traceback": "",
+  "exception_type": "",
+  "exception_message": "",
+  "execution_time": 0.085609,
+  "timed_out": false,
+  "exit_code": 0,
+  "tests_passed": true,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

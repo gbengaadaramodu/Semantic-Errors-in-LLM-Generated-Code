@@ -1,0 +1,97 @@
+[
+  {
+    "candidate_rank": 1,
+    "intervention": {
+      "target_variable": "sum",
+      "target_line": 19,
+      "observed_value": "None",
+      "counterfactual_value": "heo",
+      "operation_type": "AST_transform",
+      "modified_code": "def amicable_numbers_sum(n):\n    sum = 0\n    for i in range(1, n + 1):\n        if is_amicable(i):\n            sum += i\n    return sum\n\ndef is_amicable(n):\n    s = sum_proper_divisors(n)\n    return s != n and s == sum_proper_divisors(s)\n\ndef sum_proper_divisors(n):\n    sum = 0\n    for i in range(1, int(n ** 0.5) + 1):\n        if n % i == 0:\n            sum += i\n            if n // i != i:\n                sum += n // i\n    return 'heo'"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.243,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  },
+  {
+    "candidate_rank": 2,
+    "intervention": {
+      "target_variable": "sum",
+      "target_line": 18,
+      "observed_value": "None",
+      "counterfactual_value": "None",
+      "operation_type": "failed_construction",
+      "modified_code": ""
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "FAILED_CONSTRUCTION",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "UNRESOLVED",
+    "execution_time": 0.0,
+    "status": "UNRESOLVED",
+    "explanation": "Failed to construct valid AST counterfactual intervention."
+  },
+  {
+    "candidate_rank": 3,
+    "intervention": {
+      "target_variable": "i",
+      "target_line": 14,
+      "observed_value": "None",
+      "counterfactual_value": "None",
+      "operation_type": "failed_construction",
+      "modified_code": ""
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "FAILED_CONSTRUCTION",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "UNRESOLVED",
+    "execution_time": 0.0,
+    "status": "UNRESOLVED",
+    "explanation": "Failed to construct valid AST counterfactual intervention."
+  },
+  {
+    "candidate_rank": 4,
+    "intervention": {
+      "target_variable": "i",
+      "target_line": 17,
+      "observed_value": "None",
+      "counterfactual_value": "None",
+      "operation_type": "AST_transform",
+      "modified_code": "def amicable_numbers_sum(n):\n    sum = 0\n    for i in range(1, n + 1):\n        if is_amicable(i):\n            sum += i\n    return sum\n\ndef is_amicable(n):\n    s = sum_proper_divisors(n)\n    return s != n and s == sum_proper_divisors(s)\n\ndef sum_proper_divisors(n):\n    sum = 0\n    for i in range(1, int(n ** 0.5) + 1):\n        if n % i == 0:\n            sum += i\n            if n // i == i:\n                sum += n // i\n    return sum"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.2733,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  },
+  {
+    "candidate_rank": 5,
+    "intervention": {
+      "target_variable": "i",
+      "target_line": 15,
+      "observed_value": "None",
+      "counterfactual_value": "None",
+      "operation_type": "AST_transform",
+      "modified_code": "def amicable_numbers_sum(n):\n    sum = 0\n    for i in range(1, n + 1):\n        if is_amicable(i):\n            sum += i\n    return sum\n\ndef is_amicable(n):\n    s = sum_proper_divisors(n)\n    return s != n and s == sum_proper_divisors(s)\n\ndef sum_proper_divisors(n):\n    sum = 0\n    for i in range(1, int(n ** 0.5) + 1):\n        if n % i != 0:\n            sum += i\n            if n // i != i:\n                sum += n // i\n    return sum"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.2959,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  }
+]

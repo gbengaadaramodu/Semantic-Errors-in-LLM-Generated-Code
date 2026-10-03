@@ -1,0 +1,379 @@
+trace_id,dataset,task_id,error_category,analysis_status,skip_reason,failure_line,fault_line,fault_statement,causal_variable,counterfactual_validated,confidence,execution_time
+HE001,HumanEval,HumanEval/163,Wrong-Output Error,ANALYZED,,2,2,"return sorted([i for i in range(a, b+1) if str(i).isdigit() and int(str(i)) % 2 == 0])",i,False,0.3,0.6676
+HE003,HumanEval,HumanEval/6,Wrong-Output Error,ANALYZED,,11,11,return nesting_levels,nesting_levels,True,0.95,0.3692
+HE004,HumanEval,HumanEval/70,Wrong-Output Error,ANALYZED,,7,7,return [minimum] + [maximum] + [x for x in sorted_lst if x != minimum and x != maximum],x,False,0.3,0.9337
+HE008,HumanEval,HumanEval/26,Wrong-Output Error,ANALYZED,,2,2,return list(dict.fromkeys(numbers)),dict,False,0.3,0.2355
+HE009,HumanEval,HumanEval/139,Wrong-Output Error,ANALYZED,,5,5,return result,result,True,0.95,0.1574
+HE011,HumanEval,HumanEval/151,Wrong-Output Error,ANALYZED,,7,7,return result,result,True,0.95,0.1107
+HE012,HumanEval,HumanEval/108,Runtime Exception,ANALYZED,,2,2,return sum(1 for x in arr if x > 0 or (x < 0 and any(int(d) < 0 for d in str(x)))),d,False,0.3,0.2567
+HE013,HumanEval,HumanEval/8,Runtime Exception,ANALYZED,,4,4,"return sum(numbers), functools.reduce(operator.mul, numbers, 1)",functools,False,0.3,0.1791
+HE018,HumanEval,HumanEval/129,Wrong-Output Error,ANALYZED,,16,16,return [],<statement>,False,0.5,0.0107
+HE021,HumanEval,HumanEval/50,Runtime Exception,ANALYZED,,2,2,"return """".join([chr(((ord(ch) - 5 - ord(""a"")) % 26) + ord(""a"")) for ch in s])",ch,False,0.5,0.0087
+HE022,HumanEval,HumanEval/155,Wrong-Output Error,ANALYZED,,10,6,even_digits += 1,even_digits,False,0.3,5.5332
+HE025,HumanEval,HumanEval/114,Runtime Exception,ANALYZED,,2,2,"return min(sum(nums[i:j]) for i in range(len(nums)) for j in range(i+1, len(nums)+1))",i,False,0.5,0.0096
+HE027,HumanEval,HumanEval/1,Wrong-Output Error,ANALYZED,,6,6,return groups,groups,False,0.3,0.5003
+HE030,HumanEval,HumanEval/87,Wrong-Output Error,ANALYZED,,6,6,return result,result,False,0.3,0.4117
+HE031,HumanEval,HumanEval/138,Wrong-Output Error,ANALYZED,,2,2,return n % 2 == 0 and n % 4 == 0,n,True,0.95,0.1721
+HE032,HumanEval,HumanEval/39,Wrong-Output Error,ANALYZED,,5,5,return a,a,True,0.95,0.1338
+HE033,HumanEval,HumanEval/148,Wrong-Output Error,ANALYZED,,8,8,return tuple(planets[index1+1:index2]),index1,False,0.3,0.9985
+HE034,HumanEval,HumanEval/86,Wrong-Output Error,ANALYZED,,2,2,"return """".join(sorted(s))",s,False,0.3,0.3013
+HE035,HumanEval,HumanEval/156,Runtime Exception,ANALYZED,,3,3,return roman_numerals[number],number,False,0.3,0.4503
+HE036,HumanEval,HumanEval/149,Wrong-Output Error,ANALYZED,,2,2,"return sorted(lst, key=lambda x: (len(x), x))",x,False,0.3,0.2296
+HE040,HumanEval,HumanEval/135,Wrong-Output Error,ANALYZED,,5,5,return -1,<statement>,False,0.5,0.0086
+HE041,HumanEval,HumanEval/44,Runtime Exception,ANALYZED,,8,8,res = digs[r] + res,res,False,0.3,0.9052
+HE042,HumanEval,HumanEval/77,Wrong-Output Error,ANALYZED,,2,2,return a > 0 and (a ** (1/3)) % 1 == 0,a,False,0.3,0.1982
+HE043,HumanEval,HumanEval/33,Runtime Exception,ANALYZED,,7,7,l_copy[i] = sorted(l_copy[i]),i,False,0.5,0.4511
+HE044,HumanEval,HumanEval/103,Wrong-Output Error,ANALYZED,,13,13,return binary,binary,True,0.95,0.8528
+HE045,HumanEval,HumanEval/5,Runtime Exception,ANALYZED,,2,2,"return [delimeter].join(map(str, numbers)).split(str(delimeter))",delimeter,False,0.3,0.1978
+HE046,HumanEval,HumanEval/93,Wrong-Output Error,ANALYZED,,11,11,return encoded_msg,encoded_msg,True,0.95,0.1811
+HE051,HumanEval,HumanEval/10,Runtime Exception,ANALYZED,,2,2,if is_palindrome(string):,is_palindrome,False,0.5,0.0129
+HE052,HumanEval,HumanEval/160,Syntax Error,ANALYZED,,1,2,"result = eval("" "".join(map(str, operand)))",result,False,0.3,0.1998
+HE053,HumanEval,HumanEval/37,Wrong-Output Error,ANALYZED,,2,2,return [l[i] for i in range(len(l)) if i % 2 == 0] + sorted([l[i] for i in range(len(l)) if i % 2 == 1]),i,False,0.3,0.2216
+HE054,HumanEval,HumanEval/106,Runtime Exception,ANALYZED,,2,2,"return [factorial(i) if i % 2 == 0 else sum(range(1, i + 1)) for i in range(1, n + 1)]",i,False,0.3,0.2043
+HE055,HumanEval,HumanEval/80,Wrong-Output Error,ANALYZED,,7,7,return True,<statement>,False,0.5,0.0096
+HE058,HumanEval,HumanEval/73,Wrong-Output Error,ANALYZED,,25,21,count += 1,count,False,0.3,0.7029
+HE062,HumanEval,HumanEval/119,Wrong-Output Error,ANALYZED,,14,14,"return ""No""",<statement>,False,0.5,0.01
+HE065,HumanEval,HumanEval/98,Wrong-Output Error,ANALYZED,,6,6,return count,count,True,0.95,0.2627
+HE066,HumanEval,HumanEval/111,Wrong-Output Error,ANALYZED,,8,8,return hist,hist,True,0.95,0.336
+HE067,HumanEval,HumanEval/113,Wrong-Output Error,ANALYZED,,2,2,"return [""the number of odd elements in the string {} of the input."".format(i) for i in lst]",i,False,0.3,0.1848
+HE068,HumanEval,HumanEval/100,Wrong-Output Error,ANALYZED,,8,8,return levels,levels,True,0.95,0.4969
+HE069,HumanEval,HumanEval/126,Wrong-Output Error,ANALYZED,,2,2,return all(lst[i] <= lst[i+1] for i in range(len(lst)-1)) and len(set(lst)) == len(lst),i,False,0.3,0.2224
+HE072,HumanEval,HumanEval/117,Wrong-Output Error,ANALYZED,,3,3,"return [word for word in words if len(set(word).difference(set(""aeiou""))) == n]",word,False,0.3,0.5622
+HE073,HumanEval,HumanEval/81,Runtime Exception,ANALYZED,,22,21,for gpa in gpas:,gpa,False,0.3,0.5468
+HE074,HumanEval,HumanEval/141,Wrong-Output Error,ANALYZED,,6,6,"return ""No""",<statement>,False,0.5,0.0119
+HE077,HumanEval,HumanEval/125,Wrong-Output Error,ANALYZED,,2,2,return txt.split(),txt,False,0.3,0.2598
+HE078,HumanEval,HumanEval/146,Runtime Exception,ANALYZED,,2,2,return len([num for num in nums if num > 10 and str(num)[0] in '13579' and str(num)[-1] in '13579']),num,False,0.3,0.1988
+HE079,HumanEval,HumanEval/85,Wrong-Output Error,ANALYZED,,2,2,return sum(i for i in lst if i % 2 == 0 and lst.index(i) % 2 != 0),i,False,0.3,0.2934
+HE081,HumanEval,HumanEval/82,Wrong-Output Error,ANALYZED,,7,7,return True,<statement>,False,0.5,0.0088
+HE083,HumanEval,HumanEval/122,Wrong-Output Error,ANALYZED,,2,2,return sum(arr[:k]),arr,False,0.3,0.1959
+HE087,HumanEval,HumanEval/89,Wrong-Output Error,ANALYZED,,14,14,return encrypted_text,encrypted_text,True,0.95,0.3956
+HE088,HumanEval,HumanEval/147,Wrong-Output Error,ANALYZED,,9,9,return count,count,True,0.95,0.6467
+HE089,HumanEval,HumanEval/94,Runtime Exception,ANALYZED,,22,20,total += n % 10,total,False,0.3,0.6054
+HE090,HumanEval,HumanEval/101,Wrong-Output Error,ANALYZED,,2,2,"return s.split("", "")",s,False,0.3,0.3284
+HE091,HumanEval,HumanEval/133,Runtime Exception,ANALYZED,,2,2,return sum([int(ceil(x))**2 for x in lst]),x,False,0.3,0.334
+HE093,HumanEval,HumanEval/41,Wrong-Output Error,ANALYZED,,2,2,return n * (n - 1) // 2,n,False,0.3,0.3185
+HE094,HumanEval,HumanEval/150,Runtime Exception,ANALYZED,,2,2,if is_prime(n):,is_prime,False,0.5,0.0144
+HE095,HumanEval,HumanEval/96,Wrong-Output Error,ANALYZED,,14,14,return True,<statement>,False,0.5,0.0165
+HE100,HumanEval,HumanEval/120,Wrong-Output Error,ANALYZED,,2,2,"return sorted(arr, reverse=True)[:k]",arr,False,0.3,0.3048
+HE104,HumanEval,HumanEval/36,Wrong-Output Error,ANALYZED,,6,6,return count,count,True,0.95,0.4958
+HE105,HumanEval,HumanEval/140,Wrong-Output Error,ANALYZED,,2,2,"return text.replace("" "", ""_"").replace(""  "", ""-"")",text,True,0.95,0.1688
+HE106,HumanEval,HumanEval/134,Wrong-Output Error,ANALYZED,,6,6,return False,<statement>,False,0.5,0.0129
+HE107,HumanEval,HumanEval/91,Wrong-Output Error,ANALYZED,,2,2,return len([s for s in S.split('.') if s.startswith('I')]),s,False,0.3,0.3801
+HE109,HumanEval,HumanEval/110,Wrong-Output Error,ANALYZED,,5,5,"return ""NO""",<statement>,False,0.5,0.3775
+HE112,HumanEval,HumanEval/131,Wrong-Output Error,ANALYZED,,6,6,return product,product,True,0.95,0.6391
+HE113,HumanEval,HumanEval/69,Wrong-Output Error,ANALYZED,,7,7,return -1,<statement>,False,0.5,0.9716
+HE116,HumanEval,HumanEval/64,Wrong-Output Error,ANALYZED,,7,7,return count,count,True,0.95,0.4815
+HE117,HumanEval,HumanEval/115,Wrong-Output Error,ANALYZED,,18,18,return num_lowerings,num_lowerings,True,0.95,0.6975
+HE118,HumanEval,HumanEval/118,Wrong-Output Error,ANALYZED,,6,6,"return """"",<statement>,False,0.5,0.0141
+HE119,HumanEval,HumanEval/65,Wrong-Output Error,ANALYZED,,4,4,return str(x)[shift:] + str(x)[:shift],shift,False,0.3,0.3341
+HE121,HumanEval,HumanEval/99,Wrong-Output Error,ANALYZED,,2,2,return round(float(value)),float,False,0.3,0.2913
+HE125,HumanEval,HumanEval/128,Runtime Exception,ANALYZED,,8,4,signs = [1 for _ in arr],_,False,0.3,0.2788
+HE127,HumanEval,HumanEval/75,Wrong-Output Error,ANALYZED,,8,2,if a < 100:,a,False,0.5,0.1386
+HE128,HumanEval,HumanEval/32,Runtime Exception,ANALYZED,,5,5,return None,<statement>,False,0.5,0.2435
+HE129,HumanEval,HumanEval/54,Wrong-Output Error,ANALYZED,,2,2,return sorted(s0) == sorted(s1),s0,True,0.95,0.2059
+HE130,HumanEval,HumanEval/102,Wrong-Output Error,ANALYZED,,9,9,return -1,<statement>,False,0.5,0.0103
+HE133,HumanEval,HumanEval/144,Wrong-Output Error,ANALYZED,,5,2,"num1, denom1 = x.split('/')",denom1,False,0.3,0.4979
+HE134,HumanEval,HumanEval/158,Wrong-Output Error,ANALYZED,,6,6,return max_word,max_word,True,0.95,0.9475
+HE135,HumanEval,HumanEval/159,Wrong-Output Error,ANALYZED,,2,2,"return [number + need, max(remaining - need, 0)]",max,False,0.3,0.2627
+HE136,HumanEval,HumanEval/67,Runtime Exception,ANALYZED,,2,2,"apples, oranges = map(int, s.split()[:2])",apples,False,0.5,0.0107
+HE137,HumanEval,HumanEval/109,Wrong-Output Error,ANALYZED,,8,8,return True,<statement>,False,0.5,0.0155
+HE138,HumanEval,HumanEval/76,Wrong-Output Error,ANALYZED,,2,2,return x == n**int(x**0.5)**2,int,True,0.95,0.1963
+HE141,HumanEval,HumanEval/95,Runtime Exception,ANALYZED,,4,4,lowercase_keys = all(key.islower() for key in my_dict.keys()),key,False,0.5,0.0146
+HE142,HumanEval,HumanEval/132,Wrong-Output Error,ANALYZED,,10,10,return False,<statement>,False,0.5,0.0131
+HE143,HumanEval,HumanEval/72,Wrong-Output Error,ANALYZED,,2,2,"return all(x <= w for x in q) and any(x == y for x, y in zip(q, reversed(q)))",x,True,0.95,0.157
+HE144,HumanEval,HumanEval/38,Runtime Exception,ANALYZED,,4,4,"return """".join(groups)",groups,False,0.5,0.5529
+HE145,HumanEval,HumanEval/123,Wrong-Output Error,ANALYZED,,9,9,return sorted(set(collatz)),collatz,True,0.95,0.5103
+HE150,HumanEval,HumanEval/127,Wrong-Output Error,ANALYZED,,12,4,if start1 <= end1 and start2 <= end2:,end1,False,0.5,0.1434
+HE151,HumanEval,HumanEval/18,Wrong-Output Error,ANALYZED,,2,2,return string.count(substring),string,False,0.3,0.2176
+HE152,HumanEval,HumanEval/154,Wrong-Output Error,ANALYZED,,2,2,return any(b in a for _ in range(len(a) - len(b) + 1)),_,False,0.3,0.2152
+HE156,HumanEval,HumanEval/137,Runtime Exception,ANALYZED,,3,3,"raise ValueError(""a and b must be the same type"")",ValueError,False,0.5,0.0138
+HE158,HumanEval,HumanEval/88,Wrong-Output Error,ANALYZED,,9,6,if array[0] + array[-1] % 2 == 0:,array,False,0.3,0.3623
+HE159,HumanEval,HumanEval/130,Runtime Exception,ANALYZED,,14,14,return t,t,False,0.3,0.6083
+HE160,HumanEval,HumanEval/145,Wrong-Output Error,ANALYZED,,2,2,"return sorted(nums, key=lambda x: (sum(int(d) for d in str(abs(x))), x))",d,False,0.3,0.3213
+HE162,HumanEval,HumanEval/105,Wrong-Output Error,ANALYZED,,6,4,nums = sorted([str(num) for num in arr]),num,False,0.3,0.7308
+MB001,MBPP,475,Runtime Exception,ANALYZED,,2,2,return list(s),list,False,0.3,0.2986
+MB002,MBPP,100,Runtime Exception,ANALYZED,,8,4,for i in range(n-1):,i,False,0.3,1.012
+MB003,MBPP,617,Runtime Exception,ANALYZED,,2,2,"return (my_list[:L], my_list[L:])",L,False,0.3,0.2611
+MB004,MBPP,280,Runtime Exception,ANALYZED,,6,6,"return (substring, index, index + len(substring))",index,False,0.3,0.6913
+MB005,MBPP,625,Runtime Exception,ANALYZED,,5,5,return area,area,False,0.3,0.4769
+MB006,MBPP,809,Runtime Exception,ANALYZED,,2,2,"return my_tuple[:start] + (end,) + my_tuple[start+1:]",end,False,0.3,0.2487
+MB007,MBPP,606,Runtime Exception,ANALYZED,,9,9,"return eulerian_num(n-1, m-1) + eulerian_num(n-1, m)",eulerian_num,False,0.3,1.0727
+MB008,MBPP,171,Runtime Exception,ANALYZED,,7,6,count += 1,count,False,0.3,0.2549
+MB009,MBPP,130,Runtime Exception,ANALYZED,,2,2,"return re.search(r""a+b+"", string) is not None",re,False,0.3,0.293
+MB010,MBPP,399,Runtime Exception,ANALYZED,,2,2,"return """".join(my_tuple)",my_tuple,False,0.3,0.2251
+MB011,MBPP,770,Runtime Exception,ANALYZED,,2,2,"return [(x[k],) for x in my_list]",x,False,0.3,0.2308
+MB012,MBPP,135,Runtime Exception,ANALYZED,,5,5,return False,<statement>,False,0.5,0.0092
+MB013,MBPP,567,Runtime Exception,ANALYZED,,16,5,dp = [[0] * (n + 1) for _ in range(m + 1)],_,False,0.3,0.6503
+MB014,MBPP,779,Runtime Exception,ANALYZED,,5,5,return (angle / 360) * (2 * math.pi * radius**2),angle,False,0.3,0.4999
+MB015,MBPP,562,Runtime Exception,ANALYZED,,23,23,return True,<statement>,False,0.5,0.0147
+MB016,MBPP,2,Runtime Exception,ANALYZED,,2,2,return all(my_list[i+1] == my_list[i] + 1 for i in range(len(my_list)-1)),i,False,0.3,0.3105
+MB017,MBPP,600,Runtime Exception,ANALYZED,,2,2,"return sum([x**4 for x in range(1, n*2+1, 2)])",x,False,0.3,0.431
+MB018,MBPP,295,Runtime Exception,ANALYZED,,15,4,for i in range(n):,i,False,0.3,0.9418
+MB019,MBPP,463,Runtime Exception,ANALYZED,,2,2,"return sorted(my_dict.items(), key=lambda x: x[1])",x,False,0.3,0.2996
+MB020,MBPP,14,Runtime Exception,ANALYZED,,10,10,return next_palindrome - 1,next_palindrome,False,0.3,1.1237
+MB021,MBPP,103,Runtime Exception,ANALYZED,,8,2,"x, y = point",x,False,0.3,0.6616
+MB022,MBPP,393,Runtime Exception,ANALYZED,,5,5,"return False, -1",<statement>,False,0.5,0.01
+MB023,MBPP,285,Runtime Exception,ANALYZED,,3,3,return my_list,my_list,False,0.3,0.2383
+MB024,MBPP,246,Runtime Exception,ANALYZED,,2,2,return all(my_list[i] % 2 == 0 for i in range(len(my_list)) if i % 2 == 0),i,False,0.3,0.2349
+MB025,MBPP,71,Runtime Exception,ANALYZED,,2,2,return (math.pi / 180) * degrees,degrees,False,0.3,0.2402
+MB026,MBPP,247,Runtime Exception,ANALYZED,,2,2,return 5 * side,side,False,0.3,0.2702
+MB027,MBPP,584,Runtime Exception,ANALYZED,,4,4,"return max(set(my_list), key=my_list.count)",max,False,0.3,0.2276
+MB028,MBPP,86,Runtime Exception,ANALYZED,,2,2,"return tuple(i ^ j for i, j in zip(tup1, tup2))",i,False,0.3,0.2339
+MB029,MBPP,89,Runtime Exception,ANALYZED,,2,2,return len(my_list),len,False,0.3,0.2379
+MB030,MBPP,752,Runtime Exception,ANALYZED,,2,2,return int((2*n - 1)*(2*n - 2)/2),int,False,0.3,0.2673
+MB031,MBPP,461,Runtime Exception,ANALYZED,,2,2,return all(my_list[i] <= my_list[i+1] for i in range(len(my_list)-1)),i,False,0.3,0.2216
+MB032,MBPP,80,Runtime Exception,ANALYZED,,2,2,return max(len(sublist) for sublist in my_list),sublist,False,0.3,0.2079
+MB033,MBPP,769,Runtime Exception,ANALYZED,,2,2,return list(set(list1) & set(list2)),list,False,0.3,0.2172
+MB034,MBPP,563,Runtime Exception,ANALYZED,,2,2,return n % 2 == 0,n,False,0.3,0.2218
+MB035,MBPP,772,Runtime Exception,ANALYZED,,2,2,"return sum([i for i in range(1, n+1) if n % i == 0])",i,False,0.3,0.2375
+MB036,MBPP,113,Runtime Exception,ANALYZED,,13,6,"for i in range(1, len(arr)):",i,False,0.3,0.9649
+MB037,MBPP,115,Runtime Exception,ANALYZED,,2,2,return base * height * depth,base,False,0.3,0.233
+MB038,MBPP,637,Runtime Exception,ANALYZED,,2,2,return int(n**0.5)**2 == n,int,False,0.3,0.2227
+MB039,MBPP,456,Runtime Exception,ANALYZED,,2,2,"return max(my_list, key=len)",len,False,0.3,0.2307
+MB040,MBPP,574,Runtime Exception,ANALYZED,,2,2,"return re.search(r""a(b{2,3})"", string) is not None",re,False,0.3,0.2226
+MB041,MBPP,138,Runtime Exception,ANALYZED,,5,3,"while not math.isclose(x**2, n, rel_tol=0.001):",math,False,0.3,0.6568
+MB042,MBPP,261,Runtime Exception,ANALYZED,,11,11,return my_list,my_list,False,0.3,0.2162
+MB043,MBPP,560,Runtime Exception,ANALYZED,,20,20,return dp[len(s)][len(s)],dp,False,0.3,0.4815
+MB044,MBPP,605,Runtime Exception,ANALYZED,,6,6,"return ', '.join(adverbs)",adverbs,False,0.3,0.5484
+MB045,MBPP,428,Runtime Exception,ANALYZED,,2,2,return int((2*n - 1)*(2*n - 1) + (2*n - 1)),int,False,0.3,0.2275
+MB046,MBPP,228,Runtime Exception,ANALYZED,,2,2,"return sorted(list(set(range(1, n+1))))[-2]",list,False,0.3,0.2352
+MB047,MBPP,797,Runtime Exception,ANALYZED,,9,9,return jacobsthal_num(n-1) + jacobsthal_num(n-2),jacobsthal_num,False,0.3,0.5534
+MB048,MBPP,751,Runtime Exception,ANALYZED,,2,2,return sum(1 for c in s if c.isupper()),c,False,0.3,0.2974
+MB049,MBPP,731,Runtime Exception,ANALYZED,,2,2,return (n * (n + 1)) / 2,n,False,0.3,0.243
+MB050,MBPP,172,Runtime Exception,ANALYZED,,2,2,"return re.findall(r'""([^""]*)""', string)",re,False,0.3,0.3142
+MB051,MBPP,743,Runtime Exception,ANALYZED,,6,,,,False,0.0,0.011
+MB052,MBPP,287,Runtime Exception,ANALYZED,,2,2,return all(not d for d in list_of_dicts),d,False,0.3,0.2605
+MB053,MBPP,414,Runtime Exception,ANALYZED,,2,2,return amount == cost,amount,False,0.3,0.2522
+MB054,MBPP,644,Runtime Exception,ANALYZED,,2,2,return [''.join(reversed(s)) for s in my_list],s,False,0.3,0.2442
+MB055,MBPP,630,Runtime Exception,ANALYZED,,2,2,return 2 * math.pi * radius * (height + radius),height,False,0.3,0.2373
+MB056,MBPP,800,Runtime Exception,ANALYZED,,8,8,return False,<statement>,False,0.5,0.0102
+MB057,MBPP,436,Runtime Exception,ANALYZED,,2,2,"return tuple(map(lambda x, y: x / y, tuple1, tuple2))",x,False,0.3,0.2464
+MB058,MBPP,554,Runtime Exception,ANALYZED,,2,2,return sorted(set(tuple1 + tuple2)),set,False,0.3,0.2398
+MB059,MBPP,443,Runtime Exception,ANALYZED,,7,7,return True,<statement>,False,0.5,0.0109
+MB060,MBPP,108,Runtime Exception,ANALYZED,,12,12,return arr,arr,False,0.3,0.2276
+MB061,MBPP,250,Runtime Exception,ANALYZED,,2,2,"return all(bin(i)[2:].zfill(n) for i in range(start, end+1))",i,False,0.3,0.355
+MB062,MBPP,237,Runtime Exception,ANALYZED,,8,6,sum += elem,sum,False,0.3,0.5875
+MB063,MBPP,75,Runtime Exception,ANALYZED,,2,2,return 2 * r * h + (r ** 2) * math.acos(-1),h,False,0.3,0.2605
+MB064,MBPP,306,Runtime Exception,ANALYZED,,2,2,"return input_string.count(""std"")",input_string,False,0.3,0.2706
+MB065,MBPP,16,Runtime Exception,ANALYZED,,2,2,"return sum([i**2 for i in range(2, n+1, 2)])",i,False,0.3,0.2718
+MB066,MBPP,595,Runtime Exception,ANALYZED,,2,2,return any(x in seq2 for x in seq1),x,False,0.3,0.3255
+MB067,MBPP,577,Runtime Exception,ANALYZED,,2,2,return arr[k:][::-1] + arr[:k],arr,False,0.3,0.2421
+MB068,MBPP,239,Runtime Exception,ANALYZED,,5,,,,False,0.0,0.0083
+MB069,MBPP,739,Runtime Exception,ANALYZED,,6,6,return combinations,combinations,False,0.3,0.5978
+MB070,MBPP,233,Runtime Exception,ANALYZED,,2,2,return [x for x in my_list if x < 0],x,False,0.3,0.2712
+MB071,MBPP,6,Runtime Exception,ANALYZED,,2,2,return [x for x in my_list if x % 2 != 0],x,False,0.3,0.2519
+MB072,MBPP,82,Runtime Exception,ANALYZED,,2,2,return max(x for x in my_list if x < 0),x,False,0.3,0.2315
+MB073,MBPP,620,Runtime Exception,ANALYZED,,2,2,return sorted(list1 + list2 + list3),list1,False,0.3,0.285
+MB074,MBPP,72,Runtime Exception,ANALYZED,,2,2,return my_tuple.count(element),element,False,0.3,0.2254
+MB075,MBPP,737,Runtime Exception,ANALYZED,,8,8,return occurences,occurences,False,0.3,0.4493
+MB076,MBPP,79,Runtime Exception,ANALYZED,,2,2,return [tuple for tuple in tuples if all(num % k == 0 for num in tuple)],num,False,0.3,0.2216
+MB077,MBPP,57,Runtime Exception,ANALYZED,,12,9,"for j in range(i, k+1):",j,False,0.3,0.6915
+MB078,MBPP,300,Runtime Exception,ANALYZED,,2,2,"return any(c.islower() for c in input_string) and ""_"" in input_string",c,False,0.5,0.0093
+MB079,MBPP,733,Runtime Exception,ANALYZED,,6,5,count += 1,count,False,0.3,0.4609
+MB080,MBPP,479,Runtime Exception,ANALYZED,,2,2,return str(n)[-1],n,False,0.3,0.2329
+MB081,MBPP,245,Runtime Exception,ANALYZED,,10,10,return 0,<statement>,False,0.5,0.0097
+MB082,MBPP,269,Runtime Exception,ANALYZED,,2,2,return sum([int(digit) for digit in str(base**power)]),digit,False,0.3,0.1986
+MB083,MBPP,643,Runtime Exception,ANALYZED,,2,2,return 2 * radius * height + radius ** 2,height,False,0.3,0.2634
+MB084,MBPP,777,Runtime Exception,ANALYZED,,2,2,return bin(num1 ^ num2).count('1') == 1,bin,False,0.3,0.2333
+MB085,MBPP,229,Runtime Exception,ANALYZED,,4,4,return (4/3) * math.pi * radius**3,math,False,0.3,0.2238
+MB086,MBPP,758,Runtime Exception,ANALYZED,,10,4,for i in range(len(my_list)):,i,False,0.3,0.7276
+MB087,MBPP,117,Runtime Exception,ANALYZED,,5,5,return False,<statement>,False,0.5,0.0185
+MB088,MBPP,586,Runtime Exception,ANALYZED,,2,2,"return {name: height for name, height in student_heights.items() if height >= minimal_height and weight >= minimal_weight}",height,False,0.3,0.2464
+MB089,MBPP,589,Runtime Exception,ANALYZED,,2,2,return len(word) % 2 != 0,len,False,0.3,0.2799
+MB090,MBPP,455,Runtime Exception,ANALYZED,,2,2,"return int("""".join(sorted(my_list, reverse=True)))",int,False,0.3,0.1983
+MB091,MBPP,248,Runtime Exception,ANALYZED,,2,2,return 2**n,n,False,0.5,0.0103
+MB092,MBPP,775,Runtime Exception,ANALYZED,,2,2,"return ""z"" in text[1:-1]",text,False,0.3,0.2496
+MB093,MBPP,419,Runtime Exception,ANALYZED,,2,2,return str(n)[0],n,False,0.3,0.198
+MB094,MBPP,166,Runtime Exception,ANALYZED,,16,13,"start, end = i, j",end,False,0.3,0.4403
+MB095,MBPP,94,Runtime Exception,ANALYZED,,2,2,return ord(char),char,False,0.3,0.2144
+MB096,MBPP,95,Runtime Exception,ANALYZED,,7,6,count += 1,count,False,0.3,0.4439
+MB097,MBPP,432,Runtime Exception,ANALYZED,,9,9,return negative_elements + positive_elements,negative_elements,False,0.3,0.7475
+MB098,MBPP,389,Runtime Exception,ANALYZED,,2,2,return my_list[-n:] + my_list[:-n],my_list,False,0.3,0.3076
+MB099,MBPP,760,Runtime Exception,ANALYZED,,2,2,"return [(float(i), float(j)) for i, j in my_list]",i,False,0.3,0.2731
+MB100,MBPP,421,Runtime Exception,ANALYZED,,2,2,return my_list[n:] + my_list[:n],my_list,False,0.3,0.2783
+MB101,MBPP,452,Runtime Exception,ANALYZED,,2,2,"return [x**2 for x in range(start, int(end**0.5) + 1)]",x,False,0.3,0.232
+MB102,MBPP,69,Runtime Exception,ANALYZED,,2,2,"return month in [1, 3, 5, 7, 8, 10, 12]",month,False,0.3,0.2886
+MB103,MBPP,96,Runtime Exception,ANALYZED,,2,2,"return sum(1/k for k in range(1, n+1))",k,False,0.3,0.2387
+MB104,MBPP,74,Runtime Exception,ANALYZED,,2,2,return [x**n for x in my_list],x,False,0.3,0.2027
+MB105,MBPP,417,Runtime Exception,ANALYZED,,2,2,return sum(round(num) for num in my_list) * len(my_list),num,False,0.3,0.2216
+MB106,MBPP,741,Runtime Exception,ANALYZED,,7,6,count += 1,count,False,0.3,0.4649
+MB107,MBPP,101,Runtime Exception,ANALYZED,,2,2,"return min(my_list, key=lambda x: x[1])[0]",x,False,0.3,0.2701
+MB108,MBPP,251,Runtime Exception,ANALYZED,,2,2,return min(len(l) for l in list_of_lists),l,False,0.3,0.2386
+MB109,MBPP,167,Runtime Exception,ANALYZED,,2,2,return (a + b + c) / 3,a,False,0.3,0.2355
+MB110,MBPP,631,Runtime Exception,ANALYZED,,7,7,return find_lucas(n-1) + find_lucas(n-2),find_lucas,False,0.3,0.7374
+MB111,MBPP,565,Runtime Exception,ANALYZED,,2,2,"return [num for num in range(start_num, end_num+1) if all(int(digit) for digit in str(num))]",digit,False,0.3,0.2668
+MB112,MBPP,441,Runtime Exception,ANALYZED,,2,2,"return ""-"".join(map(str, my_tuple))",map,False,0.3,0.1948
+MB113,MBPP,123,Runtime Exception,ANALYZED,,5,5,return sale_amount - loss_threshold,loss_threshold,False,0.3,0.4458
+MB114,MBPP,626,Runtime Exception,ANALYZED,,2,2,return sublist in my_list,my_list,False,0.5,0.0086
+MB115,MBPP,162,Runtime Exception,ANALYZED,,6,5,count += 1,count,False,0.3,0.4511
+MB116,MBPP,721,Runtime Exception,ANALYZED,,2,2,return all(sequence[i] == patterns[i%len(patterns)] for i in range(len(sequence))),i,False,0.3,0.2017
+MB117,MBPP,448,Runtime Exception,ANALYZED,,8,8,return result,result,False,0.3,0.5764
+MB118,MBPP,616,Runtime Exception,ANALYZED,,2,2,"return tuple(x * y for x, y in zip(my_tuple, my_tuple[1:]))",x,False,0.3,0.3088
+MB119,MBPP,84,Runtime Exception,ANALYZED,,2,2,return arr[k-1],arr,False,0.3,0.2678
+MB120,MBPP,438,Runtime Exception,ANALYZED,,2,2,return [element] + my_list,element,False,0.3,0.2714
+MB121,MBPP,766,Runtime Exception,ANALYZED,,5,4,power *= 2,power,False,0.3,0.9963
+MB122,MBPP,622,Runtime Exception,ANALYZED,,2,2,"return [i / j for i, j in zip(list1, list2)]",i,False,0.3,0.307
+MB123,MBPP,67,Runtime Exception,ANALYZED,,2,2,"return all(t1 <= t2 for t1, t2 in zip(tuple1, tuple2))",t1,False,0.3,0.2761
+MB124,MBPP,641,Runtime Exception,ANALYZED,,2,2,return 6 * size ** 2,size,False,0.3,0.2803
+MB125,MBPP,11,Runtime Exception,ANALYZED,,19,18,sum += n // i,sum,False,0.3,0.8334
+MB126,MBPP,93,Runtime Exception,ANALYZED,,2,2,"return [[sublist[0] for sublist in my_list], [sublist[1] for sublist in my_list]]",sublist,False,0.3,0.2932
+MB127,MBPP,722,Runtime Exception,ANALYZED,,2,2,return sum(range(n+1)),n,False,0.3,0.2609
+MB128,MBPP,139,Runtime Exception,ANALYZED,,2,2,"return re.match('^[aeiouAEIOU].*', string) is not None",re,False,0.5,0.0108
+MB129,MBPP,632,Runtime Exception,ANALYZED,,2,2,return (n * (n + 1)) // 2,n,False,0.3,0.3242
+MB130,MBPP,757,Runtime Exception,ANALYZED,,5,5,return None,<statement>,False,0.5,0.012
+MB131,MBPP,459,Runtime Exception,ANALYZED,,5,5,return sequence(sequence(n-1)) + sequence(n-sequence(n-1)),n,False,0.3,0.5348
+MB132,MBPP,720,Runtime Exception,ANALYZED,,2,2,"return len(set((frozenset(pair), frozenset(reversed(pair))) for pair in tuple_pairs))",pair,False,0.3,0.2769
+MB133,MBPP,415,Runtime Exception,ANALYZED,,2,2,return my_list + list(my_tuple),list,False,0.3,0.2804
+MB134,MBPP,756,Runtime Exception,ANALYZED,,9,9,"return (None, None, None)",<statement>,False,0.5,0.5458
+MB135,MBPP,765,Runtime Exception,ANALYZED,,5,5,return sum([bell_number(i) * bell_number(n-i-1) for i in range(n)]),i,False,0.3,0.5457
+MB136,MBPP,404,Runtime Exception,ANALYZED,,5,5,return len(my_list),len,False,0.3,0.2662
+MB137,MBPP,3,Runtime Exception,ANALYZED,,2,2,"return string.replace(char, """", 1).replace(char, """", 1)",char,False,0.3,0.2641
+MB138,MBPP,409,Runtime Exception,ANALYZED,,2,2,return a ** b,a,False,0.3,0.2586
+MB139,MBPP,764,Runtime Exception,ANALYZED,,2,2,"return string.replace("" "", ""_"").replace(""_"", "" "")",string,False,0.3,0.2633
+MB140,MBPP,444,Runtime Exception,ANALYZED,,4,4,return 2 * math.pi * radius,math,False,0.3,0.2557
+MB141,MBPP,273,Runtime Exception,ANALYZED,,2,2,return ''.join(ch for ch in my_str if not ch.isdigit()) + ''.join(ch for ch in my_str if ch.isdigit()),ch,False,0.3,0.2588
+MB142,MBPP,608,Runtime Exception,ANALYZED,,2,2,return [number for number in numbers if number % 2 == 0],number,False,0.3,0.3096
+MB143,MBPP,578,Runtime Exception,ANALYZED,,2,2,return ''.join([char for char in string if char.islower()]),char,False,0.3,0.3024
+MB144,MBPP,462,Runtime Exception,ANALYZED,,2,2,"return my_string.replace("" "", ""%20"")",my_string,False,0.3,0.2805
+MB145,MBPP,131,Runtime Exception,ANALYZED,,8,5,"for i in range(1, len(arr)):",i,False,0.3,1.0746
+MB146,MBPP,614,Runtime Exception,ANALYZED,,2,2,return string.split('(')[0],string,False,0.3,0.2358
+MB147,MBPP,279,Runtime Exception,ANALYZED,,2,2,"return sorted(numeric_strings, key=lambda x: int(x))",x,False,0.3,0.2347
+MB148,MBPP,232,Runtime Exception,ANALYZED,,2,2,"return min(a, b)",a,False,0.5,0.0079
+MB149,MBPP,783,Runtime Exception,ANALYZED,,2,2,return sum(arr),arr,False,0.3,0.2099
+MB150,MBPP,568,Runtime Exception,ANALYZED,,2,2,"return min((x * y for x, y in tuple_list))",x,False,0.3,0.2618
+MB152,MBPP,290,Syntax Error,ANALYZED,,2,,,,False,0.0,0.0092
+MB153,MBPP,569,Wrong-Output Error,ANALYZED,,2,2,return [[word for word in sublist] for sublist in my_list],sublist,False,0.3,0.2109
+MB156,MBPP,473,Wrong-Output Error,ANALYZED,,2,2,return {t for t in set(tuple_list1) & set(tuple_list2)},t,False,0.3,0.1922
+MB158,MBPP,612,Wrong-Output Error,ANALYZED,,2,2,"return [[sublist[0] for sublist in my_list], [sublist[1] for sublist in my_list]]",sublist,False,0.3,0.1949
+MB160,MBPP,87,Wrong-Output Error,ANALYZED,,2,2,"return {**dict1, **dict2, **dict3}",dict1,False,0.3,0.2029
+MB161,MBPP,164,Runtime Exception,ANALYZED,,2,2,return sum(divisors(num1)) == sum(divisors(num2)),divisors,False,0.3,0.2601
+MB162,MBPP,776,Wrong-Output Error,ANALYZED,,10,10,return count,count,True,0.95,0.5799
+MB164,MBPP,244,Runtime Exception,ANALYZED,,2,2,return int(n**0.5) ** 2 + 1,int,False,0.3,0.2527
+MB166,MBPP,745,Wrong-Output Error,ANALYZED,,2,2,"return [num for num in range(startnum, endnum+1) if all(int(digit) for digit in str(num))]",digit,False,0.3,0.2101
+MB171,MBPP,291,Wrong-Output Error,ANALYZED,,8,8,"return (k * count_no_of_ways(n-1, k-1)) + count_no_of_ways(n-1, k)",count_no_of_ways,False,0.3,0.2477
+MB172,MBPP,259,Wrong-Output Error,ANALYZED,,2,2,"return tuple(max(a, b) for a, b in zip(tuple1, tuple2))",a,False,0.3,0.2269
+MB174,MBPP,304,Runtime Exception,ANALYZED,,4,2,for query in queries:,query,False,0.3,0.4903
+MB176,MBPP,763,Runtime Exception,ANALYZED,,2,2,arr.sort(),arr,False,0.5,0.0101
+MB177,MBPP,477,Runtime Exception,ANALYZED,,2,2,return my_string.lower(),my_string,False,0.3,0.2209
+MB178,MBPP,640,Runtime Exception,ANALYZED,,2,2,return string.split('(')[0],string,True,0.95,0.1505
+MB179,MBPP,802,Wrong-Output Error,ANALYZED,,6,6,return count,count,True,0.95,0.3119
+MB180,MBPP,77,Runtime Exception,ANALYZED,,2,2,return num % 11 == 0,num,False,0.3,0.1943
+MB181,MBPP,468,Wrong-Output Error,ANALYZED,,7,7,return max_product,max_product,True,0.95,0.5946
+MB184,MBPP,730,Wrong-Output Error,ANALYZED,,2,2,return list(dict.fromkeys(my_list)),dict,False,0.3,0.2923
+MB186,MBPP,450,Runtime Exception,ANALYZED,,2,2,return [my_list[i] for i in range(size)],i,False,0.3,0.2077
+MB187,MBPP,400,Wrong-Output Error,ANALYZED,,2,2,return len(set(my_list)),len,False,0.3,0.2247
+MB188,MBPP,624,Runtime Exception,ANALYZED,,2,2,return s.upper(),s,False,0.3,0.2432
+MB189,MBPP,59,Wrong-Output Error,ANALYZED,,2,2,return (n * (3*n-1)) // 2,n,False,0.3,0.2426
+MB193,MBPP,271,Runtime Exception,ANALYZED,,5,4,sum += (2*i)**5,sum,False,0.3,0.2491
+MB194,MBPP,564,Runtime Exception,ANALYZED,,7,6,count += 1,count,False,0.3,0.4717
+MB196,MBPP,264,Wrong-Output Error,ANALYZED,,2,2,return human_age * 7,human_age,False,0.3,0.2596
+MB197,MBPP,808,Runtime Exception,ANALYZED,,2,2,return any(x == k for x in tuple),x,False,0.3,0.2532
+MB199,MBPP,738,Wrong-Output Error,ANALYZED,,5,5,return (1 / n) + geometric_sum(n-1),geometric_sum,False,0.3,0.4641
+MB200,MBPP,460,Runtime Exception,ANALYZED,,2,2,return [sublist[0] for sublist in my_list],sublist,False,0.3,0.1856
+MB201,MBPP,143,Wrong-Output Error,ANALYZED,,2,2,"return len([x for x in my_tuple if isinstance(x, list)])",x,False,0.3,0.1898
+MB202,MBPP,437,Wrong-Output Error,ANALYZED,,2,2,return ''.join([c for c in s if c.isalpha()]),c,False,0.3,0.263
+MB203,MBPP,58,Runtime Exception,ANALYZED,,2,2,return a * b < 0,a,False,0.3,0.2233
+MB204,MBPP,109,Runtime Exception,ANALYZED,,16,13,num_odd_values += 1,num_odd_values,False,0.3,0.6744
+MB205,MBPP,163,Runtime Exception,ANALYZED,,2,2,return length ** 2 * num_sides / (4 * tan(pi / num_sides)),length,False,0.5,0.009
+MB206,MBPP,124,Runtime Exception,ANALYZED,,4,4,return cmath.phase(z),cmath,False,0.5,0.0097
+MB208,MBPP,735,Wrong-Output Error,ANALYZED,,4,4,return n,n,True,0.95,0.6211
+MB210,MBPP,266,Wrong-Output Error,ANALYZED,,2,2,return 6 * side ** 2,side,False,0.3,0.2726
+MB211,MBPP,388,Runtime Exception,ANALYZED,,9,7,power *= 2,power,False,0.3,0.6895
+MB216,MBPP,582,Runtime Exception,ANALYZED,,2,2,return not bool(my_dict),bool,False,0.3,0.2073
+MB218,MBPP,301,Wrong-Output Error,ANALYZED,,6,6,return max_depth,max_depth,True,0.95,0.5828
+MB219,MBPP,268,Wrong-Output Error,ANALYZED,,5,5,return num,num,True,0.95,0.1115
+MB220,MBPP,773,Runtime Exception,ANALYZED,,6,6,"return (substring, index, index + len(substring))",index,False,0.3,0.7395
+MB222,MBPP,68,Runtime Exception,ANALYZED,,2,2,return all(arr[i] <= arr[i+1] for i in range(len(arr)-1)),i,False,0.3,0.2084
+MB223,MBPP,747,Runtime Exception,ANALYZED,,14,12,for i in range(m + 1):,i,False,0.3,0.6585
+MB224,MBPP,440,Wrong-Output Error,ANALYZED,,21,6,for word in sentence.split():,word,False,0.3,0.8742
+MB227,MBPP,398,Wrong-Output Error,ANALYZED,,2,2,return sum([int(num) for num in my_list]),num,False,0.3,0.2644
+MB228,MBPP,592,Runtime Exception,ANALYZED,,2,2,"return sum(binomial(i, j) * binomial(i + 1, j) for i in range(n) for j in range(i + 1))",i,False,0.3,0.2431
+MB230,MBPP,119,Wrong-Output Error,ANALYZED,,10,2,mid = len(my_list) // 2,mid,False,0.3,1.1234
+MB237,MBPP,308,Wrong-Output Error,ANALYZED,,10,10,return products,products,True,0.95,0.324
+MB241,MBPP,249,Wrong-Output Error,ANALYZED,,2,2,return list(set(arr1) & set(arr2)),arr1,False,0.3,0.2147
+MB247,MBPP,120,Wrong-Output Error,ANALYZED,,8,8,return max_product,max_product,True,0.95,0.7925
+MB257,MBPP,638,Wrong-Output Error,ANALYZED,,2,2,return round((35.74 + 0.6215 * temperature - 35.75 * (wind_velocity ** 0.16) + 0.4275 * temperature * (wind_velocity ** 0.16))),round,False,0.3,0.2782
+MB261,MBPP,61,Runtime Exception,ANALYZED,,7,6,count += 1,count,False,0.3,0.4318
+MB262,MBPP,603,Runtime Exception,ANALYZED,,14,14,return lucid_numbers,lucid_numbers,False,0.3,0.4161
+MB265,MBPP,434,Runtime Exception,ANALYZED,,2,2,"return re.search(r""a+b+"", string) is not None",re,False,0.3,0.1937
+MB267,MBPP,590,Runtime Exception,ANALYZED,,2,2,x = r * math.cos(theta),x,False,0.3,0.2022
+MB268,MBPP,83,Runtime Exception,ANALYZED,,2,2,return chr((ord(s[0]) + ord(s[1]) + ord(s[2])) % 26),chr,False,0.3,0.231
+MB270,MBPP,742,Runtime Exception,ANALYZED,,2,2,area = (side ** 2) * sqrt(2) / 2,area,False,0.3,0.2085
+MB271,MBPP,740,Wrong-Output Error,ANALYZED,,2,2,return {my_tuple[i]: my_tuple[i+1] for i in range(len(my_tuple)-1)},i,False,0.3,0.2399
+MB272,MBPP,801,Wrong-Output Error,ANALYZED,,2,2,return a + b + c,a,False,0.3,0.2262
+MB274,MBPP,794,Runtime Exception,ANALYZED,,2,2,"return re.match(r""a.*b$"", string) is not None",re,False,0.5,0.0097
+MB275,MBPP,160,Wrong-Output Error,ANALYZED,,15,4,for i in range(n):,i,False,0.3,0.9502
+MB277,MBPP,111,Wrong-Output Error,ANALYZED,,5,5,return list(common_elements),common_elements,False,0.5,0.2744
+MB279,MBPP,145,Runtime Exception,ANALYZED,,2,2,"return max([abs(arr[i] - arr[i-1]) for i in range(1, len(arr))])",i,False,0.3,0.2664
+MB280,MBPP,430,Wrong-Output Error,ANALYZED,,2,2,return -b/(2*a),a,False,0.3,0.2304
+MB281,MBPP,223,Wrong-Output Error,ANALYZED,,9,9,"return is_majority(sorted_array, n//2+1, element)",element,False,0.3,0.5273
+MB282,MBPP,408,Wrong-Output Error,ANALYZED,,5,5,return result,result,True,0.95,0.4153
+MB286,MBPP,224,Runtime Exception,ANALYZED,,6,4,count += n & 1,count,False,0.3,0.3079
+MB287,MBPP,9,Runtime Exception,ANALYZED,,7,3,for i in range(len(string)):,i,False,0.3,0.7461
+MB289,MBPP,310,Wrong-Output Error,ANALYZED,,2,2,return tuple(my_string),my_string,True,0.95,0.1178
+MB291,MBPP,278,Wrong-Output Error,ANALYZED,,7,7,return count,count,True,0.95,0.1509
+MB295,MBPP,792,Runtime Exception,ANALYZED,,2,2,return len(my_list),len,False,0.3,0.2343
+MB296,MBPP,410,Runtime Exception,ANALYZED,,2,2,return min(my_list),min,False,0.3,0.2445
+MB301,MBPP,90,Runtime Exception,ANALYZED,,2,2,return max(len(word) for word in words),word,False,0.3,0.2634
+MB303,MBPP,746,Runtime Exception,ANALYZED,,5,5,return (angle / 360) * (2 * math.pi * radius**2),angle,False,0.3,0.4423
+MB304,MBPP,591,Runtime Exception,ANALYZED,,3,3,return my_list,my_list,False,0.3,0.2241
+MB305,MBPP,572,Wrong-Output Error,ANALYZED,,6,6,return unique_nums,unique_nums,True,0.95,0.3322
+MB307,MBPP,424,Wrong-Output Error,ANALYZED,,2,2,return tuple(s[-1] for s in my_tuple),s,False,0.3,0.2473
+MB308,MBPP,734,Wrong-Output Error,ANALYZED,,16,3,dp = [[0 for _ in range(n+1)] for _ in range(n+1)],_,False,0.3,0.4391
+MB309,MBPP,639,Runtime Exception,ANALYZED,,2,2,return sum(len(name) for name in names if name[0].isupper()),name,False,0.3,0.2575
+MB311,MBPP,252,Runtime Exception,ANALYZED,,2,2,"return (abs(z), math.atan2(z.imag, z.real))",abs,False,0.3,0.2475
+MB314,MBPP,286,Wrong-Output Error,ANALYZED,,5,4,modified_array += arr * n,modified_array,False,0.3,0.1983
+MB316,MBPP,615,Wrong-Output Error,ANALYZED,,2,2,return [sum(t)/len(t) for t in tuple_of_tuples],t,False,0.3,0.2728
+MB317,MBPP,235,Wrong-Output Error,ANALYZED,,2,2,return n,n,True,0.95,0.1269
+MB318,MBPP,558,Wrong-Output Error,ANALYZED,,2,2,return abs(num1 - num2),abs,False,0.3,0.2528
+MB319,MBPP,798,Runtime Exception,ANALYZED,,2,2,return sum(arr),arr,False,0.3,0.2166
+MB321,MBPP,238,Wrong-Output Error,ANALYZED,,2,2,"return len([i for i in s if i != """"])",i,False,0.3,0.2052
+MB323,MBPP,422,Runtime Exception,ANALYZED,,5,4,total += i**3,total,False,0.3,0.2126
+MB324,MBPP,754,Wrong-Output Error,ANALYZED,,2,2,return [x for x in l1 if x in l2 and x in l3],x,False,0.3,0.1956
+MB325,MBPP,242,Runtime Exception,ANALYZED,,2,2,return len(s),len,False,0.3,0.2036
+MB326,MBPP,20,Runtime Exception,ANALYZED,,2,2,return str(n)[-1] == '3',n,False,0.3,0.2738
+MB329,MBPP,126,Runtime Exception,ANALYZED,,2,2,"return sum(set(range(1, num1 + 1)).intersection(range(1, num2 + 1)))",num1,False,0.3,0.2003
+MB335,MBPP,420,Runtime Exception,ANALYZED,,2,2,"return sum([i**3 for i in range(1, n+1, 2)])",i,False,0.3,0.2066
+MB336,MBPP,260,Timeout Error,ANALYZED,,,22,return False,<statement>,False,0.5,0.2737
+MB340,MBPP,782,Wrong-Output Error,ANALYZED,,7,7,return result,result,True,0.95,0.3426
+MB341,MBPP,629,Runtime Exception,ANALYZED,,2,2,return [number for number in numbers if number % 2 == 0],number,False,0.3,0.2182
+MB342,MBPP,125,Wrong-Output Error,ANALYZED,,13,13,return max_diff,max_diff,True,0.95,0.8175
+MB347,MBPP,311,Wrong-Output Error,ANALYZED,,2,2,return n | (n + 1),n,False,0.3,0.2473
+MB350,MBPP,445,Runtime Exception,ANALYZED,,2,2,"return tuple((tup1 * tup2 for tup1, tup2 in zip(tuple1, tuple2)))",tup1,False,0.3,0.2367
+MB351,MBPP,92,Wrong-Output Error,ANALYZED,,2,2,return len(set(str(num))) == 1,len,True,0.95,0.1437
+MB353,MBPP,431,Wrong-Output Error,ANALYZED,,2,2,return any(x in list2 for x in list1),x,False,0.5,0.0112
+MB355,MBPP,806,Wrong-Output Error,ANALYZED,,11,11,return max_count,max_count,True,0.95,0.5736
+MB360,MBPP,749,Wrong-Output Error,ANALYZED,,2,2,"return sorted(numeric_strings, key=lambda x: int(x))",x,False,0.3,0.2434
+MB361,MBPP,274,Runtime Exception,ANALYZED,,6,5,"result += binomial_coefficient(n, i)",result,False,0.3,0.4589
+MB366,MBPP,472,Runtime Exception,ANALYZED,,2,2,return all(my_list[i+1] == my_list[i] + 1 for i in range(len(my_list)-1)),i,False,0.3,0.2426
+MB374,MBPP,296,Runtime Exception,ANALYZED,,7,6,inv_count += 1,inv_count,False,0.3,0.4654
+MB376,MBPP,305,Wrong-Output Error,ANALYZED,,2,2,"return tuple(word for word in words if word.startswith(""p""))",word,False,0.3,0.23
+MB377,MBPP,633,Runtime Exception,ANALYZED,,6,5,result += my_list[i] ^ my_list[j],result,False,0.3,0.2347
+MB378,MBPP,573,Runtime Exception,ANALYZED,,2,2,"return reduce(lambda x, y: x * y, set(my_list))",x,False,0.3,0.2381
+MB379,MBPP,581,Runtime Exception,ANALYZED,,2,2,return (base_edge * base_edge + base_edge * height) * 2,base_edge,False,0.3,0.2196
+MB380,MBPP,556,Runtime Exception,ANALYZED,,2,2,"return sum(1 for i in range(len(arr)) for j in range(i+1, len(arr)) if (arr[i] ^ arr[j]) % k == 0)",i,False,0.3,0.2626
+MB382,MBPP,407,Wrong-Output Error,ANALYZED,,5,5,return int(''.join(num_list)),int,False,0.3,0.6771
+MB384,MBPP,576,Runtime Exception,ANALYZED,,2,2,return all(x in arr1 for x in arr2),x,False,0.3,0.2505
+MB387,MBPP,255,Wrong-Output Error,ANALYZED,,5,5,return combinations,combinations,True,0.95,0.3892
+MB388,MBPP,406,Runtime Exception,ANALYZED,,2,2,return n % 2 != 0,n,False,0.3,0.2276
+MB389,MBPP,787,Runtime Exception,ANALYZED,,2,2,"return re.search(r'a{3}', s) is not None",re,False,0.5,0.0083
+MB390,MBPP,137,Wrong-Output Error,ANALYZED,,6,5,count += 1,count,False,0.3,0.4635
+MB391,MBPP,587,Runtime Exception,ANALYZED,,2,2,return tuple(my_list),my_list,False,0.3,0.2601
+MB393,MBPP,627,Runtime Exception,ANALYZED,,5,5,return len(my_list),len,False,0.3,0.2051
+MB395,MBPP,294,Runtime Exception,ANALYZED,,2,2,return max(my_list),max,False,0.3,0.2119
+MB396,MBPP,63,Wrong-Output Error,ANALYZED,,2,2,return max([x[0] - x[1] for x in tuple_list]),x,False,0.3,0.2437
+MB397,MBPP,299,Wrong-Output Error,ANALYZED,,2,2,"return max(my_list, key=lambda x: x[1])",x,False,0.3,0.2247
+MB400,MBPP,596,Runtime Exception,ANALYZED,,2,2,return sys.getsizeof(my_tuple),my_tuple,False,0.5,0.0095
+MB401,MBPP,597,Wrong-Output Error,ANALYZED,,7,7,return -1,<statement>,False,0.5,0.5057
+MB402,MBPP,256,Runtime Exception,ANALYZED,,14,14,return True,<statement>,False,0.5,0.012
+MB404,MBPP,267,Runtime Exception,ANALYZED,,2,2,"return sum([i**2 for i in range(1, n+1, 2)])",i,False,0.3,0.2265
+MB409,MBPP,610,Wrong-Output Error,ANALYZED,,2,2,return my_list[:k] + my_list[k+1:],k,False,0.3,0.2262
+MB410,MBPP,442,Wrong-Output Error,ANALYZED,,6,5,count += 1,count,False,0.3,0.5438
+MB411,MBPP,453,Runtime Exception,ANALYZED,,2,2,"return sum([i for i in range(2, n+1, 2) if n % i == 0])",i,False,0.3,0.2901
+MB415,MBPP,307,Runtime Exception,ANALYZED,,2,2,"return my_tuple[:start] + (end,) + my_tuple[start+1:]",end,False,0.3,0.2619
+MB416,MBPP,755,Wrong-Output Error,ANALYZED,,3,3,return sorted_list[1],sorted_list,False,0.3,0.4447
+MB417,MBPP,401,Syntax Error,ANALYZED,,2,,,,False,0.0,0.0094
+MB421,MBPP,446,Runtime Exception,ANALYZED,,6,5,count += 1,count,False,0.3,0.2258
+MB423,MBPP,104,Wrong-Output Error,ANALYZED,,2,2,return [[word for word in sublist] for sublist in my_list],sublist,False,0.3,0.2605
+MB426,MBPP,435,Runtime Exception,ANALYZED,,2,2,return n % 10,n,False,0.3,0.2343
+MB427,MBPP,748,Wrong-Output Error,ANALYZED,,2,2,"return "" "".join([word for word in string.split() if word[0].isupper()])",word,False,0.3,0.2749

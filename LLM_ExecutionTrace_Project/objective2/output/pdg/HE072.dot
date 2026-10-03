@@ -1,0 +1,15 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def select_words(s, n): | W:n,s,select_words", fillcolor="lightgreen"];
+    "2" [label="L2: words = s.split() | W:words | R:s", fillcolor="lightgreen"];
+    "3" [label="L3: return [word for word in words if len(set(word).difference(set(\"aeiou\"))) == n] | W:word | R:len,n,set,word,words", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(s)", style="solid"];
+    "1" -> "3" [label="DATA(n)", style="solid"];
+    "2" -> "3" [label="DATA(words)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "3" [label="CONTROL(FunctionDef)", style="dashed"];
+}

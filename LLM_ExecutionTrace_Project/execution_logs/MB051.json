@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB051",
+  "dataset": "MBPP",
+  "task_id": "743",
+  "problem_summary": "Write a function to rotate a given list by specified number of items to the righ",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpy2ccq70_.py\", line 8, in <module>\n    assert rotate_right([1, 2, 3, 4, 5, 6, 7, 8, 9, 10],3)==[8, 9, 10, 1, 2, 3, 4, 5, 6, 7]\n           ^^^^^^^^^^^^\nNameError: name 'rotate_right' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpy2ccq70_.py\", line 8, in <module>\n    assert rotate_right([1, 2, 3, 4, 5, 6, 7, 8, 9, 10],3)==[8, 9, 10, 1, 2, 3, 4, 5, 6, 7]\n           ^^^^^^^^^^^^\nNameError: name 'rotate_right' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'rotate_right' is not defined",
+  "execution_time": 0.247682,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

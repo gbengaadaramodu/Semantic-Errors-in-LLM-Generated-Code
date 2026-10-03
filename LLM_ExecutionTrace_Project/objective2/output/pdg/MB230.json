@@ -1,0 +1,359 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def search(my_list):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "my_list",
+        "search"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "my_list": [
+          "[1, 1, 2, 2, 3]"
+        ]
+      },
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "mid = len(my_list) // 2",
+      "statement_type": "Assign",
+      "reads": [
+        "len",
+        "my_list"
+      ],
+      "writes": [
+        "mid"
+      ],
+      "function_name": "search",
+      "executed": true,
+      "execution_count": 1,
+      "runtime_values": {
+        "my_list": [
+          "[1, 1, 2, 2, 3]"
+        ]
+      },
+      "failure_related": false
+    },
+    "3": {
+      "node_id": 3,
+      "line_number": 3,
+      "source_code": "if mid == 0:",
+      "statement_type": "If",
+      "reads": [
+        "mid"
+      ],
+      "writes": [],
+      "function_name": "search",
+      "executed": true,
+      "execution_count": 1,
+      "runtime_values": {
+        "my_list": [
+          "[1, 1, 2, 2, 3]"
+        ],
+        "mid": [
+          "2"
+        ]
+      },
+      "failure_related": false
+    },
+    "4": {
+      "node_id": 4,
+      "line_number": 4,
+      "source_code": "return my_list[0]",
+      "statement_type": "Return",
+      "reads": [
+        "my_list"
+      ],
+      "writes": [],
+      "function_name": "search",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "5": {
+      "node_id": 5,
+      "line_number": 5,
+      "source_code": "left_half = my_list[:mid]",
+      "statement_type": "Assign",
+      "reads": [
+        "mid",
+        "my_list"
+      ],
+      "writes": [
+        "left_half"
+      ],
+      "function_name": "search",
+      "executed": true,
+      "execution_count": 1,
+      "runtime_values": {
+        "my_list": [
+          "[1, 1, 2, 2, 3]"
+        ],
+        "mid": [
+          "2"
+        ]
+      },
+      "failure_related": false
+    },
+    "6": {
+      "node_id": 6,
+      "line_number": 6,
+      "source_code": "right_half = my_list[mid:]",
+      "statement_type": "Assign",
+      "reads": [
+        "mid",
+        "my_list"
+      ],
+      "writes": [
+        "right_half"
+      ],
+      "function_name": "search",
+      "executed": true,
+      "execution_count": 1,
+      "runtime_values": {
+        "my_list": [
+          "[1, 1, 2, 2, 3]"
+        ],
+        "mid": [
+          "2"
+        ],
+        "left_half": [
+          "[1, 1]"
+        ]
+      },
+      "failure_related": false
+    },
+    "7": {
+      "node_id": 7,
+      "line_number": 7,
+      "source_code": "if left_half[-1] == right_half[0]:",
+      "statement_type": "If",
+      "reads": [
+        "left_half",
+        "right_half"
+      ],
+      "writes": [],
+      "function_name": "search",
+      "executed": true,
+      "execution_count": 1,
+      "runtime_values": {
+        "my_list": [
+          "[1, 1, 2, 2, 3]"
+        ],
+        "mid": [
+          "2"
+        ],
+        "left_half": [
+          "[1, 1]"
+        ],
+        "right_half": [
+          "[2, 2, 3]"
+        ]
+      },
+      "failure_related": false
+    },
+    "8": {
+      "node_id": 8,
+      "line_number": 8,
+      "source_code": "return search(left_half)",
+      "statement_type": "Return",
+      "reads": [
+        "left_half",
+        "search"
+      ],
+      "writes": [],
+      "function_name": "search",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "9": {
+      "node_id": 9,
+      "line_number": 10,
+      "source_code": "return left_half[-1]",
+      "statement_type": "Return",
+      "reads": [
+        "left_half"
+      ],
+      "writes": [],
+      "function_name": "search",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "my_list": [
+          "[1, 1, 2, 2, 3]",
+          "[1, 1, 2, 2, 3]"
+        ],
+        "mid": [
+          "2",
+          "2"
+        ],
+        "left_half": [
+          "[1, 1]",
+          "[1, 1]"
+        ],
+        "right_half": [
+          "[2, 2, 3]",
+          "[2, 2, 3]"
+        ]
+      },
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "my_list",
+      "label": "DATA(my_list)"
+    },
+    {
+      "source_id": 2,
+      "target_id": 3,
+      "dependency_type": "DATA",
+      "variable": "mid",
+      "label": "DATA(mid)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 4,
+      "dependency_type": "DATA",
+      "variable": "my_list",
+      "label": "DATA(my_list)"
+    },
+    {
+      "source_id": 2,
+      "target_id": 5,
+      "dependency_type": "DATA",
+      "variable": "mid",
+      "label": "DATA(mid)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 5,
+      "dependency_type": "DATA",
+      "variable": "my_list",
+      "label": "DATA(my_list)"
+    },
+    {
+      "source_id": 2,
+      "target_id": 6,
+      "dependency_type": "DATA",
+      "variable": "mid",
+      "label": "DATA(mid)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 6,
+      "dependency_type": "DATA",
+      "variable": "my_list",
+      "label": "DATA(my_list)"
+    },
+    {
+      "source_id": 5,
+      "target_id": 7,
+      "dependency_type": "DATA",
+      "variable": "left_half",
+      "label": "DATA(left_half)"
+    },
+    {
+      "source_id": 6,
+      "target_id": 7,
+      "dependency_type": "DATA",
+      "variable": "right_half",
+      "label": "DATA(right_half)"
+    },
+    {
+      "source_id": 5,
+      "target_id": 8,
+      "dependency_type": "DATA",
+      "variable": "left_half",
+      "label": "DATA(left_half)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 8,
+      "dependency_type": "DATA",
+      "variable": "search",
+      "label": "DATA(search)"
+    },
+    {
+      "source_id": 5,
+      "target_id": 9,
+      "dependency_type": "DATA",
+      "variable": "left_half",
+      "label": "DATA(left_half)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 3,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 3,
+      "target_id": 4,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(If)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 5,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 6,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 7,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 7,
+      "target_id": 8,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(If)"
+    },
+    {
+      "source_id": 7,
+      "target_id": 9,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(If)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    9
+  ]
+}

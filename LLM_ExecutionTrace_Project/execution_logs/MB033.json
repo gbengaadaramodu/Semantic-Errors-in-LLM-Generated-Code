@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB033",
+  "dataset": "MBPP",
+  "task_id": "769",
+  "problem_summary": "Write a python function to get the difference between two lists.",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpx4qvm33k.py\", line 4, in <module>\n    assert (Diff([10, 15, 20, 25, 30, 35, 40], [25, 40, 35])) == [10, 20, 30, 15]\n            ^^^^\nNameError: name 'Diff' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpx4qvm33k.py\", line 4, in <module>\n    assert (Diff([10, 15, 20, 25, 30, 35, 40], [25, 40, 35])) == [10, 20, 30, 15]\n            ^^^^\nNameError: name 'Diff' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'Diff' is not defined",
+  "execution_time": 0.210649,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

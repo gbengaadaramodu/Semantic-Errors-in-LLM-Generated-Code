@@ -1,0 +1,22 @@
+{
+  "trace_id": "HE052",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/160",
+  "problem_summary": "\ndef do_algebra(operator, operand):\n    \"\"\"\n    Given two lists operator, and op",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpty1qrfor.py\", line 17, in <module>\n    check(do_algebra)\n    ~~~~~^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpty1qrfor.py\", line 8, in check\n    assert candidate(['**', '*', '+'], [2, 3, 4, 5]) == 37\n           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpty1qrfor.py\", line 2, in do_algebra\n    result = eval(\" \".join(map(str, operand)))\n  File \"<string>\", line 1\n    2 3 4 5\n      ^\nSyntaxError: invalid syntax\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpty1qrfor.py\", line 17, in <module>\n    check(do_algebra)\n    ~~~~~^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpty1qrfor.py\", line 8, in check\n    assert candidate(['**', '*', '+'], [2, 3, 4, 5]) == 37\n           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpty1qrfor.py\", line 2, in do_algebra\n    result = eval(\" \".join(map(str, operand)))\n  File \"<string>\", line 1\n    2 3 4 5\n      ^\nSyntaxError: invalid syntax",
+  "exception_type": "SyntaxError",
+  "exception_message": "invalid syntax",
+  "execution_time": 0.286009,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

@@ -1,0 +1,23 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def by_length(arr): | W:arr,by_length", fillcolor="lightgreen"];
+    "2" [label="L2: if not arr: | R:arr", fillcolor="lightgreen"];
+    "3" [label="L3: return []", fillcolor="lightgrey"];
+    "4" [label="L4: nums = sorted([str(num) for num in arr]) | W:num,nums | R:arr,num,sorted,str", fillcolor="lightgreen"];
+    "5" [label="L5: names = [\"One\", \"Two\", \"Three\", \"Four\", \"Five\", \"Six\", \"Seven\", \"Eight\", \"Nine\"] | W:names", fillcolor="lightgreen"];
+    "6" [label="L6: return [names[int(num)-1] for num in nums] | W:num | R:int,names,num,nums", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(arr)", style="solid"];
+    "1" -> "4" [label="DATA(arr)", style="solid"];
+    "5" -> "6" [label="DATA(names)", style="solid"];
+    "4" -> "6" [label="DATA(num)", style="solid"];
+    "4" -> "6" [label="DATA(nums)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "2" -> "3" [label="CONTROL(If)", style="dashed"];
+    "1" -> "4" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "5" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "6" [label="CONTROL(FunctionDef)", style="dashed"];
+}

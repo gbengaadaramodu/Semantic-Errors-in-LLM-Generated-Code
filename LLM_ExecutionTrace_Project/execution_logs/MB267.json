@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB267",
+  "dataset": "MBPP",
+  "task_id": "590",
+  "problem_summary": "Write a function to convert polar coordinates to rectangular coordinates.",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp6d96wbnv.py\", line 6, in <module>\n    assert polar_rect(3,4)==((5.0, 0.9272952180016122), (-2+2.4492935982947064e-16j))\n           ~~~~~~~~~~^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp6d96wbnv.py\", line 2, in polar_rect\n    x = r * math.cos(theta)\n            ^^^^\nNameError: name 'math' is not defined. Did you forget to import 'math'?\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp6d96wbnv.py\", line 6, in <module>\n    assert polar_rect(3,4)==((5.0, 0.9272952180016122), (-2+2.4492935982947064e-16j))\n           ~~~~~~~~~~^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp6d96wbnv.py\", line 2, in polar_rect\n    x = r * math.cos(theta)\n            ^^^^\nNameError: name 'math' is not defined. Did you forget to import 'math'?",
+  "exception_type": "NameError",
+  "exception_message": "name 'math' is not defined. Did you forget to import 'math'?",
+  "execution_time": 0.248634,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

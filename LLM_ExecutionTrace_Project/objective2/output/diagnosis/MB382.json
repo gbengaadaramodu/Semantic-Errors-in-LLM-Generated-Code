@@ -1,0 +1,442 @@
+{
+  "trace_id": "MB382",
+  "dataset": "MBPP",
+  "task_id": "407",
+  "error_category": "Wrong-Output Error",
+  "analysis_status": "ANALYZED",
+  "skip_reason": null,
+  "input_record": {
+    "trace_id": "MB382",
+    "dataset": "MBPP",
+    "task_id": "407",
+    "problem_summary": "Write a function to create the next bigger number by rearranging the digits of a",
+    "execution_status": "Failed",
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp241756d3.py\", line 8, in <module>\n    assert rearrange_bigger(10)==False\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+    "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp241756d3.py\", line 8, in <module>\n    assert rearrange_bigger(10)==False\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+    "exception_type": "AssertionError",
+    "exception_message": "",
+    "execution_time": 0.174936,
+    "timed_out": false,
+    "exit_code": 1,
+    "tests_passed": false,
+    "tests_failed": 0,
+    "expected_output": null,
+    "actual_output": null,
+    "assertion_source": "benchmark_test",
+    "assertion_failed": true,
+    "parser_prediction": "Wrong-Output Error"
+  },
+  "scm": {
+    "task_id": "407",
+    "nodes": [
+      {
+        "node_id": "S",
+        "variable_name": "Specification",
+        "symbol": "S",
+        "label": "Specification"
+      },
+      {
+        "node_id": "C",
+        "variable_name": "GeneratedCode",
+        "symbol": "C",
+        "label": "Generated Code"
+      },
+      {
+        "node_id": "E",
+        "variable_name": "ExecutionTrace",
+        "symbol": "E",
+        "label": "Execution Trace"
+      },
+      {
+        "node_id": "T",
+        "variable_name": "TestSuite",
+        "symbol": "T",
+        "label": "Test Suite"
+      },
+      {
+        "node_id": "O",
+        "variable_name": "Outcome",
+        "symbol": "O",
+        "label": "Outcome"
+      }
+    ],
+    "edges": [
+      {
+        "source": "S",
+        "target": "C",
+        "relationship": "generates"
+      },
+      {
+        "source": "C",
+        "target": "E",
+        "relationship": "produces"
+      },
+      {
+        "source": "T",
+        "target": "E",
+        "relationship": "evaluates"
+      },
+      {
+        "source": "E",
+        "target": "O",
+        "relationship": "determines"
+      }
+    ],
+    "variables": {
+      "S": {
+        "name": "Specification",
+        "symbol": "S",
+        "description": "Problem description, prompt, and target function signature",
+        "value": "Write a function to create the next bigger number by rearranging the digits of a"
+      },
+      "C": {
+        "name": "GeneratedCode",
+        "symbol": "C",
+        "description": "LLM-generated Python source code implementation",
+        "value": "def rearrange_bigger(num):\n    num_str = str(num)\n    num_list = list(num_str)\n    num_list.sort(reverse=True)\n    return int(''.join(num_list))"
+      },
+      "E": {
+        "name": "ExecutionTrace",
+        "symbol": "E",
+        "description": "Observable runtime trace events, variable states, and stdout/stderr",
+        "value": "status=Failed, exc=AssertionError, msg="
+      },
+      "T": {
+        "name": "TestSuite",
+        "symbol": "T",
+        "description": "Benchmark assertions, inputs, and check function harness",
+        "value": "assert rearrange_bigger(12)==21\nassert rearrange_bigger(10)==False\nassert rearrange_bigger(102)==120"
+      },
+      "O": {
+        "name": "Outcome",
+        "symbol": "O",
+        "description": "Final test execution outcome (Completed/Failed/Timeout)",
+        "value": "Failed"
+      }
+    }
+  },
+  "pdg": {
+    "nodes": {
+      "1": {
+        "node_id": 1,
+        "line_number": 1,
+        "source_code": "def rearrange_bigger(num):",
+        "statement_type": "FunctionDef",
+        "reads": [],
+        "writes": [
+          "num",
+          "rearrange_bigger"
+        ],
+        "function_name": "<module>",
+        "executed": true,
+        "execution_count": 3,
+        "runtime_values": {
+          "num": [
+            "12",
+            "10"
+          ]
+        },
+        "failure_related": false
+      },
+      "2": {
+        "node_id": 2,
+        "line_number": 2,
+        "source_code": "num_str = str(num)",
+        "statement_type": "Assign",
+        "reads": [
+          "num",
+          "str"
+        ],
+        "writes": [
+          "num_str"
+        ],
+        "function_name": "rearrange_bigger",
+        "executed": true,
+        "execution_count": 2,
+        "runtime_values": {
+          "num": [
+            "12",
+            "10"
+          ]
+        },
+        "failure_related": false
+      },
+      "3": {
+        "node_id": 3,
+        "line_number": 3,
+        "source_code": "num_list = list(num_str)",
+        "statement_type": "Assign",
+        "reads": [
+          "list",
+          "num_str"
+        ],
+        "writes": [
+          "num_list"
+        ],
+        "function_name": "rearrange_bigger",
+        "executed": true,
+        "execution_count": 2,
+        "runtime_values": {
+          "num": [
+            "12",
+            "10"
+          ],
+          "num_str": [
+            "12",
+            "10"
+          ]
+        },
+        "failure_related": false
+      },
+      "4": {
+        "node_id": 4,
+        "line_number": 4,
+        "source_code": "num_list.sort(reverse=True)",
+        "statement_type": "Expr",
+        "reads": [
+          "num_list"
+        ],
+        "writes": [],
+        "function_name": "rearrange_bigger",
+        "executed": true,
+        "execution_count": 2,
+        "runtime_values": {
+          "num": [
+            "12",
+            "10"
+          ],
+          "num_str": [
+            "12",
+            "10"
+          ],
+          "num_list": [
+            "['1', '2']",
+            "['1', '0']"
+          ]
+        },
+        "failure_related": false
+      },
+      "5": {
+        "node_id": 5,
+        "line_number": 5,
+        "source_code": "return int(''.join(num_list))",
+        "statement_type": "Return",
+        "reads": [
+          "int",
+          "num_list"
+        ],
+        "writes": [],
+        "function_name": "rearrange_bigger",
+        "executed": true,
+        "execution_count": 4,
+        "runtime_values": {
+          "num": [
+            "12",
+            "12",
+            "10",
+            "10"
+          ],
+          "num_str": [
+            "12",
+            "12",
+            "10",
+            "10"
+          ],
+          "num_list": [
+            "['2', '1']",
+            "['2', '1']",
+            "['1', '0']",
+            "['1', '0']"
+          ]
+        },
+        "failure_related": true
+      }
+    },
+    "edges": [
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "DATA",
+        "variable": "num",
+        "label": "DATA(num)"
+      },
+      {
+        "source_id": 2,
+        "target_id": 3,
+        "dependency_type": "DATA",
+        "variable": "num_str",
+        "label": "DATA(num_str)"
+      },
+      {
+        "source_id": 3,
+        "target_id": 4,
+        "dependency_type": "DATA",
+        "variable": "num_list",
+        "label": "DATA(num_list)"
+      },
+      {
+        "source_id": 3,
+        "target_id": 5,
+        "dependency_type": "DATA",
+        "variable": "num_list",
+        "label": "DATA(num_list)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 3,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 4,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 5,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      }
+    ],
+    "entry_node_id": 1,
+    "failure_node_ids": [
+      5
+    ]
+  },
+  "runtime_events_count": 18,
+  "failure_line": 5,
+  "failure_statement": "return int(''.join(num_list))",
+  "candidates": [
+    {
+      "rank": 1,
+      "node_id": 5,
+      "line_number": 5,
+      "statement_code": "return int(''.join(num_list))",
+      "variable_name": "int",
+      "observed_value": null,
+      "expected_value": "False",
+      "proximity_score": 1.0,
+      "dependency_score": 1.0,
+      "explanation": "Reached via reverse traversal (distance=0, type=Return)"
+    },
+    {
+      "rank": 2,
+      "node_id": 3,
+      "line_number": 3,
+      "statement_code": "num_list = list(num_str)",
+      "variable_name": "num_list",
+      "observed_value": null,
+      "expected_value": null,
+      "proximity_score": 0.85,
+      "dependency_score": 0.9,
+      "explanation": "Reached via reverse traversal (distance=1, type=Assign)"
+    },
+    {
+      "rank": 3,
+      "node_id": 2,
+      "line_number": 2,
+      "statement_code": "num_str = str(num)",
+      "variable_name": "num_str",
+      "observed_value": null,
+      "expected_value": null,
+      "proximity_score": 0.7,
+      "dependency_score": 0.81,
+      "explanation": "Reached via reverse traversal (distance=2, type=Assign)"
+    }
+  ],
+  "critical_variable": null,
+  "counterfactual_results": [
+    {
+      "candidate_rank": 1,
+      "intervention": {
+        "target_variable": "int",
+        "target_line": 5,
+        "observed_value": "None",
+        "counterfactual_value": "False",
+        "operation_type": "AST_transform",
+        "modified_code": "def rearrange_bigger(num):\n    num_str = str(num)\n    num_list = list(num_str)\n    num_list.sort(reverse=True)\n    int = False\n    return int(''.join(num_list))"
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "Failed",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "FALSE",
+      "execution_time": 0.2149,
+      "status": "EXECUTED",
+      "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+    },
+    {
+      "candidate_rank": 2,
+      "intervention": {
+        "target_variable": "num_list",
+        "target_line": 3,
+        "observed_value": "None",
+        "counterfactual_value": "None",
+        "operation_type": "AST_transform",
+        "modified_code": "def rearrange_bigger(num):\n    num_str = str(num)\n    num_list = None\n    num_list.sort(reverse=True)\n    return int(''.join(num_list))"
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "Failed",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "FALSE",
+      "execution_time": 0.2133,
+      "status": "EXECUTED",
+      "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+    },
+    {
+      "candidate_rank": 3,
+      "intervention": {
+        "target_variable": "num_str",
+        "target_line": 2,
+        "observed_value": "None",
+        "counterfactual_value": "None",
+        "operation_type": "AST_transform",
+        "modified_code": "def rearrange_bigger(num):\n    num_str = None\n    num_list = list(num_str)\n    num_list.sort(reverse=True)\n    return int(''.join(num_list))"
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "Failed",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "FALSE",
+      "execution_time": 0.2366,
+      "status": "EXECUTED",
+      "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+    }
+  ],
+  "fault_location": {
+    "file": "MB382.py",
+    "line_number": 5,
+    "statement_code": "return int(''.join(num_list))",
+    "function_name": "rearrange_bigger",
+    "causal_variable": "int",
+    "evidence_score": 0.5,
+    "confidence": 0.3
+  },
+  "root_cause": {
+    "root_cause_status": "UNRESOLVED",
+    "candidate_explanation": "Semantic mismatch at line 5 ('return int(''.join(num_list))') causes return value mismatch.",
+    "causal_variable": "int",
+    "fault_statement": "return int(''.join(num_list))",
+    "fault_line": 5,
+    "evidence_summary": "Reverse PDG traversal traced failure from line 1 to statement line 5. Structural dependency identified; counterfactual validation unconfirmed or unresolved.",
+    "counterfactual_validated": false,
+    "confidence": 0.3
+  },
+  "ground_truth_matched": null,
+  "ground_truth_fault_line": null,
+  "execution_time": 0.6771
+}

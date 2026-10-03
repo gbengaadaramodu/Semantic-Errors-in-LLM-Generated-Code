@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB224",
+  "dataset": "MBPP",
+  "task_id": "440",
+  "problem_summary": "Write a function to find the first adverb and their positions in a given sentenc",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpnawaapb3.py\", line 23, in <module>\n    assert find_adverb_position(\"clearly!! we can see the sky\")==(0, 7, 'clearly')\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpnawaapb3.py\", line 23, in <module>\n    assert find_adverb_position(\"clearly!! we can see the sky\")==(0, 7, 'clearly')\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+  "exception_type": "AssertionError",
+  "exception_message": "",
+  "execution_time": 0.606198,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": "benchmark_test",
+  "assertion_failed": true,
+  "parser_prediction": ""
+}

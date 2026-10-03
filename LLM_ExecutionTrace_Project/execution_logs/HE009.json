@@ -1,0 +1,22 @@
+{
+  "trace_id": "HE009",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/139",
+  "problem_summary": "\ndef special_factorial(n):\n    \"\"\"The Brazilian factorial is defined as:\n    bra",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpa4lmmty_.py\", line 19, in <module>\n    check(special_factorial)\n    ~~~~~^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpa4lmmty_.py\", line 10, in check\n    assert candidate(4) == 288, \"Test 4\"\n           ^^^^^^^^^^^^^^^^^^^\nAssertionError: Test 4\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpa4lmmty_.py\", line 19, in <module>\n    check(special_factorial)\n    ~~~~~^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpa4lmmty_.py\", line 10, in check\n    assert candidate(4) == 288, \"Test 4\"\n           ^^^^^^^^^^^^^^^^^^^\nAssertionError: Test 4",
+  "exception_type": "AssertionError",
+  "exception_message": "Test 4",
+  "execution_time": 0.211884,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": "benchmark_test",
+  "assertion_failed": true,
+  "parser_prediction": ""
+}

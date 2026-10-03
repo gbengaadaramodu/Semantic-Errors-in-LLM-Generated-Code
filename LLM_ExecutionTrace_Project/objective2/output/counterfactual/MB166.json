@@ -1,0 +1,21 @@
+[
+  {
+    "candidate_rank": 1,
+    "intervention": {
+      "target_variable": "digit",
+      "target_line": 2,
+      "observed_value": "1",
+      "counterfactual_value": "[1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 15, 22]",
+      "operation_type": "AST_transform",
+      "modified_code": "def divisible_by_digits(startnum, endnum):\n    digit = [1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 15, 22]\n    return [num for num in range(startnum, endnum+1) if all(int(digit) for digit in str(num))]"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.1983,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  }
+]

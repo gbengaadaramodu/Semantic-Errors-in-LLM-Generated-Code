@@ -1,0 +1,27 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def strange_sort_list(lst): | W:lst,strange_sort_list", fillcolor="lightgreen"];
+    "2" [label="L2: if not lst: | R:lst", fillcolor="lightgreen"];
+    "3" [label="L3: return []", fillcolor="lightgrey"];
+    "4" [label="L4: sorted_lst = sorted(lst) | W:sorted_lst | R:lst,sorted", fillcolor="lightgreen"];
+    "5" [label="L5: minimum = sorted_lst[0] | W:minimum | R:sorted_lst", fillcolor="lightgreen"];
+    "6" [label="L6: maximum = sorted_lst[-1] | W:maximum | R:sorted_lst", fillcolor="lightgreen"];
+    "7" [label="L7: return [minimum] + [maximum] + [x for x in sorted_lst if x != minimum and x != maximum] | W:x | R:maximum,minimum,sorted_lst,x", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(lst)", style="solid"];
+    "1" -> "4" [label="DATA(lst)", style="solid"];
+    "4" -> "5" [label="DATA(sorted_lst)", style="solid"];
+    "4" -> "6" [label="DATA(sorted_lst)", style="solid"];
+    "6" -> "7" [label="DATA(maximum)", style="solid"];
+    "5" -> "7" [label="DATA(minimum)", style="solid"];
+    "4" -> "7" [label="DATA(sorted_lst)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "2" -> "3" [label="CONTROL(If)", style="dashed"];
+    "1" -> "4" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "5" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "6" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "7" [label="CONTROL(FunctionDef)", style="dashed"];
+}

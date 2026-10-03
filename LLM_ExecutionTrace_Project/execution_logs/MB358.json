@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB358",
+  "dataset": "MBPP",
+  "task_id": "786",
+  "problem_summary": "Write a function to locate the right insertion point for a specified value in so",
+  "execution_status": "Completed",
+  "stdout": "",
+  "stderr": "",
+  "traceback": "",
+  "exception_type": "",
+  "exception_message": "",
+  "execution_time": 0.084204,
+  "timed_out": false,
+  "exit_code": 0,
+  "tests_passed": true,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

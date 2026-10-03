@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a function that returns the perimeter of a square given its side length as input.
+
+Example test: assert square_perimeter(10)==40
+[/INST]

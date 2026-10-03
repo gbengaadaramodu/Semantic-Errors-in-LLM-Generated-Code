@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB094",
+  "dataset": "MBPP",
+  "task_id": "166",
+  "problem_summary": "Write a function that counts the number of pairs of integers in a list that xor ",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpnn7rkpvi.py\", line 18, in <module>\n    assert find_even_pair([5, 4, 7, 2, 1]) == 4\n           ^^^^^^^^^^^^^^\nNameError: name 'find_even_pair' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpnn7rkpvi.py\", line 18, in <module>\n    assert find_even_pair([5, 4, 7, 2, 1]) == 4\n           ^^^^^^^^^^^^^^\nNameError: name 'find_even_pair' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'find_even_pair' is not defined",
+  "execution_time": 0.207826,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

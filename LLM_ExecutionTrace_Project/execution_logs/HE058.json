@@ -1,0 +1,22 @@
+{
+  "trace_id": "HE058",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/73",
+  "problem_summary": "\ndef smallest_change(arr):\n    \"\"\"\n    Given an array arr of integers, find the ",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpavpt74vp.py\", line 43, in <module>\n    check(smallest_change)\n    ~~~~~^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpavpt74vp.py\", line 30, in check\n    assert candidate([1,2,3,5,4,7,9,6]) == 4\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpavpt74vp.py\", line 43, in <module>\n    check(smallest_change)\n    ~~~~~^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpavpt74vp.py\", line 30, in check\n    assert candidate([1,2,3,5,4,7,9,6]) == 4\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+  "exception_type": "AssertionError",
+  "exception_message": "",
+  "execution_time": 0.207063,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": "benchmark_test",
+  "assertion_failed": true,
+  "parser_prediction": ""
+}

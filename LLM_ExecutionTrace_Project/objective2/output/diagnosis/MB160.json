@@ -1,0 +1,285 @@
+{
+  "trace_id": "MB160",
+  "dataset": "MBPP",
+  "task_id": "87",
+  "error_category": "Wrong-Output Error",
+  "analysis_status": "ANALYZED",
+  "skip_reason": null,
+  "input_record": {
+    "trace_id": "MB160",
+    "dataset": "MBPP",
+    "task_id": "87",
+    "problem_summary": "Write a function to merge three dictionaries into a single dictionary.",
+    "execution_status": "Failed",
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp_1s0_lt8.py\", line 5, in <module>\n    assert merge_dictionaries_three({ \"R\": \"Red\", \"B\": \"Black\", \"P\": \"Pink\" }, { \"G\": \"Green\", \"W\": \"White\" },{\"L\":\"lavender\",\"B\":\"Blue\"})=={'W': 'White', 'P': 'Pink', 'B': 'Black', 'R': 'Red', 'G': 'Green', 'L': 'lavender'}\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+    "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp_1s0_lt8.py\", line 5, in <module>\n    assert merge_dictionaries_three({ \"R\": \"Red\", \"B\": \"Black\", \"P\": \"Pink\" }, { \"G\": \"Green\", \"W\": \"White\" },{\"L\":\"lavender\",\"B\":\"Blue\"})=={'W': 'White', 'P': 'Pink', 'B': 'Black', 'R': 'Red', 'G': 'Green', 'L': 'lavender'}\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+    "exception_type": "AssertionError",
+    "exception_message": "",
+    "execution_time": 0.199555,
+    "timed_out": false,
+    "exit_code": 1,
+    "tests_passed": false,
+    "tests_failed": 0,
+    "expected_output": null,
+    "actual_output": null,
+    "assertion_source": "benchmark_test",
+    "assertion_failed": true,
+    "parser_prediction": "Wrong-Output Error"
+  },
+  "scm": {
+    "task_id": "87",
+    "nodes": [
+      {
+        "node_id": "S",
+        "variable_name": "Specification",
+        "symbol": "S",
+        "label": "Specification"
+      },
+      {
+        "node_id": "C",
+        "variable_name": "GeneratedCode",
+        "symbol": "C",
+        "label": "Generated Code"
+      },
+      {
+        "node_id": "E",
+        "variable_name": "ExecutionTrace",
+        "symbol": "E",
+        "label": "Execution Trace"
+      },
+      {
+        "node_id": "T",
+        "variable_name": "TestSuite",
+        "symbol": "T",
+        "label": "Test Suite"
+      },
+      {
+        "node_id": "O",
+        "variable_name": "Outcome",
+        "symbol": "O",
+        "label": "Outcome"
+      }
+    ],
+    "edges": [
+      {
+        "source": "S",
+        "target": "C",
+        "relationship": "generates"
+      },
+      {
+        "source": "C",
+        "target": "E",
+        "relationship": "produces"
+      },
+      {
+        "source": "T",
+        "target": "E",
+        "relationship": "evaluates"
+      },
+      {
+        "source": "E",
+        "target": "O",
+        "relationship": "determines"
+      }
+    ],
+    "variables": {
+      "S": {
+        "name": "Specification",
+        "symbol": "S",
+        "description": "Problem description, prompt, and target function signature",
+        "value": "Write a function to merge three dictionaries into a single dictionary."
+      },
+      "C": {
+        "name": "GeneratedCode",
+        "symbol": "C",
+        "description": "LLM-generated Python source code implementation",
+        "value": "def merge_dictionaries_three(dict1, dict2, dict3):\n    return {**dict1, **dict2, **dict3}"
+      },
+      "E": {
+        "name": "ExecutionTrace",
+        "symbol": "E",
+        "description": "Observable runtime trace events, variable states, and stdout/stderr",
+        "value": "status=Failed, exc=AssertionError, msg="
+      },
+      "T": {
+        "name": "TestSuite",
+        "symbol": "T",
+        "description": "Benchmark assertions, inputs, and check function harness",
+        "value": "assert merge_dictionaries_three({ \"R\": \"Red\", \"B\": \"Black\", \"P\": \"Pink\" }, { \"G\": \"Green\", \"W\": \"Whi"
+      },
+      "O": {
+        "name": "Outcome",
+        "symbol": "O",
+        "description": "Final test execution outcome (Completed/Failed/Timeout)",
+        "value": "Failed"
+      }
+    }
+  },
+  "pdg": {
+    "nodes": {
+      "1": {
+        "node_id": 1,
+        "line_number": 1,
+        "source_code": "def merge_dictionaries_three(dict1, dict2, dict3):",
+        "statement_type": "FunctionDef",
+        "reads": [],
+        "writes": [
+          "dict1",
+          "dict2",
+          "dict3",
+          "merge_dictionaries_three"
+        ],
+        "function_name": "<module>",
+        "executed": true,
+        "execution_count": 3,
+        "runtime_values": {
+          "dict1": [
+            "{'R': 'Red', 'B': 'Black', 'P': 'Pink'}",
+            "{'R': 'Red', 'B': 'Black', 'P': 'Pink'}"
+          ],
+          "dict2": [
+            "{'G': 'Green', 'W': 'White'}",
+            "{'G': 'Green', 'W': 'White'}"
+          ],
+          "dict3": [
+            "{'O': 'Orange', 'W': 'White', 'B': 'Black'}",
+            "{'L': 'lavender', 'B': 'Blue'}"
+          ]
+        },
+        "failure_related": false
+      },
+      "2": {
+        "node_id": 2,
+        "line_number": 2,
+        "source_code": "return {**dict1, **dict2, **dict3}",
+        "statement_type": "Return",
+        "reads": [
+          "dict1",
+          "dict2",
+          "dict3"
+        ],
+        "writes": [],
+        "function_name": "merge_dictionaries_three",
+        "executed": true,
+        "execution_count": 4,
+        "runtime_values": {
+          "dict1": [
+            "{'R': 'Red', 'B': 'Black', 'P': 'Pink'}",
+            "{'R': 'Red', 'B': 'Black', 'P': 'Pink'}",
+            "{'R': 'Red', 'B': 'Black', 'P': 'Pink'}",
+            "{'R': 'Red', 'B': 'Black', 'P': 'Pink'}"
+          ],
+          "dict2": [
+            "{'G': 'Green', 'W': 'White'}",
+            "{'G': 'Green', 'W': 'White'}",
+            "{'G': 'Green', 'W': 'White'}",
+            "{'G': 'Green', 'W': 'White'}"
+          ],
+          "dict3": [
+            "{'O': 'Orange', 'W': 'White', 'B': 'Black'}",
+            "{'O': 'Orange', 'W': 'White', 'B': 'Black'}",
+            "{'L': 'lavender', 'B': 'Blue'}",
+            "{'L': 'lavender', 'B': 'Blue'}"
+          ]
+        },
+        "failure_related": true
+      }
+    },
+    "edges": [
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "DATA",
+        "variable": "dict1",
+        "label": "DATA(dict1)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "DATA",
+        "variable": "dict2",
+        "label": "DATA(dict2)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "DATA",
+        "variable": "dict3",
+        "label": "DATA(dict3)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      }
+    ],
+    "entry_node_id": 1,
+    "failure_node_ids": [
+      2
+    ]
+  },
+  "runtime_events_count": 12,
+  "failure_line": 2,
+  "failure_statement": "return {**dict1, **dict2, **dict3}",
+  "candidates": [
+    {
+      "rank": 1,
+      "node_id": 2,
+      "line_number": 2,
+      "statement_code": "return {**dict1, **dict2, **dict3}",
+      "variable_name": "dict1",
+      "observed_value": "{'R': 'Red', 'B': 'Black', 'P': 'Pink'}",
+      "expected_value": "{'W': 'White', 'P': 'Pink', 'B': 'Black', 'R': 'Red', 'G': 'Green', 'L': 'lavender'}",
+      "proximity_score": 1.0,
+      "dependency_score": 1.0,
+      "explanation": "Reached via reverse traversal (distance=0, type=Return)"
+    }
+  ],
+  "critical_variable": null,
+  "counterfactual_results": [
+    {
+      "candidate_rank": 1,
+      "intervention": {
+        "target_variable": "dict1",
+        "target_line": 2,
+        "observed_value": "{'R': 'Red', 'B': 'Black', 'P': 'Pink'}",
+        "counterfactual_value": "{'W': 'White', 'P': 'Pink', 'B': 'Black', 'R': 'Red', 'G': 'Green', 'L': 'lavender'}",
+        "operation_type": "AST_transform",
+        "modified_code": "def merge_dictionaries_three(dict1, dict2, dict3):\n    dict1 = {'W': 'White', 'P': 'Pink', 'B': 'Black', 'R': 'Red', 'G': 'Green', 'L': 'lavender'}\n    return {**dict1, **dict2, **dict3}"
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "Failed",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "FALSE",
+      "execution_time": 0.1947,
+      "status": "EXECUTED",
+      "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+    }
+  ],
+  "fault_location": {
+    "file": "MB160.py",
+    "line_number": 2,
+    "statement_code": "return {**dict1, **dict2, **dict3}",
+    "function_name": "merge_dictionaries_three",
+    "causal_variable": "dict1",
+    "evidence_score": 0.5,
+    "confidence": 0.3
+  },
+  "root_cause": {
+    "root_cause_status": "UNRESOLVED",
+    "candidate_explanation": "Semantic mismatch at line 2 ('return {**dict1, **dict2, **dict3}') causes return value mismatch.",
+    "causal_variable": "dict1",
+    "fault_statement": "return {**dict1, **dict2, **dict3}",
+    "fault_line": 2,
+    "evidence_summary": "Reverse PDG traversal traced failure from line 1 to statement line 2. Structural dependency identified; counterfactual validation unconfirmed or unresolved.",
+    "counterfactual_validated": false,
+    "confidence": 0.3
+  },
+  "ground_truth_matched": null,
+  "ground_truth_fault_line": null,
+  "execution_time": 0.2029
+}

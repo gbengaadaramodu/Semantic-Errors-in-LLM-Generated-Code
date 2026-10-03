@@ -1,0 +1,16 @@
+{
+  "total_corpus_size": 591,
+  "eligible_cases": 378,
+  "analyzed_cases": 378,
+  "skipped_cases": 213,
+  "unresolved_cases": 337,
+  "failed_cases": 0,
+  "root_cause_accuracy": "NOT_AVAILABLE",
+  "fault_location_accuracy": "NOT_AVAILABLE",
+  "critical_variable_accuracy": "NOT_AVAILABLE",
+  "top_1_fault_accuracy": "NOT_AVAILABLE",
+  "top_3_fault_accuracy": "NOT_AVAILABLE",
+  "top_5_fault_accuracy": "NOT_AVAILABLE",
+  "counterfactual_success_rate": "47/677 (6.9%)",
+  "ground_truth_status": "NOT_AVAILABLE"
+}

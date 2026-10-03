@@ -1,0 +1,131 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def exchange(lst1, lst2):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "lst1",
+        "lst2",
+        "exchange"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "lst1": [
+          "[1, 2, 3, 4]"
+        ],
+        "lst2": [
+          "[1, 2, 3, 4]"
+        ]
+      },
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "if all(i % 2 == 0 for i in lst1):",
+      "statement_type": "If",
+      "reads": [
+        "all",
+        "i",
+        "lst1"
+      ],
+      "writes": [
+        "i"
+      ],
+      "function_name": "exchange",
+      "executed": true,
+      "execution_count": 4,
+      "runtime_values": {
+        "lst1": [
+          "[1, 2, 3, 4]"
+        ],
+        "lst2": [
+          "[1, 2, 3, 4]"
+        ],
+        ".0": [
+          "<list_iterator object at 0x0000022B6C641660>",
+          "<list_iterator object at 0x0000022B6C641660>",
+          "<list_iterator object at 0x0000022B6C641660>"
+        ],
+        "i": [
+          "1"
+        ]
+      },
+      "failure_related": false
+    },
+    "3": {
+      "node_id": 3,
+      "line_number": 3,
+      "source_code": "return \"YES\"",
+      "statement_type": "Return",
+      "reads": [],
+      "writes": [],
+      "function_name": "exchange",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "4": {
+      "node_id": 4,
+      "line_number": 5,
+      "source_code": "return \"NO\"",
+      "statement_type": "Return",
+      "reads": [],
+      "writes": [],
+      "function_name": "exchange",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "lst1": [
+          "[1, 2, 3, 4]",
+          "[1, 2, 3, 4]"
+        ],
+        "lst2": [
+          "[1, 2, 3, 4]",
+          "[1, 2, 3, 4]"
+        ]
+      },
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "lst1",
+      "label": "DATA(lst1)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 2,
+      "target_id": 3,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(If)"
+    },
+    {
+      "source_id": 2,
+      "target_id": 4,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(If)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    4
+  ]
+}

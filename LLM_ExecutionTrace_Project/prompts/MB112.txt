@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a function to concatenate each element of tuple by the delimiter.
+
+Example test: assert concatenate_tuple(("ID", "is", 4, "UTS") ) == 'ID-is-4-UTS'
+[/INST]

@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB426",
+  "dataset": "MBPP",
+  "task_id": "435",
+  "problem_summary": "Write a python function to find the last digit of a given number.",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp6yd1sdvl.py\", line 4, in <module>\n    assert last_Digit(123) == 3\n           ^^^^^^^^^^\nNameError: name 'last_Digit' is not defined. Did you mean: 'last_digit'?\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp6yd1sdvl.py\", line 4, in <module>\n    assert last_Digit(123) == 3\n           ^^^^^^^^^^\nNameError: name 'last_Digit' is not defined. Did you mean: 'last_digit'?",
+  "exception_type": "NameError",
+  "exception_message": "name 'last_Digit' is not defined. Did you mean: 'last_digit'?",
+  "execution_time": 0.161805,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

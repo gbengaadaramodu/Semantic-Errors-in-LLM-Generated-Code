@@ -1,0 +1,11 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def split(numbers): | W:numbers,split", fillcolor="lightgreen"];
+    "2" [label="L2: return [number for number in numbers if number % 2 == 0] | W:number | R:number,numbers", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(numbers)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

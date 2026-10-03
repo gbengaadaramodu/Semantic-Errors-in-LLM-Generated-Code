@@ -1,0 +1,252 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def simplify(x, n):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "n",
+        "x",
+        "simplify"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "x": [
+          "1/5"
+        ],
+        "n": [
+          "5/1"
+        ]
+      },
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "num1, denom1 = x.split('/')",
+      "statement_type": "Assign",
+      "reads": [
+        "x"
+      ],
+      "writes": [
+        "denom1",
+        "num1"
+      ],
+      "function_name": "simplify",
+      "executed": true,
+      "execution_count": 1,
+      "runtime_values": {
+        "x": [
+          "1/5"
+        ],
+        "n": [
+          "5/1"
+        ]
+      },
+      "failure_related": false
+    },
+    "3": {
+      "node_id": 3,
+      "line_number": 3,
+      "source_code": "num2, denom2 = n.split('/')",
+      "statement_type": "Assign",
+      "reads": [
+        "n"
+      ],
+      "writes": [
+        "denom2",
+        "num2"
+      ],
+      "function_name": "simplify",
+      "executed": true,
+      "execution_count": 1,
+      "runtime_values": {
+        "x": [
+          "1/5"
+        ],
+        "n": [
+          "5/1"
+        ],
+        "num1": [
+          "1"
+        ],
+        "denom1": [
+          "5"
+        ]
+      },
+      "failure_related": false
+    },
+    "4": {
+      "node_id": 4,
+      "line_number": 4,
+      "source_code": "result = str(int(num1) * int(denom2)) + '/' + str(int(num2) * int(denom1))",
+      "statement_type": "Assign",
+      "reads": [
+        "denom1",
+        "denom2",
+        "int",
+        "num1",
+        "num2",
+        "str"
+      ],
+      "writes": [
+        "result"
+      ],
+      "function_name": "simplify",
+      "executed": true,
+      "execution_count": 1,
+      "runtime_values": {
+        "x": [
+          "1/5"
+        ],
+        "n": [
+          "5/1"
+        ],
+        "num1": [
+          "1"
+        ],
+        "denom1": [
+          "5"
+        ],
+        "num2": [
+          "5"
+        ],
+        "denom2": [
+          "1"
+        ]
+      },
+      "failure_related": false
+    },
+    "5": {
+      "node_id": 5,
+      "line_number": 5,
+      "source_code": "return result.endswith('/1')",
+      "statement_type": "Return",
+      "reads": [
+        "result"
+      ],
+      "writes": [],
+      "function_name": "simplify",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "x": [
+          "1/5",
+          "1/5"
+        ],
+        "n": [
+          "5/1",
+          "5/1"
+        ],
+        "num1": [
+          "1",
+          "1"
+        ],
+        "denom1": [
+          "5",
+          "5"
+        ],
+        "num2": [
+          "5",
+          "5"
+        ],
+        "denom2": [
+          "1",
+          "1"
+        ],
+        "result": [
+          "1/25",
+          "1/25"
+        ]
+      },
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "x",
+      "label": "DATA(x)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 3,
+      "dependency_type": "DATA",
+      "variable": "n",
+      "label": "DATA(n)"
+    },
+    {
+      "source_id": 2,
+      "target_id": 4,
+      "dependency_type": "DATA",
+      "variable": "denom1",
+      "label": "DATA(denom1)"
+    },
+    {
+      "source_id": 3,
+      "target_id": 4,
+      "dependency_type": "DATA",
+      "variable": "denom2",
+      "label": "DATA(denom2)"
+    },
+    {
+      "source_id": 2,
+      "target_id": 4,
+      "dependency_type": "DATA",
+      "variable": "num1",
+      "label": "DATA(num1)"
+    },
+    {
+      "source_id": 3,
+      "target_id": 4,
+      "dependency_type": "DATA",
+      "variable": "num2",
+      "label": "DATA(num2)"
+    },
+    {
+      "source_id": 4,
+      "target_id": 5,
+      "dependency_type": "DATA",
+      "variable": "result",
+      "label": "DATA(result)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 3,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 4,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 5,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    5
+  ]
+}

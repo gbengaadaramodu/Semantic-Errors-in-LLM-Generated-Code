@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB038",
+  "dataset": "MBPP",
+  "task_id": "637",
+  "problem_summary": "Write a function to check whether the given amount has no profit and no loss",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpoasnc_8y.py\", line 4, in <module>\n    assert noprofit_noloss(1500,1200)==False\n           ^^^^^^^^^^^^^^^\nNameError: name 'noprofit_noloss' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpoasnc_8y.py\", line 4, in <module>\n    assert noprofit_noloss(1500,1200)==False\n           ^^^^^^^^^^^^^^^\nNameError: name 'noprofit_noloss' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'noprofit_noloss' is not defined",
+  "execution_time": 0.262303,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

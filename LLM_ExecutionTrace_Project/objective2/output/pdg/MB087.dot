@@ -1,0 +1,19 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def dif_square(n): | W:n,dif_square", fillcolor="lightgreen"];
+    "2" [label="L2: for i in range(1, int(n**0.5)): | W:i | R:int,n,range", fillcolor="lightgrey"];
+    "3" [label="L3: if n % i == 0: | R:i,n", fillcolor="lightgrey"];
+    "4" [label="L4: return True", fillcolor="lightgrey"];
+    "5" [label="L5: return False", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(n)", style="solid"];
+    "2" -> "3" [label="DATA(i)", style="solid"];
+    "1" -> "3" [label="DATA(n)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "2" -> "3" [label="CONTROL(For)", style="dashed"];
+    "3" -> "4" [label="CONTROL(If)", style="dashed"];
+    "1" -> "5" [label="CONTROL(FunctionDef)", style="dashed"];
+}

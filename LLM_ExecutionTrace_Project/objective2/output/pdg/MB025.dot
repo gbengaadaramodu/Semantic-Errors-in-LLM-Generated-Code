@@ -1,0 +1,11 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def radian_degree(degrees): | W:degrees,radian_degree", fillcolor="lightgreen"];
+    "2" [label="L2: return (math.pi / 180) * degrees | R:degrees,math", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(degrees)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

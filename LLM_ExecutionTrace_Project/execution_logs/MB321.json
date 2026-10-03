@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB321",
+  "dataset": "MBPP",
+  "task_id": "238",
+  "problem_summary": "Write a python function to count the number of non-empty substrings of a given s",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpwno6s6ua.py\", line 4, in <module>\n    assert number_of_substrings(\"abc\") == 6\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpwno6s6ua.py\", line 4, in <module>\n    assert number_of_substrings(\"abc\") == 6\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+  "exception_type": "AssertionError",
+  "exception_message": "",
+  "execution_time": 0.158136,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": "benchmark_test",
+  "assertion_failed": true,
+  "parser_prediction": ""
+}

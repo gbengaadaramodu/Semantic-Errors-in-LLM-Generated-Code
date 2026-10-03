@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB164",
+  "dataset": "MBPP",
+  "task_id": "244",
+  "problem_summary": "Write a python function to find the next perfect square greater than a given num",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpc8dbmr6h.py\", line 4, in <module>\n    assert next_Perfect_Square(35) == 36\n           ^^^^^^^^^^^^^^^^^^^\nNameError: name 'next_Perfect_Square' is not defined. Did you mean: 'next_perfect_square'?\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpc8dbmr6h.py\", line 4, in <module>\n    assert next_Perfect_Square(35) == 36\n           ^^^^^^^^^^^^^^^^^^^\nNameError: name 'next_Perfect_Square' is not defined. Did you mean: 'next_perfect_square'?",
+  "exception_type": "NameError",
+  "exception_message": "name 'next_Perfect_Square' is not defined. Did you mean: 'next_perfect_square'?",
+  "execution_time": 0.239695,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

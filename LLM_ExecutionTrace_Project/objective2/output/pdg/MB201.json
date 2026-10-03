@@ -1,0 +1,106 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def find_lists(my_tuple):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "my_tuple",
+        "find_lists"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 4,
+      "runtime_values": {
+        "my_tuple": [
+          "([1, 2, 3, 4], [5, 6, 7, 8])",
+          "([1, 2], [3, 4], [5, 6])",
+          "[9, 8, 7, 6, 5, 4, 3, 2, 1]"
+        ]
+      },
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "return len([x for x in my_tuple if isinstance(x, list)])",
+      "statement_type": "Return",
+      "reads": [
+        "isinstance",
+        "len",
+        "list",
+        "my_tuple",
+        "x"
+      ],
+      "writes": [
+        "x"
+      ],
+      "function_name": "find_lists",
+      "executed": true,
+      "execution_count": 20,
+      "runtime_values": {
+        "my_tuple": [
+          "([1, 2, 3, 4], [5, 6, 7, 8])",
+          "([1, 2, 3, 4], [5, 6, 7, 8])",
+          "([1, 2, 3, 4], [5, 6, 7, 8])",
+          "([1, 2, 3, 4], [5, 6, 7, 8])",
+          "([1, 2], [3, 4], [5, 6])",
+          "([1, 2], [3, 4], [5, 6])",
+          "([1, 2], [3, 4], [5, 6])",
+          "([1, 2], [3, 4], [5, 6])",
+          "([1, 2], [3, 4], [5, 6])",
+          "[9, 8, 7, 6, 5, 4, 3, 2, 1]",
+          "[9, 8, 7, 6, 5, 4, 3, 2, 1]",
+          "[9, 8, 7, 6, 5, 4, 3, 2, 1]",
+          "[9, 8, 7, 6, 5, 4, 3, 2, 1]",
+          "[9, 8, 7, 6, 5, 4, 3, 2, 1]",
+          "[9, 8, 7, 6, 5, 4, 3, 2, 1]",
+          "[9, 8, 7, 6, 5, 4, 3, 2, 1]",
+          "[9, 8, 7, 6, 5, 4, 3, 2, 1]",
+          "[9, 8, 7, 6, 5, 4, 3, 2, 1]",
+          "[9, 8, 7, 6, 5, 4, 3, 2, 1]",
+          "[9, 8, 7, 6, 5, 4, 3, 2, 1]"
+        ],
+        "x": [
+          "[1, 2, 3, 4]",
+          "[5, 6, 7, 8]",
+          "[1, 2]",
+          "[3, 4]",
+          "[5, 6]",
+          "9",
+          "8",
+          "7",
+          "6",
+          "5",
+          "4",
+          "3",
+          "2",
+          "1"
+        ]
+      },
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "my_tuple",
+      "label": "DATA(my_tuple)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    2
+  ]
+}

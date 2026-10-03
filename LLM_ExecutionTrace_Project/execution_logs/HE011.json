@@ -1,0 +1,22 @@
+{
+  "trace_id": "HE011",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/151",
+  "problem_summary": "\ndef double_the_difference(lst):\n    '''\n    Given a list of numbers, return the",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp5qtbke80.py\", line 27, in <module>\n    check(double_the_difference)\n    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp5qtbke80.py\", line 13, in check\n    assert candidate([5, 4]) == 25 , \"This prints if this assert fails 2 (good for debugging!)\"\n           ^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: This prints if this assert fails 2 (good for debugging!)\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp5qtbke80.py\", line 27, in <module>\n    check(double_the_difference)\n    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp5qtbke80.py\", line 13, in check\n    assert candidate([5, 4]) == 25 , \"This prints if this assert fails 2 (good for debugging!)\"\n           ^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: This prints if this assert fails 2 (good for debugging!)",
+  "exception_type": "AssertionError",
+  "exception_message": "This prints if this assert fails 2 (good for debugging!)",
+  "execution_time": 0.201614,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": "benchmark_test",
+  "assertion_failed": true,
+  "parser_prediction": ""
+}

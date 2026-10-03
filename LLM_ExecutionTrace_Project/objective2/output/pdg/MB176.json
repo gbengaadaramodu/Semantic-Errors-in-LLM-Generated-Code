@@ -1,0 +1,266 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def find_min_diff(arr, n):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "arr",
+        "n",
+        "find_min_diff"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "arr": [
+          "(1, 5, 3, 19, 18, 25)"
+        ],
+        "n": [
+          "6"
+        ]
+      },
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "arr.sort()",
+      "statement_type": "Expr",
+      "reads": [
+        "arr"
+      ],
+      "writes": [],
+      "function_name": "find_min_diff",
+      "executed": true,
+      "execution_count": 3,
+      "runtime_values": {
+        "arr": [
+          "(1, 5, 3, 19, 18, 25)",
+          "(1, 5, 3, 19, 18, 25)",
+          "(1, 5, 3, 19, 18, 25)"
+        ],
+        "n": [
+          "6",
+          "6",
+          "6"
+        ]
+      },
+      "failure_related": true
+    },
+    "3": {
+      "node_id": 3,
+      "line_number": 3,
+      "source_code": "min_diff = float(\"inf\")",
+      "statement_type": "Assign",
+      "reads": [
+        "float"
+      ],
+      "writes": [
+        "min_diff"
+      ],
+      "function_name": "find_min_diff",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "4": {
+      "node_id": 4,
+      "line_number": 4,
+      "source_code": "for i in range(n-1):",
+      "statement_type": "For",
+      "reads": [
+        "n",
+        "range"
+      ],
+      "writes": [
+        "i"
+      ],
+      "function_name": "find_min_diff",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "5": {
+      "node_id": 5,
+      "line_number": 5,
+      "source_code": "diff = arr[i+1] - arr[i]",
+      "statement_type": "Assign",
+      "reads": [
+        "arr",
+        "i"
+      ],
+      "writes": [
+        "diff"
+      ],
+      "function_name": "find_min_diff",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "6": {
+      "node_id": 6,
+      "line_number": 6,
+      "source_code": "if diff < min_diff:",
+      "statement_type": "If",
+      "reads": [
+        "diff",
+        "min_diff"
+      ],
+      "writes": [],
+      "function_name": "find_min_diff",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "7": {
+      "node_id": 7,
+      "line_number": 7,
+      "source_code": "min_diff = diff",
+      "statement_type": "Assign",
+      "reads": [
+        "diff"
+      ],
+      "writes": [
+        "min_diff"
+      ],
+      "function_name": "find_min_diff",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "8": {
+      "node_id": 8,
+      "line_number": 8,
+      "source_code": "return min_diff",
+      "statement_type": "Return",
+      "reads": [
+        "min_diff"
+      ],
+      "writes": [],
+      "function_name": "find_min_diff",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "arr",
+      "label": "DATA(arr)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 4,
+      "dependency_type": "DATA",
+      "variable": "n",
+      "label": "DATA(n)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 5,
+      "dependency_type": "DATA",
+      "variable": "arr",
+      "label": "DATA(arr)"
+    },
+    {
+      "source_id": 4,
+      "target_id": 5,
+      "dependency_type": "DATA",
+      "variable": "i",
+      "label": "DATA(i)"
+    },
+    {
+      "source_id": 5,
+      "target_id": 6,
+      "dependency_type": "DATA",
+      "variable": "diff",
+      "label": "DATA(diff)"
+    },
+    {
+      "source_id": 3,
+      "target_id": 6,
+      "dependency_type": "DATA",
+      "variable": "min_diff",
+      "label": "DATA(min_diff)"
+    },
+    {
+      "source_id": 5,
+      "target_id": 7,
+      "dependency_type": "DATA",
+      "variable": "diff",
+      "label": "DATA(diff)"
+    },
+    {
+      "source_id": 7,
+      "target_id": 8,
+      "dependency_type": "DATA",
+      "variable": "min_diff",
+      "label": "DATA(min_diff)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 3,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 4,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 4,
+      "target_id": 5,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(For)"
+    },
+    {
+      "source_id": 4,
+      "target_id": 6,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(For)"
+    },
+    {
+      "source_id": 6,
+      "target_id": 7,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(If)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 8,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    2
+  ]
+}

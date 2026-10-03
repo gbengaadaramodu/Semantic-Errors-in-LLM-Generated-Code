@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB059",
+  "dataset": "MBPP",
+  "task_id": "443",
+  "problem_summary": "Write a python function to find the largest negative number from the given list.",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp2c6aetsc.py\", line 9, in <module>\n    assert largest_neg([1,2,3,-4,-6]) == -6\n           ^^^^^^^^^^^\nNameError: name 'largest_neg' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp2c6aetsc.py\", line 9, in <module>\n    assert largest_neg([1,2,3,-4,-6]) == -6\n           ^^^^^^^^^^^\nNameError: name 'largest_neg' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'largest_neg' is not defined",
+  "execution_time": 0.236253,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

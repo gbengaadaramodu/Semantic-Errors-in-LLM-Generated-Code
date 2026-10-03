@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a python function to find the first odd number in a given list of numbers.
+
+Example test: assert first_odd([1,3,5]) == 1
+[/INST]

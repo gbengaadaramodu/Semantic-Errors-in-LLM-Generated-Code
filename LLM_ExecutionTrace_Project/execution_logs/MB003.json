@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB003",
+  "dataset": "MBPP",
+  "task_id": "617",
+  "problem_summary": "Write a function to check for the number of jumps required of given length to re",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp1j7zf8iu.py\", line 4, in <module>\n    assert min_Jumps((3,4),11)==3.5\n           ^^^^^^^^^\nNameError: name 'min_Jumps' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp1j7zf8iu.py\", line 4, in <module>\n    assert min_Jumps((3,4),11)==3.5\n           ^^^^^^^^^\nNameError: name 'min_Jumps' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'min_Jumps' is not defined",
+  "execution_time": 0.238277,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

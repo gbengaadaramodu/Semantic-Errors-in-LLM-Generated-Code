@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB295",
+  "dataset": "MBPP",
+  "task_id": "792",
+  "problem_summary": "Write a python function to count the number of lists in a given number of lists.",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpmoawmfik.py\", line 4, in <module>\n    assert count_list([[1, 3], [5, 7], [9, 11], [13, 15, 17]]) == 4\n           ^^^^^^^^^^\nNameError: name 'count_list' is not defined. Did you mean: 'count_lists'?\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpmoawmfik.py\", line 4, in <module>\n    assert count_list([[1, 3], [5, 7], [9, 11], [13, 15, 17]]) == 4\n           ^^^^^^^^^^\nNameError: name 'count_list' is not defined. Did you mean: 'count_lists'?",
+  "exception_type": "NameError",
+  "exception_message": "name 'count_list' is not defined. Did you mean: 'count_lists'?",
+  "execution_time": 0.214464,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

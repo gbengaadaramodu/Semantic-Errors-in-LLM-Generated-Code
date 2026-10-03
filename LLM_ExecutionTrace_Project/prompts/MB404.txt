@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a python function that takes in an integer n and returns the sum of the squares of the first n odd natural numbers.
+
+Example test: assert square_Sum(2) == 10
+[/INST]

@@ -1,0 +1,37 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def rounded_avg(n, m): | W:m,n,rounded_avg", fillcolor="lightgreen"];
+    "2" [label="L2: if n > m: | R:m,n", fillcolor="lightgreen"];
+    "3" [label="L3: return -1", fillcolor="lightgrey"];
+    "4" [label="L5: total = 0 | W:total", fillcolor="lightgreen"];
+    "5" [label="L6: for i in range(n, m+1): | W:i | R:m,n,range", fillcolor="lightgreen"];
+    "6" [label="L7: total += i | W:total | R:i", fillcolor="lightgreen"];
+    "7" [label="L9: avg = total / (m - n + 1) | W:avg | R:m,n,total", fillcolor="lightgreen"];
+    "8" [label="L10: rounded = round(avg) | W:rounded | R:avg,round", fillcolor="lightgreen"];
+    "9" [label="L11: binary = bin(rounded)[2:] | W:binary | R:bin,rounded", fillcolor="lightgreen"];
+    "10" [label="L13: return binary | R:binary", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(m)", style="solid"];
+    "1" -> "2" [label="DATA(n)", style="solid"];
+    "1" -> "5" [label="DATA(m)", style="solid"];
+    "1" -> "5" [label="DATA(n)", style="solid"];
+    "5" -> "6" [label="DATA(i)", style="solid"];
+    "1" -> "7" [label="DATA(m)", style="solid"];
+    "1" -> "7" [label="DATA(n)", style="solid"];
+    "6" -> "7" [label="DATA(total)", style="solid"];
+    "7" -> "8" [label="DATA(avg)", style="solid"];
+    "8" -> "9" [label="DATA(rounded)", style="solid"];
+    "9" -> "10" [label="DATA(binary)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "2" -> "3" [label="CONTROL(If)", style="dashed"];
+    "1" -> "4" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "5" [label="CONTROL(FunctionDef)", style="dashed"];
+    "5" -> "6" [label="CONTROL(For)", style="dashed"];
+    "1" -> "7" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "8" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "9" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "10" [label="CONTROL(FunctionDef)", style="dashed"];
+}

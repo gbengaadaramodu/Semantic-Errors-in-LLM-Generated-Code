@@ -1,0 +1,84 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def sort_even(l):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "l",
+        "sort_even"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "l": [
+          "[1, 2, 3]"
+        ]
+      },
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "return [l[i] for i in range(len(l)) if i % 2 == 0] + sorted([l[i] for i in range(len(l)) if i % 2 == 1])",
+      "statement_type": "Return",
+      "reads": [
+        "i",
+        "l",
+        "len",
+        "range",
+        "sorted"
+      ],
+      "writes": [
+        "i"
+      ],
+      "function_name": "sort_even",
+      "executed": true,
+      "execution_count": 8,
+      "runtime_values": {
+        "l": [
+          "[1, 2, 3]",
+          "[1, 2, 3]",
+          "[1, 2, 3]",
+          "[1, 2, 3]",
+          "[1, 2, 3]",
+          "[1, 2, 3]",
+          "[1, 2, 3]",
+          "[1, 2, 3]"
+        ],
+        "i": [
+          "0",
+          "1",
+          "2",
+          "0",
+          "1",
+          "2"
+        ]
+      },
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "l",
+      "label": "DATA(l)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    2
+  ]
+}

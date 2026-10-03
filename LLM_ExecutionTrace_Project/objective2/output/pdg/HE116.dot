@@ -1,0 +1,24 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def vowels_count(s): | W:s,vowels_count", fillcolor="lightgreen"];
+    "2" [label="L2: vowels = [\"a\", \"e\", \"i\", \"o\", \"u\"] | W:vowels", fillcolor="lightgreen"];
+    "3" [label="L3: count = 0 | W:count", fillcolor="lightgreen"];
+    "4" [label="L4: for c in s: | W:c | R:s", fillcolor="lightgreen"];
+    "5" [label="L5: if c.lower() in vowels: | R:c,vowels", fillcolor="lightgreen"];
+    "6" [label="L6: count += 1 | W:count", fillcolor="lightgreen"];
+    "7" [label="L7: return count | R:count", fillcolor="salmon"];
+
+    "1" -> "4" [label="DATA(s)", style="solid"];
+    "4" -> "5" [label="DATA(c)", style="solid"];
+    "2" -> "5" [label="DATA(vowels)", style="solid"];
+    "6" -> "7" [label="DATA(count)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "3" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "4" [label="CONTROL(FunctionDef)", style="dashed"];
+    "4" -> "5" [label="CONTROL(For)", style="dashed"];
+    "5" -> "6" [label="CONTROL(If)", style="dashed"];
+    "1" -> "7" [label="CONTROL(FunctionDef)", style="dashed"];
+}

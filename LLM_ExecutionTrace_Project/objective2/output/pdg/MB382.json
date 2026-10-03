@@ -1,0 +1,200 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def rearrange_bigger(num):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "num",
+        "rearrange_bigger"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 3,
+      "runtime_values": {
+        "num": [
+          "12",
+          "10"
+        ]
+      },
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "num_str = str(num)",
+      "statement_type": "Assign",
+      "reads": [
+        "num",
+        "str"
+      ],
+      "writes": [
+        "num_str"
+      ],
+      "function_name": "rearrange_bigger",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "num": [
+          "12",
+          "10"
+        ]
+      },
+      "failure_related": false
+    },
+    "3": {
+      "node_id": 3,
+      "line_number": 3,
+      "source_code": "num_list = list(num_str)",
+      "statement_type": "Assign",
+      "reads": [
+        "list",
+        "num_str"
+      ],
+      "writes": [
+        "num_list"
+      ],
+      "function_name": "rearrange_bigger",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "num": [
+          "12",
+          "10"
+        ],
+        "num_str": [
+          "12",
+          "10"
+        ]
+      },
+      "failure_related": false
+    },
+    "4": {
+      "node_id": 4,
+      "line_number": 4,
+      "source_code": "num_list.sort(reverse=True)",
+      "statement_type": "Expr",
+      "reads": [
+        "num_list"
+      ],
+      "writes": [],
+      "function_name": "rearrange_bigger",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "num": [
+          "12",
+          "10"
+        ],
+        "num_str": [
+          "12",
+          "10"
+        ],
+        "num_list": [
+          "['1', '2']",
+          "['1', '0']"
+        ]
+      },
+      "failure_related": false
+    },
+    "5": {
+      "node_id": 5,
+      "line_number": 5,
+      "source_code": "return int(''.join(num_list))",
+      "statement_type": "Return",
+      "reads": [
+        "int",
+        "num_list"
+      ],
+      "writes": [],
+      "function_name": "rearrange_bigger",
+      "executed": true,
+      "execution_count": 4,
+      "runtime_values": {
+        "num": [
+          "12",
+          "12",
+          "10",
+          "10"
+        ],
+        "num_str": [
+          "12",
+          "12",
+          "10",
+          "10"
+        ],
+        "num_list": [
+          "['2', '1']",
+          "['2', '1']",
+          "['1', '0']",
+          "['1', '0']"
+        ]
+      },
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "num",
+      "label": "DATA(num)"
+    },
+    {
+      "source_id": 2,
+      "target_id": 3,
+      "dependency_type": "DATA",
+      "variable": "num_str",
+      "label": "DATA(num_str)"
+    },
+    {
+      "source_id": 3,
+      "target_id": 4,
+      "dependency_type": "DATA",
+      "variable": "num_list",
+      "label": "DATA(num_list)"
+    },
+    {
+      "source_id": 3,
+      "target_id": 5,
+      "dependency_type": "DATA",
+      "variable": "num_list",
+      "label": "DATA(num_list)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 3,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 4,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 5,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    5
+  ]
+}

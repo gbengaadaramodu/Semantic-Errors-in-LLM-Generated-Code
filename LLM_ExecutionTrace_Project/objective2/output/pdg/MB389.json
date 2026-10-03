@@ -1,0 +1,66 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def text_match_three(s):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "s",
+        "text_match_three"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "s": [
+          "ac"
+        ]
+      },
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "return re.search(r'a{3}', s) is not None",
+      "statement_type": "Return",
+      "reads": [
+        "re",
+        "s"
+      ],
+      "writes": [],
+      "function_name": "text_match_three",
+      "executed": true,
+      "execution_count": 3,
+      "runtime_values": {
+        "s": [
+          "ac",
+          "ac",
+          "ac"
+        ]
+      },
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "s",
+      "label": "DATA(s)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    2
+  ]
+}

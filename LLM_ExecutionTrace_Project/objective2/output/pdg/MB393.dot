@@ -1,0 +1,21 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def find_first_missing(my_list): | W:my_list,find_first_missing", fillcolor="lightgreen"];
+    "2" [label="L2: for i in range(len(my_list)): | W:i | R:len,my_list,range", fillcolor="lightgrey"];
+    "3" [label="L3: if my_list[i] != i: | R:i,my_list", fillcolor="lightgrey"];
+    "4" [label="L4: return i | R:i", fillcolor="lightgrey"];
+    "5" [label="L5: return len(my_list) | R:len,my_list", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(my_list)", style="solid"];
+    "2" -> "3" [label="DATA(i)", style="solid"];
+    "1" -> "3" [label="DATA(my_list)", style="solid"];
+    "2" -> "4" [label="DATA(i)", style="solid"];
+    "1" -> "5" [label="DATA(my_list)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "2" -> "3" [label="CONTROL(For)", style="dashed"];
+    "3" -> "4" [label="CONTROL(If)", style="dashed"];
+    "1" -> "5" [label="CONTROL(FunctionDef)", style="dashed"];
+}

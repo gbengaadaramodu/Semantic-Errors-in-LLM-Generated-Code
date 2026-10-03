@@ -1,0 +1,11 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def is_empty(my_dict): | W:my_dict,is_empty", fillcolor="lightgreen"];
+    "2" [label="L2: return not bool(my_dict) | R:bool,my_dict", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(my_dict)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a python function to find the minimum number of rotations (greater than 0) required to get the same string.
+
+Example test: assert find_Rotations("aaaa") == 1
+[/INST]

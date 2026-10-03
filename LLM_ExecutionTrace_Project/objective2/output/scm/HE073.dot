@@ -1,0 +1,16 @@
+digraph SCM {
+    rankdir=LR;
+    node [shape=ellipse, style=filled, color=lightskyblue, fontname="Helvetica"];
+    edge [fontname="Helvetica", fontsize=10];
+
+    "S" [label="S: Specification"];
+    "C" [label="C: Generated Code"];
+    "E" [label="E: Execution Trace"];
+    "T" [label="T: Test Suite"];
+    "O" [label="O: Outcome"];
+
+    "S" -> "C" [label="generates"];
+    "C" -> "E" [label="produces"];
+    "T" -> "E" [label="evaluates"];
+    "E" -> "O" [label="determines"];
+}

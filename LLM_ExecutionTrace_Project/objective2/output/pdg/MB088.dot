@@ -1,0 +1,13 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def filter_data(student_heights, minimal_height, minimal_weight): | W:minimal_height,minimal_weight,student_heights,filter_data", fillcolor="lightgreen"];
+    "2" [label="L2: return {name: height for name, height in student_heights.items() if height >= minimal_height and weight >= minimal_weight} | W:height,name | R:height,minimal_height,minimal_weight,name,student_heights,weight", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(minimal_height)", style="solid"];
+    "1" -> "2" [label="DATA(minimal_weight)", style="solid"];
+    "1" -> "2" [label="DATA(student_heights)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

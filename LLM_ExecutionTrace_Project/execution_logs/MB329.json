@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB329",
+  "dataset": "MBPP",
+  "task_id": "126",
+  "problem_summary": "Write a python function to find the sum of common divisors of two given numbers.",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpjx24lubn.py\", line 4, in <module>\n    assert sum(10,15) == 6\n           ~~~^^^^^^^\nTypeError: 'int' object is not iterable\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpjx24lubn.py\", line 4, in <module>\n    assert sum(10,15) == 6\n           ~~~^^^^^^^\nTypeError: 'int' object is not iterable",
+  "exception_type": "TypeError",
+  "exception_message": "'int' object is not iterable",
+  "execution_time": 0.160252,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

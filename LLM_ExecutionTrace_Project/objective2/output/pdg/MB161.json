@@ -1,0 +1,84 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def are_equivalent(num1, num2):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "num1",
+        "num2",
+        "are_equivalent"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 2,
+      "runtime_values": {
+        "num1": [
+          "36"
+        ],
+        "num2": [
+          "57"
+        ]
+      },
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "return sum(divisors(num1)) == sum(divisors(num2))",
+      "statement_type": "Return",
+      "reads": [
+        "divisors",
+        "num1",
+        "num2",
+        "sum"
+      ],
+      "writes": [],
+      "function_name": "are_equivalent",
+      "executed": true,
+      "execution_count": 3,
+      "runtime_values": {
+        "num1": [
+          "36",
+          "36",
+          "36"
+        ],
+        "num2": [
+          "57",
+          "57",
+          "57"
+        ]
+      },
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "num1",
+      "label": "DATA(num1)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "num2",
+      "label": "DATA(num2)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    2
+  ]
+}

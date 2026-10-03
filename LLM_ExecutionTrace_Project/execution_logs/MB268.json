@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB268",
+  "dataset": "MBPP",
+  "task_id": "83",
+  "problem_summary": "Write a python function to find the character made by adding the ASCII value of ",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpo1nm0gnb.py\", line 4, in <module>\n    assert get_Char(\"abc\") == \"f\"\n           ^^^^^^^^\nNameError: name 'get_Char' is not defined. Did you mean: 'get_char'?\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpo1nm0gnb.py\", line 4, in <module>\n    assert get_Char(\"abc\") == \"f\"\n           ^^^^^^^^\nNameError: name 'get_Char' is not defined. Did you mean: 'get_char'?",
+  "exception_type": "NameError",
+  "exception_message": "name 'get_Char' is not defined. Did you mean: 'get_char'?",
+  "execution_time": 0.217078,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

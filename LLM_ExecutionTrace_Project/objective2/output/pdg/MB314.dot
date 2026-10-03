@@ -1,0 +1,20 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def max_sub_array_sum_repeated(arr, k, n): | W:arr,k,n,max_sub_array_sum_repeated", fillcolor="lightgreen"];
+    "2" [label="L2: modified_array = [] | W:modified_array", fillcolor="lightgreen"];
+    "3" [label="L3: for i in range(k): | W:i | R:k,range", fillcolor="lightgreen"];
+    "4" [label="L4: modified_array += arr * n | W:modified_array | R:arr,n", fillcolor="lightgreen"];
+    "5" [label="L5: return max(modified_array) | R:max,modified_array", fillcolor="salmon"];
+
+    "1" -> "3" [label="DATA(k)", style="solid"];
+    "1" -> "4" [label="DATA(arr)", style="solid"];
+    "1" -> "4" [label="DATA(n)", style="solid"];
+    "4" -> "5" [label="DATA(modified_array)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "3" [label="CONTROL(FunctionDef)", style="dashed"];
+    "3" -> "4" [label="CONTROL(For)", style="dashed"];
+    "1" -> "5" [label="CONTROL(FunctionDef)", style="dashed"];
+}

@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB016",
+  "dataset": "MBPP",
+  "task_id": "2",
+  "problem_summary": "Write a function to find the shared elements from the given two lists.",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp9db1piwh.py\", line 4, in <module>\n    assert set(similar_elements((3, 4, 5, 6),(5, 7, 4, 10))) == set((4, 5))\n               ^^^^^^^^^^^^^^^^\nNameError: name 'similar_elements' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp9db1piwh.py\", line 4, in <module>\n    assert set(similar_elements((3, 4, 5, 6),(5, 7, 4, 10))) == set((4, 5))\n               ^^^^^^^^^^^^^^^^\nNameError: name 'similar_elements' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'similar_elements' is not defined",
+  "execution_time": 0.232387,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

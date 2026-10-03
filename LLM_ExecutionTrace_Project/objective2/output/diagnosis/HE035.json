@@ -1,0 +1,315 @@
+{
+  "trace_id": "HE035",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/156",
+  "error_category": "Runtime Exception",
+  "analysis_status": "ANALYZED",
+  "skip_reason": null,
+  "input_record": {
+    "trace_id": "HE035",
+    "dataset": "HumanEval",
+    "task_id": "HumanEval/156",
+    "problem_summary": "\ndef int_to_mini_roman(number):\n    \"\"\"\n    Given a positive integer, obtain its",
+    "execution_status": "Failed",
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp0ir5azcc.py\", line 28, in <module>\n    check(int_to_mini_roman)\n    ~~~~~^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp0ir5azcc.py\", line 8, in check\n    assert candidate(19) == 'xix'\n           ~~~~~~~~~^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp0ir5azcc.py\", line 3, in int_to_mini_roman\n    return roman_numerals[number]\n           ~~~~~~~~~~~~~~^^^^^^^^\nIndexError: list index out of range\n",
+    "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp0ir5azcc.py\", line 28, in <module>\n    check(int_to_mini_roman)\n    ~~~~~^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp0ir5azcc.py\", line 8, in check\n    assert candidate(19) == 'xix'\n           ~~~~~~~~~^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp0ir5azcc.py\", line 3, in int_to_mini_roman\n    return roman_numerals[number]\n           ~~~~~~~~~~~~~~^^^^^^^^\nIndexError: list index out of range",
+    "exception_type": "IndexError",
+    "exception_message": "list index out of range",
+    "execution_time": 0.30187,
+    "timed_out": false,
+    "exit_code": 1,
+    "tests_passed": false,
+    "tests_failed": 0,
+    "expected_output": null,
+    "actual_output": null,
+    "assertion_source": null,
+    "assertion_failed": false,
+    "parser_prediction": "Runtime Exception"
+  },
+  "scm": {
+    "task_id": "HumanEval/156",
+    "nodes": [
+      {
+        "node_id": "S",
+        "variable_name": "Specification",
+        "symbol": "S",
+        "label": "Specification"
+      },
+      {
+        "node_id": "C",
+        "variable_name": "GeneratedCode",
+        "symbol": "C",
+        "label": "Generated Code"
+      },
+      {
+        "node_id": "E",
+        "variable_name": "ExecutionTrace",
+        "symbol": "E",
+        "label": "Execution Trace"
+      },
+      {
+        "node_id": "T",
+        "variable_name": "TestSuite",
+        "symbol": "T",
+        "label": "Test Suite"
+      },
+      {
+        "node_id": "O",
+        "variable_name": "Outcome",
+        "symbol": "O",
+        "label": "Outcome"
+      }
+    ],
+    "edges": [
+      {
+        "source": "S",
+        "target": "C",
+        "relationship": "generates"
+      },
+      {
+        "source": "C",
+        "target": "E",
+        "relationship": "produces"
+      },
+      {
+        "source": "T",
+        "target": "E",
+        "relationship": "evaluates"
+      },
+      {
+        "source": "E",
+        "target": "O",
+        "relationship": "determines"
+      }
+    ],
+    "variables": {
+      "S": {
+        "name": "Specification",
+        "symbol": "S",
+        "description": "Problem description, prompt, and target function signature",
+        "value": "\ndef int_to_mini_roman(number):\n    \"\"\"\n    Given a positive integer, obtain its"
+      },
+      "C": {
+        "name": "GeneratedCode",
+        "symbol": "C",
+        "description": "LLM-generated Python source code implementation",
+        "value": "def int_to_mini_roman(number):\n    roman_numerals = ['', 'x', 'xx', 'xxx', 'xxxx', 'xix', 'xxi', 'xxii', 'xxiii', 'xxiv', 'xxv', 'xxvi']\n    return roman_numerals[number]"
+      },
+      "E": {
+        "name": "ExecutionTrace",
+        "symbol": "E",
+        "description": "Observable runtime trace events, variable states, and stdout/stderr",
+        "value": "status=Failed, exc=IndexError, msg=list index out of range"
+      },
+      "T": {
+        "name": "TestSuite",
+        "symbol": "T",
+        "description": "Benchmark assertions, inputs, and check function harness",
+        "value": "def check(candidate):\n\n    # Check some simple cases\n    assert candidate(19) == 'xix'\n    assert ca"
+      },
+      "O": {
+        "name": "Outcome",
+        "symbol": "O",
+        "description": "Final test execution outcome (Completed/Failed/Timeout)",
+        "value": "Failed"
+      }
+    }
+  },
+  "pdg": {
+    "nodes": {
+      "1": {
+        "node_id": 1,
+        "line_number": 1,
+        "source_code": "def int_to_mini_roman(number):",
+        "statement_type": "FunctionDef",
+        "reads": [],
+        "writes": [
+          "number",
+          "int_to_mini_roman"
+        ],
+        "function_name": "<module>",
+        "executed": true,
+        "execution_count": 2,
+        "runtime_values": {
+          "number": [
+            "19"
+          ]
+        },
+        "failure_related": false
+      },
+      "2": {
+        "node_id": 2,
+        "line_number": 2,
+        "source_code": "roman_numerals = ['', 'x', 'xx', 'xxx', 'xxxx', 'xix', 'xxi', 'xxii', 'xxiii', 'xxiv', 'xxv', 'xxvi']",
+        "statement_type": "Assign",
+        "reads": [],
+        "writes": [
+          "roman_numerals"
+        ],
+        "function_name": "int_to_mini_roman",
+        "executed": true,
+        "execution_count": 1,
+        "runtime_values": {
+          "number": [
+            "19"
+          ]
+        },
+        "failure_related": false
+      },
+      "3": {
+        "node_id": 3,
+        "line_number": 3,
+        "source_code": "return roman_numerals[number]",
+        "statement_type": "Return",
+        "reads": [
+          "number",
+          "roman_numerals"
+        ],
+        "writes": [],
+        "function_name": "int_to_mini_roman",
+        "executed": true,
+        "execution_count": 3,
+        "runtime_values": {
+          "number": [
+            "19",
+            "19",
+            "19"
+          ],
+          "roman_numerals": [
+            "['', 'x', 'xx', 'xxx', 'xxxx', 'xix', 'xxi', 'xxii', 'xxiii', 'xxiv', 'xxv', 'xxvi']",
+            "['', 'x', 'xx', 'xxx', 'xxxx', 'xix', 'xxi', 'xxii', 'xxiii', 'xxiv', 'xxv', 'xxvi']",
+            "['', 'x', 'xx', 'xxx', 'xxxx', 'xix', 'xxi', 'xxii', 'xxiii', 'xxiv', 'xxv', 'xxvi']"
+          ]
+        },
+        "failure_related": true
+      }
+    },
+    "edges": [
+      {
+        "source_id": 1,
+        "target_id": 3,
+        "dependency_type": "DATA",
+        "variable": "number",
+        "label": "DATA(number)"
+      },
+      {
+        "source_id": 2,
+        "target_id": 3,
+        "dependency_type": "DATA",
+        "variable": "roman_numerals",
+        "label": "DATA(roman_numerals)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 3,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      }
+    ],
+    "entry_node_id": 1,
+    "failure_node_ids": [
+      3
+    ]
+  },
+  "runtime_events_count": 15,
+  "failure_line": 3,
+  "failure_statement": "return roman_numerals[number]",
+  "candidates": [
+    {
+      "rank": 1,
+      "node_id": 3,
+      "line_number": 3,
+      "statement_code": "return roman_numerals[number]",
+      "variable_name": "number",
+      "observed_value": "19",
+      "expected_value": "xix",
+      "proximity_score": 1.0,
+      "dependency_score": 1.0,
+      "explanation": "Reached via reverse traversal (distance=0, type=Return)"
+    },
+    {
+      "rank": 2,
+      "node_id": 2,
+      "line_number": 2,
+      "statement_code": "roman_numerals = ['', 'x', 'xx', 'xxx', 'xxxx', 'xix', 'xxi', 'xxii', 'xxiii', 'xxiv', 'xxv', 'xxvi']",
+      "variable_name": "roman_numerals",
+      "observed_value": null,
+      "expected_value": null,
+      "proximity_score": 0.85,
+      "dependency_score": 0.9,
+      "explanation": "Reached via reverse traversal (distance=1, type=Assign)"
+    }
+  ],
+  "critical_variable": null,
+  "counterfactual_results": [
+    {
+      "candidate_rank": 1,
+      "intervention": {
+        "target_variable": "number",
+        "target_line": 3,
+        "observed_value": "19",
+        "counterfactual_value": "xix",
+        "operation_type": "AST_transform",
+        "modified_code": "def int_to_mini_roman(number):\n    roman_numerals = ['', 'x', 'xx', 'xxx', 'xxxx', 'xix', 'xxi', 'xxii', 'xxiii', 'xxiv', 'xxv', 'xxvi']\n    number = 'xix'\n    return roman_numerals[number]"
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "Failed",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "FALSE",
+      "execution_time": 0.1672,
+      "status": "EXECUTED",
+      "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+    },
+    {
+      "candidate_rank": 2,
+      "intervention": {
+        "target_variable": "roman_numerals",
+        "target_line": 2,
+        "observed_value": "None",
+        "counterfactual_value": "None",
+        "operation_type": "AST_transform",
+        "modified_code": "def int_to_mini_roman(number):\n    roman_numerals = None\n    return roman_numerals[number]"
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "Failed",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "FALSE",
+      "execution_time": 0.2755,
+      "status": "EXECUTED",
+      "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+    }
+  ],
+  "fault_location": {
+    "file": "HE035.py",
+    "line_number": 3,
+    "statement_code": "return roman_numerals[number]",
+    "function_name": "int_to_mini_roman",
+    "causal_variable": "number",
+    "evidence_score": 0.5,
+    "confidence": 0.3
+  },
+  "root_cause": {
+    "root_cause_status": "UNRESOLVED",
+    "candidate_explanation": "Runtime exception (IndexError: list index out of range) triggered at statement 'return roman_numerals[number]' (line 3) involving variable 'number'.",
+    "causal_variable": "number",
+    "fault_statement": "return roman_numerals[number]",
+    "fault_line": 3,
+    "evidence_summary": "Reverse PDG traversal traced failure from line 1 to statement line 3. Structural dependency identified; counterfactual validation unconfirmed or unresolved.",
+    "counterfactual_validated": false,
+    "confidence": 0.3
+  },
+  "ground_truth_matched": null,
+  "ground_truth_fault_line": null,
+  "execution_time": 0.4503
+}

@@ -1,0 +1,59 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def sort_counter(my_dict):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "my_dict",
+        "sort_counter"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 1,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "return sorted(my_dict.items(), key=lambda x: x[1])",
+      "statement_type": "Return",
+      "reads": [
+        "my_dict",
+        "sorted",
+        "x"
+      ],
+      "writes": [
+        "x"
+      ],
+      "function_name": "sort_counter",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "my_dict",
+      "label": "DATA(my_dict)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    2
+  ]
+}

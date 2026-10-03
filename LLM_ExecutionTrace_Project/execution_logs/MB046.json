@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB046",
+  "dataset": "MBPP",
+  "task_id": "228",
+  "problem_summary": "Write a python function to check whether all the bits are unset in the given ran",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpc9cjpr34.py\", line 4, in <module>\n    assert all_Bits_Set_In_The_Given_Range(4,1,2) == True\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nNameError: name 'all_Bits_Set_In_The_Given_Range' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpc9cjpr34.py\", line 4, in <module>\n    assert all_Bits_Set_In_The_Given_Range(4,1,2) == True\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nNameError: name 'all_Bits_Set_In_The_Given_Range' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'all_Bits_Set_In_The_Given_Range' is not defined",
+  "execution_time": 0.229325,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a function that returns integers x and y that satisfy ax + by = n as a tuple, or return None if no solution exists.
+
+Example test: assert find_solution(2, 3, 7) == (2, 1)
+[/INST]

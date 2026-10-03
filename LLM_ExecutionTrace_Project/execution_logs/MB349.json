@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB349",
+  "dataset": "MBPP",
+  "task_id": "580",
+  "problem_summary": "Write a function to remove uneven elements in the nested mixed tuple.",
+  "execution_status": "Completed",
+  "stdout": "",
+  "stderr": "",
+  "traceback": "",
+  "exception_type": "",
+  "exception_message": "",
+  "execution_time": 0.085929,
+  "timed_out": false,
+  "exit_code": 0,
+  "tests_passed": true,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

@@ -1,0 +1,11 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def harmonic_sum(n): | W:n,harmonic_sum", fillcolor="lightgreen"];
+    "2" [label="L2: return sum(1/k for k in range(1, n+1)) | W:k | R:k,n,range,sum", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(n)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

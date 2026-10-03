@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB378",
+  "dataset": "MBPP",
+  "task_id": "573",
+  "problem_summary": "Write a python function to calculate the product of the unique numbers in a give",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpjlz7_gq3.py\", line 4, in <module>\n    assert unique_product([10, 20, 30, 40, 20, 50, 60, 40]) ==  720000000\n           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpjlz7_gq3.py\", line 2, in unique_product\n    return reduce(lambda x, y: x * y, set(my_list))\n           ^^^^^^\nNameError: name 'reduce' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpjlz7_gq3.py\", line 4, in <module>\n    assert unique_product([10, 20, 30, 40, 20, 50, 60, 40]) ==  720000000\n           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpjlz7_gq3.py\", line 2, in unique_product\n    return reduce(lambda x, y: x * y, set(my_list))\n           ^^^^^^\nNameError: name 'reduce' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'reduce' is not defined",
+  "execution_time": 0.179808,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

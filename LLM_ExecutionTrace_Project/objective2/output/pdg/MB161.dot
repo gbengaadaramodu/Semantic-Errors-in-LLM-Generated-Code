@@ -1,0 +1,12 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def are_equivalent(num1, num2): | W:num1,num2,are_equivalent", fillcolor="lightgreen"];
+    "2" [label="L2: return sum(divisors(num1)) == sum(divisors(num2)) | R:divisors,num1,num2,sum", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(num1)", style="solid"];
+    "1" -> "2" [label="DATA(num2)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

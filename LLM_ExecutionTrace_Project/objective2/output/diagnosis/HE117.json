@@ -1,0 +1,699 @@
+{
+  "trace_id": "HE117",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/115",
+  "error_category": "Wrong-Output Error",
+  "analysis_status": "ANALYZED",
+  "skip_reason": null,
+  "input_record": {
+    "trace_id": "HE117",
+    "dataset": "HumanEval",
+    "task_id": "HumanEval/115",
+    "problem_summary": "\ndef max_fill(grid, capacity):\n    import math\n    \"\"\"\n    You are given a recta",
+    "execution_status": "Failed",
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpkc1hgc4n.py\", line 36, in <module>\n    check(max_fill)\n    ~~~~~^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpkc1hgc4n.py\", line 25, in check\n    assert candidate([[0,0,1,0], [0,1,0,0], [1,1,1,1]], 1) == 6, \"Error\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Error\n",
+    "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpkc1hgc4n.py\", line 36, in <module>\n    check(max_fill)\n    ~~~~~^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpkc1hgc4n.py\", line 25, in check\n    assert candidate([[0,0,1,0], [0,1,0,0], [1,1,1,1]], 1) == 6, \"Error\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Error",
+    "exception_type": "AssertionError",
+    "exception_message": "Error",
+    "execution_time": 0.253935,
+    "timed_out": false,
+    "exit_code": 1,
+    "tests_passed": false,
+    "tests_failed": 0,
+    "expected_output": null,
+    "actual_output": null,
+    "assertion_source": "benchmark_test",
+    "assertion_failed": true,
+    "parser_prediction": "Wrong-Output Error"
+  },
+  "scm": {
+    "task_id": "HumanEval/115",
+    "nodes": [
+      {
+        "node_id": "S",
+        "variable_name": "Specification",
+        "symbol": "S",
+        "label": "Specification"
+      },
+      {
+        "node_id": "C",
+        "variable_name": "GeneratedCode",
+        "symbol": "C",
+        "label": "Generated Code"
+      },
+      {
+        "node_id": "E",
+        "variable_name": "ExecutionTrace",
+        "symbol": "E",
+        "label": "Execution Trace"
+      },
+      {
+        "node_id": "T",
+        "variable_name": "TestSuite",
+        "symbol": "T",
+        "label": "Test Suite"
+      },
+      {
+        "node_id": "O",
+        "variable_name": "Outcome",
+        "symbol": "O",
+        "label": "Outcome"
+      }
+    ],
+    "edges": [
+      {
+        "source": "S",
+        "target": "C",
+        "relationship": "generates"
+      },
+      {
+        "source": "C",
+        "target": "E",
+        "relationship": "produces"
+      },
+      {
+        "source": "T",
+        "target": "E",
+        "relationship": "evaluates"
+      },
+      {
+        "source": "E",
+        "target": "O",
+        "relationship": "determines"
+      }
+    ],
+    "variables": {
+      "S": {
+        "name": "Specification",
+        "symbol": "S",
+        "description": "Problem description, prompt, and target function signature",
+        "value": "\ndef max_fill(grid, capacity):\n    import math\n    \"\"\"\n    You are given a recta"
+      },
+      "C": {
+        "name": "GeneratedCode",
+        "symbol": "C",
+        "description": "LLM-generated Python source code implementation",
+        "value": "def max_fill(grid, capacity):\n    # Initialize variables\n    total_units = 0\n    num_lowerings = 0\n\n    # Iterate through the grid\n    for row in grid:\n        # Check if the current row is full\n     "
+      },
+      "E": {
+        "name": "ExecutionTrace",
+        "symbol": "E",
+        "description": "Observable runtime trace events, variable states, and stdout/stderr",
+        "value": "status=Failed, exc=AssertionError, msg=Error"
+      },
+      "T": {
+        "name": "TestSuite",
+        "symbol": "T",
+        "description": "Benchmark assertions, inputs, and check function harness",
+        "value": "def check(candidate):\n\n\n    # Check some simple cases\n    assert True, \"This prints if this assert f"
+      },
+      "O": {
+        "name": "Outcome",
+        "symbol": "O",
+        "description": "Final test execution outcome (Completed/Failed/Timeout)",
+        "value": "Failed"
+      }
+    }
+  },
+  "pdg": {
+    "nodes": {
+      "1": {
+        "node_id": 1,
+        "line_number": 1,
+        "source_code": "def max_fill(grid, capacity):",
+        "statement_type": "FunctionDef",
+        "reads": [],
+        "writes": [
+          "capacity",
+          "grid",
+          "max_fill"
+        ],
+        "function_name": "<module>",
+        "executed": true,
+        "execution_count": 2,
+        "runtime_values": {
+          "grid": [
+            "[[0, 0, 1, 0], [0, 1, 0, 0], [1, 1, 1, 1]]"
+          ],
+          "capacity": [
+            "1"
+          ]
+        },
+        "failure_related": false
+      },
+      "2": {
+        "node_id": 2,
+        "line_number": 3,
+        "source_code": "total_units = 0",
+        "statement_type": "Assign",
+        "reads": [],
+        "writes": [
+          "total_units"
+        ],
+        "function_name": "max_fill",
+        "executed": true,
+        "execution_count": 1,
+        "runtime_values": {
+          "grid": [
+            "[[0, 0, 1, 0], [0, 1, 0, 0], [1, 1, 1, 1]]"
+          ],
+          "capacity": [
+            "1"
+          ]
+        },
+        "failure_related": false
+      },
+      "3": {
+        "node_id": 3,
+        "line_number": 4,
+        "source_code": "num_lowerings = 0",
+        "statement_type": "Assign",
+        "reads": [],
+        "writes": [
+          "num_lowerings"
+        ],
+        "function_name": "max_fill",
+        "executed": true,
+        "execution_count": 1,
+        "runtime_values": {
+          "grid": [
+            "[[0, 0, 1, 0], [0, 1, 0, 0], [1, 1, 1, 1]]"
+          ],
+          "capacity": [
+            "1"
+          ],
+          "total_units": [
+            "0"
+          ]
+        },
+        "failure_related": false
+      },
+      "4": {
+        "node_id": 4,
+        "line_number": 7,
+        "source_code": "for row in grid:",
+        "statement_type": "For",
+        "reads": [
+          "grid"
+        ],
+        "writes": [
+          "row"
+        ],
+        "function_name": "max_fill",
+        "executed": true,
+        "execution_count": 4,
+        "runtime_values": {
+          "grid": [
+            "[[0, 0, 1, 0], [0, 1, 0, 0], [1, 1, 1, 1]]",
+            "[[0, 0, 1, 0], [0, 1, 0, 0], [1, 1, 1, 1]]",
+            "[[0, 0, 1, 0], [0, 1, 0, 0], [1, 1, 1, 1]]",
+            "[[0, 0, 1, 0], [0, 1, 0, 0], [1, 1, 1, 1]]"
+          ],
+          "capacity": [
+            "1",
+            "1",
+            "1",
+            "1"
+          ],
+          "total_units": [
+            "0",
+            "1",
+            "2",
+            "6"
+          ],
+          "num_lowerings": [
+            "0",
+            "0",
+            "0",
+            "-3"
+          ],
+          "row": [
+            "[0, 0, 1, 0]",
+            "[0, 1, 0, 0]",
+            "[1, 1, 1, 1]"
+          ]
+        },
+        "failure_related": false
+      },
+      "5": {
+        "node_id": 5,
+        "line_number": 9,
+        "source_code": "if sum(row) == capacity:",
+        "statement_type": "If",
+        "reads": [
+          "capacity",
+          "row",
+          "sum"
+        ],
+        "writes": [],
+        "function_name": "max_fill",
+        "executed": true,
+        "execution_count": 3,
+        "runtime_values": {
+          "grid": [
+            "[[0, 0, 1, 0], [0, 1, 0, 0], [1, 1, 1, 1]]",
+            "[[0, 0, 1, 0], [0, 1, 0, 0], [1, 1, 1, 1]]",
+            "[[0, 0, 1, 0], [0, 1, 0, 0], [1, 1, 1, 1]]"
+          ],
+          "capacity": [
+            "1",
+            "1",
+            "1"
+          ],
+          "total_units": [
+            "0",
+            "1",
+            "2"
+          ],
+          "num_lowerings": [
+            "0",
+            "0",
+            "0"
+          ],
+          "row": [
+            "[0, 0, 1, 0]",
+            "[0, 1, 0, 0]",
+            "[1, 1, 1, 1]"
+          ]
+        },
+        "failure_related": false
+      },
+      "6": {
+        "node_id": 6,
+        "line_number": 11,
+        "source_code": "total_units += capacity",
+        "statement_type": "AugAssign",
+        "reads": [
+          "capacity"
+        ],
+        "writes": [
+          "total_units"
+        ],
+        "function_name": "max_fill",
+        "executed": true,
+        "execution_count": 2,
+        "runtime_values": {
+          "grid": [
+            "[[0, 0, 1, 0], [0, 1, 0, 0], [1, 1, 1, 1]]",
+            "[[0, 0, 1, 0], [0, 1, 0, 0], [1, 1, 1, 1]]"
+          ],
+          "capacity": [
+            "1",
+            "1"
+          ],
+          "total_units": [
+            "0",
+            "1"
+          ],
+          "num_lowerings": [
+            "0",
+            "0"
+          ],
+          "row": [
+            "[0, 0, 1, 0]",
+            "[0, 1, 0, 0]"
+          ]
+        },
+        "failure_related": false
+      },
+      "7": {
+        "node_id": 7,
+        "line_number": 14,
+        "source_code": "num_lowerings += capacity - sum(row)",
+        "statement_type": "AugAssign",
+        "reads": [
+          "capacity",
+          "row",
+          "sum"
+        ],
+        "writes": [
+          "num_lowerings"
+        ],
+        "function_name": "max_fill",
+        "executed": true,
+        "execution_count": 1,
+        "runtime_values": {
+          "grid": [
+            "[[0, 0, 1, 0], [0, 1, 0, 0], [1, 1, 1, 1]]"
+          ],
+          "capacity": [
+            "1"
+          ],
+          "total_units": [
+            "2"
+          ],
+          "num_lowerings": [
+            "0"
+          ],
+          "row": [
+            "[1, 1, 1, 1]"
+          ]
+        },
+        "failure_related": false
+      },
+      "8": {
+        "node_id": 8,
+        "line_number": 16,
+        "source_code": "total_units += sum(row)",
+        "statement_type": "AugAssign",
+        "reads": [
+          "row",
+          "sum"
+        ],
+        "writes": [
+          "total_units"
+        ],
+        "function_name": "max_fill",
+        "executed": true,
+        "execution_count": 1,
+        "runtime_values": {
+          "grid": [
+            "[[0, 0, 1, 0], [0, 1, 0, 0], [1, 1, 1, 1]]"
+          ],
+          "capacity": [
+            "1"
+          ],
+          "total_units": [
+            "2"
+          ],
+          "num_lowerings": [
+            "-3"
+          ],
+          "row": [
+            "[1, 1, 1, 1]"
+          ]
+        },
+        "failure_related": false
+      },
+      "9": {
+        "node_id": 9,
+        "line_number": 18,
+        "source_code": "return num_lowerings",
+        "statement_type": "Return",
+        "reads": [
+          "num_lowerings"
+        ],
+        "writes": [],
+        "function_name": "max_fill",
+        "executed": true,
+        "execution_count": 2,
+        "runtime_values": {
+          "grid": [
+            "[[0, 0, 1, 0], [0, 1, 0, 0], [1, 1, 1, 1]]",
+            "[[0, 0, 1, 0], [0, 1, 0, 0], [1, 1, 1, 1]]"
+          ],
+          "capacity": [
+            "1",
+            "1"
+          ],
+          "total_units": [
+            "6",
+            "6"
+          ],
+          "num_lowerings": [
+            "-3",
+            "-3"
+          ],
+          "row": [
+            "[1, 1, 1, 1]",
+            "[1, 1, 1, 1]"
+          ]
+        },
+        "failure_related": true
+      }
+    },
+    "edges": [
+      {
+        "source_id": 1,
+        "target_id": 4,
+        "dependency_type": "DATA",
+        "variable": "grid",
+        "label": "DATA(grid)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 5,
+        "dependency_type": "DATA",
+        "variable": "capacity",
+        "label": "DATA(capacity)"
+      },
+      {
+        "source_id": 4,
+        "target_id": 5,
+        "dependency_type": "DATA",
+        "variable": "row",
+        "label": "DATA(row)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 6,
+        "dependency_type": "DATA",
+        "variable": "capacity",
+        "label": "DATA(capacity)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 7,
+        "dependency_type": "DATA",
+        "variable": "capacity",
+        "label": "DATA(capacity)"
+      },
+      {
+        "source_id": 4,
+        "target_id": 7,
+        "dependency_type": "DATA",
+        "variable": "row",
+        "label": "DATA(row)"
+      },
+      {
+        "source_id": 4,
+        "target_id": 8,
+        "dependency_type": "DATA",
+        "variable": "row",
+        "label": "DATA(row)"
+      },
+      {
+        "source_id": 7,
+        "target_id": 9,
+        "dependency_type": "DATA",
+        "variable": "num_lowerings",
+        "label": "DATA(num_lowerings)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 3,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 4,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 4,
+        "target_id": 5,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(For)"
+      },
+      {
+        "source_id": 5,
+        "target_id": 6,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(If)"
+      },
+      {
+        "source_id": 5,
+        "target_id": 7,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(If)"
+      },
+      {
+        "source_id": 5,
+        "target_id": 8,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(If)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 9,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      }
+    ],
+    "entry_node_id": 1,
+    "failure_node_ids": [
+      9
+    ]
+  },
+  "runtime_events_count": 27,
+  "failure_line": 18,
+  "failure_statement": "return num_lowerings",
+  "candidates": [
+    {
+      "rank": 1,
+      "node_id": 9,
+      "line_number": 18,
+      "statement_code": "return num_lowerings",
+      "variable_name": "num_lowerings",
+      "observed_value": "-3",
+      "expected_value": "6",
+      "proximity_score": 1.0,
+      "dependency_score": 1.0,
+      "explanation": "Reached via reverse traversal (distance=0, type=Return)"
+    },
+    {
+      "rank": 2,
+      "node_id": 7,
+      "line_number": 14,
+      "statement_code": "num_lowerings += capacity - sum(row)",
+      "variable_name": "num_lowerings",
+      "observed_value": "0",
+      "expected_value": null,
+      "proximity_score": 0.85,
+      "dependency_score": 0.9,
+      "explanation": "Reached via reverse traversal (distance=1, type=AugAssign)"
+    },
+    {
+      "rank": 3,
+      "node_id": 4,
+      "line_number": 7,
+      "statement_code": "for row in grid:",
+      "variable_name": "row",
+      "observed_value": "[1, 1, 1, 1]",
+      "expected_value": null,
+      "proximity_score": 0.7,
+      "dependency_score": 0.81,
+      "explanation": "Reached via reverse traversal (distance=2, type=For)"
+    },
+    {
+      "rank": 4,
+      "node_id": 5,
+      "line_number": 9,
+      "statement_code": "if sum(row) == capacity:",
+      "variable_name": "capacity",
+      "observed_value": "1",
+      "expected_value": null,
+      "proximity_score": 0.7,
+      "dependency_score": 0.63,
+      "explanation": "Reached via reverse traversal (distance=2, type=If)"
+    }
+  ],
+  "critical_variable": null,
+  "counterfactual_results": [
+    {
+      "candidate_rank": 1,
+      "intervention": {
+        "target_variable": "num_lowerings",
+        "target_line": 18,
+        "observed_value": "-3",
+        "counterfactual_value": "6",
+        "operation_type": "AST_transform",
+        "modified_code": "def max_fill(grid, capacity):\n    total_units = 0\n    num_lowerings = 0\n    for row in grid:\n        if sum(row) == capacity:\n            total_units += capacity\n        else:\n            num_lowerings += capacity - sum(row)\n            total_units += sum(row)\n    return 6"
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "Completed",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "TRUE",
+      "execution_time": 0.3006,
+      "status": "EXECUTED",
+      "explanation": "Intervention successfully flipped execution outcome from FAIL to PASS."
+    },
+    {
+      "candidate_rank": 2,
+      "intervention": {
+        "target_variable": "num_lowerings",
+        "target_line": 14,
+        "observed_value": "0",
+        "counterfactual_value": "None",
+        "operation_type": "failed_construction",
+        "modified_code": ""
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "FAILED_CONSTRUCTION",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "UNRESOLVED",
+      "execution_time": 0.0,
+      "status": "UNRESOLVED",
+      "explanation": "Failed to construct valid AST counterfactual intervention."
+    },
+    {
+      "candidate_rank": 3,
+      "intervention": {
+        "target_variable": "row",
+        "target_line": 7,
+        "observed_value": "[1, 1, 1, 1]",
+        "counterfactual_value": "None",
+        "operation_type": "failed_construction",
+        "modified_code": ""
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "FAILED_CONSTRUCTION",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "UNRESOLVED",
+      "execution_time": 0.0,
+      "status": "UNRESOLVED",
+      "explanation": "Failed to construct valid AST counterfactual intervention."
+    },
+    {
+      "candidate_rank": 4,
+      "intervention": {
+        "target_variable": "capacity",
+        "target_line": 9,
+        "observed_value": "1",
+        "counterfactual_value": "None",
+        "operation_type": "AST_transform",
+        "modified_code": "def max_fill(grid, capacity):\n    total_units = 0\n    num_lowerings = 0\n    for row in grid:\n        if sum(row) != capacity:\n            total_units += capacity\n        else:\n            num_lowerings += capacity - sum(row)\n            total_units += sum(row)\n    return num_lowerings"
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "Failed",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "FALSE",
+      "execution_time": 0.3792,
+      "status": "EXECUTED",
+      "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+    }
+  ],
+  "fault_location": {
+    "file": "HE117.py",
+    "line_number": 18,
+    "statement_code": "return num_lowerings",
+    "function_name": "max_fill",
+    "causal_variable": "num_lowerings",
+    "evidence_score": 3.0,
+    "confidence": 0.95
+  },
+  "root_cause": {
+    "root_cause_status": "VALIDATED",
+    "candidate_explanation": "Semantic mismatch at line 18 ('return num_lowerings') causes return value mismatch.",
+    "causal_variable": "num_lowerings",
+    "fault_statement": "return num_lowerings",
+    "fault_line": 18,
+    "evidence_summary": "Reverse PDG traversal traced failure from line 1 to statement line 18. Counterfactual intervention do(num_lowerings = expected) successfully restored PASS state.",
+    "counterfactual_validated": true,
+    "confidence": 0.95
+  },
+  "ground_truth_matched": null,
+  "ground_truth_fault_line": null,
+  "execution_time": 0.6975
+}

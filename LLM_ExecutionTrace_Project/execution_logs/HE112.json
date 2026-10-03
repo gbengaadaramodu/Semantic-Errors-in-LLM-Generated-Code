@@ -1,0 +1,22 @@
+{
+  "trace_id": "HE112",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/131",
+  "problem_summary": "\ndef digits(n):\n    \"\"\"Given a positive integer n, return the product of the odd",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpqus8e2pk.py\", line 23, in <module>\n    check(digits)\n    ~~~~~^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpqus8e2pk.py\", line 19, in check\n    assert candidate(2468) == 0\n           ^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpqus8e2pk.py\", line 23, in <module>\n    check(digits)\n    ~~~~~^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpqus8e2pk.py\", line 19, in check\n    assert candidate(2468) == 0\n           ^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+  "exception_type": "AssertionError",
+  "exception_message": "",
+  "execution_time": 0.256805,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": "benchmark_test",
+  "assertion_failed": true,
+  "parser_prediction": ""
+}

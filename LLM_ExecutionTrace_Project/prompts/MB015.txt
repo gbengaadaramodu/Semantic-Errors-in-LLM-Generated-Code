@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a function to find the nth newman–shanks–williams prime number.
+
+Example test: assert newman_prime(3) == 7
+[/INST]

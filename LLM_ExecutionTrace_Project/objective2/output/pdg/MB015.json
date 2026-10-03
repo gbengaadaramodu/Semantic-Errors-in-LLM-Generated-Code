@@ -1,0 +1,454 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def newman_prime(n):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "n",
+        "newman_prime"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 1,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "if n < 1:",
+      "statement_type": "If",
+      "reads": [
+        "n"
+      ],
+      "writes": [],
+      "function_name": "newman_prime",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "3": {
+      "node_id": 3,
+      "line_number": 3,
+      "source_code": "return None",
+      "statement_type": "Return",
+      "reads": [],
+      "writes": [],
+      "function_name": "newman_prime",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "4": {
+      "node_id": 4,
+      "line_number": 4,
+      "source_code": "if n == 1:",
+      "statement_type": "If",
+      "reads": [
+        "n"
+      ],
+      "writes": [],
+      "function_name": "newman_prime",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "5": {
+      "node_id": 5,
+      "line_number": 5,
+      "source_code": "return 2",
+      "statement_type": "Return",
+      "reads": [],
+      "writes": [],
+      "function_name": "newman_prime",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "6": {
+      "node_id": 6,
+      "line_number": 8,
+      "source_code": "prev_prime = newman_prime(n-1)",
+      "statement_type": "Assign",
+      "reads": [
+        "n",
+        "newman_prime"
+      ],
+      "writes": [
+        "prev_prime"
+      ],
+      "function_name": "newman_prime",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "7": {
+      "node_id": 7,
+      "line_number": 11,
+      "source_code": "next_prime = prev_prime + 2",
+      "statement_type": "Assign",
+      "reads": [
+        "prev_prime"
+      ],
+      "writes": [
+        "next_prime"
+      ],
+      "function_name": "newman_prime",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "8": {
+      "node_id": 8,
+      "line_number": 12,
+      "source_code": "while not is_prime(next_prime):",
+      "statement_type": "While",
+      "reads": [
+        "is_prime",
+        "next_prime"
+      ],
+      "writes": [],
+      "function_name": "newman_prime",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "9": {
+      "node_id": 9,
+      "line_number": 13,
+      "source_code": "next_prime += 2",
+      "statement_type": "AugAssign",
+      "reads": [],
+      "writes": [
+        "next_prime"
+      ],
+      "function_name": "newman_prime",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "10": {
+      "node_id": 10,
+      "line_number": 15,
+      "source_code": "return next_prime",
+      "statement_type": "Return",
+      "reads": [
+        "next_prime"
+      ],
+      "writes": [],
+      "function_name": "newman_prime",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "11": {
+      "node_id": 11,
+      "line_number": 17,
+      "source_code": "def is_prime(n):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "n",
+        "is_prime"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 1,
+      "runtime_values": {
+        "newman_prime": [
+          "<function newman_prime at 0x0000022B6C878180>"
+        ]
+      },
+      "failure_related": false
+    },
+    "12": {
+      "node_id": 12,
+      "line_number": 18,
+      "source_code": "if n <= 1:",
+      "statement_type": "If",
+      "reads": [
+        "n"
+      ],
+      "writes": [],
+      "function_name": "is_prime",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "13": {
+      "node_id": 13,
+      "line_number": 19,
+      "source_code": "return False",
+      "statement_type": "Return",
+      "reads": [],
+      "writes": [],
+      "function_name": "is_prime",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "14": {
+      "node_id": 14,
+      "line_number": 20,
+      "source_code": "for i in range(2, int(n**0.5) + 1):",
+      "statement_type": "For",
+      "reads": [
+        "int",
+        "n",
+        "range"
+      ],
+      "writes": [
+        "i"
+      ],
+      "function_name": "is_prime",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "15": {
+      "node_id": 15,
+      "line_number": 21,
+      "source_code": "if n % i == 0:",
+      "statement_type": "If",
+      "reads": [
+        "i",
+        "n"
+      ],
+      "writes": [],
+      "function_name": "is_prime",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "16": {
+      "node_id": 16,
+      "line_number": 22,
+      "source_code": "return False",
+      "statement_type": "Return",
+      "reads": [],
+      "writes": [],
+      "function_name": "is_prime",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "17": {
+      "node_id": 17,
+      "line_number": 23,
+      "source_code": "return True",
+      "statement_type": "Return",
+      "reads": [],
+      "writes": [],
+      "function_name": "is_prime",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "n",
+      "label": "DATA(n)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 4,
+      "dependency_type": "DATA",
+      "variable": "n",
+      "label": "DATA(n)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 6,
+      "dependency_type": "DATA",
+      "variable": "n",
+      "label": "DATA(n)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 6,
+      "dependency_type": "DATA",
+      "variable": "newman_prime",
+      "label": "DATA(newman_prime)"
+    },
+    {
+      "source_id": 6,
+      "target_id": 7,
+      "dependency_type": "DATA",
+      "variable": "prev_prime",
+      "label": "DATA(prev_prime)"
+    },
+    {
+      "source_id": 7,
+      "target_id": 8,
+      "dependency_type": "DATA",
+      "variable": "next_prime",
+      "label": "DATA(next_prime)"
+    },
+    {
+      "source_id": 9,
+      "target_id": 10,
+      "dependency_type": "DATA",
+      "variable": "next_prime",
+      "label": "DATA(next_prime)"
+    },
+    {
+      "source_id": 11,
+      "target_id": 12,
+      "dependency_type": "DATA",
+      "variable": "n",
+      "label": "DATA(n)"
+    },
+    {
+      "source_id": 11,
+      "target_id": 14,
+      "dependency_type": "DATA",
+      "variable": "n",
+      "label": "DATA(n)"
+    },
+    {
+      "source_id": 14,
+      "target_id": 15,
+      "dependency_type": "DATA",
+      "variable": "i",
+      "label": "DATA(i)"
+    },
+    {
+      "source_id": 11,
+      "target_id": 15,
+      "dependency_type": "DATA",
+      "variable": "n",
+      "label": "DATA(n)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 2,
+      "target_id": 3,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(If)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 4,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 4,
+      "target_id": 5,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(If)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 6,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 7,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 8,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 8,
+      "target_id": 9,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(While)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 10,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 11,
+      "target_id": 12,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 12,
+      "target_id": 13,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(If)"
+    },
+    {
+      "source_id": 11,
+      "target_id": 14,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 14,
+      "target_id": 15,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(For)"
+    },
+    {
+      "source_id": 15,
+      "target_id": 16,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(If)"
+    },
+    {
+      "source_id": 11,
+      "target_id": 17,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    17
+  ]
+}

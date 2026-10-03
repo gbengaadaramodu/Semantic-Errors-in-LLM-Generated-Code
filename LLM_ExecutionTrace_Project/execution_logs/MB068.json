@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB068",
+  "dataset": "MBPP",
+  "task_id": "239",
+  "problem_summary": "Write a function that takes in positive integers m and n and finds the number of",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpa694wg6n.py\", line 7, in <module>\n    assert get_total_number_of_sequences(10, 4) == 4\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nNameError: name 'get_total_number_of_sequences' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpa694wg6n.py\", line 7, in <module>\n    assert get_total_number_of_sequences(10, 4) == 4\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nNameError: name 'get_total_number_of_sequences' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'get_total_number_of_sequences' is not defined",
+  "execution_time": 0.256611,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

@@ -1,0 +1,934 @@
+{
+  "trace_id": "HE088",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/147",
+  "error_category": "Wrong-Output Error",
+  "analysis_status": "ANALYZED",
+  "skip_reason": null,
+  "input_record": {
+    "trace_id": "HE088",
+    "dataset": "HumanEval",
+    "task_id": "HumanEval/147",
+    "problem_summary": "\ndef get_max_triples(n):\n    \"\"\"\n    You are given a positive integer n. You hav",
+    "execution_status": "Failed",
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpujqj6jq7.py\", line 19, in <module>\n    check(get_max_triples)\n    ~~~~~^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpujqj6jq7.py\", line 13, in check\n    assert candidate(5) == 1\n           ^^^^^^^^^^^^^^^^^\nAssertionError\n",
+    "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpujqj6jq7.py\", line 19, in <module>\n    check(get_max_triples)\n    ~~~~~^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpujqj6jq7.py\", line 13, in check\n    assert candidate(5) == 1\n           ^^^^^^^^^^^^^^^^^\nAssertionError",
+    "exception_type": "AssertionError",
+    "exception_message": "",
+    "execution_time": 0.212028,
+    "timed_out": false,
+    "exit_code": 1,
+    "tests_passed": false,
+    "tests_failed": 0,
+    "expected_output": null,
+    "actual_output": null,
+    "assertion_source": "benchmark_test",
+    "assertion_failed": true,
+    "parser_prediction": "Wrong-Output Error"
+  },
+  "scm": {
+    "task_id": "HumanEval/147",
+    "nodes": [
+      {
+        "node_id": "S",
+        "variable_name": "Specification",
+        "symbol": "S",
+        "label": "Specification"
+      },
+      {
+        "node_id": "C",
+        "variable_name": "GeneratedCode",
+        "symbol": "C",
+        "label": "Generated Code"
+      },
+      {
+        "node_id": "E",
+        "variable_name": "ExecutionTrace",
+        "symbol": "E",
+        "label": "Execution Trace"
+      },
+      {
+        "node_id": "T",
+        "variable_name": "TestSuite",
+        "symbol": "T",
+        "label": "Test Suite"
+      },
+      {
+        "node_id": "O",
+        "variable_name": "Outcome",
+        "symbol": "O",
+        "label": "Outcome"
+      }
+    ],
+    "edges": [
+      {
+        "source": "S",
+        "target": "C",
+        "relationship": "generates"
+      },
+      {
+        "source": "C",
+        "target": "E",
+        "relationship": "produces"
+      },
+      {
+        "source": "T",
+        "target": "E",
+        "relationship": "evaluates"
+      },
+      {
+        "source": "E",
+        "target": "O",
+        "relationship": "determines"
+      }
+    ],
+    "variables": {
+      "S": {
+        "name": "Specification",
+        "symbol": "S",
+        "description": "Problem description, prompt, and target function signature",
+        "value": "\ndef get_max_triples(n):\n    \"\"\"\n    You are given a positive integer n. You hav"
+      },
+      "C": {
+        "name": "GeneratedCode",
+        "symbol": "C",
+        "description": "LLM-generated Python source code implementation",
+        "value": "def get_max_triples(n):\n    a = [i*i-i+1 for i in range(1, n+1)]\n    count = 0\n    for i in range(n-2):\n        for j in range(i+1, n-1):\n            for k in range(j+1, n):\n                if a[i] + "
+      },
+      "E": {
+        "name": "ExecutionTrace",
+        "symbol": "E",
+        "description": "Observable runtime trace events, variable states, and stdout/stderr",
+        "value": "status=Failed, exc=AssertionError, msg="
+      },
+      "T": {
+        "name": "TestSuite",
+        "symbol": "T",
+        "description": "Benchmark assertions, inputs, and check function harness",
+        "value": "def check(candidate):\n\n    assert candidate(5) == 1\n    assert candidate(6) == 4\n    assert candidat"
+      },
+      "O": {
+        "name": "Outcome",
+        "symbol": "O",
+        "description": "Final test execution outcome (Completed/Failed/Timeout)",
+        "value": "Failed"
+      }
+    }
+  },
+  "pdg": {
+    "nodes": {
+      "1": {
+        "node_id": 1,
+        "line_number": 1,
+        "source_code": "def get_max_triples(n):",
+        "statement_type": "FunctionDef",
+        "reads": [],
+        "writes": [
+          "n",
+          "get_max_triples"
+        ],
+        "function_name": "<module>",
+        "executed": true,
+        "execution_count": 2,
+        "runtime_values": {
+          "n": [
+            "5"
+          ]
+        },
+        "failure_related": false
+      },
+      "2": {
+        "node_id": 2,
+        "line_number": 2,
+        "source_code": "a = [i*i-i+1 for i in range(1, n+1)]",
+        "statement_type": "Assign",
+        "reads": [
+          "i",
+          "n",
+          "range"
+        ],
+        "writes": [
+          "a",
+          "i"
+        ],
+        "function_name": "get_max_triples",
+        "executed": true,
+        "execution_count": 6,
+        "runtime_values": {
+          "n": [
+            "5",
+            "5",
+            "5",
+            "5",
+            "5",
+            "5"
+          ],
+          "i": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5"
+          ]
+        },
+        "failure_related": false
+      },
+      "3": {
+        "node_id": 3,
+        "line_number": 3,
+        "source_code": "count = 0",
+        "statement_type": "Assign",
+        "reads": [],
+        "writes": [
+          "count"
+        ],
+        "function_name": "get_max_triples",
+        "executed": true,
+        "execution_count": 1,
+        "runtime_values": {
+          "n": [
+            "5"
+          ],
+          "a": [
+            "[1, 3, 7, 13, 21]"
+          ]
+        },
+        "failure_related": false
+      },
+      "4": {
+        "node_id": 4,
+        "line_number": 4,
+        "source_code": "for i in range(n-2):",
+        "statement_type": "For",
+        "reads": [
+          "n",
+          "range"
+        ],
+        "writes": [
+          "i"
+        ],
+        "function_name": "get_max_triples",
+        "executed": true,
+        "execution_count": 4,
+        "runtime_values": {
+          "n": [
+            "5",
+            "5",
+            "5",
+            "5"
+          ],
+          "a": [
+            "[1, 3, 7, 13, 21]",
+            "[1, 3, 7, 13, 21]",
+            "[1, 3, 7, 13, 21]",
+            "[1, 3, 7, 13, 21]"
+          ],
+          "count": [
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "i": [
+            "0",
+            "1",
+            "2"
+          ],
+          "j": [
+            "3",
+            "3",
+            "3"
+          ],
+          "k": [
+            "4",
+            "4",
+            "4"
+          ]
+        },
+        "failure_related": false
+      },
+      "5": {
+        "node_id": 5,
+        "line_number": 5,
+        "source_code": "for j in range(i+1, n-1):",
+        "statement_type": "For",
+        "reads": [
+          "i",
+          "n",
+          "range"
+        ],
+        "writes": [
+          "j"
+        ],
+        "function_name": "get_max_triples",
+        "executed": true,
+        "execution_count": 9,
+        "runtime_values": {
+          "n": [
+            "5",
+            "5",
+            "5",
+            "5",
+            "5",
+            "5",
+            "5",
+            "5",
+            "5"
+          ],
+          "i": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "1",
+            "1",
+            "1",
+            "2",
+            "2"
+          ],
+          "a": [
+            "[1, 3, 7, 13, 21]",
+            "[1, 3, 7, 13, 21]",
+            "[1, 3, 7, 13, 21]",
+            "[1, 3, 7, 13, 21]",
+            "[1, 3, 7, 13, 21]",
+            "[1, 3, 7, 13, 21]",
+            "[1, 3, 7, 13, 21]",
+            "[1, 3, 7, 13, 21]",
+            "[1, 3, 7, 13, 21]"
+          ],
+          "count": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "j": [
+            "1",
+            "2",
+            "3",
+            "3",
+            "2",
+            "3",
+            "3",
+            "3"
+          ],
+          "k": [
+            "4",
+            "4",
+            "4",
+            "4",
+            "4",
+            "4",
+            "4",
+            "4"
+          ]
+        },
+        "failure_related": false
+      },
+      "6": {
+        "node_id": 6,
+        "line_number": 6,
+        "source_code": "for k in range(j+1, n):",
+        "statement_type": "For",
+        "reads": [
+          "j",
+          "n",
+          "range"
+        ],
+        "writes": [
+          "k"
+        ],
+        "function_name": "get_max_triples",
+        "executed": true,
+        "execution_count": 16,
+        "runtime_values": {
+          "n": [
+            "5",
+            "5",
+            "5",
+            "5",
+            "5",
+            "5",
+            "5",
+            "5",
+            "5",
+            "5",
+            "5",
+            "5",
+            "5",
+            "5",
+            "5",
+            "5"
+          ],
+          "i": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "2",
+            "2"
+          ],
+          "a": [
+            "[1, 3, 7, 13, 21]",
+            "[1, 3, 7, 13, 21]",
+            "[1, 3, 7, 13, 21]",
+            "[1, 3, 7, 13, 21]",
+            "[1, 3, 7, 13, 21]",
+            "[1, 3, 7, 13, 21]",
+            "[1, 3, 7, 13, 21]",
+            "[1, 3, 7, 13, 21]",
+            "[1, 3, 7, 13, 21]",
+            "[1, 3, 7, 13, 21]",
+            "[1, 3, 7, 13, 21]",
+            "[1, 3, 7, 13, 21]",
+            "[1, 3, 7, 13, 21]",
+            "[1, 3, 7, 13, 21]",
+            "[1, 3, 7, 13, 21]",
+            "[1, 3, 7, 13, 21]"
+          ],
+          "count": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "j": [
+            "1",
+            "1",
+            "1",
+            "1",
+            "2",
+            "2",
+            "2",
+            "3",
+            "3",
+            "2",
+            "2",
+            "2",
+            "3",
+            "3",
+            "3",
+            "3"
+          ],
+          "k": [
+            "2",
+            "3",
+            "4",
+            "4",
+            "3",
+            "4",
+            "4",
+            "4",
+            "4",
+            "3",
+            "4",
+            "4",
+            "4",
+            "4",
+            "4"
+          ]
+        },
+        "failure_related": false
+      },
+      "7": {
+        "node_id": 7,
+        "line_number": 7,
+        "source_code": "if a[i] + a[j] + a[k] % 3 == 0:",
+        "statement_type": "If",
+        "reads": [
+          "a",
+          "i",
+          "j",
+          "k"
+        ],
+        "writes": [],
+        "function_name": "get_max_triples",
+        "executed": true,
+        "execution_count": 10,
+        "runtime_values": {
+          "n": [
+            "5",
+            "5",
+            "5",
+            "5",
+            "5",
+            "5",
+            "5",
+            "5",
+            "5",
+            "5"
+          ],
+          "i": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "1",
+            "1",
+            "1",
+            "2"
+          ],
+          "a": [
+            "[1, 3, 7, 13, 21]",
+            "[1, 3, 7, 13, 21]",
+            "[1, 3, 7, 13, 21]",
+            "[1, 3, 7, 13, 21]",
+            "[1, 3, 7, 13, 21]",
+            "[1, 3, 7, 13, 21]",
+            "[1, 3, 7, 13, 21]",
+            "[1, 3, 7, 13, 21]",
+            "[1, 3, 7, 13, 21]",
+            "[1, 3, 7, 13, 21]"
+          ],
+          "count": [
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          "j": [
+            "1",
+            "1",
+            "1",
+            "2",
+            "2",
+            "3",
+            "2",
+            "2",
+            "3",
+            "3"
+          ],
+          "k": [
+            "2",
+            "3",
+            "4",
+            "3",
+            "4",
+            "4",
+            "3",
+            "4",
+            "4",
+            "4"
+          ]
+        },
+        "failure_related": false
+      },
+      "8": {
+        "node_id": 8,
+        "line_number": 8,
+        "source_code": "count += 1",
+        "statement_type": "AugAssign",
+        "reads": [],
+        "writes": [
+          "count"
+        ],
+        "function_name": "get_max_triples",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "9": {
+        "node_id": 9,
+        "line_number": 9,
+        "source_code": "return count",
+        "statement_type": "Return",
+        "reads": [
+          "count"
+        ],
+        "writes": [],
+        "function_name": "get_max_triples",
+        "executed": true,
+        "execution_count": 2,
+        "runtime_values": {
+          "n": [
+            "5",
+            "5"
+          ],
+          "i": [
+            "2",
+            "2"
+          ],
+          "a": [
+            "[1, 3, 7, 13, 21]",
+            "[1, 3, 7, 13, 21]"
+          ],
+          "count": [
+            "0",
+            "0"
+          ],
+          "j": [
+            "3",
+            "3"
+          ],
+          "k": [
+            "4",
+            "4"
+          ]
+        },
+        "failure_related": true
+      }
+    },
+    "edges": [
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "DATA",
+        "variable": "n",
+        "label": "DATA(n)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 4,
+        "dependency_type": "DATA",
+        "variable": "n",
+        "label": "DATA(n)"
+      },
+      {
+        "source_id": 4,
+        "target_id": 5,
+        "dependency_type": "DATA",
+        "variable": "i",
+        "label": "DATA(i)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 5,
+        "dependency_type": "DATA",
+        "variable": "n",
+        "label": "DATA(n)"
+      },
+      {
+        "source_id": 5,
+        "target_id": 6,
+        "dependency_type": "DATA",
+        "variable": "j",
+        "label": "DATA(j)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 6,
+        "dependency_type": "DATA",
+        "variable": "n",
+        "label": "DATA(n)"
+      },
+      {
+        "source_id": 2,
+        "target_id": 7,
+        "dependency_type": "DATA",
+        "variable": "a",
+        "label": "DATA(a)"
+      },
+      {
+        "source_id": 4,
+        "target_id": 7,
+        "dependency_type": "DATA",
+        "variable": "i",
+        "label": "DATA(i)"
+      },
+      {
+        "source_id": 5,
+        "target_id": 7,
+        "dependency_type": "DATA",
+        "variable": "j",
+        "label": "DATA(j)"
+      },
+      {
+        "source_id": 6,
+        "target_id": 7,
+        "dependency_type": "DATA",
+        "variable": "k",
+        "label": "DATA(k)"
+      },
+      {
+        "source_id": 8,
+        "target_id": 9,
+        "dependency_type": "DATA",
+        "variable": "count",
+        "label": "DATA(count)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 3,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 4,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 4,
+        "target_id": 5,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(For)"
+      },
+      {
+        "source_id": 5,
+        "target_id": 6,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(For)"
+      },
+      {
+        "source_id": 6,
+        "target_id": 7,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(For)"
+      },
+      {
+        "source_id": 7,
+        "target_id": 8,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(If)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 9,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      }
+    ],
+    "entry_node_id": 1,
+    "failure_node_ids": [
+      9
+    ]
+  },
+  "runtime_events_count": 59,
+  "failure_line": 9,
+  "failure_statement": "return count",
+  "candidates": [
+    {
+      "rank": 1,
+      "node_id": 9,
+      "line_number": 9,
+      "statement_code": "return count",
+      "variable_name": "count",
+      "observed_value": "0",
+      "expected_value": "1",
+      "proximity_score": 1.0,
+      "dependency_score": 1.0,
+      "explanation": "Reached via reverse traversal (distance=0, type=Return)"
+    },
+    {
+      "rank": 2,
+      "node_id": 8,
+      "line_number": 8,
+      "statement_code": "count += 1",
+      "variable_name": "count",
+      "observed_value": null,
+      "expected_value": null,
+      "proximity_score": 0.85,
+      "dependency_score": 0.9,
+      "explanation": "Reached via reverse traversal (distance=1, type=AugAssign)"
+    },
+    {
+      "rank": 3,
+      "node_id": 4,
+      "line_number": 4,
+      "statement_code": "for i in range(n-2):",
+      "variable_name": "i",
+      "observed_value": "2",
+      "expected_value": null,
+      "proximity_score": 0.55,
+      "dependency_score": 0.567,
+      "explanation": "Reached via reverse traversal (distance=3, type=For)"
+    },
+    {
+      "rank": 4,
+      "node_id": 7,
+      "line_number": 7,
+      "statement_code": "if a[i] + a[j] + a[k] % 3 == 0:",
+      "variable_name": "a",
+      "observed_value": "[1, 3, 7, 13, 21]",
+      "expected_value": null,
+      "proximity_score": 0.7,
+      "dependency_score": 0.63,
+      "explanation": "Reached via reverse traversal (distance=2, type=If)"
+    },
+    {
+      "rank": 5,
+      "node_id": 2,
+      "line_number": 2,
+      "statement_code": "a = [i*i-i+1 for i in range(1, n+1)]",
+      "variable_name": "a",
+      "observed_value": null,
+      "expected_value": null,
+      "proximity_score": 0.55,
+      "dependency_score": 0.567,
+      "explanation": "Reached via reverse traversal (distance=3, type=Assign)"
+    }
+  ],
+  "critical_variable": null,
+  "counterfactual_results": [
+    {
+      "candidate_rank": 1,
+      "intervention": {
+        "target_variable": "count",
+        "target_line": 9,
+        "observed_value": "0",
+        "counterfactual_value": "1",
+        "operation_type": "AST_transform",
+        "modified_code": "def get_max_triples(n):\n    a = [i * i - i + 1 for i in range(1, n + 1)]\n    count = 0\n    for i in range(n - 2):\n        for j in range(i + 1, n - 1):\n            for k in range(j + 1, n):\n                if a[i] + a[j] + a[k] % 3 == 0:\n                    count += 1\n    return 1"
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "Completed",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "TRUE",
+      "execution_time": 0.1281,
+      "status": "EXECUTED",
+      "explanation": "Intervention successfully flipped execution outcome from FAIL to PASS."
+    },
+    {
+      "candidate_rank": 2,
+      "intervention": {
+        "target_variable": "count",
+        "target_line": 8,
+        "observed_value": "None",
+        "counterfactual_value": "None",
+        "operation_type": "failed_construction",
+        "modified_code": ""
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "FAILED_CONSTRUCTION",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "UNRESOLVED",
+      "execution_time": 0.0,
+      "status": "UNRESOLVED",
+      "explanation": "Failed to construct valid AST counterfactual intervention."
+    },
+    {
+      "candidate_rank": 3,
+      "intervention": {
+        "target_variable": "a",
+        "target_line": 7,
+        "observed_value": "[1, 3, 7, 13, 21]",
+        "counterfactual_value": "None",
+        "operation_type": "AST_transform",
+        "modified_code": "def get_max_triples(n):\n    a = [i * i - i + 1 for i in range(1, n + 1)]\n    count = 0\n    for i in range(n - 2):\n        for j in range(i + 1, n - 1):\n            for k in range(j + 1, n):\n                if a[i] + a[j] + a[k] % 3 != 0:\n                    count += 1\n    return count"
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "Failed",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "FALSE",
+      "execution_time": 0.235,
+      "status": "EXECUTED",
+      "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+    },
+    {
+      "candidate_rank": 4,
+      "intervention": {
+        "target_variable": "a",
+        "target_line": 2,
+        "observed_value": "None",
+        "counterfactual_value": "None",
+        "operation_type": "AST_transform",
+        "modified_code": "def get_max_triples(n):\n    a = None\n    count = 0\n    for i in range(n - 2):\n        for j in range(i + 1, n - 1):\n            for k in range(j + 1, n):\n                if a[i] + a[j] + a[k] % 3 == 0:\n                    count += 1\n    return count"
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "Failed",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "FALSE",
+      "execution_time": 0.2645,
+      "status": "EXECUTED",
+      "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+    },
+    {
+      "candidate_rank": 5,
+      "intervention": {
+        "target_variable": "i",
+        "target_line": 4,
+        "observed_value": "2",
+        "counterfactual_value": "None",
+        "operation_type": "failed_construction",
+        "modified_code": ""
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "FAILED_CONSTRUCTION",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "UNRESOLVED",
+      "execution_time": 0.0,
+      "status": "UNRESOLVED",
+      "explanation": "Failed to construct valid AST counterfactual intervention."
+    }
+  ],
+  "fault_location": {
+    "file": "HE088.py",
+    "line_number": 9,
+    "statement_code": "return count",
+    "function_name": "get_max_triples",
+    "causal_variable": "count",
+    "evidence_score": 3.0,
+    "confidence": 0.95
+  },
+  "root_cause": {
+    "root_cause_status": "VALIDATED",
+    "candidate_explanation": "Semantic mismatch at line 9 ('return count') causes return value mismatch.",
+    "causal_variable": "count",
+    "fault_statement": "return count",
+    "fault_line": 9,
+    "evidence_summary": "Reverse PDG traversal traced failure from line 1 to statement line 9. Counterfactual intervention do(count = expected) successfully restored PASS state.",
+    "counterfactual_validated": true,
+    "confidence": 0.95
+  },
+  "ground_truth_matched": null,
+  "ground_truth_fault_line": null,
+  "execution_time": 0.6467
+}

@@ -1,0 +1,589 @@
+{
+  "trace_id": "HE142",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/132",
+  "error_category": "Wrong-Output Error",
+  "analysis_status": "ANALYZED",
+  "skip_reason": null,
+  "input_record": {
+    "trace_id": "HE142",
+    "dataset": "HumanEval",
+    "task_id": "HumanEval/132",
+    "problem_summary": "\ndef is_nested(string):\n    '''\n    Create a function that takes a string as inp",
+    "execution_status": "Failed",
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpb6v8l7c2.py\", line 34, in <module>\n    check(is_nested)\n    ~~~~~^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpb6v8l7c2.py\", line 15, in check\n    assert candidate('[[]]') == True, \"This prints if this assert fails 1 (good for debugging!)\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: This prints if this assert fails 1 (good for debugging!)\n",
+    "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpb6v8l7c2.py\", line 34, in <module>\n    check(is_nested)\n    ~~~~~^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpb6v8l7c2.py\", line 15, in check\n    assert candidate('[[]]') == True, \"This prints if this assert fails 1 (good for debugging!)\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: This prints if this assert fails 1 (good for debugging!)",
+    "exception_type": "AssertionError",
+    "exception_message": "This prints if this assert fails 1 (good for debugging!)",
+    "execution_time": 0.212775,
+    "timed_out": false,
+    "exit_code": 1,
+    "tests_passed": false,
+    "tests_failed": 0,
+    "expected_output": null,
+    "actual_output": null,
+    "assertion_source": "benchmark_test",
+    "assertion_failed": true,
+    "parser_prediction": "Wrong-Output Error"
+  },
+  "scm": {
+    "task_id": "HumanEval/132",
+    "nodes": [
+      {
+        "node_id": "S",
+        "variable_name": "Specification",
+        "symbol": "S",
+        "label": "Specification"
+      },
+      {
+        "node_id": "C",
+        "variable_name": "GeneratedCode",
+        "symbol": "C",
+        "label": "Generated Code"
+      },
+      {
+        "node_id": "E",
+        "variable_name": "ExecutionTrace",
+        "symbol": "E",
+        "label": "Execution Trace"
+      },
+      {
+        "node_id": "T",
+        "variable_name": "TestSuite",
+        "symbol": "T",
+        "label": "Test Suite"
+      },
+      {
+        "node_id": "O",
+        "variable_name": "Outcome",
+        "symbol": "O",
+        "label": "Outcome"
+      }
+    ],
+    "edges": [
+      {
+        "source": "S",
+        "target": "C",
+        "relationship": "generates"
+      },
+      {
+        "source": "C",
+        "target": "E",
+        "relationship": "produces"
+      },
+      {
+        "source": "T",
+        "target": "E",
+        "relationship": "evaluates"
+      },
+      {
+        "source": "E",
+        "target": "O",
+        "relationship": "determines"
+      }
+    ],
+    "variables": {
+      "S": {
+        "name": "Specification",
+        "symbol": "S",
+        "description": "Problem description, prompt, and target function signature",
+        "value": "\ndef is_nested(string):\n    '''\n    Create a function that takes a string as inp"
+      },
+      "C": {
+        "name": "GeneratedCode",
+        "symbol": "C",
+        "description": "LLM-generated Python source code implementation",
+        "value": "def is_nested(string):\n    stack = []\n    for char in string:\n        if char == \"[\" and len(stack) > 0 and stack[-1] == \"]\":\n            return True\n        elif char == \"[\":\n            stack.append"
+      },
+      "E": {
+        "name": "ExecutionTrace",
+        "symbol": "E",
+        "description": "Observable runtime trace events, variable states, and stdout/stderr",
+        "value": "status=Failed, exc=AssertionError, msg=This prints if this assert fails 1 (good for debugging!)"
+      },
+      "T": {
+        "name": "TestSuite",
+        "symbol": "T",
+        "description": "Benchmark assertions, inputs, and check function harness",
+        "value": "def check(candidate):\n\n    # Check some simple cases\n    assert candidate('[[]]') == True, \"This pri"
+      },
+      "O": {
+        "name": "Outcome",
+        "symbol": "O",
+        "description": "Final test execution outcome (Completed/Failed/Timeout)",
+        "value": "Failed"
+      }
+    }
+  },
+  "pdg": {
+    "nodes": {
+      "1": {
+        "node_id": 1,
+        "line_number": 1,
+        "source_code": "def is_nested(string):",
+        "statement_type": "FunctionDef",
+        "reads": [],
+        "writes": [
+          "string",
+          "is_nested"
+        ],
+        "function_name": "<module>",
+        "executed": true,
+        "execution_count": 2,
+        "runtime_values": {
+          "string": [
+            "[[]]"
+          ]
+        },
+        "failure_related": false
+      },
+      "2": {
+        "node_id": 2,
+        "line_number": 2,
+        "source_code": "stack = []",
+        "statement_type": "Assign",
+        "reads": [],
+        "writes": [
+          "stack"
+        ],
+        "function_name": "is_nested",
+        "executed": true,
+        "execution_count": 1,
+        "runtime_values": {
+          "string": [
+            "[[]]"
+          ]
+        },
+        "failure_related": false
+      },
+      "3": {
+        "node_id": 3,
+        "line_number": 3,
+        "source_code": "for char in string:",
+        "statement_type": "For",
+        "reads": [
+          "string"
+        ],
+        "writes": [
+          "char"
+        ],
+        "function_name": "is_nested",
+        "executed": true,
+        "execution_count": 5,
+        "runtime_values": {
+          "string": [
+            "[[]]",
+            "[[]]",
+            "[[]]",
+            "[[]]",
+            "[[]]"
+          ],
+          "stack": [
+            "[]",
+            "['[']",
+            "['[', '[']",
+            "['[']",
+            "[]"
+          ],
+          "char": [
+            "[",
+            "[",
+            "]",
+            "]"
+          ]
+        },
+        "failure_related": false
+      },
+      "4": {
+        "node_id": 4,
+        "line_number": 4,
+        "source_code": "if char == \"[\" and len(stack) > 0 and stack[-1] == \"]\":",
+        "statement_type": "If",
+        "reads": [
+          "char",
+          "len",
+          "stack"
+        ],
+        "writes": [],
+        "function_name": "is_nested",
+        "executed": true,
+        "execution_count": 4,
+        "runtime_values": {
+          "string": [
+            "[[]]",
+            "[[]]",
+            "[[]]",
+            "[[]]"
+          ],
+          "stack": [
+            "[]",
+            "['[']",
+            "['[', '[']",
+            "['[']"
+          ],
+          "char": [
+            "[",
+            "[",
+            "]",
+            "]"
+          ]
+        },
+        "failure_related": false
+      },
+      "5": {
+        "node_id": 5,
+        "line_number": 5,
+        "source_code": "return True",
+        "statement_type": "Return",
+        "reads": [],
+        "writes": [],
+        "function_name": "is_nested",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "6": {
+        "node_id": 6,
+        "line_number": 6,
+        "source_code": "elif char == \"[\":",
+        "statement_type": "If",
+        "reads": [
+          "char"
+        ],
+        "writes": [],
+        "function_name": "is_nested",
+        "executed": true,
+        "execution_count": 4,
+        "runtime_values": {
+          "string": [
+            "[[]]",
+            "[[]]",
+            "[[]]",
+            "[[]]"
+          ],
+          "stack": [
+            "[]",
+            "['[']",
+            "['[', '[']",
+            "['[']"
+          ],
+          "char": [
+            "[",
+            "[",
+            "]",
+            "]"
+          ]
+        },
+        "failure_related": false
+      },
+      "7": {
+        "node_id": 7,
+        "line_number": 7,
+        "source_code": "stack.append(char)",
+        "statement_type": "Expr",
+        "reads": [
+          "char",
+          "stack"
+        ],
+        "writes": [],
+        "function_name": "is_nested",
+        "executed": true,
+        "execution_count": 2,
+        "runtime_values": {
+          "string": [
+            "[[]]",
+            "[[]]"
+          ],
+          "stack": [
+            "[]",
+            "['[']"
+          ],
+          "char": [
+            "[",
+            "["
+          ]
+        },
+        "failure_related": false
+      },
+      "8": {
+        "node_id": 8,
+        "line_number": 8,
+        "source_code": "elif char == \"]\" and len(stack) > 0 and stack[-1] == \"[\":",
+        "statement_type": "If",
+        "reads": [
+          "char",
+          "len",
+          "stack"
+        ],
+        "writes": [],
+        "function_name": "is_nested",
+        "executed": true,
+        "execution_count": 2,
+        "runtime_values": {
+          "string": [
+            "[[]]",
+            "[[]]"
+          ],
+          "stack": [
+            "['[', '[']",
+            "['[']"
+          ],
+          "char": [
+            "]",
+            "]"
+          ]
+        },
+        "failure_related": false
+      },
+      "9": {
+        "node_id": 9,
+        "line_number": 9,
+        "source_code": "stack.pop()",
+        "statement_type": "Expr",
+        "reads": [
+          "stack"
+        ],
+        "writes": [],
+        "function_name": "is_nested",
+        "executed": true,
+        "execution_count": 2,
+        "runtime_values": {
+          "string": [
+            "[[]]",
+            "[[]]"
+          ],
+          "stack": [
+            "['[', '[']",
+            "['[']"
+          ],
+          "char": [
+            "]",
+            "]"
+          ]
+        },
+        "failure_related": false
+      },
+      "10": {
+        "node_id": 10,
+        "line_number": 10,
+        "source_code": "return False",
+        "statement_type": "Return",
+        "reads": [],
+        "writes": [],
+        "function_name": "is_nested",
+        "executed": true,
+        "execution_count": 2,
+        "runtime_values": {
+          "string": [
+            "[[]]",
+            "[[]]"
+          ],
+          "stack": [
+            "[]",
+            "[]"
+          ],
+          "char": [
+            "]",
+            "]"
+          ]
+        },
+        "failure_related": true
+      }
+    },
+    "edges": [
+      {
+        "source_id": 1,
+        "target_id": 3,
+        "dependency_type": "DATA",
+        "variable": "string",
+        "label": "DATA(string)"
+      },
+      {
+        "source_id": 3,
+        "target_id": 4,
+        "dependency_type": "DATA",
+        "variable": "char",
+        "label": "DATA(char)"
+      },
+      {
+        "source_id": 2,
+        "target_id": 4,
+        "dependency_type": "DATA",
+        "variable": "stack",
+        "label": "DATA(stack)"
+      },
+      {
+        "source_id": 3,
+        "target_id": 6,
+        "dependency_type": "DATA",
+        "variable": "char",
+        "label": "DATA(char)"
+      },
+      {
+        "source_id": 3,
+        "target_id": 7,
+        "dependency_type": "DATA",
+        "variable": "char",
+        "label": "DATA(char)"
+      },
+      {
+        "source_id": 2,
+        "target_id": 7,
+        "dependency_type": "DATA",
+        "variable": "stack",
+        "label": "DATA(stack)"
+      },
+      {
+        "source_id": 3,
+        "target_id": 8,
+        "dependency_type": "DATA",
+        "variable": "char",
+        "label": "DATA(char)"
+      },
+      {
+        "source_id": 2,
+        "target_id": 8,
+        "dependency_type": "DATA",
+        "variable": "stack",
+        "label": "DATA(stack)"
+      },
+      {
+        "source_id": 2,
+        "target_id": 9,
+        "dependency_type": "DATA",
+        "variable": "stack",
+        "label": "DATA(stack)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 3,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 3,
+        "target_id": 4,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(For)"
+      },
+      {
+        "source_id": 4,
+        "target_id": 5,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(If)"
+      },
+      {
+        "source_id": 4,
+        "target_id": 6,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(If)"
+      },
+      {
+        "source_id": 6,
+        "target_id": 7,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(If)"
+      },
+      {
+        "source_id": 6,
+        "target_id": 8,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(If)"
+      },
+      {
+        "source_id": 8,
+        "target_id": 9,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(If)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 10,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      }
+    ],
+    "entry_node_id": 1,
+    "failure_node_ids": [
+      10
+    ]
+  },
+  "runtime_events_count": 33,
+  "failure_line": 10,
+  "failure_statement": "return False",
+  "candidates": [
+    {
+      "rank": 1,
+      "node_id": 10,
+      "line_number": 10,
+      "statement_code": "return False",
+      "variable_name": "<statement>",
+      "observed_value": null,
+      "expected_value": "True",
+      "proximity_score": 1.0,
+      "dependency_score": 1.0,
+      "explanation": "Reached via reverse traversal (distance=0, type=Return)"
+    }
+  ],
+  "critical_variable": null,
+  "counterfactual_results": [
+    {
+      "candidate_rank": 1,
+      "intervention": {
+        "target_variable": "<statement>",
+        "target_line": 10,
+        "observed_value": "None",
+        "counterfactual_value": "True",
+        "operation_type": "failed_construction",
+        "modified_code": ""
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "FAILED_CONSTRUCTION",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "UNRESOLVED",
+      "execution_time": 0.0,
+      "status": "UNRESOLVED",
+      "explanation": "Failed to construct valid AST counterfactual intervention."
+    }
+  ],
+  "fault_location": {
+    "file": "HE142.py",
+    "line_number": 10,
+    "statement_code": "return False",
+    "function_name": "is_nested",
+    "causal_variable": "<statement>",
+    "evidence_score": 1.0,
+    "confidence": 0.5
+  },
+  "root_cause": {
+    "root_cause_status": "UNRESOLVED",
+    "candidate_explanation": "Semantic mismatch at line 10 ('return False') causes return value mismatch.",
+    "causal_variable": "<statement>",
+    "fault_statement": "return False",
+    "fault_line": 10,
+    "evidence_summary": "Reverse PDG traversal traced failure from line 1 to statement line 10. Structural dependency identified; counterfactual validation unconfirmed or unresolved.",
+    "counterfactual_validated": false,
+    "confidence": 0.5
+  },
+  "ground_truth_matched": null,
+  "ground_truth_fault_line": null,
+  "execution_time": 0.0131
+}

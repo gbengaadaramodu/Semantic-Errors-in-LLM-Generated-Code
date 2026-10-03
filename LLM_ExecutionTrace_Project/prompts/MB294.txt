@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a function to convert the given snake case string to camel case string.
+
+Example test: assert snake_to_camel('android_tv') == 'AndroidTv'
+[/INST]

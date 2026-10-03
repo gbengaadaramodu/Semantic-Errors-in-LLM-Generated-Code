@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB145",
+  "dataset": "MBPP",
+  "task_id": "131",
+  "problem_summary": "Write a python function to reverse only the vowels of a given string (where y is",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpecnk7g1e.py\", line 10, in <module>\n    assert reverse_vowels(\"Python\") == \"Python\"\n           ^^^^^^^^^^^^^^\nNameError: name 'reverse_vowels' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpecnk7g1e.py\", line 10, in <module>\n    assert reverse_vowels(\"Python\") == \"Python\"\n           ^^^^^^^^^^^^^^\nNameError: name 'reverse_vowels' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'reverse_vowels' is not defined",
+  "execution_time": 0.18201,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

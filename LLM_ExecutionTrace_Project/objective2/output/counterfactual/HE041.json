@@ -1,0 +1,78 @@
+[
+  {
+    "candidate_rank": 1,
+    "intervention": {
+      "target_variable": "res",
+      "target_line": 8,
+      "observed_value": "None",
+      "counterfactual_value": "None",
+      "operation_type": "AST_transform",
+      "modified_code": "def change_base(x: int, base: int):\n    if x == 0:\n        return '0'\n    digs = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'\n    while x > 0:\n        r = x % base\n        x = x // base\n        res = None\n    return res"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.1807,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  },
+  {
+    "candidate_rank": 2,
+    "intervention": {
+      "target_variable": "digs",
+      "target_line": 4,
+      "observed_value": "None",
+      "counterfactual_value": "None",
+      "operation_type": "AST_transform",
+      "modified_code": "def change_base(x: int, base: int):\n    if x == 0:\n        return '0'\n    digs = None\n    while x > 0:\n        r = x % base\n        x = x // base\n        res = digs[r] + res\n    return res"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.2244,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  },
+  {
+    "candidate_rank": 3,
+    "intervention": {
+      "target_variable": "r",
+      "target_line": 6,
+      "observed_value": "None",
+      "counterfactual_value": "None",
+      "operation_type": "AST_transform",
+      "modified_code": "def change_base(x: int, base: int):\n    if x == 0:\n        return '0'\n    digs = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'\n    while x > 0:\n        r = None\n        x = x // base\n        res = digs[r] + res\n    return res"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.2739,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  },
+  {
+    "candidate_rank": 4,
+    "intervention": {
+      "target_variable": "x",
+      "target_line": 5,
+      "observed_value": "8",
+      "counterfactual_value": "None",
+      "operation_type": "AST_transform",
+      "modified_code": "def change_base(x: int, base: int):\n    if x == 0:\n        return '0'\n    digs = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'\n    while x <= 0:\n        r = x % base\n        x = x // base\n        res = digs[r] + res\n    return res"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.2126,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  }
+]

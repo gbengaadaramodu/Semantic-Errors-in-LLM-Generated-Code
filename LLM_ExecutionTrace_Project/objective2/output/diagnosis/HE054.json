@@ -1,0 +1,258 @@
+{
+  "trace_id": "HE054",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/106",
+  "error_category": "Runtime Exception",
+  "analysis_status": "ANALYZED",
+  "skip_reason": null,
+  "input_record": {
+    "trace_id": "HE054",
+    "dataset": "HumanEval",
+    "task_id": "HumanEval/106",
+    "problem_summary": "\ndef f(n):\n    \"\"\" Implement the function f that takes n as a parameter,\n    and",
+    "execution_status": "Failed",
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpxjmihhh0.py\", line 12, in <module>\n    check(f)\n    ~~~~~^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpxjmihhh0.py\", line 6, in check\n    assert candidate(5) == [1, 2, 6, 24, 15]\n           ~~~~~~~~~^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpxjmihhh0.py\", line 2, in f\n    return [factorial(i) if i % 2 == 0 else sum(range(1, i + 1)) for i in range(1, n + 1)]\n            ^^^^^^^^^\nNameError: name 'factorial' is not defined\n",
+    "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpxjmihhh0.py\", line 12, in <module>\n    check(f)\n    ~~~~~^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpxjmihhh0.py\", line 6, in check\n    assert candidate(5) == [1, 2, 6, 24, 15]\n           ~~~~~~~~~^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpxjmihhh0.py\", line 2, in f\n    return [factorial(i) if i % 2 == 0 else sum(range(1, i + 1)) for i in range(1, n + 1)]\n            ^^^^^^^^^\nNameError: name 'factorial' is not defined",
+    "exception_type": "NameError",
+    "exception_message": "name 'factorial' is not defined",
+    "execution_time": 0.256052,
+    "timed_out": false,
+    "exit_code": 1,
+    "tests_passed": false,
+    "tests_failed": 0,
+    "expected_output": null,
+    "actual_output": null,
+    "assertion_source": null,
+    "assertion_failed": false,
+    "parser_prediction": "Runtime Exception"
+  },
+  "scm": {
+    "task_id": "HumanEval/106",
+    "nodes": [
+      {
+        "node_id": "S",
+        "variable_name": "Specification",
+        "symbol": "S",
+        "label": "Specification"
+      },
+      {
+        "node_id": "C",
+        "variable_name": "GeneratedCode",
+        "symbol": "C",
+        "label": "Generated Code"
+      },
+      {
+        "node_id": "E",
+        "variable_name": "ExecutionTrace",
+        "symbol": "E",
+        "label": "Execution Trace"
+      },
+      {
+        "node_id": "T",
+        "variable_name": "TestSuite",
+        "symbol": "T",
+        "label": "Test Suite"
+      },
+      {
+        "node_id": "O",
+        "variable_name": "Outcome",
+        "symbol": "O",
+        "label": "Outcome"
+      }
+    ],
+    "edges": [
+      {
+        "source": "S",
+        "target": "C",
+        "relationship": "generates"
+      },
+      {
+        "source": "C",
+        "target": "E",
+        "relationship": "produces"
+      },
+      {
+        "source": "T",
+        "target": "E",
+        "relationship": "evaluates"
+      },
+      {
+        "source": "E",
+        "target": "O",
+        "relationship": "determines"
+      }
+    ],
+    "variables": {
+      "S": {
+        "name": "Specification",
+        "symbol": "S",
+        "description": "Problem description, prompt, and target function signature",
+        "value": "\ndef f(n):\n    \"\"\" Implement the function f that takes n as a parameter,\n    and"
+      },
+      "C": {
+        "name": "GeneratedCode",
+        "symbol": "C",
+        "description": "LLM-generated Python source code implementation",
+        "value": "def f(n):\n    return [factorial(i) if i % 2 == 0 else sum(range(1, i + 1)) for i in range(1, n + 1)]"
+      },
+      "E": {
+        "name": "ExecutionTrace",
+        "symbol": "E",
+        "description": "Observable runtime trace events, variable states, and stdout/stderr",
+        "value": "status=Failed, exc=NameError, msg=name 'factorial' is not defined"
+      },
+      "T": {
+        "name": "TestSuite",
+        "symbol": "T",
+        "description": "Benchmark assertions, inputs, and check function harness",
+        "value": "def check(candidate):\n\n    assert candidate(5) == [1, 2, 6, 24, 15]\n    assert candidate(7) == [1, 2"
+      },
+      "O": {
+        "name": "Outcome",
+        "symbol": "O",
+        "description": "Final test execution outcome (Completed/Failed/Timeout)",
+        "value": "Failed"
+      }
+    }
+  },
+  "pdg": {
+    "nodes": {
+      "1": {
+        "node_id": 1,
+        "line_number": 1,
+        "source_code": "def f(n):",
+        "statement_type": "FunctionDef",
+        "reads": [],
+        "writes": [
+          "n",
+          "f"
+        ],
+        "function_name": "<module>",
+        "executed": true,
+        "execution_count": 2,
+        "runtime_values": {
+          "n": [
+            "5"
+          ]
+        },
+        "failure_related": false
+      },
+      "2": {
+        "node_id": 2,
+        "line_number": 2,
+        "source_code": "return [factorial(i) if i % 2 == 0 else sum(range(1, i + 1)) for i in range(1, n + 1)]",
+        "statement_type": "Return",
+        "reads": [
+          "factorial",
+          "i",
+          "n",
+          "range",
+          "sum"
+        ],
+        "writes": [
+          "i"
+        ],
+        "function_name": "f",
+        "executed": true,
+        "execution_count": 5,
+        "runtime_values": {
+          "n": [
+            "5",
+            "5",
+            "5",
+            "5",
+            "5"
+          ],
+          "i": [
+            "1",
+            "2",
+            "2"
+          ]
+        },
+        "failure_related": true
+      }
+    },
+    "edges": [
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "DATA",
+        "variable": "n",
+        "label": "DATA(n)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      }
+    ],
+    "entry_node_id": 1,
+    "failure_node_ids": [
+      2
+    ]
+  },
+  "runtime_events_count": 16,
+  "failure_line": 2,
+  "failure_statement": "return [factorial(i) if i % 2 == 0 else sum(range(1, i + 1)) for i in range(1, n + 1)]",
+  "candidates": [
+    {
+      "rank": 1,
+      "node_id": 2,
+      "line_number": 2,
+      "statement_code": "return [factorial(i) if i % 2 == 0 else sum(range(1, i + 1)) for i in range(1, n + 1)]",
+      "variable_name": "i",
+      "observed_value": "2",
+      "expected_value": "[1, 2, 6, 24, 15]",
+      "proximity_score": 1.0,
+      "dependency_score": 1.0,
+      "explanation": "Reached via reverse traversal (distance=0, type=Return)"
+    }
+  ],
+  "critical_variable": null,
+  "counterfactual_results": [
+    {
+      "candidate_rank": 1,
+      "intervention": {
+        "target_variable": "i",
+        "target_line": 2,
+        "observed_value": "2",
+        "counterfactual_value": "[1, 2, 6, 24, 15]",
+        "operation_type": "AST_transform",
+        "modified_code": "def f(n):\n    return [factorial(i) if i % 2 != 0 else sum(range(1, i + 1)) for i in range(1, n + 1)]"
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "Failed",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "FALSE",
+      "execution_time": 0.1968,
+      "status": "EXECUTED",
+      "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+    }
+  ],
+  "fault_location": {
+    "file": "HE054.py",
+    "line_number": 2,
+    "statement_code": "return [factorial(i) if i % 2 == 0 else sum(range(1, i + 1)) for i in range(1, n + 1)]",
+    "function_name": "f",
+    "causal_variable": "i",
+    "evidence_score": 0.5,
+    "confidence": 0.3
+  },
+  "root_cause": {
+    "root_cause_status": "UNRESOLVED",
+    "candidate_explanation": "Runtime exception (NameError: name 'factorial' is not defined) triggered at statement 'return [factorial(i) if i % 2 == 0 else sum(range(1, i + 1)) for i in range(1, n + 1)]' (line 2) involving variable 'i'.",
+    "causal_variable": "i",
+    "fault_statement": "return [factorial(i) if i % 2 == 0 else sum(range(1, i + 1)) for i in range(1, n + 1)]",
+    "fault_line": 2,
+    "evidence_summary": "Reverse PDG traversal traced failure from line 1 to statement line 2. Structural dependency identified; counterfactual validation unconfirmed or unresolved.",
+    "counterfactual_validated": false,
+    "confidence": 0.3
+  },
+  "ground_truth_matched": null,
+  "ground_truth_fault_line": null,
+  "execution_time": 0.2043
+}

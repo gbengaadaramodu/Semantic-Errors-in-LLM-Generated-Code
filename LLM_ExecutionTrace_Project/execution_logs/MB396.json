@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB396",
+  "dataset": "MBPP",
+  "task_id": "63",
+  "problem_summary": "Write a function to find the maximum difference between available pairs in the g",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp3bl8u0ee.py\", line 5, in <module>\n    assert max_difference([(4, 6), (2, 17), (9, 13), (11, 12)]) == 15\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp3bl8u0ee.py\", line 5, in <module>\n    assert max_difference([(4, 6), (2, 17), (9, 13), (11, 12)]) == 15\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+  "exception_type": "AssertionError",
+  "exception_message": "",
+  "execution_time": 0.172,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": "benchmark_test",
+  "assertion_failed": true,
+  "parser_prediction": ""
+}

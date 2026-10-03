@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a function to caluclate the area of a tetrahedron.
+
+Example test: assert area_tetrahedron(3)==15.588457268119894
+[/INST]

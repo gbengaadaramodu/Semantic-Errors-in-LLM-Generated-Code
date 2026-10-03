@@ -1,0 +1,12 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def same_chars(s0: str, s1: str): | W:s0,s1,same_chars | R:str", fillcolor="lightgreen"];
+    "2" [label="L2: return sorted(s0) == sorted(s1) | R:s0,s1,sorted", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(s0)", style="solid"];
+    "1" -> "2" [label="DATA(s1)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

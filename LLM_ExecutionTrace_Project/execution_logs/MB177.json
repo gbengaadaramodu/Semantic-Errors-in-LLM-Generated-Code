@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB177",
+  "dataset": "MBPP",
+  "task_id": "477",
+  "problem_summary": "Write a python function to convert the given string to lower case.",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp3pv634lw.py\", line 4, in <module>\n    assert is_lower(\"InValid\") == \"invalid\"\n           ^^^^^^^^\nNameError: name 'is_lower' is not defined. Did you mean: 'to_lower'?\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp3pv634lw.py\", line 4, in <module>\n    assert is_lower(\"InValid\") == \"invalid\"\n           ^^^^^^^^\nNameError: name 'is_lower' is not defined. Did you mean: 'to_lower'?",
+  "exception_type": "NameError",
+  "exception_message": "name 'is_lower' is not defined. Did you mean: 'to_lower'?",
+  "execution_time": 0.210715,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

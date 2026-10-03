@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a function to that rotate left bits by d bits a given number. We assume that the number is 32 bit.
+
+Example test: assert left_rotate(16,2) == 64
+[/INST]

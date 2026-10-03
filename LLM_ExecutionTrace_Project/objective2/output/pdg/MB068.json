@@ -1,0 +1,95 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def get_coordinates(coordinate):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "coordinate",
+        "get_coordinates"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 1,
+      "runtime_values": {},
+      "failure_related": true
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "x, y = coordinate",
+      "statement_type": "Assign",
+      "reads": [
+        "coordinate"
+      ],
+      "writes": [
+        "x",
+        "y"
+      ],
+      "function_name": "get_coordinates",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "3": {
+      "node_id": 3,
+      "line_number": 3,
+      "source_code": "return [[x-1, y-1], [x-1, y], [x-1, y+1],\n            [x,   y-1],           [x,   y+1],\n            [x+1, y-1], [x+1, y], [x+1, y+1]]",
+      "statement_type": "Return",
+      "reads": [
+        "x",
+        "y"
+      ],
+      "writes": [],
+      "function_name": "get_coordinates",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": false
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "coordinate",
+      "label": "DATA(coordinate)"
+    },
+    {
+      "source_id": 2,
+      "target_id": 3,
+      "dependency_type": "DATA",
+      "variable": "x",
+      "label": "DATA(x)"
+    },
+    {
+      "source_id": 2,
+      "target_id": 3,
+      "dependency_type": "DATA",
+      "variable": "y",
+      "label": "DATA(y)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 3,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    1
+  ]
+}

@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a python function to check whether the given number can be represented as the difference of two squares or not.
+
+Example test: assert dif_Square(5) == True
+[/INST]

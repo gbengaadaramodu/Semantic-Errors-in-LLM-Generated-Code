@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a function to find the next smallest palindrome of a specified integer, returned as an integer.
+
+Example test: assert next_smallest_palindrome(99)==101
+[/INST]

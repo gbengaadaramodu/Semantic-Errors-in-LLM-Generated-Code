@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB152",
+  "dataset": "MBPP",
+  "task_id": "290",
+  "problem_summary": "Write a function to find the list of maximum length in a list of lists.",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpmenxepon.py\", line 2\n    return max(len(lst), lst) for lst in lst_of_lst]\n                                                   ^\nSyntaxError: unmatched ']'\n",
+  "traceback": "File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpmenxepon.py\", line 2\n    return max(len(lst), lst) for lst in lst_of_lst]\n                                                   ^\nSyntaxError: unmatched ']'",
+  "exception_type": "SyntaxError",
+  "exception_message": "unmatched ']'",
+  "execution_time": 0.217168,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

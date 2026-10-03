@@ -1,0 +1,6 @@
+[INST] Write a Python function for the following task. Return ONLY the function implementation, no explanations.
+
+Task: Write a python function to find the largest number that can be formed with the given list of digits.
+
+Example test: assert find_Max_Num([1,2,3]) == 321
+[/INST]

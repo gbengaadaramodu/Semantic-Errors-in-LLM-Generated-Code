@@ -1,0 +1,70 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def find_tuples(tuples, k):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "k",
+        "tuples",
+        "find_tuples"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 1,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "return [tuple for tuple in tuples if all(num % k == 0 for num in tuple)]",
+      "statement_type": "Return",
+      "reads": [
+        "all",
+        "k",
+        "num",
+        "tuple",
+        "tuples"
+      ],
+      "writes": [
+        "num",
+        "tuple"
+      ],
+      "function_name": "find_tuples",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "k",
+      "label": "DATA(k)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "DATA",
+      "variable": "tuples",
+      "label": "DATA(tuples)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    2
+  ]
+}

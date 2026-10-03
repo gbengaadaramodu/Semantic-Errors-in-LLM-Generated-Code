@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB148",
+  "dataset": "MBPP",
+  "task_id": "232",
+  "problem_summary": "Write a function that takes in a list and an integer n and returns a list contai",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpe5zgfbic.py\", line 4, in <module>\n    assert set(larg_nnum([10, 20, 50, 70, 90, 20, 50, 40, 60, 80, 100],2))==set([100,90])\n               ^^^^^^^^^\nNameError: name 'larg_nnum' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpe5zgfbic.py\", line 4, in <module>\n    assert set(larg_nnum([10, 20, 50, 70, 90, 20, 50, 40, 60, 80, 100],2))==set([100,90])\n               ^^^^^^^^^\nNameError: name 'larg_nnum' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'larg_nnum' is not defined",
+  "execution_time": 0.19136,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

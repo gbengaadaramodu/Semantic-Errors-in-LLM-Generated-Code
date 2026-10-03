@@ -1,0 +1,29 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def find_sum(my_list): | W:my_list,find_sum", fillcolor="lightgreen"];
+    "2" [label="L2: seen = set() | W:seen | R:set", fillcolor="lightgrey"];
+    "3" [label="L3: sum = 0 | W:sum", fillcolor="lightgrey"];
+    "4" [label="L4: for elem in my_list: | W:elem | R:my_list", fillcolor="lightgrey"];
+    "5" [label="L5: if elem not in seen: | R:elem,seen", fillcolor="lightgrey"];
+    "6" [label="L6: sum += elem | W:sum | R:elem", fillcolor="lightgrey"];
+    "7" [label="L7: seen.add(elem) | R:elem,seen", fillcolor="lightgrey"];
+    "8" [label="L8: return sum | R:sum", fillcolor="salmon"];
+
+    "1" -> "4" [label="DATA(my_list)", style="solid"];
+    "4" -> "5" [label="DATA(elem)", style="solid"];
+    "2" -> "5" [label="DATA(seen)", style="solid"];
+    "4" -> "6" [label="DATA(elem)", style="solid"];
+    "4" -> "7" [label="DATA(elem)", style="solid"];
+    "2" -> "7" [label="DATA(seen)", style="solid"];
+    "6" -> "8" [label="DATA(sum)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "3" [label="CONTROL(FunctionDef)", style="dashed"];
+    "1" -> "4" [label="CONTROL(FunctionDef)", style="dashed"];
+    "4" -> "5" [label="CONTROL(For)", style="dashed"];
+    "5" -> "6" [label="CONTROL(If)", style="dashed"];
+    "5" -> "7" [label="CONTROL(If)", style="dashed"];
+    "1" -> "8" [label="CONTROL(FunctionDef)", style="dashed"];
+}

@@ -1,0 +1,73 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "import math",
+      "statement_type": "Import",
+      "reads": [],
+      "writes": [],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 1,
+      "runtime_values": {},
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 3,
+      "source_code": "def volume_sphere(radius):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "radius",
+        "volume_sphere"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 1,
+      "runtime_values": {
+        "math": [
+          "<module 'math' (built-in)>"
+        ]
+      },
+      "failure_related": false
+    },
+    "3": {
+      "node_id": 3,
+      "line_number": 4,
+      "source_code": "return (4/3) * math.pi * radius**3",
+      "statement_type": "Return",
+      "reads": [
+        "math",
+        "radius"
+      ],
+      "writes": [],
+      "function_name": "volume_sphere",
+      "executed": false,
+      "execution_count": 0,
+      "runtime_values": {},
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 2,
+      "target_id": 3,
+      "dependency_type": "DATA",
+      "variable": "radius",
+      "label": "DATA(radius)"
+    },
+    {
+      "source_id": 2,
+      "target_id": 3,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    3
+  ]
+}

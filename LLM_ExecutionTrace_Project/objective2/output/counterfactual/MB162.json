@@ -1,0 +1,97 @@
+[
+  {
+    "candidate_rank": 1,
+    "intervention": {
+      "target_variable": "count",
+      "target_line": 10,
+      "observed_value": "2",
+      "counterfactual_value": "7",
+      "operation_type": "AST_transform",
+      "modified_code": "def count_vowels(input_string):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    count = 0\n    for i in range(len(input_string)):\n        if input_string[i].lower() in vowels:\n            if i > 0 and input_string[i - 1].lower() in vowels:\n                count += 1\n            if i < len(input_string) - 1 and input_string[i + 1].lower() in vowels:\n                count += 1\n    return 7"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Completed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "TRUE",
+    "execution_time": 0.1442,
+    "status": "EXECUTED",
+    "explanation": "Intervention successfully flipped execution outcome from FAIL to PASS."
+  },
+  {
+    "candidate_rank": 2,
+    "intervention": {
+      "target_variable": "count",
+      "target_line": 9,
+      "observed_value": "0",
+      "counterfactual_value": "None",
+      "operation_type": "failed_construction",
+      "modified_code": ""
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "FAILED_CONSTRUCTION",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "UNRESOLVED",
+    "execution_time": 0.0,
+    "status": "UNRESOLVED",
+    "explanation": "Failed to construct valid AST counterfactual intervention."
+  },
+  {
+    "candidate_rank": 3,
+    "intervention": {
+      "target_variable": "i",
+      "target_line": 8,
+      "observed_value": "11",
+      "counterfactual_value": "None",
+      "operation_type": "AST_transform",
+      "modified_code": "def count_vowels(input_string):\n    vowels = ['a', 'e', 'i', 'o', 'u']\n    count = 0\n    for i in range(len(input_string)):\n        if input_string[i].lower() in vowels:\n            if i > 0 and input_string[i - 1].lower() in vowels:\n                count += 1\n            if i >= len(input_string) - 1 and input_string[i + 1].lower() in vowels:\n                count += 1\n    return count"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.2032,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  },
+  {
+    "candidate_rank": 4,
+    "intervention": {
+      "target_variable": "i",
+      "target_line": 4,
+      "observed_value": "13",
+      "counterfactual_value": "None",
+      "operation_type": "failed_construction",
+      "modified_code": ""
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "FAILED_CONSTRUCTION",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "UNRESOLVED",
+    "execution_time": 0.0,
+    "status": "UNRESOLVED",
+    "explanation": "Failed to construct valid AST counterfactual intervention."
+  },
+  {
+    "candidate_rank": 5,
+    "intervention": {
+      "target_variable": "vowels",
+      "target_line": 2,
+      "observed_value": "None",
+      "counterfactual_value": "None",
+      "operation_type": "AST_transform",
+      "modified_code": "def count_vowels(input_string):\n    vowels = None\n    count = 0\n    for i in range(len(input_string)):\n        if input_string[i].lower() in vowels:\n            if i > 0 and input_string[i - 1].lower() in vowels:\n                count += 1\n            if i < len(input_string) - 1 and input_string[i + 1].lower() in vowels:\n                count += 1\n    return count"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.2061,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  }
+]

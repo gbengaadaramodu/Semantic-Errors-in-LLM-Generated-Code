@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB242",
+  "dataset": "MBPP",
+  "task_id": "771",
+  "problem_summary": "Write a function to check if the given expression is balanced or not. https://ww",
+  "execution_status": "Completed",
+  "stdout": "",
+  "stderr": "",
+  "traceback": "",
+  "exception_type": "",
+  "exception_message": "",
+  "execution_time": 0.141734,
+  "timed_out": false,
+  "exit_code": 0,
+  "tests_passed": true,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

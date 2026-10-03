@@ -1,0 +1,470 @@
+{
+  "nodes": {
+    "1": {
+      "node_id": 1,
+      "line_number": 1,
+      "source_code": "def digits(n):",
+      "statement_type": "FunctionDef",
+      "reads": [],
+      "writes": [
+        "n",
+        "digits"
+      ],
+      "function_name": "<module>",
+      "executed": true,
+      "execution_count": 8,
+      "runtime_values": {
+        "n": [
+          "5",
+          "54",
+          "120",
+          "5014",
+          "98765",
+          "5576543",
+          "2468"
+        ]
+      },
+      "failure_related": false
+    },
+    "2": {
+      "node_id": 2,
+      "line_number": 2,
+      "source_code": "product = 1",
+      "statement_type": "Assign",
+      "reads": [],
+      "writes": [
+        "product"
+      ],
+      "function_name": "digits",
+      "executed": true,
+      "execution_count": 7,
+      "runtime_values": {
+        "n": [
+          "5",
+          "54",
+          "120",
+          "5014",
+          "98765",
+          "5576543",
+          "2468"
+        ]
+      },
+      "failure_related": false
+    },
+    "3": {
+      "node_id": 3,
+      "line_number": 3,
+      "source_code": "for digit in str(n):",
+      "statement_type": "For",
+      "reads": [
+        "n",
+        "str"
+      ],
+      "writes": [
+        "digit"
+      ],
+      "function_name": "digits",
+      "executed": true,
+      "execution_count": 33,
+      "runtime_values": {
+        "n": [
+          "5",
+          "5",
+          "54",
+          "54",
+          "54",
+          "120",
+          "120",
+          "120",
+          "120",
+          "5014",
+          "5014",
+          "5014",
+          "5014",
+          "5014",
+          "98765",
+          "98765",
+          "98765",
+          "98765",
+          "98765",
+          "98765",
+          "5576543",
+          "5576543",
+          "5576543",
+          "5576543",
+          "5576543",
+          "5576543",
+          "5576543",
+          "5576543",
+          "2468",
+          "2468",
+          "2468",
+          "2468",
+          "2468"
+        ],
+        "product": [
+          "1",
+          "5",
+          "1",
+          "5",
+          "5",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1",
+          "5",
+          "5",
+          "5",
+          "5",
+          "1",
+          "9",
+          "9",
+          "63",
+          "63",
+          "315",
+          "1",
+          "5",
+          "25",
+          "175",
+          "175",
+          "875",
+          "875",
+          "2625",
+          "1",
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        "digit": [
+          "5",
+          "5",
+          "4",
+          "1",
+          "2",
+          "0",
+          "5",
+          "0",
+          "1",
+          "4",
+          "9",
+          "8",
+          "7",
+          "6",
+          "5",
+          "5",
+          "5",
+          "7",
+          "6",
+          "5",
+          "4",
+          "3",
+          "2",
+          "4",
+          "6",
+          "8"
+        ]
+      },
+      "failure_related": false
+    },
+    "4": {
+      "node_id": 4,
+      "line_number": 4,
+      "source_code": "if digit.isdigit() and int(digit) % 2 != 0:",
+      "statement_type": "If",
+      "reads": [
+        "digit",
+        "int"
+      ],
+      "writes": [],
+      "function_name": "digits",
+      "executed": true,
+      "execution_count": 26,
+      "runtime_values": {
+        "n": [
+          "5",
+          "54",
+          "54",
+          "120",
+          "120",
+          "120",
+          "5014",
+          "5014",
+          "5014",
+          "5014",
+          "98765",
+          "98765",
+          "98765",
+          "98765",
+          "98765",
+          "5576543",
+          "5576543",
+          "5576543",
+          "5576543",
+          "5576543",
+          "5576543",
+          "5576543",
+          "2468",
+          "2468",
+          "2468",
+          "2468"
+        ],
+        "product": [
+          "1",
+          "1",
+          "5",
+          "1",
+          "1",
+          "1",
+          "1",
+          "5",
+          "5",
+          "5",
+          "1",
+          "9",
+          "9",
+          "63",
+          "63",
+          "1",
+          "5",
+          "25",
+          "175",
+          "175",
+          "875",
+          "875",
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        "digit": [
+          "5",
+          "5",
+          "4",
+          "1",
+          "2",
+          "0",
+          "5",
+          "0",
+          "1",
+          "4",
+          "9",
+          "8",
+          "7",
+          "6",
+          "5",
+          "5",
+          "5",
+          "7",
+          "6",
+          "5",
+          "4",
+          "3",
+          "2",
+          "4",
+          "6",
+          "8"
+        ]
+      },
+      "failure_related": false
+    },
+    "5": {
+      "node_id": 5,
+      "line_number": 5,
+      "source_code": "product *= int(digit)",
+      "statement_type": "AugAssign",
+      "reads": [
+        "digit",
+        "int"
+      ],
+      "writes": [
+        "product"
+      ],
+      "function_name": "digits",
+      "executed": true,
+      "execution_count": 13,
+      "runtime_values": {
+        "n": [
+          "5",
+          "54",
+          "120",
+          "5014",
+          "5014",
+          "98765",
+          "98765",
+          "98765",
+          "5576543",
+          "5576543",
+          "5576543",
+          "5576543",
+          "5576543"
+        ],
+        "product": [
+          "1",
+          "1",
+          "1",
+          "1",
+          "5",
+          "1",
+          "9",
+          "63",
+          "1",
+          "5",
+          "25",
+          "175",
+          "875"
+        ],
+        "digit": [
+          "5",
+          "5",
+          "1",
+          "5",
+          "1",
+          "9",
+          "7",
+          "5",
+          "5",
+          "5",
+          "7",
+          "5",
+          "3"
+        ]
+      },
+      "failure_related": false
+    },
+    "6": {
+      "node_id": 6,
+      "line_number": 6,
+      "source_code": "return product",
+      "statement_type": "Return",
+      "reads": [
+        "product"
+      ],
+      "writes": [],
+      "function_name": "digits",
+      "executed": true,
+      "execution_count": 14,
+      "runtime_values": {
+        "n": [
+          "5",
+          "5",
+          "54",
+          "54",
+          "120",
+          "120",
+          "5014",
+          "5014",
+          "98765",
+          "98765",
+          "5576543",
+          "5576543",
+          "2468",
+          "2468"
+        ],
+        "product": [
+          "5",
+          "5",
+          "5",
+          "5",
+          "1",
+          "1",
+          "5",
+          "5",
+          "315",
+          "315",
+          "2625",
+          "2625",
+          "1",
+          "1"
+        ],
+        "digit": [
+          "5",
+          "5",
+          "4",
+          "4",
+          "0",
+          "0",
+          "4",
+          "4",
+          "5",
+          "5",
+          "3",
+          "3",
+          "8",
+          "8"
+        ]
+      },
+      "failure_related": true
+    }
+  },
+  "edges": [
+    {
+      "source_id": 1,
+      "target_id": 3,
+      "dependency_type": "DATA",
+      "variable": "n",
+      "label": "DATA(n)"
+    },
+    {
+      "source_id": 3,
+      "target_id": 4,
+      "dependency_type": "DATA",
+      "variable": "digit",
+      "label": "DATA(digit)"
+    },
+    {
+      "source_id": 3,
+      "target_id": 5,
+      "dependency_type": "DATA",
+      "variable": "digit",
+      "label": "DATA(digit)"
+    },
+    {
+      "source_id": 5,
+      "target_id": 6,
+      "dependency_type": "DATA",
+      "variable": "product",
+      "label": "DATA(product)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 2,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 3,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    },
+    {
+      "source_id": 3,
+      "target_id": 4,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(For)"
+    },
+    {
+      "source_id": 4,
+      "target_id": 5,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(If)"
+    },
+    {
+      "source_id": 1,
+      "target_id": 6,
+      "dependency_type": "CONTROL",
+      "variable": null,
+      "label": "CONTROL(FunctionDef)"
+    }
+  ],
+  "entry_node_id": 1,
+  "failure_node_ids": [
+    6
+  ]
+}

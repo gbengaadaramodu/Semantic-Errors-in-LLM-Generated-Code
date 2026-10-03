@@ -1,0 +1,78 @@
+[
+  {
+    "candidate_rank": 1,
+    "intervention": {
+      "target_variable": "max_sum",
+      "target_line": 12,
+      "observed_value": "None",
+      "counterfactual_value": "321",
+      "operation_type": "AST_transform",
+      "modified_code": "def max_sum_increasing_subseq(nums, i, k, prefix_sum):\n    if i == k:\n        return nums[i]\n    if i > k:\n        return 0\n    if prefix_sum[k] != -1:\n        return prefix_sum[k]\n    max_sum = 0\n    for j in range(i, k + 1):\n        max_sum = max(max_sum, nums[j] + max_sum_increasing_subseq(nums, j + 1, k, prefix_sum))\n    prefix_sum[k] = max_sum\n    return 321"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.2184,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  },
+  {
+    "candidate_rank": 2,
+    "intervention": {
+      "target_variable": "max_sum",
+      "target_line": 10,
+      "observed_value": "None",
+      "counterfactual_value": "None",
+      "operation_type": "AST_transform",
+      "modified_code": "def max_sum_increasing_subseq(nums, i, k, prefix_sum):\n    if i == k:\n        return nums[i]\n    if i > k:\n        return 0\n    if prefix_sum[k] != -1:\n        return prefix_sum[k]\n    max_sum = 0\n    for j in range(i, k + 1):\n        max_sum = None\n    prefix_sum[k] = max_sum\n    return max_sum"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.2322,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  },
+  {
+    "candidate_rank": 3,
+    "intervention": {
+      "target_variable": "j",
+      "target_line": 9,
+      "observed_value": "None",
+      "counterfactual_value": "None",
+      "operation_type": "failed_construction",
+      "modified_code": ""
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "FAILED_CONSTRUCTION",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "UNRESOLVED",
+    "execution_time": 0.0,
+    "status": "UNRESOLVED",
+    "explanation": "Failed to construct valid AST counterfactual intervention."
+  },
+  {
+    "candidate_rank": 4,
+    "intervention": {
+      "target_variable": "max_sum",
+      "target_line": 8,
+      "observed_value": "None",
+      "counterfactual_value": "None",
+      "operation_type": "AST_transform",
+      "modified_code": "def max_sum_increasing_subseq(nums, i, k, prefix_sum):\n    if i == k:\n        return nums[i]\n    if i > k:\n        return 0\n    if prefix_sum[k] != -1:\n        return prefix_sum[k]\n    max_sum = None\n    for j in range(i, k + 1):\n        max_sum = max(max_sum, nums[j] + max_sum_increasing_subseq(nums, j + 1, k, prefix_sum))\n    prefix_sum[k] = max_sum\n    return max_sum"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.2241,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  }
+]

@@ -1,0 +1,11 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def closest_integer(value): | W:value,closest_integer", fillcolor="lightgreen"];
+    "2" [label="L2: return round(float(value)) | R:float,round,value", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(value)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

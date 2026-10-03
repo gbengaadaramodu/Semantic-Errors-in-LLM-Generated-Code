@@ -1,0 +1,11 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def is_monotonic(arr): | W:arr,is_monotonic", fillcolor="lightgreen"];
+    "2" [label="L2: return all(arr[i] <= arr[i+1] for i in range(len(arr)-1)) | W:i | R:all,arr,i,len,range", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(arr)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

@@ -1,0 +1,22 @@
+{
+  "trace_id": "HE121",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/99",
+  "problem_summary": "\ndef closest_integer(value):\n    '''\n    Create a function that takes a value (s",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpvxz6364o.py\", line 17, in <module>\n    check(closest_integer)\n    ~~~~~^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpvxz6364o.py\", line 8, in check\n    assert candidate(\"14.5\") == 15, \"Test 2\"\n           ^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Test 2\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpvxz6364o.py\", line 17, in <module>\n    check(closest_integer)\n    ~~~~~^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpvxz6364o.py\", line 8, in check\n    assert candidate(\"14.5\") == 15, \"Test 2\"\n           ^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Test 2",
+  "exception_type": "AssertionError",
+  "exception_message": "Test 2",
+  "execution_time": 0.24464,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": "benchmark_test",
+  "assertion_failed": true,
+  "parser_prediction": ""
+}

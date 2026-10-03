@@ -1,0 +1,11 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def capital_words_spaces(string): | W:string,capital_words_spaces", fillcolor="lightgreen"];
+    "2" [label="L2: return \" \".join([word for word in string.split() if word[0].isupper()]) | W:word | R:string,word", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(string)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

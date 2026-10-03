@@ -1,0 +1,22 @@
+{
+  "trace_id": "HE072",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/117",
+  "problem_summary": "\ndef select_words(s, n):\n    \"\"\"Given a string s and a natural number n, you hav",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmph9nebl8a.py\", line 21, in <module>\n    check(select_words)\n    ~~~~~^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmph9nebl8a.py\", line 8, in check\n    assert candidate(\"Mary had a little lamb\", 4) == [\"little\"], \"First test error: \" + str(candidate(\"Mary had a little lamb\", 4))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: First test error: []\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmph9nebl8a.py\", line 21, in <module>\n    check(select_words)\n    ~~~~~^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmph9nebl8a.py\", line 8, in check\n    assert candidate(\"Mary had a little lamb\", 4) == [\"little\"], \"First test error: \" + str(candidate(\"Mary had a little lamb\", 4))\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: First test error: []",
+  "exception_type": "AssertionError",
+  "exception_message": "First test error: []",
+  "execution_time": 0.240724,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": "benchmark_test",
+  "assertion_failed": true,
+  "parser_prediction": ""
+}

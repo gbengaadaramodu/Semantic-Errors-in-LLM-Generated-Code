@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB219",
+  "dataset": "MBPP",
+  "task_id": "268",
+  "problem_summary": "Write a function to find the n'th star number.",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpq0v4c7ht.py\", line 7, in <module>\n    assert find_star_num(3) == 37\n           ^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpq0v4c7ht.py\", line 7, in <module>\n    assert find_star_num(3) == 37\n           ^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+  "exception_type": "AssertionError",
+  "exception_message": "",
+  "execution_time": 0.585181,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": "benchmark_test",
+  "assertion_failed": true,
+  "parser_prediction": ""
+}

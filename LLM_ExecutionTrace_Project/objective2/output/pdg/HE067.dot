@@ -1,0 +1,11 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def odd_count(lst): | W:lst,odd_count", fillcolor="lightgreen"];
+    "2" [label="L2: return [\"the number of odd elements in the string {} of the input.\".format(i) for i in lst] | W:i | R:i,lst", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(lst)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

@@ -1,0 +1,22 @@
+{
+  "trace_id": "HE040",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/135",
+  "problem_summary": "\ndef can_arrange(arr):\n    \"\"\"Create a function which returns the largest index ",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp2y8m15vg.py\", line 20, in <module>\n    check(can_arrange)\n    ~~~~~^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp2y8m15vg.py\", line 10, in check\n    assert candidate([1,2,4,3,5])==3\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp2y8m15vg.py\", line 20, in <module>\n    check(can_arrange)\n    ~~~~~^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp2y8m15vg.py\", line 10, in check\n    assert candidate([1,2,4,3,5])==3\n           ^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+  "exception_type": "AssertionError",
+  "exception_message": "",
+  "execution_time": 0.25421,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": "benchmark_test",
+  "assertion_failed": true,
+  "parser_prediction": ""
+}

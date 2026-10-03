@@ -1,0 +1,11 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def is_undulating(num): | W:num,is_undulating", fillcolor="lightgreen"];
+    "2" [label="L2: return len(set(str(num))) == 1 | R:len,num,set,str", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(num)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+}

@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB097",
+  "dataset": "MBPP",
+  "task_id": "432",
+  "problem_summary": "Write a function to find the median length of a trapezium.",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpu9g2phv6.py\", line 11, in <module>\n    assert median_trapezium(15,25,35)==20\n           ^^^^^^^^^^^^^^^^\nNameError: name 'median_trapezium' is not defined\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpu9g2phv6.py\", line 11, in <module>\n    assert median_trapezium(15,25,35)==20\n           ^^^^^^^^^^^^^^^^\nNameError: name 'median_trapezium' is not defined",
+  "exception_type": "NameError",
+  "exception_message": "name 'median_trapezium' is not defined",
+  "execution_time": 0.19757,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

@@ -1,0 +1,21 @@
+[
+  {
+    "candidate_rank": 1,
+    "intervention": {
+      "target_variable": "my_list",
+      "target_line": 11,
+      "observed_value": "None",
+      "counterfactual_value": "(2, 2, 2, 3)",
+      "operation_type": "AST_transform",
+      "modified_code": "def comb_sort(my_list):\n    gap = len(my_list)\n    swapped = True\n    while gap > 1 or swapped:\n        gap = int(gap * 10 / 13)\n        swapped = False\n        for i in range(len(my_list) - gap):\n            if my_list[i] > my_list[i + gap]:\n                my_list[i], my_list[i + gap] = (my_list[i + gap], my_list[i])\n                swapped = True\n    return (2, 2, 2, 3)"
+    },
+    "original_outcome": "Failed",
+    "counterfactual_outcome": "Failed",
+    "original_actual_output": null,
+    "counterfactual_output": null,
+    "causal_effect": "FALSE",
+    "execution_time": 0.2055,
+    "status": "EXECUTED",
+    "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+  }
+]

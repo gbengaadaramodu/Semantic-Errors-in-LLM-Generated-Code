@@ -1,0 +1,22 @@
+{
+  "trace_id": "HE077",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/125",
+  "problem_summary": "\ndef split_words(txt):\n    '''\n    Given a string of words, return a list of wor",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp9f_ltzq9.py\", line 16, in <module>\n    check(split_words)\n    ~~~~~^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp9f_ltzq9.py\", line 7, in check\n    assert candidate(\"Hello,world!\") == [\"Hello\",\"world!\"]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp9f_ltzq9.py\", line 16, in <module>\n    check(split_words)\n    ~~~~~^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp9f_ltzq9.py\", line 7, in check\n    assert candidate(\"Hello,world!\") == [\"Hello\",\"world!\"]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+  "exception_type": "AssertionError",
+  "exception_message": "",
+  "execution_time": 0.283146,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": "benchmark_test",
+  "assertion_failed": true,
+  "parser_prediction": ""
+}

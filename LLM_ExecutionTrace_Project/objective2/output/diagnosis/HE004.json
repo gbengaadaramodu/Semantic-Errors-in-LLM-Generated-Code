@@ -1,0 +1,599 @@
+{
+  "trace_id": "HE004",
+  "dataset": "HumanEval",
+  "task_id": "HumanEval/70",
+  "error_category": "Wrong-Output Error",
+  "analysis_status": "ANALYZED",
+  "skip_reason": null,
+  "input_record": {
+    "trace_id": "HE004",
+    "dataset": "HumanEval",
+    "task_id": "HumanEval/70",
+    "problem_summary": "\ndef strange_sort_list(lst):\n    '''\n    Given list of integers, return list in ",
+    "execution_status": "Failed",
+    "stdout": "",
+    "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpmun39dc3.py\", line 27, in <module>\n    check(strange_sort_list)\n    ~~~~~^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpmun39dc3.py\", line 13, in check\n    assert candidate([5, 6, 7, 8, 9]) == [5, 9, 6, 8, 7]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+    "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpmun39dc3.py\", line 27, in <module>\n    check(strange_sort_list)\n    ~~~~~^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpmun39dc3.py\", line 13, in check\n    assert candidate([5, 6, 7, 8, 9]) == [5, 9, 6, 8, 7]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+    "exception_type": "AssertionError",
+    "exception_message": "",
+    "execution_time": 0.230172,
+    "timed_out": false,
+    "exit_code": 1,
+    "tests_passed": false,
+    "tests_failed": 0,
+    "expected_output": null,
+    "actual_output": null,
+    "assertion_source": "benchmark_test",
+    "assertion_failed": true,
+    "parser_prediction": "Wrong-Output Error"
+  },
+  "scm": {
+    "task_id": "HumanEval/70",
+    "nodes": [
+      {
+        "node_id": "S",
+        "variable_name": "Specification",
+        "symbol": "S",
+        "label": "Specification"
+      },
+      {
+        "node_id": "C",
+        "variable_name": "GeneratedCode",
+        "symbol": "C",
+        "label": "Generated Code"
+      },
+      {
+        "node_id": "E",
+        "variable_name": "ExecutionTrace",
+        "symbol": "E",
+        "label": "Execution Trace"
+      },
+      {
+        "node_id": "T",
+        "variable_name": "TestSuite",
+        "symbol": "T",
+        "label": "Test Suite"
+      },
+      {
+        "node_id": "O",
+        "variable_name": "Outcome",
+        "symbol": "O",
+        "label": "Outcome"
+      }
+    ],
+    "edges": [
+      {
+        "source": "S",
+        "target": "C",
+        "relationship": "generates"
+      },
+      {
+        "source": "C",
+        "target": "E",
+        "relationship": "produces"
+      },
+      {
+        "source": "T",
+        "target": "E",
+        "relationship": "evaluates"
+      },
+      {
+        "source": "E",
+        "target": "O",
+        "relationship": "determines"
+      }
+    ],
+    "variables": {
+      "S": {
+        "name": "Specification",
+        "symbol": "S",
+        "description": "Problem description, prompt, and target function signature",
+        "value": "\ndef strange_sort_list(lst):\n    '''\n    Given list of integers, return list in "
+      },
+      "C": {
+        "name": "GeneratedCode",
+        "symbol": "C",
+        "description": "LLM-generated Python source code implementation",
+        "value": "def strange_sort_list(lst):\n    if not lst:\n        return []\n    sorted_lst = sorted(lst)\n    minimum = sorted_lst[0]\n    maximum = sorted_lst[-1]\n    return [minimum] + [maximum] + [x for x in sorte"
+      },
+      "E": {
+        "name": "ExecutionTrace",
+        "symbol": "E",
+        "description": "Observable runtime trace events, variable states, and stdout/stderr",
+        "value": "status=Failed, exc=AssertionError, msg="
+      },
+      "T": {
+        "name": "TestSuite",
+        "symbol": "T",
+        "description": "Benchmark assertions, inputs, and check function harness",
+        "value": "def check(candidate):\n\n    # Check some simple cases\n    assert candidate([1, 2, 3, 4]) == [1, 4, 2,"
+      },
+      "O": {
+        "name": "Outcome",
+        "symbol": "O",
+        "description": "Final test execution outcome (Completed/Failed/Timeout)",
+        "value": "Failed"
+      }
+    }
+  },
+  "pdg": {
+    "nodes": {
+      "1": {
+        "node_id": 1,
+        "line_number": 1,
+        "source_code": "def strange_sort_list(lst):",
+        "statement_type": "FunctionDef",
+        "reads": [],
+        "writes": [
+          "lst",
+          "strange_sort_list"
+        ],
+        "function_name": "<module>",
+        "executed": true,
+        "execution_count": 3,
+        "runtime_values": {
+          "lst": [
+            "[1, 2, 3, 4]",
+            "[5, 6, 7, 8, 9]"
+          ]
+        },
+        "failure_related": false
+      },
+      "2": {
+        "node_id": 2,
+        "line_number": 2,
+        "source_code": "if not lst:",
+        "statement_type": "If",
+        "reads": [
+          "lst"
+        ],
+        "writes": [],
+        "function_name": "strange_sort_list",
+        "executed": true,
+        "execution_count": 2,
+        "runtime_values": {
+          "lst": [
+            "[1, 2, 3, 4]",
+            "[5, 6, 7, 8, 9]"
+          ]
+        },
+        "failure_related": false
+      },
+      "3": {
+        "node_id": 3,
+        "line_number": 3,
+        "source_code": "return []",
+        "statement_type": "Return",
+        "reads": [],
+        "writes": [],
+        "function_name": "strange_sort_list",
+        "executed": false,
+        "execution_count": 0,
+        "runtime_values": {},
+        "failure_related": false
+      },
+      "4": {
+        "node_id": 4,
+        "line_number": 4,
+        "source_code": "sorted_lst = sorted(lst)",
+        "statement_type": "Assign",
+        "reads": [
+          "lst",
+          "sorted"
+        ],
+        "writes": [
+          "sorted_lst"
+        ],
+        "function_name": "strange_sort_list",
+        "executed": true,
+        "execution_count": 2,
+        "runtime_values": {
+          "lst": [
+            "[1, 2, 3, 4]",
+            "[5, 6, 7, 8, 9]"
+          ]
+        },
+        "failure_related": false
+      },
+      "5": {
+        "node_id": 5,
+        "line_number": 5,
+        "source_code": "minimum = sorted_lst[0]",
+        "statement_type": "Assign",
+        "reads": [
+          "sorted_lst"
+        ],
+        "writes": [
+          "minimum"
+        ],
+        "function_name": "strange_sort_list",
+        "executed": true,
+        "execution_count": 2,
+        "runtime_values": {
+          "lst": [
+            "[1, 2, 3, 4]",
+            "[5, 6, 7, 8, 9]"
+          ],
+          "sorted_lst": [
+            "[1, 2, 3, 4]",
+            "[5, 6, 7, 8, 9]"
+          ]
+        },
+        "failure_related": false
+      },
+      "6": {
+        "node_id": 6,
+        "line_number": 6,
+        "source_code": "maximum = sorted_lst[-1]",
+        "statement_type": "Assign",
+        "reads": [
+          "sorted_lst"
+        ],
+        "writes": [
+          "maximum"
+        ],
+        "function_name": "strange_sort_list",
+        "executed": true,
+        "execution_count": 2,
+        "runtime_values": {
+          "lst": [
+            "[1, 2, 3, 4]",
+            "[5, 6, 7, 8, 9]"
+          ],
+          "sorted_lst": [
+            "[1, 2, 3, 4]",
+            "[5, 6, 7, 8, 9]"
+          ],
+          "minimum": [
+            "1",
+            "5"
+          ]
+        },
+        "failure_related": false
+      },
+      "7": {
+        "node_id": 7,
+        "line_number": 7,
+        "source_code": "return [minimum] + [maximum] + [x for x in sorted_lst if x != minimum and x != maximum]",
+        "statement_type": "Return",
+        "reads": [
+          "maximum",
+          "minimum",
+          "sorted_lst",
+          "x"
+        ],
+        "writes": [
+          "x"
+        ],
+        "function_name": "strange_sort_list",
+        "executed": true,
+        "execution_count": 13,
+        "runtime_values": {
+          "lst": [
+            "[1, 2, 3, 4]",
+            "[1, 2, 3, 4]",
+            "[1, 2, 3, 4]",
+            "[1, 2, 3, 4]",
+            "[1, 2, 3, 4]",
+            "[1, 2, 3, 4]",
+            "[5, 6, 7, 8, 9]",
+            "[5, 6, 7, 8, 9]",
+            "[5, 6, 7, 8, 9]",
+            "[5, 6, 7, 8, 9]",
+            "[5, 6, 7, 8, 9]",
+            "[5, 6, 7, 8, 9]",
+            "[5, 6, 7, 8, 9]"
+          ],
+          "sorted_lst": [
+            "[1, 2, 3, 4]",
+            "[1, 2, 3, 4]",
+            "[1, 2, 3, 4]",
+            "[1, 2, 3, 4]",
+            "[1, 2, 3, 4]",
+            "[1, 2, 3, 4]",
+            "[5, 6, 7, 8, 9]",
+            "[5, 6, 7, 8, 9]",
+            "[5, 6, 7, 8, 9]",
+            "[5, 6, 7, 8, 9]",
+            "[5, 6, 7, 8, 9]",
+            "[5, 6, 7, 8, 9]",
+            "[5, 6, 7, 8, 9]"
+          ],
+          "minimum": [
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "1",
+            "5",
+            "5",
+            "5",
+            "5",
+            "5",
+            "5",
+            "5"
+          ],
+          "maximum": [
+            "4",
+            "4",
+            "4",
+            "4",
+            "4",
+            "4",
+            "9",
+            "9",
+            "9",
+            "9",
+            "9",
+            "9",
+            "9"
+          ],
+          "x": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+          ]
+        },
+        "failure_related": true
+      }
+    },
+    "edges": [
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "DATA",
+        "variable": "lst",
+        "label": "DATA(lst)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 4,
+        "dependency_type": "DATA",
+        "variable": "lst",
+        "label": "DATA(lst)"
+      },
+      {
+        "source_id": 4,
+        "target_id": 5,
+        "dependency_type": "DATA",
+        "variable": "sorted_lst",
+        "label": "DATA(sorted_lst)"
+      },
+      {
+        "source_id": 4,
+        "target_id": 6,
+        "dependency_type": "DATA",
+        "variable": "sorted_lst",
+        "label": "DATA(sorted_lst)"
+      },
+      {
+        "source_id": 6,
+        "target_id": 7,
+        "dependency_type": "DATA",
+        "variable": "maximum",
+        "label": "DATA(maximum)"
+      },
+      {
+        "source_id": 5,
+        "target_id": 7,
+        "dependency_type": "DATA",
+        "variable": "minimum",
+        "label": "DATA(minimum)"
+      },
+      {
+        "source_id": 4,
+        "target_id": 7,
+        "dependency_type": "DATA",
+        "variable": "sorted_lst",
+        "label": "DATA(sorted_lst)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 2,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 2,
+        "target_id": 3,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(If)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 4,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 5,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 6,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      },
+      {
+        "source_id": 1,
+        "target_id": 7,
+        "dependency_type": "CONTROL",
+        "variable": null,
+        "label": "CONTROL(FunctionDef)"
+      }
+    ],
+    "entry_node_id": 1,
+    "failure_node_ids": [
+      7
+    ]
+  },
+  "runtime_events_count": 34,
+  "failure_line": 7,
+  "failure_statement": "return [minimum] + [maximum] + [x for x in sorted_lst if x != minimum and x != maximum]",
+  "candidates": [
+    {
+      "rank": 1,
+      "node_id": 7,
+      "line_number": 7,
+      "statement_code": "return [minimum] + [maximum] + [x for x in sorted_lst if x != minimum and x != maximum]",
+      "variable_name": "x",
+      "observed_value": "9",
+      "expected_value": "[5, 9, 6, 8, 7]",
+      "proximity_score": 1.0,
+      "dependency_score": 1.0,
+      "explanation": "Reached via reverse traversal (distance=0, type=Return)"
+    },
+    {
+      "rank": 2,
+      "node_id": 6,
+      "line_number": 6,
+      "statement_code": "maximum = sorted_lst[-1]",
+      "variable_name": "maximum",
+      "observed_value": null,
+      "expected_value": null,
+      "proximity_score": 0.85,
+      "dependency_score": 0.9,
+      "explanation": "Reached via reverse traversal (distance=1, type=Assign)"
+    },
+    {
+      "rank": 3,
+      "node_id": 5,
+      "line_number": 5,
+      "statement_code": "minimum = sorted_lst[0]",
+      "variable_name": "minimum",
+      "observed_value": null,
+      "expected_value": null,
+      "proximity_score": 0.85,
+      "dependency_score": 0.9,
+      "explanation": "Reached via reverse traversal (distance=1, type=Assign)"
+    },
+    {
+      "rank": 4,
+      "node_id": 4,
+      "line_number": 4,
+      "statement_code": "sorted_lst = sorted(lst)",
+      "variable_name": "sorted_lst",
+      "observed_value": null,
+      "expected_value": null,
+      "proximity_score": 0.85,
+      "dependency_score": 0.9,
+      "explanation": "Reached via reverse traversal (distance=1, type=Assign)"
+    }
+  ],
+  "critical_variable": null,
+  "counterfactual_results": [
+    {
+      "candidate_rank": 1,
+      "intervention": {
+        "target_variable": "x",
+        "target_line": 7,
+        "observed_value": "9",
+        "counterfactual_value": "[5, 9, 6, 8, 7]",
+        "operation_type": "AST_transform",
+        "modified_code": "def strange_sort_list(lst):\n    if not lst:\n        return []\n    sorted_lst = sorted(lst)\n    minimum = sorted_lst[0]\n    maximum = sorted_lst[-1]\n    return [minimum] + [maximum] + [x for x in sorted_lst if x == minimum and x == maximum]"
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "Failed",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "FALSE",
+      "execution_time": 0.169,
+      "status": "EXECUTED",
+      "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+    },
+    {
+      "candidate_rank": 2,
+      "intervention": {
+        "target_variable": "maximum",
+        "target_line": 6,
+        "observed_value": "None",
+        "counterfactual_value": "None",
+        "operation_type": "AST_transform",
+        "modified_code": "def strange_sort_list(lst):\n    if not lst:\n        return []\n    sorted_lst = sorted(lst)\n    minimum = sorted_lst[0]\n    maximum = None\n    return [minimum] + [maximum] + [x for x in sorted_lst if x != minimum and x != maximum]"
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "Failed",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "FALSE",
+      "execution_time": 0.2244,
+      "status": "EXECUTED",
+      "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+    },
+    {
+      "candidate_rank": 3,
+      "intervention": {
+        "target_variable": "minimum",
+        "target_line": 5,
+        "observed_value": "None",
+        "counterfactual_value": "None",
+        "operation_type": "AST_transform",
+        "modified_code": "def strange_sort_list(lst):\n    if not lst:\n        return []\n    sorted_lst = sorted(lst)\n    minimum = None\n    maximum = sorted_lst[-1]\n    return [minimum] + [maximum] + [x for x in sorted_lst if x != minimum and x != maximum]"
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "Failed",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "FALSE",
+      "execution_time": 0.2872,
+      "status": "EXECUTED",
+      "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+    },
+    {
+      "candidate_rank": 4,
+      "intervention": {
+        "target_variable": "sorted_lst",
+        "target_line": 4,
+        "observed_value": "None",
+        "counterfactual_value": "None",
+        "operation_type": "AST_transform",
+        "modified_code": "def strange_sort_list(lst):\n    if not lst:\n        return []\n    sorted_lst = None\n    minimum = sorted_lst[0]\n    maximum = sorted_lst[-1]\n    return [minimum] + [maximum] + [x for x in sorted_lst if x != minimum and x != maximum]"
+      },
+      "original_outcome": "Failed",
+      "counterfactual_outcome": "Failed",
+      "original_actual_output": null,
+      "counterfactual_output": null,
+      "causal_effect": "FALSE",
+      "execution_time": 0.2419,
+      "status": "EXECUTED",
+      "explanation": "Intervention failed to resolve the program failure (FAIL -> FAIL)."
+    }
+  ],
+  "fault_location": {
+    "file": "HE004.py",
+    "line_number": 7,
+    "statement_code": "return [minimum] + [maximum] + [x for x in sorted_lst if x != minimum and x != maximum]",
+    "function_name": "strange_sort_list",
+    "causal_variable": "x",
+    "evidence_score": 0.5,
+    "confidence": 0.3
+  },
+  "root_cause": {
+    "root_cause_status": "UNRESOLVED",
+    "candidate_explanation": "Defective filtering condition 'return [minimum] + [maximum] + [x for x in sorted_lst if x != minimum and x != maximum]' at line 7 selects incorrect elements, modifying variable 'x'.",
+    "causal_variable": "x",
+    "fault_statement": "return [minimum] + [maximum] + [x for x in sorted_lst if x != minimum and x != maximum]",
+    "fault_line": 7,
+    "evidence_summary": "Reverse PDG traversal traced failure from line 1 to statement line 7. Structural dependency identified; counterfactual validation unconfirmed or unresolved.",
+    "counterfactual_validated": false,
+    "confidence": 0.3
+  },
+  "ground_truth_matched": null,
+  "ground_truth_fault_line": null,
+  "execution_time": 0.9337
+}

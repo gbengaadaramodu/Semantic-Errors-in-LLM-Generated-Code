@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB420",
+  "dataset": "MBPP",
+  "task_id": "395",
+  "problem_summary": "Write a python function to find the first non-repeated character in a given stri",
+  "execution_status": "Completed",
+  "stdout": "",
+  "stderr": "",
+  "traceback": "",
+  "exception_type": "",
+  "exception_message": "",
+  "execution_time": 0.096387,
+  "timed_out": false,
+  "exit_code": 0,
+  "tests_passed": true,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

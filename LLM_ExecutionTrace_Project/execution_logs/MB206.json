@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB206",
+  "dataset": "MBPP",
+  "task_id": "124",
+  "problem_summary": "Write a function to get the angle of a complex number.",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp4aeu2dew.py\", line 8, in <module>\n    assert math.isclose(angle_complex(0,1j), 1.5707963267948966, rel_tol=0.001)\n                        ~~~~~~~~~~~~~^^^^^^\nTypeError: angle_complex() takes 1 positional argument but 2 were given\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmp4aeu2dew.py\", line 8, in <module>\n    assert math.isclose(angle_complex(0,1j), 1.5707963267948966, rel_tol=0.001)\n                        ~~~~~~~~~~~~~^^^^^^\nTypeError: angle_complex() takes 1 positional argument but 2 were given",
+  "exception_type": "TypeError",
+  "exception_message": "angle_complex() takes 1 positional argument but 2 were given",
+  "execution_time": 0.285201,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": null,
+  "assertion_failed": false,
+  "parser_prediction": ""
+}

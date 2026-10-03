@@ -1,0 +1,22 @@
+{
+  "trace_id": "MB199",
+  "dataset": "MBPP",
+  "task_id": "738",
+  "problem_summary": "Write a function to calculate the geometric sum of n-1. https://www.w3resource.c",
+  "execution_status": "Failed",
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpd_olvfx0.py\", line 7, in <module>\n    assert geometric_sum(7) == 1.9921875\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\GSADAR~1\\AppData\\Local\\Temp\\tmpd_olvfx0.py\", line 7, in <module>\n    assert geometric_sum(7) == 1.9921875\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError",
+  "exception_type": "AssertionError",
+  "exception_message": "",
+  "execution_time": 0.275514,
+  "timed_out": false,
+  "exit_code": 1,
+  "tests_passed": false,
+  "tests_failed": 0,
+  "expected_output": null,
+  "actual_output": null,
+  "assertion_source": "benchmark_test",
+  "assertion_failed": true,
+  "parser_prediction": ""
+}

@@ -1,0 +1,24 @@
+digraph PDG {
+    rankdir=TB;
+    node [shape=box, style=filled, fillcolor=white, fontname="Courier"];
+    edge [fontname="Helvetica", fontsize=9];
+
+    "1" [label="L1: def is_multiply_prime(a): | W:a,is_multiply_prime", fillcolor="lightgreen"];
+    "2" [label="L2: if a < 100: | R:a", fillcolor="lightgreen"];
+    "3" [label="L3: for i in range(2, int(a**0.5) + 1): | W:i | R:a,int,range", fillcolor="lightgreen"];
+    "4" [label="L4: if a % i == 0: | R:a,i", fillcolor="lightgreen"];
+    "5" [label="L5: return False", fillcolor="lightgrey"];
+    "6" [label="L6: return True", fillcolor="lightgreen"];
+    "7" [label="L8: return False", fillcolor="salmon"];
+
+    "1" -> "2" [label="DATA(a)", style="solid"];
+    "1" -> "3" [label="DATA(a)", style="solid"];
+    "1" -> "4" [label="DATA(a)", style="solid"];
+    "3" -> "4" [label="DATA(i)", style="solid"];
+    "1" -> "2" [label="CONTROL(FunctionDef)", style="dashed"];
+    "2" -> "3" [label="CONTROL(If)", style="dashed"];
+    "3" -> "4" [label="CONTROL(For)", style="dashed"];
+    "4" -> "5" [label="CONTROL(If)", style="dashed"];
+    "2" -> "6" [label="CONTROL(If)", style="dashed"];
+    "2" -> "7" [label="CONTROL(If)", style="dashed"];
+}
