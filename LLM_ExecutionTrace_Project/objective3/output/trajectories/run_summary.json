@@ -1,0 +1,14 @@
+{
+  "total_tasks": 2,
+  "initially_passing": 0,
+  "entered_repair": 2,
+  "successfully_repaired": 0,
+  "reached_max_iterations": 2,
+  "same_error_stalls": 0,
+  "new_error_transitions": 0,
+  "regressions_detected": 0,
+  "oscillations_detected": 0,
+  "analysis_failures": 0,
+  "mean_iterations": 5,
+  "median_iterations": 5.0
+}
